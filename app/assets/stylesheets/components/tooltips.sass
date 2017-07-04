@@ -1,21 +1,52 @@
-.tooltipster-default
-  display: inline-block
-  border: 1px solid $almostwhite
-  @include background(linear-gradient(white 20%, $lightestgrey 80%))
-  @include border-radius($border-radius-m)
-  @include box-shadow($default-box-shadow)
+$tooltipster-arrow-border-color: darken($lightergrey, 10)
+$tooltipster-arrow-border-bg-color: $lightestgrey
+$tooltipster-arrow-border-offset: 1px
 
-  &.red-tooltip
-    border: 1px solid $red !important
-    @include box-shadow(inset 0 0 1px white, 0 0 1px $red, 0 3px 6px -1px $red)
+// custom theme
+.tooltipster-sidetip.tooltipster-default
 
-.tooltipster-default .tooltipster-content
-  color: $darkergrey
-  padding: $space-m $space-s
-  @include text-shadow (1px 1px 0 white)
+  .tooltipster-box
+    // display: inline-block
+    border: 1px solid $almostwhite
+    @include background(linear-gradient(white 20%, $lightestgrey 80%))
+    @include border-radius($border-radius-m)
+    @include box-shadow($default-box-shadow)
 
-.tooltipster-arrow-border
-  border-color: darken($lightergrey, 10) !important
+    &.red-tooltip
+      border: 1px solid $red !important
+      @include box-shadow(inset 0 0 1px white, 0 0 1px $red, 0 3px 6px -1px $red)
 
-  &+span:last-child
-    border-color: $lightestgrey transparent !important
+  .tooltipster-content
+    color: $darkergrey
+    padding: $space-m $space-s
+    @include text-shadow (1px 1px 0 white)
+
+  /* .tooltipster-arrow-background */
+  &.tooltipster-bottom .tooltipster-arrow-background
+    border-bottom-color: $tooltipster-arrow-border-bg-color
+    top: $tooltipster-arrow-border-offset
+
+  &.tooltipster-left .tooltipster-arrow-background
+    border-left-color: $tooltipster-arrow-border-bg-color
+    left: -$tooltipster-arrow-border-offset
+
+  &.tooltipster-right .tooltipster-arrow-background
+    border-right-color: $tooltipster-arrow-border-bg-color
+    left: $tooltipster-arrow-border-offset
+
+  &.tooltipster-top .tooltipster-arrow-background
+    border-top-color: $tooltipster-arrow-border-bg-color
+    top: -$tooltipster-arrow-border-offset
+
+  /* .tooltipster-arrow-border */
+  &.tooltipster-bottom .tooltipster-arrow-border
+    border-bottom-color: $tooltipster-arrow-border-color
+
+  &.tooltipster-left .tooltipster-arrow-border
+    border-left-color: $tooltipster-arrow-border-color
+
+  &.tooltipster-right .tooltipster-arrow-border
+    border-right-color: $tooltipster-arrow-border-color
+
+  &.tooltipster-top .tooltipster-arrow-border
+    border-top-color: $tooltipster-arrow-border-color
