@@ -51,7 +51,7 @@ button.button:focus
     @include background(linear-gradient($grad_color_1_active 20%, $grad_color_2_active 80%))
     @include box-shadow(inset 0 -2px 3px rgba(0,0,0,0.1))
 
-  &.disabled, &.disabled:hover, &.disabled:active, &[disabled=disabled], &[disabled=disabled]:hover, &[disabled=disabled]:active 
+  &.disabled, &.disabled:hover, &.disabled:active, &[disabled], &[disabled]:hover, &[disabled]:active 
     cursor: default
     color: $color !important
     @include background(linear-gradient($grad_color_1 20%, $grad_color_2 80%))
