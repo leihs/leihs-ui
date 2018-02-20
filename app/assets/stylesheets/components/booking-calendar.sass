@@ -13,21 +13,21 @@
   .fc-widget-content
     cursor: pointer
 
-  .fc-widget-content.holiday .fc-day-content > div
+  .fc-widget-content.holiday .fc-day-content > div:first-child
     position: absolute !important
     font-size: 1.7em
     top: 61px
     right: 25%
 
-  .fc-widget-content > div
+  .fc-widget-content > div:first-child
     border: 1px solid transparent
     display: block
     height: 84px
     width: 100%
 
   .fc-widget-content:hover, .fc-widget-content.selected_for_target_selection
-    &:not(.history) > div
-      @extend .focus
+    &:not(.history) > div:first-child
+      .focus
 
   .fc-widget-content.history:hover
     cursor: default
