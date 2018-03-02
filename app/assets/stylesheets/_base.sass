@@ -84,7 +84,6 @@
 @import "components/autocomplete"
 @import "components/autocomplete-scrollable"
 @import "components/badge"
-@import "components/booking-calendar"
 @import "components/buttons"
 @import "components/collapsed"
 @import "components/content-wrapper"
@@ -122,3 +121,9 @@
   @extend .loading-bg
   background-size: 16px
   min-height: 20px
+
+.show-only-when-hovered
+  opacity: 0 !important
+  transition: all 0.1s ease-in-out
+  *:hover > &, &:hover
+    opacity: 1 !important

@@ -1,4 +1,4 @@
-// NOTE: newer version, as used in `borrow` section w/ React UI
+// NOTE: old version, still used in `manage` section
 
 .booking-calendar-overlay
   background: rgba(255,255,255,0.5)
@@ -13,21 +13,21 @@
   .fc-widget-content
     cursor: pointer
 
-  .fc-widget-content.holiday .fc-day-content > div:first-child
+  .fc-widget-content.holiday .fc-day-content > div
     position: absolute !important
     font-size: 1.7em
     top: 61px
     right: 25%
 
-  .fc-widget-content > div:first-child
+  .fc-widget-content > div
     border: 1px solid transparent
     display: block
     height: 84px
     width: 100%
 
   .fc-widget-content:hover, .fc-widget-content.selected_for_target_selection
-    &:not(.history) > div:first-child
-      .focus
+    &:not(.history) > div
+      @extend .focus
 
   .fc-widget-content.history:hover
     cursor: default
