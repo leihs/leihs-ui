@@ -163,3 +163,77 @@
   @include border-radius(4px)
 
 
+// fixes after jquery UI was indirectly removed:
+
+// TODO: use real icons
+.ui-datepicker
+  // .ui-icon-circle-triangle-w
+  //   @extend .fa
+  //   @extend .fa-chevron-circle-left
+  //
+  // .ui-icon-circle-triangle-e
+  //   @extend .fa
+  //   @extend .fa-chevron-circle-right
+
+  .ui-icon-circle-triangle-w,
+  .ui-icon-circle-triangle-e
+    font-family: Arial
+    font-size: 14px
+    font-weight: bold
+    background: $darkgrey
+    border-radius: 100px
+    height: 12px
+    width: 12px
+    line-height: 0
+    color: white
+    overflow: hidden
+    padding: 7px 11px 7px 3px
+
+.ui-datepicker .ui-datepicker-header
+  position: relative
+  padding: .2em 0
+
+.ui-datepicker .ui-datepicker-prev,
+.ui-datepicker .ui-datepicker-next
+  position: absolute
+  top: 2px
+  width: 1.8em
+  height: 1.8em
+
+.ui-datepicker .ui-datepicker-prev-hover,
+.ui-datepicker .ui-datepicker-next-hover
+  top: 1px
+
+.ui-datepicker .ui-datepicker-prev
+  left: 2px
+
+.ui-datepicker .ui-datepicker-next
+  right: 2px
+
+.ui-datepicker .ui-datepicker-prev-hover
+  left: 1px
+
+.ui-datepicker .ui-datepicker-next-hover
+  right: 1px
+
+.ui-datepicker .ui-datepicker-prev span,
+.ui-datepicker .ui-datepicker-next span
+  display: block
+  position: absolute
+  left: 50%
+  margin-left: -8px
+  top: 50%
+  margin-top: -8px
+
+.ui-datepicker .ui-datepicker-title
+  margin: 0 2.3em
+  line-height: 1.8em
+  text-align: center
+
+.ui-datepicker .ui-datepicker-title select
+  font-size: 1em
+  margin: 1px 0
+
+.ui-datepicker select.ui-datepicker-month,
+.ui-datepicker select.ui-datepicker-year
+  width: 45%
