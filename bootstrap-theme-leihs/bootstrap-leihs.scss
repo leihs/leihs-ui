@@ -1,0 +1,17 @@
+@import 'custom';
+@import '~bootstrap/scss/bootstrap';
+
+html,
+body {
+  height: 100%;
+}
+
+.bg-paper {
+  background: #f3f1eb
+    url(https://ausleihe.zhdk.ch/assets/background-b0b9837260c08dc253e08e6c1c3bb9b9b5124089dfa5ce185ce72df26d692c80.png);
+  color: #3a3a3a;
+}
+
+.bg-chrome-rims {
+  background: linear-gradient(to bottom, #fff 50%, #f2f2f2 50%);
+}
