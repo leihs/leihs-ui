@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
+    "bootstrap-theme-leihs": "file:bootstrap-theme-leihs",
     "next": "^7.0.0",
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
