@@ -1,4 +1,4 @@
-import LeihsPage from "../components/leihs-page";
+import LeihsPage from "../components/styleguide/LeihsPage";
 
 export default () => (
   <LeihsPage>

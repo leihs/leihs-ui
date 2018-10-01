@@ -1,0 +1,21 @@
+// photoshop style:
+$checkerboard-size: 16px;
+$checkerboard-light: transparent;
+$checkerboard-dark: #d5d5d5;
+
+// inspired by http://lea.verou.me/2011/02/checkerboard-pattern-with-css3/
+.bg-checkerboard {
+  background-image: linear-gradient(
+      45deg,
+      $checkerboard-dark 25%,
+      $checkerboard-light 25%
+    ),
+    linear-gradient(45deg, $checkerboard-dark 25%, $checkerboard-light 25%),
+    linear-gradient(45deg, $checkerboard-light 75%, $checkerboard-dark 75%),
+    linear-gradient(45deg, $checkerboard-light 75%, $checkerboard-dark 75%);
+
+  background-size: $checkerboard-size $checkerboard-size;
+
+  background-position: 0 0, (-$checkerboard-size/2) ($checkerboard-size/2), 0 0,
+    ($checkerboard-size/2) (-$checkerboard-size/2);
+}

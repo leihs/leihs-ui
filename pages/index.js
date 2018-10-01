@@ -1,11 +1,13 @@
 import Link from "next/link";
-import LeihsPage from "../components/leihs-page";
+import LeihsPage from "../components/styleguide/LeihsPage";
 
 export default () => {
   return (
     <LeihsPage>
       <div className="container p-4">
-        <h1>Hello World!</h1>
+        <h1>
+          <a href="https://github.com/leihs/leihs-ui">Leihs UI</a> examples
+        </h1>
         <ul>
           <li>
             <Link prefretch href="./root-logged-out">
