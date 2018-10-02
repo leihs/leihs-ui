@@ -21,6 +21,68 @@ export default () => {
   return (
     <LeihsPage className="p-3">
       <div>
+        <p>default login, when logged out</p>
+      </div>
+
+      <ExampleBlock title="main nav affordance">
+        <DummyNavBar>
+          <div class="input-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nutzername oder Email"
+              aria-label="Nutzername oder Email"
+              aria-describedby="button-addon2"
+            />
+            <div class="input-group-append">
+              <button
+                class="btn btn-success"
+                type="button"
+                id="button-addon2"
+                onClick={_ => alert("would navigate to `https://zhdk.ch/agw`")}
+              >
+                Login
+              </button>
+            </div>
+          </div>
+          {/* <UncontrolledButtonDropdown>
+            <Button
+              // tag="a"
+              id="caret"
+              color="success"
+              onClick={_ => alert("would navigate to `https://zhdk.ch/agw`")}
+            >
+              Anmelden mit ZHdK-Login
+            </Button>
+            <DropdownToggle caret color="success" />
+            <DropdownMenu right>
+              <DropdownItem header>Alle Anmeldeoptionen</DropdownItem>
+              <DropdownItem>ZHdK-Login (AGW)</DropdownItem>
+              <DropdownItem>Switch-AAI</DropdownItem>
+              <DropdownItem>Leihs-Account/Passwort</DropdownItem>
+            </DropdownMenu>
+          </UncontrolledButtonDropdown> */}
+        </DummyNavBar>
+      </ExampleBlock>
+
+      <ExampleBlock title="page `/login`">
+        <DummySimpleLogin
+          id={Math.random()}
+          userInput={{
+            label: "Email address",
+            inputProps: {
+              type: "email",
+              id: "inputEmail",
+              placeholder: "Email address",
+              autoComplete: "username email"
+            }
+          }}
+        />
+      </ExampleBlock>
+
+      <hr />
+
+      <div>
         <p>institutional login, when logged out</p>
       </div>
 
