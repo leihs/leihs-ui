@@ -21,7 +21,14 @@ export default () => {
           </li>
           <li>
             <Link prefretch href="./login">
-              dummy page <code>/login</code>
+              <a>
+                dummy page <code>/login</code>
+              </a>
+            </Link>
+          </li>
+          <li>
+            <Link prefretch href="./login-dummy">
+              <a>dummy login flow</a>
             </Link>
           </li>
         </ul>

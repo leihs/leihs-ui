@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ExampleBlock, LeihsPage } from "../components/styleguide";
+import { ExampleBlock, LeihsPage } from "../../components/styleguide";
 
 import React from "react";
 import {
@@ -20,151 +20,28 @@ import {
 export default () => {
   return (
     <LeihsPage className="p-3">
-      <div>
-        <p>default login, when logged out</p>
-      </div>
-
-      <ExampleBlock title="main nav affordance">
-        <DummyNavBar>
+      <DummyNavBar>
+        <form action="/login-dummy/sign-in">
           <div class="input-group">
             <input
+              required
+              name="user"
+              autoComplete="username email"
               type="text"
               class="form-control"
+              style={{ minWidth: "13em" }}
               placeholder="Nutzername oder Email"
               aria-label="Nutzername oder Email"
               aria-describedby="button-addon2"
             />
             <div class="input-group-append">
-              <button
-                class="btn btn-success"
-                type="button"
-                id="button-addon2"
-                onClick={_ => alert("would navigate to `https://zhdk.ch/agw`")}
-              >
+              <button type="submit" class="btn btn-success" id="button-addon2">
                 Login
               </button>
             </div>
           </div>
-        </DummyNavBar>
-      </ExampleBlock>
-
-      <ExampleBlock title="page `/login`">
-        <DummySimpleLogin
-          id={Math.random()}
-          userInput={{
-            label: "Email address",
-            inputProps: {
-              type: "email",
-              id: "inputEmail",
-              placeholder: "Email address",
-              autoComplete: "username email"
-            }
-          }}
-        />
-      </ExampleBlock>
-
-      <hr />
-
-      <div>
-        <p>institutional login, when logged out</p>
-      </div>
-
-      <ExampleBlock title="main nav affordance">
-        <DummyNavBar>
-          <UncontrolledButtonDropdown>
-            <Button
-              // tag="a"
-              id="caret"
-              color="success"
-              onClick={_ => alert("would navigate to `https://zhdk.ch/agw`")}
-            >
-              Anmelden mit ZHdK-Login
-            </Button>
-            <DropdownToggle caret color="success" />
-            <DropdownMenu right>
-              <DropdownItem header>Alle Anmeldeoptionen</DropdownItem>
-              <DropdownItem>ZHdK-Login (AGW)</DropdownItem>
-              <DropdownItem>Switch-AAI</DropdownItem>
-              <DropdownItem>Leihs-Account/Passwort</DropdownItem>
-            </DropdownMenu>
-          </UncontrolledButtonDropdown>
-        </DummyNavBar>
-      </ExampleBlock>
-
-      <ExampleBlock title="page `/login`">
-        <DummySimpleLogin
-          id={Math.random()}
-          userInput={{
-            label: "Email address",
-            inputProps: {
-              type: "email",
-              id: "inputEmail",
-              placeholder: "Email address",
-              autoComplete: "username email"
-            }
-          }}
-        />
-      </ExampleBlock>
-
-      <hr />
-
-      <div>
-        <p>
-          only password login, like{" "}
-          <a href="https://ausleihe.hslu.ch/authenticator/hslu/login">HSLU</a>
-        </p>
-      </div>
-
-      <ExampleBlock title="main nav affordance">
-        <DummyNavBar>
-          <Button
-            // tag="a"
-            id="caret"
-            color="success"
-            onClick={_ => alert("would navigate to `/login`")}
-          >
-            Login
-          </Button>
-        </DummyNavBar>
-      </ExampleBlock>
-
-      <ExampleBlock title="page `/login`">
-        <DummySimpleLogin
-          id={Math.random()}
-          userInput={{
-            label: "Benutzername",
-            inputProps: {
-              type: "text",
-              id: "inputUserName",
-              placeholder: "Benutzername",
-              autoComplete: "username"
-            }
-          }}
-        />
-      </ExampleBlock>
-
-      <hr />
-
-      <div>
-        <p>two-step login</p>
-      </div>
-
-      <ExampleBlock title="page `/login`">
-        <DummyTwoStepLogin
-          id={Math.random()}
-          userInput={{
-            label: "Email address",
-            inputProps: {
-              type: "email",
-              id: "inputEmail",
-              placeholder: "Email address",
-              autoComplete: "username email"
-            }
-          }}
-        />
-      </ExampleBlock>
-
-      <hr />
+        </form>
+      </DummyNavBar>
     </LeihsPage>
   );
 };
