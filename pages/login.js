@@ -145,23 +145,22 @@ class DummyTwoStepLogin extends React.Component {
     debugger;
     const step = this.state.step;
     const hasPassword = this.pwRef.value;
+
     if (step === 2 || (step === 1 && hasPassword)) {
+      return alert("would `POST` to `/login`");
     }
 
-    switch (step) {
-      case 1:
-        return this.setState({ step: 2 }, _ =>
-          setTimeout(_ => {
-            try {
-              document.querySelectorAll('input[type="password"]')[0].focus();
-            } catch (e) {}
-          }, 100)
-        );
-      case 2:
-        return alert("would `POST` to `/login`");
-      default:
-        console.error("invalid state");
+    if (step === 1) {
+      return this.setState({ step: 2 }, _ =>
+        setTimeout(_ => {
+          try {
+            document.querySelectorAll('input[type="password"]')[0].focus();
+          } catch (e) {}
+        }, 100)
+      );
     }
+
+    console.error("invalid state");
   }
 
   render({ props, state } = this) {
@@ -187,7 +186,11 @@ class DummyTwoStepLogin extends React.Component {
 const VisuallyHidden = ({ children, ...props }) => {
   const hidden = !!props["if"];
   return (
-    <div aria-hidden={hidden} className={hidden ? "sr-only" : ""}>
+    <div
+      className={hidden ? "sr-only" : ""}
+      aria-hidden={hidden}
+      tabIndex={hidden ? -1 : undefined}
+    >
       {children}
     </div>
   );
