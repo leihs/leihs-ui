@@ -19,6 +19,11 @@ export default () => {
               auth stuff
             </Link>
           </li>
+          <li>
+            <Link prefretch href="./login">
+              dummy page <code>/login</code>
+            </Link>
+          </li>
         </ul>
       </div>
     </LeihsPage>

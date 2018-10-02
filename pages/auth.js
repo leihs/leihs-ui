@@ -221,6 +221,7 @@ class DummyTwoStepLogin extends React.Component {
   render({ props, state } = this) {
     return (
       <DummySimpleLogin
+        {...props}
         showPasswordInput={state.step === 2}
         buttonTitle={state.step === 1 ? "Weiter" : "Anmelden"}
         onSubmit={e =>
@@ -228,7 +229,13 @@ class DummyTwoStepLogin extends React.Component {
             ? this.setState({ step: 2 })
             : alert("would `POST` to `/login`")
         }
-        {...props}
+        userInput={{
+          ...props.userInput,
+          inputProps: {
+            ...props.userInput.inputProps,
+            readOnly: state.step === 2
+          }
+        }}
       />
     );
   }
