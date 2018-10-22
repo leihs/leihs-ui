@@ -31,6 +31,16 @@ export default () => {
               <a>dummy login flow</a>
             </Link>
           </li>
+          <li>
+            <Link prefetch href="/static/vanilla-login.html">
+              <a>vanilla login</a>
+            </Link>
+          </li>
+          <li>
+            <Link prefetch href="/debug-request">
+              <a>debug request</a>
+            </Link>
+          </li>
         </ul>
       </div>
     </LeihsPage>
