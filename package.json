@@ -10,11 +10,11 @@
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bootstrap-theme-leihs": "file:bootstrap-theme-leihs",
-    "next": "^7.0.0",
-    "node-sass": "^4.9.3",
+    "next": "^7.0.2",
+    "node-sass": "^4.9.4",
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
-    "reactstrap": "^6.4.0"
+    "reactstrap": "^6.5.0"
   }
 }
