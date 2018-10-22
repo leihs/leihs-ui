@@ -94,7 +94,7 @@ class DummyLogin extends React.Component {
       buttonTitle = "Login"
     } = props;
 
-    const showPasswordInput = !!(!!state.pass || state.step === 2);
+    const showPasswordInput = !!(state.pass || state.step === 2);
     console.log("showPasswordInput", showPasswordInput);
     // debugger;
 

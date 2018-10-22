@@ -10,24 +10,24 @@ export default () => {
         </h1>
         <ul>
           <li>
-            <Link prefretch href="./root-logged-out">
-              root/logged out
+            <Link prefetch href="./root-logged-out">
+              <a>root/logged out</a>
             </Link>
           </li>
           <li>
-            <Link prefretch href="./auth">
-              auth stuff
+            <Link prefetch href="./auth">
+              <a>auth stuff</a>
             </Link>
           </li>
           <li>
-            <Link prefretch href="./login">
+            <Link prefetch href="./login">
               <a>
                 dummy page <code>/login</code>
               </a>
             </Link>
           </li>
           <li>
-            <Link prefretch href="./login-dummy">
+            <Link prefetch href="./login-dummy">
               <a>dummy login flow</a>
             </Link>
           </li>
