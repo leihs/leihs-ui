@@ -18,9 +18,10 @@ app.prepare().then(() => {
     const { pathname, query } = parsedUrl;
     const method = req.method.toUpperCase();
 
-    console.log({ method });
-
-    if (method !== "GET" || method !== "HEAD") {
+    if (["GET", "HEAD"].includes(method)) {
+      // let next.js handle it normally
+      handle(req, res);
+    } else {
       let requestBody = [];
       req.on("data", chunk => requestBody.push(chunk)).on("end", () => {
         requestBody = Buffer.concat(requestBody).toString();
@@ -41,9 +42,6 @@ app.prepare().then(() => {
           })
         );
       });
-    } else {
-      // app.render(req, res, "/debug-request", query);
-      handle(req, res, parsedUrl);
     }
   }).listen(3000, err => {
     if (err) throw err;
