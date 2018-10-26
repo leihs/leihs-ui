@@ -18,7 +18,7 @@ app.prepare().then(() => {
     const { pathname, query } = parsedUrl;
     const method = req.method.toUpperCase();
 
-    if (["GET", "HEAD"].includes(method)) {
+    if (["GET", "HEAD"].includes(method) && pathname !== "/debug-request") {
       // let next.js handle it normally
       handle(req, res);
     } else {

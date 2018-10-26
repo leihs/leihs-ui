@@ -1,7 +1,8 @@
-import Link from "next/link";
-import LeihsPage from "../components/styleguide/LeihsPage";
+import React from 'react'
+import Link from 'next/link'
+import LeihsPage from '../components/styleguide/LeihsPage'
 
-export default () => {
+export default function IndexPage() {
   return (
     <LeihsPage>
       <div className="container p-4">
@@ -32,6 +33,11 @@ export default () => {
             </Link>
           </li>
           <li>
+            <Link prefetch href="./navbar-dummy">
+              <a>dummy navbar page</a>
+            </Link>
+          </li>
+          <li>
             <Link prefetch href="/static/vanilla-login.html">
               <a>vanilla login</a>
             </Link>
@@ -44,5 +50,5 @@ export default () => {
         </ul>
       </div>
     </LeihsPage>
-  );
-};
+  )
+}
