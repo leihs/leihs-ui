@@ -5,14 +5,20 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build-lib": "rm -rf dist && NODE_ENV=production npx webpack --config ./webpack.config.js && rm dist/*.html dist/*.json dist/*.map dist/precache-manifest.* dist/service-worker.js",
     "start": "next start"
   },
   "dependencies": {
     "@zeit/next-sass": "^1.0.1",
     "bootstrap-theme-leihs": "file:bootstrap-theme-leihs",
-    "next": "^7.0.0",
-    "node-sass": "^4.9.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "next": "^7.0.2",
+    "node-sass": "^4.9.4",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^2.0.5",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
   }
 }
