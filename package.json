@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
+    "build-lib": "rm -rf dist && NODE_ENV=production npx webpack --config ./webpack.config.js && rm dist/*.html dist/*.json dist/*.map dist/precache-manifest.* dist/service-worker.js",
     "start": "next start"
   },
   "dependencies": {
@@ -14,5 +15,10 @@
     "node-sass": "^4.9.4",
     "react": "^16.6.0",
     "react-dom": "^16.6.0"
+  },
+  "devDependencies": {
+    "react-scripts": "^2.0.5",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2"
   }
 }

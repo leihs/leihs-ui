@@ -1,5 +1,5 @@
 import Link from "next/link";
-import LeihsPage from "../components/leihs-page";
+import LeihsPage from "../src/components/leihs-page";
 
 export default () => {
   return (
