@@ -33,7 +33,7 @@ export default function IndexPage() {
             </Link>
           </li>
           <li>
-            <Link prefetch href="./navbar-dummy">
+            <Link prefetch href="./navbar/dummy">
               <a>dummy navbar page</a>
             </Link>
           </li>

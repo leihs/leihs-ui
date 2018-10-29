@@ -1,7 +1,7 @@
 import f from 'lodash'
 import React, { Fragment as F } from 'react'
 // import cx from 'classnames'
-
+import { ColorTint } from '../lib/color-fns'
 import {
   // Badge,
   Collapse,
@@ -22,6 +22,8 @@ import Icon from './Icons'
 // import { DisplayName } from './decorators'
 
 const isDev = process.env.NODE_ENV === 'development'
+export const BASE_COLOR = '#563d7c' // bootstrap docs purple
+// export const BASE_COLOR = '#343a40' // bootstrap bg-dark
 
 const Brand = ({ title }) => (
   <F>
@@ -41,6 +43,7 @@ export default class MainNav extends React.Component {
   }
   render({ props, state } = this) {
     const { me, appTitle, appMenu, appColor } = props.config
+    const bgColor = ColorTint(BASE_COLOR, appColor)
 
     return (
       <Navbar
@@ -48,7 +51,7 @@ export default class MainNav extends React.Component {
         color="dark"
         expand="lg"
         className="navbar-leihs"
-        style={{ backgroundColor: `${appColor} !important` }}
+        style={{ backgroundColor: `${bgColor} !important` }}
       >
         <NavbarBrand exact to="/">
           <Brand title={appTitle} />
