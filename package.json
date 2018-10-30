@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
+    "postinstall": "cd bootstrap-theme-leihs && { npm ci || npm i ;}",
     "dev": "node server.js",
     "build": "next build",
     "build-lib": "rm -rf dist && NODE_ENV=production npx webpack --config ./webpack.config.js && rm dist/*.html dist/*.json dist/*.map dist/precache-manifest.* dist/service-worker.js",
