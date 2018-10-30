@@ -1,21 +1,8 @@
-import Link from "next/link";
-import { ExampleBlock, LeihsPage } from "../../components/styleguide";
+import React from 'react'
+// import Link from 'next/link'
+import { LeihsPage } from '../../src/components/styleguide'
 
-import React from "react";
-import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
-  UncontrolledButtonDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from "reactstrap";
+import { Navbar, NavbarBrand, Nav } from 'reactstrap'
 
 // TODO: put the complete form here so pw manager could fill out and POST it all!
 export default () => {
@@ -23,14 +10,14 @@ export default () => {
     <LeihsPage className="p-3">
       <DummyNavBar>
         <form action="/login-dummy/login">
-          <div class="input-group">
+          <div className="input-group">
             <input
               required
               name="user"
               autoComplete="username email"
               type="text"
-              class="form-control"
-              style={{ minWidth: "13em" }}
+              className="form-control"
+              style={{ minWidth: '13em' }}
               placeholder="Nutzername oder Email"
               aria-label="Nutzername oder Email"
               aria-describedby="button-addon2"
@@ -40,8 +27,12 @@ export default () => {
               name="return_to"
               value="/login-dummy/secure-page"
             />
-            <div class="input-group-append">
-              <button type="submit" class="btn btn-success" id="button-addon2">
+            <div className="input-group-append">
+              <button
+                type="submit"
+                className="btn btn-success"
+                id="button-addon2"
+              >
                 Login
               </button>
             </div>
@@ -49,8 +40,8 @@ export default () => {
         </form>
       </DummyNavBar>
     </LeihsPage>
-  );
-};
+  )
+}
 
 const DummyNavBar = ({ children }) => (
   <Navbar color="light" light expand="md">
@@ -60,4 +51,4 @@ const DummyNavBar = ({ children }) => (
       {children}
     </Nav>
   </Navbar>
-);
+)

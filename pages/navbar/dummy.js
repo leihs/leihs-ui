@@ -1,6 +1,6 @@
 import React from 'react'
-import { LeihsPage } from '../../components/styleguide'
-import Navbar from '../../components/Navbar'
+import { LeihsPage } from '../../src/components/styleguide'
+import Navbar from '../../src/components/Navbar'
 
 export const exampleParams = {
   me: {

@@ -11,6 +11,7 @@
     "ci:lint": "eslint 'src/{,**/}*.js{,x}' && npm run -s ci:lint:json",
     "lint:json": "prettier --write 'src/{,**/}*.json'",
     "ci:lint:json": "prettier --list-different 'src/{,**/}*.json'",
+    "test-lib": "node -p 'window=this; l = require(\"./dist/leihs-ui-server-side.js\"); l.renderComponentToStaticMarkup(\"Navbar\", {})'",
     "test": "exit 1"
   },
   "dependencies": {

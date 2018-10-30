@@ -1,6 +1,8 @@
 import React from 'react'
-import { LeihsPage } from '../../components/styleguide'
-import Navbar, { BASE_COLOR as navbarBaseColor } from '../../components/Navbar'
+import { LeihsPage } from '../../src/components/styleguide'
+import Navbar, {
+  BASE_COLOR as navbarBaseColor
+} from '../../src/components/Navbar'
 
 import { exampleParams } from './dummy'
 

@@ -5,7 +5,7 @@ import { ColorTint } from '../lib/color-fns'
 import {
   // Badge,
   Collapse,
-  Navbar,
+  Navbar as BsNavbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
@@ -32,7 +32,7 @@ const Brand = ({ title }) => (
   </F>
 )
 
-export default class MainNav extends React.Component {
+export default class Navbar extends React.Component {
   state = {
     isOpen: false
   }
@@ -41,12 +41,15 @@ export default class MainNav extends React.Component {
       isOpen: !this.state.isOpen
     })
   }
+  static defaultProps = {
+    config: {}
+  }
   render({ props, state } = this) {
     const { me, appTitle, appMenu, appColor } = props.config
     const bgColor = ColorTint(BASE_COLOR, appColor)
 
     return (
-      <Navbar
+      <BsNavbar
         dark
         color="dark"
         expand="lg"
@@ -111,7 +114,7 @@ export default class MainNav extends React.Component {
                     <button type="submit">Ausloggen</button>
                   </form>
                 </DropdownItem>
-                <DropdownItem>{tmpUserInfo(me.user)}</DropdownItem>
+                <DropdownItem>{tmpUserInfo({ me })}</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
 
@@ -125,7 +128,7 @@ export default class MainNav extends React.Component {
             </UncontrolledDropdown>
           </Nav>
         </Collapse>
-      </Navbar>
+      </BsNavbar>
     )
   }
 }
@@ -138,4 +141,4 @@ const tmpUserInfo = user => (
   </F>
 )
 
-const Let = ({ children, ...props }) => children(props)
+// const Let = ({ children, ...props }) => children(props)

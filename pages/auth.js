@@ -1,7 +1,7 @@
-import Link from "next/link";
-import { ExampleBlock, LeihsPage } from "../components/styleguide";
+import Link from 'next/link'
+import { ExampleBlock, LeihsPage } from '../src/components/styleguide'
 
-import React from "react";
+import React from 'react'
 import {
   Collapse,
   Navbar,
@@ -15,7 +15,7 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem
-} from "reactstrap";
+} from 'reactstrap'
 
 export default () => {
   return (
@@ -26,20 +26,20 @@ export default () => {
 
       <ExampleBlock title="main nav affordance">
         <DummyNavBar>
-          <div class="input-group">
+          <div className="input-group">
             <input
               type="text"
-              class="form-control"
+              className="form-control"
               placeholder="Nutzername oder Email"
               aria-label="Nutzername oder Email"
               aria-describedby="button-addon2"
             />
-            <div class="input-group-append">
+            <div className="input-group-append">
               <button
-                class="btn btn-success"
+                className="btn btn-success"
                 type="button"
                 id="button-addon2"
-                onClick={_ => alert("would navigate to `https://zhdk.ch/agw`")}
+                onClick={_ => alert('would navigate to `https://zhdk.ch/agw`')}
               >
                 Login
               </button>
@@ -52,12 +52,12 @@ export default () => {
         <DummySimpleLogin
           id={Math.random()}
           userInput={{
-            label: "Email address",
+            label: 'Email address',
             inputProps: {
-              type: "email",
-              id: "inputEmail",
-              placeholder: "Email address",
-              autoComplete: "username email"
+              type: 'email',
+              id: 'inputEmail',
+              placeholder: 'Email address',
+              autoComplete: 'username email'
             }
           }}
         />
@@ -76,7 +76,7 @@ export default () => {
               // tag="a"
               id="caret"
               color="success"
-              onClick={_ => alert("would navigate to `https://zhdk.ch/agw`")}
+              onClick={_ => alert('would navigate to `https://zhdk.ch/agw`')}
             >
               Anmelden mit ZHdK-Login
             </Button>
@@ -95,12 +95,12 @@ export default () => {
         <DummySimpleLogin
           id={Math.random()}
           userInput={{
-            label: "Email address",
+            label: 'Email address',
             inputProps: {
-              type: "email",
-              id: "inputEmail",
-              placeholder: "Email address",
-              autoComplete: "username email"
+              type: 'email',
+              id: 'inputEmail',
+              placeholder: 'Email address',
+              autoComplete: 'username email'
             }
           }}
         />
@@ -110,7 +110,7 @@ export default () => {
 
       <div>
         <p>
-          only password login, like{" "}
+          only password login, like{' '}
           <a href="https://ausleihe.hslu.ch/authenticator/hslu/login">HSLU</a>
         </p>
       </div>
@@ -121,7 +121,7 @@ export default () => {
             // tag="a"
             id="caret"
             color="success"
-            onClick={_ => alert("would navigate to `/login`")}
+            onClick={_ => alert('would navigate to `/login`')}
           >
             Login
           </Button>
@@ -132,12 +132,12 @@ export default () => {
         <DummySimpleLogin
           id={Math.random()}
           userInput={{
-            label: "Benutzername",
+            label: 'Benutzername',
             inputProps: {
-              type: "text",
-              id: "inputUserName",
-              placeholder: "Benutzername",
-              autoComplete: "username"
+              type: 'text',
+              id: 'inputUserName',
+              placeholder: 'Benutzername',
+              autoComplete: 'username'
             }
           }}
         />
@@ -153,12 +153,12 @@ export default () => {
         <DummyTwoStepLogin
           id={Math.random()}
           userInput={{
-            label: "Email address",
+            label: 'Email address',
             inputProps: {
-              type: "email",
-              id: "inputEmail",
-              placeholder: "Email address",
-              autoComplete: "username email"
+              type: 'email',
+              id: 'inputEmail',
+              placeholder: 'Email address',
+              autoComplete: 'username email'
             }
           }}
         />
@@ -166,8 +166,8 @@ export default () => {
 
       <hr />
     </LeihsPage>
-  );
-};
+  )
+}
 
 const DummyNavBar = ({ children }) => (
   <Navbar color="light" light expand="md">
@@ -177,33 +177,33 @@ const DummyNavBar = ({ children }) => (
       {children}
     </Nav>
   </Navbar>
-);
+)
 
 const DummySimpleLogin = ({
   id,
   userInput,
-  formTitle = "Login",
-  buttonTitle = "Login",
+  formTitle = 'Login',
+  buttonTitle = 'Login',
   showPasswordInput = true,
   onSubmit = e => {
-    e.preventDefault();
-    alert("would `POST` to `/login`");
+    e.preventDefault()
+    alert('would `POST` to `/login`')
   }
 }) => (
   <div
     className="ui-login-form text-center"
     style={{
-      width: "100%",
-      maxWidth: "330px",
-      padding: "15px",
-      margin: "auto"
+      width: '100%',
+      maxWidth: '330px',
+      padding: '15px',
+      margin: 'auto'
     }}
   >
     <form
       className="form-signin"
       onSubmit={e => {
-        e.preventDefault();
-        onSubmit();
+        e.preventDefault()
+        onSubmit()
       }}
     >
       <img
@@ -214,29 +214,29 @@ const DummySimpleLogin = ({
         height="72"
       />
       <h1 className="h3 mb-3 font-weight-normal">{formTitle}</h1>
-      <label htmlFor={id + "inputEmail"} className="sr-only">
+      <label htmlFor={id + 'inputEmail'} className="sr-only">
         {userInput.label}
       </label>
       <input
         {...userInput.inputProps}
-        id={id + "inputEmail"}
+        id={id + 'inputEmail'}
         className="form-control"
         required
         autoFocus
         style={{
-          marginBottom: "-1px",
+          marginBottom: '-1px',
           borderBottomRightRadius: showPasswordInput ? 0 : null,
           borderBottomLeftRadius: showPasswordInput ? 0 : null
         }}
       />
       {!!showPasswordInput && (
         <React.Fragment>
-          <label htmlFor={id + "inputPassword"} className="sr-only">
+          <label htmlFor={id + 'inputPassword'} className="sr-only">
             Password
           </label>
           <input
             type="password"
-            id={id + "inputPassword"}
+            id={id + 'inputPassword'}
             placeholder="Passwort"
             required
             autoComplete="current-password"
@@ -259,20 +259,20 @@ const DummySimpleLogin = ({
       {/* <p className="mt-5 mb-3 text-muted">© 2017-2018</p> */}
     </form>
   </div>
-);
+)
 
 class DummyTwoStepLogin extends React.Component {
-  state = { step: 1 };
+  state = { step: 1 }
   render({ props, state } = this) {
     return (
       <DummySimpleLogin
         {...props}
         showPasswordInput={state.step === 2}
-        buttonTitle={state.step === 1 ? "Weiter" : "Anmelden"}
+        buttonTitle={state.step === 1 ? 'Weiter' : 'Anmelden'}
         onSubmit={e =>
           state.step === 1
             ? this.setState({ step: 2 })
-            : alert("would `POST` to `/login`")
+            : alert('would `POST` to `/login`')
         }
         userInput={{
           ...props.userInput,
@@ -282,6 +282,6 @@ class DummyTwoStepLogin extends React.Component {
           }
         }}
       />
-    );
+    )
   }
 }

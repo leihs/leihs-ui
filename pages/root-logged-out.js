@@ -1,5 +1,7 @@
-import LeihsPage from "../components/styleguide/LeihsPage";
+import React from 'react'
+import LeihsPage from '../src/components/styleguide/LeihsPage'
 
+/* eslint-disable react/display-name */
 export default () => (
   <LeihsPage>
     <div className="bg-paper">
@@ -21,7 +23,7 @@ export default () => (
       </div>
 
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="#">
+        <a className="navbar-brand" href=".">
           Navbar
         </a>
         <button
@@ -39,19 +41,19 @@ export default () => (
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href=".">
                 Home <span className="sr-only">(current)</span>
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href=".">
                 Link
               </a>
             </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="."
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -61,20 +63,20 @@ export default () => (
                 Dropdown
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href=".">
                   Action
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href=".">
                   Another action
                 </a>
                 <div className="dropdown-divider" />
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href=".">
                   Something else here
                 </a>
               </div>
             </li>
             <li className="nav-item">
-              <a className="nav-link disabled" href="#">
+              <a className="nav-link disabled" href=".">
                 Disabled
               </a>
             </li>
@@ -84,7 +86,7 @@ export default () => (
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
-                href="#"
+                href="."
                 id="navbarDropdown"
                 role="button"
                 data-toggle="dropdown"
@@ -94,14 +96,14 @@ export default () => (
                 Dropdown
               </a>
               <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href=".">
                   Action
                 </a>
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href=".">
                   Another action
                 </a>
                 <div className="dropdown-divider" />
-                <a className="dropdown-item" href="#">
+                <a className="dropdown-item" href=".">
                   Something else here
                 </a>
               </div>
@@ -136,12 +138,13 @@ export default () => (
 
             <img
               className="ui-splashscreen-image"
+              alt=""
               src="https://ausleihe.zhdk.ch/assets/leihs-62b57b03ec5abd5e5fa3e6c35fde8a782419982d2cdd771fa8fba6cd0ab63d41.png"
               style={{
-                height: "397px",
-                position: "relative",
-                float: "right",
-                width: "814px"
+                height: '397px',
+                position: 'relative',
+                float: 'right',
+                width: '814px'
               }}
             />
           </div>
@@ -163,7 +166,7 @@ export default () => (
       </div>
     </div>
   </LeihsPage>
-);
+)
 
 /* With CSS Modules */
 /*
