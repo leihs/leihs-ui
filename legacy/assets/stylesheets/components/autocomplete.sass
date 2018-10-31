@@ -1,0 +1,19 @@
+.ui-autocomplete
+  @extend .dropdown
+  max-height: 400px
+  overflow-y: auto
+  overflow-x: hidden
+
+  a
+    @extend .dropdown-item
+    @extend .text-ellipsis
+    font-weight: normal !important
+    font-size: $font-size-xxs !important
+    max-width: 100%
+
+  a.ui-state-focus, a.ui-state-hover, a:hover
+    @extend .focus-thin
+
+  li.ui-menu-item
+    list-style-image: none
+    padding: 0
