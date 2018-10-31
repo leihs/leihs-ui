@@ -3,10 +3,12 @@ import ReactDOMServer from 'react-dom/server'
 import assert from 'assert'
 
 import Bold from './components/Bold'
+import DebugProps from './components/DebugProps'
 import Navbar from './components/Navbar'
 
 export const Components = {
   Bold,
+  DebugProps,
   Navbar
 }
 
