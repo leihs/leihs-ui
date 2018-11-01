@@ -13,7 +13,7 @@
     "lint:json": "prettier --write 'src/{,**/}*.json'",
     "ci:lint:json": "prettier --list-different 'src/{,**/}*.json'",
     "test-lib": "node -p 'window=this; l = require(\"./dist/leihs-ui-server-side.js\"); l.renderComponentToStaticMarkup(\"Navbar\", {})'",
-    "test": "exit 1"
+    "test": "react-scripts test --env=jsdom"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
@@ -40,6 +40,7 @@
     "prettier": "^1.14.0",
     "prettier-eslint": "^8.8.2",
     "react-scripts": "^2.0.5",
+    "react-test-renderer": "^16.6.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2"
   },

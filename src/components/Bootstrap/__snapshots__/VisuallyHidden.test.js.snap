@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`undefined: renders correctly 1`] = `
+<form>
+  <div
+    aria-hidden={false}
+    className=""
+  >
+    Inner Text 
+    <input
+      type="text"
+    />
+  </div>
+</form>
+`;
+
+exports[`undefined: renders correctly 2`] = `
+<form>
+  <div
+    aria-hidden={true}
+    className="sr-only"
+    tabIndex={-1}
+  >
+    Inner Text 
+    <input
+      type="text"
+    />
+  </div>
+</form>
+`;
