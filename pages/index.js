@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import LeihsPage from '../src/components/leihs-page'
+import { LeihsPage } from '../src/components/styleguide'
 
 export default function IndexPage() {
   return (

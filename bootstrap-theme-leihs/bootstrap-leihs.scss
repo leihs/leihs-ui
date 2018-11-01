@@ -39,3 +39,7 @@ ol.breadcrumb.leihs-nav-right {
   }
 }
 
+// next.js fix to make root/wrapper full height:
+#__next {
+  @extend .h-100;
+}
