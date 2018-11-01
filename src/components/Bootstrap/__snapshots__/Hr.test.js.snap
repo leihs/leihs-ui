@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`undefined: renders correctly 1`] = `
+<div>
+  <hr />
+</div>
+`;
+
+exports[`undefined: renders correctly 2`] = `
+<div>
+  <div
+    className="hr-text"
+  >
+    <hr />
+    Inner Text
+  </div>
+</div>
+`;

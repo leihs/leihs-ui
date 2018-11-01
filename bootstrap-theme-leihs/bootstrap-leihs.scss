@@ -27,6 +27,35 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
+
+.hr-text {
+  // line with text, looks like this:
+  // ------------- some text ------------------
+
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  &::before,
+  &::after {
+    content: '';
+    flex-grow: 1;
+    border-top: 1px solid gray;
+    margin: 0;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1); // like <hr/>
+  }
+  &::before {
+    margin-right: 1em;
+  }
+  &::after {
+    margin-left: 1em;
+  }
+  // hide any real hrs
+  hr {
+    display: none;
+  }
+}
+
 // extensions copied from leihs-my & leihs-admin:
 @include bg-variant('.bg-auth', #fd7e14);
 @include bg-variant('.bg-admin', #fd7e14);
