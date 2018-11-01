@@ -1,6 +1,6 @@
 @import 'custom';
-@import './node_modules/bootstrap/scss/bootstrap';
-@import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
 
 html,
 body {
@@ -23,3 +23,15 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
+// extensions copied from leihs-my & leihs-admin:
+@include bg-variant('.bg-auth', #fd7e14);
+@include bg-variant('.bg-admin', #fd7e14);
+
+ol.breadcrumb.leihs-nav-right {
+  .breadcrumb-item {
+    + .breadcrumb-item::before {
+      content: '·';
+    }
+  }
+}
+
