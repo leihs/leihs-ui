@@ -2,13 +2,22 @@ import React from 'react'
 import { LeihsPage } from '../../src/components/styleguide'
 import Navbar from '../../src/components/Navbar'
 
+const LEIHS_GREEN = '#afec81'
+
 export const exampleParams = {
   me: {
     user: {
       name: 'Normin Normalo'
     }
   },
-  appColor: '#FF851B',
+  subApps: {
+    borrow: true,
+    admin: true,
+    procure: true,
+    manage: true,
+    styleguide: false
+  },
+  appColor: LEIHS_GREEN,
   appTitle: 'LeihsApp',
   appMenu: [
     {
@@ -47,7 +56,9 @@ const NavbarDummyPage = () => {
         <h1 className="display-4">Great App</h1>
         <p className="lead">This is a great app with an even greater navbar.</p>
         <p className="lead">
-          See <a href="./colors">all the colors</a>.
+          See <a href="./colors">all the colors</a> and{' '}
+          <a href="./variants">more variants</a>
+          ..
         </p>
         <small>those (example) params are rendered:</small>
         <pre className="text-bold text-left w-50 m-auto p-3 card bg-warning">
