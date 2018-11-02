@@ -24,6 +24,9 @@ import Icon from './Icons'
 const isDev = process.env.NODE_ENV === 'development'
 export const BASE_COLOR = '#563d7c' // bootstrap docs purple
 // export const BASE_COLOR = '#343a40' // bootstrap bg-dark
+const defaults = {
+  homeUrl: '/'
+}
 
 const Brand = ({ title }) => (
   <F>
@@ -45,7 +48,9 @@ export default class Navbar extends React.Component {
     config: {}
   }
   render({ props, state } = this) {
-    const { me, appTitle, appMenu, appColor } = props.config
+    const { me, appTitle, appMenu, appColor, csrfToken } = props.config
+    const { homeUrl } = defaults
+
     const bgColor = ColorTint(BASE_COLOR, appColor)
 
     return (
@@ -56,7 +61,7 @@ export default class Navbar extends React.Component {
         className="navbar-leihs"
         style={{ backgroundColor: `${bgColor} !important` }}
       >
-        <NavbarBrand exact to="/">
+        <NavbarBrand href={homeUrl}>
           <Brand title={appTitle} />
         </NavbarBrand>
 
@@ -64,14 +69,17 @@ export default class Navbar extends React.Component {
 
         <Collapse isOpen={state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            {f.map(appMenu, ({ title, href, icon, active, submenu, attr }) => {
-              const IconEl = Icon[icon]
-              return (
-                <NavItemLink href={href} active={active} {...attr}>
-                  {IconEl ? <IconEl fixedWidth spaced /> : false} {title}
-                </NavItemLink>
-              )
-            })}
+            {f.map(
+              appMenu,
+              ({ title, href, icon, active, submenu, attr }, i) => {
+                const IconEl = Icon[icon]
+                return (
+                  <NavItemLink key={i} href={href} active={active} {...attr}>
+                    {IconEl ? <IconEl fixedWidth spaced /> : false} {title}
+                  </NavItemLink>
+                )
+              }
+            )}
           </Nav>
 
           <Nav className="ml-auto" navbar>
@@ -111,6 +119,13 @@ export default class Navbar extends React.Component {
               <DropdownMenu right>
                 <DropdownItem tag="span">
                   <form action="/sign-out" method="POST">
+                    {!!csrfToken && (
+                      <input
+                        type="hidden"
+                        name="csrf-token"
+                        value={csrfToken}
+                      />
+                    )}
                     <button type="submit">Ausloggen</button>
                   </form>
                 </DropdownItem>
