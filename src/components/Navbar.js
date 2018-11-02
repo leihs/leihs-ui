@@ -59,6 +59,7 @@ export default class Navbar extends React.Component {
       appMenu,
       appColor,
       subApps,
+      locales,
       returnTo,
       csrfToken
     } = config
@@ -124,14 +125,21 @@ export default class Navbar extends React.Component {
               </UncontrolledDropdown>
             )}
 
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                <Icon.Language />
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>[TODO]</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
+            {f.isEmpty(me) || f.isEmpty(me.user) || f.isEmpty(locales) ? (
+              false
+            ) : (
+              <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav caret>
+                  <Icon.Language />
+                </DropdownToggle>
+                <DropdownMenu right>
+                  <DropdownItem>[TODO]</DropdownItem>
+                  <DropdownItem>
+                    <pre>{JSON.stringify(locales, 0, 2)}</pre>
+                  </DropdownItem>
+                </DropdownMenu>
+              </UncontrolledDropdown>
+            )}
           </Nav>
         </Collapse>
       </BsNavbar>
@@ -185,6 +193,10 @@ const SubAppDropdown = ({ subApps }) =>
               item = (
                 <DropdownItem href="/manage">
                   <Icon.LeihsManage /> Manage
+                  {/* FIXME: decorate */}
+                  {!f.isBoolean(subApps['manage']) && (
+                    <pre>{JSON.stringify(subApps['manage'], 0, 2)}</pre>
+                  )}
                 </DropdownItem>
               )
 
