@@ -62,8 +62,8 @@ export default class Navbar extends React.Component {
       locales,
       returnTo
     } = config
-    const { homeUrl } = defaults
     const user = f.get(me, 'user')
+    const { homeUrl } = defaults
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
 
     const bgColor =
@@ -73,7 +73,7 @@ export default class Navbar extends React.Component {
       <BsNavbar
         dark
         color="dark"
-        expand="lg"
+        expand={user ? 'md' : true}
         className={cx('navbar-leihs', props.className)}
         style={{ backgroundColor: `${bgColor} !important` }}
       >
