@@ -25,7 +25,7 @@ const NavbarDummyPage = () => {
   return (
     <LeihsPage>
       <header className="text-center">
-        <h1 className="display-4">Navbar Colors</h1>
+        <h1 className="display-4">Navbar Variants</h1>
         <p className="lead">
           variants showing different <code>config</code>
           s.
