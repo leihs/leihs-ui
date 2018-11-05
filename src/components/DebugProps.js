@@ -1,9 +1,18 @@
 import React, { Component } from 'react'
 
-class Bold extends Component {
+class DebugProps extends Component {
   render() {
-    return <pre>{JSON.stringify(this.props, 0, 2)}</pre>
+    return (
+      <div>
+        <h1>
+          <mark>
+            <b>DEBUG</b> props
+          </mark>
+        </h1>
+        <pre>{JSON.stringify(this.props, 0, 2)}</pre>
+      </div>
+    )
   }
 }
 
-export default Bold
+export default DebugProps
