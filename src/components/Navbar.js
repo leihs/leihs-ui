@@ -63,6 +63,7 @@ export default class Navbar extends React.Component {
       returnTo
     } = config
     const { homeUrl } = defaults
+    const user = f.get(me, 'user')
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
 
     const bgColor =
@@ -100,7 +101,7 @@ export default class Navbar extends React.Component {
           <Nav className="ml-auto" navbar>
             <SubAppDropdown subApps={subApps} />
 
-            {f.isEmpty(me) || f.isEmpty(me.user) ? (
+            {f.isEmpty(user) ? (
               !!hideSignInField || (
                 <NavbarLogin
                   returnTo={returnTo}
@@ -109,29 +110,16 @@ export default class Navbar extends React.Component {
                 />
               )
             ) : (
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  <Icon.User size="lg" />
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem tag="span">
-                    <form action="/sign-out" method="POST">
-                      {!!csrfToken && (
-                        <input
-                          type="hidden"
-                          name="csrf-token"
-                          value={csrfToken}
-                        />
-                      )}
-                      <button type="submit">Ausloggen</button>
-                    </form>
-                  </DropdownItem>
-                  <DropdownItem>{tmpUserInfo({ me })}</DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
+              <UserMenu user={user} csrfToken={csrfToken} />
             )}
 
-            <LocalesDropdown me={me} locales={locales} csrfToken={csrfToken} />
+            {!f.isEmpty(user) && (
+              <LocalesDropdown
+                locales={locales}
+                selectedLocale={f.get(me, 'user.selectedLocale')}
+                csrfToken={csrfToken}
+              />
+            )}
           </Nav>
         </Collapse>
       </BsNavbar>
@@ -139,12 +127,34 @@ export default class Navbar extends React.Component {
   }
 }
 
-const tmpUserInfo = user => (
-  <F>
-    <pre>
-      <small>{JSON.stringify(user, 0, 2)}</small>
-    </pre>
-  </F>
+const UserMenu = ({ user, csrfToken }) => (
+  <UncontrolledDropdown nav inNavbar>
+    <DropdownToggle nav caret>
+      <Icon.User size="lg" />
+    </DropdownToggle>
+
+    <DropdownMenu right>
+      <DropdownItem tag="span" disabled className="text-body">
+        <b>{decorateUser(user)}</b>
+      </DropdownItem>
+      <DropdownItem divider />
+      <DropdownItem tag="a" href="/borrow/user">
+        Benutzerdaten
+      </DropdownItem>
+      <DropdownItem tag="a" href="/borrow/user/documents">
+        Meine Dokumente
+      </DropdownItem>
+      <DropdownItem divider />
+      <form action="/sign-out" method="POST">
+        <DropdownItem tag="button" type="submit">
+          <input type="hidden" name="csrf-token" value={csrfToken} />
+          Logout
+        </DropdownItem>
+      </form>
+
+      {/* <DropdownItem>{tmpUserInfo({ me })}</DropdownItem> */}
+    </DropdownMenu>
+  </UncontrolledDropdown>
 )
 
 const SubAppDropdown = ({ subApps }) =>
@@ -182,14 +192,21 @@ const SubAppDropdown = ({ subApps }) =>
               )
 
             if (subApp === 'manage')
-              item = (
+              item = f.isEmpty(subApps['manage']) ? (
                 <DropdownItem href="/manage">
-                  <Icon.LeihsManage /> Manage
-                  {/* FIXME: decorate */}
-                  {!f.isBoolean(subApps['manage']) && (
-                    <pre>{JSON.stringify(subApps['manage'], 0, 2)}</pre>
-                  )}
+                  <Icon.LeihsManage /> Geräteparks
                 </DropdownItem>
+              ) : (
+                <F>
+                  <DropdownItem header>
+                    <Icon.LeihsManage /> Geräteparks
+                  </DropdownItem>
+                  {f.map(subApps.manage, ({ name, href }) => (
+                    <DropdownItem tag="a" href={href}>
+                      {name}
+                    </DropdownItem>
+                  ))}
+                </F>
               )
 
             if (subApp === 'styleguide')
@@ -211,29 +228,47 @@ const SubAppDropdown = ({ subApps }) =>
     </UncontrolledDropdown>
   )
 
-const LocalesDropdown = ({ me, locales, csrfToken }) =>
-  f.isEmpty(me) || f.isEmpty(me.user) || f.isEmpty(locales) ? (
+const LocalesDropdown = ({ locales, selectedLocale, csrfToken }) =>
+  f.isEmpty(locales) ? (
     false
   ) : (
-    <UncontrolledDropdown nav inNavbar>
-      <DropdownToggle nav caret>
-        <Icon.Language />
-      </DropdownToggle>
-      <DropdownMenu right>
-        {f.map(locales, l => (
-          <DropdownItem tag="span">
-            <form method="POST" action="/my/user/me">
-              {l.name}
-              <input type="hidden" name="language_id" value={l.id} />
-              <input type="hidden" name="csrf-token" value={csrfToken} />
-              <button type="submit" />
-            </form>
-          </DropdownItem>
-        ))}
-        <DropdownItem>
-          <pre>{JSON.stringify(locales, 0, 2)}</pre>
-        </DropdownItem>
-      </DropdownMenu>
-    </UncontrolledDropdown>
+    <form method="POST" action="/my/user/me">
+      <input type="hidden" name="csrf-token" value={csrfToken} />
+      <UncontrolledDropdown nav inNavbar>
+        <DropdownToggle nav caret>
+          <Icon.Language />
+        </DropdownToggle>
+        <DropdownMenu right>
+          {/* <DropdownItem divider >Sprachen</DropdownItem> */}
+          {f.map(locales, lang => {
+            const isSelected = lang.id === selectedLocale
+            return (
+              <DropdownItem
+                tag="button"
+                type="submit"
+                name="language_id"
+                value={lang.id}
+                disabled={isSelected}
+              >
+                {isSelected ? <b>{lang.name}</b> : lang.name}
+              </DropdownItem>
+            )
+          })}
+        </DropdownMenu>
+      </UncontrolledDropdown>
+    </form>
   )
+
 // const Let = ({ children, ...props }) => children(props)
+
+function decorateUser(u) {
+  if (u.firstname && u.lastname) {
+    return `${f.first(u.firstname)}. ${u.lastname}`
+  }
+  return f.first(
+    f.filter(
+      ['lastname', 'login', 'email', 'id'].map(key => f.get(u, key)),
+      i => !f.isEmpty(i)
+    )
+  )
+}
