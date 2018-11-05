@@ -10,11 +10,16 @@ export const exampleParams = {
       name: 'Normin Normalo'
     }
   },
+  locales: [
+    { name: 'Deutsch', href: '/set-locale/de' },
+    { name: 'English', href: '/set-locale/en' },
+    { name: 'Español', href: '/set-locale/es' }
+  ],
   subApps: {
     borrow: true,
     admin: true,
     procure: true,
-    manage: true,
+    manage: [{ name: 'XYZ', href: '/manage/xyz' }],
     styleguide: false
   },
   appColor: LEIHS_GREEN,
