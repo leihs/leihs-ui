@@ -31,7 +31,7 @@ const defaults = {
 
 const Brand = ({ title }) => (
   <F>
-    <Icon.LeihsLogo className="mr-2" />
+    {/* <Icon.LeihsLogo className="mr-2" /> */}
     {title}
   </F>
 )
@@ -52,7 +52,7 @@ export default class Navbar extends React.Component {
   }
 
   render({ props, state } = this) {
-    const { bgBaseColor, config } = props
+    const { bgBaseColor, hideSignInField = false, config } = props
     const {
       me,
       appTitle,
@@ -60,10 +60,10 @@ export default class Navbar extends React.Component {
       appColor,
       subApps,
       locales,
-      returnTo,
-      csrfToken
+      returnTo
     } = config
     const { homeUrl } = defaults
+    const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
 
     const bgColor =
       props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
@@ -101,7 +101,13 @@ export default class Navbar extends React.Component {
             <SubAppDropdown subApps={subApps} />
 
             {f.isEmpty(me) || f.isEmpty(me.user) ? (
-              <NavbarLogin returnTo={returnTo} />
+              !!hideSignInField || (
+                <NavbarLogin
+                  returnTo={returnTo}
+                  // FIXME: do not require input (when sign in page can handle it)
+                  requireUserInput={true}
+                />
+              )
             ) : (
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -125,21 +131,7 @@ export default class Navbar extends React.Component {
               </UncontrolledDropdown>
             )}
 
-            {f.isEmpty(me) || f.isEmpty(me.user) || f.isEmpty(locales) ? (
-              false
-            ) : (
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  <Icon.Language />
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>[TODO]</DropdownItem>
-                  <DropdownItem>
-                    <pre>{JSON.stringify(locales, 0, 2)}</pre>
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            )}
+            <LocalesDropdown me={me} locales={locales} csrfToken={csrfToken} />
           </Nav>
         </Collapse>
       </BsNavbar>
@@ -219,4 +211,29 @@ const SubAppDropdown = ({ subApps }) =>
     </UncontrolledDropdown>
   )
 
+const LocalesDropdown = ({ me, locales, csrfToken }) =>
+  f.isEmpty(me) || f.isEmpty(me.user) || f.isEmpty(locales) ? (
+    false
+  ) : (
+    <UncontrolledDropdown nav inNavbar>
+      <DropdownToggle nav caret>
+        <Icon.Language />
+      </DropdownToggle>
+      <DropdownMenu right>
+        {f.map(locales, l => (
+          <DropdownItem tag="span">
+            <form method="POST" action="/my/user/me">
+              {l.name}
+              <input type="hidden" name="language_id" value={l.id} />
+              <input type="hidden" name="csrf-token" value={csrfToken} />
+              <button type="submit" />
+            </form>
+          </DropdownItem>
+        ))}
+        <DropdownItem>
+          <pre>{JSON.stringify(locales, 0, 2)}</pre>
+        </DropdownItem>
+      </DropdownMenu>
+    </UncontrolledDropdown>
+  )
 // const Let = ({ children, ...props }) => children(props)

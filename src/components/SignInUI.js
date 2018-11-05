@@ -1,7 +1,11 @@
 import React from 'react'
 import { Hr } from './Bootstrap'
 
-export const NavbarLogin = ({ returnTo, formAction }) => (
+export const NavbarLogin = ({
+  returnTo,
+  formAction,
+  requireUserInput = true
+}) => (
   <form className="form-inline my-2 my-lg-0" action={formAction} method="GET">
     <div className="input-group">
       <input
@@ -11,6 +15,7 @@ export const NavbarLogin = ({ returnTo, formAction }) => (
         placeholder="Nutzername/Email"
         aria-label="Nutzername/Email"
         aria-describedby="button-addon2"
+        required={requireUserInput}
       />
       <div className="input-group-append">
         <button className="btn btn-success" type="submit" id="button-addon2">

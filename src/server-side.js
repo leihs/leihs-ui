@@ -21,9 +21,9 @@ export function renderComponentToString(name, props) {
 // helpers
 function reactElement(name, props) {
   const component = Components[name]
-  assert.ok(component)
+  assert.ok(component, `Could not find React Component '${name}'!`)
   const element = React.createElement(component, props)
-  assert.ok(element)
+  assert.ok(element, 'Could not create React Element!')
   return element
 }
 
