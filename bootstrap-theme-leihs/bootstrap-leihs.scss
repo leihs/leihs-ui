@@ -5,11 +5,17 @@
 html,
 body {
   height: 100%;
+  min-width: 320px;
 }
 
 // fixes
 .btn {
   -webkit-appearance: none;
+}
+// containers for React SSR
+[data-react-component][data-react-props] {
+  height: 100%; // "pass through" full parent height
+  display: contents; // dont interfere with flexbox layout
 }
 
 // extensions
