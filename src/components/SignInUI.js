@@ -47,13 +47,18 @@ export const SignInCard = ({ authFlow }) => (
       {'ZHdK-Login'}
     </a>
     <Hr className="pb-3 pt-4">oder</Hr>
-    <form className="form-signin">
-      <h2 className="h5 mb-2 font-weight-normal">{'Anmelden mit Passwort'}</h2>
+    <form
+      className="form-signin"
+      method={authFlow.form.method}
+      action={authFlow.form.action}
+    >
+      <h2 className="h5 mb-2 font-weight-normal">{authFlow.title}</h2>
       <label htmlFor={'inputEmail'} className="sr-only">
-        xxx
+        email oder username
       </label>
       <input
         id={'inputEmail'}
+        name="user"
         className="form-control"
         required
         value={authFlow.user}
@@ -70,6 +75,7 @@ export const SignInCard = ({ authFlow }) => (
       </label>
       <input
         type="password"
+        name="password"
         id={'inputPassword'}
         placeholder="Passwort"
         required
@@ -81,10 +87,7 @@ export const SignInCard = ({ authFlow }) => (
         }}
       />
 
-      <button
-        className="btn XXXbtn-lg btn-success btn-block mt-3"
-        type="submit"
-      >
+      <button className="btn btn-success btn-block mt-3" type="submit">
         {'Weiter'}
       </button>
     </form>

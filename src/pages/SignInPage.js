@@ -1,20 +1,41 @@
 import React, { Component } from 'react'
 import f from 'lodash'
 
-import { VisuallyHidden } from '../components/Bootstrap'
+import FlashMessages from '../components/FlashMessages'
 import Navbar from '../components/Navbar'
-import DebugProps from '../components/DebugProps'
+import { SignInCard } from '../components/SignInUI'
+// import { VisuallyHidden } from '../components/Bootstrap'
+// import DebugProps from '../components/DebugProps'
+
+const defaultProps = {
+  authFlow: {
+    title: 'Anmelden mit Passwort',
+    form: {
+      method: 'POST',
+      action: '/sign-in'
+    }
+  }
+}
 
 class SignInPage extends Component {
   render(props = this.props) {
-    const userParam = f.get(props, 'authFlow.user')
-    const csrfToken = f.get(props, 'navbar.config.csrfToken')
-    return (
-      <React.Fragment>
-        <Navbar {...props.navbar} hideSignInField />
-        <h1>SignInPage</h1>
+    const flash = f.get(props, 'flash')
+    const authFlow = f.get(props, 'authFlow')
 
-        <div className="card-body">
+    // const userParam = f.get(props, 'authFlow.user')
+    // const csrfToken = f.get(props, 'navbar.config.csrfToken')
+
+    return (
+      <div className="bg-paper h-100">
+        <Navbar {...props.navbar} hideSignInField />
+
+        <FlashMessages {...flash} />
+
+        <div className="container d-flex" style={{ height: '67%' }}>
+          <SignInCard authFlow={f.merge(authFlow, defaultProps.authFlow)} />
+        </div>
+
+        {/* <div className="card-body">
           <form className="form" method="POST" action="/sign-in">
             <div className="form-group mx-sm-2 mb-2">
               <VisuallyHidden if={userParam}>
@@ -50,8 +71,8 @@ class SignInPage extends Component {
           </form>
         </div>
 
-        <DebugProps {...props} />
-      </React.Fragment>
+        <DebugProps {...props} /> */}
+      </div>
     )
   }
 }
