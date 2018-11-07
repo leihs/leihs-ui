@@ -73,7 +73,7 @@ export default class Navbar extends React.Component {
       <BsNavbar
         dark
         color="dark"
-        expand={user ? 'md' : true}
+        expand={user ? 'sm' : true}
         className={cx('navbar-leihs', props.className)}
         style={{ backgroundColor: `${bgColor} !important` }}
       >
