@@ -19,6 +19,7 @@ const defaultProps = {
 
 class SignInPage extends Component {
   render(props = this.props) {
+    const authSystems = f.get(props, 'authSystems')
     const authFlow = f.get(props, 'authFlow')
 
     // const userParam = f.get(props, 'authFlow.user')
@@ -31,7 +32,10 @@ class SignInPage extends Component {
         <FlashMessages flashMessages={f.get(props, 'flashMessages')} />
 
         <div className="container d-flex" style={{ height: '67%' }}>
-          <SignInCard authFlow={f.merge(authFlow, defaultProps.authFlow)} />
+          <SignInCard
+            authFlow={f.merge(authFlow, defaultProps.authFlow)}
+            authSystems={authSystems}
+          />
         </div>
 
         {/* <div className="card-body">

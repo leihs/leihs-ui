@@ -5,17 +5,64 @@ import React from 'react'
 // import f from 'lodash'
 import { withRouter } from 'next/router'
 
-import Navbar from '../src/components/Navbar'
-import { SignInCard } from '../src/components/SignInUI'
+import SignInPage from '../src/pages/SignInPage'
 
-import { exampleParams as exampleNavbarParams } from './navbar/dummy'
+// import { exampleParams as exampleNavbarParams } from './navbar/dummy'
 
-const LEIHS_GREEN = '#afec81'
-const exampleProps = {
+// const examplePropsPw = {
+//   navbar: {
+//     config: {
+//       appTitle: 'Leihs',
+//       appColor: 'gray',
+//       csrfToken: '5eb86461-a20e-4994-8706-c80b40e30137',
+//       me: null,
+//       subApps: null,
+//       locales: []
+//     }
+//   },
+//   authFlow: {
+//     user: 'admin@example.com',
+//     title: 'Anmelden mit Passwort',
+//     form: { method: 'POST', action: '/sign-in' }
+//   },
+//   authSystems: [
+//     {
+//       id: 'password',
+//       type: 'password',
+//       name: 'leihs password',
+//       description: null,
+//       external_url: null
+//     }
+//   ]
+// }
+const examplePropsExt = {
   navbar: {
-    config: { ...exampleNavbarParams, appColor: LEIHS_GREEN }
-  }
+    config: {
+      appTitle: 'Leihs',
+      appColor: 'gray',
+      csrfToken: '5eb86461-a20e-4994-8706-c80b40e30137',
+      me: null,
+      subApps: null,
+      locales: []
+    }
+  },
+  authFlow: {
+    user: 'admin@example.com',
+    title: 'Anmelden mit Passwort',
+    form: { method: 'POST', action: '/sign-in' }
+  },
+  authSystems: [
+    {
+      id: 'password',
+      type: 'password',
+      name: 'leihs password',
+      description: null,
+      external_url: null
+    }
+  ]
 }
+
+const exampleProps = examplePropsExt
 
 const page = ({ router }) => {
   const userField = router.query.user
@@ -28,16 +75,5 @@ const page = ({ router }) => {
 export default withRouter(page)
 
 const LoginPage = props => {
-  const { authFlow } = props
-  return (
-    <React.Fragment>
-      <div className="bg-paper h-100">
-        <Navbar {...exampleProps.navbar} />
-
-        <div className="container d-flex" style={{ height: '67%' }}>
-          <SignInCard authFlow={authFlow} />
-        </div>
-      </div>
-    </React.Fragment>
-  )
+  return <SignInPage {...props} />
 }
