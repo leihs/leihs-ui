@@ -35,7 +35,8 @@ body {
 
 .navbar-leihs {
   min-height: 3rem;
-  background-color: #563d7c !important;
+  // background-color: #563d7c !important; // bootstrap docs purple
+  background-color: #343a40 !important; // bootstrap bg-dark
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }

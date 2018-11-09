@@ -5,7 +5,7 @@ import { ColorTint } from '../lib/color-fns'
 import {
   // Badge,
   Collapse,
-  Navbar as BsNavbar,
+  // Navbar as BsNavbar,
   NavbarToggler,
   NavbarBrand,
   Nav,
@@ -17,6 +17,7 @@ import {
   DropdownItem as BsDropdownItem
   // DropdownItemLink
 } from './Bootstrap'
+import { Navbar as BsNavbar } from 'reactstrap'
 
 import Icon from './Icons'
 import { NavbarLogin } from './SignInUI'
@@ -54,7 +55,13 @@ export default class Navbar extends React.Component {
   }
 
   render({ props, state } = this) {
-    const { bgBaseColor, hideSignInField = false, config } = props
+    const {
+      bgBaseColor,
+      hideSignInField = false,
+      config,
+      brand,
+      children
+    } = props
     const {
       me,
       appTitle,
@@ -77,16 +84,26 @@ export default class Navbar extends React.Component {
         color="dark"
         expand={user ? 'sm' : true}
         className={cx('navbar-leihs', props.className)}
-        style={{ backgroundColor: `${bgColor} !important` }}
+        // FIXME: style tag gets missing(???)
+        style={
+          !bgColor
+            ? { font: 'inherit' }
+            : { backgroundColor: `${bgColor} !important` }
+        }
       >
-        <NavbarBrand href={homeUrl}>
-          <Brand title={appTitle} />
-        </NavbarBrand>
+        {brand ? (
+          brand
+        ) : (
+          <NavbarBrand href={homeUrl}>
+            <Brand title={appTitle} />
+          </NavbarBrand>
+        )}
 
         <NavbarToggler onClick={e => this.toggleOpen()} />
 
         <Collapse isOpen={state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
+            {children}
             {f.map(
               appMenu,
               ({ title, href, icon, active, submenu, attr }, i) => {
