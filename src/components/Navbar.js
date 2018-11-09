@@ -14,7 +14,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem
+  DropdownItem as BsDropdownItem
   // DropdownItemLink
 } from './Bootstrap'
 
@@ -28,6 +28,8 @@ export const BASE_COLOR = '#343a40' // bootstrap bg-dark
 const defaults = {
   homeUrl: '/'
 }
+
+const DropdownItem = p => <BsDropdownItem data-trigger {...p} />
 
 const Brand = ({ title }) => (
   <F>
@@ -217,7 +219,7 @@ const SubAppDropdown = ({ subApps }) =>
               )
 
             return (
-              <F key={subApp}>
+              <F key={i}>
                 {item}
                 {withDivider && <DropdownItem divider />}
               </F>
@@ -244,6 +246,7 @@ const LocalesDropdown = ({ locales, selectedLocale, csrfToken }) =>
             const isSelected = lang.id === selectedLocale
             return (
               <DropdownItem
+                key={lang.id}
                 tag="button"
                 type="submit"
                 name="language_id"
