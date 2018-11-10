@@ -29,7 +29,7 @@ const RootPage = props => {
                 </div>
               </div>
 
-              <div
+              {/* <div
                 className="bg-leihs-splash"
                 style={{
                   position: 'relative',
@@ -38,7 +38,7 @@ const RootPage = props => {
                   width: '100%',
                   height: 'auto'
                 }}
-              />
+              /> */}
 
               {!f.isEmpty(f.get(splash, 'image')) && (
                 <img

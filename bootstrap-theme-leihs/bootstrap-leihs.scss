@@ -21,7 +21,7 @@ body {
 // extensions
 .bg-paper {
   background: #f3f1eb
-    url(https://ausleihe.zhdk.ch/assets/background-b0b9837260c08dc253e08e6c1c3bb9b9b5124089dfa5ce185ce72df26d692c80.png);
+    url('../legacy/assets/images/background.png');
   color: #3a3a3a;
 }
 
@@ -29,9 +29,9 @@ body {
   background: linear-gradient(to bottom, #fff 50%, #f2f2f2 50%);
 }
 
-.bg-leihs-splash {
-  background: transparent url(../legacy/assets/images/splash.jpg);
-}
+// .bg-leihs-splash {
+//   background: transparent url(../legacy/assets/images/splash.jpg);
+// }
 
 .navbar-leihs {
   min-height: 3rem;

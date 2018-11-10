@@ -15,9 +15,14 @@ const exampleNavbarParams = {
   subApps: false
 }
 
-// FIXME: import from file…
+// FIXME: import from file… this serves from legacy app(!)
 const splashImage =
-  'https://ausleihe.zhdk.ch/assets/leihs-62b57b03ec5abd5e5fa3e6c35fde8a782419982d2cdd771fa8fba6cd0ab63d41.png'
+  '/assets/leihs-62b57b03ec5abd5e5fa3e6c35fde8a782419982d2cdd771fa8fba6cd0ab63d41.png'
+
+// NOTE: forces inlining!
+// TODO: configure static assets and dont inine this
+/* eslint-disable-next-line import/no-webpack-loader-syntax  */
+// const splashImage = require('url-loader?limit=100000000!../legacy/assets/images/splash.jpg')
 
 const exampleProps = {
   // flashMessages: [
