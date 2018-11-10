@@ -198,7 +198,7 @@ const SubAppDropdown = ({ subApps }) =>
 
             if (subApp === 'admin')
               item = (
-                <DropdownItem href="/admin">
+                <DropdownItem href="/admin/">
                   <Icon.LeihsAdmin /> Admin
                 </DropdownItem>
               )
