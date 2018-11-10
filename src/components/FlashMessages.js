@@ -4,35 +4,39 @@ import f from 'lodash'
 
 class FlashMessages extends Component {
   render() {
-    const { flashMessages } = this.props
+    const { messages, className, messageClasses } = this.props
 
-    if (f.isEmpty(flashMessages)) return false
+    if (f.isEmpty(messages)) return false
 
     return (
-      <div className="flash XXXsticky-top">
-        {f.map(flashMessages, ({ message = '', level = 'info' }, i) => {
+      <div className={cx(className, 'ui-flash-messages')}>
+        {f.map(messages, ({ message, level = 'info' }, i) => {
+          if (f.isEmpty(message) || !f.isString(message)) return false
           const lines = message.split('\n')
           level = mapLevel(level)
           return (
             <div
               key={i}
               className={cx(
-                `alert-${level} bg-${level} border-${level} text-light `,
                 'alert fade show',
-                'mb-0 rounded-0',
-                'text-center lead'
+                `alert-${level} bg-${level} border-${level} text-light`,
+                'text-center',
+                messageClasses
               )}
               role="alert"
             >
-              <strong className="font-weight-bold">{lines.slice(0, 1)}</strong>
-              <br />
-              {breakLinesReact(lines.slice(1))}
+              <p className="font-weight-bold">{lines.slice(0, 1)}</p>
+              <p className="small">{lines.slice(1)}</p>
             </div>
           )
         })}
       </div>
     )
   }
+}
+
+FlashMessages.defaultProps = {
+  textClass: 'h3'
 }
 
 export default FlashMessages
@@ -43,11 +47,3 @@ const mapLevel = level => {
   }
   return levelMap[level] || level
 }
-
-const breakLinesReact = text =>
-  (f.isArray(text) ? text : text.split('\n')).map((item, i) => (
-    <React.Fragment key={i}>
-      {item}
-      <br />
-    </React.Fragment>
-  ))
