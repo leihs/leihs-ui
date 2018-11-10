@@ -1,10 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`undefined: renders correctly 1`] = `
+exports[`hidden when \`true\` arg: renders correctly 1`] = `
 <form>
   <div
-    aria-hidden={false}
-    className=""
+    aria-hidden={true}
+    className="sr-only"
+    tabIndex={-1}
   >
     Inner Text 
     <input
@@ -14,12 +15,26 @@ exports[`undefined: renders correctly 1`] = `
 </form>
 `;
 
-exports[`undefined: renders correctly 2`] = `
+exports[`hidden when no arg: renders correctly 1`] = `
 <form>
   <div
     aria-hidden={true}
     className="sr-only"
     tabIndex={-1}
+  >
+    Inner Text 
+    <input
+      type="text"
+    />
+  </div>
+</form>
+`;
+
+exports[`not hidden when \`false\` arg: renders correctly 1`] = `
+<form>
+  <div
+    aria-hidden={false}
+    className=""
   >
     Inner Text 
     <input

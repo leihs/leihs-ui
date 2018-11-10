@@ -5,6 +5,17 @@ import VisuallyHidden from './VisuallyHidden'
 
 const examples = [
   {
+    name: 'hidden when no arg',
+    content: (
+      <form>
+        <VisuallyHidden>
+          Inner Text <input type="text" />
+        </VisuallyHidden>
+      </form>
+    )
+  },
+  {
+    name: 'not hidden when `false` arg',
     content: (
       <form>
         <VisuallyHidden if={false}>
@@ -14,6 +25,7 @@ const examples = [
     )
   },
   {
+    name: 'hidden when `true` arg',
     content: (
       <form>
         <VisuallyHidden if={true}>

@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Let: renders correctly 1`] = `"{\\"a\\":\\"1\\",\\"b\\":2}"`;
+
+exports[`breakLinesReact: renders correctly 1`] = `
+Array [
+  <p />,
+  <p />,
+  <p>
+    hello
+  </p>,
+  <p>
+    hello\\nworld
+  </p>,
+  <p>
+    hello
+    <br />
+    world \\n 
+    <br />
+    etc
+    <br />
+    p	p
+  </p>,
+]
+`;
