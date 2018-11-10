@@ -26,6 +26,33 @@ export default function IndexPage() {
                 dummy page <code>/login</code>
               </a>
             </Link>
+            <ul>
+              <li>
+                <Link prefetch href="./login/no-user">
+                  <a>no user</a>
+                </Link>
+              </li>
+              <li>
+                <Link prefetch href="./login/invalid-user">
+                  <a>invalid user</a>
+                </Link>
+              </li>
+              <li>
+                <Link prefetch href="./login/wrong-password">
+                  <a>wrong password</a>
+                </Link>
+              </li>
+              <li>
+                <Link prefetch href="./login/step-2-pw">
+                  <a>second step, password auth only</a>
+                </Link>
+              </li>
+              <li>
+                <Link prefetch href="./login/step-2-full">
+                  <a>second step, password and external auth</a>
+                </Link>
+              </li>
+            </ul>
           </li>
           <li>
             <Link prefetch href="./login-dummy">
