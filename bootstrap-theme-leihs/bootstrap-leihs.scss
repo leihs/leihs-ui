@@ -1,37 +1,19 @@
-@import 'custom';
-@import '~bootstrap/scss/bootstrap';
-@import '~@fortawesome/fontawesome-svg-core/styles.css';
+@import './custom';
+@import './node_modules/bootstrap/scss/bootstrap';
+@import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
+@import './scss/decoration';
+@import './scss/typography';
+@import './scss/bootstrap-extensions';
+@import './scss/bootstrap-fixes';
+@import './scss/app-fixes';
+
+// globals
 html,
 body {
   height: 100%;
   min-width: 320px;
 }
-
-// fixes
-.btn {
-  -webkit-appearance: none;
-}
-// containers for React SSR
-[data-react-component][data-react-props] {
-  height: 100%; // "pass through" full parent height
-  display: contents; // dont interfere with flexbox layout
-}
-
-// extensions
-.bg-paper {
-  background: #f3f1eb
-    url('../legacy/assets/images/background.png');
-  color: #3a3a3a;
-}
-
-.bg-chrome-rims {
-  background: linear-gradient(to bottom, #fff 50%, #f2f2f2 50%);
-}
-
-// .bg-leihs-splash {
-//   background: transparent url(../legacy/assets/images/splash.jpg);
-// }
 
 .navbar-leihs {
   min-height: 3rem;
@@ -41,41 +23,6 @@ body {
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
 
-.hr-text {
-  // line with text, looks like this:
-  // ------------- some text ------------------
-
-  display: flex;
-  flex-basis: 100%;
-  align-items: center;
-  &::before,
-  &::after {
-    content: '';
-    flex-grow: 1;
-    border-top: 1px solid gray;
-    margin: 0;
-    border: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1); // like <hr/>
-  }
-  &::before {
-    margin-right: 1em;
-  }
-  &::after {
-    margin-left: 1em;
-  }
-  // hide any real hrs
-  hr {
-    display: none;
-  }
-}
-
-.minh-100 {
-  min-height: 100%;
-}
-
-.minw-100 {
-  min-width: 100%;
-}
 
 // extensions copied from leihs-my & leihs-admin:
 @include bg-variant('.bg-auth', #fd7e14);
@@ -87,10 +34,4 @@ ol.breadcrumb.leihs-nav-right {
       content: '·';
     }
   }
-}
-
-// next.js fix to make root/wrapper full height:
-#__next {
-  height: 100%;
-  display: contents;
 }
