@@ -181,7 +181,7 @@ export const SignInCard = ({ authFlow, authSystems, messages }) => {
 
   return (
     <section
-      className="card shadow-sm text-center p-4 m-auto"
+      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
       style={{
         maxWidth: '30rem'
       }}

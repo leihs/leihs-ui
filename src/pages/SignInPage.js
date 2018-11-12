@@ -27,12 +27,12 @@ class SignInPage extends Component {
         <Navbar {...props.navbar} hideSignInField />
 
         <div
-          className="container d-flex minh-100 pb-5"
+          className="m-auto d-flex minh-100 pb-sm-5"
           style={{
             maxWidth: '42rem'
           }}
         >
-          <div className="p-4 pb-5 m-auto minw-100">
+          <div className="p-sm-4 pb-sm-5 m-sm-auto w-100 minw-100">
             <SignInCard
               authFlow={f.merge(authFlow, defaultProps.authFlow)}
               authSystems={authSystems}
