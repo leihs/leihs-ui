@@ -1,34 +1,58 @@
 {
   "app_name_borrow": {
+    "de": "Ausleihen",
     "en": "Borrow",
-    "de": "Ausleihen"
+    "fr": "Emprunter",
+    "es": "Borrow",
+    "gsw": "Uuslehne"
   },
   "app_name_admin": {
+    "de": "Admin",
     "en": "Admin",
-    "de": "Admin"
+    "fr": "Administration",
+    "es": "Admin",
+    "gsw": "Admin"
   },
   "app_name_procure": {
+    "de": "Bedarfsermittlung",
     "en": "Procurement",
-    "de": "Bedarfsermittlung"
+    "fr": "Approvisionnement",
+    "es": "Procurement",
+    "gsw": "Bedarfsermittlig"
   },
   "app_name_manage": {
+    "de": "Ausleihen",
     "en": "Inventory Pools",
-    "de": "Ausleihen"
+    "fr": "Groupes d'inventaire",
+    "es": "Inventory Pools",
+    "gsw": "Grätepärk"
   },
   "app_name_styleguide": {
+    "de": "Styleguide",
     "en": "Styleguide",
-    "de": "Styleguide"
+    "fr": "Styleguide",
+    "es": "Styleguide",
+    "gsw": "Styleguide"
   },
   "navbar_user_mydata": {
-    "en": "User profile",
-    "de": "Benutzerdaten"
+    "de": "Benutzerdaten",
+    "en": "User data",
+    "fr": "Données d'utilisateur",
+    "es": "User profile",
+    "gsw": "Benutzerdate"
   },
   "navbar_user_mydocs": {
+    "de": "Meine Dokumente",
     "en": "My documents",
-    "de": "Meine Dokumente"
+    "fr": "Mes documents",
+    "es": "My documents",
+    "gsw": "Mini Dokumänt"
   },
   "navbar_user_logout": {
+    "de": "Logout",
     "en": "Logout",
-    "de": "Logout"
+    "fr": "Logout",
+    "es": "Logout",
+    "gsw": "Uusego"
   }
 }
