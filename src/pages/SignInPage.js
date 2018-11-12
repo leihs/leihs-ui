@@ -8,7 +8,7 @@ import { SignInCard } from '../components/SignInUI'
 
 const defaultProps = {
   authFlow: {
-    title: 'Anmelden bei Leihs',
+    title: 'Anmelden bei leihs',
     form: {
       method: 'POST',
       action: '/sign-in'

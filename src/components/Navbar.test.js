@@ -15,7 +15,7 @@ const examples = [
       <Navbar
         config={{
           me: false,
-          appTitle: 'Leihs',
+          appTitle: 'leihs',
           appMenu: null,
           subApps: false,
           appColor: null,
@@ -29,7 +29,7 @@ const examples = [
     content: (
       <Navbar
         config={{
-          appTitle: 'Leihs',
+          appTitle: 'leihs',
           appColor: LEIHS_GREEN,
           appMenu: [
             {

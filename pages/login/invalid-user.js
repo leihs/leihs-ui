@@ -18,7 +18,8 @@ const exampleProps = {
     {
       level: 'error',
       message:
-        'Signing in with this account is currently not possible!  \nCheck your email-address respectively login and try again.  \nContact your leihs administrator if the problem persists. '
+        // 'Signing in with this account is currently not possible!  \nCheck your email-address or user name and try again.  \nContact the leihs support if the problem persists. '
+        'Anmelden ist mit diesem Benutzerkonto nicht möglich! \nBitte prüfen Sie Ihre E-Mail-Adresse oder den Benutzernamen. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.'
     }
   ]
 }

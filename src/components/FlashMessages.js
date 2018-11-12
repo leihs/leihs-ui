@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import cx from 'classnames'
 import f from 'lodash'
+import { breakLinesReact } from '../components/Util'
 
 class FlashMessages extends Component {
   render() {
@@ -26,7 +27,7 @@ class FlashMessages extends Component {
               role="alert"
             >
               <p className="font-weight-bold">{lines.slice(0, 1)}</p>
-              <p className="small">{lines.slice(1)}</p>
+              <p className="small">{breakLinesReact(lines.slice(1))}</p>
             </div>
           )
         })}

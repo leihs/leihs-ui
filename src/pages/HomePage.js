@@ -8,7 +8,7 @@ import RootPage from '../components/RootPage'
 const APP_COLOR = 'gray'
 
 const exampleNavbarParams = {
-  appTitle: 'Leihs',
+  appTitle: 'leihs',
   appColor: null,
   me: false,
   appMenu: null,

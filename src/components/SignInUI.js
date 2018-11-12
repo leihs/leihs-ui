@@ -5,7 +5,8 @@ import { Hr } from './Bootstrap'
 import { VisuallyHidden } from './Bootstrap'
 import FlashMessages from './FlashMessages'
 
-const AUTH_USERPARAM_LABEL = 'Email oder Benutzername'
+const AUTH_NAV_USERPARAM_LABEL = 'Benutzername/E-Mail'
+const AUTH_USERPARAM_LABEL = 'Benutzername oder E-Mail'
 const PWAUTH_DEFAULT_TITLE = 'Anmelden mit Passwort'
 
 export const NavbarLogin = ({
@@ -23,8 +24,8 @@ export const NavbarLogin = ({
         name="user"
         type="text"
         className="form-control"
-        placeholder="Nutzername/Email"
-        aria-label="Nutzername/Email"
+        placeholder={AUTH_NAV_USERPARAM_LABEL}
+        aria-label={AUTH_NAV_USERPARAM_LABEL}
         aria-describedby="button-addon2"
         required={requireUserInput}
       />
@@ -85,12 +86,12 @@ export const SignInCard = ({ authFlow, authSystems, messages }) => {
     <F>
       {!f.isEmpty(extAuths) && (
         <React.Fragment>
-          <h2 className="h5 mb-2 font-weight-normal">
+          {/* <h2 className="h5 mb-2 font-weight-normal">
             {'Anmelden mit externem Dienst'}
-          </h2>
+          </h2> */}
           {f.map(extAuths, ({ id, name, description, ...o }) => (
             <form
-              className="ui-form-signin mt-3"
+              className="ui-form-signin mt-2"
               key={id}
               method="POST"
               action={`/sign-in/external-authentication/${id}/request`}

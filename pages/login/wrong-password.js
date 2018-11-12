@@ -18,7 +18,8 @@ const exampleProps = {
     {
       level: 'error',
       message:
-        'Password authentication failed! \nCheck your password and try again. \nContact your leihs administrator if the problem persists.'
+        // 'Password authentication failed! \nCheck your password and try again. \nContact the leihs support if the problem persists.'
+        'Falsches Passwort! \nÜberprüfen Sie Ihr Passwort und versuchen Sie es erneut. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.'
     }
   ]
 }
