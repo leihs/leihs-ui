@@ -22,9 +22,12 @@ import { Navbar as BsNavbar } from 'reactstrap'
 import Icon from './Icons'
 import { NavbarLogin } from './SignInUI'
 
+import { Translator as T } from '../locale/translate'
+
 // export const BASE_COLOR = '#563d7c' // bootstrap docs purple
 export const BASE_COLOR = '#343a40' // bootstrap bg-dark
 // const LEIHS_GREEN = '#afec81'
+const DEFAULT_LOCALE = 'de-CH'
 
 const defaults = {
   homeUrl: '/'
@@ -75,6 +78,14 @@ export default class Navbar extends React.Component {
     const { homeUrl } = defaults
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
 
+    const selectedLocaleName = f.get(
+      f.find(locales, {
+        id: f.get(user, 'selectedLocale')
+      }),
+      'locale_name'
+    )
+    const t = T(selectedLocaleName, DEFAULT_LOCALE)
+
     const bgColor =
       props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
 
@@ -118,12 +129,12 @@ export default class Navbar extends React.Component {
           </Nav>
 
           <Nav className="ml-auto" navbar>
-            <SubAppDropdown subApps={subApps} />
+            <SubAppDropdown t={t} subApps={subApps} />
 
             {f.isEmpty(user) ? (
               !!hideSignInField || <NavbarLogin returnTo={returnTo} />
             ) : (
-              <UserMenu user={user} csrfToken={csrfToken} />
+              <UserMenu t={t} user={user} csrfToken={csrfToken} />
             )}
 
             {!f.isEmpty(user) && (
@@ -140,7 +151,7 @@ export default class Navbar extends React.Component {
   }
 }
 
-const UserMenu = ({ user, csrfToken }) => (
+const UserMenu = ({ t, user, csrfToken }) => (
   <UncontrolledDropdown nav inNavbar>
     <DropdownToggle nav caret>
       <Icon.User size="lg" />
@@ -152,16 +163,16 @@ const UserMenu = ({ user, csrfToken }) => (
       </DropdownItem>
       <DropdownItem divider />
       <DropdownItem tag="a" href="/borrow/user">
-        Benutzerdaten
+        {t('navbar_user_mydata')}
       </DropdownItem>
       <DropdownItem tag="a" href="/borrow/user/documents">
-        Meine Dokumente
+        {t('navbar_user_mydocs')}
       </DropdownItem>
       <DropdownItem divider />
       <form action="/sign-out" method="POST">
         <DropdownItem tag="button" type="submit">
           <input type="hidden" name="csrf-token" value={csrfToken} />
-          Logout
+          {t('navbar_user_logout')}
         </DropdownItem>
       </form>
 
@@ -170,7 +181,7 @@ const UserMenu = ({ user, csrfToken }) => (
   </UncontrolledDropdown>
 )
 
-const SubAppDropdown = ({ subApps }) =>
+const SubAppDropdown = ({ t, subApps }) =>
   f.some(subApps) && (
     <UncontrolledDropdown nav inNavbar>
       <DropdownToggle nav caret>
@@ -186,33 +197,33 @@ const SubAppDropdown = ({ subApps }) =>
             if (subApp === 'borrow')
               item = (
                 <DropdownItem href="/borrow">
-                  <Icon.LeihsBorrow /> Ausleihen
+                  <Icon.LeihsBorrow /> {t('app_name_borrow')}
                 </DropdownItem>
               )
 
             if (subApp === 'admin')
               item = (
                 <DropdownItem href="/admin/">
-                  <Icon.LeihsAdmin /> Admin
+                  <Icon.LeihsAdmin /> {t('app_name_admin')}
                 </DropdownItem>
               )
 
             if (subApp === 'procure')
               item = (
                 <DropdownItem href="/procure">
-                  <Icon.LeihsProcurement /> Bedarfsermittlung
+                  <Icon.LeihsProcurement /> {t('app_name_procure')}
                 </DropdownItem>
               )
 
             if (subApp === 'manage')
               item = f.isEmpty(subApps['manage']) ? (
                 <DropdownItem href="/manage">
-                  <Icon.LeihsManage /> Geräteparks
+                  <Icon.LeihsManage /> {t('app_name_manage')}
                 </DropdownItem>
               ) : (
                 <F>
                   <DropdownItem header>
-                    <Icon.LeihsManage /> Geräteparks
+                    <Icon.LeihsManage /> {t('app_name_manage')}
                   </DropdownItem>
                   {f.map(subApps.manage, ({ name, href }) => (
                     <DropdownItem tag="a" href={href}>
@@ -225,7 +236,7 @@ const SubAppDropdown = ({ subApps }) =>
             if (subApp === 'styleguide')
               item = (
                 <DropdownItem href="/">
-                  <Icon.LeihsStyleguide /> Styleguide
+                  <Icon.LeihsStyleguide /> {t('app_name_styleguide')}
                 </DropdownItem>
               )
 

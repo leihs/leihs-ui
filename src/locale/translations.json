@@ -1,0 +1,34 @@
+{
+  "app_name_borrow": {
+    "en": "Borrow",
+    "de": "Ausleihen"
+  },
+  "app_name_admin": {
+    "en": "Admin",
+    "de": "Admin"
+  },
+  "app_name_procure": {
+    "en": "Procurement",
+    "de": "Bedarfsermittlung"
+  },
+  "app_name_manage": {
+    "en": "Inventory Pools",
+    "de": "Ausleihen"
+  },
+  "app_name_styleguide": {
+    "en": "Styleguide",
+    "de": "Styleguide"
+  },
+  "navbar_user_mydata": {
+    "en": "User profile",
+    "de": "Benutzerdaten"
+  },
+  "navbar_user_mydocs": {
+    "en": "My documents",
+    "de": "Meine Dokumente"
+  },
+  "navbar_user_logout": {
+    "en": "Logout",
+    "de": "Logout"
+  }
+}
