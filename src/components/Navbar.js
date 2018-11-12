@@ -217,9 +217,10 @@ const SubAppDropdown = ({ t, subApps }) =>
 
             if (subApp === 'manage')
               item = f.isEmpty(subApps['manage']) ? (
-                <DropdownItem href="/manage">
-                  <Icon.LeihsManage /> {t('app_name_manage')}
-                </DropdownItem>
+                // <DropdownItem href="/manage">
+                //   <Icon.LeihsManage /> {t('app_name_manage')}
+                // </DropdownItem>
+                false
               ) : (
                 <F>
                   <DropdownItem header>
