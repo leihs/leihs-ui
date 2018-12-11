@@ -28,6 +28,8 @@ export const NavbarLogin = ({
         aria-label={AUTH_NAV_USERPARAM_LABEL}
         aria-describedby="button-addon2"
         required={requireUserInput}
+        autoCapitalize="off"
+        autoCorrect="off"
       />
       <div className="input-group-append">
         <button className="btn btn-success" type="submit" id="button-addon2">
@@ -70,6 +72,8 @@ export const SignInCard = ({ authFlow, authSystems, messages }) => {
           placeholder={AUTH_USERPARAM_LABEL}
           className="form-control"
           defaultValue={userParam}
+          autoCapitalize="off"
+          autoCorrect="off"
         />
 
         <HiddenPasswordField />
