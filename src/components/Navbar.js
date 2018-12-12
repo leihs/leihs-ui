@@ -182,7 +182,8 @@ const UserMenu = ({ t, user, csrfToken }) => (
 )
 
 const SubAppDropdown = ({ t, subApps }) =>
-  f.some(subApps) && (
+  f.some(subApps) &&
+  f.keys(subApps).length > 1 && (
     <UncontrolledDropdown nav inNavbar>
       <DropdownToggle nav caret>
         <Icon.LeihsProcurement />
