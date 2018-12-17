@@ -45,7 +45,12 @@ NavbarLogin.defaultProps = {
   formAction: '/sign-in'
 }
 
-export const SignInCard = ({ authFlow, authSystems, messages }) => {
+export const SignInCard = ({
+  authFlow,
+  authSystems,
+  messages,
+  autoFocusUserField = true
+}) => {
   const userParam = f.get(authFlow, 'user')
   const returnTo = f.get(authFlow, 'returnTo') || '/'
   const extAuths = f.filter(authSystems, { type: 'external' })
@@ -72,6 +77,7 @@ export const SignInCard = ({ authFlow, authSystems, messages }) => {
           placeholder={AUTH_USERPARAM_LABEL}
           className="form-control"
           defaultValue={userParam}
+          autoFocus={true}
           autoCapitalize="off"
           autoCorrect="off"
         />
