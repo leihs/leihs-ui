@@ -4,6 +4,7 @@ import f from 'lodash'
 
 import Navbar from './Navbar'
 import FlashMessages from './FlashMessages'
+import { Let } from './Util'
 
 const RootPage = props => {
   const { flash, navbar, splash, footer } = props
@@ -63,7 +64,9 @@ const RootPage = props => {
               <div className="col-6 col-md">
                 <h5>
                   {footer.appName}{' '}
-                  <small className="text-muted">{footer.appVersion}</small>
+                  <OptionalLink href={footer.appVersionLink}>
+                    <small className="text-muted">{footer.appVersion}</small>
+                  </OptionalLink>
                 </h5>
               </div>
               <div className="col-6 col-md" />
@@ -77,3 +80,6 @@ const RootPage = props => {
 }
 
 export default RootPage
+
+const OptionalLink = ({ href, children }) =>
+  !f.isEmpty(href) ? <a href={href}>{children}</a> : children

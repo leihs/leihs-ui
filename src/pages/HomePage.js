@@ -41,7 +41,8 @@ const exampleProps = {
   },
   footer: {
     appName: 'leihs',
-    appVersion: '5.0.0'
+    appVersion: '5.0.0',
+    appVersionLink: '/release'
   }
 }
 
