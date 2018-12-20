@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
-    "postinstall": "cd bootstrap-theme-leihs && { npm ci || npm i ;}",
+    "preinstall": "cd bootstrap-theme-leihs && { test -d node_modules && npm i || { npm ci || npm i ;} ;}",
     "dev": "node server.js",
     "build": "npm run -s build:theme && npm run -s build:lib && npm run -s build:next",
     "build:next": "next build",
@@ -26,7 +26,6 @@
     "@fortawesome/free-solid-svg-icons": "^5.3.1",
     "@fortawesome/react-fontawesome": "^0.1.3",
     "@zeit/next-css": "^1.0.1",
-    "bootstrap-theme-leihs": "file:bootstrap-theme-leihs",
     "color": "^3.1.0",
     "lodash": "^4.17.11",
     "next": "^7.0.2",
