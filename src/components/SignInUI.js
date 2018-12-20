@@ -76,7 +76,7 @@ export const SignInCard = ({
           required
           placeholder={AUTH_USERPARAM_LABEL}
           className="form-control"
-          defaultValue={userParam}
+          defaultValue={userParam || ''}
           autoFocus={true}
           autoCapitalize="off"
           autoCorrect="off"
@@ -106,7 +106,11 @@ export const SignInCard = ({
               method="POST"
               action={`/sign-in/external-authentication/${id}/request`}
             >
-              <input type="hidden" name="user-unique-id" value={userParam} />
+              <input
+                type="hidden"
+                name="user-unique-id"
+                value={userParam || ''}
+              />
               <button
                 className="btn btn-lg btn-success btn-block"
                 href={o.external_url}
@@ -144,7 +148,7 @@ export const SignInCard = ({
               name="user"
               className="form-control"
               required
-              value={userParam}
+              value={userParam || ''}
               readOnly
               style={{
                 marginBottom: '-1px',
