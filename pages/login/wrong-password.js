@@ -2,7 +2,7 @@ import React from 'react'
 import { withRouter } from 'next/router'
 import SignInPage from '../../src/pages/SignInPage'
 
-import navbarProps from './_sharedNavbarProps.json'
+import navbarProps from '../_sharedNavbarProps.json'
 
 const exampleProps = {
   navbar: navbarProps,

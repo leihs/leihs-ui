@@ -2,8 +2,11 @@ import React from 'react'
 import { LeihsPage } from '../../src/components/styleguide'
 import Navbar from '../../src/components/Navbar'
 
+import sharedNavbarProps from '../_sharedNavbarProps.json'
+
 const LEIHS_GREEN = '#afec81'
 export const exampleParams = {
+  ...sharedNavbarProps.config,
   csrfToken: '7d4eeec4-070c-4ea5-a778-85f29d9177e2',
   me: {
     user: {
@@ -15,32 +18,7 @@ export const exampleParams = {
       selectedLocale: '9a12cfd0-087d-56c4-ae4c-c6004f6adbf4'
     }
   },
-  locales: [
-    {
-      id: 'b40234c5-0757-5148-b54d-366ef33aafa1',
-      name: 'Deutsch',
-      locale_name: 'de-CH',
-      default: true
-    },
-    {
-      id: '9a12cfd0-087d-56c4-ae4c-c6004f6adbf4',
-      name: 'English',
-      locale_name: 'en-GB',
-      default: false
-    },
-    {
-      id: 'b3fbc650-ace6-5eee-bf09-53a450c6eb99',
-      name: 'Castellano',
-      locale_name: 'es',
-      default: false
-    },
-    {
-      id: 'ca962bd5-f5f0-5555-a5fa-41ef3451f448',
-      name: 'Züritüütsch',
-      locale_name: 'gsw-CH',
-      default: false
-    }
-  ],
+
   subApps: {
     borrow: true,
     admin: true,
