@@ -4,7 +4,6 @@ import f from 'lodash'
 
 import Navbar from './Navbar'
 import FlashMessages from './FlashMessages'
-import { Let } from './Util'
 
 const RootPage = props => {
   const { flash, navbar, splash, footer } = props
