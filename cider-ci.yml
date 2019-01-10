@@ -1,0 +1,42 @@
+jobs:
+  build:
+    name: 'Build'
+    run_when:
+      any branch is pushed: { type: branch, include_match: ^.*$ }
+
+    task_defaults: &TASK_DEFAULTS
+      environment_variables:
+        CI: 'true'
+      git_options:
+        submodules:
+          include_match: ^.*$
+      traits:
+        g2016: true
+
+    task:
+      scripts:
+        build:
+          timeout: 10 minutes
+          body: 'npm ci && npm run build'
+
+  lint:
+    name: 'Lint'
+    run_when:
+      any branch is pushed: { type: branch, include_match: ^.*$ }
+    task_defaults: *TASK_DEFAULTS
+    task:
+      scripts:
+        lint:
+          timeout: 10 minutes
+          body: 'npm ci && npm run ci:lint'
+
+  specs:
+    name: 'Tests'
+    run_when:
+      any branch is pushed: { type: branch, include_match: ^.*$ }
+    task_defaults: *TASK_DEFAULTS
+    task:
+      scripts:
+        jest:
+          timeout: 10 minutes
+          body: 'npm ci && npm test'
