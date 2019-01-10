@@ -27,7 +27,7 @@ import { Translator as T } from '../locale/translate'
 // export const BASE_COLOR = '#563d7c' // bootstrap docs purple
 export const BASE_COLOR = '#343a40' // bootstrap bg-dark
 // const LEIHS_GREEN = '#afec81'
-const DEFAULT_LOCALE = 'de-CH'
+const DEFAULT_LOCALE = 'de-CH' // just a fallback for translation function, not really used in app because backend already falls back to default lang for the instance
 
 const defaults = {
   homeUrl: '/'
@@ -78,13 +78,10 @@ export default class Navbar extends React.Component {
     const { homeUrl } = defaults
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
 
-    const selectedLocaleName = f.get(
-      f.find(locales, {
-        id: f.get(user, 'selectedLocale')
-      }),
-      'locale_name'
-    )
-    const t = T(selectedLocaleName, DEFAULT_LOCALE)
+    const selectedLocale =
+      f.find(locales, { isSelected: true }) ||
+      f.find(locales, { isDefault: true })
+    const t = T(f.get(selectedLocale, 'locale_name'), DEFAULT_LOCALE)
 
     const bgColor =
       props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
@@ -94,7 +91,7 @@ export default class Navbar extends React.Component {
         dark
         color="dark"
         expand={user ? 'sm' : true}
-        className={cx('navbar-leihs', props.className)}
+        className={cx('navbar-leihs ui-main-nav', props.className)}
         // FIXME: style tag gets missing(???)
         style={
           !bgColor
@@ -137,13 +134,11 @@ export default class Navbar extends React.Component {
               <UserMenu t={t} user={user} csrfToken={csrfToken} />
             )}
 
-            {!f.isEmpty(user) && (
-              <LocalesDropdown
-                locales={locales}
-                selectedLocale={f.get(me, 'user.selectedLocale')}
-                csrfToken={csrfToken}
-              />
-            )}
+            <LocalesDropdown
+              locales={locales}
+              isLoggedIn={!f.isEmpty(user)}
+              csrfToken={csrfToken}
+            />
           </Nav>
         </Collapse>
       </BsNavbar>
@@ -254,11 +249,15 @@ const SubAppDropdown = ({ t, subApps }) =>
     </UncontrolledDropdown>
   )
 
-const LocalesDropdown = ({ locales, selectedLocale, csrfToken }) =>
+const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) =>
   f.isEmpty(locales) ? (
     false
   ) : (
-    <form method="POST" action="/my/user/me">
+    <form
+      method="POST"
+      action={isLoggedIn ? '/my/user/me' : '/my/language'}
+      className="ui-lang-selection"
+    >
       <input type="hidden" name="csrf-token" value={csrfToken} />
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>
@@ -267,7 +266,7 @@ const LocalesDropdown = ({ locales, selectedLocale, csrfToken }) =>
         <DropdownMenu right>
           {/* <DropdownItem divider >Sprachen</DropdownItem> */}
           {f.map(locales, lang => {
-            const isSelected = lang.id === selectedLocale
+            const isSelected = !!lang.isSelected
             return (
               <DropdownItem
                 key={lang.id}
@@ -275,7 +274,8 @@ const LocalesDropdown = ({ locales, selectedLocale, csrfToken }) =>
                 type="submit"
                 name="language_id"
                 value={lang.id}
-                disabled={isSelected}
+                disabled={lang.isSelected}
+                className={cx({ 'text-dark ui-selected-lang': isSelected })}
               >
                 {isSelected ? <b>{lang.name}</b> : lang.name}
               </DropdownItem>

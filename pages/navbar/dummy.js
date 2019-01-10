@@ -14,8 +14,8 @@ export const exampleParams = {
       firstname: 'Normin',
       lastname: 'Normalo',
       login: 'nnormalo',
-      email: 'normin.normalo@zhdk.ch',
-      selectedLocale: '9a12cfd0-087d-56c4-ae4c-c6004f6adbf4'
+      email: 'normin.normalo@zhdk.ch'
+      // selectedLocale: '9a12cfd0-087d-56c4-ae4c-c6004f6adbf4'
     }
   },
 

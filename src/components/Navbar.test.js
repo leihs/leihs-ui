@@ -25,6 +25,137 @@ const examples = [
     )
   },
   {
+    name: 'no user, marks default lang',
+    content: (
+      <Navbar
+        config={{
+          me: false,
+          locales: [
+            {
+              id: 1,
+              locale_name: 'en',
+              name: 'EN',
+              isDefault: false,
+              isSelected: false
+            },
+            {
+              id: 2,
+              locale_name: 'de',
+              name: 'DE',
+              isDefault: true,
+              isSelected: false
+            }
+          ]
+        }}
+      />
+    )
+  },
+  {
+    name: 'no user, with selected lang',
+    content: (
+      <Navbar
+        config={{
+          me: false,
+          locales: [
+            {
+              id: 1,
+              locale_name: 'en',
+              name: 'EN',
+              isDefault: false,
+              isSelected: true
+            },
+            {
+              id: 2,
+              locale_name: 'de',
+              name: 'DE',
+              isDefault: true,
+              isSelected: false
+            }
+          ]
+        }}
+      />
+    )
+  },
+  {
+    name: 'no user, with selected lang same as default lang',
+    content: (
+      <Navbar
+        config={{
+          me: false,
+          locales: [
+            {
+              id: 1,
+              locale_name: 'en',
+              name: 'EN',
+              isDefault: false,
+              isSelected: false
+            },
+            {
+              id: 2,
+              locale_name: 'de',
+              name: 'DE',
+              isDefault: true,
+              isSelected: true
+            }
+          ]
+        }}
+      />
+    )
+  },
+  {
+    name: 'user without lang setting, marks default lang',
+    content: (
+      <Navbar
+        config={{
+          me: { user: { login: 'ME' } },
+          locales: [
+            {
+              id: 1,
+              locale_name: 'en',
+              name: 'EN',
+              isDefault: false,
+              isSelected: false
+            },
+            {
+              id: 2,
+              locale_name: 'de',
+              name: 'DE',
+              isDefault: true,
+              isSelected: false
+            }
+          ]
+        }}
+      />
+    )
+  },
+  {
+    name: 'user with lang setting, marks default lang',
+    content: (
+      <Navbar
+        config={{
+          me: { user: { login: 'ME' } },
+          locales: [
+            {
+              id: 1,
+              locale_name: 'en',
+              name: 'EN',
+              isDefault: false,
+              isSelected: true
+            },
+            {
+              id: 2,
+              locale_name: 'de',
+              name: 'DE',
+              isDefault: true,
+              isSelected: false
+            }
+          ]
+        }}
+      />
+    )
+  },
+
+  {
     name: 'usage in shared app',
     content: (
       <Navbar

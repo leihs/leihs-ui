@@ -2,7 +2,7 @@
 
 exports[`base: renders correctly 1`] = `
 <nav
-  className="navbar-leihs navbar navbar-expand navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -89,9 +89,492 @@ exports[`base: renders correctly 1`] = `
 </nav>
 `;
 
+exports[`no user, marks default lang: renders correctly 1`] = `
+<nav
+  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  style={
+    Object {
+      "backgroundColor": "#343a40 !important",
+    }
+  }
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  />
+  <button
+    className="navbar-toggler"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    className="collapse navbar-collapse"
+    style={Object {}}
+  >
+    <ul
+      className="mr-auto navbar-nav"
+    />
+    <ul
+      className="ml-auto navbar-nav"
+    >
+      <form
+        action="/sign-in"
+        className="ui-form-signin form-inline my-2 my-lg-0"
+        method="POST"
+      >
+        <div
+          className="input-group"
+        >
+          <input
+            aria-describedby="button-addon2"
+            aria-label="Benutzername/E-Mail"
+            autoCapitalize="off"
+            autoCorrect="off"
+            className="form-control"
+            name="user"
+            placeholder="Benutzername/E-Mail"
+            required={false}
+            type="text"
+          />
+          <div
+            className="input-group-append"
+          >
+            <button
+              className="btn btn-success"
+              id="button-addon2"
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="sr-only"
+          tabIndex={-1}
+        >
+          <input
+            name="invisible-password"
+            type="hidden"
+            value="true"
+          />
+          <label>
+            Password
+            <input
+              autoComplete="current-password"
+              className="form-control"
+              name="password"
+              type="password"
+            />
+          </label>
+        </div>
+      </form>
+      <form
+        action="/my/language"
+        className="ui-lang-selection"
+        method="POST"
+      >
+        <input
+          name="csrf-token"
+          type="hidden"
+        />
+        <li
+          className="dropdown nav-item"
+          onKeyDown={[Function]}
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-globe fa-w-16 "
+              data-icon="globe"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 496 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <div
+            aria-hidden={true}
+            className="dropdown-menu dropdown-menu-right"
+            role="menu"
+            tabIndex="-1"
+          >
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              disabled={false}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+              value={1}
+            >
+              EN
+            </button>
+            <button
+              className="text-dark ui-selected-lang disabled dropdown-item"
+              data-trigger={true}
+              disabled={true}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="submit"
+              value={2}
+            >
+              <b>
+                DE
+              </b>
+            </button>
+          </div>
+        </li>
+      </form>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`no user, with selected lang same as default lang: renders correctly 1`] = `
+<nav
+  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  style={
+    Object {
+      "backgroundColor": "#343a40 !important",
+    }
+  }
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  />
+  <button
+    className="navbar-toggler"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    className="collapse navbar-collapse"
+    style={Object {}}
+  >
+    <ul
+      className="mr-auto navbar-nav"
+    />
+    <ul
+      className="ml-auto navbar-nav"
+    >
+      <form
+        action="/sign-in"
+        className="ui-form-signin form-inline my-2 my-lg-0"
+        method="POST"
+      >
+        <div
+          className="input-group"
+        >
+          <input
+            aria-describedby="button-addon2"
+            aria-label="Benutzername/E-Mail"
+            autoCapitalize="off"
+            autoCorrect="off"
+            className="form-control"
+            name="user"
+            placeholder="Benutzername/E-Mail"
+            required={false}
+            type="text"
+          />
+          <div
+            className="input-group-append"
+          >
+            <button
+              className="btn btn-success"
+              id="button-addon2"
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="sr-only"
+          tabIndex={-1}
+        >
+          <input
+            name="invisible-password"
+            type="hidden"
+            value="true"
+          />
+          <label>
+            Password
+            <input
+              autoComplete="current-password"
+              className="form-control"
+              name="password"
+              type="password"
+            />
+          </label>
+        </div>
+      </form>
+      <form
+        action="/my/language"
+        className="ui-lang-selection"
+        method="POST"
+      >
+        <input
+          name="csrf-token"
+          type="hidden"
+        />
+        <li
+          className="dropdown nav-item"
+          onKeyDown={[Function]}
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-globe fa-w-16 "
+              data-icon="globe"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 496 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <div
+            aria-hidden={true}
+            className="dropdown-menu dropdown-menu-right"
+            role="menu"
+            tabIndex="-1"
+          >
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              disabled={false}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+              value={1}
+            >
+              EN
+            </button>
+            <button
+              className="text-dark ui-selected-lang disabled dropdown-item"
+              data-trigger={true}
+              disabled={true}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="submit"
+              value={2}
+            >
+              <b>
+                DE
+              </b>
+            </button>
+          </div>
+        </li>
+      </form>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`no user, with selected lang: renders correctly 1`] = `
+<nav
+  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  style={
+    Object {
+      "backgroundColor": "#343a40 !important",
+    }
+  }
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  />
+  <button
+    className="navbar-toggler"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    className="collapse navbar-collapse"
+    style={Object {}}
+  >
+    <ul
+      className="mr-auto navbar-nav"
+    />
+    <ul
+      className="ml-auto navbar-nav"
+    >
+      <form
+        action="/sign-in"
+        className="ui-form-signin form-inline my-2 my-lg-0"
+        method="POST"
+      >
+        <div
+          className="input-group"
+        >
+          <input
+            aria-describedby="button-addon2"
+            aria-label="Benutzername/E-Mail"
+            autoCapitalize="off"
+            autoCorrect="off"
+            className="form-control"
+            name="user"
+            placeholder="Benutzername/E-Mail"
+            required={false}
+            type="text"
+          />
+          <div
+            className="input-group-append"
+          >
+            <button
+              className="btn btn-success"
+              id="button-addon2"
+              type="submit"
+            >
+              Login
+            </button>
+          </div>
+        </div>
+        <div
+          aria-hidden={true}
+          className="sr-only"
+          tabIndex={-1}
+        >
+          <input
+            name="invisible-password"
+            type="hidden"
+            value="true"
+          />
+          <label>
+            Password
+            <input
+              autoComplete="current-password"
+              className="form-control"
+              name="password"
+              type="password"
+            />
+          </label>
+        </div>
+      </form>
+      <form
+        action="/my/language"
+        className="ui-lang-selection"
+        method="POST"
+      >
+        <input
+          name="csrf-token"
+          type="hidden"
+        />
+        <li
+          className="dropdown nav-item"
+          onKeyDown={[Function]}
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-globe fa-w-16 "
+              data-icon="globe"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 496 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <div
+            aria-hidden={true}
+            className="dropdown-menu dropdown-menu-right"
+            role="menu"
+            tabIndex="-1"
+          >
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              disabled={false}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+              value={1}
+            >
+              EN
+            </button>
+            <button
+              className="text-dark ui-selected-lang disabled dropdown-item"
+              data-trigger={true}
+              disabled={true}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="submit"
+              value={2}
+            >
+              <b>
+                DE
+              </b>
+            </button>
+          </div>
+        </li>
+      </form>
+    </ul>
+  </div>
+</nav>
+`;
+
 exports[`on root page, logged out: renders correctly 1`] = `
 <nav
-  className="navbar-leihs navbar navbar-expand navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -187,7 +670,7 @@ exports[`on root page, logged out: renders correctly 1`] = `
 
 exports[`usage in shared app: renders correctly 1`] = `
 <nav
-  className="navbar-leihs navbar navbar-expand-sm navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar navbar-expand-sm navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "hsl(94.19999999999999, 100%, 12.9%) !important",
@@ -370,6 +853,414 @@ exports[`usage in shared app: renders correctly 1`] = `
           </form>
         </div>
       </li>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`user with lang setting, marks default lang: renders correctly 1`] = `
+<nav
+  className="navbar-leihs ui-main-nav navbar navbar-expand-sm navbar-dark bg-dark"
+  style={
+    Object {
+      "backgroundColor": "#343a40 !important",
+    }
+  }
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  />
+  <button
+    className="navbar-toggler"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    className="collapse navbar-collapse"
+    style={Object {}}
+  >
+    <ul
+      className="mr-auto navbar-nav"
+    />
+    <ul
+      className="ml-auto navbar-nav"
+    >
+      <li
+        className="dropdown nav-item"
+        onKeyDown={[Function]}
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-user-circle fa-w-16 fa-lg "
+            data-icon="user-circle"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 496 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </a>
+        <div
+          aria-hidden={true}
+          className="dropdown-menu dropdown-menu-right"
+          role="menu"
+          tabIndex="-1"
+        >
+          <span
+            className="text-body disabled dropdown-item"
+            data-trigger={true}
+            disabled={true}
+            onClick={[Function]}
+            tabIndex="-1"
+          >
+            <b>
+              ME
+            </b>
+          </span>
+          <div
+            className="dropdown-divider"
+            data-trigger={true}
+            onClick={[Function]}
+            tabIndex="-1"
+          />
+          <a
+            className="dropdown-item"
+            data-trigger={true}
+            href="/borrow/user"
+            onClick={[Function]}
+            tabIndex="0"
+          >
+            Benutzerdaten
+          </a>
+          <a
+            className="dropdown-item"
+            data-trigger={true}
+            href="/borrow/user/documents"
+            onClick={[Function]}
+            tabIndex="0"
+          >
+            Meine Dokumente
+          </a>
+          <div
+            className="dropdown-divider"
+            data-trigger={true}
+            onClick={[Function]}
+            tabIndex="-1"
+          />
+          <form
+            action="/sign-out"
+            method="POST"
+          >
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+            >
+              <input
+                name="csrf-token"
+                type="hidden"
+              />
+              Logout
+            </button>
+          </form>
+        </div>
+      </li>
+      <form
+        action="/my/user/me"
+        className="ui-lang-selection"
+        method="POST"
+      >
+        <input
+          name="csrf-token"
+          type="hidden"
+        />
+        <li
+          className="dropdown nav-item"
+          onKeyDown={[Function]}
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-globe fa-w-16 "
+              data-icon="globe"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 496 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <div
+            aria-hidden={true}
+            className="dropdown-menu dropdown-menu-right"
+            role="menu"
+            tabIndex="-1"
+          >
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              disabled={false}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+              value={1}
+            >
+              EN
+            </button>
+            <button
+              className="text-dark ui-selected-lang disabled dropdown-item"
+              data-trigger={true}
+              disabled={true}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="submit"
+              value={2}
+            >
+              <b>
+                DE
+              </b>
+            </button>
+          </div>
+        </li>
+      </form>
+    </ul>
+  </div>
+</nav>
+`;
+
+exports[`user without lang setting, marks default lang: renders correctly 1`] = `
+<nav
+  className="navbar-leihs ui-main-nav navbar navbar-expand-sm navbar-dark bg-dark"
+  style={
+    Object {
+      "backgroundColor": "#343a40 !important",
+    }
+  }
+>
+  <a
+    className="navbar-brand"
+    href="/"
+  />
+  <button
+    className="navbar-toggler"
+    onClick={[Function]}
+    type="button"
+  >
+    <span
+      className="navbar-toggler-icon"
+    />
+  </button>
+  <div
+    className="collapse navbar-collapse"
+    style={Object {}}
+  >
+    <ul
+      className="mr-auto navbar-nav"
+    />
+    <ul
+      className="ml-auto navbar-nav"
+    >
+      <li
+        className="dropdown nav-item"
+        onKeyDown={[Function]}
+      >
+        <a
+          aria-expanded={false}
+          aria-haspopup={true}
+          className="dropdown-toggle nav-link"
+          href="#"
+          onClick={[Function]}
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-user-circle fa-w-16 fa-lg "
+            data-icon="user-circle"
+            data-prefix="fas"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 496 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 96c48.6 0 88 39.4 88 88s-39.4 88-88 88-88-39.4-88-88 39.4-88 88-88zm0 344c-58.7 0-111.3-26.6-146.5-68.2 18.8-35.4 55.6-59.8 98.5-59.8 2.4 0 4.8.4 7.1 1.1 13 4.2 26.6 6.9 40.9 6.9 14.3 0 28-2.7 40.9-6.9 2.3-.7 4.7-1.1 7.1-1.1 42.9 0 79.7 24.4 98.5 59.8C359.3 421.4 306.7 448 248 448z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </a>
+        <div
+          aria-hidden={true}
+          className="dropdown-menu dropdown-menu-right"
+          role="menu"
+          tabIndex="-1"
+        >
+          <span
+            className="text-body disabled dropdown-item"
+            data-trigger={true}
+            disabled={true}
+            onClick={[Function]}
+            tabIndex="-1"
+          >
+            <b>
+              ME
+            </b>
+          </span>
+          <div
+            className="dropdown-divider"
+            data-trigger={true}
+            onClick={[Function]}
+            tabIndex="-1"
+          />
+          <a
+            className="dropdown-item"
+            data-trigger={true}
+            href="/borrow/user"
+            onClick={[Function]}
+            tabIndex="0"
+          >
+            Benutzerdaten
+          </a>
+          <a
+            className="dropdown-item"
+            data-trigger={true}
+            href="/borrow/user/documents"
+            onClick={[Function]}
+            tabIndex="0"
+          >
+            Meine Dokumente
+          </a>
+          <div
+            className="dropdown-divider"
+            data-trigger={true}
+            onClick={[Function]}
+            tabIndex="-1"
+          />
+          <form
+            action="/sign-out"
+            method="POST"
+          >
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+            >
+              <input
+                name="csrf-token"
+                type="hidden"
+              />
+              Logout
+            </button>
+          </form>
+        </div>
+      </li>
+      <form
+        action="/my/user/me"
+        className="ui-lang-selection"
+        method="POST"
+      >
+        <input
+          name="csrf-token"
+          type="hidden"
+        />
+        <li
+          className="dropdown nav-item"
+          onKeyDown={[Function]}
+        >
+          <a
+            aria-expanded={false}
+            aria-haspopup={true}
+            className="dropdown-toggle nav-link"
+            href="#"
+            onClick={[Function]}
+          >
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-globe fa-w-16 "
+              data-icon="globe"
+              data-prefix="fas"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 496 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M336.5 160C322 70.7 287.8 8 248 8s-74 62.7-88.5 152h177zM152 256c0 22.2 1.2 43.5 3.3 64h185.3c2.1-20.5 3.3-41.8 3.3-64s-1.2-43.5-3.3-64H155.3c-2.1 20.5-3.3 41.8-3.3 64zm324.7-96c-28.6-67.9-86.5-120.4-158-141.6 24.4 33.8 41.2 84.7 50 141.6h108zM177.2 18.4C105.8 39.6 47.8 92.1 19.3 160h108c8.7-56.9 25.5-107.8 49.9-141.6zM487.4 192H372.7c2.1 21 3.3 42.5 3.3 64s-1.2 43-3.3 64h114.6c5.5-20.5 8.6-41.8 8.6-64s-3.1-43.5-8.5-64zM120 256c0-21.5 1.2-43 3.3-64H8.6C3.2 212.5 0 233.8 0 256s3.2 43.5 8.6 64h114.6c-2-21-3.2-42.5-3.2-64zm39.5 96c14.5 89.3 48.7 152 88.5 152s74-62.7 88.5-152h-177zm159.3 141.6c71.4-21.2 129.4-73.7 158-141.6h-108c-8.8 56.9-25.6 107.8-50 141.6zM19.3 352c28.6 67.9 86.5 120.4 158 141.6-24.4-33.8-41.2-84.7-50-141.6h-108z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </a>
+          <div
+            aria-hidden={true}
+            className="dropdown-menu dropdown-menu-right"
+            role="menu"
+            tabIndex="-1"
+          >
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              disabled={false}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+              value={1}
+            >
+              EN
+            </button>
+            <button
+              className="text-dark ui-selected-lang disabled dropdown-item"
+              data-trigger={true}
+              disabled={true}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="-1"
+              type="submit"
+              value={2}
+            >
+              <b>
+                DE
+              </b>
+            </button>
+          </div>
+        </li>
+      </form>
     </ul>
   </div>
 </nav>
