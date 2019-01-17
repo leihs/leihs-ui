@@ -1,3 +1,4 @@
+import f from 'lodash'
 import React, { Component } from 'react'
 
 import RootPage from '../components/RootPage'
@@ -24,7 +25,7 @@ const splashImage =
 /* eslint-disable-next-line import/no-webpack-loader-syntax  */
 // const splashImage = require('url-loader?limit=100000000!../legacy/assets/images/splash.jpg')
 
-const exampleProps = {
+const defaultProps = {
   // flashMessages: [
   //   {
   //     level: 'info',
@@ -41,7 +42,7 @@ const exampleProps = {
   },
   footer: {
     appName: 'leihs',
-    appVersion: '5.0.0',
+    appVersion: 'dev',
     appVersionLink: '/release'
   }
 }
@@ -50,7 +51,7 @@ class HomePage extends Component {
   render(props = this.props) {
     return (
       <React.Fragment>
-        <RootPage {...exampleProps} />
+        <RootPage {...f.merge(defaultProps, props)} />
 
         {/* <DebugProps {...props} /> */}
       </React.Fragment>

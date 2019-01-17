@@ -10,7 +10,7 @@
     "build:theme": "cd bootstrap-theme-leihs && npm run build",
     "build:lib": "rm -rf dist && NODE_ENV=production npx webpack --config ./webpack.config.js && rm dist/*.html dist/*.json dist/precache-manifest.* dist/service-worker.js",
     "build-lib": "npm run -s build:lib",
-    "watch-lib": "rm -rf dist && NODE_ENV=production npx webpack --watch --info-verbosity verbose --config ./webpack.config.js",
+    "watch-lib": "rm -rf dist && NODE_ENV=development npx webpack --watch --info-verbosity verbose --config ./webpack.config.js",
     "start": "NODE_ENV=production node server.js",
     "lint": "eslint --fix 'src/{,**/}*.js{,x}' && npm run -s lint:json",
     "ci:lint": "eslint 'src/{,**/}*.js{,x}' && npm run -s ci:lint:json",
