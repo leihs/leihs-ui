@@ -236,10 +236,11 @@ const SubAppDropdown = ({ t, subApps }) =>
     </UncontrolledDropdown>
   )
 
-const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) =>
-  f.isEmpty(locales) ? (
-    false
-  ) : (
+const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
+  if (f.isEmpty(locales)) return false
+  const currentLang =
+    f.find(locales, l => l.isSelected) || f.find(locales, l => l.isDefault)
+  return (
     <form
       method="POST"
       action={isLoggedIn ? '/my/user/me' : '/my/language'}
@@ -253,7 +254,7 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) =>
         <DropdownMenu right>
           {/* <DropdownItem divider >Sprachen</DropdownItem> */}
           {f.map(locales, lang => {
-            const isSelected = !!lang.isSelected
+            const isCurrent = !!currentLang && lang.id === currentLang.id
             return (
               <DropdownItem
                 key={lang.id}
@@ -261,10 +262,10 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) =>
                 type="submit"
                 name="language_id"
                 value={lang.id}
-                disabled={lang.isSelected}
-                className={cx({ 'text-dark ui-selected-lang': isSelected })}
+                disabled={isCurrent}
+                className={cx({ 'text-dark ui-selected-lang': isCurrent })}
               >
-                {isSelected ? <b>{lang.name}</b> : lang.name}
+                {isCurrent ? <b>{lang.name}</b> : lang.name}
               </DropdownItem>
             )
           })}
@@ -272,7 +273,7 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) =>
       </UncontrolledDropdown>
     </form>
   )
-
+}
 // const Let = ({ children, ...props }) => children(props)
 
 function decorateUser(u) {

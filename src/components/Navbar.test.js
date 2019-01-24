@@ -129,7 +129,7 @@ const examples = [
     )
   },
   {
-    name: 'user with lang setting, marks default lang',
+    name: 'user with lang setting, marks selected lang',
     content: (
       <Navbar
         config={{

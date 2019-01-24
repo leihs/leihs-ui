@@ -1,5 +1,4 @@
 import f from 'lodash'
-import assert from 'assert'
 
 import translations from './translations.json'
 const DEFAULT_LOCALE = 'de-CH' // not really used in app because backend already falls back to default lang for the instance

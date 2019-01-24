@@ -539,18 +539,6 @@ exports[`no user, with selected lang: renders correctly 1`] = `
             tabIndex="-1"
           >
             <button
-              className="dropdown-item"
-              data-trigger={true}
-              disabled={false}
-              name="language_id"
-              onClick={[Function]}
-              tabIndex="0"
-              type="submit"
-              value={1}
-            >
-              EN
-            </button>
-            <button
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
@@ -558,11 +546,23 @@ exports[`no user, with selected lang: renders correctly 1`] = `
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
-              value={2}
+              value={1}
             >
               <b>
-                DE
+                EN
               </b>
+            </button>
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              disabled={false}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+              value={2}
+            >
+              DE
             </button>
           </div>
         </li>
@@ -858,7 +858,7 @@ exports[`usage in shared app: renders correctly 1`] = `
 </nav>
 `;
 
-exports[`user with lang setting, marks default lang: renders correctly 1`] = `
+exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
 <nav
   className="navbar-leihs ui-main-nav navbar navbar-expand-sm navbar-dark bg-dark"
   style={
@@ -948,7 +948,7 @@ exports[`user with lang setting, marks default lang: renders correctly 1`] = `
             onClick={[Function]}
             tabIndex="0"
           >
-            Benutzerdaten
+            User data
           </a>
           <a
             className="dropdown-item"
@@ -957,7 +957,7 @@ exports[`user with lang setting, marks default lang: renders correctly 1`] = `
             onClick={[Function]}
             tabIndex="0"
           >
-            Meine Dokumente
+            My documents
           </a>
           <div
             className="dropdown-divider"
@@ -1029,18 +1029,6 @@ exports[`user with lang setting, marks default lang: renders correctly 1`] = `
             tabIndex="-1"
           >
             <button
-              className="dropdown-item"
-              data-trigger={true}
-              disabled={false}
-              name="language_id"
-              onClick={[Function]}
-              tabIndex="0"
-              type="submit"
-              value={1}
-            >
-              EN
-            </button>
-            <button
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
@@ -1048,11 +1036,23 @@ exports[`user with lang setting, marks default lang: renders correctly 1`] = `
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
-              value={2}
+              value={1}
             >
               <b>
-                DE
+                EN
               </b>
+            </button>
+            <button
+              className="dropdown-item"
+              data-trigger={true}
+              disabled={false}
+              name="language_id"
+              onClick={[Function]}
+              tabIndex="0"
+              type="submit"
+              value={2}
+            >
+              DE
             </button>
           </div>
         </li>
