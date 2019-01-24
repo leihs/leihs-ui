@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 
 import RootPage from '../components/RootPage'
 // import DebugProps from '../components/DebugProps'
+import { Translator as T } from '../locale/translate'
 
 // const LEIHS_GREEN = '#afec81'
 // const APP_COLOR = LEIHS_GREEN
@@ -36,8 +37,8 @@ const defaultProps = {
     config: { ...exampleNavbarParams, appColor: APP_COLOR }
   },
   splash: {
-    title: 'Geräte-Ausleihe und Inventarverwaltungssystem',
-    text: 'Inventar verwalten, Gegenstände reservieren und abholen',
+    title: 'Title',
+    text: 'Subtitle',
     image: splashImage
   },
   footer: {
@@ -49,10 +50,17 @@ const defaultProps = {
 
 class HomePage extends Component {
   render(props = this.props) {
+    const t = T(props.navbar.config.locales)
+    const rootProps = f.merge(defaultProps, props, {
+      splash: {
+        title: t('homepage_hero_title'),
+        text: t('homepage_hero_subtitle'),
+        image: splashImage
+      }
+    })
     return (
       <React.Fragment>
-        <RootPage {...f.merge(defaultProps, props)} />
-
+        <RootPage {...rootProps} />
         {/* <DebugProps {...props} /> */}
       </React.Fragment>
     )

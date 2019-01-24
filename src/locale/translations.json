@@ -54,5 +54,19 @@
     "fr": "Logout",
     "es": "Logout",
     "gsw": "Uusego"
+  },
+  "homepage_hero_title": {
+    "de": "Geräte-Ausleihe und Inventarverwaltungssystem",
+    "en": "Equipment Booking and Inventory Management System",
+    "fr": "Système de réservation d'équipement et de gestion d'inventaire",
+    "es": "Sistema de reserva de equipos y gestión de inventario",
+    "gsw": "Gräte-Uuslei und Inventarverwaltigssyschtem"
+  },
+  "homepage_hero_subtitle": {
+    "de": "Inventar verwalten, Gegenstände reservieren und abholen",
+    "en": "Manage inventory, place reservations on items and pick them up",
+    "fr": "Gérer un inventaire, réserver et récupérer du matériel",
+    "es": "Gestione el inventario, haga reservas en los artículos y recójalos.",
+    "gsw": "Inventaar bearbeite, Sache reserviere und abhole"
   }
 }
