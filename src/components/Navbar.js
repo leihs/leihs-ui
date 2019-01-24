@@ -27,7 +27,6 @@ import { Translator as T } from '../locale/translate'
 // export const BASE_COLOR = '#563d7c' // bootstrap docs purple
 export const BASE_COLOR = '#343a40' // bootstrap bg-dark
 // const LEIHS_GREEN = '#afec81'
-const DEFAULT_LOCALE = 'de-CH' // just a fallback for translation function, not really used in app because backend already falls back to default lang for the instance
 
 const defaults = {
   homeUrl: '/'
@@ -65,23 +64,11 @@ export default class Navbar extends React.Component {
       brand,
       children
     } = props
-    const {
-      me,
-      appTitle,
-      appMenu,
-      appColor,
-      subApps,
-      locales,
-      returnTo
-    } = config
+    const { me, appTitle, appMenu, appColor, subApps, returnTo } = config
     const user = f.get(me, 'user')
     const { homeUrl } = defaults
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
-
-    const selectedLocale =
-      f.find(locales, { isSelected: true }) ||
-      f.find(locales, { isDefault: true })
-    const t = T(f.get(selectedLocale, 'locale_name'), DEFAULT_LOCALE)
+    const t = T(config.locales)
 
     const bgColor =
       props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
@@ -135,7 +122,7 @@ export default class Navbar extends React.Component {
             )}
 
             <LocalesDropdown
-              locales={locales}
+              locales={config.locales}
               isLoggedIn={!f.isEmpty(user)}
               csrfToken={csrfToken}
             />
