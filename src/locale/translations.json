@@ -55,6 +55,62 @@
     "es": "Logout",
     "gsw": "Uusego"
   },
+  "sign_in_title": {
+    "de": "Anmelden bei leihs",
+    "en": "Log into leihs",
+    "fr": "Connectez-vous à leihs",
+    "es": "Iniciar sesión en leihs",
+    "gsw": "Iilogge is leihs"
+  },
+  "sign_in_nav_userparam_label": {
+    "de": "Benutzername/E-Mail",
+    "en": "Username/E-Mail",
+    "fr": "utilisateur/email",
+    "es": "usuario/correo electrónico",
+    "gsw": "Benutzername/E-Mail"
+  },
+  "sign_in_userparam_label": {
+    "de": "Benutzername oder E-Mail",
+    "en": "Username or E-Mail",
+    "fr": "Nom d'utilisateur ou email",
+    "es": "Nombre de usuario o correo electrónico",
+    "gsw": "Benutzername oder E-Mail"
+  },
+  "sign_in_pwauth_default_title": {
+    "de": "Anmelden mit Passwort",
+    "en": "Login with password",
+    "fr": "Connexion avec mot de passe",
+    "es": "Iniciar sesión con contraseña",
+    "gsw": "Iilogge midde Passwort"
+  },
+  "sign_in_password": {
+    "de": "Passwort",
+    "en": "password",
+    "fr": "mot de passe",
+    "es": "contraseña",
+    "gsw": "Passwort"
+  },
+  "sign_in_btn_continue": {
+    "de": "Weiter",
+    "en": "Continue",
+    "fr": "Continuer",
+    "es": "Continuar",
+    "gsw": "Wiiter"
+  },
+  "sign_in_btn_cancel_back": {
+    "de": "Abbrechen und zurück",
+    "en": "Cancel and go back",
+    "fr": "Annuler et revenir",
+    "es": "Cancelar y volver",
+    "gsw": "X"
+  },
+  "xxx": {
+    "de": "X",
+    "en": "X",
+    "fr": "X",
+    "es": "X",
+    "gsw": "X"
+  },
   "homepage_hero_title": {
     "de": "Geräte-Ausleihe und Inventarverwaltungssystem",
     "en": "Equipment Booking and Inventory Management System",

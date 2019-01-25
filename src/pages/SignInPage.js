@@ -5,10 +5,10 @@ import f from 'lodash'
 import Navbar from '../components/Navbar'
 import { SignInCard } from '../components/SignInUI'
 // import DebugProps from '../components/DebugProps'
+import { Translator as T } from '../locale/translate'
 
 const defaultProps = {
   authFlow: {
-    title: 'Anmelden bei leihs',
     form: {
       method: 'POST',
       action: '/sign-in'
@@ -18,9 +18,12 @@ const defaultProps = {
 
 class SignInPage extends Component {
   render(props = this.props) {
+    const t = T(props.navbar.config.locales)
     const authSystems = f.get(props, 'authSystems')
-    const authFlow = f.get(props, 'authFlow')
     const flashMessages = f.get(props, 'flashMessages')
+    const authFlow = f.merge(f.get(props, 'authFlow'), {
+      title: t('sign_in_title')
+    })
 
     return (
       <div className="bg-paper h-100">
@@ -37,6 +40,7 @@ class SignInPage extends Component {
               authFlow={f.merge(authFlow, defaultProps.authFlow)}
               authSystems={authSystems}
               messages={flashMessages}
+              locales={props.navbar.config.locales}
             />
           </div>
         </div>

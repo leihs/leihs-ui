@@ -116,7 +116,9 @@ export default class Navbar extends React.Component {
             <SubAppDropdown t={t} subApps={subApps} />
 
             {f.isEmpty(user) ? (
-              !!hideSignInField || <NavbarLogin returnTo={returnTo} />
+              !!hideSignInField || (
+                <NavbarLogin locales={config.locales} returnTo={returnTo} />
+              )
             ) : (
               <UserMenu t={t} user={user} csrfToken={csrfToken} />
             )}

@@ -4,43 +4,45 @@ import { Let } from './Util'
 import { Hr } from './Bootstrap'
 import { VisuallyHidden } from './Bootstrap'
 import FlashMessages from './FlashMessages'
-
-const AUTH_NAV_USERPARAM_LABEL = 'Benutzername/E-Mail'
-const AUTH_USERPARAM_LABEL = 'Benutzername oder E-Mail'
-const PWAUTH_DEFAULT_TITLE = 'Anmelden mit Passwort'
+import { Translator as T } from '../locale/translate'
 
 export const NavbarLogin = ({
   returnTo,
   formAction,
-  requireUserInput = false
-}) => (
-  <form
-    className="ui-form-signin form-inline my-2 my-lg-0"
-    action={formAction}
-    method="POST"
-  >
-    <div className="input-group">
-      <input
-        name="user"
-        type="text"
-        className="form-control"
-        placeholder={AUTH_NAV_USERPARAM_LABEL}
-        aria-label={AUTH_NAV_USERPARAM_LABEL}
-        aria-describedby="button-addon2"
-        required={requireUserInput}
-        autoCapitalize="off"
-        autoCorrect="off"
-      />
-      <div className="input-group-append">
-        <button className="btn btn-success" type="submit" id="button-addon2">
-          Login
-        </button>
+  requireUserInput = false,
+  locales
+}) => {
+  const t = T(locales)
+
+  return (
+    <form
+      className="ui-form-signin form-inline my-2 my-lg-0"
+      action={formAction}
+      method="POST"
+    >
+      <div className="input-group">
+        <input
+          name="user"
+          type="text"
+          className="form-control"
+          placeholder={t('sign_in_nav_userparam_label')}
+          aria-label={t('sign_in_nav_userparam_label')}
+          aria-describedby="button-addon2"
+          required={requireUserInput}
+          autoCapitalize="off"
+          autoCorrect="off"
+        />
+        <div className="input-group-append">
+          <button className="btn btn-success" type="submit" id="button-addon2">
+            Login
+          </button>
+        </div>
       </div>
-    </div>
-    <HiddenPasswordField />
-    {returnTo && <input type="hidden" name="return_to" value={returnTo} />}
-  </form>
-)
+      <HiddenPasswordField label={t('sign_in_password')} />
+      {returnTo && <input type="hidden" name="return_to" value={returnTo} />}
+    </form>
+  )
+}
 NavbarLogin.defaultProps = {
   formAction: '/sign-in'
 }
@@ -49,8 +51,10 @@ export const SignInCard = ({
   authFlow,
   authSystems,
   messages,
+  locales,
   autoFocusUserField = true
 }) => {
+  const t = T(locales)
   const userParam = f.get(authFlow, 'user')
   const returnTo = f.get(authFlow, 'returnTo') || '/'
   const extAuths = f.filter(authSystems, { type: 'external' })
@@ -68,13 +72,13 @@ export const SignInCard = ({
         action={authFlow.form.action}
       >
         <label htmlFor={'inputEmail'} className="sr-only">
-          {AUTH_USERPARAM_LABEL}
+          {t('sign_in_userparam_label')}
         </label>
         <input
           id={'inputEmail'}
           name="user"
           required
-          placeholder={AUTH_USERPARAM_LABEL}
+          placeholder={t('sign_in_userparam_label')}
           className="form-control"
           defaultValue={userParam || ''}
           autoFocus={true}
@@ -82,13 +86,15 @@ export const SignInCard = ({
           autoCorrect="off"
         />
 
-        <HiddenPasswordField />
+        <HiddenPasswordField label={t('sign_in_password')} />
 
         <button className="btn btn-success btn-block mt-3" type="submit">
-          {'Weiter'}
+          {t('sign_in_btn_continue')}
         </button>
       </form>
-      {false && <ResetUser userName={userParam} resetLink={'./sign-in'} />}
+      {/*
+        {false && <ResetUser userName={userParam} resetLink={'./sign-in'} />}
+      */}
     </F>
   )
 
@@ -137,11 +143,11 @@ export const SignInCard = ({
             action={authFlow.form.action}
           >
             <h2 className="h5 mb-4 font-weight-normal">
-              {title || PWAUTH_DEFAULT_TITLE}
+              {title || t('sign_in_pwauth_default_title')}
               <small>{description}</small>
             </h2>
             <label htmlFor={'inputEmail'} className="sr-only">
-              email oder username
+              {t('sign_in_userparam_label')}
             </label>
             <input
               id={'inputEmail'}
@@ -158,13 +164,13 @@ export const SignInCard = ({
             />
 
             <label htmlFor={'inputPassword'} className="sr-only">
-              Password
+              {t('sign_in_password')}
             </label>
             <input
               type="password"
               name="password"
               id={'inputPassword'}
-              placeholder="Passwort"
+              placeholder={t('sign_in_password')}
               required
               autoComplete="current-password"
               className="form-control"
@@ -175,19 +181,16 @@ export const SignInCard = ({
             />
 
             <button className="btn btn-success btn-block mt-3" type="submit">
-              {'Weiter'}
+              {t('sign_in_btn_continue')}
             </button>
           </form>
         )}
       </Let>
-      {false && <ResetUser userName={userParam} resetLink={'./sign-in'} />}
+      {/* <ResetUser userName={userParam} resetLink={'./sign-in'} /> */}
       {false && (
         <p className="mt-3">
-          <a
-            href={returnTo}
-            className="btn btn-block Xbtn-link btn-outline-secondary"
-          >
-            Abbrechen und zurück
+          <a href={returnTo} className="btn btn-block btn-outline-secondary">
+            {t('sign_in_btn_cancel_back')}
           </a>
         </p>
       )}
@@ -216,12 +219,12 @@ export const SignInCard = ({
 
 // partials
 
-const ResetUser = ({ userName, resetLink }) => (
-  <p className="mt-3">
-    Not <code>{userName}</code>? <br />
-    <a href={resetLink}>Log in as different user</a>
-  </p>
-)
+// const ResetUser = ({ userName, resetLink }) => (
+//   <p className="mt-3">
+//     Not <code>{userName}</code>? <br />
+//     <a href={resetLink}>Log in as different user</a>
+//   </p>
+// )
 
 const HiddenPasswordField = ({ label = 'Password' }) => (
   <VisuallyHidden>

@@ -74,7 +74,7 @@ exports[`base: renders correctly 1`] = `
             value="true"
           />
           <label>
-            Password
+            Passwort
             <input
               autoComplete="current-password"
               className="form-control"
@@ -163,7 +163,7 @@ exports[`no user, marks default lang: renders correctly 1`] = `
             value="true"
           />
           <label>
-            Password
+            Passwort
             <input
               autoComplete="current-password"
               className="form-control"
@@ -324,7 +324,7 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
             value="true"
           />
           <label>
-            Password
+            Passwort
             <input
               autoComplete="current-password"
               className="form-control"
@@ -453,12 +453,12 @@ exports[`no user, with selected lang: renders correctly 1`] = `
         >
           <input
             aria-describedby="button-addon2"
-            aria-label="Benutzername/E-Mail"
+            aria-label="Username/E-Mail"
             autoCapitalize="off"
             autoCorrect="off"
             className="form-control"
             name="user"
-            placeholder="Benutzername/E-Mail"
+            placeholder="Username/E-Mail"
             required={false}
             type="text"
           />
@@ -485,7 +485,7 @@ exports[`no user, with selected lang: renders correctly 1`] = `
             value="true"
           />
           <label>
-            Password
+            password
             <input
               autoComplete="current-password"
               className="form-control"
@@ -648,7 +648,7 @@ exports[`on root page, logged out: renders correctly 1`] = `
             value="true"
           />
           <label>
-            Password
+            Passwort
             <input
               autoComplete="current-password"
               className="form-control"
