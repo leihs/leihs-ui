@@ -101,13 +101,13 @@ export const SignInCard = ({
   const secondStep = step === 2 && (
     <F>
       {!f.isEmpty(extAuths) && (
-        <React.Fragment>
+        <div className="mb-4">
           {/* <h2 className="h5 mb-2 font-weight-normal">
             {'Anmelden mit externem Dienst'}
           </h2> */}
           {f.map(extAuths, ({ id, name, description, ...o }) => (
             <form
-              className="ui-form-signin mt-2"
+              className="ui-form-signin mt-3"
               key={id}
               method="POST"
               action={`/sign-in/external-authentication/${id}/request`}
@@ -128,17 +128,16 @@ export const SignInCard = ({
               <small>{description}</small>
             </form>
           ))}
-        </React.Fragment>
+        </div>
       )}
 
-      {!f.isEmpty(extAuths) &&
-        !f.isEmpty(pwAuth) && <Hr className="pb-3 pt-4">oder</Hr>}
+      {!f.isEmpty(extAuths) && !f.isEmpty(pwAuth) && <Hr>oder</Hr>}
 
       <Let {...pwAuth}>
         {({ id, description, title }) => (
           <form
             key={id}
-            className="ui-form-signin"
+            className="ui-form-signin mt-4"
             method={authFlow.form.method}
             action={authFlow.form.action}
           >
@@ -188,7 +187,7 @@ export const SignInCard = ({
       </Let>
       {/* <ResetUser userName={userParam} resetLink={'./sign-in'} /> */}
       {false && (
-        <p className="mt-3">
+        <p className="mt-4">
           <a href={returnTo} className="btn btn-block btn-outline-secondary">
             {t('sign_in_btn_cancel_back')}
           </a>
