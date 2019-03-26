@@ -52,6 +52,11 @@ export default function IndexPage() {
                   <a>second step, password and external auth</a>
                 </Link>
               </li>
+              <li>
+                <Link prefetch href="./login/step-2-onlyext">
+                  <a>second step, 2 external auth options and no password</a>
+                </Link>
+              </li>
             </ul>
           </li>
           <li>

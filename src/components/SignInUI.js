@@ -133,58 +133,61 @@ export const SignInCard = ({
 
       {!f.isEmpty(extAuths) && !f.isEmpty(pwAuth) && <Hr>oder</Hr>}
 
-      <Let {...pwAuth}>
-        {({ id, description, title }) => (
-          <form
-            key={id}
-            className="ui-form-signin mt-4"
-            method={authFlow.form.method}
-            action={authFlow.form.action}
-          >
-            <h2 className="h5 mb-4 font-weight-normal">
-              {title || t('sign_in_pwauth_default_title')}
-              <small>{description}</small>
-            </h2>
-            <label htmlFor={'inputEmail'} className="sr-only">
-              {t('sign_in_userparam_label')}
-            </label>
-            <input
-              id={'inputEmail'}
-              name="user"
-              className="form-control"
-              required
-              value={userParam || ''}
-              readOnly
-              style={{
-                marginBottom: '-1px',
-                borderBottomRightRadius: 0,
-                borderBottomLeftRadius: 0
-              }}
-            />
+      {!f.isEmpty(pwAuth) && (
+        <Let {...pwAuth}>
+          {({ id, description, title }) => (
+            <form
+              key={id}
+              className="ui-form-signin mt-4"
+              method={authFlow.form.method}
+              action={authFlow.form.action}
+            >
+              <h2 className="h5 mb-4 font-weight-normal">
+                {title || t('sign_in_pwauth_default_title')}
+                <small>{description}</small>
+              </h2>
+              <label htmlFor={'inputEmail'} className="sr-only">
+                {t('sign_in_userparam_label')}
+              </label>
+              <input
+                id={'inputEmail'}
+                name="user"
+                className="form-control"
+                required
+                value={userParam || ''}
+                readOnly
+                style={{
+                  marginBottom: '-1px',
+                  borderBottomRightRadius: 0,
+                  borderBottomLeftRadius: 0
+                }}
+              />
 
-            <label htmlFor={'inputPassword'} className="sr-only">
-              {t('sign_in_password')}
-            </label>
-            <input
-              type="password"
-              name="password"
-              id={'inputPassword'}
-              placeholder={t('sign_in_password')}
-              required
-              autoComplete="current-password"
-              className="form-control"
-              style={{
-                borderTopRightRadius: 0,
-                borderTopLeftRadius: 0
-              }}
-            />
+              <label htmlFor={'inputPassword'} className="sr-only">
+                {t('sign_in_password')}
+              </label>
+              <input
+                type="password"
+                name="password"
+                id={'inputPassword'}
+                placeholder={t('sign_in_password')}
+                required
+                autoComplete="current-password"
+                className="form-control"
+                style={{
+                  borderTopRightRadius: 0,
+                  borderTopLeftRadius: 0
+                }}
+              />
 
-            <button className="btn btn-success btn-block mt-3" type="submit">
-              {t('sign_in_btn_continue')}
-            </button>
-          </form>
-        )}
-      </Let>
+              <button className="btn btn-success btn-block mt-3" type="submit">
+                {t('sign_in_btn_continue')}
+              </button>
+            </form>
+          )}
+        </Let>
+      )}
+
       {/* <ResetUser userName={userParam} resetLink={'./sign-in'} /> */}
       {false && (
         <p className="mt-4">
