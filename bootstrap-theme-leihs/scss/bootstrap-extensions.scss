@@ -1,3 +1,5 @@
+@import './custom';
+
 // util - sizing
 .minh-100 {
   min-height: 100%;
@@ -5,4 +7,26 @@
 
 .minw-100 {
   min-width: 100%;
+}
+
+// .form-group-sm, based on .form-control-sm
+.form-group.form-group-sm {
+  margin-bottom: map-get($spacers, 2) !important;
+  & + .form-group {
+    margin-top: map-get($spacers, 3);
+  }
+  & + & {
+    margin-top: 0;
+  }
+
+  label {
+    @extend small;
+    margin-bottom: map-get($spacers, 1) !important;
+  }
+  .form-control.form-control-plaintext {
+    @extend .form-control-plaintext.form-control-sm;
+  }
+  .form-control {
+    @extend .form-control-sm;
+  }
 }
