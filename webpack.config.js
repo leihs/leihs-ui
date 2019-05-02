@@ -1,7 +1,8 @@
 const path = require('path')
-const createReactAppConfig = require(process.env['NODE_ENV'] === 'production'
-  ? 'react-scripts/config/webpack.config.prod.js'
-  : 'react-scripts/config/webpack.config.dev.js')
+const createReactAppConfigFactory = require('react-scripts/config/webpack.config.js')
+const createReactAppConfig = createReactAppConfigFactory(
+  process.env['NODE_ENV'] === 'production' ? 'production' : 'development'
+)
 
 module.exports = Object.assign({}, createReactAppConfig, {
   entry: {
