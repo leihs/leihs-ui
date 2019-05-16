@@ -3,6 +3,7 @@ import f from 'lodash'
 import { Let } from './Util'
 import { Hr } from './Bootstrap'
 import { VisuallyHidden } from './Bootstrap'
+import { Card } from '../components/CardPage'
 import FlashMessages from './FlashMessages'
 import { Translator as T } from '../locale/translate'
 
@@ -196,18 +197,25 @@ export const SignInCard = ({
           </a>
         </p>
       )}
+
+      {!!authFlow.forgotPasswordLink && (
+        <form method="GET" action={authFlow.forgotPasswordLink}>
+          <div className="TMP mt-4 h3 font-monospace">
+            <input type="hidden" name="user" value={userParam} />
+            <button
+              type="submit"
+              className="btn btn-large btn-block btn-warning"
+            >
+              forgot password?
+            </button>
+          </div>
+        </form>
+      )}
     </F>
   )
 
   return (
-    <section
-      className="card shadow-sm text-center p-4 pb-5 pb-sm-4 m-auto"
-      style={{
-        maxWidth: '30rem'
-      }}
-    >
-      <h1 className="h3 my-3 font-weight-normal">{authFlow.title}</h1>
-      <hr className="mb-4" />
+    <Card title={authFlow.title}>
       <FlashMessages
         messages={messages}
         className="rounded"
@@ -215,7 +223,7 @@ export const SignInCard = ({
       />
       {firstStep}
       {secondStep}
-    </section>
+    </Card>
   )
 }
 

@@ -15,6 +15,8 @@ class FlashMessages extends Component {
           if (f.isEmpty(message) || !f.isString(message)) return false
           const lines = message.split('\n')
           level = mapLevel(level)
+          const firstLine = lines.slice(0, 1)
+          const restLines = breakLinesReact(lines.slice(1))
           return (
             <div
               key={i}
@@ -26,8 +28,14 @@ class FlashMessages extends Component {
               )}
               role="alert"
             >
-              <p className="font-weight-bold">{lines.slice(0, 1)}</p>
-              <p className="small">{breakLinesReact(lines.slice(1))}</p>
+              <p
+                className={cx('font-weight-bold', {
+                  'mb-0': f.isEmpty(restLines)
+                })}
+              >
+                {firstLine}
+              </p>
+              {!f.isEmpty(restLines) && <p className="small">{restLines}</p>}
             </div>
           )
         })}

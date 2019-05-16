@@ -104,6 +104,97 @@
     "es": "Cancelar y volver",
     "gsw": "X"
   },
+  "password_forgot_title": {
+    "de": "Passwort vergessen",
+    "en": "Forgot password",
+    "fr": "Mot de passe oublié",
+    "es": "Contraseña olvidada",
+    "gsw": "Passwort vergessen"
+  },
+  "password_forgot_description": {
+    "de": "Erhalte einen Bestätigungscode per Email, um das Passwort zurückzusetzen",
+    "en": "Receive a verification code by email to reset the password",
+    "fr": "Recevoir un code de vérification par email pour réinitialiser le mot de passe",
+    "es": "Reciba un código de verificación por correo electrónico para restablecer la contraseña",
+    "gsw": "Erhalte einen Bestätigungscode per Email, um das Passwort zurückzusetzen"
+  },
+  "password_forgot_continue": {
+    "de": "Weiter",
+    "en": "Continue",
+    "fr": "Continuer",
+    "es": "Continuar",
+    "gsw": "Wiiter"
+  },
+  "password_reset_continue": {
+    "de": "Weiter",
+    "en": "Continue",
+    "fr": "Continuer",
+    "es": "Continuar",
+    "gsw": "Wiiter"
+  },
+  "password_reset_title": {
+    "de": "Passwort zurücksetzen",
+    "en": "Reset Password",
+    "fr": "Réinitialiser le mot de passe",
+    "es": "Restablecer contraseña",
+    "gsw": "Passwort zurücksetzen"
+  },
+  "password_forgot_userparam_label": {
+    "de": "Benutzername oder E-Mail",
+    "en": "Username or E-Mail",
+    "fr": "Nom d'utilisateur ou email",
+    "es": "Nombre de usuario o correo electrónico",
+    "gsw": "Benutzername oder E-Mail"
+  },
+  "password_reset_userparam_label": {
+    "de": "Benutzername oder E-Mail",
+    "en": "Username or E-Mail",
+    "fr": "Nom d'utilisateur ou email",
+    "es": "Nombre de usuario o correo electrónico",
+    "gsw": "Benutzername oder E-Mail"
+  },
+  "password_reset_token_label": {
+    "de": "Geheimer Token",
+    "en": "secret token",
+    "fr": "jeton secret",
+    "es": "ficha secreta",
+    "gsw": "Geheimer Token"
+  },
+  "password_reset_newpassword_label": {
+    "de": "Neues Passwort",
+    "en": "New Password",
+    "fr": "Nouveau mot de passe",
+    "es": "Nueva contraseña",
+    "gsw": "New Password"
+  },
+  "password_reset_success_message": {
+    "de": "Passwort wurde erfolgreich gespeichert!",
+    "en": "Password has been successfully saved!",
+    "fr": "Le mot de passe a été enregistré avec succès!",
+    "es": "La contraseña se ha guardado correctamente!",
+    "gsw": "Passwort wurde erfolgreich gespeichert!"
+  },
+  "password_reset_success_action": {
+    "de": "Hierher gehen um sich erneut anzumelden",
+    "en": "Go here to sign in again",
+    "fr": "Allez ici pour vous connecter à nouveau",
+    "es": "Vaya aquí para volver a iniciar sesión",
+    "gsw": "go here to sign in again"
+  },
+  "xxx": {
+    "de": "X",
+    "en": "X",
+    "fr": "X",
+    "es": "X",
+    "gsw": "X"
+  },
+  "xxx": {
+    "de": "X",
+    "en": "X",
+    "fr": "X",
+    "es": "X",
+    "gsw": "X"
+  },
   "xxx": {
     "de": "X",
     "en": "X",

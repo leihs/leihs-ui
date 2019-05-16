@@ -2,6 +2,8 @@ import React from 'react'
 import Link from 'next/link'
 import { LeihsPage } from '../src/components/styleguide'
 
+import { NavLinks as PwResetNavLinks } from './password-reset'
+
 export default function IndexPage() {
   return (
     <LeihsPage>
@@ -58,6 +60,12 @@ export default function IndexPage() {
                 </Link>
               </li>
             </ul>
+          </li>
+          <li>
+            <Link prefetch href="./password-reset">
+              <a>password reset flow</a>
+            </Link>
+            <PwResetNavLinks />
           </li>
           <li>
             <Link prefetch href="./login-dummy">
