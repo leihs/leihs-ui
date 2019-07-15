@@ -165,78 +165,88 @@ const UserMenu = ({ t, user, csrfToken }) => (
   </UncontrolledDropdown>
 )
 
-const SubAppDropdown = ({ t, subApps }) =>
-  f.some(subApps) &&
-  f.keys(subApps).length > 1 && (
-    <UncontrolledDropdown nav inNavbar>
-      <DropdownToggle nav caret>
-        <Icon.LeihsProcurement />
-      </DropdownToggle>
-      <DropdownMenu right>
-        {f.map(
-          f.keys(f.fromPairs(f.filter(f.toPairs(subApps), '1'))),
-          (subApp, i, a) => {
-            const withDivider = i + 1 < a.length // not if last
-            let item
+const SubAppDropdown = ({ t, subApps }) => {
+  const otherPermittedSubapps = f.filter(f.toPairs(subApps), kv => {
+    if (f.isArray(kv[1])) {
+      return kv[1].length > 0
+    } else {
+      return kv[1]
+    }
+  })
 
-            if (subApp === 'borrow')
-              item = (
-                <DropdownItem href="/borrow">
-                  <Icon.LeihsBorrow /> {t('app_name_borrow')}
-                </DropdownItem>
-              )
+  return (
+    otherPermittedSubapps.length > 0 && (
+      <UncontrolledDropdown nav inNavbar>
+        <DropdownToggle nav caret>
+          <Icon.LeihsProcurement />
+        </DropdownToggle>
+        <DropdownMenu right>
+          {f.map(
+            f.keys(f.fromPairs(f.filter(f.toPairs(subApps), '1'))),
+            (subApp, i, a) => {
+              const withDivider = i + 1 < a.length // not if last
+              let item
 
-            if (subApp === 'admin')
-              item = (
-                <DropdownItem href="/admin/">
-                  <Icon.LeihsAdmin /> {t('app_name_admin')}
-                </DropdownItem>
-              )
-
-            if (subApp === 'procure')
-              item = (
-                <DropdownItem href="/procure">
-                  <Icon.LeihsProcurement /> {t('app_name_procure')}
-                </DropdownItem>
-              )
-
-            if (subApp === 'manage')
-              item = f.isEmpty(subApps['manage']) ? (
-                // <DropdownItem href="/manage">
-                //   <Icon.LeihsManage /> {t('app_name_manage')}
-                // </DropdownItem>
-                false
-              ) : (
-                <F>
-                  <DropdownItem header>
-                    <Icon.LeihsManage /> {t('app_name_manage')}
+              if (subApp === 'borrow')
+                item = (
+                  <DropdownItem href="/borrow">
+                    <Icon.LeihsBorrow /> {t('app_name_borrow')}
                   </DropdownItem>
-                  {f.map(subApps.manage, ({ name, href }) => (
-                    <DropdownItem tag="a" href={href}>
-                      {name}
+                )
+
+              if (subApp === 'admin')
+                item = (
+                  <DropdownItem href="/admin/">
+                    <Icon.LeihsAdmin /> {t('app_name_admin')}
+                  </DropdownItem>
+                )
+
+              if (subApp === 'procure')
+                item = (
+                  <DropdownItem href="/procure">
+                    <Icon.LeihsProcurement /> {t('app_name_procure')}
+                  </DropdownItem>
+                )
+
+              if (subApp === 'manage')
+                item = f.isEmpty(subApps['manage']) ? (
+                  // <DropdownItem href="/manage">
+                  //   <Icon.LeihsManage /> {t('app_name_manage')}
+                  // </DropdownItem>
+                  false
+                ) : (
+                  <F>
+                    <DropdownItem header>
+                      <Icon.LeihsManage /> {t('app_name_manage')}
                     </DropdownItem>
-                  ))}
+                    {f.map(subApps.manage, ({ name, href }) => (
+                      <DropdownItem tag="a" href={href}>
+                        {name}
+                      </DropdownItem>
+                    ))}
+                  </F>
+                )
+
+              if (subApp === 'styleguide')
+                item = (
+                  <DropdownItem href="/">
+                    <Icon.LeihsStyleguide /> {t('app_name_styleguide')}
+                  </DropdownItem>
+                )
+
+              return (
+                <F key={i}>
+                  {item}
+                  {withDivider && <DropdownItem divider />}
                 </F>
               )
-
-            if (subApp === 'styleguide')
-              item = (
-                <DropdownItem href="/">
-                  <Icon.LeihsStyleguide /> {t('app_name_styleguide')}
-                </DropdownItem>
-              )
-
-            return (
-              <F key={i}>
-                {item}
-                {withDivider && <DropdownItem divider />}
-              </F>
-            )
-          }
-        )}
-      </DropdownMenu>
-    </UncontrolledDropdown>
+            }
+          )}
+        </DropdownMenu>
+      </UncontrolledDropdown>
+    )
   )
+}
 
 const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
   if (f.isEmpty(locales)) return false
