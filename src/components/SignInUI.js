@@ -17,7 +17,7 @@ export const NavbarLogin = ({
 
   return (
     <form
-      className="ui-form-signin form-inline my-2 my-lg-0"
+      className="ui-form-signin form-inline my-0"
       action={formAction}
       method="POST"
     >

@@ -66,6 +66,7 @@ export default class Navbar extends React.Component {
     } = props
     const { me, appTitle, appMenu, appColor, subApps, returnTo } = config
     const user = f.get(me, 'user')
+    const isLoggedIn = f.get(user, 'id')
     const { homeUrl } = defaults
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
     const t = T(config.locales)
@@ -73,12 +74,15 @@ export default class Navbar extends React.Component {
     const bgColor =
       props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
 
+    // NOTE: when not logged in, navbar is always expanded (so login button is always visible)
+    // FIXME: <BsNavbar expand={…}/> does not work as expected, results in `navbar-expand-true`(!) <https://github.com/reactstrap/reactstrap/blob/master/src/Navbar.js#L28>
+    const expandClass = isLoggedIn ? 'navbar-expand-sm' : 'navbar-expand'
+
     return (
       <BsNavbar
         dark
         color="dark"
-        expand={user ? 'sm' : true}
-        className={cx('navbar-leihs ui-main-nav', props.className)}
+        className={cx('navbar-leihs ui-main-nav', expandClass, props.className)}
         // FIXME: style tag gets missing(???)
         style={
           !bgColor
@@ -125,7 +129,7 @@ export default class Navbar extends React.Component {
 
             <LocalesDropdown
               locales={config.locales}
-              isLoggedIn={!f.isEmpty(user)}
+              isLoggedIn={isLoggedIn}
               csrfToken={csrfToken}
             />
           </Nav>
