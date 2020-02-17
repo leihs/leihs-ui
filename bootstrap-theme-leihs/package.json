@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --config webpack/prod.config.js",
+    "watch": "webpack --watch --config webpack/prod.config.js",
     "postinstall": "echo '[!] trying to rebuild node-sass in case it is broken'; npx node-sass --help &> /dev/null || npm rebuild node-sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
