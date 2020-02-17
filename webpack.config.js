@@ -6,8 +6,9 @@ const createReactAppConfig = createReactAppConfigFactory(
 
 module.exports = Object.assign({}, createReactAppConfig, {
   entry: {
-    'leihs-ui-server-side': './src/server-side.js',
-    'leihs-ui-client-side': './src/client-side.js'
+    main: './src/.emptyDummy.js', // ignored, but must be present so CRA works…
+    'leihs-ui-client-side': './src/client-side.js',
+    'leihs-ui-server-side': './src/server-side.js'
   },
   output: Object.assign({}, createReactAppConfig.output, {
     path: path.resolve(__dirname, 'dist'),
@@ -17,11 +18,5 @@ module.exports = Object.assign({}, createReactAppConfig, {
   }),
 
   // DISABLE CHUNKS…
-  optimization: Object.assign(
-    {},
-    createReactAppConfig.optimizationoptimization,
-    {
-      splitChunks: {}
-    }
-  )
+  optimization: {}
 })
