@@ -2,7 +2,7 @@
 
 exports[`base: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -34,7 +34,7 @@ exports[`base: renders correctly 1`] = `
     >
       <form
         action="/sign-in"
-        className="ui-form-signin form-inline my-2 my-lg-0"
+        className="ui-form-signin form-inline my-0"
         method="POST"
       >
         <div
@@ -91,7 +91,7 @@ exports[`base: renders correctly 1`] = `
 
 exports[`no user, marks default lang: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -123,7 +123,7 @@ exports[`no user, marks default lang: renders correctly 1`] = `
     >
       <form
         action="/sign-in"
-        className="ui-form-signin form-inline my-2 my-lg-0"
+        className="ui-form-signin form-inline my-0"
         method="POST"
       >
         <div
@@ -252,7 +252,7 @@ exports[`no user, marks default lang: renders correctly 1`] = `
 
 exports[`no user, with selected lang same as default lang: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -284,7 +284,7 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
     >
       <form
         action="/sign-in"
-        className="ui-form-signin form-inline my-2 my-lg-0"
+        className="ui-form-signin form-inline my-0"
         method="POST"
       >
         <div
@@ -413,7 +413,7 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
 
 exports[`no user, with selected lang: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -445,7 +445,7 @@ exports[`no user, with selected lang: renders correctly 1`] = `
     >
       <form
         action="/sign-in"
-        className="ui-form-signin form-inline my-2 my-lg-0"
+        className="ui-form-signin form-inline my-0"
         method="POST"
       >
         <div
@@ -574,7 +574,7 @@ exports[`no user, with selected lang: renders correctly 1`] = `
 
 exports[`on root page, logged out: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -608,7 +608,7 @@ exports[`on root page, logged out: renders correctly 1`] = `
     >
       <form
         action="/sign-in"
-        className="ui-form-signin form-inline my-2 my-lg-0"
+        className="ui-form-signin form-inline my-0"
         method="POST"
       >
         <div
@@ -670,7 +670,7 @@ exports[`on root page, logged out: renders correctly 1`] = `
 
 exports[`usage in shared app: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand-sm navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "hsl(94.19999999999999, 100%, 12.9%) !important",
@@ -860,7 +860,7 @@ exports[`usage in shared app: renders correctly 1`] = `
 
 exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand-sm navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -986,7 +986,7 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
         </div>
       </li>
       <form
-        action="/my/user/me"
+        action="/my/language"
         className="ui-lang-selection"
         method="POST"
       >
@@ -1064,7 +1064,7 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
 
 exports[`user without lang setting, marks default lang: renders correctly 1`] = `
 <nav
-  className="navbar-leihs ui-main-nav navbar navbar-expand-sm navbar-dark bg-dark"
+  className="navbar-leihs ui-main-nav navbar-expand navbar navbar-dark bg-dark"
   style={
     Object {
       "backgroundColor": "#343a40 !important",
@@ -1190,7 +1190,7 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
         </div>
       </li>
       <form
-        action="/my/user/me"
+        action="/my/language"
         className="ui-lang-selection"
         method="POST"
       >
