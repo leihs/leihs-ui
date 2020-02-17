@@ -14,6 +14,10 @@ export const Components = {
   Bold,
   DebugProps,
   Navbar,
+
+  CategoryList: require('./components/MobileApp/CategoryList').default,
+  ModelList: require('./components/MobileApp/ModelList').default,
+
   // pages:
   HomePage,
   SignInPage,

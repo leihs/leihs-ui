@@ -1,7 +1,6 @@
-/.next
+/.now
 /node_modules
 dist/
+build/
 npm-debug.log
 tmp
-
-.now

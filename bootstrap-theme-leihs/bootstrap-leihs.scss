@@ -1,9 +1,11 @@
 @import './custom';
+@import './scss/reset';
 @import './node_modules/bootstrap/scss/bootstrap';
 @import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
 @import './scss/decoration';
 @import './scss/typography';
+@import './scss/colors';
 @import './scss/bootstrap-extensions';
 @import './scss/bootstrap-fixes';
 @import './scss/app-fixes';

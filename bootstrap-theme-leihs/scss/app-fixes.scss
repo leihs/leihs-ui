@@ -8,7 +8,7 @@
   @extend %render-container;
 }
 
-// next.js fix to make root/wrapper full height:
-#__next {
+// next.js and storybook fix to make root/wrapper full height:
+#__next, #root {
   @extend %render-container;
 }

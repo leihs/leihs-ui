@@ -18,13 +18,9 @@ const exampleNavbarParams = {
 }
 
 // FIXME: import from file… this serves from legacy app(!)
-const splashImage =
+// configure static assets and `require` the asset!
+const splashImageDefault =
   '/assets/leihs-62b57b03ec5abd5e5fa3e6c35fde8a782419982d2cdd771fa8fba6cd0ab63d41.png'
-
-// NOTE: forces inlining!
-// TODO: configure static assets and dont inine this
-/* eslint-disable-next-line import/no-webpack-loader-syntax  */
-// const splashImage = require('url-loader?limit=100000000!../legacy/assets/images/splash.jpg')
 
 const defaultProps = {
   // flashMessages: [
@@ -39,7 +35,7 @@ const defaultProps = {
   splash: {
     title: 'Title',
     text: 'Subtitle',
-    image: splashImage
+    image: splashImageDefault
   },
   footer: {
     appName: 'leihs',
@@ -54,8 +50,7 @@ class HomePage extends Component {
     const rootProps = f.merge(defaultProps, props, {
       splash: {
         title: t('homepage_hero_title'),
-        text: t('homepage_hero_subtitle'),
-        image: splashImage
+        text: t('homepage_hero_subtitle')
       }
     })
     return (
