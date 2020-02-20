@@ -40,7 +40,7 @@ export const NavbarLogin = ({
         </div>
       </div>
       <HiddenPasswordField label={t('sign_in_password')} />
-      {returnTo && <input type="hidden" name="return_to" value={returnTo} />}
+      {returnTo && <input type="hidden" name="return-to" value={returnTo} />}
     </form>
   )
 }
@@ -88,6 +88,7 @@ export const SignInCard = ({
         />
 
         <HiddenPasswordField label={t('sign_in_password')} />
+        {returnTo && <input type="hidden" name="return-to" value={returnTo} />}
 
         <button className="btn btn-success btn-block mt-3" type="submit">
           {t('sign_in_btn_continue')}
@@ -118,6 +119,9 @@ export const SignInCard = ({
                 name="user-unique-id"
                 value={userParam || ''}
               />
+              {returnTo && (
+                <input type="hidden" name="return-to" value={returnTo} />
+              )}
               <button
                 className="btn btn-lg btn-success btn-block"
                 href={o.external_url}
@@ -180,6 +184,9 @@ export const SignInCard = ({
                   borderTopLeftRadius: 0
                 }}
               />
+              {returnTo && (
+                <input type="hidden" name="return-to" value={returnTo} />
+              )}
 
               <button className="btn btn-success btn-block mt-3" type="submit">
                 {t('sign_in_btn_continue')}
