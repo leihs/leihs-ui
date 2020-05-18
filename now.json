@@ -1,4 +1,5 @@
 {
   "alias": "ui.leihs.app",
+  "scope": "leihs",
   "version": 2
 }

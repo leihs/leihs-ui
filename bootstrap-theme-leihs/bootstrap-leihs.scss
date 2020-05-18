@@ -3,6 +3,9 @@
 @import './node_modules/bootstrap/scss/bootstrap';
 @import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
 
+@import './node_modules/@leihs/calendar/dist/styles.css'; // main css file
+@import './node_modules/@leihs/calendar/dist/theme/default.css'; // theme css file
+
 @import './scss/decoration';
 @import './scss/typography';
 @import './scss/colors';
@@ -24,7 +27,6 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
-
 
 // extensions copied from leihs-my & leihs-admin:
 @include bg-variant('.bg-auth', #fd7e14);

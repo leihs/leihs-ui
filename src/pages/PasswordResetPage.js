@@ -27,13 +27,7 @@ class Page extends Component {
         <Navbar {...props.navbar} hideSignInField />
 
         <CenterOnPage>
-          <PasswordForgotCard
-            {...defaultProps}
-            csrf={csrf}
-            pwReset={pwReset}
-            messages={flashMessages}
-            t={t}
-          />
+          <PasswordForgotCard {...defaultProps} csrf={csrf} pwReset={pwReset} messages={flashMessages} t={t} />
         </CenterOnPage>
       </div>
     )
@@ -42,31 +36,17 @@ class Page extends Component {
 
 export default Page
 
-const PasswordForgotCard = ({
-  t,
-  form,
-  messages,
-  pwReset,
-  csrf,
-  autoFocusUserField = true
-}) => {
+const PasswordForgotCard = ({ t, form, messages, pwReset, csrf, autoFocusUserField = true }) => {
   const step = f.isEmpty(pwReset.token) ? 1 : 2
-  const formProps =
-    step === 1 ? {} : { method: form.method, action: form.action }
+  const formProps = step === 1 ? {} : { method: form.method, action: form.action }
 
   return (
     <Card title={t('password_reset_title')}>
       {/* <p className="mb-4">{t('password_reset_description')}</p> */}
-      <FlashMessages
-        messages={messages}
-        className="rounded"
-        messageClasses="h5 rounded"
-      />
+      <FlashMessages messages={messages} className="rounded" messageClasses="h5 rounded" />
       <form className="ui-form-signin text-left" {...formProps}>
         <div className={cx('form-group', { 'form-group-sm': step === 2 })}>
-          <label htmlFor={'inputToken'}>
-            {t('password_reset_token_label')}
-          </label>
+          <label htmlFor={'inputToken'}>{t('password_reset_token_label')}</label>
           <input
             id={'inputToken'}
             name="token"
@@ -82,9 +62,7 @@ const PasswordForgotCard = ({
         {step === 2 && <CsrfTokenField {...csrf} />}
         {step === 2 && (
           <div className="form-group form-group-sm">
-            <label htmlFor={'inputEmail'}>
-              {t('password_reset_userparam_label')}
-            </label>
+            <label htmlFor={'inputEmail'}>{t('password_reset_userparam_label')}</label>
             <input
               id={'inputEmail'}
               name="user"
@@ -99,9 +77,7 @@ const PasswordForgotCard = ({
 
         {step === 2 && (
           <div className="form-group">
-            <label htmlFor={'inputNewPassword'}>
-              {t('password_reset_newpassword_label')}
-            </label>
+            <label htmlFor={'inputNewPassword'}>{t('password_reset_newpassword_label')}</label>
             <input
               type="password"
               id={'inputNewPassword'}

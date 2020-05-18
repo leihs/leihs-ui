@@ -14,9 +14,7 @@ export function hydrateComponent(container) {
 }
 
 export function initReact() {
-  Array.from(document.querySelectorAll('[data-react-component]')).map(
-    hydrateComponent
-  )
+  Array.from(document.querySelectorAll('[data-react-component]')).map(hydrateComponent)
 }
 initReact()
 

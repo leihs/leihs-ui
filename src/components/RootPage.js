@@ -80,5 +80,4 @@ const RootPage = props => {
 
 export default RootPage
 
-const OptionalLink = ({ href, children }) =>
-  !f.isEmpty(href) ? <a href={href}>{children}</a> : children
+const OptionalLink = ({ href, children }) => (!f.isEmpty(href) ? <a href={href}>{children}</a> : children)

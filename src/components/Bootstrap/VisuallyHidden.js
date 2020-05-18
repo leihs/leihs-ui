@@ -7,11 +7,7 @@ const VisuallyHidden = ({ children, ...props }) => {
   const hidden = props['if'] !== false
 
   return (
-    <div
-      className={hidden ? 'sr-only' : ''}
-      aria-hidden={hidden}
-      tabIndex={hidden ? -1 : props.tabIndex}
-    >
+    <div className={hidden ? 'sr-only' : ''} aria-hidden={hidden} tabIndex={hidden ? -1 : props.tabIndex}>
       {children}
     </div>
   )

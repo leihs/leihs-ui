@@ -47,9 +47,7 @@ export const NavItemLink = p => (
   </NavItem>
 )
 
-export const NavbarBrand = ({ tag, ...p }) => (
-  <BsNavbarBrand tag={tag || p.href ? 'a' : 'span'} {...p} />
-)
+export const NavbarBrand = ({ tag, ...p }) => <BsNavbarBrand tag={tag || p.href ? 'a' : 'span'} {...p} />
 
 // export const DropdownItemLink = p => <DropdownItem tag={RouterNavLink} {...p} />
 export const DropdownItemLink = p => <DropdownItem {...p} />

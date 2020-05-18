@@ -6,11 +6,7 @@ const DEFAULT_LOCALE = 'de-CH' // not really used in app because backend already
 export function Translator(locales, defaultLocale = DEFAULT_LOCALE) {
   const selectedLocale = f.isString(locales)
     ? locales
-    : f.get(
-        f.find(locales, { isSelected: true }) ||
-          f.find(locales, { isDefault: true }),
-        'locale_name'
-      )
+    : f.get(f.find(locales, { isSelected: true }) || f.find(locales, { isDefault: true }), 'locale_name')
 
   const selectedLang = selectedLocale ? selectedLocale.split('-')[0] : null
   const defaultLang = defaultLocale.split('-')[0]

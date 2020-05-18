@@ -24,9 +24,7 @@ class Page extends Component {
             className="rounded"
             messageClasses="h5 rounded"
           />
-          <a href={props.resetPwLink}>
-            go here to reset the password using the token in the email
-          </a>
+          <a href={props.resetPwLink}>go here to reset the password using the token in the email</a>
         </CenteredCard>
       </div>
     )

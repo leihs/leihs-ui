@@ -78,14 +78,11 @@ export const all_config_options = () => {
         <h1 className="display-4">Great App</h1>
         <p className="lead">This is a great app with an even greater navbar.</p>
         <p className="lead">
-          See <a href="./colors">all the colors</a> and{' '}
-          <a href="./variants">more variants</a>
+          See <a href="./colors">all the colors</a> and <a href="./variants">more variants</a>
           ..
         </p>
         <small>those (example) params are rendered:</small>
-        <pre className="text-bold text-left p-3 mx-5 my-3 card bg-warning">
-          {JSON.stringify(exampleParams, 0, 2)}
-        </pre>
+        <pre className="text-bold text-left p-3 mx-5 my-3 card bg-warning">{JSON.stringify(exampleParams, 0, 2)}</pre>
       </div>{' '}
     </LeihsPage>
   )
@@ -172,27 +169,19 @@ export const colors = () => {
           </mark>
         </h3>
         <p>
-          same example data as {'"All Config Options"'}, but with using each
-          color from <a href="http://clrs.cc">COLORS</a> as a <code>tint</code>.{' '}
-          <code>base</code> color is the purple from{' '}
-          <a href="https://getbootstrap.com">bootstrap {"doc's"} purple</a>.
-          <br />
+          same example data as {'"All Config Options"'}, but with using each color from{' '}
+          <a href="http://clrs.cc">COLORS</a> as a <code>tint</code>. <code>base</code> color is the purple from{' '}
+          <a href="https://getbootstrap.com">bootstrap {"doc's"} purple</a>.<br />
           <b>NOTE:</b> the <code>tint</code> is applied while keeping{' '}
-          <a href="https://www.w3.org/TR/WCAG20/#relativeluminancedef">
-            luminosity/relative luminance
-          </a>{' '}
-          and saturation from <code>base</code> color.
+          <a href="https://www.w3.org/TR/WCAG20/#relativeluminancedef">luminosity/relative luminance</a> and saturation
+          from <code>base</code> color.
         </p>
       </header>
 
       {examples.map(config => (
         <>
-          <div style={{ ...swatchStyle, background: `${navbarBaseColor}` }}>
-            base
-          </div>
-          <div style={{ ...swatchStyle, background: `${config.appColor}` }}>
-            tint
-          </div>
+          <div style={{ ...swatchStyle, background: `${navbarBaseColor}` }}>base</div>
+          <div style={{ ...swatchStyle, background: `${config.appColor}` }}>tint</div>
           <Navbar config={config} />
           <hr />
         </>

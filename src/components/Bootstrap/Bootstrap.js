@@ -9,16 +9,7 @@ import BsButtonGroup from 'reactstrap/lib/ButtonGroup'
 // import Icon from '../Icons'
 
 const BOOTSTRAP_BREAKPOINTS = ['sm', 'md', 'lg', 'xl']
-const BOOTSTRAP_MODIFIERS = [
-  'primary',
-  'secondary',
-  'success',
-  'danger',
-  'warning',
-  'info',
-  'light',
-  'dark'
-]
+const BOOTSTRAP_MODIFIERS = ['primary', 'secondary', 'success', 'danger', 'warning', 'info', 'light', 'dark']
 
 // https://getbootstrap.com/docs/4.0/utilities/spacing/#notation
 const bsSizeUtils = ({ m, p, ...props }) => {
@@ -59,22 +50,18 @@ export const Small = props => Node({ ...props, tag: 'small' })
 export const Container = ({ fluid, ...props }) =>
   Node({ ...props, cls: [fluid ? 'container-fluid' : 'container', props.cls] })
 
-export const Row = ({ form, ...props }) =>
-  Node({ ...props, cls: [form ? 'form-row' : 'row', props.cls] })
+export const Row = ({ form, ...props }) => Node({ ...props, cls: [form ? 'form-row' : 'row', props.cls] })
 
 export const Col = ({ order, cls, ...props }) => {
   const restProps = f.omit(props, BOOTSTRAP_BREAKPOINTS)
-  const breakpoint = f.first(
-    f.intersection(f.keys(props), BOOTSTRAP_BREAKPOINTS)
-  )
+  const breakpoint = f.first(f.intersection(f.keys(props), BOOTSTRAP_BREAKPOINTS))
   const breakpointVal = props[breakpoint]
   const colCls = breakpoint
     ? f.isString(breakpointVal) || f.isNumber(breakpointVal)
       ? `col-${breakpoint}-${breakpointVal}`
       : `col-${breakpoint}`
     : 'col'
-  const orderCls =
-    order && (breakpoint ? `order-${breakpoint}-${order}` : `order-${order}`)
+  const orderCls = order && (breakpoint ? `order-${breakpoint}-${order}` : `order-${order}`)
   return Node({ ...restProps, cls: cx(colCls, orderCls, cls) })
 }
 
@@ -99,9 +86,7 @@ export { BsButtonGroup as ButtonGroup }
 
 export const Badge = props => {
   const restProps = f.omit(props, BOOTSTRAP_MODIFIERS)
-  const mod =
-    f.first(f.intersection(f.keys(props), BOOTSTRAP_MODIFIERS)) ||
-    BOOTSTRAP_MODIFIERS[0]
+  const mod = f.first(f.intersection(f.keys(props), BOOTSTRAP_MODIFIERS)) || BOOTSTRAP_MODIFIERS[0]
   return <Span {...restProps} cls={[props.cls, 'badge', `badge-${mod}`]} />
 }
 Badge.propTypes = {
@@ -119,12 +104,7 @@ export const FormGroup = ({
   horizontal,
   ...props
 }) => {
-  const cls = [
-    { 'form-row': horizontal },
-    props.cls,
-    props.className,
-    'form-group'
-  ]
+  const cls = [{ 'form-row': horizontal }, props.cls, props.className, 'form-group']
 
   const inputWrapCls = horizontal && 'col-sm'
 

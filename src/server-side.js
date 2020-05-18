@@ -11,11 +11,7 @@ export function renderComponentToStaticMarkup(name, props) {
 }
 
 export function renderComponentToString(name, props) {
-  return rootWrapper(
-    name,
-    props,
-    ReactDOMServer.renderToString(reactElement(name, props))
-  )
+  return rootWrapper(name, props, ReactDOMServer.renderToString(reactElement(name, props)))
 }
 
 // helpers
@@ -28,9 +24,7 @@ function reactElement(name, props) {
 }
 
 function rootWrapper(name, props, inner) {
-  return `<div data-react-component='${name}' data-react-props='${escape(
-    JSON.stringify(props)
-  )}'>${inner}</div>`
+  return `<div data-react-component='${name}' data-react-props='${escape(JSON.stringify(props))}'>${inner}</div>`
 }
 
 // function renderAndWrap(id, name, props) {

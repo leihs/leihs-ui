@@ -19,8 +19,7 @@ const exampleNavbarParams = {
 
 // FIXME: import from file… this serves from legacy app(!)
 // configure static assets and `require` the asset!
-const splashImageDefault =
-  '/assets/leihs-62b57b03ec5abd5e5fa3e6c35fde8a782419982d2cdd771fa8fba6cd0ab63d41.png'
+const splashImageDefault = '/assets/leihs-62b57b03ec5abd5e5fa3e6c35fde8a782419982d2cdd771fa8fba6cd0ab63d41.png'
 
 const defaultProps = {
   // flashMessages: [

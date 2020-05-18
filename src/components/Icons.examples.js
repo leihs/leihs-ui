@@ -19,14 +19,10 @@ export const examples = [
     content: (
       <React.Fragment>
         <h6>colors</h6>
-        <Icon.LeihsProcurement size="2x" />{' '}
-        <Icon.LeihsProcurement size="2x" color="dark" />{' '}
-        <Icon.LeihsProcurement size="2x" color="secondary" />{' '}
-        <Icon.LeihsProcurement size="2x" color="light" />{' '}
-        <Icon.LeihsProcurement size="2x" color="primary" />{' '}
-        <Icon.LeihsProcurement size="2x" color="success" />{' '}
-        <Icon.LeihsProcurement size="2x" color="warning" />{' '}
-        <Icon.LeihsProcurement size="2x" color="danger" />{' '}
+        <Icon.LeihsProcurement size="2x" /> <Icon.LeihsProcurement size="2x" color="dark" />{' '}
+        <Icon.LeihsProcurement size="2x" color="secondary" /> <Icon.LeihsProcurement size="2x" color="light" />{' '}
+        <Icon.LeihsProcurement size="2x" color="primary" /> <Icon.LeihsProcurement size="2x" color="success" />{' '}
+        <Icon.LeihsProcurement size="2x" color="warning" /> <Icon.LeihsProcurement size="2x" color="danger" />{' '}
         <Icon.LeihsProcurement size="2x" color="info" />
         <hr />
         <h6>spacing</h6>

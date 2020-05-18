@@ -24,22 +24,16 @@ export const DisplayName = (o, { short = false, abbr = false } = {}) => {
   switch (o.__typename) {
     case 'Room':
       expectKeys(['name', 'description'])
-      return short || !o.description
-        ? `${o.name}`
-        : `${o.name} (${o.description})`
+      return short || !o.description ? `${o.name}` : `${o.name} (${o.description})`
 
     case 'Organization':
       expectKeys(['name', 'shortname'])
-      return short || !o.shortname
-        ? `${o.shortname || o.name}`
-        : `${o.name} (${o.shortname})`
+      return short || !o.shortname ? `${o.shortname || o.name}` : `${o.name} (${o.shortname})`
 
     // TODO: check against DB/leihs core and schema
     case 'Model':
       expectKeys(['product', 'version'])
-      return short || !o.version
-        ? `${o.product}`
-        : `${o.product} (${o.version})`
+      return short || !o.version ? `${o.product}` : `${o.product} (${o.version})`
 
     case 'Supplier':
       expectKeys(['name'])

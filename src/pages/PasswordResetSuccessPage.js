@@ -20,9 +20,7 @@ class Page extends Component {
 
         <CenteredCard title={t('password_reset_title')}>
           <FlashMessages
-            messages={[
-              { message: t('password_reset_success_message'), level: 'success' }
-            ]}
+            messages={[{ message: t('password_reset_success_message'), level: 'success' }]}
             className="rounded"
             messageClasses="h5 rounded"
           />

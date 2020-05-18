@@ -57,13 +57,7 @@ export default class Navbar extends React.Component {
   }
 
   render({ props, state } = this) {
-    const {
-      bgBaseColor,
-      hideSignInField = false,
-      config,
-      brand,
-      children
-    } = props
+    const { bgBaseColor, hideSignInField = false, config, brand, children } = props
     const { me, appTitle, appMenu, appColor, subApps, returnTo } = config
     const user = f.get(me, 'user')
     const isLoggedIn = f.get(user, 'id')
@@ -71,8 +65,7 @@ export default class Navbar extends React.Component {
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
     const t = T(config.locales)
 
-    const bgColor =
-      props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
+    const bgColor = props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
 
     // NOTE: when not logged in, navbar is always expanded (so login button is always visible)
     // FIXME: <BsNavbar expand={…}/> does not work as expected, results in `navbar-expand-true`(!) <https://github.com/reactstrap/reactstrap/blob/master/src/Navbar.js#L28>
@@ -84,11 +77,7 @@ export default class Navbar extends React.Component {
         color="dark"
         className={cx('navbar-leihs ui-main-nav', expandClass, props.className)}
         // FIXME: style tag gets missing(???)
-        style={
-          !bgColor
-            ? { font: 'inherit' }
-            : { backgroundColor: `${bgColor} !important` }
-        }
+        style={!bgColor ? { font: 'inherit' } : { backgroundColor: `${bgColor} !important` }}
       >
         {brand ? (
           brand
@@ -103,35 +92,26 @@ export default class Navbar extends React.Component {
         <Collapse isOpen={state.isOpen} navbar>
           <Nav className="mr-auto" navbar>
             {children}
-            {f.map(
-              appMenu,
-              ({ title, href, icon, active, submenu, attr }, i) => {
-                const IconEl = Icon[icon]
-                return (
-                  <NavItemLink key={i} href={href} active={active} {...attr}>
-                    {IconEl ? <IconEl fixedWidth spaced /> : false} {title}
-                  </NavItemLink>
-                )
-              }
-            )}
+            {f.map(appMenu, ({ title, href, icon, active, submenu, attr }, i) => {
+              const IconEl = Icon[icon]
+              return (
+                <NavItemLink key={i} href={href} active={active} {...attr}>
+                  {IconEl ? <IconEl fixedWidth spaced /> : false} {title}
+                </NavItemLink>
+              )
+            })}
           </Nav>
 
           <Nav className="ml-auto" navbar>
             <SubAppDropdown t={t} subApps={subApps} />
 
             {f.isEmpty(user) ? (
-              !!hideSignInField || (
-                <NavbarLogin locales={config.locales} returnTo={returnTo} />
-              )
+              !!hideSignInField || <NavbarLogin locales={config.locales} returnTo={returnTo} />
             ) : (
               <UserMenu t={t} user={user} csrfToken={csrfToken} />
             )}
 
-            <LocalesDropdown
-              locales={config.locales}
-              isLoggedIn={isLoggedIn}
-              csrfToken={csrfToken}
-            />
+            <LocalesDropdown locales={config.locales} isLoggedIn={isLoggedIn} csrfToken={csrfToken} />
           </Nav>
         </Collapse>
       </BsNavbar>
@@ -185,67 +165,64 @@ const SubAppDropdown = ({ t, subApps }) => {
           <Icon.LeihsProcurement />
         </DropdownToggle>
         <DropdownMenu right>
-          {f.map(
-            f.keys(f.fromPairs(f.filter(f.toPairs(subApps), '1'))),
-            (subApp, i, a) => {
-              const withDivider = i + 1 < a.length // not if last
-              let item
+          {f.map(f.keys(f.fromPairs(f.filter(f.toPairs(subApps), '1'))), (subApp, i, a) => {
+            const withDivider = i + 1 < a.length // not if last
+            let item
 
-              if (subApp === 'borrow')
-                item = (
-                  <DropdownItem href="/borrow">
-                    <Icon.LeihsBorrow /> {t('app_name_borrow')}
+            if (subApp === 'borrow')
+              item = (
+                <DropdownItem href="/borrow">
+                  <Icon.LeihsBorrow /> {t('app_name_borrow')}
+                </DropdownItem>
+              )
+
+            if (subApp === 'admin')
+              item = (
+                <DropdownItem href="/admin/">
+                  <Icon.LeihsAdmin /> {t('app_name_admin')}
+                </DropdownItem>
+              )
+
+            if (subApp === 'procure')
+              item = (
+                <DropdownItem href="/procure">
+                  <Icon.LeihsProcurement /> {t('app_name_procure')}
+                </DropdownItem>
+              )
+
+            if (subApp === 'manage')
+              item = f.isEmpty(subApps['manage']) ? (
+                // <DropdownItem href="/manage">
+                //   <Icon.LeihsManage /> {t('app_name_manage')}
+                // </DropdownItem>
+                false
+              ) : (
+                <F>
+                  <DropdownItem header>
+                    <Icon.LeihsManage /> {t('app_name_manage')}
                   </DropdownItem>
-                )
-
-              if (subApp === 'admin')
-                item = (
-                  <DropdownItem href="/admin/">
-                    <Icon.LeihsAdmin /> {t('app_name_admin')}
-                  </DropdownItem>
-                )
-
-              if (subApp === 'procure')
-                item = (
-                  <DropdownItem href="/procure">
-                    <Icon.LeihsProcurement /> {t('app_name_procure')}
-                  </DropdownItem>
-                )
-
-              if (subApp === 'manage')
-                item = f.isEmpty(subApps['manage']) ? (
-                  // <DropdownItem href="/manage">
-                  //   <Icon.LeihsManage /> {t('app_name_manage')}
-                  // </DropdownItem>
-                  false
-                ) : (
-                  <F>
-                    <DropdownItem header>
-                      <Icon.LeihsManage /> {t('app_name_manage')}
+                  {f.map(subApps.manage, ({ name, href }) => (
+                    <DropdownItem tag="a" href={href}>
+                      {name}
                     </DropdownItem>
-                    {f.map(subApps.manage, ({ name, href }) => (
-                      <DropdownItem tag="a" href={href}>
-                        {name}
-                      </DropdownItem>
-                    ))}
-                  </F>
-                )
-
-              if (subApp === 'styleguide')
-                item = (
-                  <DropdownItem href="/">
-                    <Icon.LeihsStyleguide /> {t('app_name_styleguide')}
-                  </DropdownItem>
-                )
-
-              return (
-                <F key={i}>
-                  {item}
-                  {withDivider && <DropdownItem divider />}
+                  ))}
                 </F>
               )
-            }
-          )}
+
+            if (subApp === 'styleguide')
+              item = (
+                <DropdownItem href="/">
+                  <Icon.LeihsStyleguide /> {t('app_name_styleguide')}
+                </DropdownItem>
+              )
+
+            return (
+              <F key={i}>
+                {item}
+                {withDivider && <DropdownItem divider />}
+              </F>
+            )
+          })}
         </DropdownMenu>
       </UncontrolledDropdown>
     )
@@ -254,14 +231,9 @@ const SubAppDropdown = ({ t, subApps }) => {
 
 const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
   if (f.isEmpty(locales)) return false
-  const currentLang =
-    f.find(locales, l => l.isSelected) || f.find(locales, l => l.isDefault)
+  const currentLang = f.find(locales, l => l.isSelected) || f.find(locales, l => l.isDefault)
   return (
-    <form
-      method="POST"
-      action={isLoggedIn ? '/my/user/me' : '/my/language'}
-      className="ui-lang-selection"
-    >
+    <form method="POST" action={isLoggedIn ? '/my/user/me' : '/my/language'} className="ui-lang-selection">
       <input type="hidden" name="csrf-token" value={csrfToken} />
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>
@@ -296,10 +268,5 @@ function decorateUser(u) {
   if (u.firstname && u.lastname) {
     return `${f.first(u.firstname)}. ${u.lastname}`
   }
-  return f.first(
-    f.filter(
-      ['lastname', 'login', 'email', 'id'].map(key => f.get(u, key)),
-      i => !f.isEmpty(i)
-    )
-  )
+  return f.first(f.filter(['lastname', 'login', 'email', 'id'].map(key => f.get(u, key)), i => !f.isEmpty(i)))
 }

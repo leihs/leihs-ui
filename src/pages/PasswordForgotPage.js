@@ -26,13 +26,7 @@ class Page extends Component {
         <Navbar {...props.navbar} hideSignInField />
 
         <CenterOnPage>
-          <PasswordForgotCard
-            {...defaultProps}
-            csrf={csrf}
-            userParam={userParam}
-            messages={flashMessages}
-            t={t}
-          />
+          <PasswordForgotCard {...defaultProps} csrf={csrf} userParam={userParam} messages={flashMessages} t={t} />
         </CenterOnPage>
       </div>
     )
@@ -41,27 +35,12 @@ class Page extends Component {
 
 export default Page
 
-const PasswordForgotCard = ({
-  t,
-  form,
-  messages,
-  userParam,
-  csrf,
-  autoFocusUserField = true
-}) => {
+const PasswordForgotCard = ({ t, form, messages, userParam, csrf, autoFocusUserField = true }) => {
   return (
     <Card title={t('password_forgot_title')}>
       <p className="mb-4">{t('password_forgot_description')}</p>
-      <FlashMessages
-        messages={messages}
-        className="rounded"
-        messageClasses="h5 rounded"
-      />
-      <form
-        className="ui-form-signin"
-        method={form.method}
-        action={form.action}
-      >
+      <FlashMessages messages={messages} className="rounded" messageClasses="h5 rounded" />
+      <form className="ui-form-signin" method={form.method} action={form.action}>
         <CsrfTokenField {...csrf} />
         <label htmlFor={'inputEmail'} className="sr-only">
           {t('password_forgot_userparam_label')}
