@@ -1,5 +1,13 @@
 @import './custom';
 
+// btn
+.btn-icon {
+  user-select: none;
+}
+.btn-icon:focus {
+  outline: none;
+}
+
 // util - sizing
 .minh-100 {
   min-height: 100%;
