@@ -38,7 +38,7 @@
     "@leihs/calendar": "2.0.0-beta.1",
     "color": "^3.1.0",
     "date-fns": "^2.12.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "prop-types": "^15.6.2",
     "react-with-direction": "^1.3.1",
     "reactstrap": "^6.5.0"
