@@ -6,7 +6,7 @@
     "preinstall": "cd bootstrap-theme-leihs && { test -d node_modules && npm i || { npm ci || npm i ;} ;}",
     "dev": "npm run -s build:theme && node server.js",
     "start": "NODE_ENV=production node server.js",
-    "build": "npm run -s build:theme && npm run -s build:lib && npm run -s build:storybook",
+    "build": "npm run -s build:theme && npm run -s build:ssr && npm run -s build:storybook",
     "build:ssr": "npm run -s build:lib && npm run -s build:ssr-cli",
     "build:ssr-cli": "ncc build ./ssr-cli.js --no-cache --out tmp/ssr && echo 'window = global = this;' >> dist/leihs-ssr.js && cat tmp/ssr/index.js >> dist/leihs-ssr.js && rm tmp/ssr/index.js && echo '#!/usr/bin/env node' > dist/leihs-ssr && cat dist/leihs-ssr.js >> dist/leihs-ssr && chmod +x dist/leihs-ssr",
     "build:theme": "cd bootstrap-theme-leihs && npm run build",
