@@ -31,6 +31,7 @@ const WIP_STYLES = `
 
 // eslint-disable-next-line no-console, no-unused-vars
 const WIP_DEBUG_CALLBACK = name => (a, b, c) => console.log(name, { a, b, c })
+const noop = () => {}
 
 export const BookingCalendar = ({
   _now = new Date(),
@@ -47,6 +48,10 @@ export const BookingCalendar = ({
   initialEndDate = initialStartDate,
   initialQuantity = 1,
   //
+  inventoryPools,
+  initialinventoryPoolId,
+  onInventoryPoolChange = noop,
+  //
   onLoadMoreFuture,
   isLoadingFuture,
   onSubmit,
@@ -59,9 +64,6 @@ export const BookingCalendar = ({
   cardStyle
 }) => {
   const today = df.startOfDay(new Date())
-
-  const inventoryPools = f.map(modelData.availability, 'inventoryPool')
-  const availabilityByDateAndPool = getAvailabilityByDateAndPool(modelData)
 
   const initialSelectedRange = {
     startDate: df.startOfDay(initialStartDate),
@@ -78,14 +80,9 @@ export const BookingCalendar = ({
 
   const [quantity, setQuantity] = useState(initialQuantity)
   const [hasUserInteracted, setHasUserInteracted] = useState(false)
-  const [selectedPoolId, setSelectedPoolId] = useState(f.first(inventoryPools).id)
+  const [selectedPoolId, setSelectedPoolId] = useState(initialinventoryPoolId || f.get(inventoryPools, '0.id'))
 
-  const clearForm = () => {
-    setQuantity(initialQuantity)
-    setSelectedRange(initialSelectedRange)
-    setHasUserInteracted(false)
-  }
-
+  const availabilityByDateAndPool = getAvailabilityByDateAndPool(modelData)
   const allBlockedDates = calcAllBlockedDates(availabilityByDateAndPool[selectedPoolId], quantity)
   const { blockedDates, blockedStartDates, blockedEndDates } = allBlockedDates
 
@@ -97,6 +94,12 @@ export const BookingCalendar = ({
         Something is wrong!
       </div>
     )
+
+  const clearForm = () => {
+    setQuantity(initialQuantity)
+    setSelectedRange(initialSelectedRange)
+    setHasUserInteracted(false)
+  }
 
   return (
     <div
@@ -143,7 +146,11 @@ export const BookingCalendar = ({
               <select
                 className="custom-select custom-select-sm"
                 value={selectedPoolId}
-                onChange={e => setSelectedPoolId(e.target.value)}
+                onChange={e => {
+                  const id = e.target.value
+                  setSelectedPoolId(id)
+                  onInventoryPoolChange(id)
+                }}
               >
                 {inventoryPools.map(({ id, name }) => (
                   <option key={id} value={id}>
@@ -227,8 +234,7 @@ const modelDataPropType = PropTypes.shape({
   availability: PropTypes.arrayOf(
     PropTypes.shape({
       inventoryPool: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        name: PropTypes.string.isRequired
+        id: PropTypes.string.isRequired
       }).isRequired,
       dates: PropTypes.arrayOf(
         PropTypes.shape({
@@ -262,7 +268,18 @@ BookingCalendar.propTypes = {
   /** availabilty and visits info from API */
   modelData: modelDataPropType.isRequired,
   /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired,
+  /** list of inventory pools for selecting */
+  inventoryPools: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired,
+  /** initially selected pool */
+  initialPoolId: PropTypes.string,
+  /** callback, when selected pool changes, called with `id` */
+  onInventoryPoolChange: PropTypes.func
 }
 
 function handleShownDateChange(newDate, maxDateLoaded, maxDateTotal, numMonths, callback) {

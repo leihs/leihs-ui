@@ -56,8 +56,15 @@ export const BookingCalendar_with_mock_data = () => {
   const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
   const apiData = mock.result.data
 
+  const modelData = f.first(apiData.models.edges.map(edg => edg.node))
+  // NOTE: should come from a seperate query, re-use example query for now
+  const inventoryPools = f.map(modelData.availability, 'inventoryPool')
+
   const exampleProps = {
-    modelData: f.first(apiData.models.edges.map(edg => edg.node)),
+    modelData,
+    inventoryPools,
+    initialInventoryPoolId: f.first(inventoryPools).id,
+    //
     minDateTotal: now,
     minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     // maxDateTotal: ,
@@ -73,6 +80,7 @@ export const BookingCalendar_with_mock_data = () => {
         loadingIndicator={<span>Loading…</span>}
         onLoadMoreFuture={action('fetch-future-data')}
         onSubmit={action('submit')}
+        onInventoryPoolChange={action('pool-changed')}
         {...exampleProps}
       />
       <hr />
