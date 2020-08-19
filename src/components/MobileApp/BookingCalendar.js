@@ -65,6 +65,10 @@ export const BookingCalendar = ({
 }) => {
   const today = df.startOfDay(new Date())
 
+  const [quantity, setQuantity] = useState(initialQuantity)
+  const [hasUserInteracted, setHasUserInteracted] = useState(false)
+  const [selectedPoolId, setSelectedPoolId] = useState(initialinventoryPoolId || f.get(inventoryPools, '0.id'))
+
   const initialSelectedRange = {
     startDate: df.startOfDay(initialStartDate),
     endDate: df.startOfDay(initialEndDate),
@@ -77,10 +81,6 @@ export const BookingCalendar = ({
   const [selectedRange, setSelectedRange] = useState(initialSelectedRange)
   // const hasSelectedRange =
   //   df.isValid(selectedRange.startDate) && df.isValid(selectedRange.endDate)
-
-  const [quantity, setQuantity] = useState(initialQuantity)
-  const [hasUserInteracted, setHasUserInteracted] = useState(false)
-  const [selectedPoolId, setSelectedPoolId] = useState(initialinventoryPoolId || f.get(inventoryPools, '0.id'))
 
   const availabilityByDateAndPool = getAvailabilityByDateAndPool(modelData)
   const allBlockedDates = calcAllBlockedDates(availabilityByDateAndPool[selectedPoolId], quantity)
@@ -152,7 +152,7 @@ export const BookingCalendar = ({
                   onInventoryPoolChange(id)
                 }}
               >
-                {inventoryPools.map(({ id, name }) => (
+                {f.map(inventoryPools, ({ id, name }) => (
                   <option key={id} value={id}>
                     {name} (max. XXX)
                   </option>
@@ -168,6 +168,7 @@ export const BookingCalendar = ({
           <DateRange
             editableDateInputs={true}
             onChange={item => {
+              debugger
               setSelectedRange(item.selection)
               setHasUserInteracted(true)
             }}
@@ -291,7 +292,7 @@ function handleShownDateChange(newDate, maxDateLoaded, maxDateTotal, numMonths, 
 function getAvailabilityByDateAndPool(modelData) {
   if (!modelData) return {}
   return f.fromPairs(
-    f.map(modelData.availability, abp => [abp.inventoryPool.id, f.fromPairs(abp.dates.map(i => [i.date, i]))])
+    f.map(modelData.availability, abp => [abp.inventoryPool.id, f.fromPairs(f.map(abp.dates, i => [i.date, i]))])
   )
 }
 
@@ -301,7 +302,7 @@ function getByDay(dateList, date) {
   throw TypeError
 }
 
-function calcAllBlockedDates(availabilityByDate, wantedQuantity = 1) {
+function calcAllBlockedDates(availabilityByDate = {}, wantedQuantity = 1) {
   const blockedDates = []
   const blockedStartDates = []
   const blockedEndDates = []
