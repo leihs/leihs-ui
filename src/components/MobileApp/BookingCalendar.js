@@ -49,11 +49,13 @@ export const BookingCalendar = ({
   initialQuantity = 1,
   //
   inventoryPools,
-  initialinventoryPoolId,
-  onInventoryPoolChange = noop,
+  initialInventoryPoolId,
   //
   onLoadMoreFuture,
   isLoadingFuture,
+  onDatesChange = noop,
+  onQuantityChange = noop,
+  onInventoryPoolChange = noop,
   onSubmit,
   //
   showClearDates = true,
@@ -67,7 +69,7 @@ export const BookingCalendar = ({
 
   const [quantity, setQuantity] = useState(initialQuantity)
   const [hasUserInteracted, setHasUserInteracted] = useState(false)
-  const [selectedPoolId, setSelectedPoolId] = useState(initialinventoryPoolId || f.get(inventoryPools, '0.id'))
+  const [selectedPoolId, setSelectedPoolId] = useState(initialInventoryPoolId || f.get(inventoryPools, '0.id'))
 
   const initialSelectedRange = {
     startDate: df.startOfDay(initialStartDate),
@@ -94,6 +96,13 @@ export const BookingCalendar = ({
         Something is wrong!
       </div>
     )
+
+  const stateForCallbacks = () => ({
+    startDate: selectedRange.startDate,
+    endDate: selectedRange.endDate,
+    quantity,
+    poolId: selectedPoolId
+  })
 
   const clearForm = () => {
     setQuantity(initialQuantity)
@@ -136,6 +145,7 @@ export const BookingCalendar = ({
                 onChange={e => {
                   setQuantity(e.target.value)
                   setHasUserInteracted(true)
+                  onQuantityChange(stateForCallbacks())
                 }}
               />
             </label>
@@ -149,7 +159,7 @@ export const BookingCalendar = ({
                 onChange={e => {
                   const id = e.target.value
                   setSelectedPoolId(id)
-                  onInventoryPoolChange(id)
+                  onInventoryPoolChange(stateForCallbacks())
                 }}
               >
                 {f.map(inventoryPools, ({ id, name }) => (
@@ -168,9 +178,9 @@ export const BookingCalendar = ({
           <DateRange
             editableDateInputs={true}
             onChange={item => {
-              debugger
               setSelectedRange(item.selection)
               setHasUserInteracted(true)
+              onDatesChange(stateForCallbacks())
             }}
             moveRangeOnFirstSelection={false}
             direction="vertical"
@@ -206,12 +216,7 @@ export const BookingCalendar = ({
           disabled={!isValidForm}
           onClick={e => {
             e.preventDefault()
-            onSubmit({
-              startDate: selectedRange.startDate,
-              endDate: selectedRange.endDate,
-              quantity,
-              poolId: selectedPoolId
-            })
+            onSubmit(stateForCallbacks())
           }}
         >
           Add

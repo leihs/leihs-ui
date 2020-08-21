@@ -56,14 +56,21 @@ export const BookingCalendar_with_mock_data = () => {
   const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
   const apiData = mock.result.data
 
+  // FIXME: pools should come from a seperate query,
+  //         and availability data should have several pools!
+  //         re-use and tranform example data for now…
+  const FAKE_SECOND_POOL_ID = '53f78fc0-2b0b-4f67-a207-b08d2a3c47b2'
   const modelData = f.first(apiData.models.edges.map(edg => edg.node))
-  // NOTE: should come from a seperate query, re-use example query for now
+  modelData.availability.push({
+    inventoryPool: { id: '53f78fc0-2b0b-4f67-a207-b08d2a3c47b2', name: 'Fake 2nd Pool' },
+    dates: modelData.availability[0].dates
+  })
   const inventoryPools = f.map(modelData.availability, 'inventoryPool')
 
   const exampleProps = {
     modelData,
     inventoryPools,
-    initialInventoryPoolId: f.first(inventoryPools).id,
+    initialInventoryPoolId: FAKE_SECOND_POOL_ID,
     //
     minDateTotal: now,
     minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
@@ -79,8 +86,10 @@ export const BookingCalendar_with_mock_data = () => {
         initialQuantity={1}
         loadingIndicator={<span>Loading…</span>}
         onLoadMoreFuture={action('fetch-future-data')}
-        onSubmit={action('submit')}
+        onDatesChange={action('dates-changed')}
+        onQuantityChange={action('quantity-changed')}
         onInventoryPoolChange={action('pool-changed')}
+        onSubmit={action('submit')}
         {...exampleProps}
       />
       <hr />
@@ -91,7 +100,7 @@ export const BookingCalendar_with_mock_data = () => {
 
         <details>
           <summary className="h4 text-monospace">mock data used:</summary>
-          <pre>{JSON.stringify(apiData, 0, 2)}</pre>
+          <pre>{JSON.stringify(modelData, 0, 2)}</pre>
         </details>
         <details>
           <summary className="h4 text-monospace">mock data from spec:</summary>
