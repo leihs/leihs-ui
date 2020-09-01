@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useCallback } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 import f from 'lodash'
@@ -24,9 +24,9 @@ const WIP_STYLES = `
 
   .rdrMonth, .rdrMonthIsLoading { width: initial }
 
-  // .rdrDayDisabled:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd) .rdrDayNumber span {
-  //   text-decoration: line-through;
-  // }
+  .rdrDayDisabled:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd) .rdrDayNumber span {
+    text-decoration: line-through;
+  }
 `
 
 // eslint-disable-next-line no-console, no-unused-vars
@@ -40,8 +40,9 @@ export const BookingCalendar = ({
   /** availabilty and visits info from API */
   modelData,
   minDateTotal = _now,
-  minDateLoaded,
-  maxDateTotal = df.parseISO('2999-12-31'),
+  // minDateLoaded,
+  // maxDateTotal = df.parseISO('2999-12-31'),
+  maxDateTotal = df.parseISO('2037-12-31'),
   maxDateLoaded,
   // TODO: select next possible date (maybe only if next week?)
   initialStartDate = df.max([_now, minDateTotal]),
@@ -51,8 +52,9 @@ export const BookingCalendar = ({
   inventoryPools,
   initialInventoryPoolId,
   //
-  onLoadMoreFuture,
-  isLoadingFuture,
+  onShownDateChange,
+  loadingIndicator,
+  //
   onDatesChange = noop,
   onQuantityChange = noop,
   onInventoryPoolChange = noop,
@@ -66,6 +68,7 @@ export const BookingCalendar = ({
   cardStyle
 }) => {
   const today = df.startOfDay(new Date())
+  const onDatesChangeCallback = useCallback(f.throttle(onDatesChange, 250), [])
 
   const [quantity, setQuantity] = useState(initialQuantity)
   const [hasUserInteracted, setHasUserInteracted] = useState(false)
@@ -178,11 +181,15 @@ export const BookingCalendar = ({
           <DateRange
             editableDateInputs={true}
             onChange={item => {
+              // console.log('calendar: onChange', item)
               setSelectedRange(item.selection)
+              // setSelectedRange(Object.assign(selectedRange, item.selection))
               setHasUserInteracted(true)
-              onDatesChange(stateForCallbacks())
+              onDatesChangeCallback(stateForCallbacks())
             }}
-            moveRangeOnFirstSelection={false}
+            moveRangeOnFirstSelection={true}
+            // NOTE: this does not seems to costly, but could be disabled for performance
+            dragSelectionEnabled={true}
             direction="vertical"
             months={numMonths}
             className="m-0"
@@ -194,17 +201,18 @@ export const BookingCalendar = ({
             ranges={[selectedRange]}
             //
             minDate={today}
-            maxDate={df.min([maxDateLoaded, maxDateTotal])}
+            maxDate={maxDateTotal}
+            maxDateLoaded={maxDateLoaded}
             disabledDates={blockedDates}
             disabledStartDates={blockedStartDates}
             disabledEndDates={blockedEndDates}
             //
             weekStartsOn={1}
             //
-            onShownDateChange={date =>
-              handleShownDateChange(date, maxDateLoaded, maxDateTotal, numMonths, onLoadMoreFuture)
-            }
-            isLoadingFuture={isLoadingFuture}
+            onShownDateChange={date => {
+              handleShownDateChange(date, maxDateLoaded, maxDateTotal, numMonths, onShownDateChange)
+            }}
+            loadingIndicator={loadingIndicator}
           />
         </div>
       </div>
@@ -263,12 +271,12 @@ BookingCalendar.propTypes = {
   minDateLoaded: PropTypes.instanceOf(Date).isRequired,
   /** latest date that can be selected or navigated to */
   maxDateTotal: PropTypes.instanceOf(Date),
-  /** Latest date for which data has be loaded. Navigating further will trigger "onLoadMoreFuture" callback */
+  /** Latest date for which data has be loaded. Navigating further will trigger "onShownDateChange" callback */
   maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
   /** callback, when more data needs to be loaded. arguments: `{date}` */
-  onLoadMoreFuture: PropTypes.func.isRequired,
-  /** true if data is currently beeing feched for future dates (e.g. after the current `maxDateLoaded`) */
-  isLoadingFuture: PropTypes.bool.isRequired,
+  onShownDateChange: PropTypes.func.isRequired,
+  /** content overlayed over Month when data has not loaded (when any day is before `maxDateloaded`) */
+  loadingIndicator: PropTypes.node,
   /** date that is initially shown */
   initialStartDate: PropTypes.instanceOf(Date),
   /** availabilty and visits info from API */
@@ -336,8 +344,8 @@ function isValidSelection(
   } else {
     if (df.isBefore(endDate, startDate)) return false // we get this from calendar sometime, need to check or interval throws RangeError!)
     if (f.isEmpty(blockedDates)) return true // dont iterate over interval if nothing is blocked!
-    return !df
-      .eachDayOfInterval({ start: df.startOfDay(startDate), end: df.startOfDay(endDate) })
-      .some(date => getByDay(blockedDates, startDate))
+    // return !df
+    //   .eachDayOfInterval({ start: df.startOfDay(startDate), end: df.startOfDay(endDate) })
+    return !df.eachDayOfInterval({ start: startDate, end: endDate }).some(date => getByDay(blockedDates, startDate))
   }
 }
