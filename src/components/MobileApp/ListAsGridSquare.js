@@ -23,7 +23,7 @@ const ListAsGridSquare = ({ baseClass, list = [] }) => {
               </a>
             </div>
             <div className="mx-0 mt-1 text-base leading-snug">
-              <a className="text-color-content" href="/app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf">
+              <a className="text-color-content" href={href}>
                 <span className="d-block text-truncate font-bold">{caption}</span>
                 <span className="d-block text-truncate">{subCaption}</span>
               </a>
