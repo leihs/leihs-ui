@@ -11,7 +11,7 @@
     "build:ssr-cli": "ncc build ./ssr-cli.js --no-cache --out tmp/ssr && echo 'window = global = this;' >> dist/leihs-ssr.js && cat tmp/ssr/index.js >> dist/leihs-ssr.js && rm tmp/ssr/index.js && echo '#!/usr/bin/env node' > dist/leihs-ssr && cat dist/leihs-ssr.js >> dist/leihs-ssr && chmod +x dist/leihs-ssr",
     "build:theme": "cd bootstrap-theme-leihs && npm run build",
     "build:storybook": "build-storybook -c .storybook -s static -o build",
-    "build:lib": "rm -rf dist && NODE_ENV=production npx webpack --config ./webpack.config.js && rm dist/*.html dist/*.json dist/main.* dist/precache-manifest.* dist/service-worker.js",
+    "build:lib": "rm -rf dist && NODE_ENV=production npx webpack --bail --cache=true --config ./webpack.config.js && rm dist/*.html dist/*.json dist/main.* dist/precache-manifest.* dist/service-worker.js",
     "watch:lib": "rm -rf dist && NODE_ENV=development npx webpack --watch --info-verbosity verbose --config ./webpack.config.js",
     "now-build": "npm run -s build",
     "build-lib": "npm run -s build:lib",
