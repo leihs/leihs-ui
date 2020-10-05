@@ -8,8 +8,9 @@ import PasswordResetSuccessPage from '../pages/PasswordResetSuccessPage'
 import navbarProps from './_sharedNavbarProps.json'
 
 export default {
-  title: 'Features/Passwort Reset'
+  title: 'Features/Passwort Reset',
   // component: Button,
+  parameters: { layout: 'fullscreen' }
 }
 const sharedExampleProps = { navbar: navbarProps }
 

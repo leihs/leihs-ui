@@ -1,15 +1,16 @@
 import { addParameters, addDecorator } from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import './fake-time'
 
 // add global CSS styles
 import '../src/theme/bootstrap-leihs.css'
 
-// addDecorator(withInfo)
+const VIEWPORTS = ['iphone6', 'galaxys9', 'iphonex', 'iphonexsmax', 'ipad']
+const DEFAULT_VIEWPORT = 'iphonex'
 
-addParameters({
+export const parameters = {
   viewport: {
-    // viewports: newViewports, // newViewports would be an ViewportMap. (see below for examples)
-    // defaultViewport: 'mobile2'
+    viewports: Object.fromEntries(VIEWPORTS.map(key => [key, INITIAL_VIEWPORTS[key]])),
+    defaultViewport: DEFAULT_VIEWPORT
   }
-})
+}

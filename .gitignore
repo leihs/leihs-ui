@@ -1,11 +1,13 @@
 /.now
 /.vercel
 /node_modules
+/test/node_modules
 dist/
 build/
 npm-debug.log
 tmp
-# symlonks that are not checked in (to not break vercel)
+# symlinks that are not checked in (to not break vercel)
 /src/static
 /src/theme
+/src/legacy
 /static/theme

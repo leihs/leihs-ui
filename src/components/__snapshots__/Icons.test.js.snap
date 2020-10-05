@@ -12,6 +12,7 @@ Array [
     className="svg-inline--fa fa-caret-up fa-w-10 fa-fw fa-3x "
     data-icon="caret-up"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 320 512"
@@ -34,6 +35,7 @@ Array [
     className="svg-inline--fa fa-caret-down fa-w-10 fa-fw fa-3x "
     data-icon="caret-down"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 320 512"
@@ -56,6 +58,7 @@ Array [
     className="svg-inline--fa fa-caret-left fa-w-6 fa-fw fa-3x "
     data-icon="caret-left"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 192 512"
@@ -78,6 +81,7 @@ Array [
     className="svg-inline--fa fa-caret-right fa-w-6 fa-fw fa-3x "
     data-icon="caret-right"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 192 512"
@@ -100,6 +104,7 @@ Array [
     className="svg-inline--fa fa-check fa-w-16 fa-3x "
     data-icon="check"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -122,6 +127,7 @@ Array [
     className="svg-inline--fa fa-times fa-w-11 fa-3x "
     data-icon="times"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 352 512"
@@ -144,6 +150,7 @@ Array [
     className="svg-inline--fa fa-plus-circle fa-w-16 fa-3x "
     data-icon="plus-circle"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -151,6 +158,29 @@ Array [
   >
     <path
       d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm144 276c0 6.6-5.4 12-12 12h-92v92c0 6.6-5.4 12-12 12h-56c-6.6 0-12-5.4-12-12v-92h-92c-6.6 0-12-5.4-12-12v-56c0-6.6 5.4-12 12-12h92v-92c0-6.6 5.4-12 12-12h56c6.6 0 12 5.4 12 12v92h92c6.6 0 12 5.4 12 12v56z"
+      fill="currentColor"
+      style={Object {}}
+    />
+  </svg>,
+  <hr />,
+  <h4>
+    <pre>
+      &lt;Icon.Edit /&gt;
+    </pre>
+  </h4>,
+  <svg
+    aria-hidden="true"
+    className="svg-inline--fa fa-edit fa-w-18 fa-3x "
+    data-icon="edit"
+    data-prefix="fas"
+    focusable="false"
+    role="img"
+    style={Object {}}
+    viewBox="0 0 576 512"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M402.6 83.2l90.2 90.2c3.8 3.8 3.8 10 0 13.8L274.4 405.6l-92.8 10.3c-12.4 1.4-22.9-9.1-21.5-21.5l10.3-92.8L388.8 83.2c3.8-3.8 10-3.8 13.8 0zm162-22.9l-48.8-48.8c-15.2-15.2-39.9-15.2-55.2 0l-35.4 35.4c-3.8 3.8-3.8 10 0 13.8l90.2 90.2c3.8 3.8 10 3.8 13.8 0l35.4-35.4c15.2-15.3 15.2-40 0-55.2zM384 346.2V448H64V128h229.8c3.2 0 6.2-1.3 8.5-3.5l40-40c7.6-7.6 2.2-20.5-8.5-20.5H48C21.5 64 0 85.5 0 112v352c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V306.2c0-10.7-12.9-16-20.5-8.5l-40 40c-2.2 2.3-3.5 5.3-3.5 8.5z"
       fill="currentColor"
       style={Object {}}
     />
@@ -166,6 +196,7 @@ Array [
     className="svg-inline--fa fa-exchange-alt fa-w-16 fa-3x "
     data-icon="exchange-alt"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -188,6 +219,7 @@ Array [
     className="svg-inline--fa fa-calendar-plus fa-w-14 fa-3x "
     data-icon="calendar-plus"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={
       Object {
@@ -225,6 +257,7 @@ Array [
     className="svg-inline--fa fa-calendar-check fa-w-14 fa-3x "
     data-icon="calendar-check"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={
       Object {
@@ -262,6 +295,7 @@ Array [
     className="svg-inline--fa fa-calendar fa-w-14 fa-3x "
     data-icon="calendar"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={
       Object {
@@ -299,6 +333,7 @@ Array [
     className="svg-inline--fa fa-calendar-alt fa-w-14 fa-3x "
     data-icon="calendar-alt"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 448 512"
@@ -321,13 +356,14 @@ Array [
     className="svg-inline--fa fa-trash-alt fa-w-14 fa-3x "
     data-icon="trash-alt"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 448 512"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M0 84V56c0-13.3 10.7-24 24-24h112l9.4-18.7c4-8.2 12.3-13.3 21.4-13.3h114.3c9.1 0 17.4 5.1 21.5 13.3L312 32h112c13.3 0 24 10.7 24 24v28c0 6.6-5.4 12-12 12H12C5.4 96 0 90.6 0 84zm416 56v324c0 26.5-21.5 48-48 48H80c-26.5 0-48-21.5-48-48V140c0-6.6 5.4-12 12-12h360c6.6 0 12 5.4 12 12zm-272 68c0-8.8-7.2-16-16-16s-16 7.2-16 16v224c0 8.8 7.2 16 16 16s16-7.2 16-16V208zm96 0c0-8.8-7.2-16-16-16s-16 7.2-16 16v224c0 8.8 7.2 16 16 16s16-7.2 16-16V208zm96 0c0-8.8-7.2-16-16-16s-16 7.2-16 16v224c0 8.8 7.2 16 16 16s16-7.2 16-16V208z"
+      d="M32 464a48 48 0 0 0 48 48h288a48 48 0 0 0 48-48V128H32zm272-256a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zm-96 0a16 16 0 0 1 32 0v224a16 16 0 0 1-32 0zM432 32H312l-9.4-18.7A24 24 0 0 0 281.1 0H166.8a23.72 23.72 0 0 0-21.4 13.3L136 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
       fill="currentColor"
       style={Object {}}
     />
@@ -343,6 +379,7 @@ Array [
     className="svg-inline--fa fa-wrench fa-w-16 fa-3x "
     data-icon="wrench"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -365,6 +402,7 @@ Array [
     className="svg-inline--fa fa-dolly fa-w-18 fa-3x "
     data-icon="dolly"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 576 512"
@@ -387,6 +425,7 @@ Array [
     className="svg-inline--fa fa-cogs fa-w-20 fa-3x "
     data-icon="cogs"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 640 512"
@@ -409,6 +448,7 @@ Array [
     className="svg-inline--fa fa-shopping-cart fa-w-18 fa-3x "
     data-icon="shopping-cart"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 576 512"
@@ -431,6 +471,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-3x "
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -453,6 +494,7 @@ Array [
     className="svg-inline--fa fa-drafting-compass fa-w-16 fa-3x "
     data-icon="drafting-compass"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -475,6 +517,7 @@ Array [
     className="svg-inline--fa fa-paperclip fa-w-14 fa-3x "
     data-icon="paperclip"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 448 512"
@@ -497,6 +540,7 @@ Array [
     className="svg-inline--fa fa-check-circle fa-w-16 fa-3x "
     data-icon="check-circle"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -519,6 +563,7 @@ Array [
     className="svg-inline--fa fa-circle fa-w-16 fa-3x "
     data-icon="circle"
     data-prefix="far"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -541,6 +586,7 @@ Array [
     className="svg-inline--fa fa-circle-notch fa-w-16 fa-3x fa-spin"
     data-icon="circle-notch"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -563,6 +609,7 @@ Array [
     className="svg-inline--fa fa-tag fa-w-16 fa-flip-horizontal fa-3x "
     data-icon="tag"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -585,6 +632,7 @@ Array [
     className="svg-inline--fa fa-question fa-w-12 fa-3x "
     data-icon="question"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 384 512"
@@ -607,6 +655,7 @@ Array [
     className="svg-inline--fa fa-shopping-cart fa-w-18 fa-3x "
     data-icon="shopping-cart"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 576 512"
@@ -629,6 +678,7 @@ Array [
     className="svg-inline--fa fa-user-circle fa-w-16 fa-3x "
     data-icon="user-circle"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 496 512"
@@ -651,6 +701,7 @@ Array [
     className="svg-inline--fa fa-sync-alt fa-w-16 fa-3x "
     data-icon="sync-alt"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -673,6 +724,7 @@ Array [
     className="svg-inline--fa fa-file-download fa-w-12 fa-3x "
     data-icon="file-download"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 384 512"
@@ -695,6 +747,7 @@ Array [
     className="svg-inline--fa fa-table fa-w-16 fa-3x "
     data-icon="table"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -717,6 +770,7 @@ Array [
     className="svg-inline--fa fa-search fa-w-16 fa-3x "
     data-icon="search"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -739,13 +793,14 @@ Array [
     className="svg-inline--fa fa-cog fa-w-16 fa-3x "
     data-icon="cog"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M444.788 291.1l42.616 24.599c4.867 2.809 7.126 8.618 5.459 13.985-11.07 35.642-29.97 67.842-54.689 94.586a12.016 12.016 0 0 1-14.832 2.254l-42.584-24.595a191.577 191.577 0 0 1-60.759 35.13v49.182a12.01 12.01 0 0 1-9.377 11.718c-34.956 7.85-72.499 8.256-109.219.007-5.49-1.233-9.403-6.096-9.403-11.723v-49.184a191.555 191.555 0 0 1-60.759-35.13l-42.584 24.595a12.016 12.016 0 0 1-14.832-2.254c-24.718-26.744-43.619-58.944-54.689-94.586-1.667-5.366.592-11.175 5.459-13.985L67.212 291.1a193.48 193.48 0 0 1 0-70.199l-42.616-24.599c-4.867-2.809-7.126-8.618-5.459-13.985 11.07-35.642 29.97-67.842 54.689-94.586a12.016 12.016 0 0 1 14.832-2.254l42.584 24.595a191.577 191.577 0 0 1 60.759-35.13V25.759a12.01 12.01 0 0 1 9.377-11.718c34.956-7.85 72.499-8.256 109.219-.007 5.49 1.233 9.403 6.096 9.403 11.723v49.184a191.555 191.555 0 0 1 60.759 35.13l42.584-24.595a12.016 12.016 0 0 1 14.832 2.254c24.718 26.744 43.619 58.944 54.689 94.586 1.667 5.366-.592 11.175-5.459 13.985L444.788 220.9a193.485 193.485 0 0 1 0 70.2zM336 256c0-44.112-35.888-80-80-80s-80 35.888-80 80 35.888 80 80 80 80-35.888 80-80z"
+      d="M487.4 315.7l-42.6-24.6c4.3-23.2 4.3-47 0-70.2l42.6-24.6c4.9-2.8 7.1-8.6 5.5-14-11.1-35.6-30-67.8-54.7-94.6-3.8-4.1-10-5.1-14.8-2.3L380.8 110c-17.9-15.4-38.5-27.3-60.8-35.1V25.8c0-5.6-3.9-10.5-9.4-11.7-36.7-8.2-74.3-7.8-109.2 0-5.5 1.2-9.4 6.1-9.4 11.7V75c-22.2 7.9-42.8 19.8-60.8 35.1L88.7 85.5c-4.9-2.8-11-1.9-14.8 2.3-24.7 26.7-43.6 58.9-54.7 94.6-1.7 5.4.6 11.2 5.5 14L67.3 221c-4.3 23.2-4.3 47 0 70.2l-42.6 24.6c-4.9 2.8-7.1 8.6-5.5 14 11.1 35.6 30 67.8 54.7 94.6 3.8 4.1 10 5.1 14.8 2.3l42.6-24.6c17.9 15.4 38.5 27.3 60.8 35.1v49.2c0 5.6 3.9 10.5 9.4 11.7 36.7 8.2 74.3 7.8 109.2 0 5.5-1.2 9.4-6.1 9.4-11.7v-49.2c22.2-7.9 42.8-19.8 60.8-35.1l42.6 24.6c4.9 2.8 11 1.9 14.8-2.3 24.7-26.7 43.6-58.9 54.7-94.6 1.5-5.5-.7-11.3-5.6-14.1zM256 336c-44.1 0-80-35.9-80-80s35.9-80 80-80 80 35.9 80 80-35.9 80-80 80z"
       fill="currentColor"
       style={Object {}}
     />
@@ -761,6 +816,7 @@ Array [
     className="svg-inline--fa fa-bars fa-w-14 fa-3x "
     data-icon="bars"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 448 512"
@@ -783,6 +839,7 @@ Array [
     className="svg-inline--fa fa-code fa-w-20 fa-3x "
     data-icon="code"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 640 512"
@@ -805,13 +862,14 @@ Array [
     className="svg-inline--fa fa-tasks fa-w-16 fa-3x "
     data-icon="tasks"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M208 132h288c8.8 0 16-7.2 16-16V76c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h288c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zm0 160h288c8.8 0 16-7.2 16-16v-40c0-8.8-7.2-16-16-16H208c-8.8 0-16 7.2-16 16v40c0 8.8 7.2 16 16 16zM64 368c-26.5 0-48.6 21.5-48.6 48s22.1 48 48.6 48 48-21.5 48-48-21.5-48-48-48zm92.5-299l-72.2 72.2-15.6 15.6c-4.7 4.7-12.9 4.7-17.6 0L3.5 109.4c-4.7-4.7-4.7-12.3 0-17l15.7-15.7c4.7-4.7 12.3-4.7 17 0l22.7 22.1 63.7-63.3c4.7-4.7 12.3-4.7 17 0l17 16.5c4.6 4.7 4.6 12.3-.1 17zm0 159.6l-72.2 72.2-15.7 15.7c-4.7 4.7-12.9 4.7-17.6 0L3.5 269c-4.7-4.7-4.7-12.3 0-17l15.7-15.7c4.7-4.7 12.3-4.7 17 0l22.7 22.1 63.7-63.7c4.7-4.7 12.3-4.7 17 0l17 17c4.6 4.6 4.6 12.2-.1 16.9z"
+      d="M139.61 35.5a12 12 0 0 0-17 0L58.93 98.81l-22.7-22.12a12 12 0 0 0-17 0L3.53 92.41a12 12 0 0 0 0 17l47.59 47.4a12.78 12.78 0 0 0 17.61 0l15.59-15.62L156.52 69a12.09 12.09 0 0 0 .09-17zm0 159.19a12 12 0 0 0-17 0l-63.68 63.72-22.7-22.1a12 12 0 0 0-17 0L3.53 252a12 12 0 0 0 0 17L51 316.5a12.77 12.77 0 0 0 17.6 0l15.7-15.69 72.2-72.22a12 12 0 0 0 .09-16.9zM64 368c-26.49 0-48.59 21.5-48.59 48S37.53 464 64 464a48 48 0 0 0 0-96zm432 16H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H208a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h288a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
       fill="currentColor"
       style={Object {}}
     />
@@ -827,6 +885,7 @@ Array [
     className="svg-inline--fa fa-envelope fa-w-16 fa-3x "
     data-icon="envelope"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -849,6 +908,7 @@ Array [
     className="svg-inline--fa fa-users fa-w-20 fa-3x "
     data-icon="users"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 640 512"
@@ -871,6 +931,7 @@ Array [
     className="svg-inline--fa fa-sitemap fa-w-20 fa-3x "
     data-icon="sitemap"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 640 512"
@@ -893,13 +954,14 @@ Array [
     className="svg-inline--fa fa-outdent fa-w-14 fa-3x "
     data-icon="outdent"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 448 512"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M0 84V44c0-8.837 7.163-16 16-16h416c8.837 0 16 7.163 16 16v40c0 8.837-7.163 16-16 16H16c-8.837 0-16-7.163-16-16zm208 144h224c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H208c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zM16 484h416c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H16c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm192-128h224c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H208c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zM4.687 267.313l96 95.984C110.734 373.348 128 366.224 128 351.984V160.008c0-14.329-17.325-21.304-27.313-11.313l-96 95.992c-6.249 6.248-6.249 16.378 0 22.626z"
+      d="M100.69 363.29c10 10 27.31 2.93 27.31-11.31V160c0-14.32-17.33-21.31-27.31-11.31l-96 96a16 16 0 0 0 0 22.62zM432 416H16a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm3.17-128H204.83A12.82 12.82 0 0 0 192 300.83v38.34A12.82 12.82 0 0 0 204.83 352h230.34A12.82 12.82 0 0 0 448 339.17v-38.34A12.82 12.82 0 0 0 435.17 288zm0-128H204.83A12.82 12.82 0 0 0 192 172.83v38.34A12.82 12.82 0 0 0 204.83 224h230.34A12.82 12.82 0 0 0 448 211.17v-38.34A12.82 12.82 0 0 0 435.17 160zM432 32H16A16 16 0 0 0 0 48v32a16 16 0 0 0 16 16h416a16 16 0 0 0 16-16V48a16 16 0 0 0-16-16z"
       fill="currentColor"
       style={Object {}}
     />
@@ -915,6 +977,7 @@ Array [
     className="svg-inline--fa fa-globe fa-w-16 fa-3x "
     data-icon="globe"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 496 512"
@@ -937,6 +1000,7 @@ Array [
     className="svg-inline--fa fa-stream fa-w-16 fa-3x "
     data-icon="stream"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -959,13 +1023,14 @@ Array [
     className="svg-inline--fa fa-list-ul fa-w-16 fa-3x "
     data-icon="list-ul"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
     xmlns="http://www.w3.org/2000/svg"
   >
     <path
-      d="M96 96c0 26.51-21.49 48-48 48S0 122.51 0 96s21.49-48 48-48 48 21.49 48 48zM48 208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm0 160c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm96-236h352c8.837 0 16-7.163 16-16V76c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16zm0 160h352c8.837 0 16-7.163 16-16v-40c0-8.837-7.163-16-16-16H144c-8.837 0-16 7.163-16 16v40c0 8.837 7.163 16 16 16z"
+      d="M48 48a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm0 160a48 48 0 1 0 48 48 48 48 0 0 0-48-48zm448 16H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16zm0-320H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16zm0 160H176a16 16 0 0 0-16 16v32a16 16 0 0 0 16 16h320a16 16 0 0 0 16-16v-32a16 16 0 0 0-16-16z"
       fill="currentColor"
       style={Object {}}
     />
@@ -981,6 +1046,7 @@ Array [
     className="svg-inline--fa fa-cube fa-w-16 fa-3x "
     data-icon="cube"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 512 512"
@@ -1003,6 +1069,7 @@ Array [
     className="svg-inline--fa fa-exclamation-triangle fa-w-18 fa-3x "
     data-icon="exclamation-triangle"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 576 512"
@@ -1028,6 +1095,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x "
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1046,6 +1114,7 @@ Array [
     color="dark"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1064,6 +1133,7 @@ Array [
     color="secondary"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1082,6 +1152,7 @@ Array [
     color="light"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1100,6 +1171,7 @@ Array [
     color="primary"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1118,6 +1190,7 @@ Array [
     color="success"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1136,6 +1209,7 @@ Array [
     color="warning"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1154,6 +1228,7 @@ Array [
     color="danger"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1172,6 +1247,7 @@ Array [
     color="info"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1192,6 +1268,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x mr-1"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1208,6 +1285,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x mr-1"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1224,6 +1302,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x mr-2"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1240,6 +1319,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x mr-3"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1256,6 +1336,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x mr-4"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1272,6 +1353,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x mr-5"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"
@@ -1288,6 +1370,7 @@ Array [
     className="svg-inline--fa fa-chart-pie fa-w-17 fa-2x mr-6"
     data-icon="chart-pie"
     data-prefix="fas"
+    focusable="false"
     role="img"
     style={Object {}}
     viewBox="0 0 544 512"

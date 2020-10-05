@@ -189,4 +189,5 @@ export const colors = () => {
     </LeihsPage>
   )
 }
-colors.story = { name: '[broken] Colors' }
+
+colors.storyName = '[broken] Colors'

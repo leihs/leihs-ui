@@ -6,7 +6,8 @@ import SignInPage from '../pages/SignInPage'
 import navbarProps from './_sharedNavbarProps.json'
 
 export default {
-  title: 'Features/Login Page'
+  title: 'Features/Login Page',
+  parameters: { layout: 'fullscreen' }
 }
 
 export const NoUser = () => {

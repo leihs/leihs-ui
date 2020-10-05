@@ -1,4 +1,4 @@
-import { withInfo } from '@storybook/addon-info'
+// import { withInfo } from '@storybook/addon-info'
 import { action } from '@storybook/addon-actions'
 
 import React, { useState } from 'react'
@@ -14,9 +14,9 @@ window.f = f
 export default {
   title: 'MobileApp/Components/Calendar',
   component: BookingCalendar,
-  decorators: [withInfo],
+  // decorators: [withInfo],
   parameters: {
-    info: { inline: true, header: false, source: false }
+    // info: { inline: true, header: false, source: false }
   }
 }
 
@@ -52,10 +52,8 @@ export const WIP_just_a_datepicker = () => {
   )
 }
 
-WIP_just_a_datepicker.story = {
-  parameters: {
-    info: { inline: true, text: 'testing…' }
-  }
+WIP_just_a_datepicker.parameters = {
+  // info: { inline: true, text: 'testing…' }
 }
 
 export const BookingCalendar_with_mock_data = () => {
@@ -122,7 +120,7 @@ BookingCalendar_with_mock_data.story = {
   component: BookingCalendar,
   parameters: {
     info: {
-      excludedPropTypes: ['_now']
+      // excludedPropTypes: ['_now']
     }
   }
 }
