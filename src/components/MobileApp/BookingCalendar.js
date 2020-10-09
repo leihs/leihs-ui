@@ -165,9 +165,9 @@ export const BookingCalendar = ({
                   onInventoryPoolChange(stateForCallbacks())
                 }}
               >
-                {f.map(inventoryPools, ({ id, name }) => (
+                {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
                   <option key={id} value={id}>
-                    {name} (max. XXX)
+                    {name} (max. {totalBorrowableQuantity})
                   </option>
                 ))}
               </select>
