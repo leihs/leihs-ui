@@ -63,6 +63,10 @@ export default class Navbar extends React.Component {
     const isLoggedIn = f.get(user, 'id')
     const { homeUrl } = defaults
     const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
+    const csrfTokenProp = {
+      value: csrfToken,
+      name: f.get(props, 'csrfTokenName') || f.get(config, 'csrfTokenName') || 'csrf-token'
+    }
     const t = T(config.locales)
 
     const bgColor = props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
@@ -108,10 +112,10 @@ export default class Navbar extends React.Component {
             {f.isEmpty(user) ? (
               !!hideSignInField || <NavbarLogin locales={config.locales} returnTo={returnTo} />
             ) : (
-              <UserMenu t={t} user={user} csrfToken={csrfToken} />
+              <UserMenu t={t} user={user} csrfToken={csrfTokenProp} />
             )}
 
-            <LocalesDropdown locales={config.locales} isLoggedIn={isLoggedIn} csrfToken={csrfToken} />
+            <LocalesDropdown locales={config.locales} isLoggedIn={isLoggedIn} csrfToken={csrfTokenProp} />
           </Nav>
         </Collapse>
       </BsNavbar>
@@ -139,7 +143,7 @@ const UserMenu = ({ t, user, csrfToken }) => (
       <DropdownItem divider />
       <form action="/sign-out" method="POST">
         <DropdownItem tag="button" type="submit">
-          <input type="hidden" name="csrf-token" value={csrfToken} />
+          <input type="hidden" {...csrfToken} />
           {t('navbar_user_logout')}
         </DropdownItem>
       </form>
@@ -234,7 +238,7 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
   const currentLang = f.find(locales, l => l.isSelected) || f.find(locales, l => l.isDefault)
   return (
     <form method="POST" action={isLoggedIn ? '/my/user/me' : '/my/language'} className="ui-lang-selection">
-      <input type="hidden" name="csrf-token" value={csrfToken} />
+      <input type="hidden" {...csrfToken} />
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>
           <Icon.Language />
