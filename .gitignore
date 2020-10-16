@@ -5,3 +5,7 @@ dist/
 build/
 npm-debug.log
 tmp
+# symlonks that are not checked in (to not break vercel)
+/src/static
+/src/theme
+/static/theme
