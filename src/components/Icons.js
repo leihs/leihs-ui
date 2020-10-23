@@ -49,7 +49,8 @@ import {
   faExclamationTriangle,
   faTable,
   faFileDownload,
-  faDraftingCompass
+  faDraftingCompass,
+  faEdit
 } from '@fortawesome/free-solid-svg-icons'
 import { faCircle as faCircleEmpty } from '@fortawesome/free-regular-svg-icons'
 
@@ -79,6 +80,9 @@ const ICONS = {
   },
   PlusCircle: {
     src: faPlusCircle
+  },
+  Edit: {
+    src: faEdit
   },
   Exchange: {
     src: faExchangeAlt

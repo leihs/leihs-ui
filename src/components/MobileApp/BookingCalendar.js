@@ -93,12 +93,11 @@ export const BookingCalendar = ({
 
   const isValidForm = isValidSelection(selectedRange, allBlockedDates, quantity)
 
-  const errorMessage = hasUserInteracted &&
-    !isValidForm && (
-      <div className="alert alert-danger p-2 mb-3 mt-1 text-center" role="alert">
-        Something is wrong!
-      </div>
-    )
+  const errorMessage = hasUserInteracted && !isValidForm && (
+    <div className="alert alert-danger p-2 mb-3 mt-1 text-center" role="alert">
+      Something is wrong!
+    </div>
+  )
 
   const stateForCallbacks = () => ({
     startDate: selectedRange.startDate,

@@ -4,7 +4,10 @@ import ModelList from './ModelList'
 
 export default {
   title: 'MobileApp/Components/ModelList',
-  component: ModelList
+  component: ModelList,
+  parameters: {
+    // layout: 'fullscreen'
+  }
 }
 
 const exampleProps1 = {
@@ -55,8 +58,4 @@ const exampleProps1 = {
   ]
 }
 
-export const Example1 = () => (
-  <div className="mx-1 mt-2">
-    <ModelList {...exampleProps1} />
-  </div>
-)
+export const Example1 = () => <ModelList {...exampleProps1} />

@@ -1,27 +1,17 @@
 import React from 'react'
 
+import { ImageThumbnail } from './ImageThumbnail'
+
 const ListAsGridSquare = ({ baseClass, list = [] }) => {
   return (
-    <div className={`${baseClass} d-flex flex-wrap`}>
+    <div className={`${baseClass} row no-gutters d-flex flex-wrap mx-n2`}>
       {list.map(({ id, href, imgSrc, caption, subCaption, isDimmed }) => (
-        <div key={id} className="w-50 min-h-16" style={{ opacity: isDimmed ? 0.35 : 1 }}>
+        <div key={id} className="col-6 col-sm-3 min-h-16" style={{ opacity: isDimmed ? 0.35 : 1 }}>
           <div
-            className={`${baseClass}-item max-w-sm rounded-lg overflow-hidden bg-white px-2 mb-3`}
+            className={`${baseClass}-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3`}
             style={{ opacity: 1 }}
           >
-            <div className="square-container position-relative rounded-lg overflow-hidden border border-gray-200">
-              <a href={href}>
-                {imgSrc ? (
-                  <img
-                    src={imgSrc}
-                    alt=""
-                    className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-                  />
-                ) : (
-                  <ImgPlaceholder />
-                )}
-              </a>
-            </div>
+            <ImageThumbnail href={href} imgSrc={imgSrc} />
             <div className="mx-0 mt-1 text-base leading-snug">
               <a className="text-color-content" href={href}>
                 <span className="d-block text-truncate font-bold">{caption}</span>
@@ -36,7 +26,3 @@ const ListAsGridSquare = ({ baseClass, list = [] }) => {
 }
 
 export default ListAsGridSquare
-
-const ImgPlaceholder = () => (
-  <div className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted" />
-)

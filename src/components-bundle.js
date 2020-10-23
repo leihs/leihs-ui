@@ -1,3 +1,4 @@
+import * as AppLayout from './components/MobileApp/AppLayout'
 import Bold from './components/Bold'
 import DebugProps from './components/DebugProps'
 import Navbar from './components/Navbar'
@@ -15,6 +16,7 @@ export const Components = {
   DebugProps,
   Navbar,
 
+  AppLayout,
   CategoryList: require('./components/MobileApp/CategoryList').default,
   ModelList: require('./components/MobileApp/ModelList').default,
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,

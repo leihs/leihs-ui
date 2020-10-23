@@ -272,5 +272,10 @@ function decorateUser(u) {
   if (u.firstname && u.lastname) {
     return `${f.first(u.firstname)}. ${u.lastname}`
   }
-  return f.first(f.filter(['lastname', 'login', 'email', 'id'].map(key => f.get(u, key)), i => !f.isEmpty(i)))
+  return f.first(
+    f.filter(
+      ['lastname', 'login', 'email', 'id'].map(key => f.get(u, key)),
+      i => !f.isEmpty(i)
+    )
+  )
 }

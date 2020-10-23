@@ -4,10 +4,11 @@ import CategoryList from './CategoryList'
 
 export default {
   title: 'MobileApp/Components/CategoryList',
-  component: CategoryList
+  component: CategoryList,
+  excludeStories: /exampleProps/
 }
 
-const exampleProps1 = {
+export const exampleProps1 = {
   list: [
     {
       id: '78920f6d-57c1-5231-b0c4-f58dcddc64cf',
@@ -35,9 +36,6 @@ const exampleProps1 = {
     }
   ]
 }
+exampleProps1.story = false
 
-export const Example1 = () => (
-  <div className="mx-1 mt-2">
-    <CategoryList {...exampleProps1} />
-  </div>
-)
+export const Example1 = () => <CategoryList {...exampleProps1} />
