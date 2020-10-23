@@ -1,0 +1,9 @@
+{
+  "?":"this is not part of the main package, because its only needed for tests and including it in every app automatically would be wasteful.",
+  "name": "@leihs/ui-tests",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@storybook/addon-storyshots-puppeteer": "^6.0.26",
+    "puppeteer": "^5.3.1"
+  }
+}

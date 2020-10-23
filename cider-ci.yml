@@ -1,6 +1,6 @@
 jobs:
   build:
-    name: 'Build'
+    name: 'Build & Test'
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
 
@@ -17,7 +17,21 @@ jobs:
       scripts:
         build:
           timeout: 10 minutes
-          body: 'npm ci && npm run build'
+          body: |
+            npm ci
+            npm run build
+        prepare_test:
+          start_when:
+            built: { script_key: build, states: [ passed ] }
+          timeout: 10 minutes
+          body: |
+            npm add ./test/
+        test:
+          start_when:
+            prepared: { script_key: prepare_test, states: [ passed ] }
+          timeout: 10 minutes
+          body: |
+            npm run test
 
   lint:
     name: 'Lint'
@@ -30,13 +44,3 @@ jobs:
           timeout: 10 minutes
           body: 'npm ci && npm run ci:lint'
 
-  specs:
-    name: 'Tests'
-    run_when:
-      any branch is pushed: { type: branch, include_match: ^.*$ }
-    task_defaults: *TASK_DEFAULTS
-    task:
-      scripts:
-        jest:
-          timeout: 10 minutes
-          body: 'npm ci && npm test'
