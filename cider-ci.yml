@@ -1,46 +1,35 @@
 jobs:
-  build:
-    name: 'Build & Test'
-    run_when:
-      any branch is pushed: { type: branch, include_match: ^.*$ }
-
-    task_defaults: &TASK_DEFAULTS
-      environment_variables:
-        CI: 'true'
-      git_options:
-        submodules:
-          include_match: ^.*$
-      traits:
-        g2016: true
-
-    task:
-      scripts:
-        build:
-          timeout: 10 minutes
-          body: |
-            npm ci
-            npm run build
-        prepare_test:
-          start_when:
-            built: { script_key: build, states: [ passed ] }
-          timeout: 10 minutes
-          body: |
-            npm add ./test/
-        test:
-          start_when:
-            prepared: { script_key: prepare_test, states: [ passed ] }
-          timeout: 10 minutes
-          body: |
-            npm run test
 
   lint:
-    name: 'Lint'
+    name: Lint
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
-    task_defaults: *TASK_DEFAULTS
-    task:
-      scripts:
-        lint:
-          timeout: 10 minutes
-          body: 'npm ci && npm run ci:lint'
+    tasks:
+      lint:
+        include: cider-ci/lint_task-component.yml
 
+  build:
+    name: Build
+    depends_on: &LINT_DEP
+      lint passed:
+        type: job
+        job_key: lint
+        states: [passed]
+    run_when: *LINT_DEP
+    include: cider-ci/task_defaults.yml
+    tasks:
+      build:
+        include: cider-ci/build_task-component.yml
+
+  test:
+    name: Test
+    depends_on: &BUILD_DEP
+      build passed:
+        type: job
+        job_key: build
+        states: [passed]
+    run_when: *BUILD_DEP
+    include: cider-ci/task_defaults.yml
+    tasks:
+      build-and-test:
+        include: cider-ci/build-and-test_task-component.yml

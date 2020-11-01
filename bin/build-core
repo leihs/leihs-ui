@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -euxo
+
+cd "$(dirname ${BASH_SOURCE})/.."
+
+./bin/deps-install
+
+# those could run in parallel
+npm run build:theme
+npm run build:ssr
+
+cd -
+
+# vi: ft=sh

@@ -1,0 +1,5 @@
+task_defaults:
+  environment_variables:
+    RUBY: '{{RUBY_ENGINE}}-{{RUBY_VERSION}}'
+    RUBY_ENGINE: ruby
+    RUBY_VERSION: 2.7.2

@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+set -euo
+
+UI_DIR="$(dirname ${BASH_SOURCE})/.."
+cd "${UI_DIR}"
+echo "PWD: $PWD"
+
+ARTEFACT_PATHS="./dist ./bootstrap-theme-leihs/build"
+rm -rf ${ARTEFACT_PATHS}
+
+cd -
+
+# vi: ft=sh

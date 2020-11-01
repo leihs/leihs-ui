@@ -1,0 +1,12 @@
+include: cider-ci/install-ruby_task-component.yml
+
+traits:
+  npm: true
+
+scripts:
+  build-ui:
+    timeout: 10 minutes
+    body:  ./bin/build
+    exclusive_executor_resource: leihs-ui-build
+    start_when:
+      install-ruby-passed: {script_key: install-ruby}

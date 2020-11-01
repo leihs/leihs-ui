@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -euxo
+
+cd "$(dirname ${BASH_SOURCE})/.."
+
+test -d node_modules && npm i || { npm ci || npm i ;}
+
+cd -
+
+# vi: ft=sh

@@ -1,0 +1,84 @@
+#!/usr/bin/env bash
+
+set -euo
+
+
+### VARIABLES and PWD #########################################################
+
+UI_DIR="$(dirname ${BASH_SOURCE})/.."
+cd "${UI_DIR}"
+echo "PWD: $PWD"
+
+ARTEFACT_NAME="leihs-ui"
+ARTEFACT_PATHS="./dist ./bootstrap-theme-leihs/build"
+DIGEST="$(git log -n 1 HEAD --pretty=%T)"
+TMPDIR="${TMPDIR:-/tmp/}"
+LOCAL_CACHED_ARTEFACT_PATH="${TMPDIR}${ARTEFACT_NAME}_${DIGEST}.tgz"
+S3_CACHED_ARTEFACT_NAME="${ARTEFACT_NAME}_${DIGEST}.tgz"
+
+BUILD_CACHE_DISABLED="${BUILD_CACHE_DISABLED:-NO}"
+if [ $BUILD_CACHE_DISABLED == "YES" ] ||  [ $BUILD_CACHE_DISABLED == "NO" ]; then
+  echo "BUILD_CACHE_DISABLED=$BUILD_CACHE_DISABLED"
+else
+  echo 'BUILD_CACHE_DISABLED must be unset, or "YES", or "NO"'
+  exit 1
+fi
+
+
+
+### functions #################################################################
+
+function build {
+  ./bin/build-core || { echo "build error!"; exit 1; }
+}
+
+function extract {
+  tar -xvz -f "$LOCAL_CACHED_ARTEFACT_PATH"
+}
+
+
+### MAIN ######################################################################
+
+if [ $BUILD_CACHE_DISABLED == "YES" ]; then
+
+  echo "INFO: BUILD_CACHE_DISABLED is YES, building and nothing else"
+  build
+
+else
+
+  source bin/require-clean-working-tree
+  require-clean-working-tree
+
+  echo "LOCAL_CACHED_ARTEFACT_PATH: $LOCAL_CACHED_ARTEFACT_PATH"
+
+  if [ -e $LOCAL_CACHED_ARTEFACT_PATH ]; then
+
+    echo "INFO: locally cached artefact found, extracting"
+    extract
+
+  else
+
+    # RUBY on CI for ./bin/s3-cache-helper
+    RUBY="${RUBY:-EMPTY}"
+    if [ "${RUBY}" != 'EMPTY' ]; then
+      export PATH=~/.rubies/$RUBY/bin:$PATH
+    fi
+
+    echo "S3_CACHED_ARTEFACT_NAME: $S3_CACHED_ARTEFACT_NAME"
+    echo "INFO: trying to download from S3 cache"
+    ./bin/s3-cache-helper download -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
+    if [ -e $LOCAL_CACHED_ARTEFACT_PATH ]; then
+      echo "INFO: artefact found, extracting "
+      extract
+    else
+      echo "INFO: no cached artefact found: building, packing, and caching ..."
+      build
+      tar -cvz -f "$LOCAL_CACHED_ARTEFACT_PATH" $ARTEFACT_PATHS
+      ./bin/s3-cache-helper upload -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
+    fi
+  fi
+fi
+
+cd -
+
+# vi: ft=sh

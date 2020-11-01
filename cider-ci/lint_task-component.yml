@@ -1,0 +1,8 @@
+environment_variables:
+  CI: 'true'
+traits:
+  npm: true
+scripts:
+  lint:
+    timeout: 10 minutes
+    body: 'npm ci && npm run ci:lint'
