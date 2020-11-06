@@ -570,11 +570,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -584,11 +584,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -596,11 +596,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -608,11 +608,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -620,11 +620,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -1140,11 +1140,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -1154,11 +1154,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -1166,11 +1166,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -1178,11 +1178,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -1190,11 +1190,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -1710,11 +1710,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -1724,11 +1724,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -1736,11 +1736,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -1748,11 +1748,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -1760,11 +1760,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -2280,11 +2280,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -2294,11 +2294,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -2306,11 +2306,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -2318,11 +2318,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -2330,11 +2330,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -2850,11 +2850,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -2864,11 +2864,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -2876,11 +2876,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -2888,11 +2888,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -2900,11 +2900,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -3420,11 +3420,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -3434,11 +3434,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -3446,11 +3446,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -3458,11 +3458,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -3470,11 +3470,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -3990,11 +3990,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -4004,11 +4004,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -4016,11 +4016,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -4028,11 +4028,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -4040,11 +4040,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -4560,11 +4560,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -4574,11 +4574,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -4586,11 +4586,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -4598,11 +4598,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -4610,11 +4610,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -5130,11 +5130,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -5144,11 +5144,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -5156,11 +5156,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -5168,11 +5168,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -5180,11 +5180,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -5700,11 +5700,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -5714,11 +5714,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -5726,11 +5726,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -5738,11 +5738,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -5750,11 +5750,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -6270,11 +6270,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -6284,11 +6284,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -6296,11 +6296,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -6308,11 +6308,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -6320,11 +6320,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -6840,11 +6840,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -6854,11 +6854,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -6866,11 +6866,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -6878,11 +6878,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -6890,11 +6890,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -7410,11 +7410,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -7424,11 +7424,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -7436,11 +7436,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -7448,11 +7448,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -7460,11 +7460,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -7980,11 +7980,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -7994,11 +7994,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -8006,11 +8006,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -8018,11 +8018,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -8030,11 +8030,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -8550,11 +8550,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -8564,11 +8564,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -8576,11 +8576,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -8588,11 +8588,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -8600,11 +8600,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -9120,11 +9120,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -9134,11 +9134,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -9146,11 +9146,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -9158,11 +9158,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -9170,11 +9170,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -9669,11 +9669,11 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -9683,11 +9683,11 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -9695,11 +9695,11 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -9707,11 +9707,11 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -9719,11 +9719,11 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -9800,33 +9800,28 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
   },
   "locales": [
     {
-      "id": "b40234c5-0757-5148-b54d-366ef33aafa1",
       "name": "Deutsch",
-      "locale_name": "de-CH",
+      "locale": "de-CH",
       "isDefault": true
     },
     {
-      "id": "9a12cfd0-087d-56c4-ae4c-c6004f6adbf4",
       "name": "English",
-      "locale_name": "en-GB",
+      "locale": "en-GB",
       "isDefault": false
     },
     {
-      "id": "b3fbc650-ace6-5eee-bf09-53a450c6eb99",
       "name": "Castellano",
-      "locale_name": "es",
+      "locale": "es",
       "isDefault": false
     },
     {
-      "id": "a261ab3b-a93a-48f0-abda-b82701cbf2fd",
       "name": "עברית‬",
-      "locale_name": "he",
+      "locale": "he",
       "isDefault": false
     },
     {
-      "id": "ca962bd5-f5f0-5555-a5fa-41ef3451f448",
       "name": "Züritüütsch",
-      "locale_name": "gsw-CH",
+      "locale": "gsw-CH",
       "isDefault": false
     }
   ],
@@ -10356,11 +10351,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="text-dark ui-selected-lang disabled dropdown-item"
                     data-trigger={true}
                     disabled={true}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="-1"
                     type="submit"
-                    value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                    value="de-CH"
                   >
                     <b>
                       Deutsch
@@ -10370,11 +10365,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                    value="en-GB"
                   >
                     English
                   </button>
@@ -10382,11 +10377,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                    value="es"
                   >
                     Castellano
                   </button>
@@ -10394,11 +10389,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                    value="he"
                   >
                     עברית‬
                   </button>
@@ -10406,11 +10401,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                    value="gsw-CH"
                   >
                     Züritüütsch
                   </button>
@@ -10786,11 +10781,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="text-dark ui-selected-lang disabled dropdown-item"
                     data-trigger={true}
                     disabled={true}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="-1"
                     type="submit"
-                    value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                    value="de-CH"
                   >
                     <b>
                       Deutsch
@@ -10800,11 +10795,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                    value="en-GB"
                   >
                     English
                   </button>
@@ -10812,11 +10807,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                    value="es"
                   >
                     Castellano
                   </button>
@@ -10824,11 +10819,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                    value="he"
                   >
                     עברית‬
                   </button>
@@ -10836,11 +10831,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                    value="gsw-CH"
                   >
                     Züritüütsch
                   </button>
@@ -10991,11 +10986,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="text-dark ui-selected-lang disabled dropdown-item"
                     data-trigger={true}
                     disabled={true}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="-1"
                     type="submit"
-                    value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                    value="de-CH"
                   >
                     <b>
                       Deutsch
@@ -11005,11 +11000,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                    value="en-GB"
                   >
                     English
                   </button>
@@ -11017,11 +11012,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                    value="es"
                   >
                     Castellano
                   </button>
@@ -11029,11 +11024,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                    value="he"
                   >
                     עברית‬
                   </button>
@@ -11041,11 +11036,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                     className="dropdown-item"
                     data-trigger={true}
                     disabled={false}
-                    name="language_id"
+                    name="locale"
                     onClick={[Function]}
                     tabIndex="0"
                     type="submit"
-                    value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                    value="gsw-CH"
                   >
                     Züritüütsch
                   </button>
@@ -11198,11 +11193,11 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -11212,11 +11207,11 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -11224,11 +11219,11 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -11236,11 +11231,11 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -11248,11 +11243,11 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -11432,11 +11427,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -11446,11 +11441,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -11458,11 +11453,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -11470,11 +11465,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -11482,11 +11477,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -11688,11 +11683,11 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -11702,11 +11697,11 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -11714,11 +11709,11 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -11726,11 +11721,11 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -11738,11 +11733,11 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -11925,11 +11920,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -11939,11 +11934,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -11951,11 +11946,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -11963,11 +11958,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -11975,11 +11970,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -12182,11 +12177,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -12196,11 +12191,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -12208,11 +12203,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -12220,11 +12215,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -12232,11 +12227,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -12510,11 +12505,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -12524,11 +12519,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -12536,11 +12531,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -12548,11 +12543,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -12560,11 +12555,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -12778,11 +12773,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -12792,11 +12787,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -12804,11 +12799,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -12816,11 +12811,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -12828,11 +12823,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -13034,11 +13029,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -13048,11 +13043,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -13060,11 +13055,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -13072,11 +13067,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -13084,11 +13079,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -13256,11 +13251,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -13270,11 +13265,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -13282,11 +13277,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -13294,11 +13289,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -13306,11 +13301,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -13497,11 +13492,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -13511,11 +13506,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -13523,11 +13518,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -13535,11 +13530,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -13547,11 +13542,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -13738,11 +13733,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -13752,11 +13747,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -13764,11 +13759,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -13776,11 +13771,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -13788,11 +13783,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -13960,11 +13955,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -13974,11 +13969,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -13986,11 +13981,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -13998,11 +13993,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -14010,11 +14005,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -14173,11 +14168,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -14187,11 +14182,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -14199,11 +14194,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -14211,11 +14206,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -14223,11 +14218,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -14432,11 +14427,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -14446,11 +14441,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -14458,11 +14453,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -14470,11 +14465,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -14482,11 +14477,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -14634,11 +14629,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -14648,11 +14643,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -14660,11 +14655,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -14672,11 +14667,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -14684,11 +14679,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>
@@ -14856,11 +14851,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="text-dark ui-selected-lang disabled dropdown-item"
                 data-trigger={true}
                 disabled={true}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="-1"
                 type="submit"
-                value="b40234c5-0757-5148-b54d-366ef33aafa1"
+                value="de-CH"
               >
                 <b>
                   Deutsch
@@ -14870,11 +14865,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="9a12cfd0-087d-56c4-ae4c-c6004f6adbf4"
+                value="en-GB"
               >
                 English
               </button>
@@ -14882,11 +14877,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="b3fbc650-ace6-5eee-bf09-53a450c6eb99"
+                value="es"
               >
                 Castellano
               </button>
@@ -14894,11 +14889,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="a261ab3b-a93a-48f0-abda-b82701cbf2fd"
+                value="he"
               >
                 עברית‬
               </button>
@@ -14906,11 +14901,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
                 className="dropdown-item"
                 data-trigger={true}
                 disabled={false}
-                name="language_id"
+                name="locale"
                 onClick={[Function]}
                 tabIndex="0"
                 type="submit"
-                value="ca962bd5-f5f0-5555-a5fa-41ef3451f448"
+                value="gsw-CH"
               >
                 Züritüütsch
               </button>

@@ -234,6 +234,7 @@ const SubAppDropdown = ({ t, subApps }) => {
 }
 
 const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
+  // NOTE: `locale` is the pkey (instead of `id`)
   if (f.isEmpty(locales)) return false
   const currentLang = f.find(locales, l => l.isSelected) || f.find(locales, l => l.isDefault)
   return (
@@ -246,14 +247,14 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
         <DropdownMenu right>
           {/* <DropdownItem divider >Sprachen</DropdownItem> */}
           {f.map(locales, lang => {
-            const isCurrent = !!currentLang && lang.id === currentLang.id
+            const isCurrent = !!currentLang && lang.locale === currentLang.locale
             return (
               <DropdownItem
                 key={lang.id}
                 tag="button"
                 type="submit"
-                name="language_id"
-                value={lang.id}
+                name="locale"
+                value={lang.locale}
                 disabled={isCurrent}
                 className={cx({ 'text-dark ui-selected-lang': isCurrent })}
               >

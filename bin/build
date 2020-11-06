@@ -33,6 +33,7 @@ function build {
 }
 
 function extract {
+  npm run build:symlinks
   tar -xvz -f "$LOCAL_CACHED_ARTEFACT_PATH"
 }
 

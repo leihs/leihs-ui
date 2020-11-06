@@ -221,11 +221,11 @@ exports[`no user, marks default lang: renders correctly 1`] = `
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
-              value={1}
+              value="en"
             >
               EN
             </button>
@@ -233,11 +233,11 @@ exports[`no user, marks default lang: renders correctly 1`] = `
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
-              value={2}
+              value="de"
             >
               <b>
                 DE
@@ -383,11 +383,11 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
-              value={1}
+              value="en"
             >
               EN
             </button>
@@ -395,11 +395,11 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
-              value={2}
+              value="de"
             >
               <b>
                 DE
@@ -545,11 +545,11 @@ exports[`no user, with selected lang: renders correctly 1`] = `
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
-              value={1}
+              value="en"
             >
               <b>
                 EN
@@ -559,11 +559,11 @@ exports[`no user, with selected lang: renders correctly 1`] = `
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
-              value={2}
+              value="de"
             >
               DE
             </button>
@@ -1040,11 +1040,11 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
-              value={1}
+              value="en"
             >
               <b>
                 EN
@@ -1054,11 +1054,11 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
-              value={2}
+              value="de"
             >
               DE
             </button>
@@ -1246,11 +1246,11 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
               className="dropdown-item"
               data-trigger={true}
               disabled={false}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="0"
               type="submit"
-              value={1}
+              value="en"
             >
               EN
             </button>
@@ -1258,11 +1258,11 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
               className="text-dark ui-selected-lang disabled dropdown-item"
               data-trigger={true}
               disabled={true}
-              name="language_id"
+              name="locale"
               onClick={[Function]}
               tabIndex="-1"
               type="submit"
-              value={2}
+              value="de"
             >
               <b>
                 DE

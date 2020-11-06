@@ -33,14 +33,14 @@ const examples = [
           locales: [
             {
               id: 1,
-              locale_name: 'en',
+              locale: 'en',
               name: 'EN',
               isDefault: false,
               isSelected: false
             },
             {
               id: 2,
-              locale_name: 'de',
+              locale: 'de',
               name: 'DE',
               isDefault: true,
               isSelected: false
@@ -59,14 +59,14 @@ const examples = [
           locales: [
             {
               id: 1,
-              locale_name: 'en',
+              locale: 'en',
               name: 'EN',
               isDefault: false,
               isSelected: true
             },
             {
               id: 2,
-              locale_name: 'de',
+              locale: 'de',
               name: 'DE',
               isDefault: true,
               isSelected: false
@@ -85,14 +85,14 @@ const examples = [
           locales: [
             {
               id: 1,
-              locale_name: 'en',
+              locale: 'en',
               name: 'EN',
               isDefault: false,
               isSelected: false
             },
             {
               id: 2,
-              locale_name: 'de',
+              locale: 'de',
               name: 'DE',
               isDefault: true,
               isSelected: true
@@ -111,14 +111,14 @@ const examples = [
           locales: [
             {
               id: 1,
-              locale_name: 'en',
+              locale: 'en',
               name: 'EN',
               isDefault: false,
               isSelected: false
             },
             {
               id: 2,
-              locale_name: 'de',
+              locale: 'de',
               name: 'DE',
               isDefault: true,
               isSelected: false
@@ -137,14 +137,14 @@ const examples = [
           locales: [
             {
               id: 1,
-              locale_name: 'en',
+              locale: 'en',
               name: 'EN',
               isDefault: false,
               isSelected: true
             },
             {
               id: 2,
-              locale_name: 'de',
+              locale: 'de',
               name: 'DE',
               isDefault: true,
               isSelected: false
