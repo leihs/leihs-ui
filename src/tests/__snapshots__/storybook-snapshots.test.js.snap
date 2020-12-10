@@ -16056,6 +16056,513 @@ exports[`Storybook HTML Snapshots MobileApp/Components/CategoryList Example 1 1`
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Components/ModelFilterForm Full Example 1`] = `
+<div
+  className="px-3 py-4 bg-light mt-3 mb-3"
+>
+  <form
+    action="/search"
+    className="form form-compact"
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className="row"
+      >
+        <span
+          className="text-xs col-3 col-form-label"
+        >
+          Search 
+        </span>
+        <div
+          className="col-9"
+        >
+          <input
+            className="form-control "
+            name="search-term"
+            onChange={[Function]}
+            placeholder="Search"
+            type="text"
+            value="beamer"
+          />
+        </div>
+      </label>
+    </div>
+    <label
+      className="row"
+    >
+      <span
+        className="text-xs col-3 col-form-label"
+      >
+        For
+      </span>
+      <div
+        className="col-9"
+      >
+        <select
+          className="form-control"
+          name="user-id"
+          onChange={[Function]}
+          value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+        >
+          <option
+            value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+          >
+            Hans Heiri
+          </option>
+          <option
+            value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+          >
+            Delegation 1
+          </option>
+          <option
+            value="3013ff5a-0203-4ec5-bda5-61871ddd5dc7"
+          >
+            Delegation 2
+          </option>
+        </select>
+      </div>
+    </label>
+    <label
+      className="row"
+    >
+      <span
+        className="text-xs col-3 col-form-label"
+      >
+        From
+      </span>
+      <div
+        className="col-9"
+      >
+        <select
+          className="form-control"
+          name="pool-id"
+          onChange={[Function]}
+          value="de577733-0f4a-4b15-b217-e79df29afbcb"
+        >
+          <option
+            value="all"
+          >
+            All inventory pools
+          </option>
+          <option
+            value="de577733-0f4a-4b15-b217-e79df29afbcb"
+          >
+            Pool 1
+          </option>
+          <option
+            value="e441b4c0-3477-4970-82c6-f5ed8ad9ccc1"
+          >
+            Pool 2
+          </option>
+        </select>
+      </div>
+    </label>
+    <div
+      className="form-group"
+    >
+      <div
+        className="row"
+      >
+        <span
+          className="text-xs col-3 col-form-label"
+        >
+          Time Span
+        </span>
+        <div
+          className="col-9"
+        >
+          <label
+            className="custom-control custom-checkbox"
+          >
+            <input
+              checked={true}
+              className="custom-control-input"
+              name="only-available"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <span
+              className="custom-control-label"
+            >
+              Show available only
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="row"
+        >
+          <span
+            className="text-xs col-3 col-form-label"
+          >
+            From 
+          </span>
+          <div
+            className="col-9"
+          >
+            <input
+              className="form-control "
+              defaultValue="2020-12-14"
+              name="start-date"
+              onChange={[Function]}
+              placeholder="From"
+              required={true}
+              type="date"
+            />
+          </div>
+        </label>
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="row"
+        >
+          <span
+            className="text-xs col-3 col-form-label"
+          >
+            Until 
+          </span>
+          <div
+            className="col-9"
+          >
+            <input
+              className="form-control "
+              defaultValue="2020-12-15"
+              name="end-date"
+              onChange={[Function]}
+              placeholder="Until"
+              required={true}
+              type="date"
+            />
+          </div>
+        </label>
+      </div>
+      <div
+        className="form-group"
+      >
+        <label
+          className="row"
+        >
+          <span
+            className="text-xs col-3 col-form-label"
+          >
+            Quantity 
+          </span>
+          <div
+            className="col-9"
+          >
+            <input
+              className="form-control "
+              defaultValue={2}
+              min={1}
+              name="quantity"
+              onChange={[Function]}
+              placeholder="Quantity"
+              type="number"
+            />
+          </div>
+        </label>
+      </div>
+    </div>
+    <button
+      className="btn btn-success dont-invert rounded-pill mt-2"
+      type="submit"
+    >
+      Get Results
+    </button>
+    <button
+      className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Components/ModelFilterForm Minimal Example 1`] = `
+<div
+  className="px-3 py-4 bg-light mt-3 mb-3"
+>
+  <form
+    action="/search"
+    className="form form-compact"
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className="row"
+      >
+        <span
+          className="text-xs col-3 col-form-label"
+        >
+          Search 
+        </span>
+        <div
+          className="col-9"
+        >
+          <input
+            className="form-control "
+            name="search-term"
+            onChange={[Function]}
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+        </div>
+      </label>
+    </div>
+    <label
+      className="row"
+    >
+      <span
+        className="text-xs col-3 col-form-label"
+      >
+        From
+      </span>
+      <div
+        className="col-9"
+      >
+        <select
+          className="form-control"
+          name="pool-id"
+          onChange={[Function]}
+          value="all"
+        >
+          <option
+            value="all"
+          >
+            All inventory pools
+          </option>
+          <option
+            value="de577733-0f4a-4b15-b217-e79df29afbcb"
+          >
+            Pool 1
+          </option>
+          <option
+            value="e441b4c0-3477-4970-82c6-f5ed8ad9ccc1"
+          >
+            Pool 2
+          </option>
+        </select>
+      </div>
+    </label>
+    <div
+      className="form-group"
+    >
+      <div
+        className="row"
+      >
+        <span
+          className="text-xs col-3 col-form-label"
+        >
+          Time Span
+        </span>
+        <div
+          className="col-9"
+        >
+          <label
+            className="custom-control custom-checkbox"
+          >
+            <input
+              checked={false}
+              className="custom-control-input"
+              name="only-available"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <span
+              className="custom-control-label"
+            >
+              Show available only
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button
+      className="btn btn-success dont-invert rounded-pill mt-2"
+      type="submit"
+    >
+      Get Results
+    </button>
+    <button
+      className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Components/ModelFilterForm Minimal With Delegation Example 1`] = `
+<div
+  className="px-3 py-4 bg-light mt-3 mb-3"
+>
+  <form
+    action="/search"
+    className="form form-compact"
+    onSubmit={[Function]}
+  >
+    <div
+      className="form-group"
+    >
+      <label
+        className="row"
+      >
+        <span
+          className="text-xs col-3 col-form-label"
+        >
+          Search 
+        </span>
+        <div
+          className="col-9"
+        >
+          <input
+            className="form-control "
+            name="search-term"
+            onChange={[Function]}
+            placeholder="Search"
+            type="text"
+            value=""
+          />
+        </div>
+      </label>
+    </div>
+    <label
+      className="row"
+    >
+      <span
+        className="text-xs col-3 col-form-label"
+      >
+        For
+      </span>
+      <div
+        className="col-9"
+      >
+        <select
+          className="form-control"
+          name="user-id"
+          onChange={[Function]}
+          value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+        >
+          <option
+            value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+          >
+            Hans Heiri
+          </option>
+          <option
+            value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+          >
+            Delegation 1
+          </option>
+          <option
+            value="3013ff5a-0203-4ec5-bda5-61871ddd5dc7"
+          >
+            Delegation 2
+          </option>
+        </select>
+      </div>
+    </label>
+    <label
+      className="row"
+    >
+      <span
+        className="text-xs col-3 col-form-label"
+      >
+        From
+      </span>
+      <div
+        className="col-9"
+      >
+        <select
+          className="form-control"
+          name="pool-id"
+          onChange={[Function]}
+          value="all"
+        >
+          <option
+            value="all"
+          >
+            All inventory pools
+          </option>
+          <option
+            value="de577733-0f4a-4b15-b217-e79df29afbcb"
+          >
+            Pool 1
+          </option>
+          <option
+            value="e441b4c0-3477-4970-82c6-f5ed8ad9ccc1"
+          >
+            Pool 2
+          </option>
+        </select>
+      </div>
+    </label>
+    <div
+      className="form-group"
+    >
+      <div
+        className="row"
+      >
+        <span
+          className="text-xs col-3 col-form-label"
+        >
+          Time Span
+        </span>
+        <div
+          className="col-9"
+        >
+          <label
+            className="custom-control custom-checkbox"
+          >
+            <input
+              checked={false}
+              className="custom-control-input"
+              name="only-available"
+              onChange={[Function]}
+              type="checkbox"
+            />
+            <span
+              className="custom-control-label"
+            >
+              Show available only
+            </span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button
+      className="btn btn-success dont-invert rounded-pill mt-2"
+      type="submit"
+    >
+      Get Results
+    </button>
+    <button
+      className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+      onClick={[Function]}
+      type="button"
+    >
+      Clear
+    </button>
+  </form>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] = `
 <div
   className="ui-models-list row no-gutters d-flex flex-wrap mx-n2"

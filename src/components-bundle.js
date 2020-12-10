@@ -19,6 +19,7 @@ export const Components = {
   AppLayout,
   CategoryList: require('./components/MobileApp/CategoryList').default,
   ModelList: require('./components/MobileApp/ModelList').default,
+  ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
 
   // pages:
