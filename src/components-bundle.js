@@ -11,7 +11,7 @@ import PasswordForgotSuccessPage from './pages/PasswordForgotSuccessPage'
 import PasswordResetPage from './pages/PasswordResetPage'
 import PasswordResetSuccessPage from './pages/PasswordResetSuccessPage'
 
-export const Components = {
+const Components = {
   Bold,
   DebugProps,
   Navbar,
@@ -31,3 +31,5 @@ export const Components = {
   PasswordResetPage,
   PasswordResetSuccessPage
 }
+
+export default Components

@@ -4,7 +4,7 @@ import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import assert from 'assert'
 
-import { Components } from './components-bundle'
+import Components from './components-bundle'
 
 export function renderComponentToStaticMarkup(name, props) {
   return ReactDOMServer.renderToStaticMarkup(reactElement(name, props))

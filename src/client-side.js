@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-import { Components } from './components-bundle'
+import Components from './components-bundle'
 export { Components }
 
 export function hydrateComponent(container) {

@@ -53,6 +53,7 @@ const externalsConfig = {
 }
 
 module.exports = [
+  // all the bundles
   {
     ...baseConfig,
     entry: {
@@ -61,12 +62,28 @@ module.exports = [
       'leihs-ui-server-side': './src/server-side.js'
     }
   },
+  // all the bundles, with external react
   {
     ...baseConfig,
     entry: {
       main: './src/.emptyDummy.js', // ignored, but must be present so CRA works…
-      'leihs-ui-client-side-external-react': './src/client-side.js'
+      'leihs-ui-client-side-external-react': './src/client-side.js',
     },
+    ...externalsConfig
+  },
+  // just the UI components lib
+  {
+    ...baseConfig,
+    entry: {
+      main: './src/components-bundle.js'
+    },
+    output: Object.assign({}, baseConfig.output, {
+      path: path.resolve(__dirname, 'dist'),
+      filename: 'ui-components/index.js',
+      // library: "LeihsUI",
+      libraryExport: "default",
+      libraryTarget: 'umd',
+    }),
     ...externalsConfig
   }
 ]
