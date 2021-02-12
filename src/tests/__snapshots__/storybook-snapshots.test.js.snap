@@ -526,11 +526,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -630,6 +625,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -1096,11 +1096,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -1200,6 +1195,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -1666,11 +1666,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -1770,6 +1765,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -2236,11 +2236,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -2340,6 +2335,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -2806,11 +2806,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -2910,6 +2905,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -3376,11 +3376,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -3480,6 +3475,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -3946,11 +3946,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -4050,6 +4045,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -4516,11 +4516,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -4620,6 +4615,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -5086,11 +5086,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -5190,6 +5185,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -5656,11 +5656,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -5760,6 +5755,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -6226,11 +6226,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -6330,6 +6325,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -6796,11 +6796,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -6900,6 +6895,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -7366,11 +7366,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -7470,6 +7465,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -7936,11 +7936,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -8040,6 +8035,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -8506,11 +8506,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -8610,6 +8605,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -9076,11 +9076,6 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -9180,6 +9175,11 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -9625,11 +9625,6 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -9729,6 +9724,11 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -9772,7 +9772,6 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
       {
   "appTitle": "LeihsApp",
   "appColor": "#afec81",
-  "csrfToken": "7d4eeec4-070c-4ea5-a778-85f29d9177e2",
   "me": {
     "user": {
       "id": "5443e104-d80e-497f-bc15-927ff5c2d396",
@@ -10307,11 +10306,6 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
               className="ui-lang-selection"
               method="POST"
             >
-              <input
-                name="csrf-token"
-                type="hidden"
-                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-              />
               <li
                 className="dropdown nav-item"
                 onKeyDown={[Function]}
@@ -10411,6 +10405,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                   </button>
                 </div>
               </li>
+              <input
+                name="csrf-token"
+                type="hidden"
+                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+              />
             </form>
           </ul>
         </div>
@@ -10737,11 +10736,6 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
               className="ui-lang-selection"
               method="POST"
             >
-              <input
-                name="csrf-token"
-                type="hidden"
-                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-              />
               <li
                 className="dropdown nav-item"
                 onKeyDown={[Function]}
@@ -10841,6 +10835,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                   </button>
                 </div>
               </li>
+              <input
+                name="csrf-token"
+                type="hidden"
+                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+              />
             </form>
           </ul>
         </div>
@@ -10936,17 +10935,17 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                   />
                 </label>
               </div>
+              <input
+                name="csrf-token"
+                type="hidden"
+                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+              />
             </form>
             <form
               action="/my/language"
               className="ui-lang-selection"
               method="POST"
             >
-              <input
-                name="csrf-token"
-                type="hidden"
-                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
-              />
               <li
                 className="dropdown nav-item"
                 onKeyDown={[Function]}
@@ -11046,6 +11045,11 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                   </button>
                 </div>
               </li>
+              <input
+                name="csrf-token"
+                type="hidden"
+                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+              />
             </form>
           </ul>
         </div>
@@ -11143,17 +11147,17 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
               />
             </label>
           </div>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
         <form
           action="/my/language"
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -11253,6 +11257,11 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -11383,11 +11392,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -11487,6 +11491,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -11580,6 +11589,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
             </label>
           </div>
           <input
+            name="csrf-token"
+            type="hidden"
+            value="xxx"
+          />
+          <input
             name="return-to"
             type="hidden"
             value="/"
@@ -11639,11 +11653,6 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -11743,6 +11752,11 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -11817,6 +11831,11 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
             </label>
           </div>
           <input
+            name="csrf-token"
+            type="hidden"
+            value="xxx"
+          />
+          <input
             name="return-to"
             type="hidden"
             value="/"
@@ -11876,11 +11895,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -11980,6 +11994,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -12020,6 +12039,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
             method="POST"
           >
             <input
+              name="csrf-token"
+              type="hidden"
+              value="xxx"
+            />
+            <input
               name="user-unique-id"
               type="hidden"
               value="malbrech"
@@ -12045,6 +12069,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
             className="ui-form-signin mt-3"
             method="POST"
           >
+            <input
+              name="csrf-token"
+              type="hidden"
+              value="xxx"
+            />
             <input
               name="user-unique-id"
               type="hidden"
@@ -12133,11 +12162,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -12237,6 +12261,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -12277,6 +12306,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
             method="POST"
           >
             <input
+              name="csrf-token"
+              type="hidden"
+              value="xxx"
+            />
+            <input
               name="user-unique-id"
               type="hidden"
               value="malbrech"
@@ -12302,6 +12336,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
             className="ui-form-signin mt-3"
             method="POST"
           >
+            <input
+              name="csrf-token"
+              type="hidden"
+              value="xxx"
+            />
             <input
               name="user-unique-id"
               type="hidden"
@@ -12333,6 +12372,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
           className="ui-form-signin mt-4"
           method="POST"
         >
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="xxx"
+          />
           <h2
             className="h5 mb-4 font-weight-normal"
           >
@@ -12461,11 +12505,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -12565,6 +12604,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -12601,6 +12645,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
           className="ui-form-signin mt-4"
           method="POST"
         >
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="xxx"
+          />
           <h2
             className="h5 mb-4 font-weight-normal"
           >
@@ -12729,11 +12778,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -12833,6 +12877,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -12926,6 +12975,11 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
             </label>
           </div>
           <input
+            name="csrf-token"
+            type="hidden"
+            value="xxx"
+          />
+          <input
             name="return-to"
             type="hidden"
             value="/"
@@ -12985,11 +13039,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -13089,6 +13138,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -13133,7 +13187,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password 1`] = 
           <input
             name="csrf-token"
             type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
+            value="xxx"
           />
           <label
             className="sr-only"
@@ -13207,11 +13261,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -13311,6 +13360,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -13374,7 +13428,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
           <input
             name="csrf-token"
             type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
+            value="xxx"
           />
           <label
             className="sr-only"
@@ -13448,11 +13502,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -13552,6 +13601,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -13615,7 +13669,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
           <input
             name="csrf-token"
             type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
+            value="xxx"
           />
           <label
             className="sr-only"
@@ -13689,11 +13743,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -13793,6 +13842,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -13837,7 +13891,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Prefil
           <input
             name="csrf-token"
             type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
+            value="xxx"
           />
           <label
             className="sr-only"
@@ -13911,11 +13965,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -14015,6 +14064,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -14049,6 +14103,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
         <form
           className="ui-form-signin text-left"
         >
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="xxx"
+          />
           <div
             className="form-group"
           >
@@ -14124,11 +14183,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -14228,6 +14282,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -14264,6 +14323,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
           className="ui-form-signin text-left"
           method="POST"
         >
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="xxx"
+          />
           <div
             className="form-group form-group-sm"
           >
@@ -14284,11 +14348,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
               required={true}
             />
           </div>
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <div
             className="form-group form-group-sm"
           >
@@ -14383,11 +14442,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -14487,6 +14541,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Reset 
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -14585,11 +14644,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -14689,6 +14743,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -14733,7 +14792,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Succes
           <input
             name="csrf-token"
             type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
+            value="xxx"
           />
           <label
             className="sr-only"
@@ -14807,11 +14866,6 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
           className="ui-lang-selection"
           method="POST"
         >
-          <input
-            name="csrf-token"
-            type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
-          />
           <li
             className="dropdown nav-item"
             onKeyDown={[Function]}
@@ -14911,6 +14965,11 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
               </button>
             </div>
           </li>
+          <input
+            name="csrf-token"
+            type="hidden"
+            value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+          />
         </form>
       </ul>
     </div>
@@ -14969,7 +15028,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
           <input
             name="csrf-token"
             type="hidden"
-            value="88908344-e458-43d2-9137-f401c55a48ff"
+            value="xxx"
           />
           <label
             className="sr-only"

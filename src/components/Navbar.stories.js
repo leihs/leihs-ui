@@ -7,7 +7,6 @@ import sharedNavbarProps from '../stories/_sharedNavbarProps.json'
 const LEIHS_GREEN = '#afec81'
 const exampleParams = {
   ...sharedNavbarProps.config,
-  csrfToken: '7d4eeec4-070c-4ea5-a778-85f29d9177e2',
   me: {
     user: {
       id: '5443e104-d80e-497f-bc15-927ff5c2d396',
@@ -73,7 +72,7 @@ export default {
 export const all_config_options = () => {
   return (
     <LeihsPage>
-      <Navbar config={exampleParams} />
+      <Navbar config={exampleParams} csrfToken={sharedNavbarProps.csrfToken} />
       <div className="px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 className="display-4">Great App</h1>
         <p className="lead">This is a great app with an even greater navbar.</p>
@@ -111,7 +110,8 @@ export const config_variants = () => {
         {variants.map(({ name, props }, i) => {
           const navbarProps = {
             ...props,
-            config: { ...exampleParams, ...props.config }
+            config: { ...exampleParams, ...props.config },
+            csrfToken: sharedNavbarProps.csrfToken
           }
 
           return (
@@ -182,7 +182,7 @@ export const colors = () => {
         <>
           <div style={{ ...swatchStyle, background: `${navbarBaseColor}` }}>base</div>
           <div style={{ ...swatchStyle, background: `${config.appColor}` }}>tint</div>
-          <Navbar config={config} />
+          <Navbar config={config} csrfToken={sharedNavbarProps.csrfToken} />
           <hr />
         </>
       ))}

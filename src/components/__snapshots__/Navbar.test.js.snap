@@ -83,6 +83,11 @@ exports[`base: renders correctly 1`] = `
             />
           </label>
         </div>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
     </ul>
   </div>
@@ -172,16 +177,17 @@ exports[`no user, marks default lang: renders correctly 1`] = `
             />
           </label>
         </div>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
       <form
         action="/my/language"
         className="ui-lang-selection"
         method="POST"
       >
-        <input
-          name="csrf-token"
-          type="hidden"
-        />
         <li
           className="dropdown nav-item"
           onKeyDown={[Function]}
@@ -245,6 +251,11 @@ exports[`no user, marks default lang: renders correctly 1`] = `
             </button>
           </div>
         </li>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
     </ul>
   </div>
@@ -334,16 +345,17 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
             />
           </label>
         </div>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
       <form
         action="/my/language"
         className="ui-lang-selection"
         method="POST"
       >
-        <input
-          name="csrf-token"
-          type="hidden"
-        />
         <li
           className="dropdown nav-item"
           onKeyDown={[Function]}
@@ -407,6 +419,11 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
             </button>
           </div>
         </li>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
     </ul>
   </div>
@@ -496,16 +513,17 @@ exports[`no user, with selected lang: renders correctly 1`] = `
             />
           </label>
         </div>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
       <form
         action="/my/language"
         className="ui-lang-selection"
         method="POST"
       >
-        <input
-          name="csrf-token"
-          type="hidden"
-        />
         <li
           className="dropdown nav-item"
           onKeyDown={[Function]}
@@ -569,6 +587,11 @@ exports[`no user, with selected lang: renders correctly 1`] = `
             </button>
           </div>
         </li>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
     </ul>
   </div>
@@ -660,6 +683,11 @@ exports[`on root page, logged out: renders correctly 1`] = `
             />
           </label>
         </div>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
         <input
           name="return-to"
           type="hidden"
@@ -853,6 +881,7 @@ exports[`usage in shared app: renders correctly 1`] = `
               <input
                 name="csrf-token"
                 type="hidden"
+                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
               />
               Logout
             </button>
@@ -986,6 +1015,7 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
               <input
                 name="csrf-token"
                 type="hidden"
+                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
               />
               Logout
             </button>
@@ -997,10 +1027,6 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
         className="ui-lang-selection"
         method="POST"
       >
-        <input
-          name="csrf-token"
-          type="hidden"
-        />
         <li
           className="dropdown nav-item"
           onKeyDown={[Function]}
@@ -1064,6 +1090,11 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
             </button>
           </div>
         </li>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
     </ul>
   </div>
@@ -1192,6 +1223,7 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
               <input
                 name="csrf-token"
                 type="hidden"
+                value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
               />
               Logout
             </button>
@@ -1203,10 +1235,6 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
         className="ui-lang-selection"
         method="POST"
       >
-        <input
-          name="csrf-token"
-          type="hidden"
-        />
         <li
           className="dropdown nav-item"
           onKeyDown={[Function]}
@@ -1270,6 +1298,11 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
             </button>
           </div>
         </li>
+        <input
+          name="csrf-token"
+          type="hidden"
+          value="7d4eeec4-070c-4ea5-a778-85f29d9177e2"
+        />
       </form>
     </ul>
   </div>

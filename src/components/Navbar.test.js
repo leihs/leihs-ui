@@ -2,12 +2,13 @@ import React from 'react'
 import renderer from 'react-test-renderer'
 
 import Navbar from './Navbar'
+import sharedNavbarProps from '../stories/_sharedNavbarProps.json'
 const LEIHS_GREEN = '#afec81'
 
 const examples = [
   {
     name: 'base',
-    content: <Navbar />
+    content: <Navbar csrfToken={sharedNavbarProps.csrfToken} />
   },
   {
     name: 'on root page, logged out',
@@ -21,6 +22,7 @@ const examples = [
           appColor: null,
           returnTo: '/someapp'
         }}
+        csrfToken={sharedNavbarProps.csrfToken}
       />
     )
   },
@@ -47,6 +49,7 @@ const examples = [
             }
           ]
         }}
+        csrfToken={sharedNavbarProps.csrfToken}
       />
     )
   },
@@ -73,6 +76,7 @@ const examples = [
             }
           ]
         }}
+        csrfToken={sharedNavbarProps.csrfToken}
       />
     )
   },
@@ -99,6 +103,7 @@ const examples = [
             }
           ]
         }}
+        csrfToken={sharedNavbarProps.csrfToken}
       />
     )
   },
@@ -125,6 +130,7 @@ const examples = [
             }
           ]
         }}
+        csrfToken={sharedNavbarProps.csrfToken}
       />
     )
   },
@@ -151,6 +157,7 @@ const examples = [
             }
           ]
         }}
+        csrfToken={sharedNavbarProps.csrfToken}
       />
     )
   },
@@ -183,6 +190,7 @@ const examples = [
             }
           }
         }}
+        csrfToken={sharedNavbarProps.csrfToken}
       />
     )
   }

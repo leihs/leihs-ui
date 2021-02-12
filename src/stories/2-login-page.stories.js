@@ -13,6 +13,7 @@ export default {
 export const NoUser = () => {
   const exampleProps = {
     navbar: navbarProps,
+    csrfToken: { value: 'xxx' },
     authFlow: {
       user: null,
       title: 'Anmelden mit Passwort',
@@ -44,6 +45,7 @@ export const NoUser = () => {
 export const InvalidUser = () => {
   const exampleProps = {
     navbar: navbarProps,
+    csrfToken: { value: 'xxx' },
     authFlow: {
       user: 'unknown-user-id',
       title: 'Anmelden mit Passwort',
@@ -67,6 +69,7 @@ export const InvalidUser = () => {
 export const WrongPassword = () => {
   const exampleProps = {
     navbar: navbarProps,
+    csrfToken: { value: 'xxx' },
     authFlow: {
       user: null,
       title: 'Anmelden mit Passwort',
@@ -90,6 +93,7 @@ export const WrongPassword = () => {
 export const Step2_PasswordAuthOnly = () => {
   const exampleProps = {
     navbar: navbarProps,
+    csrfToken: { value: 'xxx' },
     authFlow: {
       user: 'malbrech',
       title: 'Anmelden bei Leihs',
@@ -114,6 +118,7 @@ export const Step2_PasswordAuthOnly = () => {
 export const Step2_PasswordAndExternalAuth = () => {
   const exampleProps = {
     navbar: navbarProps,
+    csrfToken: { value: 'xxx' },
     authFlow: {
       user: 'malbrech',
       title: 'Anmelden bei Leihs',
@@ -152,6 +157,7 @@ export const Step2_PasswordAndExternalAuth = () => {
 export const Step2_2ExternalAuthOptionsAndNoPassword = () => {
   const exampleProps = {
     navbar: navbarProps,
+    csrfToken: { value: 'xxx' },
     authFlow: {
       user: 'malbrech',
       title: 'Anmelden bei Leihs',

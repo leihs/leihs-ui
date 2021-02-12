@@ -5,9 +5,10 @@ import { Hr } from './Bootstrap'
 import { VisuallyHidden } from './Bootstrap'
 import { Card } from '../components/CardPage'
 import FlashMessages from './FlashMessages'
+import { CsrfTokenField } from '../components/Forms'
 import { Translator as T } from '../locale/translate'
 
-export const NavbarLogin = ({ returnTo, formAction, requireUserInput = false, locales }) => {
+export const NavbarLogin = ({ returnTo, formAction, requireUserInput = false, locales, csrfToken }) => {
   const t = T(locales)
 
   return (
@@ -31,6 +32,7 @@ export const NavbarLogin = ({ returnTo, formAction, requireUserInput = false, lo
         </div>
       </div>
       <HiddenPasswordField label={t('sign_in_password')} />
+      <CsrfTokenField {...csrfToken} />
       {returnTo && <input type="hidden" name="return-to" value={returnTo} />}
     </form>
   )
@@ -39,7 +41,7 @@ NavbarLogin.defaultProps = {
   formAction: '/sign-in'
 }
 
-export const SignInCard = ({ authFlow, authSystems, messages, locales, autoFocusUserField = true }) => {
+export const SignInCard = ({ authFlow, authSystems, messages, locales, csrfToken, autoFocusUserField = true }) => {
   const t = T(locales)
   const userParam = f.get(authFlow, 'user')
   const returnTo = f.get(authFlow, 'returnTo') || '/'
@@ -62,12 +64,13 @@ export const SignInCard = ({ authFlow, authSystems, messages, locales, autoFocus
           placeholder={t('sign_in_userparam_label')}
           className="form-control"
           defaultValue={userParam || ''}
-          autoFocus={true}
+          autoFocus={autoFocusUserField}
           autoCapitalize="off"
           autoCorrect="off"
         />
 
         <HiddenPasswordField label={t('sign_in_password')} />
+        <CsrfTokenField {...csrfToken} />
         {returnTo && <input type="hidden" name="return-to" value={returnTo} />}
 
         <button className="btn btn-success btn-block mt-3" type="submit">
@@ -94,6 +97,7 @@ export const SignInCard = ({ authFlow, authSystems, messages, locales, autoFocus
               method="POST"
               action={`/sign-in/external-authentication/${id}/request`}
             >
+              <CsrfTokenField {...csrfToken} />
               <input type="hidden" name="user-unique-id" value={userParam || ''} />
               {returnTo && <input type="hidden" name="return-to" value={returnTo} />}
               <button className="btn btn-lg btn-success btn-block" href={o.external_url} type="submit">
@@ -112,6 +116,7 @@ export const SignInCard = ({ authFlow, authSystems, messages, locales, autoFocus
         <Let {...pwAuth}>
           {({ id, description, title }) => (
             <form key={id} className="ui-form-signin mt-4" method={authFlow.form.method} action={authFlow.form.action}>
+              <CsrfTokenField {...csrfToken} />
               <h2 className="h5 mb-4 font-weight-normal">
                 {title || t('sign_in_pwauth_default_title')}
                 <small>{description}</small>

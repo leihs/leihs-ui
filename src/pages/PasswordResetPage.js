@@ -18,7 +18,7 @@ const defaultProps = {
 class Page extends Component {
   render(props = this.props) {
     const t = T(props.navbar.config.locales)
-    const csrf = { token: f.get(props, 'navbar.config.csrfToken') }
+
     const pwReset = f.get(props, 'pwReset') || {}
     const flashMessages = f.get(props, 'flashMessages')
 
@@ -27,7 +27,13 @@ class Page extends Component {
         <Navbar {...props.navbar} hideSignInField />
 
         <CenterOnPage>
-          <PasswordForgotCard {...defaultProps} csrf={csrf} pwReset={pwReset} messages={flashMessages} t={t} />
+          <PasswordForgotCard
+            {...defaultProps}
+            pwReset={pwReset}
+            messages={flashMessages}
+            csrf={props.csrfToken}
+            t={t}
+          />
         </CenterOnPage>
       </div>
     )
@@ -45,6 +51,8 @@ const PasswordForgotCard = ({ t, form, messages, pwReset, csrf, autoFocusUserFie
       {/* <p className="mb-4">{t('password_reset_description')}</p> */}
       <FlashMessages messages={messages} className="rounded" messageClasses="h5 rounded" />
       <form className="ui-form-signin text-left" {...formProps}>
+        <CsrfTokenField {...csrf} />
+
         <div className={cx('form-group', { 'form-group-sm': step === 2 })}>
           <label htmlFor={'inputToken'}>{t('password_reset_token_label')}</label>
           <input
@@ -59,7 +67,7 @@ const PasswordForgotCard = ({ t, form, messages, pwReset, csrf, autoFocusUserFie
             readOnly={step === 2}
           />
         </div>
-        {step === 2 && <CsrfTokenField {...csrf} />}
+
         {step === 2 && (
           <div className="form-group form-group-sm">
             <label htmlFor={'inputEmail'}>{t('password_reset_userparam_label')}</label>

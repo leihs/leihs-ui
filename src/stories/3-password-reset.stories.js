@@ -12,13 +12,13 @@ export default {
   // component: Button,
   parameters: { layout: 'fullscreen' }
 }
-const sharedExampleProps = { navbar: navbarProps }
+const sharedExampleProps = { navbar: navbarProps, csrfToken: { value: 'xxx' } }
 
 export const forgotPassword = () => {
   return <PasswordForgotPage {...sharedExampleProps} />
 }
 export const forgotPassword_prefilled_username = () => {
-  const exampleProps = { navbar: navbarProps, userParam: 'some-user' }
+  const exampleProps = { ...sharedExampleProps, userParam: 'some-user' }
   return <PasswordForgotPage {...exampleProps} />
 }
 

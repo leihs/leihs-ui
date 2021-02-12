@@ -37,6 +37,7 @@ class SignInPage extends Component {
             authSystems={authSystems}
             messages={flashMessages}
             locales={props.navbar.config.locales}
+            csrfToken={props.csrfToken}
           />
         </CenterOnPage>
       </div>

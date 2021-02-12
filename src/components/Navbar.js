@@ -21,6 +21,7 @@ import { Navbar as BsNavbar } from 'reactstrap'
 
 import Icon from './Icons'
 import { NavbarLogin } from './SignInUI'
+import { CsrfTokenField } from '../components/Forms'
 
 import { Translator as T } from '../locale/translate'
 
@@ -57,16 +58,11 @@ export default class Navbar extends React.Component {
   }
 
   render({ props, state } = this) {
-    const { bgBaseColor, hideSignInField = false, config, brand, children } = props
+    const { bgBaseColor, hideSignInField = false, config, brand, children, csrfToken } = props
     const { me, appTitle, appMenu, appColor, subApps, returnTo } = config
     const user = f.get(me, 'user')
     const isLoggedIn = f.get(user, 'id')
     const { homeUrl } = defaults
-    const csrfToken = f.get(props, 'csrfToken') || f.get(config, 'csrfToken')
-    const csrfTokenProp = {
-      value: csrfToken,
-      name: f.get(props, 'csrfTokenName') || f.get(config, 'csrfTokenName') || 'csrf-token'
-    }
     const t = T(config.locales)
 
     const bgColor = props.bgColor || appColor ? ColorTint(bgBaseColor, appColor) : bgBaseColor
@@ -110,12 +106,12 @@ export default class Navbar extends React.Component {
             <SubAppDropdown t={t} subApps={subApps} />
 
             {f.isEmpty(user) ? (
-              !!hideSignInField || <NavbarLogin locales={config.locales} returnTo={returnTo} />
+              !!hideSignInField || <NavbarLogin locales={config.locales} returnTo={returnTo} csrfToken={csrfToken} />
             ) : (
-              <UserMenu t={t} user={user} csrfToken={csrfTokenProp} />
+              <UserMenu t={t} user={user} csrfToken={csrfToken} />
             )}
 
-            <LocalesDropdown locales={config.locales} isLoggedIn={isLoggedIn} csrfToken={csrfTokenProp} />
+            <LocalesDropdown locales={config.locales} isLoggedIn={isLoggedIn} csrfToken={csrfToken} />
           </Nav>
         </Collapse>
       </BsNavbar>
@@ -143,7 +139,7 @@ const UserMenu = ({ t, user, csrfToken }) => (
       <DropdownItem divider />
       <form action="/sign-out" method="POST">
         <DropdownItem tag="button" type="submit">
-          <input type="hidden" {...csrfToken} />
+          <CsrfTokenField {...csrfToken} />
           {t('navbar_user_logout')}
         </DropdownItem>
       </form>
@@ -205,8 +201,8 @@ const SubAppDropdown = ({ t, subApps }) => {
                   <DropdownItem header>
                     <Icon.LeihsManage /> {t('app_name_manage')}
                   </DropdownItem>
-                  {f.map(subApps.manage, ({ name, href }) => (
-                    <DropdownItem tag="a" href={href}>
+                  {f.map(subApps.manage, ({ name, href }, i) => (
+                    <DropdownItem tag="a" href={href} key={i}>
                       {name}
                     </DropdownItem>
                   ))}
@@ -239,7 +235,6 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
   const currentLang = f.find(locales, l => l.isSelected) || f.find(locales, l => l.isDefault)
   return (
     <form method="POST" action={isLoggedIn ? '/my/user/me' : '/my/language'} className="ui-lang-selection">
-      <input type="hidden" {...csrfToken} />
       <UncontrolledDropdown nav inNavbar>
         <DropdownToggle nav caret>
           <Icon.Language />
@@ -250,7 +245,7 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
             const isCurrent = !!currentLang && lang.locale === currentLang.locale
             return (
               <DropdownItem
-                key={lang.id}
+                key={lang.locale}
                 tag="button"
                 type="submit"
                 name="locale"
@@ -264,6 +259,7 @@ const LocalesDropdown = ({ locales, isLoggedIn, csrfToken }) => {
           })}
         </DropdownMenu>
       </UncontrolledDropdown>
+      <CsrfTokenField {...csrfToken} />
     </form>
   )
 }

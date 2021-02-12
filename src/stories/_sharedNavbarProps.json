@@ -1,8 +1,8 @@
 {
+  "csrfToken": { "value": "7d4eeec4-070c-4ea5-a778-85f29d9177e2" },
   "config": {
     "appTitle": "Leihs",
     "appColor": "gray",
-    "csrfToken": "88908344-e458-43d2-9137-f401c55a48ff",
     "me": null,
     "subApps": null,
     "locales": [
