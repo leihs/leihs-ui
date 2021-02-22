@@ -15,6 +15,7 @@ const Components = {
   Bold,
   DebugProps,
   Navbar,
+  DatePicker: require('./components/DatePicker').default,
 
   AppLayout,
   CategoryList: require('./components/MobileApp/CategoryList').default,
