@@ -4,20 +4,28 @@ set -eu
 
 ### VARIABLES and PWD #########################################################
 
-UI_DIR="$(dirname ${BASH_SOURCE})/.."
-cd "${UI_DIR}"
+set -x
+
+PROJECT_NAME="leihs-ui"
+
+PROJECT_DIR="$(dirname ${BASH_SOURCE})/.."
+
+ARTEFACT_NAME="$PROJECT_NAME"
+ARTEFACT_PATHS="./dist ./bootstrap-theme-leihs/build"
+DIGEST="$(git -C "$PROJECT_DIR" log -n 1 HEAD --pretty=%T)"
+LOCAL_CACHE_DIR="$(realpath -m "${LOCAL_CACHE_DIR:-"${TMPDIR:-/tmp/}/leihs-build-cache"}")"
+LOCAL_CACHED_ARTEFACT_PATH="${LOCAL_CACHE_DIR}/${ARTEFACT_NAME}_${DIGEST}.tgz"
+S3_CACHED_ARTEFACT_NAME="${ARTEFACT_NAME}_${DIGEST}.tgz"
+BUILD_CACHE_DISABLED="${BUILD_CACHE_DISABLED:-NO}"
+
+set +x
+
+cd "${PROJECT_DIR}"
 echo "PWD: $PWD"
 
-ARTEFACT_NAME="leihs-ui"
-ARTEFACT_PATHS="./dist ./bootstrap-theme-leihs/build"
-DIGEST="$(git log -n 1 HEAD --pretty=%T)"
-TMPDIR="${TMPDIR:-/tmp/}"
-LOCAL_CACHED_ARTEFACT_PATH="${TMPDIR}${ARTEFACT_NAME}_${DIGEST}.tgz"
-S3_CACHED_ARTEFACT_NAME="${ARTEFACT_NAME}_${DIGEST}.tgz"
-
-BUILD_CACHE_DISABLED="${BUILD_CACHE_DISABLED:-NO}"
 if [ $BUILD_CACHE_DISABLED == "YES" ] ||  [ $BUILD_CACHE_DISABLED == "NO" ]; then
   echo "BUILD_CACHE_DISABLED=$BUILD_CACHE_DISABLED"
+  mkdir -p "$LOCAL_CACHE_DIR"
 else
   echo 'BUILD_CACHE_DISABLED must be unset, or "YES", or "NO"'
   exit 1
@@ -29,6 +37,10 @@ fi
 
 function build {
   ./bin/build-core || { echo "build error!"; exit 1; }
+}
+
+function pack {
+  tar -cvz -f "$LOCAL_CACHED_ARTEFACT_PATH" $ARTEFACT_PATHS
 }
 
 function extract {
@@ -46,39 +58,45 @@ if [ $BUILD_CACHE_DISABLED == "YES" ]; then
 
 else
 
-  source bin/require-clean-working-tree
+  source ./bin/require-clean-working-tree
   require-clean-working-tree
+
+  # RUBY on CI for ./bin/s3-cache-helper
+  RUBY="${RUBY:-EMPTY}"
+  if [ "${RUBY}" != 'EMPTY' ]; then
+    export PATH=~/.rubies/$RUBY/bin:$PATH
+  fi
 
   echo "LOCAL_CACHED_ARTEFACT_PATH: $LOCAL_CACHED_ARTEFACT_PATH"
 
   if [ -e $LOCAL_CACHED_ARTEFACT_PATH ]; then
 
-    echo "INFO: locally cached artefact found, extracting"
+    echo "INFO: locally cached artefact found, extracting, and caching ..."
     extract
 
+    ./bin/s3-cache-helper upload -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
   else
-
-    # RUBY on CI for ./bin/s3-cache-helper
-    RUBY="${RUBY:-EMPTY}"
-    if [ "${RUBY}" != 'EMPTY' ]; then
-      export PATH=~/.rubies/$RUBY/bin:$PATH
-    fi
 
     echo "S3_CACHED_ARTEFACT_NAME: $S3_CACHED_ARTEFACT_NAME"
     echo "INFO: trying to download from S3 cache"
     ./bin/s3-cache-helper download -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
+
     if [ -e $LOCAL_CACHED_ARTEFACT_PATH ]; then
+
       echo "INFO: artefact found, extracting "
       extract
     else
+
       echo "INFO: no cached artefact found: building, packing, and caching ..."
       build
-      tar -cvz -f "$LOCAL_CACHED_ARTEFACT_PATH" $ARTEFACT_PATHS
+      pack
       ./bin/s3-cache-helper upload -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
     fi
   fi
 fi
 
 cd -
+
+echo "OK ✔"
 
 # vi: ft=sh

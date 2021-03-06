@@ -2,7 +2,6 @@
   "name": "@leihs/ui",
   "version": "1.0.0",
   "scripts": {
-    "preinstall": "cd bootstrap-theme-leihs && { test -d node_modules && npm i || { npm ci || npm i ;} ;}",
     "dev": "npm run -s build:theme && node server.js",
     "start": "NODE_ENV=production node server.js",
     "build": "npm run -s build:theme && npm run -s build:ssr",

@@ -4,7 +4,12 @@ set -eux
 
 cd "$(dirname ${BASH_SOURCE})/.."
 
-test -d node_modules && npm i || { npm ci || npm i ;}
+cd bootstrap-theme-leihs
+npm ci --no-audit
+npm run ensure-sass
+
+cd -
+npm ci --no-audit
 
 cd -
 
