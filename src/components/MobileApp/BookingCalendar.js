@@ -192,9 +192,10 @@ export const BookingCalendar = ({
             direction="vertical"
             months={numMonths}
             className="m-0"
+            // NOTE: enabling scroll causes unacceptable performance regression, this would have to be solved if we want to enable it
             scroll={{
-              enabled: true,
-              monthHeight: WIP_LARGE_SIZE ? 278 : undefined
+              enabled: false
+              // monthHeight: WIP_LARGE_SIZE ? 278 : undefined
             }}
             //
             ranges={[selectedRange]}
