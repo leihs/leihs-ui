@@ -11,11 +11,10 @@ scripts:
       build-ui: { script_key: build-ui }
     timeout: 10 minutes
     body: |
-      npm add ./test/
+      npm add --force ./test/
   test:
     start_when:
       prepared: { script_key: prepare-test }
     timeout: 10 minutes
     body: |
       npm run test
-
