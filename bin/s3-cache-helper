@@ -1,5 +1,17 @@
 #!/usr/bin/env ruby
 
+# NOTE: early abort if no config - keep it pure ruby to support more environments
+ENV_CONFIG = {
+  endpoint: ENV['S3_CI_ENDPOINT'].to_s.strip,
+  bucket: ENV['S3_CI_CACHE_BUCKET'].to_s.strip,
+  aws_key: ENV['AWS_ACCESS_KEY_ID'].to_s.strip,
+  aws_secret: ENV['AWS_SECRET_ACCESS_KEY'].to_s.strip
+}
+if ENV_CONFIG.values.any? {|v| v.length < 1}
+  puts "INFO: S3 env vars are not defined; exiting immediatelly without error"
+  exit 0
+end
+
 require 'bundler/inline'
 
 gemfile do
@@ -14,41 +26,27 @@ end
 require 'active_support/all'
 require 'optparse'
 require 'digest'
+# require 'pry'
+
+S3_CONF = OpenStruct.new(ENV_CONFIG)
 
 def initialize_s3
+  @credentials = Aws::Credentials.new(S3_CONF.aws_key,S3_CONF.aws_secret)
 
-  if endpoint=ENV['S3_CI_ENDPOINT'].presence and
-      bucket=ENV['S3_CI_CACHE_BUCKET'].presence and
-      aws_key=ENV['AWS_ACCESS_KEY_ID'].presence and
-      aws_secret=ENV['AWS_SECRET_ACCESS_KEY'].presence
+  Aws.config.update(endpoint: S3_CONF.endpoint,
+                    access_key_id: S3_CONF.aws_key,
+                    secret_access_key: S3_CONF.aws_secret,
+                    force_path_style: true,
+                    region: 'us-east-1')
 
-    @credentials = Aws::Credentials.new(aws_key,aws_secret)
+  @client = Aws::S3::Client.new(credentials: @credentials,
+                                region: 'us-east-1',
+                                endpoint: S3_CONF.endpoint)
 
-    Aws.config.update(endpoint: endpoint,
-                      access_key_id: aws_key,
-                      secret_access_key: aws_secret,
-                      force_path_style: true,
-                      region: 'us-east-1')
-
-    @client = Aws::S3::Client.new(credentials: @credentials,
-                                 region: 'us-east-1',
-                                 endpoint: endpoint)
-
-    @s3 = Aws::S3::Resource.new(client: @client)
-
-  else
-    puts "WARN: S3 env vars are not defined; exiting immediatelly without error"
-    exit 0
-  end
-
+  @s3 = Aws::S3::Resource.new(client: @client)
 end
 
-
-
-
-
 def main
-
   opts = {}.with_indifferent_access
   OptionParser.new do |opts|
     opts.banner = <<-DOC
@@ -76,7 +74,6 @@ def main
     puts "WARN: S3 object.exists? query failed; exiting immediatelly without error!"
     exit 0
   end
-
 
   case command
 
