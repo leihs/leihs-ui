@@ -2,9 +2,15 @@
 
 shared styles, ui components etc.
 
+## docs
+
+* 🟪 [Bootstrap (CSS Framework](https://getbootstrap.com/docs/4.6/components/)
+* ⚛ [React (UI Framework)](https://reactjs.org/docs/react-component.html)
+* 📗 [Storybook (Styleguide)](https://storybook.js.org/docs/react/get-started/introduction)
+
 ## development
 
-- [Node.js](https://nodejs.org/) 14 LTS
+- use [Node.js](https://nodejs.org/) 14 LTS
 
 ```sh
 git clone https://github.com/leihs/leihs-ui
