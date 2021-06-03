@@ -1,8 +1,17 @@
 # leihs-ui
 
-**_[WORK IN PROGRESS]_**
-
 shared styles, ui components etc.
+
+## development
+
+- [Node.js](https://nodejs.org/) 14 LTS
+
+```sh
+git clone https://github.com/leihs/leihs-ui
+cd leihs-ui
+bin/build
+npm run storybook
+```
 
 ## contents:
 
