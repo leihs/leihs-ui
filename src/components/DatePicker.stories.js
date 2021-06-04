@@ -12,6 +12,7 @@ export default {
   component: DatePicker
 }
 
+// eslint-disable-next-line react/display-name
 const makeBaseStory = ({ initialValue, onlyFuture, wasValidated, ...props }) => () => {
   const [selectedDate, setSelectedDate] = useState(initialValue)
   //

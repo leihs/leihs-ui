@@ -1,12 +1,14 @@
-include: cider-ci/install-ruby_task-component.yml
-
-traits:
-  npm: true
+include:
+  - path: cider-ci/install-ruby_task-component.yml
+  - path: cider-ci/install-nodejs_task-component.yml
 
 scripts:
   build-ui:
     timeout: 10 minutes
-    body:  ./bin/build
+    body: |
+      source ~/.nvm/nvm.sh && nvm use "$NVM_NODEJS_VERSION"
+      ./bin/build
     exclusive_executor_resource: leihs-ui-build
     start_when:
-      install-ruby-passed: {script_key: install-ruby}
+      install-ruby-passed: { script_key: install-ruby }
+      install-nodejs-passed: { script_key: install-nodejs }

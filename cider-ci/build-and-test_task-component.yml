@@ -2,8 +2,6 @@ include: cider-ci/build_task-component.yml
 
 environment_variables:
   CI: 'true'
-traits:
-  npm: true
 
 scripts:
   prepare-test:
@@ -11,10 +9,12 @@ scripts:
       build-ui: { script_key: build-ui }
     timeout: 10 minutes
     body: |
+      source ~/.nvm/nvm.sh && nvm use "$NVM_NODEJS_VERSION"
       npm add --force ./test/
   test:
     start_when:
       prepared: { script_key: prepare-test }
     timeout: 10 minutes
     body: |
+      source ~/.nvm/nvm.sh && nvm use "$NVM_NODEJS_VERSION"
       npm run test

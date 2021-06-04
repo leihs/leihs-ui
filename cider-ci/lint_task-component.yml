@@ -1,8 +1,11 @@
-environment_variables:
-  CI: 'true'
-traits:
-  npm: true
+include: cider-ci/install-nodejs_task-component.yml
+
 scripts:
   lint:
     timeout: 10 minutes
-    body: 'npm ci && npm run ci:lint'
+    start_when: { install-nodejs-passed: { script_key: install-nodejs } }
+    body: |
+      source ~/.nvm/nvm.sh && nvm use "$NVM_NODEJS_VERSION"
+      set -exu
+      { npm ci --no-audit --offline || npm --no-audit ci ;}
+      npm run ci:lint

@@ -1,5 +1,7 @@
 task_defaults:
   environment_variables:
+    CI: 'true' # needed for frontend build packages, they detect CI vs DEV this way
     RUBY: '{{RUBY_ENGINE}}-{{RUBY_VERSION}}'
     RUBY_ENGINE: ruby
     RUBY_VERSION: 2.7.2
+    NVM_NODEJS_VERSION: '14'

@@ -4,6 +4,7 @@ jobs:
     name: Lint
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
+    include: cider-ci/task_defaults.yml
     tasks:
       lint:
         include: cider-ci/lint_task-component.yml

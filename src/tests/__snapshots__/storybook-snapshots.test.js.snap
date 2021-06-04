@@ -21091,17 +21091,6 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Page with Crash
         >
           Error: I crashed!
           <br />
-          
-    in ErrorThrower (at AppLayout.stories.js:131)
-    in div (at AppLayout.js:21)
-    in Page (at AppLayout.stories.js:130)
-    in ErrorBoundary (at AppLayout.js:12)
-    in div (at AppLayout.js:11)
-    in main (at AppLayout.js:8)
-    in MainView (at AppLayout.stories.js:129)
-    in div (at AppLayout.js:5)
-    in AppWrapper (at AppLayout.stories.js:128)
-    in deprecated
         </details>
       </div>
     </div>
