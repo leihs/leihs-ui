@@ -20877,10 +20877,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
                   <a
                     href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
                   >
-                    <img
-                      alt=""
-                      className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-                      src="5d302b26-5737-48e7-a90d-e65f22d8c065.jpg"
+                    <div
+                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
                     />
                   </a>
                 </div>
@@ -20925,10 +20923,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
                   <a
                     href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
                   >
-                    <img
-                      alt=""
-                      className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-                      src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+                    <div
+                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
                     />
                   </a>
                 </div>
@@ -20973,10 +20969,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
                   <a
                     href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
                   >
-                    <img
-                      alt=""
-                      className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-                      src="fdfb06be-9bfc-5377-a82b-5d9fb0cc28fb.jpg"
+                    <div
+                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
                     />
                   </a>
                 </div>
@@ -21124,10 +21118,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/CategoryList Example 1 1`
         <a
           href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="5d302b26-5737-48e7-a90d-e65f22d8c065.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -21172,10 +21164,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/CategoryList Example 1 1`
         <a
           href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -21220,10 +21210,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/CategoryList Example 1 1`
         <a
           href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="fdfb06be-9bfc-5377-a82b-5d9fb0cc28fb.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -21876,10 +21864,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         <a
           href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -21926,10 +21912,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         <a
           href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="43cd9671-8ab2-5960-8426-4f9b235b449d.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -21976,10 +21960,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         <a
           href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="4d446da0-81ae-5dd4-a2b0-f9adae2de0d4.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -22026,10 +22008,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         <a
           href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="8e17238d-9ee2-402c-a469-20300d7b08fc.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -22076,10 +22056,8 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         <a
           href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
         >
-          <img
-            alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-            src="ad8a36fd-1bec-5be5-a702-326e4e49d756.jpg"
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
           />
         </a>
       </div>
@@ -22217,7 +22195,6 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Cart
                 className="img-fluid img-thumbnail mr-3"
                 href="#modelShow"
                 onClick={[Function]}
-                src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
                 style={
                   Object {
                     "maxHeight": "4rem",
@@ -22323,7 +22300,6 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Cart
                 className="img-fluid img-thumbnail mr-3"
                 href="#modelShow"
                 onClick={[Function]}
-                src="0350f864-3e72-43dc-9365-b5f8ca277063.jpg"
                 style={
                   Object {
                     "maxHeight": "4rem",
@@ -22441,7 +22417,6 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Line
           className="img-fluid img-thumbnail mr-3"
           href="#modelShow"
           onClick={[Function]}
-          src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
           style={
             Object {
               "maxHeight": "4rem",
@@ -22547,7 +22522,6 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Line
           className="img-fluid img-thumbnail mr-3"
           href="#modelShow"
           onClick={[Function]}
-          src="0350f864-3e72-43dc-9365-b5f8ca277063.jpg"
           style={
             Object {
               "maxHeight": "4rem",
