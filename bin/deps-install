@@ -5,7 +5,8 @@ set -eux
 cd "$(dirname ${BASH_SOURCE})/.."
 
 cd bootstrap-theme-leihs
-npm ci --no-audit
+# NOTE: optimize network access, first try with local cache only
+npm ci --no-audit --offline || npm ci --no-audit
 npm run ensure-sass
 cd -
 
