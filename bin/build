@@ -43,7 +43,7 @@ function pack {
 }
 
 function extract {
-  npm run build:symlinks
+  ./bin/build-symlinks
   tar -xvz -f "$LOCAL_CACHED_ARTEFACT_PATH"
 }
 

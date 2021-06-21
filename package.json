@@ -13,7 +13,7 @@
     "build:uipackage": "echo '{\"name\":\"@leihs/ui-components\"}' > dist/ui-components/package.json",
     "watch:lib": "NODE_ENV=development npx webpack --watch --info-verbosity verbose --config ./webpack.config.js",
     "watch:theme": "cd bootstrap-theme-leihs && npm run watch",
-    "build:symlinks": "rm -f src/static src/theme src/legacy static/theme && cd src && ln -fs ../static static && ln -fs ../legacy legacy && ln -fs ../bootstrap-theme-leihs/build theme && cd ../static && ln -fs ../bootstrap-theme-leihs/build theme",
+    "build:symlinks": "bin/build-symlinks",
     "now-build": "bin/build-core && npm run -s build:storybook",
     "build-lib": "npm run -s build:lib",
     "lint": "eslint --fix 'src/{,**/}*.js{,x}' && npm run -s lint:json",

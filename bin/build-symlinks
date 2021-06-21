@@ -1,0 +1,11 @@
+#!/bin/sh -eu
+
+rm -f src/static src/theme src/legacy static/theme
+
+cd src
+ln -fs ../static static
+ln -fs ../legacy legacy
+ln -fs ../bootstrap-theme-leihs/build theme
+
+cd ../static
+ln -fs ../bootstrap-theme-leihs/build theme
