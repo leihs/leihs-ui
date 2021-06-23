@@ -22619,3 +22619,4525 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ShoppingCart Example Line
   </ul>
 </div>
 `;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/DialogLayout Dialog Layout 1`] = `
+<div
+  className="w21-bg-light h-100"
+>
+  <div>
+    <h3
+      className="text-center text-uppercase pt-5 m-0 w21-bg-light2"
+    >
+      Title
+    </h3>
+    <div
+      className="w21-bg-light2 p-5"
+    >
+      Some dialog content
+    </div>
+    <div
+      className="p-5"
+    >
+      Buttons and other footer content
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/FilterSummary Plain Example 1`] = `
+<div
+  className="text-center"
+>
+  <button
+    className="w21-bg-light rounded-pill px-4 py-2"
+    onClick={[Function]}
+    type="button"
+  >
+    Lorem
+  </button>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/FilterSummary With More Content 1`] = `
+<div
+  className="text-center"
+>
+  <button
+    className="w21-bg-light rounded-pill px-4 py-2"
+    onClick={[Function]}
+    type="button"
+  >
+    Lorem ipsum dolor sit amet
+  </button>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/FilterSummary With Multi Line Content 1`] = `
+<div
+  className="text-center"
+>
+  <button
+    className="w21-bg-light rounded-pill px-4 py-2"
+    onClick={[Function]}
+    type="button"
+  >
+    <div>
+      Lorem ipsum dolor sit amet
+    </div>
+    <div>
+      Lorem ipsum dolor sit amet
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/ImageThumbnail Image Thumbnail 1`] = `
+<div
+  className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+>
+  <a>
+    <div
+      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+    />
+  </a>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/InputWithClearButton Form Control 1`] = `
+<div>
+  <div
+    className="input-group"
+  >
+    <input
+      className="form-control border-right-0"
+      name="name"
+      onChange={[Function]}
+      placeholder="Name"
+      type="text"
+      value=""
+    />
+    <div
+      className="input-group-append"
+    >
+      <button
+        className="input-group-text bg-white border-left-0"
+        onClick={[Function]}
+        tabIndex="-1"
+        title="Eingabe löschen"
+        type="button"
+      >
+        <svg
+          aria-hidden="true"
+          className="svg-inline--fa fa-times fa-w-11 "
+          data-icon="times"
+          data-prefix="fas"
+          focusable="false"
+          role="img"
+          style={Object {}}
+          viewBox="0 0 352 512"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+            fill="currentColor"
+            style={Object {}}
+          />
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div
+    className="p-2"
+  >
+    Name = 
+    
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/InputWithClearButton Inline Block 1`] = `
+<div>
+  <div
+    className="d-inline-block w-50"
+  >
+    <div
+      className="input-group"
+    >
+      <input
+        className="form-control border-right-0"
+        name="firstName"
+        onChange={[Function]}
+        placeholder="First name"
+        type="text"
+        value="James"
+      />
+      <div
+        className="input-group-append"
+      >
+        <button
+          className="input-group-text bg-white border-left-0"
+          onClick={[Function]}
+          tabIndex="-1"
+          title="Eingabe löschen"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-times fa-w-11 "
+            data-icon="times"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 352 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="d-inline-block w-50"
+  >
+    <div
+      className="input-group"
+    >
+      <input
+        className="form-control border-right-0"
+        name="lastName"
+        onChange={[Function]}
+        placeholder="Last name"
+        type="text"
+        value="Bond"
+      />
+      <div
+        className="input-group-append"
+      >
+        <button
+          className="input-group-text bg-white border-left-0"
+          onClick={[Function]}
+          tabIndex="-1"
+          title="Eingabe löschen"
+          type="button"
+        >
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-times fa-w-11 "
+            data-icon="times"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 352 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="p-2"
+  >
+    Name = 
+    James Bond
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/ListAsGridSquare List As Grid Square 1`] = `
+<div
+  className="ui-list-as-grid-square row no-gutters d-flex flex-wrap mx-n2"
+>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href={null}
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href={null}
+        >
+          <span
+            className="d-block font-bold"
+          >
+            Item 1
+          </span>
+          <span
+            className="d-block"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href={null}
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href={null}
+        >
+          <span
+            className="d-block font-bold"
+          >
+            Item 2
+          </span>
+          <span
+            className="d-block"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3 min-h-16"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+      >
+        <a
+          href={null}
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="mx-0 mt-1 text-base leading-snug"
+      >
+        <a
+          className="text-color-content"
+          href={null}
+        >
+          <span
+            className="d-block font-bold"
+          >
+            Item 3 with much text text text
+          </span>
+          <span
+            className="d-block"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/ListItem List Item 1`] = `
+<div
+  className="w21-list-item pt-3 pb-1"
+>
+  <div
+    className="row no-guttersx align-items-center mb-2"
+  >
+    <div
+      className="col-12"
+    >
+      Lorem ipsum
+    </div>
+  </div>
+  <hr
+    className="mx-n4 mb-0"
+  />
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/ListItem List Item Clickable 1`] = `
+<div
+  className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+  onClick={[Function]}
+>
+  <div
+    className="row no-guttersx align-items-center mb-2"
+  >
+    <div
+      className="col-10"
+    >
+      Lorem ipsum
+      <br />
+      Lorem ipsum
+    </div>
+    <div
+      className="col-2 text-3xl"
+    >
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-angle-right fa-w-8 "
+        data-icon="angle-right"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 256 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </div>
+  <div>
+    <div>
+      Foot content (below vertical icon alignment zone)
+    </div>
+  </div>
+  <hr
+    className="mx-n4 mb-0"
+  />
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/ModelFilterForm Full Example 1`] = `
+<form
+  className="form form-compact"
+  onSubmit={[Function]}
+>
+  <div
+    className="px-4 py-3 w21-bg-light2"
+  >
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Stichwort
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-down fa-w-10 "
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+      <div>
+        <div
+          className="form-group"
+        >
+          <div
+            className="input-group"
+          >
+            <input
+              className="form-control border-right-0"
+              name="term"
+              onChange={[Function]}
+              placeholder="Suchbegriff eingeben"
+              type="text"
+              value="beamer"
+            />
+            <div
+              className="input-group-append"
+            >
+              <button
+                className="input-group-text bg-white border-left-0"
+                onClick={[Function]}
+                tabIndex="-1"
+                title="Eingabe löschen"
+                type="button"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-times fa-w-11 "
+                  data-icon="times"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 352 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Verfügbarkeit
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-down fa-w-10 "
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+      <div>
+        <div
+          className="form-group input-group"
+        >
+          <div
+            className="input-group-prepend"
+          >
+            <label
+              className="input-group-text bg-white"
+              htmlFor="start-date"
+              style={
+                Object {
+                  "width": "3.5em",
+                }
+              }
+            >
+              Von
+            </label>
+          </div>
+          <input
+            className="form-control "
+            defaultValue="2020-12-14"
+            id="start-date"
+            name="start-date"
+            onChange={[Function]}
+            placeholder="From"
+            required={true}
+            type="date"
+          />
+        </div>
+        <div
+          className="form-group input-group"
+        >
+          <div
+            className="input-group-prepend"
+          >
+            <label
+              className="input-group-text bg-white"
+              htmlFor="end-date"
+              style={
+                Object {
+                  "width": "3.5em",
+                }
+              }
+            >
+              Bis
+            </label>
+          </div>
+          <input
+            className="form-control "
+            defaultValue="2020-12-15"
+            id="end-date"
+            name="end-date"
+            onChange={[Function]}
+            placeholder="Until"
+            required={true}
+            type="date"
+          />
+        </div>
+      </div>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Geräteparks
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-down fa-w-10 "
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+      <div>
+        <div
+          className="form-group"
+        >
+          <select
+            className="form-control custom-select"
+            name="pool-id"
+            onChange={[Function]}
+            value="de577733-0f4a-4b15-b217-e79df29afbcb"
+          >
+            <option
+              value="all"
+            >
+              Alle Geräteparks
+            </option>
+            <option
+              value="de577733-0f4a-4b15-b217-e79df29afbcb"
+            >
+              Pool 1
+            </option>
+            <option
+              value="e441b4c0-3477-4970-82c6-f5ed8ad9ccc1"
+            >
+              Pool 2
+            </option>
+          </select>
+          <button
+            className="btn btn-light border-0 w21-bg-light w-100 mt-2"
+            onClick={[Function]}
+            type="button"
+          >
+            Gerätepark hinzufügen
+          </button>
+        </div>
+      </div>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Delegation
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-down fa-w-10 "
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+      <div>
+        <div
+          className="form-group"
+        >
+          <select
+            className="form-control custom-select"
+            name="user-id"
+            onChange={[Function]}
+            value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+          >
+            <option
+              value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+            >
+              Hans Heiri
+               (persönlich)
+            </option>
+            <option
+              value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+            >
+              Delegation 1
+            </option>
+            <option
+              value="3013ff5a-0203-4ec5-bda5-61871ddd5dc7"
+            >
+              Delegation 2
+            </option>
+          </select>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div
+    className="px-4 py-3 row"
+  >
+    <div
+      className="col"
+    >
+      <button
+        className="btn btn-outline-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        Zurücksetzen
+      </button>
+    </div>
+    <div
+      className="col text-right"
+    >
+      <button
+        className="btn btn-success"
+        type="submit"
+      >
+        Auswählen
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/ModelFilterForm Minimal Example 1`] = `
+<form
+  className="form form-compact"
+  onSubmit={[Function]}
+>
+  <div
+    className="px-4 py-3 w21-bg-light2"
+  >
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Stichwort
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-up fa-w-10 "
+            data-icon="angle-up"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Verfügbarkeit
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-up fa-w-10 "
+            data-icon="angle-up"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Geräteparks
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-up fa-w-10 "
+            data-icon="angle-up"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+    </section>
+  </div>
+  <div
+    className="px-4 py-3 row"
+  >
+    <div
+      className="col"
+    >
+      <button
+        className="btn btn-outline-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        Zurücksetzen
+      </button>
+    </div>
+    <div
+      className="col text-right"
+    >
+      <button
+        className="btn btn-success"
+        type="submit"
+      >
+        Auswählen
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/ModelFilterForm Minimal With Delegation Example 1`] = `
+<form
+  className="form form-compact"
+  onSubmit={[Function]}
+>
+  <div
+    className="px-4 py-3 w21-bg-light2"
+  >
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Stichwort
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-up fa-w-10 "
+            data-icon="angle-up"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Verfügbarkeit
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-up fa-w-10 "
+            data-icon="angle-up"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Geräteparks
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-up fa-w-10 "
+            data-icon="angle-up"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Delegation
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-up fa-w-10 "
+            data-icon="angle-up"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+    </section>
+  </div>
+  <div
+    className="px-4 py-3 row"
+  >
+    <div
+      className="col"
+    >
+      <button
+        className="btn btn-outline-danger"
+        onClick={[Function]}
+        type="button"
+      >
+        Zurücksetzen
+      </button>
+    </div>
+    <div
+      className="col text-right"
+    >
+      <button
+        className="btn btn-success"
+        type="submit"
+      >
+        Auswählen
+      </button>
+    </div>
+  </div>
+</form>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/Navbar Navbar 1`] = `
+Array [
+  <div
+    className="my-3"
+  >
+    <nav
+      className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow"
+          >
+            <span
+              className="ui-icon ui-menu-icon w21-navbar__burger"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-semibold text-l"
+          href="/app/borrow"
+        >
+          Leihs
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0 w21-navbar__cart"
+            href="/app/borrow/order"
+          >
+            <div
+              className="w21-cart-badge"
+            />
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="my-3"
+  >
+    <nav
+      className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow"
+          >
+            <span
+              className="ui-icon ui-menu-icon w21-navbar__burger"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-semibold text-l"
+          href="/app/borrow"
+        >
+          Leihs
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0 w21-navbar__cart"
+            href="/app/borrow/order"
+          >
+            <div
+              className="w21-cart-badge"
+            >
+              0
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="my-3"
+  >
+    <nav
+      className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow"
+          >
+            <span
+              className="ui-icon ui-menu-icon w21-navbar__burger"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-semibold text-l"
+          href="/app/borrow"
+        >
+          Leihs
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0 w21-navbar__cart"
+            href="/app/borrow/order"
+          >
+            <div
+              className="w21-cart-badge"
+            >
+              3
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="my-3"
+  >
+    <nav
+      className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow"
+          >
+            <span
+              className="ui-icon ui-menu-icon w21-navbar__burger"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-semibold text-l"
+          href="/app/borrow"
+        >
+          Leihs
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0 w21-navbar__cart"
+            href="/app/borrow/order"
+          >
+            <div
+              className="w21-cart-badge"
+            >
+              11
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <div
+    className="my-3"
+  >
+    <nav
+      className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="mr-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow"
+          >
+            <span
+              className="ui-icon ui-menu-icon w21-navbar__burger"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-semibold text-l"
+          href="/app/borrow"
+        >
+          Leihs
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ml-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0 w21-navbar__cart"
+            href="/app/borrow/order"
+          >
+            <div
+              className="w21-cart-badge"
+            >
+              524
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>,
+]
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/PageLayout Page Layout 1`] = `
+<div>
+  <nav
+    className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+  >
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="mr-auto"
+      >
+        <a
+          className="nav-item nav-link px-0"
+          href="/app/borrow"
+        >
+          <span
+            className="ui-icon ui-menu-icon w21-navbar__burger"
+          >
+            ☰
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="mx-auto"
+    >
+      <a
+        className="navbar-brand m-0 font-semibold text-l"
+        href="/app/borrow"
+      >
+        Leihs
+      </a>
+    </div>
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="ml-auto d-flex align-items-center"
+      >
+        <div
+          className="mx-auto px-2 text-xs"
+        >
+          <span
+            className="text-color-info"
+          />
+        </div>
+         
+        <a
+          className="nav-item nav-link px-0 w21-navbar__cart"
+          href="/app/borrow/order"
+        >
+          <div
+            className="w21-cart-badge"
+          >
+            3
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-4 pt-4"
+  >
+    <h4
+      className="text-center text-uppercase"
+    >
+      Kontext
+    </h4>
+    <h3
+      className="text-center text-uppercase"
+    >
+      Titel
+    </h3>
+  </div>
+  <div
+    className="px-4"
+  >
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/PageLayout Page Layout Divider 1`] = `
+<div>
+  <nav
+    className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+  >
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="mr-auto"
+      >
+        <a
+          className="nav-item nav-link px-0"
+          href="/app/borrow"
+        >
+          <span
+            className="ui-icon ui-menu-icon w21-navbar__burger"
+          >
+            ☰
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="mx-auto"
+    >
+      <a
+        className="navbar-brand m-0 font-semibold text-l"
+        href="/app/borrow"
+      >
+        Leihs
+      </a>
+    </div>
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="ml-auto d-flex align-items-center"
+      >
+        <div
+          className="mx-auto px-2 text-xs"
+        >
+          <span
+            className="text-color-info"
+          />
+        </div>
+         
+        <a
+          className="nav-item nav-link px-0 w21-navbar__cart"
+          href="/app/borrow/order"
+        >
+          <div
+            className="w21-cart-badge"
+          >
+            3
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-4 pt-4"
+  >
+    <h4
+      className="text-center text-uppercase"
+    >
+      Kontext
+    </h4>
+    <h3
+      className="text-center text-uppercase"
+    >
+      Titel
+    </h3>
+  </div>
+  <div
+    className="px-4"
+  >
+    The content element has horizontal padding - use PageLayoutDivider as a full width ruler (negative margin).
+    <hr
+      className="mx-n4"
+    />
+    It can also be styled.
+    <hr
+      className="mx-n4 my-2"
+      style={
+        Object {
+          "borderColor": "black",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/Section Collapsed 1`] = `
+<section
+  className="pt-4"
+>
+  <h4
+    className="w21-section-title"
+  >
+    <span
+      className="w21-section-title__collapser"
+      onClick={[Function]}
+    >
+      Collapsed
+       
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-angle-up fa-w-10 "
+        data-icon="angle-up"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M177 159.7l136 136c9.4 9.4 9.4 24.6 0 33.9l-22.6 22.6c-9.4 9.4-24.6 9.4-33.9 0L160 255.9l-96.4 96.4c-9.4 9.4-24.6 9.4-33.9 0L7 329.7c-9.4-9.4-9.4-24.6 0-33.9l136-136c9.4-9.5 24.6-9.5 34-.1z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </span>
+  </h4>
+</section>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/Section Collapsible 1`] = `
+<section
+  className="pt-4"
+>
+  <h4
+    className="w21-section-title"
+  >
+    <span
+      className="w21-section-title__collapser"
+      onClick={[Function]}
+    >
+      Collapsible
+       
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-angle-down fa-w-10 "
+        data-icon="angle-down"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </span>
+  </h4>
+  <div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  </div>
+</section>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/Section Plain 1`] = `
+<section
+  className="pt-4"
+>
+  <h4
+    className="w21-section-title"
+  >
+    <span
+      className=""
+      onClick={[Function]}
+    >
+      Plain
+    </span>
+  </h4>
+  <div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  </div>
+</section>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/Section Using Rest Props 1`] = `
+<section
+  className="p-4"
+  style={
+    Object {
+      "backgroundColor": "pink",
+    }
+  }
+>
+  <h4
+    className="w21-section-title"
+  >
+    <span
+      className=""
+      onClick={[Function]}
+    >
+      Using restProps
+    </span>
+  </h4>
+  <div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  </div>
+</section>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Components/Section With Divider 1`] = `
+<section
+  className="pt-4"
+>
+  <h4
+    className="w21-section-title"
+  >
+    <span
+      className="w21-section-title__collapser"
+      onClick={[Function]}
+    >
+      With divider
+       
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-angle-down fa-w-10 "
+        data-icon="angle-down"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
+        style={Object {}}
+        viewBox="0 0 320 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </span>
+  </h4>
+  <hr
+    className="mx-n4 my-0"
+  />
+  <div>
+    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+  </div>
+</section>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Pages/Page02 Katalog Level 0 1`] = `
+<div>
+  <nav
+    className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+  >
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="mr-auto"
+      >
+        <a
+          className="nav-item nav-link px-0"
+          href="/app/borrow"
+        >
+          <span
+            className="ui-icon ui-menu-icon w21-navbar__burger"
+          >
+            ☰
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="mx-auto"
+    >
+      <a
+        className="navbar-brand m-0 font-semibold text-l"
+        href="/app/borrow"
+      >
+        Leihs
+      </a>
+    </div>
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="ml-auto d-flex align-items-center"
+      >
+        <div
+          className="mx-auto px-2 text-xs"
+        >
+          <span
+            className="text-color-info"
+          />
+        </div>
+         
+        <a
+          className="nav-item nav-link px-0 w21-navbar__cart"
+          href="/app/borrow/order"
+        >
+          <div
+            className="w21-cart-badge"
+          >
+            3
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-4 pt-4"
+  >
+    <h3
+      className="text-center text-uppercase"
+    >
+      Katalog
+    </h3>
+  </div>
+  <div
+    className="px-4"
+  >
+    <div
+      className="text-center"
+    >
+      <button
+        className="w21-bg-light rounded-pill px-4 py-2"
+        type="button"
+      >
+        Nur Ausleihe Toni, jetzt verfügbar
+      </button>
+    </div>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className=""
+          onClick={[Function]}
+        >
+          Kategorien
+        </span>
+      </h4>
+      <div>
+        <div
+          className="ui-list-as-grid-square row no-gutters d-flex flex-wrap mx-n2"
+        >
+          <div
+            className="col-6 col-sm-3 min-h-16"
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+              >
+                <a
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <div
+                    className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                  />
+                </a>
+              </div>
+              <div
+                className="mx-0 mt-1 text-base leading-snug"
+              >
+                <a
+                  className="text-color-content"
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <span
+                    className="d-block font-bold"
+                  >
+                    Audio
+                  </span>
+                  <span
+                    className="d-block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-6 col-sm-3 min-h-16"
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+              >
+                <a
+                  href="#app/borrow/categories/3f69bb3b-8934-589c-8d96-69f3ce31416e"
+                >
+                  <div
+                    className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                  />
+                </a>
+              </div>
+              <div
+                className="mx-0 mt-1 text-base leading-snug"
+              >
+                <a
+                  className="text-color-content"
+                  href="#app/borrow/categories/3f69bb3b-8934-589c-8d96-69f3ce31416e"
+                >
+                  <span
+                    className="d-block font-bold"
+                  >
+                    Foto
+                  </span>
+                  <span
+                    className="d-block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-6 col-sm-3 min-h-16"
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+              >
+                <a
+                  href="#app/borrow/categories/56336471-2ce5-541c-be64-7fdb891f49f5"
+                >
+                  <div
+                    className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                  />
+                </a>
+              </div>
+              <div
+                className="mx-0 mt-1 text-base leading-snug"
+              >
+                <a
+                  className="text-color-content"
+                  href="#app/borrow/categories/56336471-2ce5-541c-be64-7fdb891f49f5"
+                >
+                  <span
+                    className="d-block font-bold"
+                  >
+                    Video
+                  </span>
+                  <span
+                    className="d-block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            className="col-6 col-sm-3 min-h-16"
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+              >
+                <a
+                  href="#app/borrow/categories/82165b56-aa9e-5d6a-b37c-f446cda4004e"
+                >
+                  <div
+                    className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                  />
+                </a>
+              </div>
+              <div
+                className="mx-0 mt-1 text-base leading-snug"
+              >
+                <a
+                  className="text-color-content"
+                  href="#app/borrow/categories/82165b56-aa9e-5d6a-b37c-f446cda4004e"
+                >
+                  <span
+                    className="d-block font-bold"
+                  >
+                    Musikinstrumente & Zubehör
+                  </span>
+                  <span
+                    className="d-block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Pages/Page03 Katalog Level 1 1`] = `
+<div>
+  <nav
+    className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+  >
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="mr-auto"
+      >
+        <a
+          className="nav-item nav-link px-0"
+          href="/app/borrow"
+        >
+          <span
+            className="ui-icon ui-menu-icon w21-navbar__burger"
+          >
+            ☰
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="mx-auto"
+    >
+      <a
+        className="navbar-brand m-0 font-semibold text-l"
+        href="/app/borrow"
+      >
+        Leihs
+      </a>
+    </div>
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="ml-auto d-flex align-items-center"
+      >
+        <div
+          className="mx-auto px-2 text-xs"
+        >
+          <span
+            className="text-color-info"
+          />
+        </div>
+         
+        <a
+          className="nav-item nav-link px-0 w21-navbar__cart"
+          href="/app/borrow/order"
+        >
+          <div
+            className="w21-cart-badge"
+          >
+            3
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-4 pt-4"
+  >
+    <h3
+      className="text-center text-uppercase"
+    >
+      Audio
+    </h3>
+  </div>
+  <div
+    className="px-4"
+  >
+    <div
+      className="text-center"
+    >
+      <button
+        className="w21-bg-light rounded-pill px-4 py-2"
+        type="button"
+      >
+        Nur Ausleihe Toni, jetzt verfügbar
+      </button>
+    </div>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Unterkategorien
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-down fa-w-10 "
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+      <div>
+        <div
+          className="ui-list-as-grid-square row no-gutters d-flex flex-wrap mx-n2"
+        >
+          <div
+            className="col-6 col-sm-3 min-h-16"
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+              >
+                <a
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <div
+                    className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                  />
+                </a>
+              </div>
+              <div
+                className="mx-0 mt-1 text-base leading-snug"
+              >
+                <a
+                  className="text-color-content"
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <span
+                    className="d-block font-bold"
+                  >
+                    Audio
+                  </span>
+                  <span
+                    className="d-block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Gegenstände
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-down fa-w-10 "
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+      <div>
+        <div
+          className="ui-list-as-grid-square row no-gutters d-flex flex-wrap mx-n2"
+        >
+          <div
+            className="col-6 col-sm-3 min-h-16"
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+              >
+                <a
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <div
+                    className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                  />
+                </a>
+              </div>
+              <div
+                className="mx-0 mt-1 text-base leading-snug"
+              >
+                <a
+                  className="text-color-content"
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <span
+                    className="d-block font-bold"
+                  >
+                    Audio
+                  </span>
+                  <span
+                    className="d-block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Pages/Page04 Katalog Level 2 1`] = `
+<div>
+  <nav
+    className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+  >
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="mr-auto"
+      >
+        <a
+          className="nav-item nav-link px-0"
+          href="/app/borrow"
+        >
+          <span
+            className="ui-icon ui-menu-icon w21-navbar__burger"
+          >
+            ☰
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="mx-auto"
+    >
+      <a
+        className="navbar-brand m-0 font-semibold text-l"
+        href="/app/borrow"
+      >
+        Leihs
+      </a>
+    </div>
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="ml-auto d-flex align-items-center"
+      >
+        <div
+          className="mx-auto px-2 text-xs"
+        >
+          <span
+            className="text-color-info"
+          />
+        </div>
+         
+        <a
+          className="nav-item nav-link px-0 w21-navbar__cart"
+          href="/app/borrow/order"
+        >
+          <div
+            className="w21-cart-badge"
+          >
+            3
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-4 pt-4"
+  >
+    <h4
+      className="text-center text-uppercase"
+    >
+      Audio
+    </h4>
+    <h3
+      className="text-center text-uppercase"
+    >
+      Mischpulte & CD Player
+    </h3>
+  </div>
+  <div
+    className="px-4"
+  >
+    <div
+      className="text-center"
+    >
+      <button
+        className="w21-bg-light rounded-pill px-4 py-2"
+        type="button"
+      >
+        Nur Ausleihe Toni, jetzt verfügbar
+      </button>
+    </div>
+    <section
+      className="pt-4"
+    >
+      <h4
+        className="w21-section-title"
+      >
+        <span
+          className="w21-section-title__collapser"
+          onClick={[Function]}
+        >
+          Gegenstände
+           
+          <svg
+            aria-hidden="true"
+            className="svg-inline--fa fa-angle-down fa-w-10 "
+            data-icon="angle-down"
+            data-prefix="fas"
+            focusable="false"
+            role="img"
+            style={Object {}}
+            viewBox="0 0 320 512"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+              fill="currentColor"
+              style={Object {}}
+            />
+          </svg>
+        </span>
+      </h4>
+      <div>
+        <div
+          className="ui-list-as-grid-square row no-gutters d-flex flex-wrap mx-n2"
+        >
+          <div
+            className="col-6 col-sm-3 min-h-16"
+            style={
+              Object {
+                "opacity": 1,
+              }
+            }
+          >
+            <div
+              className="ui-list-as-grid-square-item max-w-sm rounded-lg overflow-hidden bg-white mx-2 mb-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="square-container position-relative rounded-lg overflow-hidden border border-gray-200"
+              >
+                <a
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <div
+                    className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+                  />
+                </a>
+              </div>
+              <div
+                className="mx-0 mt-1 text-base leading-snug"
+              >
+                <a
+                  className="text-color-content"
+                  href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                >
+                  <span
+                    className="d-block font-bold"
+                  >
+                    Audio
+                  </span>
+                  <span
+                    className="d-block"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Pages/Page05 Katalog filtern 1`] = `
+<div
+  className="w21-bg-light h-100"
+>
+  <div>
+    <h3
+      className="text-center text-uppercase pt-5 m-0 w21-bg-light2"
+    >
+      Katalog filtern
+    </h3>
+    <form
+      className="form form-compact"
+      onSubmit={[Function]}
+    >
+      <div
+        className="px-4 py-3 w21-bg-light2"
+      >
+        <section
+          className="pt-4"
+        >
+          <h4
+            className="w21-section-title"
+          >
+            <span
+              className="w21-section-title__collapser"
+              onClick={[Function]}
+            >
+              Stichwort
+               
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-angle-down fa-w-10 "
+                data-icon="angle-down"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+          </h4>
+          <div>
+            <div
+              className="form-group"
+            >
+              <div
+                className="input-group"
+              >
+                <input
+                  className="form-control border-right-0"
+                  name="term"
+                  onChange={[Function]}
+                  placeholder="Suchbegriff eingeben"
+                  type="text"
+                  value="Mikrofon"
+                />
+                <div
+                  className="input-group-append"
+                >
+                  <button
+                    className="input-group-text bg-white border-left-0"
+                    onClick={[Function]}
+                    tabIndex="-1"
+                    title="Eingabe löschen"
+                    type="button"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      className="svg-inline--fa fa-times fa-w-11 "
+                      data-icon="times"
+                      data-prefix="fas"
+                      focusable="false"
+                      role="img"
+                      style={Object {}}
+                      viewBox="0 0 352 512"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                        fill="currentColor"
+                        style={Object {}}
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section
+          className="pt-4"
+        >
+          <h4
+            className="w21-section-title"
+          >
+            <span
+              className="w21-section-title__collapser"
+              onClick={[Function]}
+            >
+              Verfügbarkeit
+               
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-angle-down fa-w-10 "
+                data-icon="angle-down"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+          </h4>
+          <div>
+            <div
+              className="form-group input-group"
+            >
+              <div
+                className="input-group-prepend"
+              >
+                <label
+                  className="input-group-text bg-white"
+                  htmlFor="start-date"
+                  style={
+                    Object {
+                      "width": "3.5em",
+                    }
+                  }
+                >
+                  Von
+                </label>
+              </div>
+              <input
+                className="form-control "
+                defaultValue=""
+                id="start-date"
+                name="start-date"
+                onChange={[Function]}
+                placeholder="From"
+                required={true}
+                type="date"
+              />
+            </div>
+            <div
+              className="form-group input-group"
+            >
+              <div
+                className="input-group-prepend"
+              >
+                <label
+                  className="input-group-text bg-white"
+                  htmlFor="end-date"
+                  style={
+                    Object {
+                      "width": "3.5em",
+                    }
+                  }
+                >
+                  Bis
+                </label>
+              </div>
+              <input
+                className="form-control "
+                defaultValue=""
+                id="end-date"
+                name="end-date"
+                onChange={[Function]}
+                placeholder="Until"
+                required={true}
+                type="date"
+              />
+            </div>
+          </div>
+        </section>
+        <section
+          className="pt-4"
+        >
+          <h4
+            className="w21-section-title"
+          >
+            <span
+              className="w21-section-title__collapser"
+              onClick={[Function]}
+            >
+              Geräteparks
+               
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-angle-down fa-w-10 "
+                data-icon="angle-down"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+          </h4>
+          <div>
+            <div
+              className="form-group"
+            >
+              <select
+                className="form-control custom-select"
+                name="pool-id"
+                onChange={[Function]}
+                value="8bd16d45-056d-5590-bc7f-12849f034351"
+              >
+                <option
+                  value="all"
+                >
+                  Alle Geräteparks
+                </option>
+                <option
+                  value="8bd16d45-056d-5590-bc7f-12849f034351"
+                >
+                  Ausleihe Toni-Areal
+                </option>
+                <option
+                  value="5863967f-9804-4909-a9b7-92254616d6b2"
+                >
+                  FM-Inventar
+                </option>
+                <option
+                  value="a02b8163-9a16-5066-b48e-9eb74cf8b791"
+                >
+                  Fundus-Dok
+                </option>
+                <option
+                  value="5dd25b58-fa56-5095-bd97-2696d92c2fb1"
+                >
+                  IT-Zentrum
+                </option>
+                <option
+                  value="ffaa3aea-2a1f-4d6a-bdfc-f3be93699750"
+                >
+                  ITZ Occasions-Shop
+                </option>
+                <option
+                  value="3977012c-ce0e-501f-889b-8715fdb5d83b"
+                >
+                  ITZ Software
+                </option>
+              </select>
+              <button
+                className="btn btn-light border-0 w21-bg-light w-100 mt-2"
+                onClick={[Function]}
+                type="button"
+              >
+                Gerätepark hinzufügen
+              </button>
+            </div>
+          </div>
+        </section>
+        <section
+          className="pt-4"
+        >
+          <h4
+            className="w21-section-title"
+          >
+            <span
+              className="w21-section-title__collapser"
+              onClick={[Function]}
+            >
+              Delegation
+               
+              <svg
+                aria-hidden="true"
+                className="svg-inline--fa fa-angle-down fa-w-10 "
+                data-icon="angle-down"
+                data-prefix="fas"
+                focusable="false"
+                role="img"
+                style={Object {}}
+                viewBox="0 0 320 512"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                  fill="currentColor"
+                  style={Object {}}
+                />
+              </svg>
+            </span>
+          </h4>
+          <div>
+            <div
+              className="form-group"
+            >
+              <select
+                className="form-control custom-select"
+                name="user-id"
+                onChange={[Function]}
+                value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+              >
+                <option
+                  value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+                >
+                  Joël Gähwiler
+                   (persönlich)
+                </option>
+                <option
+                  value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+                >
+                  Delegation 1
+                </option>
+                <option
+                  value="3013ff5a-0203-4ec5-bda5-61871ddd5dc7"
+                >
+                  Delegation 2
+                </option>
+              </select>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        className="px-4 py-3 row"
+      >
+        <div
+          className="col"
+        >
+          <button
+            className="btn btn-outline-danger"
+            onClick={[Function]}
+            type="button"
+          >
+            Zurücksetzen
+          </button>
+        </div>
+        <div
+          className="col text-right"
+        >
+          <button
+            className="btn btn-success"
+            type="submit"
+          >
+            Auswählen
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Pages/Page12 Meine Ausleihen 1`] = `
+<div>
+  <nav
+    className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+  >
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="mr-auto"
+      >
+        <a
+          className="nav-item nav-link px-0"
+          href="/app/borrow"
+        >
+          <span
+            className="ui-icon ui-menu-icon w21-navbar__burger"
+          >
+            ☰
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="mx-auto"
+    >
+      <a
+        className="navbar-brand m-0 font-semibold text-l"
+        href="/app/borrow"
+      >
+        Leihs
+      </a>
+    </div>
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="ml-auto d-flex align-items-center"
+      >
+        <div
+          className="mx-auto px-2 text-xs"
+        >
+          <span
+            className="text-color-info"
+          />
+        </div>
+         
+        <a
+          className="nav-item nav-link px-0 w21-navbar__cart"
+          href="/app/borrow/order"
+        >
+          <div
+            className="w21-cart-badge"
+          >
+            3
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-4 pt-4"
+  >
+    <h3
+      className="text-center text-uppercase"
+    >
+      Meine Ausleihen
+    </h3>
+  </div>
+  <div
+    className="px-4"
+  >
+    <div
+      className="text-center"
+    >
+      <button
+        className="w21-bg-light rounded-pill px-4 py-2"
+        type="button"
+      >
+        Alle Ausleihen
+      </button>
+    </div>
+    <div>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Offen
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div>
+            CON
+          </div>
+          <div>
+            <div
+              className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+              onClick={[Function]}
+            >
+              <div
+                className="row no-guttersx align-items-center mb-2"
+              >
+                <div
+                  className="col-10"
+                >
+                  <h5>
+                    Video Semesterprojekt
+                  </h5>
+                  <div
+                    className="text-xs"
+                  >
+                    24
+                     Tage 
+                    ab 6.5.2020
+                    ,
+                     
+                    11
+                     
+                    Gegenstände
+                  </div>
+                </div>
+                <div
+                  className="col-2 text-3xl"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-angle-right fa-w-8 "
+                    data-icon="angle-right"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 256 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="mb-2"
+                >
+                  <div>
+                    <div
+                      className="font-medium"
+                    >
+                      In der Genehmigung
+                      .
+                    </div>
+                    <div
+                      className="progress w21-state-progress my-1"
+                    >
+                      <div
+                        aria-valuemax={3}
+                        aria-valuemin="0"
+                        aria-valuenow={1}
+                        className="progress-bar w21-state-progress__bar rounded"
+                        role="progressbar"
+                        style={
+                          Object {
+                            "width": "33%",
+                          }
+                        }
+                      />
+                    </div>
+                    <div
+                      className="text-xs"
+                    >
+                      1 von 3 Geräteparks genehmigt
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                className="mx-n4 mb-0"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+              onClick={[Function]}
+            >
+              <div
+                className="row no-guttersx align-items-center mb-2"
+              >
+                <div
+                  className="col-10"
+                >
+                  <h5>
+                    Werkschau 2021
+                  </h5>
+                  <div
+                    className="text-xs"
+                  >
+                    8
+                     Tage 
+                    ab 15.3.2020
+                    ,
+                     
+                    7
+                     
+                    Gegenstände
+                  </div>
+                </div>
+                <div
+                  className="col-2 text-3xl"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-angle-right fa-w-8 "
+                    data-icon="angle-right"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 256 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="mb-2"
+                >
+                  <div>
+                    <div
+                      className="font-medium"
+                    >
+                      Bereit zur Abholung
+                      .
+                    </div>
+                    <div
+                      className="progress w21-state-progress my-1"
+                    >
+                      <div
+                        aria-valuemax={7}
+                        aria-valuemin="0"
+                        aria-valuenow={4}
+                        className="progress-bar w21-state-progress__bar rounded"
+                        role="progressbar"
+                        style={
+                          Object {
+                            "width": "57%",
+                          }
+                        }
+                      />
+                    </div>
+                    <div
+                      className="text-xs"
+                    >
+                      4 von 7 Gegenständen abgeholt
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                className="mx-n4 mb-0"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+              onClick={[Function]}
+            >
+              <div
+                className="row no-guttersx align-items-center mb-2"
+              >
+                <div
+                  className="col-10"
+                >
+                  <h5>
+                    Siebdruck Material
+                  </h5>
+                  <div
+                    className="text-xs"
+                  >
+                    54
+                     Tage 
+                    ab 18.2.2020
+                    ,
+                     
+                    4
+                     
+                    Gegenstände
+                  </div>
+                </div>
+                <div
+                  className="col-2 text-3xl"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-angle-right fa-w-8 "
+                    data-icon="angle-right"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 256 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="mb-2"
+                >
+                  <div>
+                    <div
+                      className="font-medium"
+                    >
+                      Ausgeliehen
+                      .
+                    </div>
+                    <div
+                      className="progress w21-state-progress my-1"
+                    >
+                      <div
+                        aria-valuemax={54}
+                        aria-valuemin="0"
+                        aria-valuenow={7}
+                        className="progress-bar w21-state-progress__bar rounded"
+                        role="progressbar"
+                        style={
+                          Object {
+                            "width": "13%",
+                          }
+                        }
+                      />
+                    </div>
+                    <div
+                      className="text-xs"
+                    >
+                      47 Tage bis zur ersten Rückgabe
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                className="mx-n4 mb-0"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+              onClick={[Function]}
+            >
+              <div
+                className="row no-guttersx align-items-center mb-2"
+              >
+                <div
+                  className="col-10"
+                >
+                  <h5>
+                    Freitags Experiment
+                  </h5>
+                  <div
+                    className="text-xs"
+                  >
+                    2
+                     Tage 
+                    ab 12.2.2020
+                    ,
+                     
+                    3
+                     
+                    Gegenstände
+                  </div>
+                </div>
+                <div
+                  className="col-2 text-3xl"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-angle-right fa-w-8 "
+                    data-icon="angle-right"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 256 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="mb-2"
+                >
+                  <div>
+                    <div
+                      className="font-medium"
+                    >
+                      Teilweise zurückgebracht
+                      .
+                    </div>
+                    <div
+                      className="progress w21-state-progress my-1"
+                    >
+                      <div
+                        aria-valuemax={3}
+                        aria-valuemin="0"
+                        aria-valuenow={2}
+                        className="progress-bar w21-state-progress__bar rounded"
+                        role="progressbar"
+                        style={
+                          Object {
+                            "width": "67%",
+                          }
+                        }
+                      />
+                    </div>
+                    <div
+                      className="text-xs"
+                    >
+                      2 von 3 Gegenständen zurückgebracht
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                className="mx-n4 mb-0"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Abgeschlossen
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div>
+            CON
+          </div>
+          <div>
+            <div
+              className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+              onClick={[Function]}
+            >
+              <div
+                className="row no-guttersx align-items-center mb-2"
+              >
+                <div
+                  className="col-10"
+                >
+                  <h5>
+                    Diplomausstellung 2019
+                  </h5>
+                  <div
+                    className="text-xs"
+                  >
+                    72
+                     Tage 
+                    bis 12.6.2019
+                    ,
+                     
+                    16
+                     
+                    Gegenstände
+                  </div>
+                </div>
+                <div
+                  className="col-2 text-3xl"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-angle-right fa-w-8 "
+                    data-icon="angle-right"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 256 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="mb-2"
+                >
+                  <div>
+                    <div
+                      className="font-medium"
+                    >
+                      Alle Gegenstände zurückgebracht
+                      .
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                className="mx-n4 mb-0"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+              onClick={[Function]}
+            >
+              <div
+                className="row no-guttersx align-items-center mb-2"
+              >
+                <div
+                  className="col-10"
+                >
+                  <h5>
+                    Semesterfest
+                  </h5>
+                  <div
+                    className="text-xs"
+                  >
+                    2
+                     Tage 
+                    bis 24.2.2019
+                    ,
+                     
+                    1
+                     
+                    Gegenstand
+                  </div>
+                </div>
+                <div
+                  className="col-2 text-3xl"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-angle-right fa-w-8 "
+                    data-icon="angle-right"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 256 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="mb-2"
+                >
+                  <div>
+                    <div
+                      className="font-medium"
+                    >
+                      Abgelehnt
+                      .
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                className="mx-n4 mb-0"
+              />
+            </div>
+          </div>
+          <div>
+            <div
+              className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+              onClick={[Function]}
+            >
+              <div
+                className="row no-guttersx align-items-center mb-2"
+              >
+                <div
+                  className="col-10"
+                >
+                  <h5>
+                    Kurs Präsentation
+                  </h5>
+                  <div
+                    className="text-xs"
+                  >
+                    2
+                     Tage 
+                    bis 17.7.2018
+                    ,
+                     
+                    1
+                     
+                    Gegenstand
+                  </div>
+                </div>
+                <div
+                  className="col-2 text-3xl"
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="svg-inline--fa fa-angle-right fa-w-8 "
+                    data-icon="angle-right"
+                    data-prefix="fas"
+                    focusable="false"
+                    role="img"
+                    style={Object {}}
+                    viewBox="0 0 256 512"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                      fill="currentColor"
+                      style={Object {}}
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div>
+                <div
+                  className="mb-2"
+                >
+                  <div>
+                    <div
+                      className="font-medium"
+                    >
+                      An “Reto Brunner” übertragen
+                      .
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr
+                className="mx-n4 mb-0"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Pages/Page13 Meine Ausleihen filtern 1`] = `
+<div
+  className="w21-bg-light h-100"
+>
+  <div>
+    <h3
+      className="text-center text-uppercase pt-5 m-0 w21-bg-light2"
+    >
+      Meine Ausleihen filtern
+    </h3>
+    <div>
+      <form
+        action="/search"
+        className="form form-compact"
+        onSubmit={[Function]}
+      >
+        <div
+          className="p-4 w21-bg-light2"
+        >
+          <section
+            className="pt-4"
+          >
+            <h4
+              className="w21-section-title"
+            >
+              <span
+                className="w21-section-title__collapser"
+                onClick={[Function]}
+              >
+                Stichwort
+                 
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-angle-down fa-w-10 "
+                  data-icon="angle-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </h4>
+            <div>
+              <div
+                className="form-group"
+              >
+                <div
+                  className="input-group"
+                >
+                  <input
+                    className="form-control border-right-0"
+                    name="term"
+                    onChange={[Function]}
+                    placeholder="Suchbegriff eingeben"
+                    type="text"
+                    value="Mikrofon"
+                  />
+                  <div
+                    className="input-group-append"
+                  >
+                    <button
+                      className="input-group-text bg-white border-left-0"
+                      onClick={[Function]}
+                      tabIndex="-1"
+                      title="Eingabe löschen"
+                      type="button"
+                    >
+                      <svg
+                        aria-hidden="true"
+                        className="svg-inline--fa fa-times fa-w-11 "
+                        data-icon="times"
+                        data-prefix="fas"
+                        focusable="false"
+                        role="img"
+                        style={Object {}}
+                        viewBox="0 0 352 512"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                          fill="currentColor"
+                          style={Object {}}
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section
+            className="pt-4"
+          >
+            <h4
+              className="w21-section-title"
+            >
+              <span
+                className="w21-section-title__collapser"
+                onClick={[Function]}
+              >
+                Status
+                 
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-angle-down fa-w-10 "
+                  data-icon="angle-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </h4>
+            <div>
+              <div
+                className="form-group"
+              >
+                <select
+                  className="form-control custom-select"
+                  name="order-state"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    value="all"
+                  >
+                    Alle
+                  </option>
+                  <option
+                    value="inApproval"
+                  >
+                    In der Genehmigung
+                  </option>
+                  <option
+                    value="inHandOver"
+                  >
+                    Bereit zur Abholung
+                  </option>
+                  <option
+                    value="lent"
+                  >
+                    Ausgeliehen
+                  </option>
+                  <option
+                    value="inReturn"
+                  >
+                    Teilweise zurückgebracht
+                  </option>
+                  <option
+                    value="allItemsReturned"
+                  >
+                    Alle Gegenstände zurückgebracht
+                  </option>
+                  <option
+                    value="allItemsRejected"
+                  >
+                    Abgelehnt
+                  </option>
+                  <option
+                    value="transferred"
+                  >
+                    Übertragen
+                  </option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section
+            className="pt-4"
+          >
+            <h4
+              className="w21-section-title"
+            >
+              <span
+                className="w21-section-title__collapser"
+                onClick={[Function]}
+              >
+                Zeitraum
+                 
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-angle-down fa-w-10 "
+                  data-icon="angle-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </h4>
+            <div>
+              <div
+                className="form-group input-group"
+              >
+                <div
+                  className="input-group-prepend"
+                >
+                  <label
+                    className="input-group-text bg-white"
+                    htmlFor="start-date"
+                    style={
+                      Object {
+                        "width": "3.5em",
+                      }
+                    }
+                  >
+                    Von
+                  </label>
+                </div>
+                <input
+                  className="form-control "
+                  defaultValue=""
+                  id="start-date"
+                  name="start-date"
+                  onChange={[Function]}
+                  placeholder="From"
+                  type="date"
+                />
+              </div>
+              <div
+                className="form-group input-group"
+              >
+                <div
+                  className="input-group-prepend"
+                >
+                  <label
+                    className="input-group-text bg-white"
+                    htmlFor="end-date"
+                    style={
+                      Object {
+                        "width": "3.5em",
+                      }
+                    }
+                  >
+                    Bis
+                  </label>
+                </div>
+                <input
+                  className="form-control "
+                  defaultValue=""
+                  id="end-date"
+                  name="end-date"
+                  onChange={[Function]}
+                  placeholder="Until"
+                  type="date"
+                />
+              </div>
+            </div>
+          </section>
+          <section
+            className="pt-4"
+          >
+            <h4
+              className="w21-section-title"
+            >
+              <span
+                className="w21-section-title__collapser"
+                onClick={[Function]}
+              >
+                Geräteparks
+                 
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-angle-down fa-w-10 "
+                  data-icon="angle-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </h4>
+            <div>
+              <div
+                className="form-group"
+              >
+                <select
+                  className="form-control custom-select"
+                  name="pool-id"
+                  onChange={[Function]}
+                  value="8bd16d45-056d-5590-bc7f-12849f034351"
+                >
+                  <option
+                    value="all"
+                  >
+                    Alle
+                  </option>
+                  <option
+                    value="8bd16d45-056d-5590-bc7f-12849f034351"
+                  >
+                    Ausleihe Toni-Areal
+                  </option>
+                  <option
+                    value="5dd25b58-fa56-5095-bd97-2696d92c2fb1"
+                  >
+                    IT-Zentrum
+                  </option>
+                </select>
+              </div>
+            </div>
+          </section>
+          <section
+            className="pt-4"
+          >
+            <h4
+              className="w21-section-title"
+            >
+              <span
+                className="w21-section-title__collapser"
+                onClick={[Function]}
+              >
+                Delegation
+                 
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-angle-down fa-w-10 "
+                  data-icon="angle-down"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 320 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </span>
+            </h4>
+            <div>
+              <div
+                className="form-group"
+              >
+                <select
+                  className="form-control custom-select"
+                  name="user-id"
+                  onChange={[Function]}
+                  value=""
+                >
+                  <option
+                    value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+                  >
+                    Joël Gähwiler
+                     (persönlich)
+                  </option>
+                  <option
+                    value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+                  >
+                    Delegation 1
+                  </option>
+                  <option
+                    value="3013ff5a-0203-4ec5-bda5-61871ddd5dc7"
+                  >
+                    Delegation 2
+                  </option>
+                </select>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div
+          className="px-4 py-3 row"
+        >
+          <div
+            className="col"
+          >
+            <button
+              className="btn btn-outline-danger"
+              onClick={[Function]}
+              type="button"
+            >
+              Zurücksetzen
+            </button>
+          </div>
+          <div
+            className="col text-right"
+          >
+            <button
+              className="btn btn-success"
+              type="submit"
+            >
+              Auswählen
+            </button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes2021/Pages/Page14 Ausleihe Detail 1`] = `
+<div>
+  <nav
+    className="w21-navbar ui-main-nav navbar navbar-light text-xl py-0 px-4 sticky-top flex-nowrap justify-content-between"
+  >
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="mr-auto"
+      >
+        <a
+          className="nav-item nav-link px-0"
+          href="/app/borrow"
+        >
+          <span
+            className="ui-icon ui-menu-icon w21-navbar__burger"
+          >
+            ☰
+          </span>
+        </a>
+      </div>
+    </div>
+    <div
+      className="mx-auto"
+    >
+      <a
+        className="navbar-brand m-0 font-semibold text-l"
+        href="/app/borrow"
+      >
+        Leihs
+      </a>
+    </div>
+    <div
+      className="navbar-nav w-100"
+    >
+      <div
+        className="ml-auto d-flex align-items-center"
+      >
+        <div
+          className="mx-auto px-2 text-xs"
+        >
+          <span
+            className="text-color-info"
+          />
+        </div>
+         
+        <a
+          className="nav-item nav-link px-0 w21-navbar__cart"
+          href="/app/borrow/order"
+        >
+          <div
+            className="w21-cart-badge"
+          >
+            3
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+  <div
+    className="px-4 pt-4"
+  >
+    <h3
+      className="text-center text-uppercase"
+    >
+      Video Semesterprojekt
+    </h3>
+  </div>
+  <div
+    className="px-4"
+  >
+    <div>
+      <div
+        className="text-center"
+      >
+        24 Tage ab 6.5.2020, 11 Gegenstände
+      </div>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Status
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div
+            className="pt-3"
+          >
+            <div
+              className="mb-2"
+            >
+              <div>
+                <div
+                  className="font-medium"
+                >
+                  In der Genehmigung
+                  .
+                </div>
+                <div
+                  className="progress w21-state-progress my-1"
+                >
+                  <div
+                    aria-valuemax={3}
+                    aria-valuemin="0"
+                    aria-valuenow={1}
+                    className="progress-bar w21-state-progress__bar rounded"
+                    role="progressbar"
+                    style={
+                      Object {
+                        "width": "33%",
+                      }
+                    }
+                  />
+                </div>
+                <div
+                  className="text-xs"
+                >
+                  1 von 3 Geräteparks genehmigt
+                </div>
+              </div>
+            </div>
+            <button
+              className="btn btn-light border-0 w21-bg-light2 w-100 mt-2"
+              onClick={[Function]}
+              type="button"
+            >
+              Ausleihe stornieren
+            </button>
+          </div>
+        </div>
+      </section>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Zweck
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div
+            className="pt-3"
+          >
+            Material für das Video Semesterprojekt bei Prof. Zimmer
+          </div>
+        </div>
+      </section>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Geräteparks
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div
+            className="w21-list-item pt-3 pb-1"
+          >
+            <div
+              className="row no-guttersx align-items-center mb-2"
+            >
+              <div
+                className="col-12"
+              >
+                <h5>
+                  Ausleihe Toni-Areal
+                </h5>
+                <div>
+                  3
+                   Gegenstände 
+                  genehmigt
+                </div>
+              </div>
+            </div>
+            <hr
+              className="mx-n4 mb-0"
+            />
+          </div>
+          <div
+            className="w21-list-item pt-3 pb-1"
+          >
+            <div
+              className="row no-guttersx align-items-center mb-2"
+            >
+              <div
+                className="col-12"
+              >
+                <h5>
+                  IT-Zentrum
+                </h5>
+                <div>
+                  2
+                   Gegenstände 
+                  beantragt
+                </div>
+              </div>
+            </div>
+            <hr
+              className="mx-n4 mb-0"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Gegenstände
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div
+            className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+            onClick={[Function]}
+          >
+            <div
+              className="row no-guttersx align-items-center mb-2"
+            >
+              <div
+                className="col-10"
+              >
+                <h5>
+                  1
+                  x 
+                  ARRI Alexa DTE-SXS Super 35mm
+                </h5>
+                <div>
+                  Ausleihe Toni-Areal
+                </div>
+              </div>
+              <div
+                className="col-2 text-3xl"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-angle-right fa-w-8 "
+                  data-icon="angle-right"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 256 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <div
+                className="text-xs"
+              >
+                13
+                 Tage
+                 
+                ab 26.5.2021
+              </div>
+            </div>
+            <hr
+              className="mx-n4 mb-0"
+            />
+          </div>
+          <div
+            className="w21-list-item pt-3 pb-1 w21-list-item--clickable"
+            onClick={[Function]}
+          >
+            <div
+              className="row no-guttersx align-items-center mb-2"
+            >
+              <div
+                className="col-10"
+              >
+                <h5>
+                  2
+                  x 
+                  Glasfilter Tiffen 4x4 Pol
+                </h5>
+                <div>
+                  Ausleihe Toni-Areal
+                </div>
+              </div>
+              <div
+                className="col-2 text-3xl"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-angle-right fa-w-8 "
+                  data-icon="angle-right"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 256 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+              </div>
+            </div>
+            <div>
+              <div
+                className="text-xs"
+              >
+                12
+                 Tage
+                 
+                ab 27.5.2021
+              </div>
+            </div>
+            <hr
+              className="mx-n4 mb-0"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Delegation
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div
+            className="pt-3"
+          >
+            Joël Gähwiler
+             (persönlich)
+          </div>
+        </div>
+      </section>
+      <section
+        className="pt-5"
+      >
+        <h4
+          className="w21-section-title"
+        >
+          <span
+            className="w21-section-title__collapser"
+            onClick={[Function]}
+          >
+            Dokumente
+             
+            <svg
+              aria-hidden="true"
+              className="svg-inline--fa fa-angle-down fa-w-10 "
+              data-icon="angle-down"
+              data-prefix="fas"
+              focusable="false"
+              role="img"
+              style={Object {}}
+              viewBox="0 0 320 512"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0l96.4 96.4 96.4-96.4c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.8 0z"
+                fill="currentColor"
+                style={Object {}}
+              />
+            </svg>
+          </span>
+        </h4>
+        <hr
+          className="mx-n4 my-0"
+        />
+        <div>
+          <div
+            className="pt-3"
+          >
+            <div>
+              <a
+                className="w21-link"
+                href="/app/borrow/path-to-document"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-download fa-w-16 "
+                  data-icon="download"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M216 0h80c13.3 0 24 10.7 24 24v168h87.7c17.8 0 26.7 21.5 14.1 34.1L269.7 378.3c-7.5 7.5-19.8 7.5-27.3 0L90.1 226.1c-12.6-12.6-3.7-34.1 14.1-34.1H192V24c0-13.3 10.7-24 24-24zm296 376v112c0 13.3-10.7 24-24 24H24c-13.3 0-24-10.7-24-24V376c0-13.3 10.7-24 24-24h146.7l49 49c20.1 20.1 52.5 20.1 72.6 0l49-49H488c13.3 0 24 10.7 24 24zm-124 88c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20zm64 0c0-11-9-20-20-20s-20 9-20 20 9 20 20 20 20-9 20-20z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                 
+                Werteverzeichnis
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div
+        className="text-center text-muted text-center text-xs mt-5"
+      >
+        ID 
+        98510838-a6ec-4752-823e-5a3db2282775
+      </div>
+    </div>
+  </div>
+</div>
+`;

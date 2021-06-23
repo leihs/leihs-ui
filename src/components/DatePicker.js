@@ -67,7 +67,7 @@ const DatePicker = ({
       inputEl.current && (inputEl.current.value = value)
       inputEl.current && inputEl.current.setCustomValidity(currentInputIsValid ? '' : errMsg)
     },
-    [inputVal, currentValueIsValidDate, currentInputIsValid, value, required, minDate, maxDate]
+    [inputVal, currentValueIsValidDate, currentInputIsValid, value, required, minDate, maxDate, errMsg]
   )
 
   return (

@@ -1,0 +1,79 @@
+/* 
+ * tmp-styles.css: 
+ * CSS for wireframes 2021, to be integrated into the main theme (bootstrap-theme-leihs/).
+ * All classes are prefixed with 'w21-'. 
+ */
+
+/* Layout and Theme */
+
+:root {
+  /* corresponds to bs bg-light, but somewhat less light */
+  --w21-bg-light: rgb(236, 236, 236);
+  /* somewhat darker than bg-light (not part of the bootstrap palette) */
+  --w21-bg-light2: rgb(221, 221, 221);
+}
+
+.w21-bg-light {
+  background-color: var(--w21-bg-light);
+}
+
+.w21-bg-light2 {
+  background-color: var(--w21-bg-light2);
+}
+
+.w21-link {
+  color: black;
+}
+
+/* Components */
+
+/* Component: Navbar */
+
+.w21-navbar {
+  background-color: var(--w21-bg-light);
+}
+
+.w21-navbar__burger {
+  color: black;
+  font-size: 1.5rem;
+}
+
+.w21-navbar__cart {
+  font-size: 0.8rem;
+}
+
+/* Component: CartBadge (circle indicating the number of models in the shopping cart) */
+
+.w21-cart-badge {
+  display: inline-block;
+  background-color: rgb(68, 68, 68);
+  color: white;
+  min-width: 1.75em;
+  height: 1.75em;
+  padding: 0.15em 0.25em;
+  border-radius: 1.5em;
+  text-align: center;
+}
+
+/* Component: SectionTitle (collapsible) */
+
+.w21-section-title__collapser {
+  cursor: pointer;
+}
+
+/* Component: ListItem */
+
+.w21-list-item--clickable {
+  cursor: pointer;
+}
+
+/* Component: OrderStateInfo */
+
+.w21-state-progress {
+  background-color: var(--w21-bg-light2);
+  height: 0.5rem;
+}
+
+.w21-state-progress__bar {
+  background-color: rgb(170, 170, 170);
+}
