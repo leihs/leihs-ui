@@ -1,24 +1,64 @@
 # leihs-ui
 
-**_[WORK IN PROGRESS]_**
+shared UI components, theme (bootstrap-based) and storybook/styleguide.
 
-shared styles, ui components etc.
+web views of storybook:
 
-## contents:
+- <https://next.ui.leihs.app> - latest dev version (from `next`) branch
+- <https://ui.leihs.app> - latest version used in leihs (from `master`) branch
+
+## docs
+
+- 🟪 [Bootstrap (CSS Framework](https://getbootstrap.com/docs/4.6/components/)
+- ⚛ [React (UI Framework)](https://reactjs.org/docs/react-component.html)
+- 📗 [Storybook (Styleguide)](https://storybook.js.org/docs/react/get-started/introduction)
+
+## development
+
+setup
+
+- use [Node.js](https://nodejs.org/) 14 LTS
+- clone and run
+
+  ```sh
+  git clone https://github.com/leihs/leihs-ui
+  cd leihs-ui
+  bin/build
+  npm run storybook
+  ```
+
+daily work
+
+```sh
+# make a build first to ensure all the dependencies are in order
+./bin/build || ./bin/build-core
+
+# work on UI Components in isolation (storybook/styleguide):
+npm run storybook
+
+# work on an app that depends on `leihs-ui`:
+npm run watch:lib
+
+# if also working on the bootstrap theme:
+npm run watch:theme
+
+# to do before merging (see also "merging" below)
+bin/update-snapshots
+```
+
+## content
 
 - `bootstrap-theme-leihs`
 - `styleguide` / example usage and standalone ui/ux dev (next.js based)
 
 - `./src` - shared code sources
   - `./components` react components
+    - `./components/Mobile` react components for new [`borrow`](https://github.com/leihs/leihs-borrow)
+  - `./stories` UI stories for specific features
+  - `./src/**/*.stories.js` UI stories per component (e.g. `MyComp.js` alongside `MyComp.stories.js`)
   - `./lib/server-side.js` standalone bundle for server-side react rendering
-
-## development
-
-```sh
-./bin/build || ./bin/build-core
-npm run storybook
-```
+  - `./lib/client-side.js` standalone bundle for client-side usage (in non-react apps)
+  - `./lib/components-bundle.js` bundle for inclusion in other react apps
 
 ### merging / delivery
 
