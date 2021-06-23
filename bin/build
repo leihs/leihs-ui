@@ -39,7 +39,10 @@ function build {
 }
 
 function pack {
-  tar -cvz -f "$LOCAL_CACHED_ARTEFACT_PATH" $ARTEFACT_PATHS
+  # NOTE: only move to final destination after packing is done, to not create invalid archives when the script is aborted
+  TMP_TAR_FILE="$(mktemp -t "${PROJECT_NAME}.XXXXXXX")"
+  tar -cvz -f "$TMP_TAR_FILE" $ARTEFACT_PATHS \
+  && mv "$TMP_TAR_FILE" "$LOCAL_CACHED_ARTEFACT_PATH"
 }
 
 function extract {
