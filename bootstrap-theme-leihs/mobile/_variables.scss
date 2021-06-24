@@ -1,7 +1,17 @@
-// // Variables for mobile theme (new borrow)
+// Variables for mobile theme (new borrow)
 
-// (currently no changes – just the bootstrap defaults)
+// Links
+$link-color: black;
+$link-hover-color: lighten($link-color, 30%);
+$link-hover-decoration: none;
 
-// 14px base font size
-// $font-size-base: 0.875rem; // original: 1rem = Assumes the browser default, typically `16px`
-// $spacer: 0.875rem;
+// default weight bolder
+$font-weight-normal: 500;
+$font-weight-bold: 800;
+
+// buttons with more padding
+$input-btn-padding-y: 0.8125rem;
+$input-btn-padding-x: 1.5rem;
+
+// inputs
+$input-color: black;

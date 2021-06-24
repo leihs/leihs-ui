@@ -1,124 +1,102 @@
-// import { withInfo } from '@storybook/addon-info'
+import React from 'react'
 import { action } from '@storybook/addon-actions'
-
-import React, { useState } from 'react'
 import f from 'lodash'
-
-import { BookingCalendar } from './BookingCalendar'
-import { DateRange } from '@leihs/calendar'
-// eslint-disable-next-line no-unused-vars
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
-const df = require('date-fns')
-window.f = f
+import { parseISO } from 'date-fns'
+import { BookingCalendar } from './BookingCalendar'
 
 export default {
-  title: 'MobileApp/Components/Calendar',
+  title: 'MobileApp/Components/Order Panel',
   component: BookingCalendar,
-  // decorators: [withInfo],
-  parameters: {
-    // FIXME: does crash in snapshot test
-    storyshots: { disable: true }
-  }
+  parameters: { layout: 'fullscreen' }
 }
 
-export const WIP_just_a_datepicker = () => {
-  const [selectedDate, setSelectedDate] = useState(null)
-  //
-  const now = new Date()
-  //
-  const onlyFuture = true
-  const onChange = item => setSelectedDate(item)
-  //
-  return (
-    <div className="mx-1 mt-2 d-flex flex-column">
-      <p className="d-block m-auto">
-        selected date: <samp>{JSON.stringify(selectedDate)}</samp>
-      </p>
-      <DateRange
-        className="m-auto"
-        displayMode="date"
-        months={1}
-        minDate={onlyFuture ? now : null}
-        date={selectedDate}
-        onChange={onChange}
-        // TMP:
-        maxDateLoaded={df.parseISO('2020-07-31')}
-        loadingIndicator={'cargando…'}
-        scroll={{
-          enabled: true
-          // monthHeight: WIP_LARGE_SIZE ? 278 : undefined
-        }}
-      />
-    </div>
-  )
-}
-
-WIP_just_a_datepicker.parameters = {
-  // info: { inline: true, text: 'testing…' }
-}
-
-export const BookingCalendar_with_mock_data = () => {
-  const now = new Date()
+function getMockData() {
   const mock = require('../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
+  const spec = mock.spec
   const apiData = mock.result.data
+  const modelData = f.first(apiData.models.edges.map(edg => edg.node))
+  modelData.name = 'Audio-Mischpult Behringer XENYX Q1204USB'
 
   // FIXME: pools should come from a seperate query,
   //         and availability data should have several pools!
   //         re-use and tranform example data for now…
   const FAKE_SECOND_POOL_ID = '53f78fc0-2b0b-4f67-a207-b08d2a3c47b2'
-  const modelData = f.first(apiData.models.edges.map(edg => edg.node))
   modelData.availability.length < 2 &&
     modelData.availability.push({
-      inventoryPool: { id: FAKE_SECOND_POOL_ID, name: 'Fake 2nd Pool' },
+      inventoryPool: { id: FAKE_SECOND_POOL_ID, name: 'Ein anderer Gerätepark', totalBorrowableQuantity: 5 },
       dates: modelData.availability[0].dates
     })
   const inventoryPools = f.map(modelData.availability, 'inventoryPool')
 
-  const exampleProps = {
+  return {
     modelData,
     inventoryPools,
-    initialInventoryPoolId: FAKE_SECOND_POOL_ID,
-    //
-    minDateTotal: now,
-    minDateLoaded: df.parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
-    // maxDateTotal: ,
-    maxDateLoaded: df.parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date'))
+    initialInventoryPoolId: inventoryPools[0].id,
+    minDateLoaded: parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
+    maxDateLoaded: parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
+    spec
   }
+}
 
+export const withAllArguments = () => {
+  const now = new Date(FAKE_STYLEGUIDE_TIME)
+  const { modelData, inventoryPools, initialInventoryPoolId, minDateLoaded, maxDateLoaded, spec } = getMockData()
   return (
     <div>
       <BookingCalendar
-        initialOpen={true}
-        initialQuantity={1}
-        loadingIndicator={'cargando…'}
-        onLoadMoreFuture={action('fetch-future-data')}
-        onDatesChange={action('dates-changed')}
-        onQuantityChange={action('quantity-changed')}
-        onInventoryPoolChange={action('pool-changed')}
+        modelData={modelData}
+        //
+        minDateTotal={now}
+        minDateLoaded={minDateLoaded}
+        maxDateTotal={new Date('2030-01-01')}
+        maxDateLoaded={maxDateLoaded}
+        onShownDateChange={action('shown-date-change')}
+        //
+        initialStartDate={now}
+        initialEndDate={now}
+        onDatesChange={action('dates-change')}
+        //
+        initialQuantity={2}
+        onQuantityChange={action('quantity-change')}
+        //
+        inventoryPools={inventoryPools}
+        initialInventoryPoolId={initialInventoryPoolId}
+        onInventoryPoolChange={action('pool-change')}
+        //
         onSubmit={action('submit')}
-        {...exampleProps}
+        onCancel={action('cancel')}
       />
-      <hr />
-      <div className="m-4">
-        <h3 className="h4 code text-monospace">
-          fake timestamp: <small key="small">{JSON.stringify(FAKE_STYLEGUIDE_TIME)}</small>
-        </h3>
-
+      <div className="m-4 text-muted">
+        <h4>Debugging Info</h4>
         <details>
-          <summary className="h4 text-monospace">mock data used:</summary>
+          <summary className="code text-monospace">fake timestamp</summary>
+          <pre>{JSON.stringify(FAKE_STYLEGUIDE_TIME)}</pre>
+        </details>
+        <details>
+          <summary className="text-monospace">mock data used</summary>
           <pre>{JSON.stringify(modelData, 0, 2)}</pre>
         </details>
         <details>
-          <summary className="h4 text-monospace">mock data from spec:</summary>
-          <pre>{JSON.stringify(mock.spec, 0, 2)}</pre>
+          <summary className="text-monospace">mock data from spec</summary>
+          <pre>{JSON.stringify(spec, 0, 2)}</pre>
         </details>
       </div>
     </div>
   )
 }
-
-BookingCalendar_with_mock_data.parameters = {
-  info: {
-    // excludedPropTypes: ['_now']
-  }
+export const withMinimalArguments = () => {
+  const { modelData, inventoryPools, minDateLoaded, maxDateLoaded } = getMockData()
+  return (
+    <div>
+      <BookingCalendar
+        modelData={modelData}
+        minDateLoaded={minDateLoaded}
+        maxDateLoaded={maxDateLoaded}
+        inventoryPools={inventoryPools}
+        onSubmit={action('submit')}
+        onCancel={action('cancel')}
+      />
+    </div>
+  )
 }

@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
-import Section from './Section'
-import InputWithClearButton from './InputWithClearButton'
+import Section from '../../DesignComponents/Section'
+import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
+import DialogCard from '../../DesignComponents/DialogCard'
 
 const DEFAULT_TERM = ''
 const DEFAULT_ORDER_STATE = ''
@@ -31,8 +32,7 @@ const OrderFilterForm = ({
   initialPoolId = DEFAULT_POOL_ID,
   initialDelegationId = DEFAULT_DELEGATION_ID,
   onClear,
-  onSubmit,
-  ...restProps
+  onSubmit
 }) => {
   const [term, setTerm] = useState(initialTerm)
   const [orderState, setOrderState] = useState(initialOrderState)
@@ -41,13 +41,15 @@ const OrderFilterForm = ({
   const [poolId, setPoolId] = useState(initialPoolId)
   const [delegationId, setDelegationId] = useState(initialDelegationId)
 
-  const clear = () => {
+  function clear(e) {
     setTerm(DEFAULT_TERM)
     setOrderState(DEFAULT_ORDER_STATE)
     setStartDate(DEFAULT_START_DATE)
     setEndDate(DEFAULT_END_DATE)
     setPoolId(DEFAULT_POOL_ID)
     setDelegationId(user.id)
+
+    onClear && onClear()
   }
 
   const submit = e => {
@@ -67,9 +69,30 @@ const OrderFilterForm = ({
   }
 
   return (
-    <div {...restProps}>
+    <DialogCard title="Meine Ausleihen filtern">
       <form action="/search" onSubmit={submit} className="form form-compact">
-        <div className="p-4 w21-bg-light2">
+        <DialogCard.Body className="pb-5">
+          {delegations && (
+            <Section title="Delegation" collapsible="true">
+              <div className="form-group">
+                <select
+                  className="form-control custom-select"
+                  name="user-id"
+                  value={delegationId}
+                  onChange={e => setDelegationId(e.target.value)}
+                >
+                  <option value={user.id} key={user.id}>
+                    {user.name} (persönlich)
+                  </option>
+                  {delegations.map(d => (
+                    <option value={d.id} key={d.id}>
+                      {d.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </Section>
+          )}
           <Section title="Stichwort" collapsible="true">
             <div className="form-group">
               <InputWithClearButton
@@ -134,7 +157,7 @@ const OrderFilterForm = ({
               />
             </div>
           </Section>
-          <Section title="Geräteparks" collapsible="true">
+          <Section title="Gerätepark" collapsible="true">
             <div className="form-group">
               <select
                 className="form-control custom-select"
@@ -153,50 +176,23 @@ const OrderFilterForm = ({
               </select>
             </div>
           </Section>
-          {delegations && (
-            <Section title="Delegation" collapsible="true">
-              <div className="form-group">
-                <select
-                  className="form-control custom-select"
-                  name="user-id"
-                  value={delegationId}
-                  onChange={e => setDelegationId(e.target.value)}
-                >
-                  <option value={user.id} key={user.id}>
-                    {user.name} (persönlich)
-                  </option>
-                  {delegations.map(d => (
-                    <option value={d.id} key={d.id}>
-                      {d.name}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            </Section>
-          )}
-        </div>
-        <div className="px-4 py-3 row">
-          <div className="col">
-            <button
-              type="button"
-              onClick={e => {
-                e.preventDefault()
-                clear()
-                onClear()
-              }}
-              className="btn btn-outline-danger"
-            >
-              Zurücksetzen
-            </button>
+        </DialogCard.Body>
+        <DialogCard.Foot>
+          <div className="row">
+            <div className="col pr-2">
+              <button type="button" onClick={clear} className="btn btn-outline-danger">
+                Zurücksetzen
+              </button>
+            </div>
+            <div className="col pl-2 text-right">
+              <button type="submit" onClick={submit} className="btn btn-success">
+                Auswählen
+              </button>
+            </div>
           </div>
-          <div className="col text-right">
-            <button type="submit" className="btn btn-success">
-              Auswählen
-            </button>
-          </div>
-        </div>
+        </DialogCard.Foot>
       </form>
-    </div>
+    </DialogCard>
   )
 }
 

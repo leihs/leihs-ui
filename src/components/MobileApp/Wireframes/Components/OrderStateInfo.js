@@ -110,9 +110,9 @@ function StateProgress({ totalCount, doneCount }) {
   var percent = Number(doneCount / totalCount).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 0 })
 
   return (
-    <div className="progress w21-state-progress my-1">
+    <div className="progress order-state-progress my-1">
       <div
-        className="progress-bar w21-state-progress__bar rounded"
+        className="progress-bar order-state-progress__bar rounded"
         role="progressbar"
         style={{ width: percent }}
         aria-valuenow={doneCount}

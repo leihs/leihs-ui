@@ -3,7 +3,7 @@ import React from 'react'
 import { AppWrapper, MainView, Navbar, Page, SubSection, CallToAction } from './AppLayout'
 import CategoryList from './CategoryList'
 
-import { exampleProps1 as exampleCategories } from './CategoryList.stories'
+import { categoryListPropsV1 as exampleCategoryProps } from '../MobileApp/StoryUtils/sample-props'
 
 export default {
   title: 'MobileApp/Components/AppLayout',
@@ -117,7 +117,7 @@ export const homepage = () => (
           Du hast bald eine Abholung!
         </CallToAction>
         <SubSection title="Kategorien" moreLink={{ href: '#', children: 'Alle' }}>
-          <CategoryList {...exampleCategories} />
+          <CategoryList {...exampleCategoryProps} />
         </SubSection>
       </Page>
     </MainView>
