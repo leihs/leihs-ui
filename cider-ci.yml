@@ -39,17 +39,7 @@ jobs:
       all passed: { type: job, job_key: all-ok, states: [passed] }
     run_when: *MERGE_DEP
     tasks:
-      git-linear-history:
-        name: 'git: check linear history'
-        environment_variables: { GIT_LINEAR_HISTORY_CHECK_START_SHA: '73b89f9eb8cee416f36d40cf252ad710f620e4b8' }
-        scripts:
-          test:
-            body: |
-              #!/usr/bin/env bash
-              set -eux
-              # no merges between GIT_LINEAR_HISTORY_CHECK_START_SHA and the current commit,
-              test -z $(git rev-list --merges ${GIT_LINEAR_HISTORY_CHECK_START_SHA}..HEAD)
-
+      # NOTE: "linear history" is already enforced via GitHub branch protection
       git-branch-current:
         name: 'git: tree contains latest commit from origin/master AND origin/next'
         aggregate_state: satisfy-last # relies on external state!
