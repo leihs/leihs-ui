@@ -1,7 +1,8 @@
 import React from 'react'
-import Section from './Section'
 import OrderStateInfo from './OrderStateInfo'
-import ListItem from './ListItem'
+import Section from '../../DesignComponents/Section'
+import SimpleCard from '../../DesignComponents/SimpleCard'
+import PageLayout from '../../DesignComponents/PageLayout'
 
 export default function OrderList({ ordersByBasicState, onItemClick }) {
   return (
@@ -11,15 +12,16 @@ export default function OrderList({ ordersByBasicState, onItemClick }) {
         const title = group.basicState.label
         const key = group.basicState.key
         return (
-          <Section key={key} title={title} collapsible={true} withDivider={true} className="pt-5">
-            <div>CON</div>
-            {orders.map((order, i) => {
-              return (
-                <div key={order.id}>
-                  <OrderListItem order={order} onClick={onItemClick} />
-                </div>
-              )
-            })}
+          <Section key={key} title={title} collapsible={true} className="pt-5">
+            <PageLayout.DividedStack>
+              {orders.map((order, i) => {
+                return (
+                  <div key={order.id}>
+                    <OrderListItem order={order} onClick={onItemClick} />
+                  </div>
+                )
+              })}
+            </PageLayout.DividedStack>
           </Section>
         )
       })}
@@ -29,12 +31,12 @@ export default function OrderList({ ordersByBasicState, onItemClick }) {
 
 function OrderListItem({ order, onClick }) {
   return (
-    <ListItem onClick={() => onClick(order)} foot={<OrderStateInfo order={order} />}>
+    <SimpleCard onClick={() => onClick(order)} foot={<OrderStateInfo order={order} />}>
       <h5>{order.title}</h5>
       <div className="text-xs">
         {order.durationDays} Tage {order.isCompleted ? `bis ${order.endDate}` : `ab ${order.startDate}`},{' '}
         {order.modelCount} {order.modelCount === 1 ? 'Gegenstand' : 'Gegenstände'}
       </div>
-    </ListItem>
+    </SimpleCard>
   )
 }

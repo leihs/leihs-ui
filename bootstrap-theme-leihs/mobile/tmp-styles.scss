@@ -1,50 +1,34 @@
-/*
- * tmp-styles.css:
- * CSS for wireframes 2021, to be integrated into the main theme (bootstrap-theme-leihs/).
- * All classes are prefixed with 'w21-'.
+/* 
+ * Styles for Borrow Mobile App
  */
 
 /* Layout and Theme */
 
-:root {
-  /* corresponds to bs bg-light, but somewhat less light */
-  --w21-bg-light: rgb(236, 236, 236);
-  /* somewhat darker than bg-light (not part of the bootstrap palette) */
-  --w21-bg-light2: rgb(221, 221, 221);
-}
+/* corresponds to Bootstrap's bg-light and gray-200, but a different tone */
+$bg-color-light1: rgb(236, 236, 236);
 
-.w21-bg-light {
-  background-color: var(--w21-bg-light);
-}
-
-.w21-bg-light2 {
-  background-color: var(--w21-bg-light2);
-}
-
-.w21-link {
-  color: black;
-}
+/* somewhat darker than bg-light (as Bootstrap's gray-300, but a different tone) */
+$bg-color-light2: rgb(221, 221, 221);
 
 /* Components */
 
 /* Component: Navbar */
 
-.w21-navbar {
-  background-color: var(--w21-bg-light);
-}
+.app-navbar {
+  background-color: $bg-color-light1;
 
-.w21-navbar__burger {
-  color: black;
-  font-size: 1.5rem;
-}
-
-.w21-navbar__cart {
-  font-size: 0.8rem;
+  &__burger {
+    color: black;
+    font-size: 1.5rem;
+  }
+  &__cart {
+    font-size: 0.8rem;
+  }
 }
 
 /* Component: CartBadge (circle indicating the number of models in the shopping cart) */
 
-.w21-cart-badge {
+.cart-badge {
   display: inline-block;
   background-color: rgb(68, 68, 68);
   color: white;
@@ -55,25 +39,173 @@
   text-align: center;
 }
 
-/* Component: SectionTitle (collapsible) */
+.dialog-card {
+  background-color: $bg-color-light1;
 
-.w21-section-title__collapser {
-  cursor: pointer;
+  &__title {
+    background-color: $bg-color-light2;
+  }
+  &__body {
+    background-color: $bg-color-light2;
+  }
+  &__foot {
+    background-color: $bg-color-light1;
+  }
 }
 
-/* Component: ListItem */
+/* Component: SectionTitle (collapsible) */
 
-.w21-list-item--clickable {
-  cursor: pointer;
+.section-title {
+  font-weight: 700;
+  font-size: 1rem;
+
+  &__collapser {
+    cursor: pointer;
+  }
+}
+
+/* Component: FilterSummary */
+
+.filter-summary {
+  background-color: $bg-color-light1;
+}
+
+/* Component: Square Image Grid */
+
+.square-image-grid {
+  &__favorite-marker {
+    background-color: $bg-color-light2;
+  }
+}
+
+/* Component: SimpleCard */
+
+.simple-card {
+  &--clickable {
+    cursor: pointer;
+  }
 }
 
 /* Component: OrderStateInfo */
 
-.w21-state-progress {
-  background-color: var(--w21-bg-light2);
+.order-state-progress {
+  background-color: $bg-color-light2;
   height: 0.5rem;
+
+  &__bar {
+    background-color: rgb(170, 170, 170);
+  }
 }
 
-.w21-state-progress__bar {
-  background-color: rgb(170, 170, 170);
+/* Component: ActionButton */
+
+.action-button {
+  background-color: $bg-color-light2;
+  border-color: $bg-color-light2;
+  color: black;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  &:active {
+    background-color: white;
+  }
+
+  & + & {
+    margin-top: 1rem;
+  }
+
+  &--lighter {
+    background-color: $bg-color-light1;
+    border-color: $bg-color-light1;
+  }
+}
+
+/* CSS Component: .gallery-button */
+
+.gallery-button {
+  display: inline-block;
+  background-color: $bg-color-light2;
+  color: white;
+  min-width: 0.25rem;
+  height: 0.25rem;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  margin: auto 0.25rem;
+
+  &--selected {
+    background-color: rgb(153, 153, 153);
+  }
+}
+
+/* Component: DateRangePicker */
+
+.date-range-picker {
+  .rdrCalendarWrapper,
+  .rdrDateRangeWrapper {
+    margin: auto;
+    font-size: 14px;
+  }
+
+  .rdrMonthAndYearWrapper {
+    padding-bottom: 5px;
+    height: auto;
+  }
+
+  .rdrMonth,
+  .rdrMonthIsLoading,
+  .rdrMonthName,
+  .rdrWeekDays {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .rdrNextPrevButton {
+    background-color: transparent;
+  }
+
+  .rdrMonth,
+  .rdrMonthIsLoading {
+    width: initial;
+  }
+
+  .rdrDayDisabled {
+    .rdrDayNumber span {
+      text-decoration: none !important;
+      color: rgb(200, 200, 200);
+    }
+    background-color: transparent;
+  }
+
+  // hide the day numbers of adjacent months
+  .rdrDayPassive {
+    visibility: hidden;
+  }
+}
+
+.date-range-input-label {
+  display: block;
+  position: relative;
+  margin: 0;
+  &::after {
+    content: attr(data-label);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: $input-border-width solid transparent;
+    padding: $input-padding-y $input-padding-x;
+    width: $input-padding-x + 2rem;
+    overflow: none;
+  }
+}
+
+.date-range-input {
+  display: block;
+  position: relative;
+  padding-left: $input-padding-x + 2rem;
+  &--focus {
+    border-color: black;
+  }
 }

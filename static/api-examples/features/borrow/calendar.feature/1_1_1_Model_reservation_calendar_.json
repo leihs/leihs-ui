@@ -61,7 +61,8 @@
                 {
                   "inventoryPool": {
                     "id": "7d32a165-7879-4dda-b33d-4d5c842a20de",
-                    "name": "Videopool"
+                    "name": "Videopool",
+                    "totalBorrowableQuantity": 5
                   },
                   "dates": [
                     {
