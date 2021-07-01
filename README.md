@@ -60,6 +60,14 @@ bin/update-snapshots
   - `./lib/client-side.js` standalone bundle for client-side usage (in non-react apps)
   - `./lib/components-bundle.js` bundle for inclusion in other react apps
 
+### `leihs-calendar`
+
+The `Calendar` component is forked and customized from an existing project. It is developed in a separate repo, releases are published to the `npm` registry and used in `leihs-ui` via `package.json` as `@leihs/calendar`.
+
+- repo: <https://github.com/leihs/leihs-calendar>
+- forked from: <https://github.com/hypeserver/react-date-range>
+- npm package: <https://www.npmjs.com/package/@leihs/calendar>
+
 ### merging / delivery
 
 This repository is shared between several leihs repositories that always include the latest `master` branch.
