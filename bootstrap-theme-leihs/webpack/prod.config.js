@@ -2,7 +2,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   mode: 'development',
-  entry: { 'bootstrap-leihs': './bootstrap-leihs.scss' },
+  entry: {
+    'bootstrap-leihs': './bootstrap-leihs.scss',
+    'bootstrap-leihs-mobile': './bootstrap-leihs-mobile.scss'
+  },
   output: {
     path: __dirname + '/../build',
     filename: '[name].js'

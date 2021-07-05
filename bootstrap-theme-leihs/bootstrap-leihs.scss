@@ -1,41 +1,6 @@
-@import './custom';
-@import './scss/reset';
-@import './node_modules/bootstrap/scss/bootstrap';
-@import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+@import './variables';
+@import './bootstrap-leihs-base';
 
-@import './node_modules/@leihs/calendar/dist/styles.css'; // main css file
-@import './node_modules/@leihs/calendar/dist/theme/default.css'; // theme css file
-
-@import './scss/decoration';
-@import './scss/typography';
-@import './scss/colors';
-@import './scss/bootstrap-extensions';
-@import './scss/bootstrap-fixes';
-@import './scss/app-fixes';
-
-// globals
-html,
-body {
-  height: 100%;
-  min-width: 320px;
-}
-
-.navbar-leihs {
-  min-height: 3rem;
-  // background-color: #563d7c !important; // bootstrap docs purple
-  background-color: #343a40 !important; // bootstrap bg-dark
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
-}
-
-// extensions copied from leihs-my & leihs-admin:
-@include bg-variant('.bg-auth', #fd7e14);
-@include bg-variant('.bg-admin', #fd7e14);
-
-ol.breadcrumb.leihs-nav-right {
-  .breadcrumb-item {
-    + .breadcrumb-item::before {
-      content: '·';
-    }
-  }
-}
+// there should not be any specific styles in this file.
+// if there were any, they would apply to everything except the mobile app (new borrow).
+// instead, all general style should be in the base theme, and overridden in the mobile theme if needed.

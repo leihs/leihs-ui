@@ -1,0 +1,8 @@
+// NOTE: this is the "mobile theme", which is supposed a *temporary* variant,
+// while we work on the mobile app/"new borrow" and the regular theme is used in other parts of leihs.
+// the 2 themes should be unified, at the latest when "new borrow" is extended to be responsive.
+
+@import './mobile/variables';
+@import './bootstrap-leihs-base';
+
+// extra mobile styles (aka "new borrow tmp styles") here:
