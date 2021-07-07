@@ -1,10 +1,10 @@
 // NOTE: variables are not included here so we dont need to handle overriding/defaults
 @import './scss/reset';
-@import './node_modules/bootstrap/scss/bootstrap';
-@import './node_modules/@fortawesome/fontawesome-svg-core/styles.css';
+@import '~bootstrap/scss/bootstrap';
+@import '~@fortawesome/fontawesome-svg-core/styles.css';
 
-@import './node_modules/@leihs/calendar/dist/styles.css'; // main css file
-@import './node_modules/@leihs/calendar/dist/theme/default.css'; // theme css file
+@import '~@leihs/calendar/dist/styles.css'; // main css file
+@import '~@leihs/calendar/dist/theme/default.css'; // theme css file
 
 @import './scss/decoration';
 @import './scss/typography';
