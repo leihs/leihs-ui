@@ -1,6 +1,5 @@
 import React from 'react'
 import cx from 'classnames'
-import '../tmp-styles.css'
 import Navbar from './Navbar'
 
 export default function PageLayout({ children, title, preTitle, brandName, cartItemCount }) {
