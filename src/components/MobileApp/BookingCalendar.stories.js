@@ -117,11 +117,8 @@ export const BookingCalendar_with_mock_data = () => {
   )
 }
 
-BookingCalendar_with_mock_data.story = {
-  component: BookingCalendar,
-  parameters: {
-    info: {
-      // excludedPropTypes: ['_now']
-    }
+BookingCalendar_with_mock_data.parameters = {
+  info: {
+    // excludedPropTypes: ['_now']
   }
 }
