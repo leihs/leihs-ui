@@ -1,17 +1,10 @@
-#!/usr/bin/env bash
 
-set -eux
+#!/usr/bin/env bash -eux
 
 cd "$(dirname ${BASH_SOURCE})/.."
 
+# NOTE: optimize network access, first try with local cache only
+npm ci --no-audit --offline || npm ci --no-audit
+
 cd bootstrap-theme-leihs
-# NOTE: optimize network access, first try with local cache only
-npm ci --no-audit --offline || npm ci --no-audit
 npm run ensure-sass
-cd -
-
-# NOTE: optimize network access, first try with local cache only
-npm ci --no-audit --offline || npm ci --no-audit
-cd -
-
-# vi: ft=sh
