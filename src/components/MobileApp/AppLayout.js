@@ -137,8 +137,8 @@ class ErrorBoundary extends React.Component {
           <details open style={{ whiteSpace: 'pre-wrap' }}>
             {this.state.error && this.state.error.toString()}
             <br />
-            {/* FIXME: stacktrace has absolute paths in snapshot tests, which breaks them! */}
-            {/* {this.state.errorInfo.componentStack} */}
+            {/* NOTE: stacktrace has absolute paths in snapshot tests, which breaks them! */}
+            {process.env.NODE_ENV === 'development' && this.state.errorInfo.componentStack}
           </details>
         </div>
       )
