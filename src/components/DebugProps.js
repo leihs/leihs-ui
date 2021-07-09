@@ -1,5 +1,11 @@
 import React, { Component } from 'react'
 
+function jsonReplacer(_key, value) {
+  // react elements (like `props.children`) can not be stringified and are not usefull to look at, so exclude them:
+  if (React.isValidElement(value)) return '[[[ React element ]]]'
+  return value
+}
+
 class DebugProps extends Component {
   render() {
     return (
@@ -10,7 +16,7 @@ class DebugProps extends Component {
           </mark>
         </h1>
         <pre>
-          <mark>{JSON.stringify(this.props, 0, 2)}</mark>
+          <mark>{JSON.stringify(this.props, jsonReplacer, 2)}</mark>
         </pre>
       </div>
     )
