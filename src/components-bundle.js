@@ -23,6 +23,8 @@ const Components = {
   ModelShow: require('./components/MobileApp/ModelShow').default,
   ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
+  // mobile pages
+  CategoryShowPage: require('./components/MobileApp/CategoryShowPage').default,
 
   // pages:
   HomePage,
