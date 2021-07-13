@@ -25,6 +25,7 @@ const Components = {
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
   // mobile pages
   CategoryShowPage: require('./components/MobileApp/CategoryShowPage').default,
+  UserProfilePage: require('./components/MobileApp/UserProfilePage').default,
 
   // pages:
   HomePage,
