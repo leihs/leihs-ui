@@ -25,6 +25,10 @@
     "test": "react-scripts test --env=jsdom",
     "storybook": "start-storybook -p 9009 -s static"
   },
+  "engines": {
+    "node": ">=14.17.3",
+    "npm": ">=7.19.1"
+  },
   "peerDependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1"

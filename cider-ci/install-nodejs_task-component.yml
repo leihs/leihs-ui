@@ -13,6 +13,10 @@ scripts:
       source ~/.nvm/nvm.sh
       nvm install "$NVM_NODEJS_VERSION"
       nvm use "$NVM_NODEJS_VERSION"
+      npm i -g npm@7
 
       which node
       node --version
+
+      which npm
+      npm --version
