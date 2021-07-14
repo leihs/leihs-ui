@@ -1,6 +1,6 @@
 import { addParameters, addDecorator } from '@storybook/react'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
-import React, { useEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import './fake-time'
 
 const VIEWPORTS = ['iphone6', 'galaxys9', 'iphonex', 'iphonexsmax', 'ipad']
@@ -18,10 +18,10 @@ if (process.env.NODE_ENV !== 'test') {
 
   // Glue between React and Webpack lazy styles <https://github.com/webpack-contrib/style-loader/tree/1556c0b16a7e16b255d85f7a25ed95bb16a01471#lazystyletag>
   const ThemeSelector = ({ children, style }) => {
-    useEffect(() => {
+    useLayoutEffect(() => {
       style.use()
       return () => style.unuse()
-    })
+    }, [style])
     return children
   }
   // decorator to to select the appropriate style per story
