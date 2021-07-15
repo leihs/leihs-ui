@@ -154,7 +154,7 @@ export const BookingCalendar = ({
             </button>
           </div>
           <div className="col pl-2 text-right">
-            <button type="submit" href="#" className="btn btn-success" disabled={!isValidForm} onClick={submit}>
+            <button type="submit" href="#" className="btn btn-primary" disabled={!isValidForm} onClick={submit}>
               Hinzufügen
             </button>
           </div>

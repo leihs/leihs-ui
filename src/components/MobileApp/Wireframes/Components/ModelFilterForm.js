@@ -164,7 +164,7 @@ const ModelFilterForm = ({
               </button>
             </div>
             <div className="col pl-2 text-right">
-              <button type="submit" className="btn btn-success">
+              <button type="submit" className="btn btn-primary">
                 Auswählen
               </button>
             </div>

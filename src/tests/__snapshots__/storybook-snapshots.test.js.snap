@@ -22201,13 +22201,13 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
               </div>
             </div>
             <button
-              className="btn btn-success dont-invert rounded-pill mt-2"
+              className="btn btn-primary dont-invert mt-2"
               type="submit"
             >
               Get Results
             </button>
             <button
-              className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+              className="btn btn-secondary dont-invert mx-1 mt-2"
               type="button"
             >
               Clear
@@ -22901,13 +22901,13 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelFilterForm Full Exam
       </div>
     </div>
     <button
-      className="btn btn-success dont-invert rounded-pill mt-2"
+      className="btn btn-primary dont-invert mt-2"
       type="submit"
     >
       Get Results
     </button>
     <button
-      className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+      className="btn btn-secondary dont-invert mx-1 mt-2"
       onClick={[Function]}
       type="button"
     >
@@ -23020,13 +23020,13 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelFilterForm Minimal E
       </div>
     </div>
     <button
-      className="btn btn-success dont-invert rounded-pill mt-2"
+      className="btn btn-primary dont-invert mt-2"
       type="submit"
     >
       Get Results
     </button>
     <button
-      className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+      className="btn btn-secondary dont-invert mx-1 mt-2"
       onClick={[Function]}
       type="button"
     >
@@ -23174,13 +23174,13 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelFilterForm Minimal W
       </div>
     </div>
     <button
-      className="btn btn-success dont-invert rounded-pill mt-2"
+      className="btn btn-primary dont-invert mt-2"
       type="submit"
     >
       Get Results
     </button>
     <button
-      className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+      className="btn btn-secondary dont-invert mx-1 mt-2"
       onClick={[Function]}
       type="button"
     >
@@ -24809,7 +24809,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With All Argu
             className="col pl-2 text-right"
           >
             <button
-              className="btn btn-success"
+              className="btn btn-primary"
               disabled={true}
               href="#"
               onClick={[Function]}
@@ -26729,7 +26729,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With Minimal 
             className="col pl-2 text-right"
           >
             <button
-              className="btn btn-success"
+              className="btn btn-primary"
               disabled={true}
               href="#"
               onClick={[Function]}
@@ -33751,7 +33751,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Filter Filter 1`]
             className="col pl-2 text-right"
           >
             <button
-              className="btn btn-success"
+              className="btn btn-primary"
               type="submit"
             >
               Auswählen
@@ -35534,7 +35534,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Filter Fil
             className="col pl-2 text-right"
           >
             <button
-              className="btn btn-success"
+              className="btn btn-primary"
               onClick={[Function]}
               type="submit"
             >

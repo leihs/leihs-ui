@@ -192,7 +192,7 @@ const ModelFilterForm = ({
             </div>
           </div>
         )}
-        <button type="submit" className="btn btn-success dont-invert rounded-pill mt-2">
+        <button type="submit" className="btn btn-primary dont-invert mt-2">
           Get Results
         </button>
         <button
@@ -202,7 +202,7 @@ const ModelFilterForm = ({
             clear()
             onClear()
           }}
-          className="btn btn-secondary dont-invert rounded-pill mx-1 mt-2"
+          className="btn btn-secondary dont-invert mx-1 mt-2"
         >
           Clear
         </button>
