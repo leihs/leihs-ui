@@ -11,8 +11,10 @@ import SquareImage from './DesignComponents/SquareImage'
 
 export default function ModelShow({ model, onOrderClick, onClickFavorite, orderPanelTmp }) {
   const [imageIndex, setImageIndex] = useState(0)
+  const [showOrderPanel, setShowOrderPanel] = useState(false)
 
   function addToOrderClick() {
+    setShowOrderPanel(true)
     onOrderClick && onOrderClick()
   }
 
@@ -70,6 +72,8 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
         )}
       </Section>
 
+      {!!orderPanelTmp && showOrderPanel && <div>{orderPanelTmp}</div>}
+
       {model.description && (
         <Section title="Beschreibung" collapsible={true} className="pt-5">
           <div className="pt-2">{model.description}</div>
@@ -105,8 +109,6 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
           {getRecommendsGrid(model.recommends)}
         </Section>
       )}
-
-      {orderPanelTmp && <div>{orderPanelTmp}</div>}
     </>
   )
 }
