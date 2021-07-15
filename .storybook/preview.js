@@ -14,7 +14,7 @@ const DEFAULT_VIEWPORT = 'iphonex'
 // (because the snapshots dont depend on styles we can disable the whole feature).
 if (process.env.NODE_ENV !== 'test') {
   const styleNormal = require('!!style-loader?{"injectType":"lazySingletonStyleTag"}!css-loader!../src/theme/bootstrap-leihs.css')
-  const styleMobile = require('!!style-loader?{"injectType":"lazySingletonStyleTag"}!css-loader!../src/theme/bootstrap-leihs-mobile.css')
+  const styleMobile = require('!!style-loader?{"injectType":"lazySingletonStyleTag"}!css-loader!../src/theme-mobile/bootstrap-leihs-mobile.css')
 
   // Glue between React and Webpack lazy styles <https://github.com/webpack-contrib/style-loader/tree/1556c0b16a7e16b255d85f7a25ed95bb16a01471#lazystyletag>
   const ThemeSelector = ({ children, style }) => {

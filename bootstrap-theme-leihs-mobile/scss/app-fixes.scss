@@ -1,0 +1,14 @@
+%render-container {
+  height: 100%; // "pass through" full parent height
+  display: contents; // dont interfere with flexbox layout
+}
+
+// containers for React SSR
+[data-react-component][data-react-props] {
+  @extend %render-container;
+}
+
+// next.js and storybook fix to make root/wrapper full height:
+#__next, #root {
+  @extend %render-container;
+}

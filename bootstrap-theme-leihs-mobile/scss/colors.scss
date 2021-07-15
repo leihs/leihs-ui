@@ -1,0 +1,36 @@
+/* semantic classes for colors */
+.bg-content {
+  background: $white !important;
+}
+.bg-content-danger {
+  background: $red !important;
+}
+.bg-content-inverse {
+  /* .bg-black */
+  background: $black !important;
+}
+.bg-content-muted {
+  // background-color: #edf2f7;
+  background-color: $gray-200 !important;
+}
+.text-color-muted {
+  /* .text-gray-600 */
+  //   color: #718096;
+  color: $gray-600 !important;
+}
+.text-color-content {
+  /* .text-black */
+  color: $black !important;
+}
+.text-color-content-inverse {
+  /* .text-white */
+  color: $white !important;
+}
+.text-color-content-link {
+  /* .text-blue-500 */
+  //   color: #4299e1;
+  color: $blue !important;
+}
+.text-color-danger {
+  color: $danger !important;
+}

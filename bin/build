@@ -10,7 +10,7 @@ PROJECT_NAME="leihs-ui"
 
 PROJECT_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" > /dev/null 2>&1 ; cd .. ; pwd -P)"
 ARTEFACT_NAME="$PROJECT_NAME"
-ARTEFACT_PATHS="./dist ./bootstrap-theme-leihs/build"
+ARTEFACT_PATHS="./dist ./bootstrap-theme-leihs/build ./bootstrap-theme-leihs-mobile/build"
 DIGEST="$(git -C "$PROJECT_DIR" log -n 1 HEAD --pretty=%T)"
 LOCAL_CACHE_DIR="${LOCAL_CACHE_DIR:-"${TMPDIR:-/tmp/}/leihs-build-cache"}"
 LOCAL_CACHED_ARTEFACT_PATH="${LOCAL_CACHE_DIR}/${ARTEFACT_NAME}_${DIGEST}.tgz"

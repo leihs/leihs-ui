@@ -1,12 +1,25 @@
+/*!
+ * LEIHS THEME MOBILE
+ */
+
 // NOTE: this is the "mobile theme", which is supposed a *temporary* variant,
 // while we work on the mobile app/"new borrow" and the regular theme is used in other parts of leihs.
 // the 2 themes should be unified, at the latest when "new borrow" is extended to be responsive.
 
-@import './mobile/variables';
+@import './variables';
+
+// FIXME: remove this
+@import './scss/tmp-reset';
+
+// FIXME: remove this
+@import './scss/tmp-typography';
+
 @import './bootstrap-leihs-base';
 
+@import './scss/fonts';
+
 // wireframe tmp styles:
-@import './mobile/tmp-styles';
+@import './scss/tmp-styles';
 
 // extra mobile styles (aka "new borrow tmp styles") here:
 

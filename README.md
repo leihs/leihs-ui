@@ -49,9 +49,18 @@ bin/update-snapshots
 ## content
 
 - `bootstrap-theme-leihs`
-  - `bootstrap-leihs.css` - regular theme (used in `admin`, `my`, and `procure`)
-  - `bootstrap-leihs-mobile.css` - theme variant for new `borrow` _(will be consilidated once mobile version is stable)_
-- `styleguide` / example usage and standalone ui/ux dev (next.js based)
+  - `bootstrap-leihs.css`
+    - regular theme (used in `admin`, `my`, and `procure`)
+    - based on Bootstrap v4 with slight customisations
+    - _**frozen** until mobile version is stable_
+- `bootstrap-theme-leihs-mobile`
+  - `bootstrap-leihs-mobile.css`
+    - theme variant for new `borrow`
+    - based on Bootstrap v5, heavily customized/skinned
+    - _will be consilidated once mobile version is stable_
+
+---
+
 - `./src` - shared code sources
   - `./components` react components
     - `./components/Mobile` react components for new [`borrow`](https://github.com/leihs/leihs-borrow)

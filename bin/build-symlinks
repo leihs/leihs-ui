@@ -1,6 +1,6 @@
 #!/bin/sh -eu
 
-rm -f src/static src/theme src/legacy static/theme
+rm -f src/static src/theme src/legacy static/theme static/theme-mobile
 
 cd src
 ln -fs ../static static
@@ -9,3 +9,4 @@ ln -fs ../bootstrap-theme-leihs/build theme
 
 cd ../static
 ln -fs ../bootstrap-theme-leihs/build theme
+ln -fs ../bootstrap-theme-leihs-mobile/build theme-mobile
