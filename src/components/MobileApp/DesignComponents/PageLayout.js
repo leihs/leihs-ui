@@ -19,8 +19,8 @@ PageLayout.DividedStack = PageLayoutDividedStack
 export function PageLayoutHeader({ preTitle, title }) {
   return (
     <div className="px-3 pt-4">
-      {preTitle && <h2 className="text-center text-uppercase text-sm">{preTitle}</h2>}
-      {title && <h1 className="text-center text-uppercase text-lg">{title}</h1>}
+      {preTitle && <h2 className="text-center text-sm">{preTitle}</h2>}
+      {title && <h1 className="text-center text-lg">{title}</h1>}
     </div>
   )
 }

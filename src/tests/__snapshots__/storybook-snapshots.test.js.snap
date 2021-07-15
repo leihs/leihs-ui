@@ -23503,7 +23503,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With All Argu
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -23542,7 +23542,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With All Argu
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -23616,7 +23616,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With All Argu
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -23676,7 +23676,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With All Argu
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -25424,7 +25424,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With Minimal 
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -25463,7 +25463,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With Minimal 
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -25537,7 +25537,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With Minimal 
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -25597,7 +25597,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/Order Panel With Minimal 
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -32037,7 +32037,7 @@ Array [
         className="mx-auto"
       >
         <a
-          className="navbar-brand m-0 font-semibold text-l"
+          className="navbar-brand m-0 font-bold text-l"
           href="/app/borrow"
         >
           Leihs
@@ -32097,7 +32097,7 @@ Array [
         className="mx-auto"
       >
         <a
-          className="navbar-brand m-0 font-semibold text-l"
+          className="navbar-brand m-0 font-bold text-l"
           href="/app/borrow"
         >
           Leihs
@@ -32159,7 +32159,7 @@ Array [
         className="mx-auto"
       >
         <a
-          className="navbar-brand m-0 font-semibold text-l"
+          className="navbar-brand m-0 font-bold text-l"
           href="/app/borrow"
         >
           Leihs
@@ -32221,7 +32221,7 @@ Array [
         className="mx-auto"
       >
         <a
-          className="navbar-brand m-0 font-semibold text-l"
+          className="navbar-brand m-0 font-bold text-l"
           href="/app/borrow"
         >
           Leihs
@@ -32283,7 +32283,7 @@ Array [
         className="mx-auto"
       >
         <a
-          className="navbar-brand m-0 font-semibold text-l"
+          className="navbar-brand m-0 font-bold text-l"
           href="/app/borrow"
         >
           Leihs
@@ -32347,7 +32347,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -32384,12 +32384,12 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
     className="px-3 pt-4"
   >
     <h2
-      className="text-center text-uppercase text-sm"
+      className="text-center text-sm"
     >
       Kontext
     </h2>
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Titel
     </h1>
@@ -32429,7 +32429,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -32466,7 +32466,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
     className="px-3 pt-4"
   >
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Divided List
     </h1>
@@ -32538,7 +32538,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -32575,7 +32575,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
     className="px-3 pt-4"
   >
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Divider
     </h1>
@@ -32632,7 +32632,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -32672,12 +32672,12 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
       className="px-3 pt-4"
     >
       <h2
-        className="text-center text-uppercase text-sm"
+        className="text-center text-sm"
       >
         Audio
       </h2>
       <h1
-        className="text-center text-uppercase text-lg"
+        className="text-center text-lg"
       >
         Mischpulte & CD Player
       </h1>
@@ -32692,7 +32692,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
       className="px-3 pt-4"
     >
       <h1
-        className="text-center text-uppercase text-lg"
+        className="text-center text-lg"
       >
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
       </h1>
@@ -32707,7 +32707,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/PageLayout Page Lay
       className="px-3 pt-4"
     >
       <h2
-        className="text-center text-uppercase text-sm"
+        className="text-center text-sm"
       >
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
       </h2>
@@ -32721,7 +32721,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Section Collapsed 1
   className="pt-4"
 >
   <h3
-    className="section-title"
+    className="section-title font-weight-normal"
   >
     <span
       className="section-title__collapser"
@@ -32760,7 +32760,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Section Collapsible
   className="pt-4"
 >
   <h3
-    className="section-title"
+    className="section-title font-weight-normal"
   >
     <span
       className="section-title__collapser"
@@ -32802,7 +32802,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Section Plain 1`] =
   className="pt-4"
 >
   <h3
-    className="section-title"
+    className="section-title font-weight-normal"
   >
     <span
       className=""
@@ -32827,7 +32827,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Section Using Rest 
   }
 >
   <h3
-    className="section-title"
+    className="section-title font-weight-normal"
   >
     <span
       className=""
@@ -33398,7 +33398,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Filter Filter 1`]
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -33463,7 +33463,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Filter Filter 1`]
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -33546,7 +33546,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Filter Filter 1`]
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -33642,7 +33642,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Filter Filter 1`]
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -33791,7 +33791,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -33828,7 +33828,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
     className="px-3 pt-4"
   >
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Audio
     </h1>
@@ -33850,7 +33850,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
       className="pt-4"
     >
       <h3
-        className="section-title"
+        className="section-title font-weight-normal"
       >
         <span
           className="section-title__collapser"
@@ -33942,7 +33942,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
       className="pt-4"
     >
       <h3
-        className="section-title"
+        className="section-title font-weight-normal"
       >
         <span
           className="section-title__collapser"
@@ -34061,7 +34061,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -34098,7 +34098,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
     className="px-3 pt-4"
   >
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Katalog
     </h1>
@@ -34120,7 +34120,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
       className="pt-4"
     >
       <h3
-        className="section-title"
+        className="section-title font-weight-normal"
       >
         <span
           className=""
@@ -34367,7 +34367,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -34404,12 +34404,12 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
     className="px-3 pt-4"
   >
     <h2
-      className="text-center text-uppercase text-sm"
+      className="text-center text-sm"
     >
       Audio
     </h2>
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Mischpulte & CD Player
     </h1>
@@ -34431,7 +34431,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
       className="pt-4"
     >
       <h3
-        className="section-title"
+        className="section-title font-weight-normal"
       >
         <span
           className="section-title__collapser"
@@ -34550,7 +34550,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -34587,7 +34587,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
     className="px-3 pt-4"
   >
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Video Semesterprojekt
     </h1>
@@ -34605,7 +34605,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"
@@ -34687,7 +34687,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"
@@ -34730,7 +34730,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"
@@ -34821,7 +34821,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"
@@ -34980,7 +34980,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"
@@ -35024,7 +35024,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"
@@ -35121,7 +35121,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Filter Fil
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -35186,7 +35186,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Filter Fil
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -35269,7 +35269,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Filter Fil
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -35358,7 +35358,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Filter Fil
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -35452,7 +35452,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Filter Fil
           className="pt-4"
         >
           <h3
-            className="section-title"
+            className="section-title font-weight-normal"
           >
             <span
               className="section-title__collapser"
@@ -35575,7 +35575,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Liste List
       className="mx-auto"
     >
       <a
-        className="navbar-brand m-0 font-semibold text-l"
+        className="navbar-brand m-0 font-bold text-l"
         href="/app/borrow"
       >
         Leihs
@@ -35612,7 +35612,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Liste List
     className="px-3 pt-4"
   >
     <h1
-      className="text-center text-uppercase text-lg"
+      className="text-center text-lg"
     >
       Meine Ausleihen
     </h1>
@@ -35635,7 +35635,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Liste List
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"
@@ -36048,7 +36048,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Liste List
         className="pt-4 pt-5"
       >
         <h3
-          className="section-title"
+          className="section-title font-weight-normal"
         >
           <span
             className="section-title__collapser"

@@ -14,7 +14,7 @@ export default function Section({ title, children, collapsible, defaultCollapsed
 
   return (
     <section className={cx('pt-4', className)} {...restProps}>
-      <h3 className={cx('section-title')}>
+      <h3 className={cx('section-title', 'font-weight-normal')}>
         <span onClick={toggle} className={cx({ 'section-title__collapser': collapsible })}>
           {title}
           {collapsible && (

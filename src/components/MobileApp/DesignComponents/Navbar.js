@@ -12,7 +12,7 @@ export default function Navbar({ brandName, cartItemCount }) {
       </div>
       <div className="mx-auto">
         {!!brandName && (
-          <a href="/app/borrow" className="navbar-brand m-0 font-semibold text-l">
+          <a href="/app/borrow" className="navbar-brand m-0 font-bold text-l">
             {brandName}
           </a>
         )}
