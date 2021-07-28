@@ -16,7 +16,7 @@
     "watch:lib": "NODE_ENV=development npx webpack --watch --info-verbosity verbose --config ./webpack.config.js",
     "watch:theme": "{ cd bootstrap-theme-leihs && npm run watch ;} & { cd bootstrap-theme-leihs-mobile && npm run watch ;}",
     "build:symlinks": "bin/build-symlinks",
-    "now-build": "npm i -g npm@7 && cd bootstrap-theme-leihs && npm ci && cd ../bootstrap-theme-leihs-mobile && npm ci && cd .. && npm ci && npm run build && npm run -s build:storybook",
+    "now-build": "npm i -g npm@7 && bin/build-core && npm run -s build:storybook",
     "build-lib": "npm run -s build:lib",
     "lint": "eslint --fix 'src/{,**/}*.js{,x}' && npm run -s lint:json",
     "ci:lint": "eslint 'src/{,**/}*.js{,x}' && npm run -s ci:lint:json",

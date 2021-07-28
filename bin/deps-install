@@ -3,8 +3,13 @@
 
 cd "$(dirname ${BASH_SOURCE})/.."
 
+cd bootstrap-theme-leihs
 # NOTE: optimize network access, first try with local cache only
 npm ci --no-audit --offline || npm ci --no-audit
-
-cd bootstrap-theme-leihs
 npm run ensure-sass
+
+cd ../bootstrap-theme-leihs-mobile
+npm ci --no-audit --offline || npm ci --no-audit
+
+cd ..
+npm ci --no-audit --offline || npm ci --no-audit
