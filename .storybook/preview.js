@@ -3,7 +3,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import React, { useLayoutEffect } from 'react'
 import './fake-time'
 
-const VIEWPORTS = ['iphone6', 'galaxys9', 'iphonex', 'iphonexsmax', 'ipad']
+const VIEWPORTS = ['iphone5', 'galaxys9', 'iphonex', 'iphonexsmax', 'ipad']
 const DEFAULT_VIEWPORT = 'iphonex'
 
 // theme config:
