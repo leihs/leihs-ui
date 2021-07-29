@@ -85,7 +85,7 @@ export const Navbar = ({ brandName = 'LEIHS', menuItem, cartItem }) => (
     }}
   >
     <div className="navbar-nav w-100">
-      <div className="mr-auto">
+      <div className="me-auto">
         <a className="nav-item nav-link px-0" {...menuItem}>
           <span className="ui-icon ui-menu-icon">☰</span>
         </a>
@@ -99,7 +99,7 @@ export const Navbar = ({ brandName = 'LEIHS', menuItem, cartItem }) => (
       )}
     </div>
     <div className="navbar-nav w-100">
-      <div className="ml-auto d-flex align-items-center">
+      <div className="ms-auto d-flex align-items-center">
         <div className="mx-auto px-2 text-xs">
           <span className="text-color-info" />
         </div>{' '}

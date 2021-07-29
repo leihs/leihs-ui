@@ -15,10 +15,10 @@
   "license": "ISC",
   "browserslist": "defaults, not dead",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fontsource/source-sans-pro": "^4.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@leihs/calendar": "2.0.0-beta.5",
-    "bootstrap": "^4.6.0"
+    "bootstrap": "^5.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",

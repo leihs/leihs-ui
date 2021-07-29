@@ -1,3 +1,22 @@
+// FIXME: components / utilities mixed. partly replaceable by Bootstrap classes
+
+// font size even smaller than Bootstrap's small / .small
+.very-small {
+  font-size: 0.75rem;
+}
+
+// add an icon to invalid feedback
+.invalid-feedback-icon::before {
+  content: '';
+  background-image: escape-svg($form-feedback-icon-invalid);
+  background-repeat: no-repeat;
+  padding-left: 1.2rem;
+  background-position: 0 0.0625rem;
+  background-size: 1.2em;
+  width: 2em;
+  display: inline;
+}
+
 // btn
 .btn-icon {
   user-select: none;
@@ -44,7 +63,7 @@
 // which only works on some possibly nested `<input/>`, making sibling of ancestors like
 // `.invalid-feedback` *impossible* to style otherwise).
 @mixin custom-control-form-validation-state-selector($state) {
-  @if ($state == "valid" or $state == "invalid") {
+  @if ($state == 'valid' or $state == 'invalid') {
     .was-validated .custom-control-mark-#{$state} #{if(&, "&", "")},
     #{if(&, "&", "")}.is-#{$state} {
       @content;
@@ -70,15 +89,16 @@
   }
 }
 
-
 // datepicker custom control
 .custom-datepicker {
-  .custom-datepicker-textinput, .custom-datepicker-calendar-container {
+  .custom-datepicker-textinput,
+  .custom-datepicker-calendar-container {
     // NOTE: from bootstrap's .form-control
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   & .custom-control-focussed {
-    .custom-datepicker-textinput, .custom-datepicker-calendar-container {
+    .custom-datepicker-textinput,
+    .custom-datepicker-calendar-container {
       border-color: $input-focus-border-color !important;
     }
     .custom-datepicker-textinput {
@@ -101,19 +121,23 @@
     }
   }
   .custom-datepicker-calendar-container {
-
     @include custom-control-form-validation-state-selector($state) {
       border-color: $color;
 
       & .custom-control-focussed {
-        .custom-datepicker-textinput, .custom-datepicker-calendar-container {
+        .custom-datepicker-textinput,
+        .custom-datepicker-calendar-container {
           border-color: $color;
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+          box-shadow: 0 0 0 $input-focus-width rgba($color, 0.25);
         }
       }
     }
   }
 }
 @each $state, $data in $form-validation-states {
-  @include custom-datepicker-form-validation-state($state, map-get($data, color), map-get($data, icon));
+  @include custom-datepicker-form-validation-state(
+    $state,
+    map-get($data, color),
+    map-get($data, icon)
+  );
 }

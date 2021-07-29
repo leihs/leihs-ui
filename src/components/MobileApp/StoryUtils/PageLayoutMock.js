@@ -1,12 +1,10 @@
 import React from 'react'
 import PageLayout from '../DesignComponents/PageLayout'
+import Navbar from '../DesignComponents/Navbar'
 
 export default function PageLayoutMock({ children, ...overrides }) {
   const pageLayoutProps = {
-    title: undefined,
-    preTitle: undefined,
-    brandName: 'Leihs',
-    cartItemCount: 3,
+    navbar: <Navbar brandName="leihs" cartItemCount={3} />,
     ...overrides
   }
   return <PageLayout {...pageLayoutProps}>{children}</PageLayout>

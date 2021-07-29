@@ -20,7 +20,7 @@ const fakeSearchForm = (
     Xstyle={{ boxShadow: 'rgba(0, 0, 0, 0.15) 0px 0rem 2rem inset' }}
   >
     <form action="/search" className="form form-compact">
-      <div className="form-group">
+      <div>
         <label className="row">
           <span className="text-xs col-3 col-form-label">Suche </span>
           <div className="col-9">
@@ -31,7 +31,7 @@ const fakeSearchForm = (
       <label className="row">
         <span className="text-xs col-3 col-form-label">Aus </span>
         <div className="col-9">
-          <select className="form-control" name="user-id">
+          <select className="form-select" name="user-id">
             <option value="all" selected="">
               Allen Geräteparks
             </option>
@@ -43,13 +43,13 @@ const fakeSearchForm = (
           </select>
         </div>
       </label>
-      <div className="form-group">
-        <div className="row">
+      <div>
+        <div className="row align-items-center">
           <span className="text-xs col-3 col-form-label">Time Span</span>
           <div className="col-9">
-            <label className="custom-control custom-checkbox">
-              <input type="checkbox" name="only-available" className="custom-control-input" />
-              <span className="custom-control-label">Show available only</span>
+            <label className="form-check">
+              <input type="checkbox" name="only-available" className="form-check-input" />
+              <span className="form-check-label">Show available only</span>
             </label>
           </div>
         </div>

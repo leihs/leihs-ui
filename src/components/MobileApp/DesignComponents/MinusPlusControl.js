@@ -1,50 +1,104 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import cx from 'classnames'
-import ActionButton from './ActionButton'
 
-export default function MinusPlusControl({ className, number, onChange }) {
-  const value = isNaN(number) ? '' : number
+export default function MinusPlusControl({ className, number, onChange, min, max, ...restProps }) {
+  const inputRef = useRef()
+  const minusBtnRef = useRef()
+  const plusBtnRef = useRef()
+  const lastNum = useRef(NaN) // as a base for inc/decrement
+  const msgRef = useRef()
 
-  function decrement(e) {
-    if (!value) {
-      onChange(1)
-      return
+  const defaultNumber = isNaN(min) ? 1 : min
+
+  useEffect(() => {
+    // PATCH to prevent crash in DOM-less tests
+    if (!inputRef.current) return
+    update(number)
+  }, [number, min, max])
+
+  function update(num) {
+    if (isNaN(num)) {
+      inputRef.current.value = ''
+      setValidity('Zahl eingeben')
+    } else {
+      inputRef.current.value = num
+      if (!isNaN(min) && num < min) {
+        setValidity(`Minimal ${min}`)
+      } else if (!isNaN(max) && num > max) {
+        setValidity(`Maximal ${max}`)
+      } else {
+        setValidity('')
+      }
     }
-    if (number > 1) {
-      onChange(number - 1)
-    }
+    lastNum.current = num
+    minusBtnRef.current.disabled = !isNaN(min) && num <= min ? 'disabled' : ''
+    plusBtnRef.current.disabled = !isNaN(max) && num >= max ? 'disabled' : ''
   }
-  function increment(e) {
-    if (!value) {
-      onChange(1)
-      return
-    }
-    onChange(number + 1)
+
+  function setValidity(msg) {
+    inputRef.current.setCustomValidity(msg)
+    msgRef.current.innerText = msg
   }
-  function directInput(e) {
-    const v = parseInt(e.target.value, 10)
-    onChange(v)
+
+  function emitChange(num) {
+    onChange && onChange(num)
+  }
+
+  // event handlers:
+
+  function add(summand) {
+    const num = isNaN(lastNum.current) ? defaultNumber : lastNum.current + summand
+    update(num)
+    emitChange(num)
+  }
+
+  function blur(e) {
+    const num = parseInt(e.target.value, 10)
+    update(num)
+    emitChange(num)
+  }
+
+  function buttonMouseDown(e) {
+    inputRef.current.focus()
+    e.preventDefault() // (so the button does not get focus)
   }
 
   return (
-    <div className="form-row">
-      <div className="col">
-        <ActionButton className="action-button--lighter" onClick={decrement}>
+    <div className="row g-2">
+      <div className="col-4">
+        <button
+          ref={minusBtnRef}
+          type="button"
+          className="btn btn-secondary w-100"
+          onClick={() => add(-1)}
+          onMouseDown={buttonMouseDown}
+          tabIndex="-1"
+        >
           Minus
-        </ActionButton>
+        </button>
       </div>
-      <div className="col">
+      <div className="col-4">
         <input
+          className={cx('form-control text-center', className)}
+          {...restProps}
+          ref={inputRef}
           type="text"
-          value={value}
-          className={cx('form-control', { 'is-invalid': !value }, className)}
-          onChange={directInput}
+          inputMode="numeric"
+          onBlur={blur}
         />
+        <div ref={msgRef} className="invalid-feedback"></div>
       </div>
-      <div className="col">
-        <ActionButton className="action-button--lighter" onClick={increment}>
+      <div className="col-4">
+        <button
+          ref={plusBtnRef}
+          type="button"
+          className="btn btn-secondary w-100"
+          onClick={() => add(1)}
+          onMouseDown={buttonMouseDown}
+          tabIndex="-1"
+        >
           Plus
-        </ActionButton>
+        </button>
       </div>
     </div>
   )

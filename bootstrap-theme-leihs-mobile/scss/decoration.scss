@@ -1,8 +1,10 @@
+// FIXME: remove? (not referenced in Mobile components)
 .bg-paper {
   background: #f3f1eb url('../legacy/assets/images/background.png');
   color: #3a3a3a;
 }
 
+// FIXME: remove? (not referenced in borrow and leihs-ui)
 .bg-chrome-rims {
   background: linear-gradient(to bottom, #fff 50%, #f2f2f2 50%);
 }
@@ -13,17 +15,18 @@
   padding-bottom: 100%;
 }
 
-/* from tailwinds */
+/* from Tailwind */
 .object-center {
   -o-object-position: center;
   object-position: center;
 }
-/* from tailwinds */
+/* from Tailwind */
 .object-contain {
   -o-object-fit: contain;
   object-fit: contain;
 }
 
+// FIXME: remove? (not referenced in Mobile components)
 .hr-text {
   // line with text, looks like this:
   // ------------- some text ------------------
@@ -51,7 +54,8 @@
   }
 }
 
-/* from tailwinds */
+// FIXME: only referenced in pre-2021-wireframes design
+/* from Tailwind */
 .shadow-md {
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06);

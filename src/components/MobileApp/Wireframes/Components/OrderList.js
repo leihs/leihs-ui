@@ -6,13 +6,13 @@ import PageLayout from '../../DesignComponents/PageLayout'
 
 export default function OrderList({ ordersByBasicState, onItemClick }) {
   return (
-    <div>
+    <PageLayout.Stack1>
       {ordersByBasicState.map(group => {
         const orders = group.orders
         const title = group.basicState.label
         const key = group.basicState.key
         return (
-          <Section key={key} title={title} collapsible={true} className="pt-5">
+          <Section key={key} title={title} collapsible={true}>
             <PageLayout.DividedStack>
               {orders.map((order, i) => {
                 return (
@@ -25,15 +25,15 @@ export default function OrderList({ ordersByBasicState, onItemClick }) {
           </Section>
         )
       })}
-    </div>
+    </PageLayout.Stack1>
   )
 }
 
 function OrderListItem({ order, onClick }) {
   return (
     <SimpleCard onClick={() => onClick(order)} foot={<OrderStateInfo order={order} />}>
-      <h5>{order.title}</h5>
-      <div className="text-xs">
+      <h2>{order.title}</h2>
+      <div>
         {order.durationDays} Tage {order.isCompleted ? `bis ${order.endDate}` : `ab ${order.startDate}`},{' '}
         {order.modelCount} {order.modelCount === 1 ? 'Gegenstand' : 'Gegenstände'}
       </div>

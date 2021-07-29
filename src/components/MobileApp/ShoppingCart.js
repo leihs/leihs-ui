@@ -4,7 +4,6 @@ import f from 'lodash'
 
 import { Let } from '../Util'
 import Icon from '../Icons'
-// import { ImgPlaceholder } from './ImageThumbnail'
 
 export const ReservationLines = ({ lines }) => (
   <ul className="list-unstyled">
@@ -25,7 +24,7 @@ export const ReservationLine = ({ reservation, quantity, isEditing, isInvalid })
             <img
               alt={model.name}
               style={{ maxWidth: '4rem', maxHeight: '4rem' }}
-              className="img-fluid img-thumbnail mr-3"
+              className="img-fluid img-thumbnail me-3"
               href={'#modelShow'}
               onClick={() => alert('would go to model page')}
               src={src}

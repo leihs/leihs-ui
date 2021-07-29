@@ -95,10 +95,10 @@ function Transferred({ transferUser }) {
 function StateInfoTemplate({ title, info1, info2, totalCount, doneCount }) {
   return (
     <div>
-      <div className="font-medium">{title}.</div>
-      {info1 && <div className="text-xs">{info1}</div>}
+      <div className="small">{title}</div>
+      {info1 && <div className="very-small">{info1}</div>}
       {totalCount && <StateProgress totalCount={totalCount} doneCount={doneCount} />}
-      {info2 && <div className="text-xs">{info2}</div>}
+      {info2 && <div className="very-small">{info2}</div>}
     </div>
   )
 }
@@ -110,9 +110,9 @@ function StateProgress({ totalCount, doneCount }) {
   var percent = Number(doneCount / totalCount).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 0 })
 
   return (
-    <div className="progress order-state-progress my-1">
+    <div className="progress order-state-progress">
       <div
-        className="progress-bar order-state-progress__bar rounded"
+        className="progress-bar rounded"
         role="progressbar"
         style={{ width: percent }}
         aria-valuenow={doneCount}

@@ -11,7 +11,7 @@ export default {
 
 export const detail = ({ order, onOrderCancelClick }) => {
   return (
-    <PageLayoutMock title={order.title}>
+    <PageLayoutMock>
       <OrderDetail order={order} onOrderCancelClick={onOrderCancelClick} />
     </PageLayoutMock>
   )

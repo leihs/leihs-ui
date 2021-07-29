@@ -3,9 +3,9 @@ import cx from 'classnames'
 
 export default function DialogCard({ children, title, className, ...restProps }) {
   return (
-    <div {...restProps} className={cx('dialog-card h-100', className)}>
+    <div {...restProps} className={cx('bg-light-shade h-100', className)}>
       <div>
-        <h1 className="dialog-card__title text-center text-uppercase text-lg pt-5 m-0">{title}</h1>
+        <h2 className="text-center border-bottom m-0 p-3">{title}</h2>
         {children}
       </div>
     </div>
@@ -14,7 +14,7 @@ export default function DialogCard({ children, title, className, ...restProps })
 
 DialogCard.Body = function DialogCardBody({ className, children, ...restProps }) {
   return (
-    <div {...restProps} className={cx('dialog-card__body px-3 py-3', className)}>
+    <div {...restProps} className={cx('bg-white page-inset-x py-3', className)} style={{ minHeight: '50vh' }}>
       {children}
     </div>
   )
@@ -22,7 +22,15 @@ DialogCard.Body = function DialogCardBody({ className, children, ...restProps })
 
 DialogCard.Foot = function DialogCardFoot({ className, children, ...restProps }) {
   return (
-    <div {...restProps} className={cx('px-3 py-3 dialog-card__foot', className)}>
+    <div {...restProps} className={cx('bg-light-shade page-inset-x py-3', className)}>
+      {children}
+    </div>
+  )
+}
+
+DialogCard.ButtonGroup = function DialogCardButtonGroup({ className, children, ...restProps }) {
+  return (
+    <div {...restProps} className={cx('d-flex gap-2 justify-content-between', className)}>
       {children}
     </div>
   )

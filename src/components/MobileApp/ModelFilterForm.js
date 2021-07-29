@@ -6,7 +6,6 @@ import f from 'lodash'
 // import { action } from '@storybook/addon-actions'
 // import { Let } from '../Util'
 // import Icon from '../Icons'
-// import { ImgPlaceholder } from './ImageThumbnail'
 
 const DEFAULT_TERM = ''
 const DEFAULT_POOL_ID = 'all'
@@ -76,7 +75,7 @@ const ModelFilterForm = ({
         }}
         className="form form-compact"
       >
-        <div className="form-group">
+        <div>
           <label className="row">
             <span className="text-xs col-3 col-form-label">Search </span>
             <div className="col-9">
@@ -95,7 +94,7 @@ const ModelFilterForm = ({
           <label className="row">
             <span className="text-xs col-3 col-form-label">For</span>
             <div className="col-9">
-              <select className="form-control" name="user-id" value={userId} onChange={e => setUserId(e.target.value)}>
+              <select className="form-select" name="user-id" value={userId} onChange={e => setUserId(e.target.value)}>
                 <option value={user.id} key={user.id}>
                   {user.name}
                 </option>
@@ -111,7 +110,7 @@ const ModelFilterForm = ({
         <label className="row">
           <span className="text-xs col-3 col-form-label">From</span>
           <div className="col-9">
-            <select className="form-control" name="pool-id" value={poolId} onChange={e => setPoolId(e.target.value)}>
+            <select className="form-select" name="pool-id" value={poolId} onChange={e => setPoolId(e.target.value)}>
               <option value="all" key="all">
                 All inventory pools
               </option>
@@ -123,26 +122,26 @@ const ModelFilterForm = ({
             </select>
           </div>
         </label>
-        <div className="form-group">
-          <div className="row">
+        <div>
+          <div className="row align-items-center">
             <span className="text-xs col-3 col-form-label">Time Span</span>
             <div className="col-9">
-              <label className="custom-control custom-checkbox">
+              <label className="form-check">
                 <input
                   type="checkbox"
                   name="only-available"
                   checked={availableBetween}
                   onChange={e => setAvailableBetween(prevBool => !prevBool)}
-                  className="custom-control-input"
+                  className="form-check-input"
                 />
-                <span className="custom-control-label">Show available only</span>
+                <span className="form-check-label">Show available only</span>
               </label>
             </div>
           </div>
         </div>
         {availableBetween && (
           <div>
-            <div className="form-group">
+            <div>
               <label className="row">
                 <span className="text-xs col-3 col-form-label">From </span>
                 <div className="col-9">
@@ -158,7 +157,7 @@ const ModelFilterForm = ({
                 </div>
               </label>
             </div>
-            <div className="form-group">
+            <div>
               <label className="row">
                 <span className="text-xs col-3 col-form-label">Until </span>
                 <div className="col-9">
@@ -174,7 +173,7 @@ const ModelFilterForm = ({
                 </div>
               </label>
             </div>
-            <div className="form-group">
+            <div>
               <label className="row">
                 <span className="text-xs col-3 col-form-label">Quantity </span>
                 <div className="col-9">

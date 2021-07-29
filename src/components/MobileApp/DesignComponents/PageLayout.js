@@ -1,42 +1,70 @@
 import React from 'react'
 import cx from 'classnames'
-import Navbar from './Navbar'
 
-export default function PageLayout({ children, title, preTitle, brandName, cartItemCount }) {
+export default function PageLayout({ children, navbar }) {
   return (
     <div>
-      <Navbar brandName={brandName} cartItemCount={cartItemCount} />
-      {(title || preTitle) && <PageLayoutHeader title={title} preTitle={preTitle} />}
-      <div className="px-3">{children}</div>
+      {navbar}
+      <div className="page-inset-x py-4">{children}</div>
     </div>
   )
 }
 
-PageLayout.Header = PageLayoutHeader
-PageLayout.Divider = PageLayoutDivider
-PageLayout.DividedStack = PageLayoutDividedStack
-
-export function PageLayoutHeader({ preTitle, title }) {
+PageLayout.Header = function PageLayoutHeader({ preTitle, title, children, className, ...restProps }) {
   return (
-    <div className="px-3 pt-4">
-      {preTitle && <h2 className="text-center text-sm">{preTitle}</h2>}
-      {title && <h1 className="text-center text-lg">{title}</h1>}
+    <div className={cx('text-center mb-4', className)} {...restProps}>
+      <h1>
+        {preTitle && (
+          <>
+            <span className="d-inline-block fs-2 mb-1">{preTitle}</span>
+            <br />
+          </>
+        )}
+        {title}
+      </h1>
+      {children}
     </div>
   )
 }
 
-export function PageLayoutDivider({ className, style }) {
-  return <hr className={cx('mx-n3', className)} style={style} />
+PageLayout.Divider = function PageLayoutDivider({ className, style }) {
+  return renderDivider({ className, style })
 }
 
-export function PageLayoutDividedStack({ children }) {
-  return (children.map ? children : [children]).map((child, i) => {
-    return (
-      <div key={i}>
-        {i === 0 && <PageLayoutDivider className="m-0" />}
-        {child}
-        <PageLayoutDivider className="m-0" />
-      </div>
-    )
-  })
+PageLayout.DividedStack = function PageLayoutDividedStack({ children }) {
+  return (
+    React.Children.map(children, (child, i) => {
+      return (
+        <div key={i}>
+          {i === 0 && renderDivider({})}
+          {child}
+          {renderDivider({})}
+        </div>
+      )
+    }) || null
+  )
+}
+
+PageLayout.Stack1 = function PageLayoutStack1({ children }) {
+  return renderList({ children, itemClassName: 'mb-5' })
+}
+
+PageLayout.Stack2 = function PageLayoutStack2({ children }) {
+  return renderList({ children, itemClassName: 'mb-4' })
+}
+
+function renderDivider({ className, style }) {
+  return <hr className={cx('page-inset-x-inverse', className)} style={style} />
+}
+
+function renderList({ children, itemClassName }) {
+  return (
+    React.Children.map(children, (child, i) => {
+      return (
+        <div key={i} className={itemClassName}>
+          {child}
+        </div>
+      )
+    }) || null
+  )
 }

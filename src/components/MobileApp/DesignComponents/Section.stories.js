@@ -1,4 +1,5 @@
 import React from 'react'
+import PageLayout from './PageLayout'
 import Section from './Section'
 
 export default {
@@ -26,6 +27,29 @@ export const collapsed = () => {
     <Section title="Collapsed" collapsible={true} defaultCollapsed={true}>
       {lorem}
     </Section>
+  )
+}
+
+export const spacing = () => {
+  return (
+    <>
+      <p>A section does not have vertical spacing per se!</p>
+      <Section className="border">default (no spacing)</Section>
+      <Section className="border">default (no spacing)</Section>
+      <PageLayout.Divider />
+      <p>Use Bootstrap utility classes:</p>
+      <Section className="border mb-4">.mb-4</Section>
+      <Section className="border mb-4">.mb-4</Section>
+      <p>Use PageLayout.StackX1/2</p>
+      <PageLayout.Stack1>
+        <Section className="border">in a Stack1</Section>
+        <Section className="border">in a Stack1</Section>
+      </PageLayout.Stack1>
+      <PageLayout.Stack2>
+        <Section className="border">in a Stack2</Section>
+        <Section className="border">in a Stack2</Section>
+      </PageLayout.Stack2>
+    </>
   )
 }
 

@@ -3,7 +3,7 @@ import cx from 'classnames'
 
 export default function SquareImage({ href, imgSrc, className, ...restProps }) {
   return (
-    <div {...restProps} className={cx(className, 'square-container position-relative rounded-lg overflow-hidden')}>
+    <div {...restProps} className={cx(className, 'square-container position-relative overflow-hidden')}>
       <a href={href}>
         {imgSrc ? (
           <img
@@ -19,6 +19,6 @@ export default function SquareImage({ href, imgSrc, className, ...restProps }) {
   )
 }
 
-function ImgPlaceholder({ className }) {
-  return <div className={cx(className, 'ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted')} />
+function ImgPlaceholder() {
+  return <div className={cx('ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted')} />
 }

@@ -6,19 +6,34 @@ export default {
   component: InputWithClearButton
 }
 
-export const formControl = () => {
+export const controlled = () => {
   const [name, setName] = useState('')
 
   return (
-    <div>
+    <div className="d-grid gap-3">
       <InputWithClearButton
+        type="text"
         name="name"
         placeholder="Name"
         value={name}
         onChange={e => setName(e.target.value)}
-        onClearClick={() => setName('')}
       />
-      <div className="p-2">Name = {name}</div>
+      <input
+        type="text"
+        name="mirror"
+        placeholder="Input bound to same state"
+        className="form-control"
+        value={name}
+        onChange={e => setName(e.target.value)}
+      />
+    </div>
+  )
+}
+
+export const uncontrolled = () => {
+  return (
+    <div>
+      <InputWithClearButton name="name" placeholder="Name" defaultValue="James Bond" />
     </div>
   )
 }
@@ -34,22 +49,20 @@ export const inlineBlock = () => {
 
   return (
     <div>
-      <div className="d-inline-block w-50">
+      <div className="d-inline-block mb-3">
         <InputWithClearButton
           name="firstName"
           placeholder="First name"
           value={firstName}
           onChange={e => setFirstName(e.target.value)}
-          onClearClick={() => setFirstName('')}
         />
       </div>
-      <div className="d-inline-block w-50">
+      <div className="d-inline-block mb-3">
         <InputWithClearButton
           name="lastName"
           placeholder="Last name"
           value={lastName}
           onChange={e => setLastName(e.target.value)}
-          onClearClick={() => setLastName('')}
         />
       </div>
       <div className="p-2">Name = {`${firstName} ${lastName}`}</div>

@@ -1,8 +1,9 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import FilterSummary from '../../../DesignComponents/FilterSummary'
+import FilterButton from '../../../DesignComponents/FilterButton'
 import OrderList from '../../Components/OrderList'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
+import PageLayout from '../../../DesignComponents/PageLayout'
 
 export default {
   title: 'MobileApp/Wireframes/MeineAusleihen/Liste',
@@ -12,8 +13,10 @@ export default {
 
 export const liste = ({ ordersByBasicState, onItemClick }) => {
   return (
-    <PageLayoutMock title="Meine Ausleihen">
-      <FilterSummary>Alle Ausleihen</FilterSummary>
+    <PageLayoutMock>
+      <PageLayout.Header title="Meine Ausleihen">
+        <FilterButton>Alle Ausleihen</FilterButton>
+      </PageLayout.Header>
       <OrderList ordersByBasicState={ordersByBasicState} onItemClick={onItemClick} />
     </PageLayoutMock>
   )

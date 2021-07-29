@@ -24,9 +24,10 @@ export default function DateRangePicker({
   const dateFormatter = date => format(date, 'P', { locale: locale })
   const dateParser = s => parse(s, 'P', new Date(), { locale: locale })
 
-  const [focus, setFocus] = useState('startDate') // 'startDate' | 'endDate'
-
   // DateRange component
+
+  // "Focus" - for interaction with the date calendar component (values: 'startDate' | 'endDate')
+  const [focus, setFocus] = useState('startDate')
 
   const range = (() => {
     const rangeConfig = {
@@ -49,7 +50,13 @@ export default function DateRangePicker({
   }
 
   function handleRangeFocusChange(range) {
-    setFocus(range[1] === 1 ? 'endDate' : 'startDate')
+    if (range[1] === 1) {
+      setFocus('endDate')
+      endDateInput.current.focus()
+    } else {
+      setFocus('startDate')
+      startDateInput.current.focus()
+    }
   }
 
   // satellite inputs
@@ -108,37 +115,31 @@ export default function DateRangePicker({
 
   return (
     <div className="date-range-picker">
-      <div className="form-group">
+      <div className="mb-3">
         <label data-label="Von" className="date-range-input-label">
           <input
             ref={startDateInput}
             name="startDate"
-            className={cx(
-              'form-control date-range-input',
-              { 'date-range-input--focus': focus === 'startDate' },
-              { 'is-invalid': startDateInvalid }
-            )}
+            className={cx('form-control date-range-input', { 'is-invalid': startDateInvalid })}
             defaultValue={dateFormatter(selectedRange.startDate)}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
             placeholder="Unbestimmt"
+            autoComplete="off"
           />
         </label>
       </div>
-      <div className="form-group mb-0">
+      <div className="mb-0">
         <label data-label="Bis" className="date-range-input-label">
           <input
             ref={endDateInput}
             name="endDate"
-            className={cx(
-              'form-control date-range-input',
-              { 'date-range-input--focus': focus === 'endDate' },
-              { 'is-invalid': endDateInvalid }
-            )}
+            className={cx('form-control date-range-input', { 'is-invalid': endDateInvalid })}
             defaultValue={dateFormatter(selectedRange.endDate)}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
             placeholder="Unbestimmt"
+            autoComplete="off"
           />
         </label>
       </div>

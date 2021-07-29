@@ -1,36 +1,31 @@
 import React from 'react'
+import Icon, { iconMenu, iconBag } from '../DesignComponents/Icons'
+import cx from 'classnames'
 
-export default function Navbar({ brandName, cartItemCount }) {
+export default function Navbar({ brandName, cartItemCount, className, menuItem, cartItem, ...restProps }) {
   return (
-    <nav className="app-navbar ui-main-nav navbar navbar-light text-xl py-0 px-3 sticky-top flex-nowrap justify-content-between">
-      <div className="navbar-nav w-100">
-        <div className="mr-auto">
-          <a href="/app/borrow" className="nav-item nav-link px-0">
-            <span className="ui-icon ui-menu-icon app-navbar__burger">☰</span>
-          </a>
-        </div>
+    <nav
+      className={cx('ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top', className)}
+      {...restProps}
+    >
+      <div className="navbar-nav">
+        <a className="nav-item nav-link" {...menuItem}>
+          <span className="ui-icon ui-menu-icon">
+            <Icon icon={iconMenu} />
+          </span>
+        </a>
       </div>
-      <div className="mx-auto">
-        {!!brandName && (
-          <a href="/app/borrow" className="navbar-brand m-0 font-bold text-l">
-            {brandName}
-          </a>
-        )}
-      </div>
-      <div className="navbar-nav w-100">
-        <div className="ml-auto d-flex align-items-center">
-          <div className="mx-auto px-2 text-xs">
-            <span className="text-color-info" />
-          </div>{' '}
-          <a href="/app/borrow/order" className="nav-item nav-link px-0 app-navbar__cart">
-            <CartBadge count={cartItemCount} />
-          </a>
-        </div>
+      <a href="/app/borrow" className="navbar-brand me-0 fw-bold" {...cartItem}>
+        {brandName}
+      </a>
+      <div className="navbar-nav">
+        <a href="/app/borrow/order" className="nav-item nav-link position-relative">
+          <div className="cart-badge position-absolute small" style={{ top: '8%', right: '-30%' }}>
+            {cartItemCount || '0'}
+          </div>
+          <Icon icon={iconBag} />
+        </a>
       </div>
     </nav>
   )
-}
-
-function CartBadge({ count }) {
-  return <div className="cart-badge">{count}</div>
 }

@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAngleDown, faAngleUp } from '@fortawesome/free-solid-svg-icons'
 import cx from 'classnames'
+import Icon, { iconSectionArrow } from './Icons'
 
 export default function Section({ title, children, collapsible, defaultCollapsed, className, ...restProps }) {
   const [collapsed, setCollapsed] = useState(defaultCollapsed)
@@ -13,18 +12,27 @@ export default function Section({ title, children, collapsible, defaultCollapsed
   }
 
   return (
-    <section className={cx('pt-4', className)} {...restProps}>
-      <h3 className={cx('section-title', 'font-weight-normal')}>
-        <span onClick={toggle} className={cx({ 'section-title__collapser': collapsible })}>
-          {title}
-          {collapsible && (
-            <span className="pl-1">
-              {' '}
-              {collapsed ? <FontAwesomeIcon icon={faAngleUp} /> : <FontAwesomeIcon icon={faAngleDown} />}
-            </span>
-          )}
-        </span>
-      </h3>
+    <section className={cx(className)} {...restProps}>
+      {(title || collapsed) && (
+        <h2 className={cx('section-title', 'fw-normal')}>
+          <span
+            onClick={toggle}
+            className={cx({ 'section-title__collapser': collapsible })}
+            role={collapsible ? 'button' : ''}
+          >
+            {title}
+            {collapsible && (
+              <Icon
+                icon={iconSectionArrow}
+                className={cx('section-title__arrow-icon', {
+                  'section-title__arrow-icon--collapsed': collapsed
+                })}
+              />
+            )}
+          </span>
+        </h2>
+      )}
+
       {collapsed || <div>{children}</div>}
     </section>
   )

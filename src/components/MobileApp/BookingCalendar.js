@@ -19,6 +19,7 @@ import DialogCard from './DesignComponents/DialogCard'
 import Section from './DesignComponents/Section'
 import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
+import PageLayout from './DesignComponents/PageLayout'
 
 const noop = () => {}
 
@@ -107,60 +108,58 @@ export const BookingCalendar = ({
     }
   }
   return (
-    <DialogCard title="Gegenstand hinzufügen" className="ui-booking-calendar">
-      <DialogCard.Body>
-        <Section title="Gegenstand" collapsible={true}>
-          {modelData.name}
-        </Section>
-        <Section title="Anzahl" collapsible={true}>
-          <MinusPlusControl number={quantity} onChange={changeQuantity} />
-        </Section>
-        <Section title="Gerätepark" collapsible={true}>
-          <select className="form-control custom-select" value={selectedPoolId} onChange={changeInventoryPool}>
-            {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
-              <option key={id} value={id}>
-                {name} (max. {totalBorrowableQuantity})
-              </option>
-            ))}
-          </select>
-        </Section>
-        <Section title="Zeitraum" collapsible={true}>
-          <DateRangePicker
-            selectedRange={selectedRange}
-            onChange={changeDateRange}
-            onShownDateChange={changeShownDate}
-            maxDateLoaded={maxDateLoaded}
-            minDate={minDate}
-            maxDate={maxDate}
-            disabledDates={blockedDates}
-            disabledStartDates={blockedStartDates}
-            disabledEndDates={blockedEndDates}
-            locale={de}
-          />
-        </Section>
-        {hasUserInteracted && validationError && (
-          <div>
-            {/* (Bootstrap expects an invalid input before an invalid-feedback, we don't have it here, so we fake it) */}
-            <i className="is-invalid"></i>
-            <div className="invalid-feedback">{validationError}</div>
-          </div>
-        )}
-      </DialogCard.Body>
-      <DialogCard.Foot>
-        <div className="row">
-          <div className="col pr-2">
-            <button type="button" href="#" className="btn btn-outline-danger" onClick={cancel}>
+    <form onSubmit={submit} noValidate className={hasUserInteracted ? 'was-validated' : ''}>
+      <DialogCard title="Gegenstand hinzufügen" className="ui-booking-calendar">
+        <DialogCard.Body>
+          <PageLayout.Stack2>
+            <Section>{modelData.name}</Section>
+            <Section title="Anzahl" collapsible={true}>
+              <MinusPlusControl number={quantity} onChange={changeQuantity} name="quantity" min={1} />
+            </Section>
+            <Section title="Gerätepark" collapsible={true}>
+              <select className="form-select" value={selectedPoolId} onChange={changeInventoryPool}>
+                {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
+                  <option key={id} value={id}>
+                    {name} (max. {totalBorrowableQuantity})
+                  </option>
+                ))}
+              </select>
+            </Section>
+            <Section title="Zeitraum" collapsible={true}>
+              <DateRangePicker
+                selectedRange={selectedRange}
+                onChange={changeDateRange}
+                onShownDateChange={changeShownDate}
+                maxDateLoaded={maxDateLoaded}
+                minDate={minDate}
+                maxDate={maxDate}
+                disabledDates={blockedDates}
+                disabledStartDates={blockedStartDates}
+                disabledEndDates={blockedEndDates}
+                locale={de}
+              />
+              {hasUserInteracted && validationError && (
+                <div>
+                  {/* (Bootstrap expects an invalid input before an invalid-feedback, we don't have it here, so we fake it) */}
+                  <i className="is-invalid"></i>
+                  <div className="invalid-feedback invalid-feedback-icon">{validationError}</div>
+                </div>
+              )}
+            </Section>
+          </PageLayout.Stack2>
+        </DialogCard.Body>
+        <DialogCard.Foot>
+          <DialogCard.ButtonGroup>
+            <button type="button" className="btn btn-secondary" onClick={cancel}>
               Abbrechen
             </button>
-          </div>
-          <div className="col pl-2 text-right">
-            <button type="submit" href="#" className="btn btn-primary" disabled={!isValidForm} onClick={submit}>
+            <button type="submit" className="btn btn-primary" disabled={!isValidForm}>
               Hinzufügen
             </button>
-          </div>
-        </div>
-      </DialogCard.Foot>
-    </DialogCard>
+          </DialogCard.ButtonGroup>
+        </DialogCard.Foot>
+      </DialogCard>
+    </form>
   )
 }
 

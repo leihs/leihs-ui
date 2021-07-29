@@ -1,3 +1,5 @@
+// FIXME: This is more a feature than a fix
+
 %render-container {
   height: 100%; // "pass through" full parent height
   display: contents; // dont interfere with flexbox layout
@@ -9,6 +11,13 @@
 }
 
 // next.js and storybook fix to make root/wrapper full height:
-#__next, #root {
+#__next,
+#root {
   @extend %render-container;
+}
+
+html,
+body {
+  height: 100%;
+  min-width: 320px;
 }

@@ -1,11 +1,8 @@
 import React from 'react'
-
-import ListAsGridSquare from './ListAsGridSquare'
+import SquareImageGrid from './DesignComponents/SquareImageGrid'
 
 const BASE_CLASS = 'ui-models-list'
 
-const ModelList = ({ list }) => {
-  return <ListAsGridSquare baseClass={BASE_CLASS} list={list} />
+export default function ModelList({ list }) {
+  return <SquareImageGrid list={list} className={BASE_CLASS} itemClassName={BASE_CLASS + '-item'} />
 }
-
-export default ModelList

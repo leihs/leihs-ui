@@ -6,8 +6,9 @@ import PageLayout from './DesignComponents/PageLayout'
 import Section from './DesignComponents/Section'
 import SquareImageGrid from './DesignComponents/SquareImageGrid'
 import DownloadLink from './DesignComponents/DownloadLink'
-import ActionButton from './DesignComponents/ActionButton'
+import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 import SquareImage from './DesignComponents/SquareImage'
+import KeyValueTable from './DesignComponents/KeyValueTable'
 
 export default function ModelShow({ model, onOrderClick, onClickFavorite, orderPanelTmp }) {
   const [imageIndex, setImageIndex] = useState(0)
@@ -35,10 +36,10 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
   }
   return (
     <>
-      <PageLayout.Header title={model.name} />
+      <PageLayout.Header title={model.name} className="mb-5" />
 
       {model.images.length > 1 && (
-        <Section>
+        <div className="mb-4">
           <SwipeableViews
             enableMouseEvents={true}
             resistance={true}
@@ -46,7 +47,7 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
             index={imageIndex}
           >
             {model.images.map((image, i) => {
-              return <SquareImage key={i} imgSrc={image.imageUrl} />
+              return <SquareImage key={i} imgSrc={image.imageUrl} className="mb-3" />
             })}
           </SwipeableViews>
 
@@ -55,60 +56,65 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
               <button
                 type="button"
                 key={i}
-                className={cx('gallery-button', { 'gallery-button--selected': i === imageIndex })}
+                className={cx('btn btn-secondary gallery-button', { 'gallery-button--selected': i === imageIndex })}
                 onClick={() => handleImageBulletClick(i)}
               ></button>
             ))}
           </div>
-        </Section>
+        </div>
+      )}
+      {model.images.length === 1 && (
+        <div className="mb-4">
+          <SquareImage imgSrc={model.images[0].imageUrl} />
+        </div>
       )}
 
-      <Section>
-        <ActionButton onClick={addToOrderClick}>Gegenstand hinzufügen</ActionButton>
-        {model.isFavorited ? (
-          <ActionButton onClick={removeFromFavoritesClick}>Von Favoriten entfernen</ActionButton>
-        ) : (
-          <ActionButton onClick={addToFavoritesClick}>Zu Favoriten hinzufügen</ActionButton>
+      <PageLayout.Stack1>
+        <ActionButtonGroup>
+          <button type="button" className="btn btn-primary" onClick={addToOrderClick}>
+            Gegenstand hinzufügen
+          </button>
+          {model.isFavorited ? (
+            <button type="button" className="btn btn-secondary" onClick={removeFromFavoritesClick}>
+              Von Favoriten entfernen
+            </button>
+          ) : (
+            <button type="button" className="btn btn-secondary" onClick={addToFavoritesClick}>
+              Zu Favoriten hinzufügen
+            </button>
+          )}
+        </ActionButtonGroup>
+
+        {!!orderPanelTmp && showOrderPanel && <div>{orderPanelTmp}</div>}
+
+        {model.description && (
+          <Section title="Beschreibung" collapsible={true}>
+            <div>{model.description}</div>
+          </Section>
         )}
-      </Section>
 
-      {!!orderPanelTmp && showOrderPanel && <div>{orderPanelTmp}</div>}
+        {model.properties.length > 0 && (
+          <Section title="Eigenschaften" collapsible={true}>
+            <KeyValueTable properties={model.properties} />
+          </Section>
+        )}
 
-      {model.description && (
-        <Section title="Beschreibung" collapsible={true} className="pt-5">
-          <div className="pt-2">{model.description}</div>
-        </Section>
-      )}
+        {model.attachments.length > 0 && (
+          <Section title="Dokumente" collapsible={true}>
+            {model.attachments.map((attachment, i) => (
+              <div key={attachment.id}>
+                <DownloadLink href={attachment.attachmentUrl}>{attachment.filename}</DownloadLink>
+              </div>
+            ))}
+          </Section>
+        )}
 
-      {model.properties.length > 0 && (
-        <Section title="Eigenschaften" collapsible={true} className="pt-5">
-          <table className="">
-            <tbody>
-              {model.properties.map(({ id, key, value }) => (
-                <tr key={id}>
-                  <td className="font-weight-light pr-3 pt-2">{key}</td>
-                  <td className="pt-2">{value}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </Section>
-      )}
-      {model.attachments.length > 0 && (
-        <Section title="Dokumente" collapsible={true} className="pt-5">
-          {model.attachments.map((attachment, i) => (
-            <div key={attachment.id} className="pt-2">
-              <DownloadLink href={attachment.attachmentUrl}>{attachment.filename}</DownloadLink>
-            </div>
-          ))}
-        </Section>
-      )}
-
-      {model.recommends && model.recommends.edges && (
-        <Section title="Ergänzende Gegenstände" collapsible={true} className="pt-5">
-          {getRecommendsGrid(model.recommends)}
-        </Section>
-      )}
+        {model.recommends && model.recommends.edges && model.recommends.edges.length > 0 && (
+          <Section title="Ergänzende Gegenstände" collapsible={true}>
+            {getRecommendsGrid(model.recommends)}
+          </Section>
+        )}
+      </PageLayout.Stack1>
     </>
   )
 }
@@ -121,7 +127,7 @@ function getRecommendsGrid(recommends) {
     caption: node.name,
     isFavorited: node.isFavorited
   }))
-  return <SquareImageGrid list={list} className="pt-2" />
+  return <SquareImageGrid list={list} />
 }
 
 const modelPropTypes = {

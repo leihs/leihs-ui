@@ -42,7 +42,7 @@ if (process.env.NODE_ENV !== 'test') {
 
 export const parameters = {
   docs: {
-    inlineStories: false
+    inlineStories: true // (true = default for React)
   },
   viewport: {
     viewports: Object.fromEntries(VIEWPORTS.map(key => [key, INITIAL_VIEWPORTS[key]])),

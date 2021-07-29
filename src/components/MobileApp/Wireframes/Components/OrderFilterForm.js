@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import cx from 'classnames'
 import Section from '../../DesignComponents/Section'
 import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
 import DialogCard from '../../DesignComponents/DialogCard'
+import PageLayout from '../../DesignComponents/PageLayout'
 
 const DEFAULT_TERM = ''
 const DEFAULT_ORDER_STATE = ''
@@ -71,125 +73,109 @@ const OrderFilterForm = ({
   return (
     <DialogCard title="Meine Ausleihen filtern">
       <form action="/search" onSubmit={submit} className="form form-compact">
-        <DialogCard.Body className="pb-5">
-          {delegations && (
-            <Section title="Delegation" collapsible="true">
-              <div className="form-group">
+        <DialogCard.Body>
+          <PageLayout.Stack2>
+            {delegations && (
+              <Section title="Delegation" collapsible="true">
+                <div>
+                  <select
+                    className="form-select"
+                    name="user-id"
+                    value={delegationId}
+                    onChange={e => setDelegationId(e.target.value)}
+                  >
+                    <option value={user.id} key={user.id}>
+                      {user.name} (persönlich)
+                    </option>
+                    {delegations.map(d => (
+                      <option value={d.id} key={d.id}>
+                        {d.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </Section>
+            )}
+            <Section title="Stichwort" collapsible="true">
+              <div>
+                <InputWithClearButton
+                  name="term"
+                  placeholder="Suchbegriff eingeben"
+                  value={term}
+                  onChange={e => setTerm(e.target.value)}
+                />
+              </div>
+            </Section>
+            <Section title="Status" collapsible="true">
+              <div>
                 <select
-                  className="form-control custom-select"
-                  name="user-id"
-                  value={delegationId}
-                  onChange={e => setDelegationId(e.target.value)}
+                  className="form-select"
+                  name="order-state"
+                  value={orderState}
+                  onChange={e => setOrderState(e.target.value)}
                 >
-                  <option value={user.id} key={user.id}>
-                    {user.name} (persönlich)
+                  <option value="all" key="all">
+                    Alle
                   </option>
-                  {delegations.map(d => (
-                    <option value={d.id} key={d.id}>
-                      {d.name}
+                  {orderStates.map(p => (
+                    <option value={p.id} key={p.id}>
+                      {p.name}
                     </option>
                   ))}
                 </select>
               </div>
             </Section>
-          )}
-          <Section title="Stichwort" collapsible="true">
-            <div className="form-group">
-              <InputWithClearButton
-                name="term"
-                placeholder="Suchbegriff eingeben"
-                value={term}
-                onChange={e => setTerm(e.target.value)}
-                onClearClick={() => setTerm('')}
-              />
-            </div>
-          </Section>
-          <Section title="Status" collapsible="true">
-            <div className="form-group">
-              <select
-                className="form-control custom-select"
-                name="order-state"
-                value={orderState}
-                onChange={e => setOrderState(e.target.value)}
-              >
-                <option value="all" key="all">
-                  Alle
-                </option>
-                {orderStates.map(p => (
-                  <option value={p.id} key={p.id}>
-                    {p.name}
-                  </option>
-                ))}
-              </select>
-            </div>
-          </Section>
-          <Section title="Zeitraum" collapsible="true">
-            <div className="form-group input-group">
-              <div className="input-group-prepend">
-                <label htmlFor="start-date" className="input-group-text bg-white" style={{ width: '3.5em' }}>
-                  Von
+            <Section title="Zeitraum" collapsible="true">
+              <div className="d-flex flex-column gap-3">
+                <label data-label="Von" className="date-range-input-label">
+                  <input
+                    name="start-date"
+                    type="date"
+                    id="start-date"
+                    className={cx('form-control date-range-input')}
+                    defaultValue={startDate}
+                    onChange={e => setStartDate(e.target.value)}
+                    placeholder="Unbestimmt"
+                  />
+                </label>
+                <label data-label="Bis" className="date-range-input-label">
+                  <input
+                    name="start-date"
+                    type="date"
+                    id="start-date"
+                    className={cx('form-control date-range-input')}
+                    defaultValue={startDate}
+                    onChange={e => setStartDate(e.target.value)}
+                    placeholder="Unbestimmt"
+                  />
                 </label>
               </div>
-              <input
-                placeholder="From"
-                name="start-date"
-                id="start-date"
-                type="date"
-                className="form-control "
-                defaultValue={startDate}
-                onChange={e => setStartDate(e.target.value)}
-              />
-            </div>
-            <div className="form-group input-group">
-              <div className="input-group-prepend">
-                <label htmlFor="end-date" className="input-group-text bg-white" style={{ width: '3.5em' }}>
-                  Bis
-                </label>
-              </div>
-              <input
-                placeholder="Until"
-                name="end-date"
-                id="end-date"
-                type="date"
-                className="form-control "
-                defaultValue={endDate}
-                onChange={e => setEndDate(e.target.value)}
-              />
-            </div>
-          </Section>
-          <Section title="Gerätepark" collapsible="true">
-            <div className="form-group">
-              <select
-                className="form-control custom-select"
-                name="pool-id"
-                value={poolId}
-                onChange={e => setPoolId(e.target.value)}
-              >
-                <option value="all" key="all">
-                  Alle
-                </option>
-                {pools.map(p => (
-                  <option value={p.id} key={p.id}>
-                    {p.name}
+            </Section>
+            <Section title="Gerätepark" collapsible="true">
+              <div>
+                <select className="form-select" name="pool-id" value={poolId} onChange={e => setPoolId(e.target.value)}>
+                  <option value="all" key="all">
+                    Alle
                   </option>
-                ))}
-              </select>
-            </div>
-          </Section>
+                  {pools.map(p => (
+                    <option value={p.id} key={p.id}>
+                      {p.name}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            </Section>
+          </PageLayout.Stack2>
         </DialogCard.Body>
         <DialogCard.Foot>
-          <div className="row">
-            <div className="col pr-2">
-              <button type="button" onClick={clear} className="btn btn-outline-danger">
-                Zurücksetzen
-              </button>
-            </div>
-            <div className="col pl-2 text-right">
-              <button type="submit" onClick={submit} className="btn btn-primary">
-                Auswählen
-              </button>
-            </div>
-          </div>
+          <DialogCard.ButtonGroup>
+            <button type="button" onClick={clear} className="btn btn-secondary">
+              Zurücksetzen
+            </button>
+            <button type="submit" onClick={submit} className="btn btn-primary">
+              Auswählen
+            </button>
+          </DialogCard.ButtonGroup>
         </DialogCard.Foot>
       </form>
     </DialogCard>
