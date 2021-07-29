@@ -9,7 +9,8 @@ const BASE_CLASS = 'ui-user-profile'
 
 const UserProfilePage = allProps => {
   const { currentUser, ...restProps } = allProps
-  const { user, delegations } = currentUser
+  const { user } = currentUser
+  const { delegations } = user
   const contracts = user.contracts.edges.map(e => e.node)
 
   const isLocalUser = user.organization === 'local'
