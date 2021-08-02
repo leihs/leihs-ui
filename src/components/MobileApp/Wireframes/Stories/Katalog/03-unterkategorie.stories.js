@@ -3,8 +3,9 @@ import FilterButton from '../../../DesignComponents/FilterButton'
 import SquareImageGrid from '../../../DesignComponents/SquareImageGrid'
 import Section from '../../../DesignComponents/Section'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
-import { modelListProps } from '../../../StoryUtils/sample-props'
 import PageLayout from '../../../DesignComponents/PageLayout'
+import Stack from '../../../DesignComponents/Stack'
+import { modelListProps } from '../../../StoryUtils/sample-props'
 
 export default {
   title: 'MobileApp/Wireframes/Katalog/Unterkategorie',
@@ -17,11 +18,11 @@ export const unterkategorie = () => {
       <PageLayout.Header title="Mischpulte & CD Player" preTitle="Audio">
         <FilterButton>Nur Ausleihe Toni, jetzt verfügbar</FilterButton>
       </PageLayout.Header>
-      <PageLayout.Stack2>
-        <Section title="Gegenstände" collapsible="true">
+      <Stack space="4">
+        <Section title="Gegenstände" collapsible>
           <SquareImageGrid {...modelListProps} />
         </Section>
-      </PageLayout.Stack2>
+      </Stack>
     </PageLayoutMock>
   )
 }

@@ -1,12 +1,11 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import DownloadLink from './DownloadLink'
-import PageLayoutMock from '../StoryUtils/PageLayoutMock'
+import Stack from './Stack'
 
 export default {
-  title: 'MobileApp/DesignComponents/Download Link',
-  component: DownloadLink,
-  parameters: { layout: 'fullscreen' }
+  title: 'MobileApp/Design Components/Content/DownloadLink',
+  component: DownloadLink
 }
 
 export const downloadLink = ({ onClick }) => {
@@ -15,32 +14,78 @@ export const downloadLink = ({ onClick }) => {
     onClick(e)
   }
   return (
-    <PageLayoutMock>
-      <div className="my-3">
+    <div>
+      <h1>DownloadLink</h1>
+      <p className="text-muted">A link with a download icon:</p>
+      <p>
         <DownloadLink onClick={handleClick} href="some/route">
-          Plain
+          Download the specification
         </DownloadLink>
-      </div>
-      <div className="my-3">
+      </p>
+      <p className="text-muted">To ensure spacing between multiple of them</p>
+      <ul className="text-muted">
+        <li>
+          ...wrap a <code>{'<Stack space=3>'}</code> around all
+        </li>
+        <li>
+          ...or a <code>{'<p>'}</code> around each
+        </li>
+      </ul>
+      <Stack space="3">
         <DownloadLink onClick={handleClick} href="some/route">
-          With <b>JSX</b> children as label
+          QX1204USB_Q1204USB_QSG.pdf
         </DownloadLink>
-      </div>
-      <div className="my-3">
-        <DownloadLink
-          onClick={handleClick}
-          href="some/route"
-          className="btn btn-outline-primary"
-          title="Hello"
-          style={{ border: '1px dashed pink' }}
-        >
-          With arbitrary attributes
+        <DownloadLink onClick={handleClick} href="some/route">
+          QX1204USB_Q1204USB_Manual.pdf
         </DownloadLink>
-      </div>
-    </PageLayoutMock>
+        <DownloadLink onClick={handleClick} href="some/route">
+          QX1204USB_Q1204USB_Specs.pdf
+        </DownloadLink>
+      </Stack>
+    </div>
   )
 }
+downloadLink.storyName = 'DownloadLink'
 
 downloadLink.args = {
   onClick: action('click')
+}
+
+export const wrap = ({ onClick }) => {
+  function handleClick(e) {
+    e.preventDefault()
+    onClick(e)
+  }
+  return (
+    <div>
+      <h1>DownloadLink</h1>
+      <p className="text-muted">Indented wrapping when the link text is too large:</p>
+      <div className="p-3 shadow" style={{ width: '14rem' }}>
+        <Stack space="3">
+          <DownloadLink onClick={handleClick} href="some/route">
+            QX1204USB_Q1204USB_QSG.pdf
+          </DownloadLink>
+          <DownloadLink onClick={handleClick} href="some/route">
+            Download the specification
+          </DownloadLink>
+        </Stack>
+      </div>
+    </div>
+  )
+}
+
+export const restProps = ({ onClick }) => {
+  function handleClick(e) {
+    e.preventDefault()
+    onClick(e)
+  }
+  return (
+    <div>
+      <h1>DownloadLink</h1>
+      <p className="text-muted">Set arbitrary attributes with restProps</p>
+      <DownloadLink onClick={handleClick} href="some/route" className="text-primary">
+        Download the Specification
+      </DownloadLink>
+    </div>
+  )
 }

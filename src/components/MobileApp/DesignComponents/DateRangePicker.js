@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { format, isValid, parse, isSameDay } from 'date-fns'
 import { DateRange } from '@leihs/calendar'
+import LabelInside from './LabelInside'
 
 export default function DateRangePicker({
   // selection:
@@ -116,32 +117,36 @@ export default function DateRangePicker({
   return (
     <div className="date-range-picker">
       <div className="mb-3">
-        <label data-label="Von" className="date-range-input-label">
+        <LabelInside>
           <input
             ref={startDateInput}
             name="startDate"
-            className={cx('form-control date-range-input', { 'is-invalid': startDateInvalid })}
+            id="startDate"
+            className={cx('form-control calendar-indicator', { 'is-invalid': startDateInvalid })}
             defaultValue={dateFormatter(selectedRange.startDate)}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
             placeholder="Unbestimmt"
             autoComplete="off"
           />
-        </label>
+          <label htmlFor="startDate">Von</label>
+        </LabelInside>
       </div>
       <div className="mb-0">
-        <label data-label="Bis" className="date-range-input-label">
+        <LabelInside>
           <input
             ref={endDateInput}
             name="endDate"
-            className={cx('form-control date-range-input', { 'is-invalid': endDateInvalid })}
+            id="endDate"
+            className={cx('form-control calendar-indicator', { 'is-invalid': endDateInvalid })}
             defaultValue={dateFormatter(selectedRange.endDate)}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
             placeholder="Unbestimmt"
             autoComplete="off"
           />
-        </label>
+          <label htmlFor="endDate">Bis</label>
+        </LabelInside>
       </div>
       <DateRange
         // selection:

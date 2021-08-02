@@ -3,8 +3,9 @@ import FilterButton from '../../../DesignComponents/FilterButton'
 import SquareImageGrid from '../../../DesignComponents/SquareImageGrid'
 import Section from '../../../DesignComponents/Section'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
-import { categoryListPropsV2 as categoryListProps } from '../../../StoryUtils/sample-props'
 import PageLayout from '../../../DesignComponents/PageLayout'
+import Stack from '../../../DesignComponents/Stack'
+import { categoryList } from '../../../StoryUtils/sample-props'
 
 export default {
   title: 'MobileApp/Wireframes/Katalog/Start',
@@ -17,11 +18,11 @@ export const start = () => {
       <PageLayout.Header title="Katalog">
         <FilterButton>Nur Ausleihe Toni, jetzt verfügbar</FilterButton>
       </PageLayout.Header>
-      <PageLayout.Stack2>
+      <Stack space="4">
         <Section title="Kategorien">
-          <SquareImageGrid {...categoryListProps} />
+          <SquareImageGrid list={categoryList} />
         </Section>
-      </PageLayout.Stack2>
+      </Stack>
     </PageLayoutMock>
   )
 }

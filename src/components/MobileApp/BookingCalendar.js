@@ -15,11 +15,12 @@ import {
   eachDayOfInterval
 } from 'date-fns'
 import { de } from 'date-fns/locale'
-import DialogCard from './DesignComponents/DialogCard'
+import DialogLayout from './DesignComponents/DialogLayout'
 import Section from './DesignComponents/Section'
 import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
-import PageLayout from './DesignComponents/PageLayout'
+import Stack from './DesignComponents/Stack'
+import FormButtonGroup from './DesignComponents/FormButtonGroup'
 
 const noop = () => {}
 
@@ -109,15 +110,27 @@ export const BookingCalendar = ({
   }
   return (
     <form onSubmit={submit} noValidate className={hasUserInteracted ? 'was-validated' : ''}>
-      <DialogCard title="Gegenstand hinzufügen" className="ui-booking-calendar">
-        <DialogCard.Body>
-          <PageLayout.Stack2>
+      <DialogLayout title="Gegenstand hinzufügen" className="ui-booking-calendar">
+        <DialogLayout.Body>
+          <Stack space="4">
             <Section>{modelData.name}</Section>
-            <Section title="Anzahl" collapsible={true}>
-              <MinusPlusControl number={quantity} onChange={changeQuantity} name="quantity" min={1} />
+            <Section title="Anzahl" collapsible>
+              <label htmlFor="quantity" className="visually-hidden">
+                Anzahl
+              </label>
+              <MinusPlusControl name="quantity" id="quantity" number={quantity} onChange={changeQuantity} min={1} />
             </Section>
-            <Section title="Gerätepark" collapsible={true}>
-              <select className="form-select" value={selectedPoolId} onChange={changeInventoryPool}>
+            <Section title="Gerätepark" collapsible>
+              <label htmlFor="pool-id" className="visually-hidden">
+                Gerätepark
+              </label>
+              <select
+                name="pool-id"
+                id="pool-id"
+                value={selectedPoolId}
+                onChange={changeInventoryPool}
+                className="form-select"
+              >
                 {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
                   <option key={id} value={id}>
                     {name} (max. {totalBorrowableQuantity})
@@ -125,19 +138,22 @@ export const BookingCalendar = ({
                 ))}
               </select>
             </Section>
-            <Section title="Zeitraum" collapsible={true}>
-              <DateRangePicker
-                selectedRange={selectedRange}
-                onChange={changeDateRange}
-                onShownDateChange={changeShownDate}
-                maxDateLoaded={maxDateLoaded}
-                minDate={minDate}
-                maxDate={maxDate}
-                disabledDates={blockedDates}
-                disabledStartDates={blockedStartDates}
-                disabledEndDates={blockedEndDates}
-                locale={de}
-              />
+            <Section title="Zeitraum" collapsible>
+              <fieldset>
+                <legend className="visually-hidden">Zeitraum</legend>
+                <DateRangePicker
+                  selectedRange={selectedRange}
+                  onChange={changeDateRange}
+                  onShownDateChange={changeShownDate}
+                  maxDateLoaded={maxDateLoaded}
+                  minDate={minDate}
+                  maxDate={maxDate}
+                  disabledDates={blockedDates}
+                  disabledStartDates={blockedStartDates}
+                  disabledEndDates={blockedEndDates}
+                  locale={de}
+                />
+              </fieldset>
               {hasUserInteracted && validationError && (
                 <div>
                   {/* (Bootstrap expects an invalid input before an invalid-feedback, we don't have it here, so we fake it) */}
@@ -146,19 +162,19 @@ export const BookingCalendar = ({
                 </div>
               )}
             </Section>
-          </PageLayout.Stack2>
-        </DialogCard.Body>
-        <DialogCard.Foot>
-          <DialogCard.ButtonGroup>
+          </Stack>
+        </DialogLayout.Body>
+        <DialogLayout.Foot>
+          <FormButtonGroup>
             <button type="button" className="btn btn-secondary" onClick={cancel}>
               Abbrechen
             </button>
             <button type="submit" className="btn btn-primary" disabled={!isValidForm}>
               Hinzufügen
             </button>
-          </DialogCard.ButtonGroup>
-        </DialogCard.Foot>
-      </DialogCard>
+          </FormButtonGroup>
+        </DialogLayout.Foot>
+      </DialogLayout>
     </form>
   )
 }

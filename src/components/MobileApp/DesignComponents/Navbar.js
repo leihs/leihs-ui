@@ -1,5 +1,5 @@
 import React from 'react'
-import Icon, { iconMenu, iconBag } from '../DesignComponents/Icons'
+import Icon, { iconMenu, iconBag } from './Icons'
 import cx from 'classnames'
 
 export default function Navbar({ brandName, cartItemCount, className, menuItem, cartItem, ...restProps }) {

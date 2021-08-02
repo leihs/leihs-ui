@@ -1,9 +1,9 @@
 import React from 'react'
 import cx from 'classnames'
 
-export default function PageLayout({ children, navbar }) {
+export default function PageLayout({ children, navbar, className, ...restProps }) {
   return (
-    <div>
+    <div className={className} {...restProps}>
       {navbar}
       <div className="page-inset-x py-4">{children}</div>
     </div>
@@ -27,44 +27,10 @@ PageLayout.Header = function PageLayoutHeader({ preTitle, title, children, class
   )
 }
 
-PageLayout.Divider = function PageLayoutDivider({ className, style }) {
-  return renderDivider({ className, style })
-}
-
-PageLayout.DividedStack = function PageLayoutDividedStack({ children }) {
+PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...restProps }) {
   return (
-    React.Children.map(children, (child, i) => {
-      return (
-        <div key={i}>
-          {i === 0 && renderDivider({})}
-          {child}
-          {renderDivider({})}
-        </div>
-      )
-    }) || null
-  )
-}
-
-PageLayout.Stack1 = function PageLayoutStack1({ children }) {
-  return renderList({ children, itemClassName: 'mb-5' })
-}
-
-PageLayout.Stack2 = function PageLayoutStack2({ children }) {
-  return renderList({ children, itemClassName: 'mb-4' })
-}
-
-function renderDivider({ className, style }) {
-  return <hr className={cx('page-inset-x-inverse', className)} style={style} />
-}
-
-function renderList({ children, itemClassName }) {
-  return (
-    React.Children.map(children, (child, i) => {
-      return (
-        <div key={i} className={itemClassName}>
-          {child}
-        </div>
-      )
-    }) || null
+    <div className={cx('text-center text-black-50 fw-light', className)} {...restProps}>
+      {children}
+    </div>
   )
 }

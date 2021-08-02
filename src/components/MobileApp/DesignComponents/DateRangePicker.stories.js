@@ -3,46 +3,48 @@ import { parseISO, format, endOfMonth, addMonths } from 'date-fns'
 import { de } from 'date-fns/locale'
 import { DateRange } from '@leihs/calendar'
 import DateRangePicker from './DateRangePicker'
-import PageLayoutMock from './../StoryUtils/PageLayoutMock'
 import Section from './Section'
 
 export default {
-  title: 'MobileApp/DesignComponents/DateRangePicker',
-  component: DateRangePicker,
-  parameters: { layout: 'fullscreen' }
+  title: 'MobileApp/Design Components/Form Controls/DateRangePicker',
+  component: DateRangePicker
 }
 
 function rangeDebugInfo(selectedRange) {
   return (
-    <Section title="selected range" collapsible={true}>
-      <small className="text-muted">
+    <Section title="selected range" collapsible className="text-muted pt-4">
+      <small className="fw-light">
         <samp>{JSON.stringify(selectedRange)}</samp>
       </small>
     </Section>
   )
 }
 
-export function minimalConfiguration() {
+export function dateRangePicker() {
   const now = new Date()
   const [selectedRange, setSelectedRange] = useState({ startDate: now, endDate: now })
 
   return (
-    <PageLayoutMock>
+    <div>
+      <h1>DateRangePicker</h1>
+      <p className="text-muted">Example with minimal configuration:</p>
       <DateRangePicker selectedRange={selectedRange} onChange={setSelectedRange} />
       {rangeDebugInfo(selectedRange)}
-    </PageLayoutMock>
+    </div>
   )
 }
+dateRangePicker.storyName = 'DateRangePicker'
 
 export function localized() {
   const now = new Date()
   const [selectedRange, setSelectedRange] = useState({ startDate: now, endDate: now })
 
   return (
-    <PageLayoutMock>
+    <div>
+      <h1>DateRangePicker - Localized</h1>
       <DateRangePicker selectedRange={selectedRange} onChange={setSelectedRange} locale={de} />
       {rangeDebugInfo(selectedRange)}
-    </PageLayoutMock>
+    </div>
   )
 }
 
@@ -53,15 +55,19 @@ export function constraints() {
   })
 
   return (
-    <PageLayoutMock>
-      <h1>Example with constraints</h1>
-      <ul className="small">
-        <li>only dates between 7 and 25 can be selected </li>
+    <div>
+      <h1>DateRangePicker - Constraints</h1>
+      <p className="text-muted">In this example the following constraints are in place:</p>
+      <ul className="text-muted">
+        <li>only dates between 7 and 25</li>
         <li>14/15 can not be within the range </li>
         <li>10/11 can not be used as start dates </li>
         <li>17/18 can not be used as end dates </li>
-        <li>Use the text inputs to craft invalid selections</li>
       </ul>
+      <p className="text-muted">
+        If you enter invalid dates using the text inputs, the conflicts will be highlighted in the calendar (lighter
+        gray)
+      </p>
       <DateRangePicker
         selectedRange={selectedRange}
         onChange={setSelectedRange}
@@ -73,7 +79,7 @@ export function constraints() {
         disabledEndDates={[new Date('2021-07-17'), new Date('2021-07-18')]}
       />
       {rangeDebugInfo(selectedRange)}
-    </PageLayoutMock>
+    </div>
   )
 }
 
@@ -81,6 +87,7 @@ export function lazyLoading() {
   const now = new Date()
   const [selectedRange, setSelectedRange] = useState({ startDate: now, endDate: now })
   const [maxDateLoaded, setMaxDateLoaded] = useState(endOfMonth(now))
+  const [loading, setLoading] = useState(false)
 
   function getMaxDate(date) {
     return endOfMonth(addMonths(date, 1))
@@ -89,14 +96,20 @@ export function lazyLoading() {
   async function simulateLoading(date) {
     const newMax = getMaxDate(date)
     if (newMax > maxDateLoaded) {
+      setLoading(true)
       await new Promise(resolve => setTimeout(resolve, 1000))
       setMaxDateLoaded(newMax)
+      setLoading(false)
     }
   }
 
   return (
-    <PageLayoutMock>
-      <p className="text-muted">maxDateLoaded = {format(maxDateLoaded, 'P', { locale: de })}</p>
+    <div>
+      <h1>DateRangePicker - Lazy Loading</h1>
+      <p></p>
+      <p className="text-muted">
+        maxDateLoaded = {format(maxDateLoaded, 'P', { locale: de })} {loading && <span>...loading...</span>}
+      </p>
       <DateRangePicker
         selectedRange={selectedRange}
         onChange={setSelectedRange}
@@ -106,7 +119,7 @@ export function lazyLoading() {
         minDate={now}
       />
       {rangeDebugInfo(selectedRange)}
-    </PageLayoutMock>
+    </div>
   )
 }
 
@@ -121,8 +134,11 @@ export const underlyingDateRangeComponent = () => {
   const onChange = item => setSelectedRange(item.selection)
 
   return (
-    <PageLayoutMock>
-      <h1>Original @leihs/calendar DateRange component</h1>
+    <div>
+      <h1>DateRangePicker</h1>
+      <p className="text-muted">
+        For reference: an example of @leihs/calendar DateRange component on top of which DateRangePicker is built
+      </p>
       <DateRange
         editableDateInputs={true}
         locale={de}
@@ -136,7 +152,7 @@ export const underlyingDateRangeComponent = () => {
         scroll={{ enabled: true }}
       />
       {rangeDebugInfo(selectedRange)}
-    </PageLayoutMock>
+    </div>
   )
 }
 

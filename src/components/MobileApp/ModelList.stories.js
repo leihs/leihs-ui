@@ -3,7 +3,7 @@ import React from 'react'
 import ModelList from './ModelList'
 
 export default {
-  title: 'MobileApp/Components/ModelList',
+  title: 'MobileApp/Integrated Components/ModelList',
   component: ModelList,
   parameters: {
     // layout: 'fullscreen'

@@ -2,53 +2,63 @@ import React, { useState } from 'react'
 import InputWithClearButton from './InputWithClearButton'
 
 export default {
-  title: 'MobileApp/DesignComponents/Input With Clear Button',
+  title: 'MobileApp/Design Components/Form Controls/InputWithClearButton',
   component: InputWithClearButton
 }
 
-export const controlled = () => {
+export const inputWithClearButton = () => {
   const [name, setName] = useState('')
 
   return (
-    <div className="d-grid gap-3">
-      <InputWithClearButton
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
-      <input
-        type="text"
-        name="mirror"
-        placeholder="Input bound to same state"
-        className="form-control"
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
+    <div>
+      <h1>InputWithClearButton</h1>
+      <p className="text-muted">
+        A drop-in replacement for {`<input type="text" />`}, but with an integrated clear button.
+      </p>
+      <p className="text-muted">Controlled input example (state-bound):</p>
+      <div className="d-grid gap-3">
+        <InputWithClearButton
+          type="text"
+          name="name"
+          placeholder="Name"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+        <input
+          type="text"
+          name="mirror"
+          placeholder="Input bound to same state"
+          className="form-control"
+          value={name}
+          onChange={e => setName(e.target.value)}
+        />
+      </div>
     </div>
   )
 }
+inputWithClearButton.storyName = 'InputWithClearButton'
 
 export const uncontrolled = () => {
   return (
     <div>
+      <h1>InputWithClearButton</h1>
+      <p className="text-muted">As an uncontrolled input:</p>
       <InputWithClearButton name="name" placeholder="Name" defaultValue="James Bond" />
     </div>
   )
 }
 
 export const inlineBlock = () => {
-  /*
-   * The component is based on Bootstrap's input-group and form-control classes.
-   * This means it is a block element. To place it inline, wrap it for instance in a d-inline-block.
-   */
-
   const [firstName, setFirstName] = useState('James')
   const [lastName, setLastName] = useState('Bond')
 
   return (
     <div>
+      <h1>InputWithClearButton</h1>
+      <p className="text-muted">The component is based on Bootstrap&apos;s input-group and form-control classes.</p>
+      <p className="text-muted">
+        This means it is a block element. To place it inline, wrap it for instance in a d-inline-block.
+      </p>
       <div className="d-inline-block mb-3">
         <InputWithClearButton
           name="firstName"

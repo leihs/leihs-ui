@@ -1,81 +1,60 @@
 import React from 'react'
 import PageLayout from './PageLayout'
 import Navbar from './Navbar'
-import Section from './Section'
 
 export default {
-  title: 'MobileApp/DesignComponents/PageLayout',
-  parameters: { layout: 'fullscreen' },
+  title: 'MobileApp/Design Components/Layout/PageLayout',
   component: PageLayout
 }
 const lorem =
   'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
 
-const navbar = <Navbar brandName="leihs" cartItemCount={3} />
-
 export const pageLayout = () => {
-  return <PageLayout navbar={navbar}>{lorem}</PageLayout>
-}
-
-export const pageLayoutHeader = () => {
+  const navbar = <div className="border-bottom text-center p-2">Navbar</div>
   return (
-    <PageLayout navbar={navbar}>
-      <PageLayout.Header preTitle="Audio" title="Mischpulte & CD Player">
-        and more important things
-      </PageLayout.Header>
-      <Section title="Then the content starts">{lorem}</Section>
-      <PageLayout.Divider />
-      <p>Title only:</p>
-      <PageLayout.Header title="Lorem ipsum" />
-      <PageLayout.Divider />
-      <p>Pre-title only:</p>
-      <PageLayout.Header preTitle="Lorem ipsum" />
-    </PageLayout>
+    <div>
+      <h1>PageLayout</h1>
+      <p className="text-muted">The layout consists of a zone for the navbar and a padded zone for the content:</p>
+      <div className="shadow">
+        <PageLayout navbar={navbar}>{lorem}</PageLayout>
+      </div>
+    </div>
+  )
+}
+pageLayout.storyName = 'PageLayout'
+
+export const withNavbar = () => {
+  const navbar = <Navbar brandName="leihs" cartItemCount={3} />
+  return (
+    <div>
+      <h1>PageLayout</h1>
+      <p className="text-muted">The navbar is a separate component, here&apos;s how it looks in context:</p>
+      <div className="shadow">
+        <PageLayout navbar={navbar}>{lorem}</PageLayout>
+      </div>
+    </div>
   )
 }
 
-export const pageLayoutDivider = () => {
+export const horizontalInset = () => {
+  const navbar = <Navbar brandName="leihs" cartItemCount={3} />
   return (
-    <PageLayout navbar={navbar}>
-      {lorem}
-      <PageLayout.Divider />
-      {lorem}
-    </PageLayout>
-  )
-}
-
-export const pageLayoutDividedStack = () => {
-  return (
-    <PageLayout navbar={navbar}>
-      <PageLayout.DividedStack>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-      </PageLayout.DividedStack>
-    </PageLayout>
-  )
-}
-
-export const pageLayoutStack1 = () => {
-  return (
-    <PageLayout navbar={navbar}>
-      <PageLayout.Stack1>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-      </PageLayout.Stack1>
-    </PageLayout>
-  )
-}
-
-export const pageLayoutStack2 = () => {
-  return (
-    <PageLayout navbar={navbar}>
-      <PageLayout.Stack2>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-      </PageLayout.Stack2>
-    </PageLayout>
+    <div>
+      <h1>PageLayout</h1>
+      <p className="text-muted">The content area of the page layout has a horizontal inset (padding).</p>
+      <p className="text-muted">
+        If for some reason edge-to-edge content is needed, use the <code>.page-inset-x-inverse</code> class.
+      </p>
+      <p className="text-muted">
+        To re-apply horizontal inset, use <code>.page-inset-x</code>
+      </p>
+      <div className="shadow">
+        <PageLayout navbar={navbar}>
+          <div className="border mb-3">Normal content</div>
+          <div className="border mb-3 page-inset-x-inverse">Edge-to-edge content</div>
+          <div className="border mb-3 page-inset-x-inverse page-inset-x">Edge-to-edge content, inset re-applied</div>
+        </PageLayout>
+      </div>
+    </div>
   )
 }

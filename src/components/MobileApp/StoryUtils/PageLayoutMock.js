@@ -4,7 +4,7 @@ import Navbar from '../DesignComponents/Navbar'
 
 export default function PageLayoutMock({ children, ...overrides }) {
   const pageLayoutProps = {
-    navbar: <Navbar brandName="leihs" cartItemCount={3} />,
+    navbar: <Navbar brandName="Leihs" cartItemCount={3} />,
     ...overrides
   }
   return <PageLayout {...pageLayoutProps}>{children}</PageLayout>

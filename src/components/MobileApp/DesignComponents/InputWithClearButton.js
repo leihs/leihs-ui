@@ -15,7 +15,13 @@ export default function InputWithClearButton({ className, onChange, ...restProps
   }
   return (
     <div className="position-relative">
-      <input ref={inputRef} type="text" className={cx('form-control', className)} onChange={onChange} {...restProps} />
+      <input
+        ref={inputRef}
+        type="text"
+        className={cx('form-control selectish-feedback-icon', className)}
+        onChange={onChange}
+        {...restProps}
+      />
       <button
         className="btn position-absolute"
         type="button"

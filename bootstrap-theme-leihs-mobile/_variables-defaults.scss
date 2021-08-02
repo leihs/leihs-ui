@@ -115,10 +115,17 @@ $input-bg: $light-shade;
 $input-border-color: $light-shade;
 
 // - inputs and buttons focus
-$input-btn-focus-box-shadow: none !important;
+$input-btn-focus-width: 0;
 $input-focus-border-color: $blue;
 
-// navbar
+// - select custom icon
+$form-select-bg-size: 16px 16px; // Bootstrap says: "In pixels because image dimensions"
+$form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path stroke='currentColor' stroke-width='1.6' d='M2 5.5l6 6 6-6' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+
+// Select feedback icon has too much padding by default
+$form-select-feedback-icon-position: center right $input-btn-padding-x + 1.5rem;
+
+// Navbar
 $navbar-light-color: $body-color;
 $navbar-padding-y: 5px;
 $navbar-padding-x: 15px;

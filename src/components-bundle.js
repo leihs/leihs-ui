@@ -31,7 +31,8 @@ const Components = {
     PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,
     FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
-    SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default
+    SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
+    Stack: require('./components/MobileApp/DesignComponents/Stack').default
   },
 
   // "app pages"

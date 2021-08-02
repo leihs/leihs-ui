@@ -1,14 +1,16 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import FilterButton from '../../../DesignComponents/FilterButton'
-import OrderList from '../../Components/OrderList'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
 import PageLayout from '../../../DesignComponents/PageLayout'
+import Stack from '../../../DesignComponents/Stack'
+import Section from '../../../DesignComponents/Section'
+import ListCard from '../../../DesignComponents/ListCard'
+import ProgressInfo from '../../../DesignComponents/ProgressInfo'
 
 export default {
   title: 'MobileApp/Wireframes/MeineAusleihen/Liste',
-  parameters: { layout: 'fullscreen' },
-  component: OrderList
+  parameters: { layout: 'fullscreen' }
 }
 
 export const liste = ({ ordersByBasicState, onItemClick }) => {
@@ -17,12 +19,44 @@ export const liste = ({ ordersByBasicState, onItemClick }) => {
       <PageLayout.Header title="Meine Ausleihen">
         <FilterButton>Alle Ausleihen</FilterButton>
       </PageLayout.Header>
-      <OrderList ordersByBasicState={ordersByBasicState} onItemClick={onItemClick} />
+
+      <Stack space="5">
+        {ordersByBasicState.map(({ orders, basicState }) => {
+          const { label, key } = basicState
+          return (
+            <Section key={key} title={label} collapsible>
+              <ListCard.Stack>
+                {orders.map((order, i) => {
+                  return (
+                    <div key={order.id}>
+                      <ListCard onClick={() => onItemClick(order)}>
+                        <ListCard.Title>{order.title}</ListCard.Title>
+                        <ListCard.Body>
+                          {order.durationDays} Tage{' '}
+                          {order.isCompleted ? `bis ${order.endDate}` : `ab ${order.startDate}`}, {order.modelCount}{' '}
+                          {order.modelCount === 1 ? 'Gegenstand' : 'Gegenstände'}
+                        </ListCard.Body>
+                        <ListCard.Foot>
+                          <Stack space="2">
+                            {order.stateGroups.map((stateGroup, i) => (
+                              <ProgressInfo key={i} {...stateGroup} small={true} />
+                            ))}
+                          </Stack>
+                        </ListCard.Foot>
+                      </ListCard>
+                    </div>
+                  )
+                })}
+              </ListCard.Stack>
+            </Section>
+          )
+        })}
+      </Stack>
     </PageLayoutMock>
   )
 }
 
-const sampleOrders = [
+const ordersByBasicState = [
   {
     basicState: { key: 'open', label: 'Offen' },
     orders: [
@@ -37,10 +71,10 @@ const sampleOrders = [
         isCompleted: false,
         stateGroups: [
           {
-            id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-            type: 'inApproval',
-            totalPoolCount: 3,
-            approvedPoolCount: 1
+            title: 'Genehmigung',
+            info: '1 von 3 Geräteparks genehmigt',
+            totalCount: 3,
+            doneCount: 1
           }
         ]
       },
@@ -55,10 +89,10 @@ const sampleOrders = [
         isCompleted: false,
         stateGroups: [
           {
-            id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-            type: 'inHandOver',
+            title: 'Abholung',
+            info: '4 von 7 Gegenständen abgeholt',
             totalCount: 7,
-            handedOverCount: 4
+            doneCount: 4
           }
         ]
       },
@@ -73,10 +107,16 @@ const sampleOrders = [
         isCompleted: false,
         stateGroups: [
           {
-            id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-            type: 'lent',
-            durationDays: 54,
-            remainingDays: 47
+            title: 'Abholung',
+            info: '3 von 4 Gegenständen abgeholt',
+            totalCount: 4,
+            doneCount: 3
+          },
+          {
+            title: 'Rückgabe',
+            info: '2 von 4 Gegenständen abgeholt',
+            totalCount: 4,
+            doneCount: 2
           }
         ]
       },
@@ -91,10 +131,10 @@ const sampleOrders = [
         isCompleted: false,
         stateGroups: [
           {
-            id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-            type: 'inReturn',
+            title: 'Rückgabe',
+            info: '2 von 3 Gegenständen zurückgebracht',
             totalCount: 3,
-            returnedCount: 2
+            doneCount: 2
           }
         ]
       }
@@ -114,10 +154,7 @@ const sampleOrders = [
         isCompleted: true,
         stateGroups: [
           {
-            id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-            type: 'allItemsReturned',
-            totalCount: 3,
-            returnedCount: 3
+            title: 'Alle Gegenstände zurückgebracht'
           }
         ]
       },
@@ -132,10 +169,7 @@ const sampleOrders = [
         isCompleted: true,
         stateGroups: [
           {
-            id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-            type: 'allItemsRejected',
-            totalCount: 1,
-            rejectedCount: 1
+            title: 'Ausleihe wurde abgelehnt'
           }
         ]
       },
@@ -150,12 +184,7 @@ const sampleOrders = [
         isCompleted: true,
         stateGroups: [
           {
-            id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-            type: 'transferred',
-            transferUser: {
-              id: '111174c5-3c23-4c86-827e-940e1e70000',
-              name: 'Reto Brunner'
-            }
+            title: 'An “Reto Brunner” übertragen'
           }
         ]
       }
@@ -164,6 +193,6 @@ const sampleOrders = [
 ]
 
 liste.args = {
-  ordersByBasicState: sampleOrders,
+  ordersByBasicState,
   onItemClick: action('item-click')
 }

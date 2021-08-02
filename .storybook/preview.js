@@ -47,5 +47,10 @@ export const parameters = {
   viewport: {
     viewports: Object.fromEntries(VIEWPORTS.map(key => [key, INITIAL_VIEWPORTS[key]])),
     defaultViewport: DEFAULT_VIEWPORT
+  },
+  options: {
+    storySort: {
+      order: ['*', 'MobileApp', ['Overview', 'Wireframes', 'Design Components', 'Bootstrap Theme']]
+    }
   }
 }

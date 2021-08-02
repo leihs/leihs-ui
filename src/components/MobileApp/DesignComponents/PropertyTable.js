@@ -1,7 +1,7 @@
 import React from 'react'
 import cx from 'classnames'
 
-export default function KeyValueTable({ properties, className, ...restProps }) {
+export default function PropertyTable({ properties, className, ...restProps }) {
   return (
     <table className={className} {...restProps}>
       <tbody>

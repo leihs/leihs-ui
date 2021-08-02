@@ -1,25 +1,105 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import OrderDetail from '../../Components/OrderDetail'
+import Stack from '../../../DesignComponents/Stack'
+import Section from '../../../DesignComponents/Section'
+import ListCard from '../../../DesignComponents/ListCard'
+import PageLayout from '../../../DesignComponents/PageLayout'
+import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
+import Badge from '../../../DesignComponents/Badge'
+import ProgressInfo from '../../../DesignComponents/ProgressInfo'
+import FilterButton from '../../../DesignComponents/FilterButton'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
 
 export default {
   title: 'MobileApp/Wireframes/MeineAusleihen/Detail',
-  parameters: { layout: 'fullscreen' },
-  component: OrderDetail
+  parameters: { layout: 'fullscreen' }
 }
 
-export const detail = ({ order, onOrderCancelClick }) => {
+export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
   return (
     <PageLayoutMock>
-      <OrderDetail order={order} onOrderCancelClick={onOrderCancelClick} />
+      <PageLayout.Header title={order.title}>
+        <h2 className="fw-light">24 Tage ab 6.5.2020, 11 Gegenstände</h2>
+      </PageLayout.Header>
+
+      <Stack space="5">
+        <Section title="Status" collapsible>
+          <Stack space="3">
+            <div>
+              {order.stateGroups.map((stateGroup, i) => (
+                <ProgressInfo key={i} {...stateGroup} />
+              ))}
+            </div>
+            {order.isCancellable && (
+              <ActionButtonGroup>
+                <button type="button" className="btn btn-secondary" onClick={() => onOrderCancelClick()}>
+                  Ausleihe stornieren
+                </button>
+              </ActionButtonGroup>
+            )}
+          </Stack>
+        </Section>
+
+        <Section title="Zweck" collapsible>
+          {order.purpose}
+        </Section>
+
+        <Section title="Geräteparks" collapsible>
+          <ListCard.Stack>
+            {order.pools.map(({ name, modelCount, orderStateLabel }, i) => (
+              <ListCard key={i}>
+                <ListCard.Title>{name}</ListCard.Title>
+                <ListCard.Body>
+                  {modelCount} Gegenstände {orderStateLabel}
+                </ListCard.Body>
+                <ListCard.Foot>
+                  <Stack space="2">
+                    {order.stateGroups.map((stateGroup, i) => (
+                      <ProgressInfo key={i} {...stateGroup} small={true} />
+                    ))}
+                  </Stack>
+                </ListCard.Foot>
+              </ListCard>
+            ))}
+          </ListCard.Stack>
+        </Section>
+
+        <Section title="Gegenstände" collapsible className="position-relative">
+          <FilterButton className="position-absolute top-0 end-0" onClick={() => alert('TODO (what does it do?)')}>
+            Alle Geräteparks
+          </FilterButton>
+          <Stack divided space="3">
+            {order.models.map(({ reservation, model, pool }, i) => (
+              <ListCard key={i} onClick={() => onItemClick(reservation.id)}>
+                <ListCard.Title>
+                  {reservation.quantity}x {model.name}
+                </ListCard.Title>
+                <ListCard.Body>{pool.name}</ListCard.Body>
+                <ListCard.Foot>
+                  <Badge>
+                    {reservation.durationDays} Tage{' '}
+                    {reservation.isCompleted ? `bis ${reservation.endDate}` : `ab ${reservation.startDate}`}
+                  </Badge>
+                </ListCard.Foot>
+              </ListCard>
+            ))}
+          </Stack>
+        </Section>
+
+        <Section title="Delegation" collapsible>
+          {order.delegation.name}
+          {order.delegation.isUser && ' (persönlich)'}
+        </Section>
+      </Stack>
+
+      <PageLayout.Metadata>ID {order.id}</PageLayout.Metadata>
     </PageLayoutMock>
   )
 }
 
 const sampleOrder = {
   // Primary data (same structure in list entries):
-  id: '98510838-a6ec-4752-823e-5a3db2282775',
+  id: '15874', // TODO: use friendly id if available
   title: 'Video Semesterprojekt',
   purpose: 'Material für das Video Semesterprojekt bei Prof. Zimmer',
   startDate: '6.5.2020',
@@ -29,10 +109,10 @@ const sampleOrder = {
   isCompleted: false,
   stateGroups: [
     {
-      id: 'f1a574c5-3c23-4c86-827e-940e1e7bc9e4',
-      type: 'inApproval',
-      totalPoolCount: 3,
-      approvedPoolCount: 1
+      title: 'In der Genehmigung',
+      info: '1 von 3 Geräteparks genehmigt',
+      totalCount: 3,
+      doneCount: 1
     }
   ],
   // Details:
@@ -41,14 +121,26 @@ const sampleOrder = {
     {
       id: '8bd16d45-056d-5590-bc7f-12849f034351',
       name: 'Ausleihe Toni-Areal',
-      modelCount: 3,
-      orderStateLabel: 'genehmigt'
+      stateGroups: [
+        {
+          title: 'Abholung',
+          info: '0 von 4 Gegenständen abgeholt',
+          totalCount: 4,
+          doneCount: 0
+        }
+      ]
     },
     {
       id: '5dd25b58-fa56-5095-bd97-2696d92c2fb1',
-      name: 'IT-Zentrum',
-      modelCount: 2,
-      orderStateLabel: 'beantragt'
+      name: 'Ausleihe Werkstatt',
+      stateGroups: [
+        {
+          title: 'Genehmigung',
+          info: '0 von 4 Gegenständen genehmigt',
+          totalCount: 4,
+          doneCount: 0
+        }
+      ]
     }
   ],
   models: [
@@ -87,6 +179,24 @@ const sampleOrder = {
         id: '8bd16d45-056d-5590-bc7f-12849f034351',
         name: 'Ausleihe Toni-Areal'
       }
+    },
+    {
+      reservation: {
+        id: '958fb184-fd1a-546f-965d-4852cf997563',
+        startDate: '6.6.2021',
+        endDate: '8.6.2021',
+        durationDays: 3,
+        quantity: 1,
+        isCompleted: false
+      },
+      model: {
+        id: '40ca9617-f879-5092-8789-b583f8064f9c',
+        name: 'Monitor HD LCD Panasonic'
+      },
+      pool: {
+        id: '8bd16d45-056d-5590-bc7f-12849f034351',
+        name: 'Werkstattausleihe'
+      }
     }
   ],
   delegation: {
@@ -105,5 +215,6 @@ const sampleOrder = {
 
 detail.args = {
   order: sampleOrder,
-  onOrderCancelClick: action('order-cancel')
+  onOrderCancelClick: action('order-cancel'),
+  onItemClick: action('item-click')
 }

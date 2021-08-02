@@ -1,12 +1,13 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import f from 'lodash'
-import cx from 'classnames'
 import Section from '../../DesignComponents/Section'
 import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
 import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
-import DialogCard from '../../DesignComponents/DialogCard'
-import PageLayout from '../../DesignComponents/PageLayout'
+import DialogLayout from '../../DesignComponents/DialogLayout'
+import Stack from '../../DesignComponents/Stack'
+import FormButtonGroup from '../../DesignComponents/FormButtonGroup'
+import LabelInside from '../../DesignComponents/LabelInside'
 
 const DEFAULT_TERM = ''
 const DEFAULT_START_DATE = ''
@@ -64,74 +65,86 @@ const ModelFilterForm = ({
   }
 
   return (
-    <DialogCard title="Katalog filtern">
-      <form onSubmit={submit} className="form form-compact">
-        <DialogCard.Body>
-          <PageLayout.Stack2>
+    <DialogLayout title="Katalog filtern">
+      <form onSubmit={submit} noValidate>
+        <DialogLayout.Body>
+          <Stack space="4">
             {delegations && (
-              <Section title="Delegation" collapsible="true" defaultCollapsed={!initialShowDelegation}>
-                <div>
-                  <select
-                    className="form-select"
-                    name="user-id"
-                    value={delegationId}
-                    onChange={e => setDelegationId(e.target.value)}
-                  >
-                    <option value={user.id} key={user.id}>
-                      {user.name} (persönlich)
+              <Section title="Delegation" collapsible defaultCollapsed={!initialShowDelegation}>
+                <label htmlFor="user-id" className="visually-hidden">
+                  Delegation
+                </label>
+                <select
+                  className="form-select"
+                  name="user-id"
+                  id="user-id"
+                  value={delegationId}
+                  onChange={e => setDelegationId(e.target.value)}
+                >
+                  <option value={user.id} key={user.id}>
+                    {user.name} (persönlich)
+                  </option>
+                  {delegations.map(d => (
+                    <option value={d.id} key={d.id}>
+                      {d.name}
                     </option>
-                    {delegations.map(d => (
-                      <option value={d.id} key={d.id}>
-                        {d.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
+                  ))}
+                </select>
               </Section>
             )}
-            <Section title="Stichwort" collapsible="true" defaultCollapsed={!initialShowTerm}>
-              <div>
-                <InputWithClearButton
-                  name="term"
-                  placeholder="Suchbegriff eingeben"
-                  value={term}
-                  onChange={e => setTerm(e.target.value)}
-                />
-              </div>
+            <Section title="Stichwort" collapsible defaultCollapsed={!initialShowTerm}>
+              <label htmlFor="term" className="visually-hidden">
+                Stichwort
+              </label>
+              <InputWithClearButton
+                name="term"
+                id="term"
+                placeholder="Suchbegriff eingeben"
+                value={term}
+                onChange={e => setTerm(e.target.value)}
+              />
             </Section>
-            <Section title="Verfügbarkeit" collapsible="true" defaultCollapsed={!initialShowAvailability}>
-              <div className="d-flex flex-column gap-3">
-                <label data-label="Von" className="date-range-input-label">
-                  <input
-                    name="start-date"
-                    type="date"
-                    id="start-date"
-                    className={cx('form-control date-range-input')}
-                    defaultValue={startDate}
-                    onChange={e => setStartDate(e.target.value)}
-                    placeholder="Unbestimmt"
-                  />
-                </label>
-                <label data-label="Bis" className="date-range-input-label">
-                  <input
-                    name="start-date"
-                    type="date"
-                    id="start-date"
-                    className={cx('form-control date-range-input')}
-                    defaultValue={startDate}
-                    onChange={e => setStartDate(e.target.value)}
-                    placeholder="Unbestimmt"
-                  />
-                </label>
-              </div>
+            <Section title="Verfügbarkeit" collapsible defaultCollapsed={!initialShowAvailability}>
+              <fieldset>
+                <legend className="visually-hidden">Verfügbarkeit</legend>
+                <div className="d-flex flex-column gap-3">
+                  <LabelInside>
+                    <input
+                      type="text"
+                      name="start-date"
+                      id="start-date"
+                      className="form-control calendar-indicator"
+                      defaultValue={startDate}
+                      onChange={e => setStartDate(e.target.value)}
+                      placeholder="Unbestimmt"
+                    />
+                    <label htmlFor="start-date">Von</label>
+                  </LabelInside>
+                  <LabelInside>
+                    <input
+                      type="text"
+                      name="end-date"
+                      id="end-date"
+                      className="form-control calendar-indicator"
+                      defaultValue={startDate}
+                      onChange={e => setStartDate(e.target.value)}
+                      placeholder="Unbestimmt"
+                    />
+                    <label htmlFor="end-date">Bis</label>
+                  </LabelInside>
+                </div>
+              </fieldset>
             </Section>
-            <Section title="Geräteparks" collapsible="true" defaultCollapsed={!initialShowPools}>
+            <Section title="Geräteparks" collapsible defaultCollapsed={!initialShowPools}>
               <div className="d-flex flex-column gap-3">
-                <label>
-                  <span className="visually-hidden">Geräteparks</span>
+                <div>
+                  <label htmlFor="pool-id" className="visually-hidden">
+                    Geräteparks
+                  </label>
                   <select
                     className="form-select"
                     name="pool-id"
+                    id="pool-id"
                     value={poolId}
                     onChange={e => setPoolId(e.target.value)}
                   >
@@ -144,7 +157,7 @@ const ModelFilterForm = ({
                       </option>
                     ))}
                   </select>
-                </label>
+                </div>
                 <ActionButtonGroup>
                   <button type="button" className="btn btn-secondary" onClick={() => alert('TODO')}>
                     Gerätepark hinzufügen
@@ -152,20 +165,20 @@ const ModelFilterForm = ({
                 </ActionButtonGroup>
               </div>
             </Section>
-          </PageLayout.Stack2>
-        </DialogCard.Body>
-        <DialogCard.Foot>
-          <DialogCard.ButtonGroup>
+          </Stack>
+        </DialogLayout.Body>
+        <DialogLayout.Foot>
+          <FormButtonGroup>
             <button type="button" onClick={clear} className="btn btn-secondary">
               Zurücksetzen
             </button>
             <button type="submit" className="btn btn-primary">
               Auswählen
             </button>
-          </DialogCard.ButtonGroup>
-        </DialogCard.Foot>
+          </FormButtonGroup>
+        </DialogLayout.Foot>
       </form>
-    </DialogCard>
+    </DialogLayout>
   )
 }
 

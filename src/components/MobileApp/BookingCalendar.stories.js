@@ -6,7 +6,7 @@ import { parseISO } from 'date-fns'
 import { BookingCalendar } from './BookingCalendar'
 
 export default {
-  title: 'MobileApp/Components/Order Panel',
+  title: 'MobileApp/Integrated Components/Order Panel',
   component: BookingCalendar,
   parameters: { layout: 'fullscreen' }
 }

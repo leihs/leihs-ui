@@ -3,12 +3,13 @@ import PropTypes from 'prop-types'
 import cx from 'classnames'
 import SwipeableViews from 'react-swipeable-views'
 import PageLayout from './DesignComponents/PageLayout'
+import Stack from './DesignComponents/Stack'
 import Section from './DesignComponents/Section'
 import SquareImageGrid from './DesignComponents/SquareImageGrid'
 import DownloadLink from './DesignComponents/DownloadLink'
 import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 import SquareImage from './DesignComponents/SquareImage'
-import KeyValueTable from './DesignComponents/KeyValueTable'
+import PropertyTable from './DesignComponents/PropertyTable'
 
 export default function ModelShow({ model, onOrderClick, onClickFavorite, orderPanelTmp }) {
   const [imageIndex, setImageIndex] = useState(0)
@@ -69,7 +70,7 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
         </div>
       )}
 
-      <PageLayout.Stack1>
+      <Stack space="5">
         <ActionButtonGroup>
           <button type="button" className="btn btn-primary" onClick={addToOrderClick}>
             Gegenstand hinzufügen
@@ -88,19 +89,19 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
         {!!orderPanelTmp && showOrderPanel && <div>{orderPanelTmp}</div>}
 
         {model.description && (
-          <Section title="Beschreibung" collapsible={true}>
+          <Section title="Beschreibung" collapsible>
             <div>{model.description}</div>
           </Section>
         )}
 
         {model.properties.length > 0 && (
-          <Section title="Eigenschaften" collapsible={true}>
-            <KeyValueTable properties={model.properties} />
+          <Section title="Eigenschaften" collapsible>
+            <PropertyTable properties={model.properties} />
           </Section>
         )}
 
         {model.attachments.length > 0 && (
-          <Section title="Dokumente" collapsible={true}>
+          <Section title="Dokumente" collapsible>
             {model.attachments.map((attachment, i) => (
               <div key={attachment.id}>
                 <DownloadLink href={attachment.attachmentUrl}>{attachment.filename}</DownloadLink>
@@ -110,11 +111,11 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
         )}
 
         {model.recommends && model.recommends.edges && model.recommends.edges.length > 0 && (
-          <Section title="Ergänzende Gegenstände" collapsible={true}>
+          <Section title="Ergänzende Gegenstände" collapsible>
             {getRecommendsGrid(model.recommends)}
           </Section>
         )}
-      </PageLayout.Stack1>
+      </Stack>
     </>
   )
 }

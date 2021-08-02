@@ -40,20 +40,6 @@
   }
 }
 
-/* Component: SimpleCard */
-
-.simple-card {
-  &--clickable {
-    cursor: pointer;
-  }
-}
-
-/* Component: OrderStateInfo */
-
-.order-state-progress {
-  height: 0.5rem;
-}
-
 /* CSS Component: .gallery-button */
 
 .gallery-button {
@@ -115,32 +101,35 @@
   }
 }
 
-.date-range-input-label {
+/* Component: LabelInside */
+
+.label-inside {
   display: block;
   position: relative;
-  margin: 0;
-  &::after {
-    content: attr(data-label);
+
+  label:first-of-type {
     display: block;
     position: absolute;
     top: 0;
     left: 0;
     border: $input-border-width solid transparent;
-    padding: $input-padding-y $input-padding-x;
-    width: $input-padding-x + 2rem;
-    overflow: none;
+    padding: $input-padding-y 0 $input-padding-y $input-padding-x;
+    width: 4rem;
+    white-space: nowrap;
+    overflow: hidden;
   }
-}
 
-.date-range-input {
-  display: block;
-  position: relative;
-  padding-left: $input-padding-x + 2rem;
+  :is(input, textarea, select):first-of-type {
+    padding-left: 4.25rem;
+  }
 }
 
 /* Component: DownloadLink */
 
 .download-link {
+  display: inline-block;
+  padding-left: 1.5rem;
+  text-indent: -1.5rem;
   &__icon {
     margin-right: 0.5rem;
     margin-top: -0.2rem;

@@ -1,29 +1,44 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
 import FilterButton from './FilterButton'
-import PageLayoutMock from '../StoryUtils/PageLayoutMock'
-import PageLayout from './PageLayout'
 
 export default {
-  title: 'MobileApp/DesignComponents/Filter Button',
+  title: 'MobileApp/Design Components/Content/FilterButton',
   component: FilterButton,
-  parameters: { layout: 'fullscreen' }
+  argTypes: { onClick: { action: 'click' } }
 }
 
-const onClick = action('click')
-
-export const filterButton = () => {
+export const filterButton = ({ onClick }) => {
   return (
-    <PageLayoutMock>
-      <PageLayout.Header title="Single line">
-        <FilterButton onClick={onClick}>Verfügbar ab 8.6.2021</FilterButton>
-      </PageLayout.Header>
-      <PageLayout.Header title="With multi-line content">
-        <FilterButton onClick={onClick}>
-          <div>Lorem ipsum dolor sit amet</div>
-          <div>consetetur sadipscing elitr</div>
-        </FilterButton>
-      </PageLayout.Header>
-    </PageLayoutMock>
+    <div>
+      <h1>FilterButton</h1>
+      <p className="text-muted">It is a button as well as an indicator what filter is currently active.</p>
+      <FilterButton onClick={onClick}>Verfügbar ab 8.6.2021</FilterButton>
+    </div>
+  )
+}
+filterButton.storyName = 'FilterButton'
+
+export const multiLine = ({ onClick }) => {
+  return (
+    <div>
+      <h1>FilterButton</h1>
+      <p className="text-muted">It can have multiline content</p>
+      <FilterButton onClick={onClick}>
+        <div>Lorem ipsum dolor sit amet</div>
+        <div>consetetur sadipscing elitr</div>
+      </FilterButton>
+    </div>
+  )
+}
+
+export const restProps = ({ onClick }) => {
+  return (
+    <div>
+      <h1>FilterButton</h1>
+      <p className="text-muted">RestProps can be applied</p>
+      <FilterButton onClick={onClick} className="btn-warning">
+        Button with warning color
+      </FilterButton>
+    </div>
   )
 }
