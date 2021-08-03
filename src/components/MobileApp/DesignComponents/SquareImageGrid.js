@@ -19,7 +19,7 @@ export default function SquareImageGrid({ list = [], className, itemClassName, .
             )}
             <SquareImage href={href} imgSrc={imgSrc} className="rounded border" />
             <div className="pt-2" style={{ minHeight: '2.8rem' }}>
-              <a href={href}>
+              <a className="stretched-link" href={href}>
                 <div className="small">{caption}</div>
                 <div className="small text-muted">{subCaption}</div>
               </a>

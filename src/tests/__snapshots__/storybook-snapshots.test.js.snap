@@ -22816,210 +22816,36 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Homepage 1`] = 
               Alle
             </a>
           </div>
-          <div
-            className="row g-0 d-flex flex-wrap mx-n2 ui-models-list"
-          >
-            <div
-              className="col-6 col-sm-3"
-              style={
+          <fakeCategoryList
+            list={
+              Array [
                 Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <div
-                className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <div
-                  className="rounded border square-container position-relative overflow-hidden"
-                >
-                  <a
-                    href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
-                  >
-                    <div
-                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-                    />
-                  </a>
-                </div>
-                <div
-                  className="pt-2"
-                  style={
-                    Object {
-                      "minHeight": "2.8rem",
-                    }
-                  }
-                >
-                  <a
-                    href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
-                  >
-                    <div
-                      className="small"
-                    >
-                      Audio
-                    </div>
-                    <div
-                      className="small text-muted"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-6 col-sm-3"
-              style={
+                  "caption": "Audio",
+                  "href": "#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf",
+                  "id": "78920f6d-57c1-5231-b0c4-f58dcddc64cf",
+                  "imgSrc": undefined,
+                },
                 Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <div
-                className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <div
-                  className="rounded border square-container position-relative overflow-hidden"
-                >
-                  <a
-                    href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
-                  >
-                    <div
-                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-                    />
-                  </a>
-                </div>
-                <div
-                  className="pt-2"
-                  style={
-                    Object {
-                      "minHeight": "2.8rem",
-                    }
-                  }
-                >
-                  <a
-                    href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
-                  >
-                    <div
-                      className="small"
-                    >
-                      Beleuchtungstechnik
-                    </div>
-                    <div
-                      className="small text-muted"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-6 col-sm-3"
-              style={
+                  "caption": "Beleuchtungstechnik",
+                  "href": "#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e",
+                  "id": "b279bb7f-314c-55d1-a407-0de794c2c25e",
+                  "imgSrc": undefined,
+                },
                 Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <div
-                className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <div
-                  className="rounded border square-container position-relative overflow-hidden"
-                >
-                  <a
-                    href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
-                  >
-                    <div
-                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-                    />
-                  </a>
-                </div>
-                <div
-                  className="pt-2"
-                  style={
-                    Object {
-                      "minHeight": "2.8rem",
-                    }
-                  }
-                >
-                  <a
-                    href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
-                  >
-                    <div
-                      className="small"
-                    >
-                      Effektgeräte Veranstaltungstechnik
-                    </div>
-                    <div
-                      className="small text-muted"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-6 col-sm-3"
-              style={
+                  "caption": "Effektgeräte Veranstaltungstechnik",
+                  "href": "#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c",
+                  "id": "298ec3da-d2c8-5d9d-ae1a-55715ccd933c",
+                  "imgSrc": undefined,
+                },
                 Object {
-                  "opacity": 1,
-                }
-              }
-            >
-              <div
-                className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-                style={
-                  Object {
-                    "opacity": 1,
-                  }
-                }
-              >
-                <div
-                  className="rounded border square-container position-relative overflow-hidden"
-                >
-                  <a
-                    href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
-                  >
-                    <div
-                      className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-                    />
-                  </a>
-                </div>
-                <div
-                  className="pt-2"
-                  style={
-                    Object {
-                      "minHeight": "2.8rem",
-                    }
-                  }
-                >
-                  <a
-                    href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
-                  >
-                    <div
-                      className="small"
-                    >
-                      Externe Massenspeicher
-                    </div>
-                    <div
-                      className="small text-muted"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+                  "caption": "Externe Massenspeicher",
+                  "href": "#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353",
+                  "id": "c6a221ec-6df2-5ce7-b9a0-cc5694902353",
+                  "imgSrc": null,
+                },
+              ]
+            }
+          />
         </section>
       </div>
     </div>
@@ -23069,213 +22895,6 @@ exports[`Storybook HTML Snapshots MobileApp/Components/AppLayout Page with Crash
       </div>
     </div>
   </main>
-</div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Components/CategoryList Example 1 1`] = `
-<div
-  className="row g-0 d-flex flex-wrap mx-n2 ui-models-list"
->
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-        style={
-          Object {
-            "minHeight": "2.8rem",
-          }
-        }
-      >
-        <a
-          href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
-        >
-          <div
-            className="small"
-          >
-            Audio
-          </div>
-          <div
-            className="small text-muted"
-          />
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-        style={
-          Object {
-            "minHeight": "2.8rem",
-          }
-        }
-      >
-        <a
-          href="#app/borrow/categories/b279bb7f-314c-55d1-a407-0de794c2c25e"
-        >
-          <div
-            className="small"
-          >
-            Beleuchtungstechnik
-          </div>
-          <div
-            className="small text-muted"
-          />
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-        style={
-          Object {
-            "minHeight": "2.8rem",
-          }
-        }
-      >
-        <a
-          href="#app/borrow/categories/298ec3da-d2c8-5d9d-ae1a-55715ccd933c"
-        >
-          <div
-            className="small"
-          >
-            Effektgeräte Veranstaltungstechnik
-          </div>
-          <div
-            className="small text-muted"
-          />
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-        style={
-          Object {
-            "minHeight": "2.8rem",
-          }
-        }
-      >
-        <a
-          href="#app/borrow/categories/c6a221ec-6df2-5ce7-b9a0-cc5694902353"
-        >
-          <div
-            className="small"
-          >
-            Externe Massenspeicher
-          </div>
-          <div
-            className="small text-muted"
-          />
-        </a>
-      </div>
-    </div>
-  </div>
 </div>
 `;
 
@@ -23808,6 +23427,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         }
       >
         <a
+          className="stretched-link"
           href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
         >
           <div
@@ -23860,6 +23480,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         }
       >
         <a
+          className="stretched-link"
           href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
         >
           <div
@@ -23912,6 +23533,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         }
       >
         <a
+          className="stretched-link"
           href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
         >
           <div
@@ -23964,6 +23586,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         }
       >
         <a
+          className="stretched-link"
           href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
         >
           <div
@@ -24016,6 +23639,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         }
       >
         <a
+          className="stretched-link"
           href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
         >
           <div
@@ -24068,6 +23692,7 @@ exports[`Storybook HTML Snapshots MobileApp/Components/ModelList Example 1 1`] =
         }
       >
         <a
+          className="stretched-link"
           href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
         >
           <div
@@ -32869,7 +32494,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Filter Button Filte
         Single line
       </h1>
       <button
-        className="btn btn-primary btn-sm rounded-pill px-4 very-small"
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
         onClick={[Function]}
         type="button"
       >
@@ -32883,7 +32508,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Filter Button Filte
         With multi-line content
       </h1>
       <button
-        className="btn btn-primary btn-sm rounded-pill px-4 very-small"
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
         onClick={[Function]}
         type="button"
       >
@@ -35220,6 +34845,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Square Image Grid S
             }
           >
             <a
+              className="stretched-link"
               href={null}
             >
               <div
@@ -35284,6 +34910,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Square Image Grid S
             }
           >
             <a
+              className="stretched-link"
               href={null}
             >
               <div
@@ -35336,6 +34963,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Square Image Grid S
             }
           >
             <a
+              className="stretched-link"
               href={null}
             >
               <div
@@ -35388,6 +35016,7 @@ exports[`Storybook HTML Snapshots MobileApp/DesignComponents/Square Image Grid S
             }
           >
             <a
+              className="stretched-link"
               href={null}
             >
               <div
@@ -35861,7 +35490,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
         Audio
       </h1>
       <button
-        className="btn btn-primary btn-sm rounded-pill px-4 very-small"
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
         type="button"
       >
         Nur Ausleihe Toni, jetzt verfügbar
@@ -35934,6 +35563,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
                   }
                 >
                   <a
+                    className="stretched-link"
                     href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
                   >
                     <div
@@ -36019,6 +35649,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
                   }
                 >
                   <a
+                    className="stretched-link"
                     href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
                   >
                     <div
@@ -36113,7 +35744,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
         Katalog
       </h1>
       <button
-        className="btn btn-primary btn-sm rounded-pill px-4 very-small"
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
         type="button"
       >
         Nur Ausleihe Toni, jetzt verfügbar
@@ -36176,6 +35807,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                   }
                 >
                   <a
+                    className="stretched-link"
                     href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
                   >
                     <div
@@ -36226,6 +35858,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                   }
                 >
                   <a
+                    className="stretched-link"
                     href="#app/borrow/categories/3f69bb3b-8934-589c-8d96-69f3ce31416e"
                   >
                     <div
@@ -36276,6 +35909,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                   }
                 >
                   <a
+                    className="stretched-link"
                     href="#app/borrow/categories/56336471-2ce5-541c-be64-7fdb891f49f5"
                   >
                     <div
@@ -36326,6 +35960,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                   }
                 >
                   <a
+                    className="stretched-link"
                     href="#app/borrow/categories/82165b56-aa9e-5d6a-b37c-f446cda4004e"
                   >
                     <div
@@ -36426,7 +36061,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
         Mischpulte & CD Player
       </h1>
       <button
-        className="btn btn-primary btn-sm rounded-pill px-4 very-small"
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
         type="button"
       >
         Nur Ausleihe Toni, jetzt verfügbar
@@ -36499,6 +36134,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
                   }
                 >
                   <a
+                    className="stretched-link"
                     href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
                   >
                     <div
@@ -37473,7 +37109,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Liste List
         Meine Ausleihen
       </h1>
       <button
-        className="btn btn-primary btn-sm rounded-pill px-4 very-small"
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
         type="button"
       >
         Alle Ausleihen

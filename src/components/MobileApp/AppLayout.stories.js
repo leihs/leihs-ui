@@ -1,8 +1,7 @@
 import React from 'react'
 
 import { AppWrapper, MainView, Navbar, Page, SubSection, CallToAction } from './AppLayout'
-import CategoryList from './CategoryList'
-
+import SquareImageGrid from './DesignComponents/SquareImageGrid'
 import { categoryListPropsV1 as exampleCategoryProps } from '../MobileApp/StoryUtils/sample-props'
 
 export default {
@@ -13,6 +12,10 @@ export default {
 const fakeNavbar = (
   <Navbar brandName="LEIHS" menuItem={{ href: '#/app/borrow/about' }} cartItem={{ href: '#/app/borrow/order' }} />
 )
+function fakeCategoryList({ list }) {
+  const BASE_CLASS = 'ui-categories-list'
+  return <SquareImageGrid className={BASE_CLASS} itemClassName={BASE_CLASS + '-item'} list={list} />
+}
 
 const fakeSearchForm = (
   <div
@@ -117,7 +120,7 @@ export const homepage = () => (
           Du hast bald eine Abholung!
         </CallToAction>
         <SubSection title="Kategorien" moreLink={{ href: '#', children: 'Alle' }}>
-          <CategoryList {...exampleCategoryProps} />
+          <fakeCategoryList {...exampleCategoryProps} />
         </SubSection>
       </Page>
     </MainView>
