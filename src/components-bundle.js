@@ -18,12 +18,15 @@ const Components = {
   DatePicker: require('./components/DatePicker').default,
 
   AppLayout,
+  // "fach komponenten"
   ModelList: require('./components/MobileApp/ModelList').default,
   ModelShow: require('./components/MobileApp/ModelShow').default,
   ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
   FilterBubblePanelSwitcher: require('./components/MobileApp/TmpFilterBubblePanelSwitcher').default,
+  CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
 
+  // "design komponenten"
   Design: {
     PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,
@@ -31,8 +34,7 @@ const Components = {
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default
   },
 
-  // mobile pages
-  CategoryShowPage: require('./components/MobileApp/CategoryShowPage').default,
+  // "app pages"
   UserProfilePage: require('./components/MobileApp/UserProfilePage').default,
 
   // pages:
