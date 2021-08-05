@@ -12,7 +12,7 @@ export default {
 const fakeNavbar = (
   <Navbar brandName="LEIHS" menuItem={{ href: '#/app/borrow/about' }} cartItem={{ href: '#/app/borrow/order' }} />
 )
-function fakeCategoryList({ list }) {
+function FakeCategoryList({ list }) {
   const BASE_CLASS = 'ui-categories-list'
   return <SquareImageGrid className={BASE_CLASS} itemClassName={BASE_CLASS + '-item'} list={list} />
 }
@@ -120,7 +120,7 @@ export const homepage = () => (
           Du hast bald eine Abholung!
         </CallToAction>
         <SubSection title="Kategorien" moreLink={{ href: '#', children: 'Alle' }}>
-          <fakeCategoryList {...exampleCategoryProps} />
+          <FakeCategoryList {...exampleCategoryProps} />
         </SubSection>
       </Page>
     </MainView>
