@@ -23,13 +23,14 @@ const Components = {
   ModelShow: require('./components/MobileApp/ModelShow').default,
   ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
-  FilterBubblePanelSwitcher: require('./components/MobileApp/TmpFilterBubblePanelSwitcher').default,
   CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
 
   // "design komponenten"
   Design: {
     PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,
+    ModalDialog: require('./components/MobileApp/DesignComponents/ModalDialog').default,
+    Navbar: require('./components/MobileApp/DesignComponents/Navbar').default,
     FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
     Stack: require('./components/MobileApp/DesignComponents/Stack').default
