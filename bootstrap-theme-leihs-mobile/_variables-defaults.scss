@@ -129,3 +129,14 @@ $form-select-feedback-icon-position: center right $input-btn-padding-x + 1.5rem;
 $navbar-light-color: $body-color;
 $navbar-padding-y: 5px;
 $navbar-padding-x: 15px;
+
+// Modals
+$modal-backdrop-bg: tint-color($primary, 94%);
+$modal-backdrop-opacity: 0.85;
+$modal-content-border-color: rgba(shade-color($primary, 80%), 0.15);
+
+// NOTE: target height for single line title in modal header is then navbar height (50px)
+$modal-header-padding-y: 15px;
+$modal-header-padding-x: $navbar-padding-x;
+// simplify animation:
+$modal-fade-transform: none;
