@@ -45,8 +45,8 @@ export const BookingCalendar = ({
   initialInventoryPoolId,
   onInventoryPoolChange = noop,
   //
-  onSubmit,
-  onCancel
+  onSubmit = noop,
+  onCancel = noop
 }) => {
   const today = startOfDay(new Date())
   const minDate = minDateTotal ? startOfDay(minDateTotal) : today
