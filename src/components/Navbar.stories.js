@@ -178,13 +178,13 @@ export const colors = () => {
         </p>
       </header>
 
-      {examples.map(config => (
-        <>
+      {examples.map((config, ix) => (
+        <React.Fragment key={ix}>
           <div style={{ ...swatchStyle, background: `${navbarBaseColor}` }}>base</div>
           <div style={{ ...swatchStyle, background: `${config.appColor}` }}>tint</div>
           <Navbar config={config} csrfToken={sharedNavbarProps.csrfToken} />
           <hr />
-        </>
+        </React.Fragment>
       ))}
     </LeihsPage>
   )

@@ -26,7 +26,9 @@ const FAKE_DATA = {
           manufacturer: 'Sony',
           coverImage: {
             id: 'e2d0cfdf-745c-57cb-8c6b-09c14af6bb51',
-            'image-url': require('../../static/example-images/models/e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg').default
+            'image-url':
+              require('../../static/example-images/models/e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg').default ||
+              'fake-url-for-storyshots-e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg'
           }
         },
         'start-date': '2020-10-12T00:00:00Z',
@@ -47,7 +49,9 @@ const FAKE_DATA = {
           manufacturer: 'Manfrotto',
           coverImage: {
             id: '0350f864-3e72-43dc-9365-b5f8ca277063',
-            'image-url': require('../../static/example-images/models/0350f864-3e72-43dc-9365-b5f8ca277063.jpg').default
+            'image-url':
+              require('../../static/example-images/models/0350f864-3e72-43dc-9365-b5f8ca277063.jpg').default ||
+              'fake-url-for-storyshots-0350f864-3e72-43dc-9365-b5f8ca277063.jpg'
           }
         },
         'start-date': '2020-10-12T00:00:00Z',
@@ -62,7 +66,7 @@ const FAKE_DATA = {
 
 export const ExampleLines = () => (
   <div>
-    {/* <pre>{JSON.stringify(FAKE_DATA, 0, 2)}</pre> */}
+    {/* <pre>{JSON.stringify(FAKE_DATA, 0, 2)}</pre> */});
     <ReservationLines lines={FAKE_DATA.lines} />
   </div>
 )
