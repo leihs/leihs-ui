@@ -42,6 +42,7 @@ const minimalExampleProps = {
     { id: 'de577733-0f4a-4b15-b217-e79df29afbcb', name: 'Pool 1' },
     { id: 'e441b4c0-3477-4970-82c6-f5ed8ad9ccc1', name: 'Pool 2' }
   ],
+  delegations: [],
   onSubmit: onSubmitAction,
   onClear: onClearAction
 }
