@@ -24,6 +24,7 @@ const Components = {
   ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
   CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
+  FilterBubblePanelSwitcher: require('./components/MobileApp/TmpFilterBubblePanelSwitcher').default,
 
   // "design komponenten"
   Design: {
