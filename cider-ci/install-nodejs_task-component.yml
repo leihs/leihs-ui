@@ -11,6 +11,10 @@ scripts:
       set -eu
 
       source ~/.nvm/nvm.sh
+
+      # cleanup leftovers from aborted installs (or npm upgrade might fail)
+      rm -rf  "$NVM_DIR"/versions/node/*/lib/node_modules/.npm-*
+
       nvm install "$NVM_NODEJS_VERSION"
       nvm use "$NVM_NODEJS_VERSION"
       npm i -g npm@7
