@@ -30103,7 +30103,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
+        href="/app/borrow/"
       >
         Leihs
       </a>
@@ -30167,7 +30167,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
+        href="/app/borrow/"
       >
         Leihs
       </a>
@@ -30231,7 +30231,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
+        href="/app/borrow/"
       >
         Leihs
       </a>
@@ -30295,7 +30295,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
+        href="/app/borrow/"
       >
         Leihs
       </a>
@@ -30359,7 +30359,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
+        href="/app/borrow/"
       >
         Leihs
       </a>
@@ -30380,6 +30380,70 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
             }
           >
             524
+          </div>
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Bag Icon.svg
+          </svg>
+        </a>
+      </div>
+    </nav>
+  </div>
+  <div
+    className="mb-3"
+  >
+    <nav
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    >
+      <div
+        className="navbar-nav"
+      >
+        <a
+          className="nav-item nav-link"
+        >
+          <span
+            className="ui-icon ui-menu-icon"
+          >
+            <svg
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Menu Icon.svg
+            </svg>
+          </span>
+        </a>
+      </div>
+      <a
+        className="navbar-brand me-0 fw-bold"
+        href="/app/borrow/"
+      >
+        Leihs
+      </a>
+      <div
+        className="navbar-nav"
+      >
+        <a
+          className="nav-item nav-link position-relative"
+          href="/app/borrow/order"
+        >
+          <div
+            className="cart-badge position-absolute small"
+            style={
+              Object {
+                "right": "-30%",
+                "top": "8%",
+              }
+            }
+          >
+            999999999
           </div>
           <svg
             style={
@@ -30434,7 +30498,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
       />
       <div
         className="navbar-nav"
@@ -30443,17 +30506,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
         >
-          <div
-            className="cart-badge position-absolute small"
-            style={
-              Object {
-                "right": "-30%",
-                "top": "8%",
-              }
-            }
-          >
-            0
-          </div>
           <svg
             style={
               Object {
@@ -30499,7 +30551,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
       >
         Leihs
       </a>
@@ -30510,17 +30561,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
         >
-          <div
-            className="cart-badge position-absolute small"
-            style={
-              Object {
-                "right": "-30%",
-                "top": "8%",
-              }
-            }
-          >
-            0
-          </div>
           <svg
             style={
               Object {
@@ -30566,7 +30606,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
       </div>
       <a
         className="navbar-brand me-0 fw-bold"
-        href="/app/borrow"
       >
         Leihs
       </a>
@@ -30577,17 +30616,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
         >
-          <div
-            className="cart-badge position-absolute small"
-            style={
-              Object {
-                "right": "-30%",
-                "top": "8%",
-              }
-            }
-          >
-            0
-          </div>
           <svg
             style={
               Object {
@@ -30633,7 +30661,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
       </div>
       <a
         className="border border-primary"
-        href="/app/borrow"
       >
         Leihs
       </a>
@@ -30644,17 +30671,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
         >
-          <div
-            className="cart-badge position-absolute small"
-            style={
-              Object {
-                "right": "-30%",
-                "top": "8%",
-              }
-            }
-          >
-            0
-          </div>
           <svg
             style={
               Object {
@@ -30702,7 +30718,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Navb
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
+      href="/app/borrow/"
     >
       Leihs
     </a>
@@ -30796,7 +30812,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
         </div>
         <a
           className="navbar-brand me-0 fw-bold"
-          href="/app/borrow"
         >
           leihs
         </a>
@@ -30923,7 +30938,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
         </div>
         <a
           className="navbar-brand me-0 fw-bold"
-          href="/app/borrow"
         >
           leihs
         </a>
@@ -37183,7 +37197,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
@@ -37427,7 +37440,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
@@ -37718,7 +37730,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
@@ -37887,7 +37898,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Detail Det
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
@@ -38935,7 +38945,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/MeineAusleihen/Liste List
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
@@ -40005,7 +40014,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
@@ -40296,7 +40304,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>

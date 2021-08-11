@@ -10,13 +10,13 @@ export const navbar = () => {
   return (
     <div>
       <h1>Navbar</h1>
-      <Navbar brandName="Leihs" cartItemCount={3} />
+      <Navbar brandName="Leihs" cartItemCount={3} brandItem={{ href: '/app/borrow/' }} />
     </div>
   )
 }
 
 export const counterExamples = () => {
-  const countVariants = [0, 3, 11, 68, 524]
+  const countVariants = [0, 3, 11, 68, 524, 999999999]
   return (
     <div>
       <h1>Navbar</h1>
@@ -24,6 +24,7 @@ export const counterExamples = () => {
       {countVariants.map((cartItemCount, i) => {
         const navbarProps = {
           brandName: 'Leihs',
+          brandItem: { href: '/app/borrow/' },
           cartItemCount
         }
         return (
@@ -54,7 +55,7 @@ export const moreExamples = () => {
       </p>
       <p className="text-muted">Props for the brand name</p>
       <p>
-        <Navbar brandName="Leihs" cartItem={{ className: 'border border-primary' }} />
+        <Navbar brandName="Leihs" brandItem={{ className: 'border border-primary' }} />
       </p>
     </div>
   )
