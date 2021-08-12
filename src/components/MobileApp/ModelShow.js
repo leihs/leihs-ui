@@ -57,7 +57,7 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
               <button
                 type="button"
                 key={i}
-                className={cx('btn btn-secondary gallery-button', { 'gallery-button--selected': i === imageIndex })}
+                className={cx('gallery-button', { 'gallery-button--selected': i === imageIndex })}
                 onClick={() => handleImageBulletClick(i)}
               ></button>
             ))}
