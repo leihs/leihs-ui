@@ -50,7 +50,17 @@ export const parameters = {
   },
   options: {
     storySort: {
-      order: ['*', 'MobileApp', ['Overview', 'Wireframes', 'Design Components', 'Bootstrap Theme']]
+      order: [
+        '*',
+        'MobileApp',
+        [
+          'Overview',
+          'Wireframes',
+          ['Page Typology', 'Katalog', 'Neue Ausleihe'],
+          'Design Components',
+          'Bootstrap Theme'
+        ]
+      ]
     }
   }
 }

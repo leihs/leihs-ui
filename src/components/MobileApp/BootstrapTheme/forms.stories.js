@@ -1,7 +1,9 @@
 import React from 'react'
+import { withLinks } from '@storybook/addon-links'
 
 export default {
-  title: 'MobileApp/Bootstrap Theme/Forms'
+  title: 'MobileApp/Bootstrap Theme/Forms',
+  decorators: [withLinks]
 }
 
 export const elements = () => {
@@ -11,6 +13,10 @@ export const elements = () => {
       <p className="text-muted">Text input field:</p>
       <div className="mb-3">
         <input type="text" name="name" className="form-control" />
+      </div>
+      <p className="text-muted">Textarea:</p>
+      <div className="mb-3">
+        <textarea className="form-control" rows="3" />
       </div>
       <p className="text-muted">Select field:</p>
       <div className="mb-3">
@@ -53,10 +59,17 @@ export function validationFeedback() {
   return (
     <>
       <h1>Forms - Validation feedback</h1>
-      <p className="text-muted">(Note we do not show valid feedback, only invalid)</p>
+      <p className="text-muted">
+        Note: this theme shows only indicators for invalid fields, not for valid ones (which would have green checkmarks
+        by default)
+      </p>
       <p className="text-muted">Text input field:</p>
       <div className="mb-3">
         <input type="text" className="form-control is-invalid" />
+      </div>
+      <p className="text-muted">Textarea:</p>
+      <div className="mb-3">
+        <textarea className="form-control is-invalid" rows="3" />
       </div>
       <p className="text-muted">Select field:</p>
       <div className="mb-3">
@@ -75,23 +88,18 @@ export function validationFeedback() {
           </label>
         </div>
       </div>
-      <p className="text-muted">Field with feedback text:</p>
+      <p className="text-muted">Field with invalid feedback text:</p>
       <div className="mb-3">
         <input type="text" name="name" className="form-control is-invalid" />
         <div className="invalid-feedback">Please enter your name</div>
       </div>
+      <h2>Standalone invalid feedback text</h2>
       <p className="text-muted">
-        Feedback text standalone (needs an <code>i.is-invalid</code> before to get visible):
+        When the message is not directly related to a form input as in the above example, or not even in a form:{' '}
+        <button data-sb-kind="MobileApp/Design Components/Content/Warning" className="btn btn-secondary btn-sm">
+          Use the Warning component
+        </button>
       </p>
-      <div className="mb-3">
-        <i className="is-invalid" />
-        <div className="invalid-feedback">Please check the form inputs</div>
-      </div>
-      <p className="text-muted">Feedback text with an icon (proprietary extension):</p>
-      <div className="mb-3">
-        <i className="is-invalid" />
-        <div className="invalid-feedback invalid-feedback-icon">Please check the form inputs</div>
-      </div>
     </>
   )
 }

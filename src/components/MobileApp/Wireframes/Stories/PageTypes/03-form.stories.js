@@ -27,11 +27,7 @@ export const form = ({ onSubmit }) => {
 
   return (
     <DialogLayout title="Form">
-      <form
-        onSubmit={submit}
-        noValidate
-        className={cx('d-flex flex-column gap-3 mb-4', { 'was-validated': wasSubmitted })}
-      >
+      <form onSubmit={submit} noValidate className={cx({ 'was-validated': wasSubmitted })}>
         <DialogLayout.Body>
           <Stack space="4">
             <Section collapsible title="Search term">

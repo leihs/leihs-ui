@@ -11,7 +11,7 @@ import FilterButton from '../../../DesignComponents/FilterButton'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/MeineAusleihen/Detail',
+  title: 'MobileApp/Wireframes/Meine Ausleihen/Detail',
   parameters: { layout: 'fullscreen' }
 }
 

@@ -9,7 +9,7 @@ import ListCard from '../../../DesignComponents/ListCard'
 import ProgressInfo from '../../../DesignComponents/ProgressInfo'
 
 export default {
-  title: 'MobileApp/Wireframes/MeineAusleihen/Liste',
+  title: 'MobileApp/Wireframes/Meine Ausleihen/Liste',
   parameters: { layout: 'fullscreen' }
 }
 

@@ -101,13 +101,7 @@ export const textarea = () => {
       </p>
       <div>
         <LabelInside>
-          <textarea
-            rows="5"
-            className="form-control"
-            name="field-31"
-            id="field-31"
-            placeholder="Enter your message"
-          ></textarea>
+          <textarea rows="5" className="form-control" name="field-31" id="field-31" placeholder="Enter your message" />
           <label htmlFor="field-31">You:</label>
         </LabelInside>
       </div>

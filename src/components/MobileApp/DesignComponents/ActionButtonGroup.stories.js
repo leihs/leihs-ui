@@ -1,6 +1,7 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import ActionButtonGroup from './ActionButtonGroup'
+import Warning from './Warning'
 
 export default {
   title: 'MobileApp/Design Components/Content/ActionButtonGroup',
@@ -40,6 +41,26 @@ export const restProps = ({ onClick }) => {
         </button>
         <button type="button" className="btn btn-secondary" onClick={onClick}>
           Secondary button
+        </button>
+      </ActionButtonGroup>
+    </div>
+  )
+}
+
+export const withWarning = ({ onClick }) => {
+  return (
+    <div>
+      <h1>ActionButtonGroup</h1>
+      <p className="text-muted">
+        Add a <code>{'<Warning />'}</code> component to explain why a button is disabled
+      </p>
+      <ActionButtonGroup>
+        <Warning>Can not do this because...</Warning>
+        <button type="button" className="btn btn-primary" disabled>
+          Do this
+        </button>
+        <button type="button" className="btn btn-secondary" onClick={onClick}>
+          Do that
         </button>
       </ActionButtonGroup>
     </div>

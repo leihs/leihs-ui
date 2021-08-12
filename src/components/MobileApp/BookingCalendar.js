@@ -21,6 +21,7 @@ import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
 import Stack from './DesignComponents/Stack'
 import FormButtonGroup from './DesignComponents/FormButtonGroup'
+import Warning from './DesignComponents/Warning'
 
 const noop = () => {}
 
@@ -154,13 +155,7 @@ export const BookingCalendar = ({
                   locale={de}
                 />
               </fieldset>
-              {hasUserInteracted && validationError && (
-                <div>
-                  {/* (Bootstrap expects an invalid input before an invalid-feedback, we don't have it here, so we fake it) */}
-                  <i className="is-invalid"></i>
-                  <div className="invalid-feedback invalid-feedback-icon">{validationError}</div>
-                </div>
-              )}
+              {hasUserInteracted && validationError && <Warning>{validationError}</Warning>}
             </Section>
           </Stack>
         </DialogLayout.Body>

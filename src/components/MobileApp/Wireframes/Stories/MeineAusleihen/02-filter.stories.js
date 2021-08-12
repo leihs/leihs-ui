@@ -3,7 +3,7 @@ import React from 'react'
 import OrderFilterForm from '../../Components/OrderFilterForm'
 
 export default {
-  title: 'MobileApp/Wireframes/MeineAusleihen/Filter',
+  title: 'MobileApp/Wireframes/Meine Ausleihen/Filter',
   component: OrderFilterForm,
   parameters: { layout: 'fullscreen' },
   args: {

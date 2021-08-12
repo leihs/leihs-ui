@@ -14,7 +14,7 @@ export default function DialogLayout({ children, title, className, ...restProps 
 
 DialogLayout.Body = function DialogCardBody({ className, children, ...restProps }) {
   return (
-    <div {...restProps} className={cx('bg-white page-inset-x py-3', className)} style={{ minHeight: '40vh' }}>
+    <div {...restProps} className={cx('bg-white page-inset-x py-4', className)}>
       {children}
     </div>
   )
