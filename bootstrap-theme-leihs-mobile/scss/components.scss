@@ -44,16 +44,17 @@
 
 .gallery-button {
   display: inline-block;
-  color: white;
-  min-width: 0.25rem;
-  height: 0.25rem;
+  border: none;
+  background-color: $gray;
+  width: 0.5em;
+  height: 0.5em;
   padding: 0.25rem;
-  border-radius: 0.25rem;
+  border-radius: 0.5em;
   text-align: center;
-  margin: auto 0.25rem;
+  margin: auto 0.1875em;
 
   &--selected {
-    background-color: $gray;
+    background-color: $black;
   }
 }
 
