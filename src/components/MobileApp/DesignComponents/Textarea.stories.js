@@ -78,8 +78,8 @@ export function minMaxRows() {
           value={message}
           onChange={e => setMessage(e.target.value)}
           className="form-control"
-          minRows="5"
-          maxRows="50"
+          minRows="10"
+          maxRows="20"
         />
       </p>
       <p className="text-muted">

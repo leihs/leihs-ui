@@ -8,7 +8,7 @@ import ModalDialog from './ModalDialog'
 import Button from 'react-bootstrap/Button'
 
 export default {
-  title: 'MobileApp/DesignComponents/ModalDialog',
+  title: 'MobileApp/Design Components/ModalDialog',
   parameters: { layout: 'fullscreen', storyshots: { disable: true } }
 }
 

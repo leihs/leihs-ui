@@ -22455,21 +22455,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ActionButt
     <div
       className="invalid-feedback invalid-feedback-icon d-block w-100"
     >
-      Can not do this because...
+      I'm sorry, Dave. I'm afraid I can't do that.
     </div>
     <button
       className="btn btn-primary"
       disabled={true}
       type="button"
     >
-      Do this
+      Open the pod bay doors, HAL
     </button>
     <button
       className="btn btn-secondary"
       onClick={[Function]}
       type="button"
     >
-      Do that
+      Go in through the emergency air lock
     </button>
   </div>
 </div>
@@ -30102,7 +30102,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Text
       className="form-control"
       name="name"
       onChange={[Function]}
-      rows={5}
+      rows={10}
       value=""
     />
   </p>
@@ -40307,7 +40307,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegen
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
@@ -40398,7 +40397,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
     </div>
     <a
       className="navbar-brand me-0 fw-bold"
-      href="/app/borrow"
     >
       Leihs
     </a>
