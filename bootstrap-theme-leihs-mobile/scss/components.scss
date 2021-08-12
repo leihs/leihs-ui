@@ -60,27 +60,51 @@
 
 /* Component: DateRangePicker */
 
-.date-range-picker {
+.date-range {
   .rdrCalendarWrapper,
   .rdrDateRangeWrapper {
     margin: auto;
-    font-size: 14px;
+    font-size: 0.75rem;
   }
 
   .rdrMonthAndYearWrapper {
-    padding-bottom: 5px;
+    padding: 1.2rem 0.9rem 0.4rem 0.9rem;
     height: auto;
   }
 
-  .rdrMonth,
-  .rdrMonthIsLoading,
-  .rdrMonthName,
-  .rdrWeekDays {
-    padding-left: 0;
-    padding-right: 0;
+  .rdrMonthAndYearPickers {
+    font-size: 1rem;
   }
+
+  .rdrMonth,
+  .rdrMonthIsLoading {
+    padding: 0 0.75rem 0.5rem 0.75rem;
+    height: 16rem;
+  }
+
+  &--loading {
+    .rdrMonth {
+      filter: opacity(30%);
+      pointer-events: none;
+    }
+  }
+
   .rdrNextPrevButton {
     background-color: transparent;
+
+    & > i {
+      display: none;
+    }
+
+    $leihs-calendar-icon: url("data:image/svg+xml,<svg width='12' height='21' xmlns='http://www.w3.org/2000/svg'><path stroke='currentColor' stroke-width='1.8' d='M1.25 1l9.5 9.5-9.5 9.5' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'/></svg>");
+    background-image: escape-svg($leihs-calendar-icon);
+    background-repeat: no-repeat;
+    background-size: 12px 21px;
+    background-position: 50% 0;
+
+    &.rdrPprevButton {
+      transform: scale(-1, 1);
+    }
   }
 
   .rdrMonth,
@@ -88,17 +112,83 @@
     width: initial;
   }
 
-  .rdrDayDisabled {
-    .rdrDayNumber span {
-      text-decoration: none !important;
-      color: rgb(200, 200, 200);
-    }
-    background-color: transparent;
+  .rdrWeekDay {
+    color: $body-color;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
   }
 
-  // hide the day numbers of adjacent months
+  .rdrDayNumber {
+    font-weight: $font-weight-normal;
+  }
+
+  .rdrDay:not(.rdrDayPassive)
+    :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge, .rdrSelected) {
+    background-color: $blue;
+    & ~ .rdrDayNumber span {
+      color: white;
+    }
+  }
+
+  .rdrDayDisabled:not(.rdrDayPassive) {
+    background-color: transparent;
+    & :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge) {
+      filter: none;
+    }
+
+    .rdrDayNumber span {
+      text-decoration: none !important;
+      color: $red;
+    }
+
+    &:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd)
+      :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge) {
+      background-color: $red;
+      & ~ .rdrDayNumber span {
+        color: white;
+      }
+    }
+
+    @mixin start-end-warn-icon {
+      $leihs-calendar-cross-icon: url("data:image/svg+xml,<svg width='10' height='10' xmlns='http://www.w3.org/2000/svg'><g fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke='white' stroke-width='1.4'><path d='M1 1l8 8M9 1L1 9'/></g></svg>");
+      background-image: escape-svg($leihs-calendar-cross-icon);
+      background-repeat: no-repeat;
+      background-size: 10px 10px;
+      background-position: 50% 50%;
+      color: transparent;
+    }
+    &.rdrDayDisabledStart {
+      .rdrStartEdge {
+        background-color: $red;
+        & ~ .rdrDayNumber span {
+          @include start-end-warn-icon();
+        }
+      }
+    }
+    &.rdrDayDisabledEnd {
+      .rdrEndEdge {
+        background-color: $red;
+        & ~ .rdrDayNumber span {
+          @include start-end-warn-icon();
+        }
+      }
+    }
+  }
+
+  // rendering of adjacent months
   .rdrDayPassive {
-    visibility: hidden;
+    background-color: transparent;
+    .rdrDayNumber span {
+      color: $gray;
+      text-decoration: none !important;
+    }
+  }
+
+  // marker for today
+  .rdrDayToday .rdrDayNumber span {
+    &:after {
+      background: $body-color;
+    }
   }
 }
 

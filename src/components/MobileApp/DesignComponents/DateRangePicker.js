@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { format, isValid, parse, isSameDay } from 'date-fns'
+import { format, isValid, parse, isSameDay, endOfMonth } from 'date-fns'
 import { DateRange } from '@leihs/calendar'
 import LabelInside from './LabelInside'
 
@@ -59,6 +59,9 @@ export default function DateRangePicker({
       startDateInput.current.focus()
     }
   }
+
+  // loading state
+  const isLoading = maxDateLoaded && endOfMonth(maxDateLoaded) < endOfMonth(shownDate)
 
   // satellite inputs
 
@@ -148,33 +151,35 @@ export default function DateRangePicker({
           <label htmlFor="endDate">Bis</label>
         </LabelInside>
       </div>
-      <DateRange
-        // selection:
-        ranges={[range]}
-        onChange={handleSelectionChange}
-        // shown date & loading state:
-        shownDate={shownDate}
-        focusedRange={focusedRange}
-        onRangeFocusChange={handleRangeFocusChange}
-        onShownDateChange={onShownDateChange}
-        maxDateLoaded={maxDateLoaded}
-        loadingIndicator={<div>LOADING...</div>}
-        // date constraints:
-        minDate={minDate}
-        maxDate={maxDate}
-        disabledDates={disabledDates}
-        disabledStartDates={disabledStartDates}
-        disabledEndDates={disabledEndDates}
-        // appearance and behaviour:
-        className="m-0 w-100"
-        direction="vertical"
-        months={1}
-        weekStartsOn={1}
-        showMonthAndYearPickers={false}
-        rangeColors={['rgb(150, 150, 150)']}
-        editableDateInputs={false}
-        locale={locale}
-      />
+      <div className={cx('date-range', { 'date-range--loading': isLoading })}>
+        <DateRange
+          // selection:
+          ranges={[range]}
+          onChange={handleSelectionChange}
+          // shown date & loading state:
+          shownDate={shownDate}
+          focusedRange={focusedRange}
+          onRangeFocusChange={handleRangeFocusChange}
+          onShownDateChange={onShownDateChange}
+          maxDateLoaded={maxDateLoaded}
+          loadingIndicator={<div>LOADING...</div>}
+          // date constraints:
+          minDate={minDate}
+          maxDate={maxDate}
+          disabledDates={disabledDates}
+          disabledStartDates={disabledStartDates}
+          disabledEndDates={disabledEndDates}
+          // appearance and behaviour:
+          className="m-0 w-100 rounded bg-light-shade"
+          direction="vertical"
+          months={1}
+          weekStartsOn={1}
+          showMonthAndYearPickers={false}
+          rangeColors={['rgb(150, 150, 150)']}
+          editableDateInputs={false}
+          locale={locale}
+        />
+      </div>
     </div>
   )
 }

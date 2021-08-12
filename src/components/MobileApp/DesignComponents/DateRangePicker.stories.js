@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { parseISO, format, endOfMonth, addMonths } from 'date-fns'
+import { parseISO, format, endOfMonth } from 'date-fns'
 import { de } from 'date-fns/locale'
 import { DateRange } from '@leihs/calendar'
 import DateRangePicker from './DateRangePicker'
@@ -50,8 +50,8 @@ export function localized() {
 
 export function constraints() {
   const [selectedRange, setSelectedRange] = useState({
-    startDate: new Date('2021-07-07'),
-    endDate: new Date('2021-07-08')
+    startDate: new Date('2021-07-11'),
+    endDate: new Date('2021-07-17')
   })
 
   return (
@@ -59,14 +59,14 @@ export function constraints() {
       <h1>DateRangePicker - Constraints</h1>
       <p className="text-muted">In this example the following constraints are in place:</p>
       <ul className="text-muted">
-        <li>only dates between 7 and 25</li>
+        <li>only dates between 5 and 25</li>
         <li>14/15 can not be within the range </li>
         <li>10/11 can not be used as start dates </li>
         <li>17/18 can not be used as end dates </li>
+        <li>21 can not be in the range and also not be the startDate or endDate</li>
       </ul>
       <p className="text-muted">
-        If you enter invalid dates using the text inputs, the conflicts will be highlighted in the calendar (lighter
-        gray)
+        If you enter invalid dates using the text inputs, the conflicts will be highlighted in the calendar (red)
       </p>
       <DateRangePicker
         selectedRange={selectedRange}
@@ -74,9 +74,9 @@ export function constraints() {
         locale={de}
         minDate={new Date('2021-07-05')}
         maxDate={new Date('2021-07-25')}
-        disabledDates={[new Date('2021-07-14'), new Date('2021-07-15')]}
-        disabledStartDates={[new Date('2021-07-10'), new Date('2021-07-11')]}
-        disabledEndDates={[new Date('2021-07-17'), new Date('2021-07-18')]}
+        disabledDates={[new Date('2021-07-14'), new Date('2021-07-15'), new Date('2021-07-21')]}
+        disabledStartDates={[new Date('2021-07-10'), new Date('2021-07-11'), new Date('2021-07-21')]}
+        disabledEndDates={[new Date('2021-07-17'), new Date('2021-07-18'), new Date('2021-07-21')]}
       />
       {rangeDebugInfo(selectedRange)}
     </div>
@@ -86,15 +86,13 @@ export function constraints() {
 export function lazyLoading() {
   const now = new Date()
   const [selectedRange, setSelectedRange] = useState({ startDate: now, endDate: now })
+  const [shownDate, setShownDate] = useState(now)
   const [maxDateLoaded, setMaxDateLoaded] = useState(endOfMonth(now))
   const [loading, setLoading] = useState(false)
 
-  function getMaxDate(date) {
-    return endOfMonth(addMonths(date, 1))
-  }
-
-  async function simulateLoading(date) {
-    const newMax = getMaxDate(date)
+  async function handleShownDateChange(date) {
+    setShownDate(date)
+    const newMax = endOfMonth(date)
     if (newMax > maxDateLoaded) {
       setLoading(true)
       await new Promise(resolve => setTimeout(resolve, 1000))
@@ -106,7 +104,6 @@ export function lazyLoading() {
   return (
     <div>
       <h1>DateRangePicker - Lazy Loading</h1>
-      <p></p>
       <p className="text-muted">
         maxDateLoaded = {format(maxDateLoaded, 'P', { locale: de })} {loading && <span>...loading...</span>}
       </p>
@@ -114,9 +111,9 @@ export function lazyLoading() {
         selectedRange={selectedRange}
         onChange={setSelectedRange}
         locale={de}
-        onShownDateChange={simulateLoading}
+        shownDate={shownDate}
+        onShownDateChange={handleShownDateChange}
         maxDateLoaded={maxDateLoaded}
-        minDate={now}
       />
       {rangeDebugInfo(selectedRange)}
     </div>
