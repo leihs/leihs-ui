@@ -26,6 +26,7 @@ PageLayout.Header = function PageLayoutHeader({ preTitle, title, children, class
     </div>
   )
 }
+PageLayout.Header.displayName = 'PageLayout.Header'
 
 PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...restProps }) {
   return (
@@ -34,3 +35,4 @@ PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...rest
     </div>
   )
 }
+PageLayout.Metadata.displayName = 'PageLayout.Metadata'

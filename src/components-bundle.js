@@ -19,20 +19,22 @@ const Components = {
 
   AppLayout,
   // "fach komponenten"
-  ModelList: require('./components/MobileApp/ModelList').default,
-  ModelShow: require('./components/MobileApp/ModelShow').default,
-  ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
   CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
   FilterBubblePanelSwitcher: require('./components/MobileApp/TmpFilterBubblePanelSwitcher').default,
+  ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
+  ModelList: require('./components/MobileApp/ModelList').default,
+  ModelShow: require('./components/MobileApp/ModelShow').default,
 
   // "design komponenten"
   Design: {
-    PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
-    Section: require('./components/MobileApp/DesignComponents/Section').default,
+    FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
+    ListCard: require('./components/MobileApp/DesignComponents/ListCard').default,
     ModalDialog: require('./components/MobileApp/DesignComponents/ModalDialog').default,
     Navbar: require('./components/MobileApp/DesignComponents/Navbar').default,
-    FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
+    PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
+    ProgressInfo: require('./components/MobileApp/DesignComponents/ProgressInfo').default,
+    Section: require('./components/MobileApp/DesignComponents/Section').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
     Stack: require('./components/MobileApp/DesignComponents/Stack').default
   },
