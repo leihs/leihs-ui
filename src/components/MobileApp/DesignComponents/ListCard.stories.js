@@ -36,7 +36,7 @@ export const listCard = ({ onItemClick }) => {
         </li>
       </ul>
       <ListCard.Stack>
-        <ListCard onClick={onItemClick}>
+        <ListCard href="#fake-link-1">
           <ListCard.Title>Ibex</ListCard.Title>
           <ListCard.Body>
             The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild
@@ -44,7 +44,7 @@ export const listCard = ({ onItemClick }) => {
           </ListCard.Body>
           <ListCard.Foot className="very-small">{getFoot('Bovidae')}</ListCard.Foot>
         </ListCard>
-        <ListCard onClick={onItemClick} foot={getFoot('Sciuridae')}>
+        <ListCard href="#fake-link-2" foot={getFoot('Sciuridae')}>
           <ListCard.Title>Marmot</ListCard.Title>
           <ListCard.Body>
             Marmots are relatively large ground squirrels in the genus Marmota, with 15 species living in Asia, Europe,
@@ -52,7 +52,7 @@ export const listCard = ({ onItemClick }) => {
           </ListCard.Body>
           <ListCard.Foot className="very-small">{getFoot('Sciuridae')}</ListCard.Foot>
         </ListCard>
-        <ListCard onClick={onItemClick}>
+        <ListCard href="#fake-link-3">
           <ListCard.Title>Ptarmigan</ListCard.Title>
           <ListCard.Body>
             The rock ptarmigan (Lagopus muta) is a medium-sized game bird in the grouse family
@@ -78,6 +78,23 @@ export const minimalExample = () => {
     </div>
   )
 }
+
+export const with_onclick = () => {
+  return (
+    <div>
+      <h1>ListCard</h1>
+      <p className="text-muted">
+        Using <code>onClick</code> instead of <code>href</code> prop.
+      </p>
+      <ListCard.Stack>
+        <ListCard onClick={action('list-card-click-1')}>Ibex</ListCard>
+        <ListCard onClick={action('list-card-click-2')}>Marmot</ListCard>
+        <ListCard onClick={action('list-card-click-3')}>Ptarmigan</ListCard>
+      </ListCard.Stack>
+    </div>
+  )
+}
+with_onclick.storyName = 'Using onClick'
 
 export const edgeCases = () => {
   return (

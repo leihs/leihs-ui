@@ -23279,7 +23279,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
       className="page-inset-x-inverse my-3"
     />
     <div
-      className=""
+      className="position-relative ui-list-card"
     >
       <div
         className="mb-1 text-truncate"
@@ -23303,7 +23303,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
       className="page-inset-x-inverse my-3"
     />
     <div
-      className=""
+      className="position-relative ui-list-card"
       onClick={[Function]}
       style={
         Object {
@@ -23312,8 +23312,8 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
         }
       }
     >
-      <div
-        className="float-end text-end ps-5"
+      <a
+        className="float-end text-end ps-5 stretched-link"
         style={
           Object {
             "paddingBottom": "0.75rem",
@@ -23330,7 +23330,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
         >
           Item Arrow.svg
         </svg>
-      </div>
+      </a>
       Lorem ipsum
     </div>
     <hr
@@ -23396,8 +23396,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
       className="page-inset-x-inverse my-3"
     />
     <div
-      className=""
-      onClick={[Function]}
+      className="position-relative ui-list-card"
       style={
         Object {
           "cursor": "pointer",
@@ -23405,8 +23404,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
         }
       }
     >
-      <div
-        className="float-end text-end ps-5"
+      <a
+        className="float-end text-end ps-5 stretched-link"
+        href="#fake-link-1"
         style={
           Object {
             "paddingBottom": "0.75rem",
@@ -23423,7 +23423,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
         >
           Item Arrow.svg
         </svg>
-      </div>
+      </a>
       <div
         className="mb-1 text-truncate"
       >
@@ -23456,7 +23456,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
     className="mb-3"
   >
     <div
-      className=""
+      className="position-relative ui-list-card"
       foot={
         <span>
           <span
@@ -23468,7 +23468,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
           Sciuridae
         </span>
       }
-      onClick={[Function]}
       style={
         Object {
           "cursor": "pointer",
@@ -23476,8 +23475,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
         }
       }
     >
-      <div
-        className="float-end text-end ps-5"
+      <a
+        className="float-end text-end ps-5 stretched-link"
+        href="#fake-link-2"
         style={
           Object {
             "paddingBottom": "0.75rem",
@@ -23494,7 +23494,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
         >
           Item Arrow.svg
         </svg>
-      </div>
+      </a>
       <div
         className="mb-1 text-truncate"
       >
@@ -23527,8 +23527,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
     className="mb-3"
   >
     <div
-      className=""
-      onClick={[Function]}
+      className="position-relative ui-list-card"
       style={
         Object {
           "cursor": "pointer",
@@ -23536,8 +23535,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
         }
       }
     >
-      <div
-        className="float-end text-end ps-5"
+      <a
+        className="float-end text-end ps-5 stretched-link"
+        href="#fake-link-3"
         style={
           Object {
             "paddingBottom": "0.75rem",
@@ -23554,7 +23554,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
         >
           Item Arrow.svg
         </svg>
-      </div>
+      </a>
       <div
         className="mb-1 text-truncate"
       >
@@ -23603,7 +23603,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard M
       className="page-inset-x-inverse my-3"
     />
     <div
-      className=""
+      className="position-relative ui-list-card"
     >
       Ibex
     </div>
@@ -23615,7 +23615,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard M
     className="mb-3"
   >
     <div
-      className=""
+      className="position-relative ui-list-card"
     >
       Marmot
     </div>
@@ -23627,7 +23627,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard M
     className="mb-3"
   >
     <div
-      className=""
+      className="position-relative ui-list-card"
     >
       Ptarmigan
     </div>
@@ -23649,7 +23649,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard R
     Set arbitrary attributes with restProps
   </p>
   <div
-    className="border border-primary text-primary p-2"
+    className="position-relative border border-primary text-primary p-2 ui-list-card"
     onClick={[Function]}
     style={
       Object {
@@ -23658,8 +23658,8 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard R
       }
     }
   >
-    <div
-      className="float-end text-end ps-5"
+    <a
+      className="float-end text-end ps-5 stretched-link"
       style={
         Object {
           "paddingBottom": "0.75rem",
@@ -23676,7 +23676,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard R
       >
         Item Arrow.svg
       </svg>
-    </div>
+    </a>
     <div
       className="mb-1 text-truncate"
     >
@@ -23700,6 +23700,144 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard R
         Bovidae
       </span>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard Using onClick 1`] = `
+<div>
+  <h1>
+    ListCard
+  </h1>
+  <p
+    className="text-muted"
+  >
+    Using 
+    <code>
+      onClick
+    </code>
+     instead of 
+    <code>
+      href
+    </code>
+     prop.
+  </p>
+  <div
+    className="mb-3"
+  >
+    <hr
+      className="page-inset-x-inverse my-3"
+    />
+    <div
+      className="position-relative ui-list-card"
+      onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+          "minHeight": "2.5rem",
+        }
+      }
+    >
+      <a
+        className="float-end text-end ps-5 stretched-link"
+        style={
+          Object {
+            "paddingBottom": "0.75rem",
+            "paddingTop": "0.5rem",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Item Arrow.svg
+        </svg>
+      </a>
+      Ibex
+    </div>
+    <hr
+      className="page-inset-x-inverse my-3"
+    />
+  </div>
+  <div
+    className="mb-3"
+  >
+    <div
+      className="position-relative ui-list-card"
+      onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+          "minHeight": "2.5rem",
+        }
+      }
+    >
+      <a
+        className="float-end text-end ps-5 stretched-link"
+        style={
+          Object {
+            "paddingBottom": "0.75rem",
+            "paddingTop": "0.5rem",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Item Arrow.svg
+        </svg>
+      </a>
+      Marmot
+    </div>
+    <hr
+      className="page-inset-x-inverse my-3"
+    />
+  </div>
+  <div
+    className="mb-3"
+  >
+    <div
+      className="position-relative ui-list-card"
+      onClick={[Function]}
+      style={
+        Object {
+          "cursor": "pointer",
+          "minHeight": "2.5rem",
+        }
+      }
+    >
+      <a
+        className="float-end text-end ps-5 stretched-link"
+        style={
+          Object {
+            "paddingBottom": "0.75rem",
+            "paddingTop": "0.5rem",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Item Arrow.svg
+        </svg>
+      </a>
+      Ptarmigan
+    </div>
+    <hr
+      className="page-inset-x-inverse my-3"
+    />
   </div>
 </div>
 `;
@@ -38333,7 +38471,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
               className="page-inset-x-inverse my-3"
             />
             <div
-              className=""
+              className="position-relative ui-list-card"
             >
               <div
                 className="mb-1 text-truncate"
@@ -38397,7 +38535,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             className="mb-3"
           >
             <div
-              className=""
+              className="position-relative ui-list-card"
             >
               <div
                 className="mb-1 text-truncate"
@@ -38502,7 +38640,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
               className="page-inset-x-inverse my-3"
             />
             <div
-              className=""
+              className="position-relative ui-list-card"
               onClick={[Function]}
               style={
                 Object {
@@ -38511,8 +38649,8 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 }
               }
             >
-              <div
-                className="float-end text-end ps-5"
+              <a
+                className="float-end text-end ps-5 stretched-link"
                 style={
                   Object {
                     "paddingBottom": "0.75rem",
@@ -38529,7 +38667,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 >
                   Item Arrow.svg
                 </svg>
-              </div>
+              </a>
               <div
                 className="mb-1 text-truncate"
               >
@@ -38568,7 +38706,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             className="mb-3"
           >
             <div
-              className=""
+              className="position-relative ui-list-card"
               onClick={[Function]}
               style={
                 Object {
@@ -38577,8 +38715,8 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 }
               }
             >
-              <div
-                className="float-end text-end ps-5"
+              <a
+                className="float-end text-end ps-5 stretched-link"
                 style={
                   Object {
                     "paddingBottom": "0.75rem",
@@ -38595,7 +38733,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 >
                   Item Arrow.svg
                 </svg>
-              </div>
+              </a>
               <div
                 className="mb-1 text-truncate"
               >
@@ -38634,7 +38772,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             className="mb-3"
           >
             <div
-              className=""
+              className="position-relative ui-list-card"
               onClick={[Function]}
               style={
                 Object {
@@ -38643,8 +38781,8 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 }
               }
             >
-              <div
-                className="float-end text-end ps-5"
+              <a
+                className="float-end text-end ps-5 stretched-link"
                 style={
                   Object {
                     "paddingBottom": "0.75rem",
@@ -38661,7 +38799,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 >
                   Item Arrow.svg
                 </svg>
-              </div>
+              </a>
               <div
                 className="mb-1 text-truncate"
               >
@@ -39258,8 +39396,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
             />
             <div>
               <div
-                className=""
-                onClick={[Function]}
+                className="position-relative ui-list-card"
                 style={
                   Object {
                     "cursor": "pointer",
@@ -39267,8 +39404,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   }
                 }
               >
-                <div
-                  className="float-end text-end ps-5"
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="/rentals/98510838-a6ec-4752-823e-000000000001"
                   style={
                     Object {
                       "paddingBottom": "0.75rem",
@@ -39285,11 +39423,15 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   >
                     Item Arrow.svg
                   </svg>
-                </div>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Video Semesterprojekt
+                  <a
+                    href="/rentals/98510838-a6ec-4752-823e-000000000001"
+                  >
+                    Video Semesterprojekt
+                  </a>
                 </div>
                 <div
                   className="small"
@@ -39357,8 +39499,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
           >
             <div>
               <div
-                className=""
-                onClick={[Function]}
+                className="position-relative ui-list-card"
                 style={
                   Object {
                     "cursor": "pointer",
@@ -39366,8 +39507,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   }
                 }
               >
-                <div
-                  className="float-end text-end ps-5"
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="/rentals/98510838-a6ec-4752-823e-000000000002"
                   style={
                     Object {
                       "paddingBottom": "0.75rem",
@@ -39384,11 +39526,15 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   >
                     Item Arrow.svg
                   </svg>
-                </div>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Werkschau 2021
+                  <a
+                    href="/rentals/98510838-a6ec-4752-823e-000000000002"
+                  >
+                    Werkschau 2021
+                  </a>
                 </div>
                 <div
                   className="small"
@@ -39456,8 +39602,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
           >
             <div>
               <div
-                className=""
-                onClick={[Function]}
+                className="position-relative ui-list-card"
                 style={
                   Object {
                     "cursor": "pointer",
@@ -39465,8 +39610,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   }
                 }
               >
-                <div
-                  className="float-end text-end ps-5"
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="/rentals/98510838-a6ec-4752-823e-000000000003"
                   style={
                     Object {
                       "paddingBottom": "0.75rem",
@@ -39483,11 +39629,15 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   >
                     Item Arrow.svg
                   </svg>
-                </div>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Siebdruck Material
+                  <a
+                    href="/rentals/98510838-a6ec-4752-823e-000000000003"
+                  >
+                    Siebdruck Material
+                  </a>
                 </div>
                 <div
                   className="small"
@@ -39594,8 +39744,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
           >
             <div>
               <div
-                className=""
-                onClick={[Function]}
+                className="position-relative ui-list-card"
                 style={
                   Object {
                     "cursor": "pointer",
@@ -39603,8 +39752,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   }
                 }
               >
-                <div
-                  className="float-end text-end ps-5"
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="/rentals/98510838-a6ec-4752-823e-000000000004"
                   style={
                     Object {
                       "paddingBottom": "0.75rem",
@@ -39621,11 +39771,15 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   >
                     Item Arrow.svg
                   </svg>
-                </div>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Freitags Experiment
+                  <a
+                    href="/rentals/98510838-a6ec-4752-823e-000000000004"
+                  >
+                    Freitags Experiment
+                  </a>
                 </div>
                 <div
                   className="small"
@@ -39727,8 +39881,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
             />
             <div>
               <div
-                className=""
-                onClick={[Function]}
+                className="position-relative ui-list-card"
                 style={
                   Object {
                     "cursor": "pointer",
@@ -39736,8 +39889,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   }
                 }
               >
-                <div
-                  className="float-end text-end ps-5"
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="/rentals/98510838-a6ec-4752-823e-000000000005"
                   style={
                     Object {
                       "paddingBottom": "0.75rem",
@@ -39754,11 +39908,15 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   >
                     Item Arrow.svg
                   </svg>
-                </div>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Diplomausstellung 2019
+                  <a
+                    href="/rentals/98510838-a6ec-4752-823e-000000000005"
+                  >
+                    Diplomausstellung 2019
+                  </a>
                 </div>
                 <div
                   className="small"
@@ -39800,8 +39958,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
           >
             <div>
               <div
-                className=""
-                onClick={[Function]}
+                className="position-relative ui-list-card"
                 style={
                   Object {
                     "cursor": "pointer",
@@ -39809,8 +39966,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   }
                 }
               >
-                <div
-                  className="float-end text-end ps-5"
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="/rentals/98510838-a6ec-4752-823e-000000000006"
                   style={
                     Object {
                       "paddingBottom": "0.75rem",
@@ -39827,11 +39985,15 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   >
                     Item Arrow.svg
                   </svg>
-                </div>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Semesterfest
+                  <a
+                    href="/rentals/98510838-a6ec-4752-823e-000000000006"
+                  >
+                    Semesterfest
+                  </a>
                 </div>
                 <div
                   className="small"
@@ -39873,8 +40035,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
           >
             <div>
               <div
-                className=""
-                onClick={[Function]}
+                className="position-relative ui-list-card"
                 style={
                   Object {
                     "cursor": "pointer",
@@ -39882,8 +40043,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   }
                 }
               >
-                <div
-                  className="float-end text-end ps-5"
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="/rentals/98510838-a6ec-4752-823e-000000000007"
                   style={
                     Object {
                       "paddingBottom": "0.75rem",
@@ -39900,11 +40062,15 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   >
                     Item Arrow.svg
                   </svg>
-                </div>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Kurs Präsentation
+                  <a
+                    href="/rentals/98510838-a6ec-4752-823e-000000000007"
+                  >
+                    Kurs Präsentation
+                  </a>
                 </div>
                 <div
                   className="small"
@@ -40621,7 +40787,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
               className="page-inset-x-inverse my-3"
             />
             <div
-              className=""
+              className="position-relative ui-list-card"
               onClick={[Function]}
               style={
                 Object {
@@ -40630,8 +40796,8 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 }
               }
             >
-              <div
-                className="float-end text-end ps-5"
+              <a
+                className="float-end text-end ps-5 stretched-link"
                 style={
                   Object {
                     "paddingBottom": "0.75rem",
@@ -40648,7 +40814,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 >
                   Item Arrow.svg
                 </svg>
-              </div>
+              </a>
               <div
                 className="mb-1 text-truncate"
               >
@@ -40687,7 +40853,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
             className="mb-3"
           >
             <div
-              className=""
+              className="position-relative ui-list-card"
               onClick={[Function]}
               style={
                 Object {
@@ -40696,8 +40862,8 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 }
               }
             >
-              <div
-                className="float-end text-end ps-5"
+              <a
+                className="float-end text-end ps-5 stretched-link"
                 style={
                   Object {
                     "paddingBottom": "0.75rem",
@@ -40714,7 +40880,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 >
                   Item Arrow.svg
                 </svg>
-              </div>
+              </a>
               <div
                 className="mb-1 text-truncate"
               >
@@ -40753,7 +40919,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
             className="mb-3"
           >
             <div
-              className=""
+              className="position-relative ui-list-card"
               onClick={[Function]}
               style={
                 Object {
@@ -40762,8 +40928,8 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 }
               }
             >
-              <div
-                className="float-end text-end ps-5"
+              <a
+                className="float-end text-end ps-5 stretched-link"
                 style={
                   Object {
                     "paddingBottom": "0.75rem",
@@ -40780,7 +40946,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 >
                   Item Arrow.svg
                 </svg>
-              </div>
+              </a>
               <div
                 className="mb-1 text-truncate"
               >
@@ -41361,7 +41527,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
               className="page-inset-x-inverse my-3"
             />
             <div
-              className=""
+              className="position-relative ui-list-card"
             >
               <div
                 className="mb-1 text-truncate"
@@ -41382,7 +41548,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
             className="mb-3"
           >
             <div
-              className=""
+              className="position-relative ui-list-card"
             >
               <div
                 className="mb-1 text-truncate"
@@ -41621,7 +41787,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
               className="page-inset-x-inverse my-3"
             />
             <div
-              className=""
+              className="position-relative ui-list-card"
             >
               <div
                 className="mb-1 text-truncate"
@@ -41656,7 +41822,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
             className="mb-3"
           >
             <div
-              className=""
+              className="position-relative ui-list-card"
             >
               <div
                 className="mb-1 text-truncate"

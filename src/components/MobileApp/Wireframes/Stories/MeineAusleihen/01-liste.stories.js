@@ -1,5 +1,4 @@
 import React from 'react'
-import { action } from '@storybook/addon-actions'
 import FilterButton from '../../../DesignComponents/FilterButton'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
 import PageLayout from '../../../DesignComponents/PageLayout'
@@ -13,7 +12,7 @@ export default {
   parameters: { layout: 'fullscreen' }
 }
 
-export const liste = ({ ordersByBasicState, onItemClick }) => {
+export const liste = ({ ordersByBasicState }) => {
   return (
     <PageLayoutMock>
       <PageLayout.Header title="Meine Ausleihen">
@@ -26,11 +25,14 @@ export const liste = ({ ordersByBasicState, onItemClick }) => {
           return (
             <Section key={key} title={label} collapsible>
               <ListCard.Stack>
-                {orders.map((order, i) => {
+                {orders.map(order => {
+                  const orderLink = `/rentals/${order.id}`
                   return (
                     <div key={order.id}>
-                      <ListCard onClick={() => onItemClick(order)}>
-                        <ListCard.Title>{order.title}</ListCard.Title>
+                      <ListCard href={orderLink}>
+                        <ListCard.Title>
+                          <a href={orderLink}>{order.title}</a>
+                        </ListCard.Title>
                         <ListCard.Body>
                           {order.durationDays} Tage{' '}
                           {order.isCompleted ? `bis ${order.endDate}` : `ab ${order.startDate}`}, {order.modelCount}{' '}
@@ -193,6 +195,5 @@ const ordersByBasicState = [
 ]
 
 liste.args = {
-  ordersByBasicState,
-  onItemClick: action('item-click')
+  ordersByBasicState
 }

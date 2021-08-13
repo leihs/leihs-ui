@@ -3,15 +3,35 @@ import cx from 'classnames'
 import Icon, { iconItemArrow } from './Icons'
 import Stack from './Stack'
 
-export default function ListCard({ onClick, children, className, style, ...restProps }) {
-  const clickable = !!onClick
-  const styleAttr = clickable ? { ...style, minHeight: '2.5rem', cursor: 'pointer' } : style
+const BASE_CLASS = 'ui-list-card'
+
+export default function ListCard({ onClick, href, children, className, style, ...restProps }) {
+  const clickable = !!(onClick || href)
+  // NOTE: .position-relative is needed on outer card so that .streched-link will work correctly
+  const wrapperClass = cx('position-relative', className, BASE_CLASS)
+  const styleAttr = clickable
+    ? {
+        minHeight: '2.5rem',
+        cursor: 'pointer',
+        ...style
+      }
+    : style
+
   return (
-    <div className={cx(className)} onClick={onClick} style={styleAttr} {...restProps}>
+    <div className={wrapperClass} onClick={onClick} style={styleAttr} {...restProps}>
       {clickable && (
-        <div className="float-end text-end ps-5" style={{ paddingTop: '0.5rem', paddingBottom: '0.75rem' }}>
+        <a
+          href={href}
+          className={cx('float-end text-end ps-5', {
+            'stretched-link': clickable
+          })}
+          style={{
+            paddingTop: '0.5rem',
+            paddingBottom: '0.75rem'
+          }}
+        >
           <Icon icon={iconItemArrow} />
-        </div>
+        </a>
       )}
       {children}
     </div>
