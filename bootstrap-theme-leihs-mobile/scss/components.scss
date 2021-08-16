@@ -5,13 +5,13 @@
 /* Component: CartBadge (circle indicating the number of items in the shopping cart) */
 
 .cart-badge {
-  display: inline-block;
-  background-color: rgb(68, 68, 68);
+  background-color: $body-color;
   color: white;
-  min-width: 1.25em;
-  height: 1.25em;
-  padding: 0.05em 0.25em;
-  border-radius: 1em;
+  font-size: 14px;
+  border-radius: 19px;
+  min-width: 19px;
+  height: 19px;
+  padding: 0.5px 5px 0 5px;
   text-align: center;
 }
 

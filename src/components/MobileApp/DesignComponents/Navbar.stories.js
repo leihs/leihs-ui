@@ -42,21 +42,21 @@ export const moreExamples = () => {
     <div>
       <h1>Navbar</h1>
       <p className="text-muted">Unbound</p>
-      <p>
+      <div className="mb-3">
         <Navbar />
-      </p>
+      </div>
       <p className="text-muted">RestProps</p>
-      <p>
+      <div className="mb-3">
         <Navbar brandName="Leihs" className="border border-primary" />
-      </p>
+      </div>
       <p className="text-muted">Props for the hamburger</p>
-      <p>
+      <div className="mb-3">
         <Navbar brandName="Leihs" menuItem={{ className: 'border border-primary' }} />
-      </p>
+      </div>
       <p className="text-muted">Props for the brand name</p>
-      <p>
+      <div className="mb-3">
         <Navbar brandName="Leihs" brandItem={{ className: 'border border-primary' }} />
-      </p>
+      </div>
     </div>
   )
 }
