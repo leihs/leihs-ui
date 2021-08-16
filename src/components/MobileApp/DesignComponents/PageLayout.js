@@ -5,7 +5,9 @@ export default function PageLayout({ children, navbar, className, ...restProps }
   return (
     <div className={className} {...restProps}>
       {navbar}
-      <div className="page-inset-x py-4">{children}</div>
+      <div className="page-inset-x py-4 container-fluid" style={{ maxWidth: '720px' }}>
+        {children}
+      </div>
     </div>
   )
 }
