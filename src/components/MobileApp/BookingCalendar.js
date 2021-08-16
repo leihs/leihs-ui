@@ -110,7 +110,7 @@ export const BookingCalendar = ({
     }
   }
   return (
-    <form onSubmit={submit} noValidate className={hasUserInteracted ? 'was-validated' : ''}>
+    <form onSubmit={submit} noValidate className={hasUserInteracted ? 'was-validated' : ''} autoComplete="off">
       <DialogLayout title="Gegenstand hinzufügen" className="ui-booking-calendar">
         <DialogLayout.Body>
           <Stack space="4">

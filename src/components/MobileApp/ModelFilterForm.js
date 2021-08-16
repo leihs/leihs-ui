@@ -74,6 +74,7 @@ const ModelFilterForm = ({
           onSubmit(queryArgs())
         }}
         className="form form-compact"
+        autoComplete="off"
       >
         <div>
           <label className="row">

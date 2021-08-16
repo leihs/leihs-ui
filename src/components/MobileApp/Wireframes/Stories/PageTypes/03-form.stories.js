@@ -27,7 +27,7 @@ export const form = ({ onSubmit }) => {
 
   return (
     <DialogLayout title="Form">
-      <form onSubmit={submit} noValidate className={cx({ 'was-validated': wasSubmitted })}>
+      <form onSubmit={submit} noValidate className={cx({ 'was-validated': wasSubmitted })} autoComplete="off">
         <DialogLayout.Body>
           <Stack space="4">
             <Section collapsible title="Search term">

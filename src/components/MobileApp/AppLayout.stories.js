@@ -19,7 +19,7 @@ function FakeCategoryList({ list }) {
 
 const fakeSearchForm = (
   <div className="px-3 py-4 bg-light Xbg-content-muted mt-2 mb-3">
-    <form action="/search" className="form form-compact">
+    <form action="/search" className="form form-compact" autoComplete="off">
       <div>
         <label className="row">
           <span className="text-xs col-3 col-form-label">Suche </span>
