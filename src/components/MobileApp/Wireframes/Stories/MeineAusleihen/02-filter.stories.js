@@ -5,7 +5,10 @@ import OrderFilterForm from '../../Components/OrderFilterForm'
 export default {
   title: 'MobileApp/Wireframes/Meine Ausleihen/Filter',
   component: OrderFilterForm,
-  parameters: { layout: 'fullscreen' },
+  parameters: {
+    layout: 'fullscreen',
+    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+  },
   args: {
     onSubmit: action('submit'),
     onClear: action('clear')

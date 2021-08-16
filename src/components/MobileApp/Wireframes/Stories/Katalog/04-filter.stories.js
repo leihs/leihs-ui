@@ -5,7 +5,10 @@ import ModelFilterForm from '../../Components/ModelFilterForm'
 export default {
   title: 'MobileApp/Wireframes/Katalog/Filter',
   component: ModelFilterForm,
-  parameters: { layout: 'fullscreen' },
+  parameters: {
+    layout: 'fullscreen',
+    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+  },
   args: {
     onSubmit: action('get-results'),
     onClear: action('clear')

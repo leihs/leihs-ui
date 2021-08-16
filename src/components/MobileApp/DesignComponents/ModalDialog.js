@@ -13,18 +13,10 @@ export default function ModalDialog({
   title,
   children,
   onClose,
-  actionMenu,
-  actions,
   shown = false,
   closeOnBackgroundClick = false,
   ...restProps
 }) {
-  if (actionMenu && actions) {
-    throw new Error('props `action` and `actionMenu` can not be given at the same time!')
-  } else if (actions) {
-    actionMenu = makeActionMenuFrom(actions)
-  }
-
   const baseId = id ? id : `Modal-${String(Math.random()).slice(2)}`
   // NOTE: we could use `aria-label` instead but it does not work yet <https://github.com/react-bootstrap/react-bootstrap/issues/5953>
   const labelId = baseId + '-Label'
@@ -41,18 +33,38 @@ export default function ModalDialog({
       aria-labelledby={labelId}
       {...restProps}
     >
-      <Modal.Header closeButton={false} className="bg-light-shade border-bottom">
+      <Modal.Header closeButton={false} className="bg-light-shade border-bottom page-inset-x">
         <Modal.Title id={labelId} as="div" className="m-auto fs-2 fw-bold">
           {title}
         </Modal.Title>
       </Modal.Header>
 
-      <Modal.Body>{children}</Modal.Body>
-
-      <Modal.Footer className={cx('bg-light-shade border-top-0', 'd-flex justify-content-between')}>
-        {actionMenu}
-      </Modal.Footer>
+      {children}
     </Modal>
+  )
+}
+
+ModalDialog.Body = function ModalDialogBody({ children, className, ...restProps }) {
+  return (
+    <Modal.Body className={cx('page-inset-x py-4', className)} {...restProps}>
+      {children}
+    </Modal.Body>
+  )
+}
+
+ModalDialog.Footer = function ModalDialogFooter({ children, actions, className, ...restProps }) {
+  if (children && actions) {
+    throw new Error('props `actions` and `actionMenu` can not be given at the same time!')
+  } else if (actions) {
+    children = makeActionMenuFrom(actions)
+  }
+  return (
+    <Modal.Footer
+      className={cx('bg-light-shade border-top-0', 'd-flex justify-content-between', 'page-inset-x py-3', className)}
+      {...restProps}
+    >
+      {children}
+    </Modal.Footer>
   )
 }
 
@@ -63,10 +75,23 @@ ModalDialog.propTypes = {
   children: PropTypes.node.isRequired,
   /* is called when the dialog is closed */
   onClose: PropTypes.func,
+  shown: PropTypes.bool,
+  closeOnBackgroundClick: PropTypes.bool,
+  restProps: PropTypes.object
+}
+
+ModalDialog.Body.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
+  restProps: PropTypes.object
+}
+
+ModalDialog.Footer.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node,
   actionMenu: PropTypes.node,
   actions: PropTypes.object,
-  shown: PropTypes.bool,
-  closeOnBackgroundClick: PropTypes.bool
+  restProps: PropTypes.object
 }
 
 function makeActionMenuFrom(actions) {

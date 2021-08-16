@@ -15,12 +15,11 @@ import {
   eachDayOfInterval
 } from 'date-fns'
 import { de } from 'date-fns/locale'
-import DialogLayout from './DesignComponents/DialogLayout'
+import ModalDialog from './DesignComponents/ModalDialog'
 import Section from './DesignComponents/Section'
 import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
 import Stack from './DesignComponents/Stack'
-import FormButtonGroup from './DesignComponents/FormButtonGroup'
 import Warning from './DesignComponents/Warning'
 
 const noop = () => {}
@@ -110,9 +109,15 @@ export const BookingCalendar = ({
     }
   }
   return (
-    <form onSubmit={submit} noValidate className={hasUserInteracted ? 'was-validated' : ''} autoComplete="off">
-      <DialogLayout title="Gegenstand hinzufügen" className="ui-booking-calendar">
-        <DialogLayout.Body>
+    <ModalDialog title="Gegenstand hinzufügen" className="ui-booking-calendar" shown>
+      <ModalDialog.Body>
+        <form
+          onSubmit={submit}
+          noValidate
+          className={hasUserInteracted ? 'was-validated' : ''}
+          autoComplete="off"
+          id="order-dialog-form"
+        >
           <Stack space="4">
             <Section>{modelData.name}</Section>
             <Section title="Anzahl" collapsible>
@@ -158,19 +163,17 @@ export const BookingCalendar = ({
               {hasUserInteracted && validationError && <Warning>{validationError}</Warning>}
             </Section>
           </Stack>
-        </DialogLayout.Body>
-        <DialogLayout.Foot>
-          <FormButtonGroup>
-            <button type="button" className="btn btn-secondary" onClick={cancel}>
-              Abbrechen
-            </button>
-            <button type="submit" className="btn btn-primary" disabled={!isValidForm}>
-              Hinzufügen
-            </button>
-          </FormButtonGroup>
-        </DialogLayout.Foot>
-      </DialogLayout>
-    </form>
+        </form>
+      </ModalDialog.Body>
+      <ModalDialog.Footer>
+        <button type="button" className="btn btn-secondary" onClick={cancel} form="order-dialog-form">
+          Abbrechen
+        </button>
+        <button type="submit" className="btn btn-primary" disabled={!isValidForm} form="order-dialog-form">
+          Hinzufügen
+        </button>
+      </ModalDialog.Footer>
+    </ModalDialog>
   )
 }
 

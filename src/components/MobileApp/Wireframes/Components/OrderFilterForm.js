@@ -2,9 +2,8 @@ import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import Section from '../../DesignComponents/Section'
 import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
-import DialogLayout from '../../DesignComponents/DialogLayout'
+import ModalDialog from '../../DesignComponents/ModalDialog'
 import Stack from '../../DesignComponents/Stack'
-import FormButtonGroup from '../../DesignComponents/FormButtonGroup'
 import LabelInside from '../../DesignComponents/LabelInside'
 
 const DEFAULT_TERM = ''
@@ -72,9 +71,9 @@ const OrderFilterForm = ({
   }
 
   return (
-    <DialogLayout title="Meine Ausleihen filtern">
-      <form action="/search" onSubmit={submit} autoComplete="off">
-        <DialogLayout.Body>
+    <ModalDialog title="Meine Ausleihen filtern" shown>
+      <ModalDialog.Body>
+        <form action="/search" onSubmit={submit} autoComplete="off" id="order-filter-form">
           <Stack space="4">
             {delegations && (
               <Section title="Delegation" collapsible>
@@ -185,19 +184,17 @@ const OrderFilterForm = ({
               </select>
             </Section>
           </Stack>
-        </DialogLayout.Body>
-        <DialogLayout.Foot>
-          <FormButtonGroup>
-            <button type="button" onClick={clear} className="btn btn-secondary">
-              Zurücksetzen
-            </button>
-            <button type="submit" onClick={submit} className="btn btn-primary">
-              Auswählen
-            </button>
-          </FormButtonGroup>
-        </DialogLayout.Foot>
-      </form>
-    </DialogLayout>
+        </form>
+      </ModalDialog.Body>
+      <ModalDialog.Footer>
+        <button type="button" onClick={clear} className="btn btn-secondary" form="order-filter-form">
+          Zurücksetzen
+        </button>
+        <button type="submit" onClick={submit} className="btn btn-primary" form="order-filter-form">
+          Auswählen
+        </button>
+      </ModalDialog.Footer>
+    </ModalDialog>
   )
 }
 

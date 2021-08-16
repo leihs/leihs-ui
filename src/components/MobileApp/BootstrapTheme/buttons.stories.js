@@ -29,11 +29,8 @@ export const buttons = () => {
         >
           ActionButtonGroup
         </button>{' '}
-        <button
-          className="btn btn-light btn-sm"
-          onClick={linkTo('MobileApp/Design Components/Form Controls/FormButtonGroup')}
-        >
-          FormButtonGroup
+        <button className="btn btn-light btn-sm" onClick={linkTo('MobileApp/Design Components/Layout/ModalDialog')}>
+          ModalDialog
         </button>
       </p>
     </>

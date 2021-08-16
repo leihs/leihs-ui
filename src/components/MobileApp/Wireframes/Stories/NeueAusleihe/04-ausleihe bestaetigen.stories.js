@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
 
-import DialogLayout from '../../../DesignComponents/DialogLayout'
-import FormButtonGroup from '../../../DesignComponents/FormButtonGroup'
+import ModalDialog from '../../../DesignComponents/ModalDialog'
 import Stack from '../../../DesignComponents/Stack'
 import Section from '../../../DesignComponents/Section'
 import Textarea from '../../../DesignComponents/Textarea'
 
 export default {
   title: 'MobileApp/Wireframes/Neue Ausleihe/Ausleihe bestätigen',
-  parameters: { layout: 'fullscreen' },
+  parameters: {
+    layout: 'fullscreen',
+    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+  },
   argTypes: {
     onSubmit: { action: 'submit' },
     onCancel: { action: 'cancel' }
@@ -75,9 +77,15 @@ export const ausleiheBestaetigen = ({
     }
   }
   return (
-    <DialogLayout title="Neue Ausleihe bestätigen">
-      <form onSubmit={submit} noValidate autoComplete="off" className={cx({ 'was-validated': formValidated })}>
-        <DialogLayout.Body>
+    <ModalDialog title="Neue Ausleihe bestätigen" shown>
+      <ModalDialog.Body>
+        <form
+          onSubmit={submit}
+          noValidate
+          autoComplete="off"
+          className={cx({ 'was-validated': formValidated })}
+          id="the-form"
+        >
           <Stack space="4">
             <Section title="Titel" collapsible className={cx({ 'was-validated': titleValidated })}>
               <label htmlFor="title" className="visually-hidden">
@@ -133,19 +141,17 @@ export const ausleiheBestaetigen = ({
               </select>
             </Section>
           </Stack>
-        </DialogLayout.Body>
-        <DialogLayout.Foot>
-          <FormButtonGroup>
-            <button type="button" className="btn btn-secondary" onClick={onCancel}>
-              Abbrechen
-            </button>
-            <button type="submit" className="btn btn-primary">
-              Bestätigen
-            </button>
-          </FormButtonGroup>
-        </DialogLayout.Foot>
-      </form>
-    </DialogLayout>
+        </form>
+      </ModalDialog.Body>
+      <ModalDialog.Footer>
+        <button type="button" className="btn btn-secondary" onClick={onCancel} form="the-form">
+          Abbrechen
+        </button>
+        <button type="submit" className="btn btn-primary" form="the-form">
+          Bestätigen
+        </button>
+      </ModalDialog.Footer>
+    </ModalDialog>
   )
 }
 

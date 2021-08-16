@@ -4,9 +4,8 @@ import f from 'lodash'
 import Section from '../../DesignComponents/Section'
 import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
 import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
-import DialogLayout from '../../DesignComponents/DialogLayout'
+import ModalDialog from '../../DesignComponents/ModalDialog'
 import Stack from '../../DesignComponents/Stack'
-import FormButtonGroup from '../../DesignComponents/FormButtonGroup'
 import LabelInside from '../../DesignComponents/LabelInside'
 
 const DEFAULT_TERM = ''
@@ -65,9 +64,9 @@ const ModelFilterForm = ({
   }
 
   return (
-    <DialogLayout title="Katalog filtern">
-      <form onSubmit={submit} noValidate autoComplete="off">
-        <DialogLayout.Body>
+    <ModalDialog title="Katalog filtern" shown>
+      <ModalDialog.Body>
+        <form onSubmit={submit} noValidate autoComplete="off" id="model-filter-form">
           <Stack space="4">
             {delegations && (
               <Section title="Delegation" collapsible defaultCollapsed={!initialShowDelegation}>
@@ -166,19 +165,17 @@ const ModelFilterForm = ({
               </div>
             </Section>
           </Stack>
-        </DialogLayout.Body>
-        <DialogLayout.Foot>
-          <FormButtonGroup>
-            <button type="button" onClick={clear} className="btn btn-secondary">
-              Zurücksetzen
-            </button>
-            <button type="submit" className="btn btn-primary">
-              Auswählen
-            </button>
-          </FormButtonGroup>
-        </DialogLayout.Foot>
-      </form>
-    </DialogLayout>
+        </form>
+      </ModalDialog.Body>
+      <ModalDialog.Footer>
+        <button type="button" onClick={clear} className="btn btn-secondary" form="model-filter-form">
+          Zurücksetzen
+        </button>
+        <button type="submit" className="btn btn-primary" form="model-filter-form">
+          Auswählen
+        </button>
+      </ModalDialog.Footer>
+    </ModalDialog>
   )
 }
 

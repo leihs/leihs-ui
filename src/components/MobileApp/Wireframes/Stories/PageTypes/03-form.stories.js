@@ -1,15 +1,17 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
-import DialogLayout from '../../../DesignComponents/DialogLayout'
+import ModalDialog from '../../../DesignComponents/ModalDialog'
 import Stack from '../../../DesignComponents/Stack'
 import Section from '../../../DesignComponents/Section'
-import FormButtonGroup from '../../../DesignComponents/FormButtonGroup'
 import LabelInside from '../../../DesignComponents/LabelInside'
 import InputWithClearButton from '../../../DesignComponents/InputWithClearButton'
 
 export default {
   title: 'MobileApp/Wireframes/Page Typology/Form',
-  parameters: { layout: 'fullscreen' },
+  parameters: {
+    layout: 'fullscreen',
+    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+  },
   argTypes: { onSubmit: { action: 'submit' } }
 }
 
@@ -26,9 +28,15 @@ export const form = ({ onSubmit }) => {
   }
 
   return (
-    <DialogLayout title="Form">
-      <form onSubmit={submit} noValidate className={cx({ 'was-validated': wasSubmitted })} autoComplete="off">
-        <DialogLayout.Body>
+    <ModalDialog title="Form" shown>
+      <ModalDialog.Body>
+        <form
+          onSubmit={submit}
+          noValidate
+          className={cx({ 'was-validated': wasSubmitted })}
+          autoComplete="off"
+          id="the-form"
+        >
           <Stack space="4">
             <Section collapsible title="Search term">
               <label htmlFor="field-1" className="visually-hidden">
@@ -78,18 +86,16 @@ export const form = ({ onSubmit }) => {
               </fieldset>
             </Section>
           </Stack>
-        </DialogLayout.Body>
-        <DialogLayout.Foot>
-          <FormButtonGroup>
-            <button type="cancel" className="btn btn-secondary">
-              Cancel
-            </button>
-            <button type="submit" className="btn btn-primary">
-              Save
-            </button>
-          </FormButtonGroup>
-        </DialogLayout.Foot>
-      </form>
-    </DialogLayout>
+        </form>
+      </ModalDialog.Body>
+      <ModalDialog.Footer>
+        <button type="cancel" className="btn btn-secondary" form="the-form">
+          Cancel
+        </button>
+        <button type="submit" className="btn btn-primary" form="the-form">
+          Save
+        </button>
+      </ModalDialog.Footer>
+    </ModalDialog>
   )
 }

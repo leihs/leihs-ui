@@ -1,15 +1,17 @@
 import React from 'react'
 import { withLinks } from '@storybook/addon-links'
 
-import DialogLayout from '../../../DesignComponents/DialogLayout'
+import ModalDialog from '../../../DesignComponents/ModalDialog'
 import Stack from '../../../DesignComponents/Stack'
 import Section from '../../../DesignComponents/Section'
 import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
-import FormButtonGroup from '../../../DesignComponents/FormButtonGroup'
 
 export default {
   title: 'MobileApp/Wireframes/Neue Ausleihe/Gegenstand bearbeiten',
-  parameters: { layout: 'fullscreen' },
+  parameters: {
+    layout: 'fullscreen',
+    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+  },
   argTypes: {
     onSubmit: { action: 'submit' },
     onCancel: { action: 'cancel' },
@@ -23,9 +25,9 @@ export default {
 
 export const gegenstandBearbeiten = ({ modelData, onSubmit, onCancel, onRemoveClick }) => {
   return (
-    <DialogLayout title="Gegenstand bearbeiten">
-      <form onSubmit={onSubmit} noValidate autoComplete="off">
-        <DialogLayout.Body>
+    <ModalDialog title="Gegenstand bearbeiten" shown>
+      <ModalDialog.Body>
+        <form onSubmit={onSubmit} noValidate autoComplete="off" id="the-form">
           <Stack space="4">
             <Section title="Gegenstand" collapsible>
               {modelData.name}
@@ -46,19 +48,17 @@ export const gegenstandBearbeiten = ({ modelData, onSubmit, onCancel, onRemoveCl
               Gegenstand entfernen
             </button>
           </ActionButtonGroup>
-        </DialogLayout.Body>
-        <DialogLayout.Foot>
-          <FormButtonGroup>
-            <button type="button" className="btn btn-secondary" onClick={onCancel}>
-              Abbrechen
-            </button>
-            <button type="submit" className="btn btn-primary">
-              Bestätigen
-            </button>
-          </FormButtonGroup>
-        </DialogLayout.Foot>
-      </form>
-    </DialogLayout>
+        </form>
+      </ModalDialog.Body>
+      <ModalDialog.Footer>
+        <button type="button" className="btn btn-secondary" onClick={onCancel} form="the-form">
+          Abbrechen
+        </button>
+        <button type="submit" className="btn btn-primary" form="the-form">
+          Bestätigen
+        </button>
+      </ModalDialog.Footer>
+    </ModalDialog>
   )
 }
 
