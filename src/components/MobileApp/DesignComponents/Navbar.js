@@ -32,8 +32,8 @@ export default function Navbar({
       <div className="navbar-nav">
         <a href="/app/borrow/order" className="nav-item nav-link position-relative">
           {showCartCounter && (
-            <div className="cart-badge position-absolute small" style={{ top: '8%', right: '-30%' }}>
-              {cartItemCount || '0'}
+            <div className="cart-badge position-absolute" style={{ top: '4px', right: '-8px' }}>
+              <span>{cartItemCount || '0'}</span>
             </div>
           )}
           <Icon icon={iconBag} />
