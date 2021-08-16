@@ -30,7 +30,7 @@ PageLayout.Header.displayName = 'PageLayout.Header'
 
 PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...restProps }) {
   return (
-    <div className={cx('text-center text-black-50 fw-light', className)} {...restProps}>
+    <div className={cx('text-center text-black-50 fw-light pt-4', className)} {...restProps}>
       {children}
     </div>
   )

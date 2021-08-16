@@ -15,24 +15,28 @@ export const stack = () => {
     <div>
       <h1>Stack</h1>
       <p className="text-muted">Structures content vertically by space and/or dividers.</p>
-      <p className="text-muted">Space can be number from 1 to 5 and is rendered as margin-bottom on each element.</p>
       <p className="text-muted">
         <button className="btn btn-light btn-sm" onClick={linkTo('MobileApp/Bootstrap Theme/Spacing')}>
           See also: Theme/Spacing
         </button>
       </p>
       <p className="text-muted">Example with space 4 (typically used with form fields):</p>
-      <Stack space="4">
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-      </Stack>
+      <div className="bg-secondary mb-3">
+        <Stack space="4">
+          <div className="bg-body">{lorem}</div>
+          <div className="bg-body">{lorem}</div>
+          <div className="bg-body">{lorem}</div>
+        </Stack>
+      </div>
       <p className="text-muted">Example with space 5 (typically used with sections in detail or index views):</p>
-      <Stack space="5">
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-        <div>{lorem}</div>
-      </Stack>
+      <div className="bg-secondary mb-4">
+        <Stack space="5">
+          <div className="bg-body">{lorem}</div>
+          <div className="bg-body">{lorem}</div>
+          <div className="bg-body">{lorem}</div>
+        </Stack>
+      </div>
+      <p className="text-muted">(Note: the gray background is only for clarification)</p>
     </div>
   )
 }

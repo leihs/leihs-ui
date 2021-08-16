@@ -1,6 +1,5 @@
 import React from 'react'
 import ProgressInfo from './ProgressInfo'
-import Stack from './Stack'
 
 export default {
   title: 'MobileApp/Design Components/Content/ProgressInfo',
@@ -23,7 +22,7 @@ export const options = () => {
     <div>
       <h1>ProgressInfo</h1>
       <p className="text-muted">Smaller font size (typically used in list items):</p>
-      <Stack space="3" className="mx-3">
+      <div className="d-flex flex-column gap-3 mb-4">
         <ProgressInfo
           title="Download in progress (small)"
           info="33% done"
@@ -32,9 +31,9 @@ export const options = () => {
           small={true}
         />
         <ProgressInfo title="Download in progress (normal)" info="33% done" totalCount="100" doneCount="33" />
-      </Stack>
+      </div>
       <p className="text-muted">Combinations:</p>
-      <Stack space="3" className="mx-3">
+      <div className="d-flex flex-column gap-3 mb-4">
         <ProgressInfo title="Download in progress" totalCount="100" doneCount="33" />
         <ProgressInfo info="33% of download done" totalCount="100" doneCount="33" />
         <ProgressInfo totalCount="100" doneCount="33" />
@@ -46,9 +45,9 @@ export const options = () => {
             </>
           }
         />
-      </Stack>
-      <p className="text-muted">Set arbitrary attributes with restProps</p>
-      <Stack space="3" className="mx-3">
+      </div>
+      <p className="text-muted">Set arbitrary attributes with restProps:</p>
+      <div className="d-flex flex-column gap-3 mb-4">
         <ProgressInfo
           title="Download in progress"
           info="66% done"
@@ -56,7 +55,7 @@ export const options = () => {
           doneCount="66"
           className="text-primary"
         />
-      </Stack>
+      </div>
     </div>
   )
 }
