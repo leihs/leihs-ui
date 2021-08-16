@@ -130,7 +130,7 @@ const ModelFilterForm = ({
                 <input
                   type="checkbox"
                   name="only-available"
-                  checked={availableBetween}
+                  checked={!!availableBetween}
                   onChange={e => setAvailableBetween(prevBool => !prevBool)}
                   className="form-check-input"
                 />
@@ -151,7 +151,7 @@ const ModelFilterForm = ({
                     type="date"
                     className="form-control "
                     required
-                    defaultValue={startDate}
+                    value={startDate}
                     onChange={e => setStartDate(e.target.value)}
                   />
                 </div>
@@ -167,7 +167,7 @@ const ModelFilterForm = ({
                     type="date"
                     className="form-control "
                     required
-                    defaultValue={endDate}
+                    value={endDate}
                     onChange={e => setEndDate(e.target.value)}
                   />
                 </div>
@@ -183,7 +183,7 @@ const ModelFilterForm = ({
                     name="quantity"
                     placeholder="Quantity"
                     className="form-control "
-                    defaultValue={quantity}
+                    value={quantity}
                     onChange={e => setQuantity(e.target.value)}
                   />
                 </div>

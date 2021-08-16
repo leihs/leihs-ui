@@ -32724,12 +32724,12 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
           >
             <input
               className="form-control "
-              defaultValue="2020-12-14"
               name="start-date"
               onChange={[Function]}
               placeholder="From"
               required={true}
               type="date"
+              value="2020-12-14"
             />
           </div>
         </label>
@@ -32748,12 +32748,12 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
           >
             <input
               className="form-control "
-              defaultValue="2020-12-15"
               name="end-date"
               onChange={[Function]}
               placeholder="Until"
               required={true}
               type="date"
+              value="2020-12-15"
             />
           </div>
         </label>
@@ -32772,12 +32772,12 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
           >
             <input
               className="form-control "
-              defaultValue={2}
               min={1}
               name="quantity"
               onChange={[Function]}
               placeholder="Quantity"
               type="number"
+              value={2}
             />
           </div>
         </label>
