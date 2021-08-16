@@ -66,7 +66,7 @@ const ModelFilterForm = ({
 
   return (
     <DialogLayout title="Katalog filtern">
-      <form onSubmit={submit} noValidate>
+      <form onSubmit={submit} noValidate autoComplete="off">
         <DialogLayout.Body>
           <Stack space="4">
             {delegations && (

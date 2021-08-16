@@ -73,7 +73,7 @@ const OrderFilterForm = ({
 
   return (
     <DialogLayout title="Meine Ausleihen filtern">
-      <form action="/search" onSubmit={submit}>
+      <form action="/search" onSubmit={submit} autoComplete="off">
         <DialogLayout.Body>
           <Stack space="4">
             {delegations && (
