@@ -8,7 +8,10 @@ import { BookingCalendar } from './BookingCalendar'
 export default {
   title: 'MobileApp/Integrated Components/OrderPanel',
   component: BookingCalendar,
-  parameters: { layout: 'fullscreen' }
+  parameters: {
+    layout: 'fullscreen',
+    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+  }
 }
 
 function getMockData() {
