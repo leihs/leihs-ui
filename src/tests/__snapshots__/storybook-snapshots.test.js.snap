@@ -22671,7 +22671,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
     </a>
   </div>
   <div
-    className="mb-3"
+    className=""
   >
     <a
       className="d-flex"
@@ -22780,7 +22780,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
       </a>
     </div>
     <div
-      className="mb-3"
+      className=""
     >
       <a
         className="d-flex"
@@ -23582,7 +23582,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
     />
   </div>
   <div
-    className="mb-3"
+    className=""
   >
     <div
       className="position-relative ui-list-card"
@@ -23682,7 +23682,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard M
     />
   </div>
   <div
-    className="mb-3"
+    className=""
   >
     <div
       className="position-relative ui-list-card"
@@ -23911,7 +23911,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
     Smaller font size (typically used in list items):
   </p>
   <div
-    className="mb-3 mx-3"
+    className="d-flex flex-column gap-3 mb-4"
   >
     <div
       className="d-flex flex-column gap-1"
@@ -23948,10 +23948,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
         33% done
       </div>
     </div>
-  </div>
-  <div
-    className="mb-3 mx-3"
-  >
     <div
       className="d-flex flex-column gap-1"
     >
@@ -23994,7 +23990,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
     Combinations:
   </p>
   <div
-    className="mb-3 mx-3"
+    className="d-flex flex-column gap-3 mb-4"
   >
     <div
       className="d-flex flex-column gap-1"
@@ -24026,10 +24022,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
         />
       </div>
     </div>
-  </div>
-  <div
-    className="mb-3 mx-3"
-  >
     <div
       className="d-flex flex-column gap-1"
     >
@@ -24063,10 +24055,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
         33% of download done
       </div>
     </div>
-  </div>
-  <div
-    className="mb-3 mx-3"
-  >
     <div
       className="d-flex flex-column gap-1"
     >
@@ -24095,10 +24083,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
         />
       </div>
     </div>
-  </div>
-  <div
-    className="mb-3 mx-3"
-  >
     <div
       className="d-flex flex-column gap-1"
     >
@@ -24120,10 +24104,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
   <p
     className="text-muted"
   >
-    Set arbitrary attributes with restProps
+    Set arbitrary attributes with restProps:
   </p>
   <div
-    className="mb-3 mx-3"
+    className="d-flex flex-column gap-3 mb-4"
   >
     <div
       className="d-flex flex-column gap-1 text-primary"
@@ -31402,15 +31386,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutM
   >
     A unobtrusive element to show metadata in the bottom of a page where needed.
   </p>
-  <div
-    className="mb-5"
-  >
-    <div>
-      Page content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis voluptatum quod pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi, eos provident sit earum molestias quibusdam voluptates numquam.
-    </div>
+  <div>
+    Page content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis voluptatum quod pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi, eos provident sit earum molestias quibusdam voluptates numquam.
   </div>
   <div
-    className="text-center text-black-50 fw-light"
+    className="text-center text-black-50 fw-light pt-4"
   >
     ID: 12345
   </div>
@@ -31428,7 +31408,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutM
     RestProps
   </p>
   <div
-    className="text-center text-black-50 fw-light border border-primary"
+    className="text-center text-black-50 fw-light pt-4 border border-primary"
   >
     Metadata content
   </div>
@@ -31469,7 +31449,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Divid
     />
   </div>
   <div
-    className="mb-3"
+    className=""
   >
     <div>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -31524,7 +31504,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Horiz
       />
     </div>
     <div
-      className="mb-1"
+      className=""
     >
       <div>
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -31568,7 +31548,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Rest 
     </div>
   </div>
   <div
-    className="mb-3 border border-primary p-1"
+    className="border border-primary p-1"
   >
     <div>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
@@ -31590,11 +31570,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Stack
   <p
     className="text-muted"
   >
-    Space can be number from 1 to 5 and is rendered as margin-bottom on each element.
-  </p>
-  <p
-    className="text-muted"
-  >
     <button
       className="btn btn-light btn-sm"
       onClick={[Function]}
@@ -31608,24 +31583,34 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Stack
     Example with space 4 (typically used with form fields):
   </p>
   <div
-    className="mb-4"
+    className="bg-secondary mb-3"
   >
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+    <div
+      className="mb-4"
+    >
+      <div
+        className="bg-body"
+      >
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      </div>
     </div>
-  </div>
-  <div
-    className="mb-4"
-  >
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+    <div
+      className="mb-4"
+    >
+      <div
+        className="bg-body"
+      >
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      </div>
     </div>
-  </div>
-  <div
-    className="mb-4"
-  >
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+    <div
+      className=""
+    >
+      <div
+        className="bg-body"
+      >
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      </div>
     </div>
   </div>
   <p
@@ -31634,26 +31619,41 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Stack
     Example with space 5 (typically used with sections in detail or index views):
   </p>
   <div
-    className="mb-5"
+    className="bg-secondary mb-4"
   >
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+    <div
+      className="mb-5"
+    >
+      <div
+        className="bg-body"
+      >
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      </div>
+    </div>
+    <div
+      className="mb-5"
+    >
+      <div
+        className="bg-body"
+      >
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      </div>
+    </div>
+    <div
+      className=""
+    >
+      <div
+        className="bg-body"
+      >
+        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+      </div>
     </div>
   </div>
-  <div
-    className="mb-5"
+  <p
+    className="text-muted"
   >
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    </div>
-  </div>
-  <div
-    className="mb-5"
-  >
-    <div>
-      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-    </div>
-  </div>
+    (Note: the gray background is only for clarification)
+  </p>
 </div>
 `;
 
@@ -34017,7 +34017,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
       </section>
     </div>
     <div
-      className="mb-4"
+      className=""
     >
       <section
         className=""
@@ -34705,7 +34705,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             </div>
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
@@ -34805,7 +34805,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="mb-2"
+                  className=""
                 >
                   <div
                     className="d-flex flex-column gap-1"
@@ -34850,7 +34850,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             />
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="position-relative ui-list-card"
@@ -34869,7 +34869,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="mb-2"
+                  className=""
                 >
                   <div
                     className="d-flex flex-column gap-1"
@@ -35087,7 +35087,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             />
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="position-relative ui-list-card"
@@ -35156,7 +35156,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
       </section>
     </div>
     <div
-      className="mb-5"
+      className=""
     >
       <section
         className=""
@@ -35189,7 +35189,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
       </section>
     </div>
     <div
-      className="text-center text-black-50 fw-light"
+      className="text-center text-black-50 fw-light pt-4"
     >
       ID 
       15874
@@ -35364,7 +35364,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   className="pt-3"
                 >
                   <div
-                    className="mb-2"
+                    className=""
                   >
                     <div
                       className="d-flex flex-column gap-1"
@@ -35467,7 +35467,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   className="pt-3"
                 >
                   <div
-                    className="mb-2"
+                    className=""
                   >
                     <div
                       className="d-flex flex-column gap-1"
@@ -35609,7 +35609,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     </div>
                   </div>
                   <div
-                    className="mb-2"
+                    className=""
                   >
                     <div
                       className="d-flex flex-column gap-1"
@@ -35655,7 +35655,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
             />
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div>
               <div
@@ -35712,7 +35712,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   className="pt-3"
                 >
                   <div
-                    className="mb-2"
+                    className=""
                   >
                     <div
                       className="d-flex flex-column gap-1"
@@ -35761,7 +35761,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
       </section>
     </div>
     <div
-      className="mb-5"
+      className=""
     >
       <section
         className=""
@@ -35849,7 +35849,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   className="pt-3"
                 >
                   <div
-                    className="mb-2"
+                    className=""
                   >
                     <div
                       className="d-flex flex-column gap-1"
@@ -35926,7 +35926,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   className="pt-3"
                 >
                   <div
-                    className="mb-2"
+                    className=""
                   >
                     <div
                       className="d-flex flex-column gap-1"
@@ -35946,7 +35946,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
             />
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div>
               <div
@@ -35999,7 +35999,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                   className="pt-3"
                 >
                   <div
-                    className="mb-2"
+                    className=""
                   >
                     <div
                       className="d-flex flex-column gap-1"
@@ -36102,7 +36102,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegen
       Noch keine Gegenstände hinzugefügt
     </div>
     <div
-      className="mb-4 text-center"
+      className="text-center"
     >
       <a
         className="text-decoration-underline"
@@ -36254,7 +36254,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
             </div>
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
@@ -36496,7 +36496,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
             />
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="position-relative ui-list-card"
@@ -36565,7 +36565,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
       </section>
     </div>
     <div
-      className="mb-5"
+      className=""
     >
       <section
         className=""
@@ -36812,7 +36812,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
       </section>
     </div>
     <div
-      className="mb-5"
+      className=""
     >
       <section
         className=""
@@ -36864,7 +36864,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
             />
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="position-relative ui-list-card"
@@ -36996,7 +36996,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
@@ -37138,7 +37138,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
             />
           </div>
           <div
-            className="mb-3"
+            className=""
           >
             <div
               className="position-relative ui-list-card"
@@ -37176,7 +37176,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
       </section>
     </div>
     <div
-      className="mb-5"
+      className=""
     >
       <div
         className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
@@ -37197,7 +37197,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
       </div>
     </div>
     <div
-      className="text-center text-black-50 fw-light"
+      className="text-center text-black-50 fw-light pt-4"
     >
       ID: 12345
     </div>
