@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 
 export default function ProgressInfo({ title, info, totalCount, doneCount, small, className, ...restProps }) {
@@ -9,6 +10,15 @@ export default function ProgressInfo({ title, info, totalCount, doneCount, small
       {info && <div className={cx('fw-light', small ? 'very-small' : 'small')}>{info}</div>}
     </div>
   )
+}
+
+ProgressInfo.propTypes = {
+  title: PropTypes.string.isRequired,
+  totalCount: PropTypes.number.isRequired,
+  doneCount: PropTypes.number.isRequired,
+  info: PropTypes.node,
+  small: PropTypes.bool,
+  className: PropTypes.string
 }
 
 function Progressbar({ totalCount, doneCount }) {
