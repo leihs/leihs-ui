@@ -8,10 +8,10 @@ const BASE_CLASS = 'ui-list-card'
 export default function ListCard({ onClick, href, children, className, style, ...restProps }) {
   const clickable = !!(onClick || href)
   // NOTE: .position-relative is needed on outer card so that .streched-link will work correctly
-  const wrapperClass = cx('position-relative', className, BASE_CLASS)
+  const wrapperClass = cx('py-3 position-relative', className, BASE_CLASS)
   const styleAttr = clickable
     ? {
-        minHeight: '2.5rem',
+        minHeight: '4.375rem',
         cursor: 'pointer',
         ...style
       }
@@ -40,7 +40,7 @@ export default function ListCard({ onClick, href, children, className, style, ..
 
 ListCard.Stack = function ListCardStack({ children, className, ...restProps }) {
   return (
-    <Stack divided space="3" className={className} {...restProps}>
+    <Stack divided space="0" className={className} {...restProps}>
       {children}
     </Stack>
   )

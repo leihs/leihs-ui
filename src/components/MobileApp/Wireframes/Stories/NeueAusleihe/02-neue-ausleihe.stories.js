@@ -146,7 +146,7 @@ export const neueAusleihe = ({
         </Section>
 
         <Section title="Gegenstände" collapsible className="position-relative">
-          <Stack divided space="3">
+          <ListCard.Stack>
             {order.models.map(({ reservation, model, pool }, i) => (
               <ListCard key={i} onClick={() => onItemClick(reservation.id)}>
                 <ListCard.Title>
@@ -161,7 +161,7 @@ export const neueAusleihe = ({
                 </ListCard.Foot>
               </ListCard>
             ))}
-          </Stack>
+          </ListCard.Stack>
         </Section>
 
         <Section>

@@ -10,11 +10,11 @@ export default {
   }
 }
 
-export const listCard = ({ onItemClick }) => {
+export const listCard = () => {
   return (
     <div>
       <h1>ListCard</h1>
-      <p className="text-muted">Presents a list entry, often with a link.</p>
+      <p className="text-muted">Presents a list entry, often linked to an action (href or onClick).</p>
       <p className="text-muted">
         A <code>ListCard.Stack</code> can be used to wrap multiple cards with dividers and space.
       </p>

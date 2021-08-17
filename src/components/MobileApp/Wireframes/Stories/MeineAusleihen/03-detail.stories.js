@@ -68,7 +68,7 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
           <FilterButton className="position-absolute top-0 end-0" onClick={() => alert('TODO (what does it do?)')}>
             Alle Geräteparks
           </FilterButton>
-          <Stack divided space="3">
+          <ListCard.Stack>
             {order.models.map(({ reservation, model, pool }, i) => (
               <ListCard key={i} onClick={() => onItemClick(reservation.id)}>
                 <ListCard.Title>
@@ -83,7 +83,7 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
                 </ListCard.Foot>
               </ListCard>
             ))}
-          </Stack>
+          </ListCard.Stack>
         </Section>
 
         <Section title="Delegation" collapsible>
