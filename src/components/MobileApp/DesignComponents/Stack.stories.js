@@ -21,22 +21,22 @@ export const stack = () => {
         </button>
       </p>
       <p className="text-muted">Example with space 4 (typically used with form fields):</p>
-      <div className="bg-secondary mb-3">
-        <Stack space="4">
+      <div className="mb-5">
+        <Stack space="4" className="border">
           <div className="bg-body">{lorem}</div>
           <div className="bg-body">{lorem}</div>
           <div className="bg-body">{lorem}</div>
         </Stack>
       </div>
       <p className="text-muted">Example with space 5 (typically used with sections in detail or index views):</p>
-      <div className="bg-secondary mb-4">
-        <Stack space="5">
+      <div className="mb-5">
+        <Stack space="5" className="border">
           <div className="bg-body">{lorem}</div>
           <div className="bg-body">{lorem}</div>
           <div className="bg-body">{lorem}</div>
         </Stack>
       </div>
-      <p className="text-muted">(Note: the gray background is only for clarification)</p>
+      <p className="text-muted">(Note: the borders are only for clarification)</p>
     </div>
   )
 }
@@ -45,8 +45,8 @@ export const divided = () => {
   return (
     <div>
       <h1>Stack</h1>
-      <p className="text-muted">Example with divider and space 3 (typically used with list items):</p>
-      <Stack space="3" divided>
+      <p className="text-muted">Example with divider and space 0 (typically used with list items):</p>
+      <Stack space="0" divided>
         <div>{lorem}</div>
         <div>{lorem}</div>
         <div>{lorem}</div>
@@ -66,7 +66,7 @@ export const horizontalInset = () => {
       <div className="page-inset-x shadow">
         <div>...</div>
         <div>...</div>
-        <Stack space="1" divided>
+        <Stack space="0" divided>
           <div>{lorem}</div>
           <div>{lorem}</div>
           <div>{lorem}</div>
