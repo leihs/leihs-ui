@@ -1,12 +1,16 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
 import f from 'lodash'
+import { de } from 'date-fns/locale'
+
 import Section from '../../DesignComponents/Section'
 import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
 import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
 import ModalDialog from '../../DesignComponents/ModalDialog'
 import Stack from '../../DesignComponents/Stack'
-import LabelInside from '../../DesignComponents/LabelInside'
+import DatePicker from '../../DesignComponents/DatePicker'
+import Warning from '../../DesignComponents/Warning'
+import { isAfter, parse } from 'date-fns'
 
 const DEFAULT_TERM = ''
 const DEFAULT_START_DATE = ''
@@ -63,6 +67,9 @@ const ModelFilterForm = ({
     return f.omitBy(fields, f.isNil)
   }
 
+  const parseDate = s => parse(s, 'P', new Date(), { locale: de })
+  const isEndDateBeforeStartDate = startDate && endDate && isAfter(parseDate(startDate), parseDate(endDate))
+
   return (
     <ModalDialog title="Katalog filtern" shown>
       <ModalDialog.Body>
@@ -104,35 +111,27 @@ const ModelFilterForm = ({
               />
             </Section>
             <Section title="Verfügbarkeit" collapsible defaultCollapsed={!initialShowAvailability}>
-              <fieldset>
-                <legend className="visually-hidden">Verfügbarkeit</legend>
-                <div className="d-flex flex-column gap-3">
-                  <LabelInside>
-                    <input
-                      type="text"
-                      name="start-date"
-                      id="start-date"
-                      className="form-control calendar-indicator"
-                      defaultValue={startDate}
-                      onChange={e => setStartDate(e.target.value)}
-                      placeholder="Unbestimmt"
-                    />
-                    <label htmlFor="start-date">Von</label>
-                  </LabelInside>
-                  <LabelInside>
-                    <input
-                      type="text"
-                      name="end-date"
-                      id="end-date"
-                      className="form-control calendar-indicator"
-                      defaultValue={startDate}
-                      onChange={e => setStartDate(e.target.value)}
-                      placeholder="Unbestimmt"
-                    />
-                    <label htmlFor="end-date">Bis</label>
-                  </LabelInside>
-                </div>
-              </fieldset>
+              <Stack space="3">
+                <DatePicker
+                  locale={de}
+                  label={<label htmlFor="start-date">Von</label>}
+                  id="start-date"
+                  name="start-date"
+                  placeholder="Unbestimmt"
+                  value={startDate}
+                  onChange={e => setStartDate(e.target.value)}
+                />
+                <DatePicker
+                  locale={de}
+                  label={<label htmlFor="end-date">Bis</label>}
+                  id="end-date"
+                  name="end-date"
+                  placeholder="Unbestimmt"
+                  value={endDate}
+                  onChange={e => setEndDate(e.target.value)}
+                />
+                {isEndDateBeforeStartDate && <Warning>Bis-Datum ist vor Von-Datum</Warning>}
+              </Stack>
             </Section>
             <Section title="Geräteparks" collapsible defaultCollapsed={!initialShowPools}>
               <div className="d-flex flex-column gap-3">

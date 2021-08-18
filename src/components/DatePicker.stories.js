@@ -32,7 +32,6 @@ const makeBaseStory = ({ initialValue, onlyFuture, wasValidated, ...props }) => 
           onChange={onChange}
           className="form-control"
           months={1}
-          minDate={onlyFuture ? 'now' : null}
           {...props}
         />
 

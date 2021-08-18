@@ -58,9 +58,9 @@
   }
 }
 
-/* Component: DateRangePicker */
+/* Component: Styling wrapper for @leihs/calendar (referenced by DateRangePicker and DatePicker) */
 
-.date-range {
+.leihs-calendar {
   .rdrCalendarWrapper,
   .rdrDateRangeWrapper {
     margin: auto;
@@ -79,7 +79,6 @@
   .rdrMonth,
   .rdrMonthIsLoading {
     padding: 0 0.75rem 0.5rem 0.75rem;
-    height: 16rem;
   }
 
   &--loading {
@@ -132,7 +131,7 @@
 
   .rdrDayDisabled:not(.rdrDayPassive) {
     background-color: transparent;
-    & :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge) {
+    & :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge, .rdrSelected) {
       filter: none;
     }
 
@@ -142,7 +141,7 @@
     }
 
     &:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd)
-      :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge) {
+      :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge, .rdrSelected) {
       background-color: $red;
       & ~ .rdrDayNumber span {
         color: white;
@@ -188,6 +187,26 @@
   .rdrDayToday .rdrDayNumber span {
     &:after {
       background: $body-color;
+    }
+  }
+}
+
+.date-range-picker {
+  .rdrMonth {
+    height: 16rem;
+  }
+}
+
+.date-picker {
+  .leihs-calendar {
+    overflow: hidden;
+    transition: max-height 0.4s;
+    max-height: 0;
+  }
+
+  &--calendar-active {
+    .leihs-calendar {
+      max-height: 23rem; // needed for the animation. not an exact value, just a bit more than needed
     }
   }
 }

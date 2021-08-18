@@ -151,7 +151,7 @@ export default function DateRangePicker({
           <label htmlFor="endDate">Bis</label>
         </LabelInside>
       </div>
-      <div className={cx('date-range', { 'date-range--loading': isLoading })}>
+      <div className={cx('leihs-calendar', { 'leihs-calendar--loading': isLoading })}>
         <DateRange
           // selection:
           ranges={[range]}
