@@ -3,11 +3,11 @@ import cx from 'classnames'
 import Icon, { iconDownload } from './Icons'
 
 export default function DownloadLink({ children, href, className, ...restProps }) {
-  const linkProps = { href, className: cx('download-link', className), ...restProps }
+  const linkProps = { href, className: cx('d-flex', className), ...restProps }
   return (
     <a {...linkProps}>
-      <Icon icon={iconDownload} className="download-link__icon" />
-      {children}
+      <Icon icon={iconDownload} style={{ marginRight: '10px', marginTop: '2px', flex: '16px 0 0' }} />
+      <div>{children}</div>
     </a>
   )
 }
