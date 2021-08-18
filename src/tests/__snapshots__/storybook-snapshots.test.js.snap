@@ -22576,21 +22576,25 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
   </p>
   <p>
     <a
-      className="download-link"
+      className="d-flex"
       href="some/route"
       onClick={[Function]}
     >
       <svg
-        className="download-link__icon"
         style={
           Object {
             "display": "inline",
+            "flex": "16px 0 0",
+            "marginRight": "10px",
+            "marginTop": "2px",
           }
         }
       >
         Download Icon.svg
       </svg>
-      Download the specification
+      <div>
+        Download the specification
+      </div>
     </a>
   </p>
   <p
@@ -22620,63 +22624,75 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
     className="mb-3"
   >
     <a
-      className="download-link"
+      className="d-flex"
       href="some/route"
       onClick={[Function]}
     >
       <svg
-        className="download-link__icon"
         style={
           Object {
             "display": "inline",
+            "flex": "16px 0 0",
+            "marginRight": "10px",
+            "marginTop": "2px",
           }
         }
       >
         Download Icon.svg
       </svg>
-      QX1204USB_Q1204USB_QSG.pdf
+      <div>
+        QX1204USB_Q1204USB_QSG.pdf
+      </div>
     </a>
   </div>
   <div
     className="mb-3"
   >
     <a
-      className="download-link"
+      className="d-flex"
       href="some/route"
       onClick={[Function]}
     >
       <svg
-        className="download-link__icon"
         style={
           Object {
             "display": "inline",
+            "flex": "16px 0 0",
+            "marginRight": "10px",
+            "marginTop": "2px",
           }
         }
       >
         Download Icon.svg
       </svg>
-      QX1204USB_Q1204USB_Manual.pdf
+      <div>
+        QX1204USB_Q1204USB_Manual.pdf
+      </div>
     </a>
   </div>
   <div
     className="mb-3"
   >
     <a
-      className="download-link"
+      className="d-flex"
       href="some/route"
       onClick={[Function]}
     >
       <svg
-        className="download-link__icon"
         style={
           Object {
             "display": "inline",
+            "flex": "16px 0 0",
+            "marginRight": "10px",
+            "marginTop": "2px",
           }
         }
       >
         Download Icon.svg
       </svg>
-      QX1204USB_Q1204USB_Specs.pdf
+      <div>
+        QX1204USB_Q1204USB_Specs.pdf
+      </div>
     </a>
   </div>
 </div>
@@ -22693,21 +22709,25 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
     Set arbitrary attributes with restProps
   </p>
   <a
-    className="download-link text-primary"
+    className="d-flex text-primary"
     href="some/route"
     onClick={[Function]}
   >
     <svg
-      className="download-link__icon"
       style={
         Object {
           "display": "inline",
+          "flex": "16px 0 0",
+          "marginRight": "10px",
+          "marginTop": "2px",
         }
       }
     >
       Download Icon.svg
     </svg>
-    Download the Specification
+    <div>
+      Download the Specification
+    </div>
   </a>
 </div>
 `;
@@ -22734,42 +22754,58 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
       className="mb-3"
     >
       <a
-        className="download-link"
+        className="d-flex"
         href="some/route"
         onClick={[Function]}
       >
         <svg
-          className="download-link__icon"
           style={
             Object {
               "display": "inline",
+              "flex": "16px 0 0",
+              "marginRight": "10px",
+              "marginTop": "2px",
             }
           }
         >
           Download Icon.svg
         </svg>
-        QX1204USB_Q1204USB_QSG.pdf
+        <div>
+          <span
+            className="text-break"
+          >
+            QX1204USB_Q1204USB_QSG.pdf
+          </span>
+        </div>
       </a>
     </div>
     <div
       className="mb-3"
     >
       <a
-        className="download-link"
+        className="d-flex"
         href="some/route"
         onClick={[Function]}
       >
         <svg
-          className="download-link__icon"
           style={
             Object {
               "display": "inline",
+              "flex": "16px 0 0",
+              "marginRight": "10px",
+              "marginTop": "2px",
             }
           }
         >
           Download Icon.svg
         </svg>
-        Download the specification
+        <div>
+          <span
+            className="text-break"
+          >
+            Download the specification
+          </span>
+        </div>
       </a>
     </div>
   </div>
