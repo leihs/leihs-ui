@@ -123,7 +123,7 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
 function getRecommendsGrid(recommends) {
   const list = recommends.edges.map(({ node }) => ({
     id: node.id,
-    href: undefined,
+    href: node.borrowUrl,
     imgSrc: (node.images.find(() => true) || {}).imageUrl,
     caption: node.name,
     isFavorited: node.isFavorited
