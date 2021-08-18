@@ -18,9 +18,7 @@ export default {
 export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
   return (
     <PageLayoutMock>
-      <PageLayout.Header title={order.title}>
-        <h2 className="fw-light">24 Tage ab 6.5.2020, 11 Gegenstände</h2>
-      </PageLayout.Header>
+      <PageLayout.Header title={order.title} subTitle="24 Tage ab 6.5.2020, 11 Gegenstände"></PageLayout.Header>
 
       <Stack space="5">
         <Section title="Status" collapsible>

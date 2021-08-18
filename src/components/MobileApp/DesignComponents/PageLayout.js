@@ -12,7 +12,7 @@ export default function PageLayout({ children, navbar, className, ...restProps }
   )
 }
 
-PageLayout.Header = function PageLayoutHeader({ preTitle, title, children, className, ...restProps }) {
+PageLayout.Header = function PageLayoutHeader({ preTitle, title, subTitle, children, className, ...restProps }) {
   return (
     <div className={cx('text-center mb-4', className)} {...restProps}>
       <h1>
@@ -24,6 +24,7 @@ PageLayout.Header = function PageLayoutHeader({ preTitle, title, children, class
         )}
         {title}
       </h1>
+      {subTitle && <h2 className="fw-light">{subTitle}</h2>}
       {children}
     </div>
   )
