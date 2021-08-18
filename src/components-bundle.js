@@ -28,6 +28,7 @@ const Components = {
 
   // "design komponenten"
   Design: {
+    ActionButtonGroup: require('./components/MobileApp/DesignComponents/ActionButtonGroup').default,
     DownloadLink: require('./components/MobileApp/DesignComponents/DownloadLink').default,
     FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
     ListCard: require('./components/MobileApp/DesignComponents/ListCard').default,
