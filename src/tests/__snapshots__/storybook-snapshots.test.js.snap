@@ -23326,7 +23326,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
     Example with long title (truncated with an ellipsis):
   </p>
   <div
-    className="mb-0"
+    className=""
   >
     <hr
       className="page-inset-x-inverse my-0"
@@ -23350,7 +23350,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
     Example with a link, but only one line of content. Note that the angle icon position is not affected by the content size:
   </p>
   <div
-    className="mb-0"
+    className=""
   >
     <hr
       className="page-inset-x-inverse my-0"
@@ -24201,28 +24201,58 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/PropertyTa
   >
     E.g. for user details or specifications of a model
   </p>
-  <table>
+  <table
+    style={
+      Object {
+        "tableLayout": "fixed",
+      }
+    }
+  >
     <tbody>
-      <tr>
+      <tr
+        className="align-top"
+      >
         <td
-          className="fw-light pe-3"
+          className="fw-light pe-3 text-break"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
         >
           Age
         </td>
         <td
-          className=""
+          className="text-break"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
         >
           45
         </td>
       </tr>
-      <tr>
+      <tr
+        className="align-top"
+      >
         <td
-          className="fw-light pe-3 pt-2"
+          className="fw-light pe-3 text-break pt-2"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
         >
           Weight
         </td>
         <td
-          className="pt-2"
+          className="text-break pt-2"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
         >
           80 kg
         </td>
@@ -24244,34 +24274,311 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/PropertyTa
   </p>
   <table
     className="border border-primary"
+    style={
+      Object {
+        "tableLayout": "fixed",
+      }
+    }
   >
     <tbody>
-      <tr>
+      <tr
+        className="align-top"
+      >
         <td
-          className="fw-light pe-3"
+          className="fw-light pe-3 text-break"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
         >
           Age
         </td>
         <td
-          className=""
+          className="text-break"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
         >
           45
         </td>
       </tr>
-      <tr>
+      <tr
+        className="align-top"
+      >
         <td
-          className="fw-light pe-3 pt-2"
+          className="fw-light pe-3 text-break pt-2"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
         >
           Weight
         </td>
         <td
-          className="pt-2"
+          className="text-break pt-2"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
         >
           80 kg
         </td>
       </tr>
     </tbody>
   </table>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/PropertyTable With Long Content 1`] = `
+<div>
+  <h1>
+    PropertyTable
+  </h1>
+  <p
+    className="text-muted"
+  >
+    Short keys, long content
+  </p>
+  <table
+    className="shadow"
+    style={
+      Object {
+        "maxWidth": "40rem",
+        "tableLayout": "fixed",
+      }
+    }
+  >
+    <tbody>
+      <tr
+        className="align-top"
+      >
+        <td
+          className="fw-light pe-3 text-break"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
+        >
+          Key 1
+        </td>
+        <td
+          className="text-break"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et maiores cumque in nisi natus id saepe!
+        </td>
+      </tr>
+      <tr
+        className="align-top"
+      >
+        <td
+          className="fw-light pe-3 text-break pt-2"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
+        >
+          Key 2
+        </td>
+        <td
+          className="text-break pt-2"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
+        >
+          Et maiores cumque in nisi natus id saepe!
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <p
+    className="text-muted"
+  >
+    Long keys, short content
+  </p>
+  <table
+    className="shadow"
+    style={
+      Object {
+        "maxWidth": "40rem",
+        "tableLayout": "fixed",
+      }
+    }
+  >
+    <tbody>
+      <tr
+        className="align-top"
+      >
+        <td
+          className="fw-light pe-3 text-break"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et maiores cumque in nisi natus id saepe!
+        </td>
+        <td
+          className="text-break"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
+        >
+          Value 1
+        </td>
+      </tr>
+      <tr
+        className="align-top"
+      >
+        <td
+          className="fw-light pe-3 text-break pt-2"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
+        >
+          Et maiores cumque in nisi natus id saepe!
+        </td>
+        <td
+          className="text-break pt-2"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
+        >
+          Value 2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <p
+    className="text-muted"
+  >
+    Both mixed
+  </p>
+  <table
+    className="shadow"
+    style={
+      Object {
+        "maxWidth": "40rem",
+        "tableLayout": "fixed",
+      }
+    }
+  >
+    <tbody>
+      <tr
+        className="align-top"
+      >
+        <td
+          className="fw-light pe-3 text-break"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
+        >
+          Key 1
+        </td>
+        <td
+          className="text-break"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
+        >
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Et maiores cumque in nisi natus id saepe!
+        </td>
+      </tr>
+      <tr
+        className="align-top"
+      >
+        <td
+          className="fw-light pe-3 text-break pt-2"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
+        >
+          Et maiores cumque in nisi natus id saepe!
+        </td>
+        <td
+          className="text-break pt-2"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
+        >
+          Value 2
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
+  <p
+    className="text-muted"
+  >
+    Long words
+  </p>
+  <table
+    className="shadow"
+    style={
+      Object {
+        "maxWidth": "20rem",
+        "tableLayout": "fixed",
+      }
+    }
+  >
+    <tbody>
+      <tr
+        className="align-top"
+      >
+        <td
+          className="fw-light pe-3 text-break"
+          style={
+            Object {
+              "width": "33%",
+            }
+          }
+        >
+          supercalifragilisticexpialidocious
+        </td>
+        <td
+          className="text-break"
+          style={
+            Object {
+              "width": "66%",
+            }
+          }
+        >
+          supercalifragilisticexpialidocious
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p />
 </div>
 `;
 
@@ -25057,10 +25364,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </label>
     </div>
     <div
-      className="leihs-calendar date-picker__calendar date-picker__calendar--inactive"
+      className="leihs-calendar rounded-bottom"
     >
       <div
-        className="rdrCalendarWrapper m-0 w-100 rounded bg-light-shade"
+        className="rdrCalendarWrapper m-0 w-100 rounded-bottom bg-light-shade"
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
       >
@@ -26310,10 +26617,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </label>
     </div>
     <div
-      className="leihs-calendar date-picker__calendar date-picker__calendar--inactive"
+      className="leihs-calendar rounded-bottom"
     >
       <div
-        className="rdrCalendarWrapper m-0 w-100 rounded bg-light-shade"
+        className="rdrCalendarWrapper m-0 w-100 rounded-bottom bg-light-shade"
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
       >
@@ -27558,10 +27865,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </label>
     </div>
     <div
-      className="leihs-calendar date-picker__calendar date-picker__calendar--inactive"
+      className="leihs-calendar rounded-bottom"
     >
       <div
-        className="rdrCalendarWrapper m-0 w-100 rounded bg-light-shade"
+        className="rdrCalendarWrapper m-0 w-100 rounded-bottom bg-light-shade"
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
       >
@@ -28594,10 +28901,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </label>
     </div>
     <div
-      className="leihs-calendar date-picker__calendar date-picker__calendar--inactive"
+      className="leihs-calendar rounded-bottom"
     >
       <div
-        className="rdrCalendarWrapper m-0 w-100 rounded bg-light-shade"
+        className="rdrCalendarWrapper m-0 w-100 rounded-bottom bg-light-shade"
         onMouseLeave={[Function]}
         onMouseUp={[Function]}
       >
@@ -38421,6 +38728,483 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ShoppingCart E
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePage UserProfilePage 1`] = `
+<div>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <div
+      className="ui-user-profile"
+    >
+      <div
+        className="text-center mb-4"
+      >
+        <h1>
+          Benutzerkonto
+        </h1>
+        <h2
+          className="fw-light"
+        >
+          Joël Gähwiler
+        </h2>
+        <div
+          className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
+        >
+          <button
+            className="btn btn-secondary"
+            onClick={[Function]}
+            type="button"
+          >
+            Abmelden
+          </button>
+        </div>
+      </div>
+      <div
+        className="mb-5"
+      >
+        <section
+          className=""
+        >
+          <h2
+            className="section-title fw-normal"
+          >
+            <span
+              className="section-title__collapser"
+              onClick={[Function]}
+              role="button"
+            >
+              Nutzerdaten
+              <svg
+                className="section-title__arrow-icon"
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Section Arrow.svg
+              </svg>
+            </span>
+          </h2>
+          <div>
+            <table
+              style={
+                Object {
+                  "tableLayout": "fixed",
+                }
+              }
+            >
+              <tbody>
+                <tr
+                  className="align-top"
+                >
+                  <td
+                    className="fw-light pe-3 text-break"
+                    style={
+                      Object {
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    Email
+                  </td>
+                  <td
+                    className="text-break"
+                    style={
+                      Object {
+                        "width": "66%",
+                      }
+                    }
+                  >
+                    joel@example.ch
+                  </td>
+                </tr>
+                <tr
+                  className="align-top"
+                >
+                  <td
+                    className="fw-light pe-3 text-break pt-2"
+                    style={
+                      Object {
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    Zweit-Email
+                  </td>
+                  <td
+                    className="text-break pt-2"
+                    style={
+                      Object {
+                        "width": "66%",
+                      }
+                    }
+                  >
+                    joel@example.com
+                  </td>
+                </tr>
+                <tr
+                  className="align-top"
+                >
+                  <td
+                    className="fw-light pe-3 text-break pt-2"
+                    style={
+                      Object {
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    Telefon
+                  </td>
+                  <td
+                    className="text-break pt-2"
+                    style={
+                      Object {
+                        "width": "66%",
+                      }
+                    }
+                  >
+                    079 444 44 44
+                  </td>
+                </tr>
+                <tr
+                  className="align-top"
+                >
+                  <td
+                    className="fw-light pe-3 text-break pt-2"
+                    style={
+                      Object {
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    Organisation
+                  </td>
+                  <td
+                    className="text-break pt-2"
+                    style={
+                      Object {
+                        "width": "66%",
+                      }
+                    }
+                  >
+                    zhdk.ch
+                  </td>
+                </tr>
+                <tr
+                  className="align-top"
+                >
+                  <td
+                    className="fw-light pe-3 text-break pt-2"
+                    style={
+                      Object {
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    Organisations-ID
+                  </td>
+                  <td
+                    className="text-break pt-2"
+                    style={
+                      Object {
+                        "width": "66%",
+                      }
+                    }
+                  >
+                    170663
+                  </td>
+                </tr>
+                <tr
+                  className="align-top"
+                >
+                  <td
+                    className="fw-light pe-3 text-break pt-2"
+                    style={
+                      Object {
+                        "width": "33%",
+                      }
+                    }
+                  >
+                    Badge-ID
+                  </td>
+                  <td
+                    className="text-break pt-2"
+                    style={
+                      Object {
+                        "width": "66%",
+                      }
+                    }
+                  >
+                    E012XAMPLE
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+      <div
+        className="mb-5"
+      >
+        <section
+          className=""
+        >
+          <h2
+            className="section-title fw-normal"
+          >
+            <span
+              className="section-title__collapser"
+              onClick={[Function]}
+              role="button"
+            >
+              Delegationen
+              <svg
+                className="section-title__arrow-icon"
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Section Arrow.svg
+              </svg>
+            </span>
+          </h2>
+          <div>
+            <div
+              className=""
+            >
+              <hr
+                className="page-inset-x-inverse my-0"
+              />
+              <div
+                className="py-3 position-relative ui-list-card"
+              >
+                <div
+                  className="mb-1 text-truncate"
+                >
+                  Master Design
+                </div>
+                <div
+                  className="small"
+                >
+                  Elvira Hunziker
+                </div>
+              </div>
+              <hr
+                className="page-inset-x-inverse my-0"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+      <div
+        className=""
+      >
+        <section
+          className=""
+        >
+          <h2
+            className="section-title fw-normal"
+          >
+            <span
+              className="section-title__collapser"
+              onClick={[Function]}
+              role="button"
+            >
+              Verträge
+              <svg
+                className="section-title__arrow-icon"
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Section Arrow.svg
+              </svg>
+            </span>
+          </h2>
+          <div>
+            <div
+              className="mb-3"
+            >
+              <a
+                className="d-flex"
+                href="#todo"
+              >
+                <svg
+                  style={
+                    Object {
+                      "display": "inline",
+                      "flex": "16px 0 0",
+                      "marginRight": "10px",
+                      "marginTop": "2px",
+                    }
+                  }
+                >
+                  Download Icon.svg
+                </svg>
+                <div>
+                  Ausleihe Toni-Areal
+                   vom 
+                  26.05.2021
+                </div>
+              </a>
+            </div>
+            <div
+              className="mb-3"
+            >
+              <a
+                className="d-flex"
+                href="#todo"
+              >
+                <svg
+                  style={
+                    Object {
+                      "display": "inline",
+                      "flex": "16px 0 0",
+                      "marginRight": "10px",
+                      "marginTop": "2px",
+                    }
+                  }
+                >
+                  Download Icon.svg
+                </svg>
+                <div>
+                  Ausleihe Werkstatt
+                   vom 
+                  11.04.2019
+                </div>
+              </a>
+            </div>
+            <div
+              className="mb-3"
+            >
+              <a
+                className="d-flex"
+                href="#todo"
+              >
+                <svg
+                  style={
+                    Object {
+                      "display": "inline",
+                      "flex": "16px 0 0",
+                      "marginRight": "10px",
+                      "marginTop": "2px",
+                    }
+                  }
+                >
+                  Download Icon.svg
+                </svg>
+                <div>
+                  Ausleihe Toni-Areal
+                   vom 
+                  03.01.2021
+                </div>
+              </a>
+            </div>
+            <div
+              className=""
+            >
+              <a
+                className="d-flex"
+                href="#todo"
+              >
+                <svg
+                  style={
+                    Object {
+                      "display": "inline",
+                      "flex": "16px 0 0",
+                      "marginRight": "10px",
+                      "marginTop": "2px",
+                    }
+                  }
+                >
+                  Download Icon.svg
+                </svg>
+                <div>
+                  Ausleihe Werkstatt
+                   vom 
+                  23.10.2020
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Overview Overview 1`] = `
 <div>
   <h1>
@@ -38806,7 +39590,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
       </button>
     </div>
     <div
-      className="mb-4"
+      className=""
     >
       <section
         className=""
@@ -39109,7 +39893,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
       </button>
     </div>
     <div
-      className="mb-4"
+      className=""
     >
       <section
         className=""
@@ -41720,28 +42504,58 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
           </span>
         </h2>
         <div>
-          <table>
+          <table
+            style={
+              Object {
+                "tableLayout": "fixed",
+              }
+            }
+          >
             <tbody>
-              <tr>
+              <tr
+                className="align-top"
+              >
                 <td
-                  className="fw-light pe-3"
+                  className="fw-light pe-3 text-break"
+                  style={
+                    Object {
+                      "width": "33%",
+                    }
+                  }
                 >
                   Property 1
                 </td>
                 <td
-                  className=""
+                  className="text-break"
+                  style={
+                    Object {
+                      "width": "66%",
+                    }
+                  }
                 >
                   Value 1
                 </td>
               </tr>
-              <tr>
+              <tr
+                className="align-top"
+              >
                 <td
-                  className="fw-light pe-3 pt-2"
+                  className="fw-light pe-3 text-break pt-2"
+                  style={
+                    Object {
+                      "width": "33%",
+                    }
+                  }
                 >
                   Property 2
                 </td>
                 <td
-                  className="pt-2"
+                  className="text-break pt-2"
+                  style={
+                    Object {
+                      "width": "66%",
+                    }
+                  }
                 >
                   Value 1
                 </td>

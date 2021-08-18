@@ -1,14 +1,22 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
-import DebugProps from '../DebugProps'
-
 import { parseISO as parseISODate, format as formatDate } from 'date-fns'
-const formatDateShort = date => formatDate(parseISODate(date), 'P')
+import { de } from 'date-fns/locale'
+
+import PageLayout from './DesignComponents/PageLayout'
+import Stack from './DesignComponents/Stack'
+import Section from './DesignComponents/Section'
+import PropertyTable from './DesignComponents/PropertyTable'
+import ListCard from './DesignComponents/ListCard'
+import DownloadLink from './DesignComponents/DownloadLink'
+import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
+
+const formatDateShort = date => formatDate(parseISODate(date), 'P', { locale: de })
 
 const BASE_CLASS = 'ui-user-profile'
 
-const UserProfilePage = allProps => {
-  const { currentUser, ...restProps } = allProps
+function UserProfilePage({ currentUser, onLogoutClick, ...restProps }) {
   const { user } = currentUser
   const { delegations } = user
   const contracts = user.contracts.edges.map(e => e.node)
@@ -23,66 +31,65 @@ const UserProfilePage = allProps => {
     ...(isLocalUser
       ? []
       : [
-          ['Organization', user.organization],
-          ['Organization ID', user.orgId]
+          ['Organisation', user.organization],
+          ['Organisations-ID', user.orgId]
         ]),
 
-    user.badgeId && ['Badge ID', user.badgeId]
-  ].filter(Boolean)
+    user.badgeId && ['Badge-ID', user.badgeId]
+  ]
+    .filter(Boolean)
+    .map(([key, value]) => ({ key, value }))
 
   return (
-    <div {...restProps} className={cx(restProps.className, BASE_CLASS, 'text-monospace')}>
-      <section>
-        <h3>nutzerdaten</h3>
-        <dl>
-          {userDataTable.map(([key, val], i) => (
-            <React.Fragment key={i}>
-              <dt>{key}</dt>
-              <dd>{val}</dd>
-            </React.Fragment>
-          ))}
-        </dl>
-      </section>
+    <div {...restProps} className={cx(restProps.className, BASE_CLASS)}>
+      <PageLayout.Header title="Benutzerkonto" subTitle={user.name}>
+        <ActionButtonGroup>
+          <button type="button" className="btn btn-secondary" onClick={onLogoutClick}>
+            Abmelden
+          </button>
+        </ActionButtonGroup>
+      </PageLayout.Header>
+      <Stack space="5">
+        <Section title="Nutzerdaten" collapsible>
+          <PropertyTable properties={userDataTable} />
+        </Section>
 
-      {!!delegations.length && (
-        <section>
-          <h3>delegationen</h3>
-          <ul>
-            {delegations.map(({ id, name, responsible }) => (
-              <li key={id}>
-                <strong>{name}</strong> - {responsible.name}
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
-
-      <section>
-        <h3>verträge</h3>
-        {!contracts.length ? (
-          <p>(noch keine)</p>
-        ) : (
-          <ul>
-            {contracts.map(({ id, createdAt, inventoryPool }) => {
-              return (
-                <li key={id}>
-                  {/* FIXME: use <DownloadLink> */}
-                  <a href={'#todo'}>
-                    [⬇] {inventoryPool.name} vom {formatDateShort(createdAt)}
-                  </a>
-                </li>
-              )
-            })}
-          </ul>
+        {!!delegations.length && (
+          <Section title="Delegationen" collapsible>
+            <ListCard.Stack>
+              {delegations.map(({ id, name, responsible }) => (
+                <ListCard key={id}>
+                  <ListCard.Title>{name}</ListCard.Title>
+                  <ListCard.Body>{responsible.name}</ListCard.Body>
+                </ListCard>
+              ))}
+            </ListCard.Stack>
+          </Section>
         )}
-      </section>
 
-      <hr />
-      <hr />
-      <hr />
-      <DebugProps {...allProps} />
+        <Section title="Verträge" collapsible>
+          {!contracts.length ? (
+            <p>(noch keine)</p>
+          ) : (
+            <Stack space="3">
+              {contracts.map(({ id, createdAt, inventoryPool }) => {
+                return (
+                  <DownloadLink href={'#todo'} key={id}>
+                    {inventoryPool.name} vom {formatDateShort(createdAt)}
+                  </DownloadLink>
+                )
+              })}
+            </Stack>
+          )}
+        </Section>
+      </Stack>
     </div>
   )
+}
+UserProfilePage.propTypes = {
+  currentUser: PropTypes.object,
+  onLogoutClick: PropTypes.func.isRequired,
+  restProps: PropTypes.object
 }
 
 export default UserProfilePage
