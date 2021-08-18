@@ -1,16 +1,20 @@
 import React from 'react'
 import cx from 'classnames'
 
-export default function PropertyTable({ properties, className, ...restProps }) {
+export default function PropertyTable({ properties, className, style, ...restProps }) {
   return (
-    <table className={className} {...restProps}>
+    <table className={className} style={{ tableLayout: 'fixed', ...style }} {...restProps}>
       <tbody>
         {(properties || []).map(({ key, value }, i) => {
           const paddingClassName = i === 0 ? '' : 'pt-2'
           return (
-            <tr key={i}>
-              <td className={cx('fw-light pe-3', paddingClassName)}>{key}</td>
-              <td className={paddingClassName}>{value}</td>
+            <tr key={i} className="align-top">
+              <td className={cx('fw-light pe-3 text-break', paddingClassName)} style={{ width: '33%' }}>
+                {key}
+              </td>
+              <td className={cx('text-break', paddingClassName)} style={{ width: '66%' }}>
+                {value}
+              </td>
             </tr>
           )
         })}
