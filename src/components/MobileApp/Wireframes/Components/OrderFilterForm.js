@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types'
 import React, { useState } from 'react'
+import { de } from 'date-fns/locale'
+
 import Section from '../../DesignComponents/Section'
 import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
 import ModalDialog from '../../DesignComponents/ModalDialog'
 import Stack from '../../DesignComponents/Stack'
-import LabelInside from '../../DesignComponents/LabelInside'
+import DatePicker from '../../DesignComponents/DatePicker'
+import { isAfter, parse } from 'date-fns'
+import Warning from '../../DesignComponents/Warning'
 
 const DEFAULT_TERM = ''
 const DEFAULT_ORDER_STATE = ''
@@ -69,6 +73,9 @@ const OrderFilterForm = ({
       delegationId
     }
   }
+
+  const parseDate = s => parse(s, 'P', new Date(), { locale: de })
+  const isEndDateBeforeStartDate = startDate && endDate && isAfter(parseDate(startDate), parseDate(endDate))
 
   return (
     <ModalDialog title="Meine Ausleihen filtern" shown>
@@ -135,30 +142,25 @@ const OrderFilterForm = ({
               <fieldset>
                 <legend className="visually-hidden">Zeitraum</legend>
                 <div className="d-flex flex-column gap-3">
-                  <LabelInside>
-                    <input
-                      type="text"
-                      name="start-date"
-                      id="start-date"
-                      className="form-control calendar-indicator"
-                      defaultValue={startDate}
-                      onChange={e => setStartDate(e.target.value)}
-                      placeholder="Unbestimmt"
-                    />
-                    <label htmlFor="start-date">Von</label>
-                  </LabelInside>
-                  <LabelInside>
-                    <input
-                      type="text"
-                      name="end-date"
-                      id="end-date"
-                      className="form-control calendar-indicator"
-                      defaultValue={startDate}
-                      onChange={e => setStartDate(e.target.value)}
-                      placeholder="Unbestimmt"
-                    />
-                    <label htmlFor="end-date">Bis</label>
-                  </LabelInside>
+                  <DatePicker
+                    locale={de}
+                    name="start-date"
+                    id="start-date"
+                    value={startDate}
+                    onChange={e => setStartDate(e.target.value)}
+                    placeholder="Unbestimmt"
+                    label={<label htmlFor="start-date">Von</label>}
+                  />
+                  <DatePicker
+                    locale={de}
+                    name="end-date"
+                    id="end-date"
+                    value={endDate}
+                    onChange={e => setEndDate(e.target.value)}
+                    placeholder="Unbestimmt"
+                    label={<label htmlFor="end-date">Bis</label>}
+                  />
+                  {isEndDateBeforeStartDate && <Warning>Bis-Datum ist vor Von-Datum</Warning>}
                 </div>
               </fieldset>
             </Section>
