@@ -63,10 +63,10 @@ export const wrap = ({ onClick }) => {
       <div className="p-3 shadow" style={{ width: '14rem' }}>
         <Stack space="3">
           <DownloadLink onClick={handleClick} href="some/route">
-            QX1204USB_Q1204USB_QSG.pdf
+            <span className="text-break">QX1204USB_Q1204USB_QSG.pdf</span>
           </DownloadLink>
           <DownloadLink onClick={handleClick} href="some/route">
-            Download the specification
+            <span className="text-break">Download the specification</span>
           </DownloadLink>
         </Stack>
       </div>
