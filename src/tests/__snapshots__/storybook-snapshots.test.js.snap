@@ -22286,7 +22286,9 @@ exports[`Storybook HTML Snapshots MobileApp/Bootstrap Theme/Spacing Spacing 1`] 
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Bootstrap Theme/Typography Typography 1`] = `
-<div>
+<div
+  className="pb-5"
+>
   <h1>
     Typography
   </h1>
@@ -22364,6 +22366,26 @@ exports[`Storybook HTML Snapshots MobileApp/Bootstrap Theme/Typography Typograph
       Very small: 
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
     </span>
+  </p>
+  <p
+    className="text-muted"
+  >
+    Text utils
+  </p>
+  <code>
+    .preserve-linebreaks
+  </code>
+  <p
+    className="preserve-linebreaks"
+  >
+    Use the class .preserve-linebreaks to
+preserve linebreaks,
+e.g. as they were entered
+by a user into
+an textarea.
+
+Even more text after a break.
+
   </p>
 </div>
 `;

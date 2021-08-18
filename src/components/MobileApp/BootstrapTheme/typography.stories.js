@@ -7,9 +7,18 @@ export default {
 const lorem =
   'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore'
 
+const exampleTextWithLinebreaks = `Use the class .preserve-linebreaks to
+preserve linebreaks,
+e.g. as they were entered
+by a user into
+an textarea.
+
+Even more text after a break.
+`
+
 export function typography() {
   return (
-    <div>
+    <div className="pb-5">
       <h1>Typography</h1>
       <p className="text-muted">Headings (h1, h2 and h3):</p>
       <h1>Heading 1</h1>
@@ -36,6 +45,9 @@ export function typography() {
       <p>
         <span className="very-small fw-light">Very small: {lorem}</span>
       </p>
+      <p className="text-muted">Text utils</p>
+      <code>.preserve-linebreaks</code>
+      <p className="preserve-linebreaks">{exampleTextWithLinebreaks}</p>
     </div>
   )
 }
