@@ -11,14 +11,10 @@ import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 import SquareImage from './DesignComponents/SquareImage'
 import PropertyTable from './DesignComponents/PropertyTable'
 
-export default function ModelShow({ model, onOrderClick, onClickFavorite, orderPanelTmp }) {
-  const [imageIndex, setImageIndex] = useState(0)
-  const [showOrderPanel, setShowOrderPanel] = useState(false)
+const noop = () => {}
 
-  function addToOrderClick() {
-    setShowOrderPanel(true)
-    onOrderClick && onOrderClick()
-  }
+export default function ModelShow({ model, onOrderClick = noop, onClickFavorite = noop }) {
+  const [imageIndex, setImageIndex] = useState(0)
 
   function addToFavoritesClick() {
     onClickFavorite(true)
@@ -72,7 +68,7 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
 
       <Stack space="5">
         <ActionButtonGroup>
-          <button type="button" className="btn btn-primary" onClick={addToOrderClick}>
+          <button type="button" className="btn btn-primary" onClick={onOrderClick}>
             Gegenstand hinzufügen
           </button>
           {model.isFavorited ? (
@@ -85,8 +81,6 @@ export default function ModelShow({ model, onOrderClick, onClickFavorite, orderP
             </button>
           )}
         </ActionButtonGroup>
-
-        {!!orderPanelTmp && showOrderPanel && <div>{orderPanelTmp}</div>}
 
         {model.description && (
           <Section title="Beschreibung" collapsible>
