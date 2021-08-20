@@ -1,8 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { parseISO as parseISODate, format as formatDate } from 'date-fns'
-import { de } from 'date-fns/locale'
 
 import PageLayout from './DesignComponents/PageLayout'
 import Stack from './DesignComponents/Stack'
@@ -12,14 +10,12 @@ import ListCard from './DesignComponents/ListCard'
 import DownloadLink from './DesignComponents/DownloadLink'
 import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 
-const formatDateShort = date => formatDate(parseISODate(date), 'P', { locale: de })
-
 const BASE_CLASS = 'ui-user-profile'
 
-function UserProfilePage({ currentUser, onLogoutClick, ...restProps }) {
+function UserProfilePage({ txt, currentUser, contracts, onLogoutClick, ...restProps }) {
   const { user } = currentUser
   const { delegations } = user
-  const contracts = user.contracts.edges.map(e => e.node)
+  const { pageTitle, sectionContracts, sectionDelegations } = txt
 
   const isLocalUser = user.organization === 'local'
 
@@ -42,20 +38,21 @@ function UserProfilePage({ currentUser, onLogoutClick, ...restProps }) {
 
   return (
     <div {...restProps} className={cx(restProps.className, BASE_CLASS)}>
-      <PageLayout.Header title="Benutzerkonto" subTitle={user.name}>
-        <ActionButtonGroup>
-          <button type="button" className="btn btn-secondary" onClick={onLogoutClick}>
-            Abmelden
-          </button>
-        </ActionButtonGroup>
+      <PageLayout.Header title={pageTitle} subTitle={user.name}>
+        {!!onLogoutClick && (
+          <ActionButtonGroup>
+            <button type="button" className="btn btn-secondary" onClick={onLogoutClick}>
+              Abmelden
+            </button>
+          </ActionButtonGroup>
+        )}
       </PageLayout.Header>
       <Stack space="5">
         <Section title="Nutzerdaten" collapsible>
           <PropertyTable properties={userDataTable} />
         </Section>
-
         {!!delegations.length && (
-          <Section title="Delegationen" collapsible>
+          <Section title={sectionDelegations} collapsible>
             <ListCard.Stack>
               {delegations.map(({ id, name, responsible }) => (
                 <ListCard key={id}>
@@ -66,16 +63,15 @@ function UserProfilePage({ currentUser, onLogoutClick, ...restProps }) {
             </ListCard.Stack>
           </Section>
         )}
-
-        <Section title="Verträge" collapsible>
+        <Section title={sectionContracts} collapsible>
           {!contracts.length ? (
             <p>(noch keine)</p>
           ) : (
             <Stack space="3">
-              {contracts.map(({ id, createdAt, inventoryPool }) => {
+              {contracts.map(({ id, downloadUrl, displayName }) => {
                 return (
-                  <DownloadLink href={'#todo'} key={id}>
-                    {inventoryPool.name} vom {formatDateShort(createdAt)}
+                  <DownloadLink key={id} href={downloadUrl} target="_blank">
+                    {displayName}
                   </DownloadLink>
                 )
               })}
@@ -86,9 +82,10 @@ function UserProfilePage({ currentUser, onLogoutClick, ...restProps }) {
     </div>
   )
 }
+
 UserProfilePage.propTypes = {
   currentUser: PropTypes.object,
-  onLogoutClick: PropTypes.func.isRequired,
+  onLogoutClick: PropTypes.func,
   restProps: PropTypes.object
 }
 

@@ -38806,7 +38806,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
         className="text-center mb-4"
       >
         <h1>
-          Benutzerkonto
+          Nutzerdaten
         </h1>
         <h2
           className="fw-light"
@@ -39093,110 +39093,9 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             </span>
           </h2>
           <div>
-            <div
-              className="mb-3"
-            >
-              <a
-                className="d-flex"
-                href="#todo"
-              >
-                <svg
-                  style={
-                    Object {
-                      "display": "inline",
-                      "flex": "16px 0 0",
-                      "marginRight": "10px",
-                      "marginTop": "2px",
-                    }
-                  }
-                >
-                  Download Icon.svg
-                </svg>
-                <div>
-                  Ausleihe Toni-Areal
-                   vom 
-                  26.05.2021
-                </div>
-              </a>
-            </div>
-            <div
-              className="mb-3"
-            >
-              <a
-                className="d-flex"
-                href="#todo"
-              >
-                <svg
-                  style={
-                    Object {
-                      "display": "inline",
-                      "flex": "16px 0 0",
-                      "marginRight": "10px",
-                      "marginTop": "2px",
-                    }
-                  }
-                >
-                  Download Icon.svg
-                </svg>
-                <div>
-                  Ausleihe Werkstatt
-                   vom 
-                  11.04.2019
-                </div>
-              </a>
-            </div>
-            <div
-              className="mb-3"
-            >
-              <a
-                className="d-flex"
-                href="#todo"
-              >
-                <svg
-                  style={
-                    Object {
-                      "display": "inline",
-                      "flex": "16px 0 0",
-                      "marginRight": "10px",
-                      "marginTop": "2px",
-                    }
-                  }
-                >
-                  Download Icon.svg
-                </svg>
-                <div>
-                  Ausleihe Toni-Areal
-                   vom 
-                  03.01.2021
-                </div>
-              </a>
-            </div>
-            <div
-              className=""
-            >
-              <a
-                className="d-flex"
-                href="#todo"
-              >
-                <svg
-                  style={
-                    Object {
-                      "display": "inline",
-                      "flex": "16px 0 0",
-                      "marginRight": "10px",
-                      "marginTop": "2px",
-                    }
-                  }
-                >
-                  Download Icon.svg
-                </svg>
-                <div>
-                  Ausleihe Werkstatt
-                   vom 
-                  23.10.2020
-                </div>
-              </a>
-            </div>
+            <p>
+              (noch keine)
+            </p>
           </div>
         </section>
       </div>

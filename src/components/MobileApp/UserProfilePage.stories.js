@@ -13,9 +13,10 @@ export default {
 }
 
 export function userProfilePage({ onLogoutClick }) {
+  const txt = { pageTitle: 'Nutzerdaten', sectionContracts: 'Verträge', sectionDelegations: 'Delegationen' }
   return (
     <PageLayoutMock>
-      <UserProfilePage currentUser={currentUser} onLogoutClick={onLogoutClick} />
+      <UserProfilePage txt={txt} currentUser={currentUser} contracts={[]} onLogoutClick={onLogoutClick} />
     </PageLayoutMock>
   )
 }
