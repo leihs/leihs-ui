@@ -35960,7 +35960,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
   <div
     className="shadow"
   >
-    <div>
+    <div
+      className="ui-page-layout"
+    >
       <nav
         className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
       >
@@ -36064,7 +36066,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
   <div
     className="shadow"
   >
-    <div>
+    <div
+      className="ui-page-layout"
+    >
       <div
         className="border-bottom text-center p-2"
       >
@@ -36098,7 +36102,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
   <div
     className="shadow"
   >
-    <div>
+    <div
+      className="ui-page-layout"
+    >
       <nav
         className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
       >
@@ -36307,13 +36313,68 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutM
     A unobtrusive element to show metadata in the bottom of a page where needed.
   </p>
   <div>
-    Page content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis voluptatum quod pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi, eos provident sit earum molestias quibusdam voluptates numquam.
+    Page content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis voluptatum quod
+pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi, eos provident sit earum
+molestias quibusdam voluptates numquam.
   </div>
   <div
     className="text-center text-black-50 fw-light pt-4"
   >
     ID: 12345
   </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutMetadata PageLayout.MetadataWithDetails (JSON) 1`] = `
+<div>
+  <h1>
+    PageLayout.Metadata
+  </h1>
+  <p
+    className="text-muted"
+  >
+    A unobtrusive element to show metadata in the bottom of a page where needed.
+  </p>
+  <div>
+    Page content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis voluptatum quod
+pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi, eos provident sit earum
+molestias quibusdam voluptates numquam.
+  </div>
+  <div
+    className="text-center text-black-50 fw-light pt-4"
+    details={
+      Object {
+        "baz": Object {
+          "a": 1,
+        },
+        "foo": "bar",
+      }
+    }
+    summary="ID: 12345"
+  />
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutMetadata PageLayout.MetadataWithDetails (text) 1`] = `
+<div>
+  <h1>
+    PageLayout.Metadata
+  </h1>
+  <p
+    className="text-muted"
+  >
+    A unobtrusive element to show metadata in the bottom of a page where needed.
+  </p>
+  <div>
+    Page content - Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus debitis voluptatum quod
+pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi, eos provident sit earum
+molestias quibusdam voluptates numquam.
+  </div>
+  <div
+    className="text-center text-black-50 fw-light pt-4"
+    details="here are some details about the page that are initially hidden"
+    summary="ID: 12345"
+  />
 </div>
 `;
 
@@ -38729,7 +38790,9 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ShoppingCart E
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePage UserProfilePage 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -39155,7 +39218,9 @@ exports[`Storybook HTML Snapshots MobileApp/Overview Overview 1`] = `
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategorie 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -39405,7 +39470,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -39702,7 +39769,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Unterkategorie 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -39877,7 +39946,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail Detail 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -40523,7 +40594,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Liste 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -41361,7 +41434,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegenstände Keine Gegenstände 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -41458,7 +41533,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegen
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Ausleihe Neue Ausleihe 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -41951,7 +42028,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >
@@ -42248,7 +42327,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1`] = `
-<div>
+<div
+  className="ui-page-layout"
+>
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
   >

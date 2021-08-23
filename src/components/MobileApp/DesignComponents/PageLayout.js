@@ -2,8 +2,9 @@ import React from 'react'
 import cx from 'classnames'
 
 export default function PageLayout({ children, navbar, className, ...restProps }) {
+  const BASE_CLASS = 'ui-page-layout'
   return (
-    <div className={className} {...restProps}>
+    <div className={cx(className, BASE_CLASS)} {...restProps}>
       {navbar}
       <div className="page-inset-x py-4 container-fluid" style={{ maxWidth: '720px' }}>
         {children}
@@ -39,3 +40,16 @@ PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...rest
   )
 }
 PageLayout.Metadata.displayName = 'PageLayout.Metadata'
+
+PageLayout.MetadataWithDetails = function PageLayoutMetadata({ summary, details }) {
+  const dataInspect = typeof details === 'string' ? details : JSON.stringify(details, 0, 2)
+  return (
+    <PageLayout.Metadata>
+      <details open={false}>
+        <summary style={{ display: 'block' }}>{summary}</summary>
+        <pre className="fs-5 text-start mt-3">{dataInspect}</pre>
+      </details>
+    </PageLayout.Metadata>
+  )
+}
+PageLayout.MetadataWithDetails.displayName = 'PageLayout.MetadataWithDetails'
