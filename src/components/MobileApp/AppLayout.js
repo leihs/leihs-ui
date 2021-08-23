@@ -17,25 +17,29 @@ export const MainView = ({ navbar = false, errors = false, className, children }
   </main>
 )
 
-export const Page = ({ title, subTitle, backLink, className, children }) => (
-  <div className={cx('ui-page p-3 p-sm-3', className)}>
-    <header className="mt-3 mb-4">
-      {!!(backLink && backLink.href) && (
-        <a {...backLink} className={cx('d-block mb-1 font-semibold', backLink.className)}>
-          {'← '}
-          {backLink.children || false}
-        </a>
-      )}
-      {!!title && (
-        <h1 className="text-3xl font-bold">
-          {title}
-          {!!subTitle && <small className="d-block mt-2 text-muted text-base">{subTitle}</small>}
-        </h1>
-      )}
-    </header>
-    {children}
-  </div>
-)
+export const Page = ({ title, subTitle, backLink, className, children }) => {
+  // eslint-disable-next-line no-console
+  console.warn('`AppLayout.Page` is deprecated, use `Design.PageLayout`!')
+  return (
+    <div className={cx('ui-page p-3 pb-5', className)}>
+      <header className="mt-3 mb-4">
+        {!!(backLink && backLink.href) && (
+          <a {...backLink} className={cx('d-block mb-1 font-semibold', backLink.className)}>
+            {'← '}
+            {backLink.children || false}
+          </a>
+        )}
+        {!!title && (
+          <h1 className="text-3xl font-bold">
+            {title}
+            {!!subTitle && <small className="d-block mt-2 text-muted text-base">{subTitle}</small>}
+          </h1>
+        )}
+      </header>
+      {children}
+    </div>
+  )
+}
 
 export const SubSection = ({ title, titleHref, className, moreLink = {}, children, Elm = 'section' }) => (
   <Elm className={cx(className, 'ui-subsection')} data-title={title}>

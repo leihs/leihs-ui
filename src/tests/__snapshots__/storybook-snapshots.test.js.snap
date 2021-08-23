@@ -36662,7 +36662,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empt
       }
     >
       <div
-        className="ui-page p-3 p-sm-3"
+        className="ui-page p-3 pb-5"
       >
         <header
           className="mt-3 mb-4"
@@ -36787,7 +36787,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empt
       }
     >
       <div
-        className="ui-page p-3 p-sm-3"
+        className="ui-page p-3 pb-5"
       >
         <header
           className="mt-3 mb-4"
@@ -36890,7 +36890,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empt
       }
     >
       <div
-        className="ui-page p-3 p-sm-3"
+        className="ui-page p-3 pb-5"
       >
         <header
           className="mt-3 mb-4"
@@ -37005,7 +37005,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Home
       }
     >
       <div
-        className="ui-page p-3 p-sm-3"
+        className="ui-page p-3 pb-5"
       >
         <header
           className="mt-3 mb-4"
@@ -37380,7 +37380,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Page
       }
     >
       <div
-        className="ui-page p-3 p-sm-3"
+        className="ui-page p-3 pb-5"
       >
         <header
           className="mt-3 mb-4"
@@ -38273,7 +38273,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ShoppingCart E
       }
     >
       <div
-        className="ui-page p-3 p-sm-3"
+        className="ui-page p-3 pb-5"
       >
         <header
           className="mt-3 mb-4"
