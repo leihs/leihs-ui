@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { format, isValid, parse, isSameDay, endOfMonth } from 'date-fns'
+import { format, isValid, parse, isSameDay } from 'date-fns'
 import { DateRange } from '@leihs/calendar'
 import LabelInside from './LabelInside'
 
@@ -59,9 +59,6 @@ export default function DateRangePicker({
       startDateInput.current.focus()
     }
   }
-
-  // loading state
-  const isLoading = maxDateLoaded && endOfMonth(maxDateLoaded) < endOfMonth(shownDate)
 
   // satellite inputs
 
@@ -151,8 +148,9 @@ export default function DateRangePicker({
           <label htmlFor="endDate">Bis</label>
         </LabelInside>
       </div>
-      <div className={cx('leihs-calendar', { 'leihs-calendar--loading': isLoading })}>
+      <div className={cx('leihs-calendar')}>
         <DateRange
+          key={shownDate || 1} // force update shown date if changed via text input
           // selection:
           ranges={[range]}
           onChange={handleSelectionChange}
@@ -169,6 +167,7 @@ export default function DateRangePicker({
           disabledDates={disabledDates}
           disabledStartDates={disabledStartDates}
           disabledEndDates={disabledEndDates}
+          allowSelectionOfDisabledDates
           // appearance and behaviour:
           className="m-0 w-100 rounded bg-light-shade"
           direction="vertical"

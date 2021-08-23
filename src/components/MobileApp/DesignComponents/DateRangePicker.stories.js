@@ -91,11 +91,11 @@ export function lazyLoading() {
   const [loading, setLoading] = useState(false)
 
   async function handleShownDateChange(date) {
-    setShownDate(date)
     const newMax = endOfMonth(date)
     if (newMax > maxDateLoaded) {
       setLoading(true)
       await new Promise(resolve => setTimeout(resolve, 1000))
+      setShownDate(date)
       setMaxDateLoaded(newMax)
       setLoading(false)
     }

@@ -58,7 +58,7 @@
   }
 }
 
-/* Component: Styling wrapper for @leihs/calendar (referenced by DateRangePicker and DatePicker) */
+/* Component: Styling wrapper for @leihs/calendar (referenced by DatePicker AND DateRangePicker) */
 
 .leihs-calendar {
   .rdrCalendarWrapper,
@@ -76,16 +76,13 @@
     font-size: 1rem;
   }
 
-  .rdrMonth,
-  .rdrMonthIsLoading {
+  .rdrMonth {
     padding: 0 0.75rem 0.5rem 0.75rem;
+    width: initial;
   }
 
-  &--loading {
-    .rdrMonth {
-      filter: opacity(30%);
-      pointer-events: none;
-    }
+  .rdrMonthPassiveOverlay {
+    background-color: transparent;
   }
 
   .rdrNextPrevButton {
@@ -106,11 +103,6 @@
     }
   }
 
-  .rdrMonth,
-  .rdrMonthIsLoading {
-    width: initial;
-  }
-
   .rdrWeekDay {
     color: $body-color;
     font-weight: $font-weight-normal;
@@ -121,75 +113,113 @@
     font-weight: $font-weight-normal;
   }
 
-  .rdrStartEdge,
-  .rdrInRange,
-  .rdrEndEdge {
-    background-color: $blue;
+  // Selection preview
+  .rdrDayStartPreview,
+  .rdrDayInPreview,
+  .rdrDayEndPreview {
+    border-color: $blue;
+    filter: none;
   }
 
-  .rdrDayDisabled {
-    background-color: transparent;
-    & :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge, .rdrSelected) {
+  // Selection
+  .rdrDay:not(.rdrDayPassive) {
+    .rdrInRange,
+    .rdrStartEdge,
+    .rdrEndEdge,
+    .rdrSelected {
+      background-color: $blue;
       filter: none;
+      & ~ .rdrDayNumber {
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+
+  // Disabled start/end dates
+  @mixin start-end-warn-icon {
+    $leihs-calendar-cross-icon: url("data:image/svg+xml,<svg width='10' height='10' xmlns='http://www.w3.org/2000/svg'><g fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke='white' stroke-width='1.4'><path d='M1 1l8 8M9 1L1 9'/></g></svg>");
+    background-image: escape-svg($leihs-calendar-cross-icon);
+    background-repeat: no-repeat;
+    background-size: 10px 10px;
+    background-position: 50% 50%;
+    color: transparent;
+  }
+  .rdrDayDisabledStart:not(.rdrDayPassive) {
+    background-color: transparent;
+    .rdrStartEdge {
+      background-color: $red;
+      & ~ .rdrDayNumber span {
+        @include start-end-warn-icon();
+      }
+    }
+    .rdrDayStartPreview {
+      border-color: $red;
+    }
+  }
+  .rdrDayDisabledEnd:not(.rdrDayPassive) {
+    background-color: transparent;
+    .rdrEndEdge {
+      background-color: $red;
+      & ~ .rdrDayNumber span {
+        @include start-end-warn-icon();
+      }
+    }
+    .rdrDayEndPreview {
+      border-color: $red;
+    }
+  }
+
+  // disabled dates
+  .rdrDayDisabled:not(.rdrDayPassive) {
+    background-color: transparent;
+    .rdrInRange,
+    .rdrStartEdge,
+    .rdrEndEdge,
+    .rdrSelected {
+      background-color: $red;
+    }
+
+    .rdrDayStartPreview,
+    .rdrDayInPreview,
+    .rdrDayEndPreview {
+      border-color: $red;
     }
 
     .rdrDayNumber span {
-      text-decoration: none !important;
+      text-decoration: none;
       color: $red;
-    }
-
-    &:not(.rdrDayDisabledStart):not(.rdrDayDisabledEnd)
-      :is(.rdrStartEdge, .rdrInRange, .rdrEndEdge, .rdrSelected) {
-      background-color: $red;
-      & ~ .rdrDayNumber span {
-        color: white;
-      }
-    }
-
-    @mixin start-end-warn-icon {
-      $leihs-calendar-cross-icon: url("data:image/svg+xml,<svg width='10' height='10' xmlns='http://www.w3.org/2000/svg'><g fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round' stroke='white' stroke-width='1.4'><path d='M1 1l8 8M9 1L1 9'/></g></svg>");
-      background-image: escape-svg($leihs-calendar-cross-icon);
-      background-repeat: no-repeat;
-      background-size: 10px 10px;
-      background-position: 50% 50%;
-      color: transparent;
-    }
-    &.rdrDayDisabledStart {
-      .rdrStartEdge {
-        background-color: $red;
-        & ~ .rdrDayNumber span {
-          @include start-end-warn-icon();
-        }
-      }
-    }
-    &.rdrDayDisabledEnd {
-      .rdrEndEdge {
-        background-color: $red;
-        & ~ .rdrDayNumber span {
-          @include start-end-warn-icon();
-        }
-      }
     }
   }
 
-  // rendering of adjacent months
-  .rdrDayPassive .rdrDayNumber span {
-    color: $gray;
+  // days of adjacent months ("passive")
+  .rdrDayPassive {
+    background-color: transparent;
+    .rdrDayNumber span {
+      text-decoration: none;
+      color: $gray;
+    }
   }
 
   // marker for today
   .rdrDayToday .rdrDayNumber span {
+    font-weight: $font-weight-normal;
     &:after {
       background: $body-color;
     }
   }
 }
 
+/* Component: DateRangePicker (see also .leihs-calendar) */
+
 .date-range-picker {
   .rdrMonth {
     height: 16rem;
   }
 }
+
+/* Component: DatePicker (see also .leihs-calendar) */
 
 .date-picker {
   .leihs-calendar {
