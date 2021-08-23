@@ -61,7 +61,15 @@ export default function DateRangePicker({
   }
 
   // loading state
-  const isLoading = maxDateLoaded && endOfMonth(maxDateLoaded) < endOfMonth(shownDate)
+  const [isLoading, setIsLoading] = useState(false)
+  useEffect(() => {
+    setIsLoading(maxDateLoaded && endOfMonth(maxDateLoaded) < endOfMonth(shownDate))
+  }, [maxDateLoaded, shownDate])
+
+  function handleShownDateChange(d) {
+    setIsLoading(maxDateLoaded && endOfMonth(maxDateLoaded) < endOfMonth(d))
+    onShownDateChange(d)
+  }
 
   // satellite inputs
 
@@ -160,7 +168,7 @@ export default function DateRangePicker({
           shownDate={shownDate}
           focusedRange={focusedRange}
           onRangeFocusChange={handleRangeFocusChange}
-          onShownDateChange={onShownDateChange}
+          onShownDateChange={handleShownDateChange}
           maxDateLoaded={maxDateLoaded}
           loadingIndicator={<div>LOADING...</div>}
           // date constraints:
