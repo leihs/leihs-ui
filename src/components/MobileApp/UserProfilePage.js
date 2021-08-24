@@ -85,8 +85,7 @@ function UserProfilePage({ txt, currentUser, contracts, onLogoutClick, ...restPr
 
 UserProfilePage.propTypes = {
   currentUser: PropTypes.object,
-  onLogoutClick: PropTypes.func,
-  restProps: PropTypes.object
+  onLogoutClick: PropTypes.func
 }
 
 export default UserProfilePage

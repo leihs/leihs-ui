@@ -10,6 +10,5 @@ Textarea.propTypes = {
   value: PropTypes.string,
   onChange: PropTypes.func,
   minRows: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  maxRows: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  restProps: PropTypes.object
+  maxRows: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 }
