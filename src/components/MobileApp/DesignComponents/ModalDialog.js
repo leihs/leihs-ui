@@ -76,22 +76,19 @@ ModalDialog.propTypes = {
   /* is called when the dialog is closed */
   onClose: PropTypes.func,
   shown: PropTypes.bool,
-  closeOnBackgroundClick: PropTypes.bool,
-  restProps: PropTypes.object
+  closeOnBackgroundClick: PropTypes.bool
 }
 
 ModalDialog.Body.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.node,
-  restProps: PropTypes.object
+  children: PropTypes.node
 }
 
 ModalDialog.Footer.propTypes = {
   className: PropTypes.string,
   children: PropTypes.node,
   actionMenu: PropTypes.node,
-  actions: PropTypes.object,
-  restProps: PropTypes.object
+  actions: PropTypes.object
 }
 
 function makeActionMenuFrom(actions) {

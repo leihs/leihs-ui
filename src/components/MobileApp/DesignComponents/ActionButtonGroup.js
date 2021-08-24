@@ -15,6 +15,5 @@ export default function ActionButtonGroup({ children, className, ...restProps })
 
 ActionButtonGroup.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
-  restProps: PropTypes.object
+  className: PropTypes.string
 }

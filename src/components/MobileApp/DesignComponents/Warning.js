@@ -12,6 +12,5 @@ export default function Warning({ children, className, ...restProps }) {
 
 Warning.propTypes = {
   children: PropTypes.node,
-  className: PropTypes.string,
-  restProps: PropTypes.object
+  className: PropTypes.string
 }
