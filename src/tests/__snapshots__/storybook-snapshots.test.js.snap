@@ -35961,7 +35961,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="shadow"
   >
     <div
-      className="ui-page-layout"
+      className="pb-5 ui-page-layout"
     >
       <nav
         className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -36067,7 +36067,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="shadow"
   >
     <div
-      className="ui-page-layout"
+      className="pb-5 ui-page-layout"
     >
       <div
         className="border-bottom text-center p-2"
@@ -36103,7 +36103,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="shadow"
   >
     <div
-      className="ui-page-layout"
+      className="pb-5 ui-page-layout"
     >
       <nav
         className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -36318,7 +36318,7 @@ pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi,
 molestias quibusdam voluptates numquam.
   </div>
   <div
-    className="text-center text-black-50 fw-light pt-4"
+    className="text-center text-black-50 fw-light mt-5 pt-3"
   >
     ID: 12345
   </div>
@@ -36341,7 +36341,7 @@ pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi,
 molestias quibusdam voluptates numquam.
   </div>
   <div
-    className="text-center text-black-50 fw-light pt-4"
+    className="text-center text-black-50 fw-light mt-5 pt-3"
     details={
       Object {
         "baz": Object {
@@ -36371,7 +36371,7 @@ pariatur dolorum adipisci itaque tempora consequuntur assumenda odit quas sequi,
 molestias quibusdam voluptates numquam.
   </div>
   <div
-    className="text-center text-black-50 fw-light pt-4"
+    className="text-center text-black-50 fw-light mt-5 pt-3"
     details="here are some details about the page that are initially hidden"
     summary="ID: 12345"
   />
@@ -36389,7 +36389,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutM
     RestProps
   </p>
   <div
-    className="text-center text-black-50 fw-light pt-4 border border-primary"
+    className="text-center text-black-50 fw-light mt-5 pt-3 border border-primary"
   >
     Metadata content
   </div>
@@ -38791,7 +38791,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ShoppingCart E
 
 exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePage UserProfilePage 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -39219,7 +39219,7 @@ exports[`Storybook HTML Snapshots MobileApp/Overview Overview 1`] = `
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategorie 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -39471,7 +39471,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -39770,7 +39770,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Unterkategorie 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -39947,7 +39947,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail Detail 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -40584,7 +40584,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
       </section>
     </div>
     <div
-      className="text-center text-black-50 fw-light pt-4"
+      className="text-center text-black-50 fw-light mt-5 pt-3"
     >
       ID 
       15874
@@ -40595,7 +40595,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Liste 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -41435,7 +41435,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegenstände Keine Gegenstände 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -41534,7 +41534,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegen
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Ausleihe Neue Ausleihe 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -42029,7 +42029,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -42328,7 +42328,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
 
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1`] = `
 <div
-  className="ui-page-layout"
+  className="pb-5 ui-page-layout"
 >
   <nav
     className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
@@ -42671,7 +42671,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
       </div>
     </div>
     <div
-      className="text-center text-black-50 fw-light pt-4"
+      className="text-center text-black-50 fw-light mt-5 pt-3"
     >
       ID: 12345
     </div>

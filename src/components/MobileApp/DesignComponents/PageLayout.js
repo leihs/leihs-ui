@@ -4,7 +4,7 @@ import cx from 'classnames'
 export default function PageLayout({ children, navbar, className, ...restProps }) {
   const BASE_CLASS = 'ui-page-layout'
   return (
-    <div className={cx(className, BASE_CLASS)} {...restProps}>
+    <div className={cx('pb-5', className, BASE_CLASS)} {...restProps}>
       {navbar}
       <div className="page-inset-x py-4 container-fluid" style={{ maxWidth: '720px' }}>
         {children}
@@ -34,7 +34,7 @@ PageLayout.Header.displayName = 'PageLayout.Header'
 
 PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...restProps }) {
   return (
-    <div className={cx('text-center text-black-50 fw-light pt-4', className)} {...restProps}>
+    <div className={cx('text-center text-black-50 fw-light mt-5 pt-3', className)} {...restProps}>
       {children}
     </div>
   )
