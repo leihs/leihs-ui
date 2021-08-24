@@ -226,11 +226,34 @@
     overflow: hidden;
     transition: max-height 0.4s;
     max-height: 0;
+
+    .rdrCalendarWrapper {
+      border: 1px solid transparent;
+      border-top-width: 0;
+    }
   }
 
   &--calendar-active {
+    .form-control {
+      border-bottom-left-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: $blue;
+      border-bottom-color: $light-gray !important;
+    }
+
     .leihs-calendar {
       max-height: 23rem; // needed for the animation. not an exact value, just a bit more than needed
+      .rdrCalendarWrapper {
+        border-color: $blue;
+      }
+    }
+
+    &.date-picker--invalid {
+      .leihs-calendar {
+        .rdrCalendarWrapper {
+          border-color: $red;
+        }
+      }
     }
   }
 }

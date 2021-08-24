@@ -25,6 +25,7 @@ export default function DatePicker({
   const [calendarActive, setCalendarActive] = useState(false)
   const [wasValidated, setWasValidated] = useState(false)
   const [validDate, setValidDate] = useState(tryParseDate(value))
+  const [isInvalid, setIsInvalid] = useState()
 
   function tryParseDate(stringValue) {
     if (!stringValue) return null
@@ -41,6 +42,7 @@ export default function DatePicker({
 
   function handleChange(e) {
     setValidDate(tryParseDate(e.target.value))
+    updateValidationState(e.target.value)
     onChange(e)
   }
 
@@ -63,6 +65,7 @@ export default function DatePicker({
     const validDateFromProp = tryParseDate(value)
     if (!isSameDay(validDateFromProp, validDate)) {
       setValidDate(tryParseDate(value))
+      updateValidationState(value)
     }
   }, [value])
 
@@ -76,25 +79,34 @@ export default function DatePicker({
     }
   }, [])
 
-  // Validator
-  useEffect(() => {
-    let msg = '' // (Note: message is not displayed in UI)
-    if (value) {
-      const date = parseDate(value)
-      if (!isValid(date)) {
-        msg = 'unparseable'
-      } else if (minDate && isBefore(date, minDate) && !isSameDay(date, minDate)) {
-        msg = 'before minDate'
-      } else if (maxDate && isAfter(date, maxDate) && !isSameDay(date, maxDate)) {
-        msg = 'after maxDate'
+  function updateValidationState(v) {
+    function validate() {
+      if (!v) {
+        return required ? 'required' : ''
       }
+      const date = parseDate(v)
+      if (!isValid(date)) {
+        return 'unparseable'
+      } else if (minDate && isBefore(date, minDate) && !isSameDay(date, minDate)) {
+        return 'before minDate'
+      } else if (maxDate && isAfter(date, maxDate) && !isSameDay(date, maxDate)) {
+        return 'after maxDate'
+      }
+      return ''
     }
+    const msg = validate() // (Note: message is not displayed in UI)
     inputRef.current && inputRef.current.setCustomValidity(msg)
-  }, [value])
+    setIsInvalid(!!msg)
+    setWasValidated(true)
+  }
 
   return (
     <div
-      className={cx('date-picker', { 'was-validated': wasValidated, 'date-picker--calendar-active': calendarActive })}
+      className={cx('date-picker', {
+        'was-validated': wasValidated,
+        'date-picker--calendar-active': calendarActive,
+        'date-picker--invalid': isInvalid
+      })}
       ref={containerRef}
     >
       <LabelInside>
