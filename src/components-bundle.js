@@ -1,3 +1,5 @@
+import Collapse from 'react-bootstrap/Collapse'
+
 import * as AppLayout from './components/MobileApp/AppLayout'
 import Bold from './components/Bold'
 import DebugProps from './components/DebugProps'
@@ -30,13 +32,16 @@ const Components = {
   Design: {
     ActionButtonGroup: require('./components/MobileApp/DesignComponents/ActionButtonGroup').default,
     Badge: require('./components/MobileApp/DesignComponents/Badge').default,
+    Collapse,
     DownloadLink: require('./components/MobileApp/DesignComponents/DownloadLink').default,
     FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
     ListCard: require('./components/MobileApp/DesignComponents/ListCard').default,
+    Menu: require('./components/MobileApp/DesignComponents/Menu').default,
     ModalDialog: require('./components/MobileApp/DesignComponents/ModalDialog').default,
     Navbar: require('./components/MobileApp/DesignComponents/Navbar').default,
     PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
     ProgressInfo: require('./components/MobileApp/DesignComponents/ProgressInfo').default,
+    PropertyTable: require('./components/MobileApp/DesignComponents/PropertyTable').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
     Stack: require('./components/MobileApp/DesignComponents/Stack').default
