@@ -44,7 +44,8 @@ const Components = {
     PropertyTable: require('./components/MobileApp/DesignComponents/PropertyTable').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
-    Stack: require('./components/MobileApp/DesignComponents/Stack').default
+    Stack: require('./components/MobileApp/DesignComponents/Stack').default,
+    Warning: require('./components/MobileApp/DesignComponents/Warning').default
   },
 
   // "app pages"
