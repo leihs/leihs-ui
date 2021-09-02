@@ -45,6 +45,7 @@ const Components = {
     Section: require('./components/MobileApp/DesignComponents/Section').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
     Stack: require('./components/MobileApp/DesignComponents/Stack').default,
+    Textarea: require('./components/MobileApp/DesignComponents/Textarea').default,
     Warning: require('./components/MobileApp/DesignComponents/Warning').default
   },
 
