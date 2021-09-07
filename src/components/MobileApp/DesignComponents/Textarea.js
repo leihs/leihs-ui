@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function Textarea({ value, onChange, minRows = 3, maxRows = 7, ...restProps }) {
+export default function Textarea({ value, onChange, inputComponent, minRows = 3, maxRows = 7, ...restProps }) {
+  const Elm = inputComponent || 'textarea' // NOTE: needed for reagent
   const rows = Math.max(minRows, Math.min(maxRows, String(value).split('\n').length))
-  return <textarea rows={rows} value={value} onChange={onChange} {...restProps} />
+  return <Elm rows={rows} value={value} onChange={onChange} {...restProps} />
 }
 
 Textarea.propTypes = {
