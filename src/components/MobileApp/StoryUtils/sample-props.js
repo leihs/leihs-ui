@@ -1,3 +1,6 @@
+import f from 'lodash'
+import { parseISO } from 'date-fns'
+
 export const categoryListPropsV1 = {
   list: [
     {
@@ -74,4 +77,32 @@ export const modelListProps = {
       caption: 'Audio'
     }
   ]
+}
+
+export function getOrderPanelMockData() {
+  const mock = require('../../../static/api-examples/features/borrow/calendar.feature/1_1_1_Model_reservation_calendar_.json')
+  const spec = mock.spec
+  const apiData = mock.result.data
+  const modelData = f.first(apiData.models.edges.map(edg => edg.node))
+  modelData.name = 'Audio-Mischpult Behringer XENYX Q1204USB'
+
+  // FIXME: pools should come from a seperate query,
+  //         and availability data should have several pools!
+  //         re-use and tranform example data for now…
+  const FAKE_SECOND_POOL_ID = '53f78fc0-2b0b-4f67-a207-b08d2a3c47b2'
+  modelData.availability.length < 2 &&
+    modelData.availability.push({
+      inventoryPool: { id: FAKE_SECOND_POOL_ID, name: 'Ein anderer Gerätepark', totalBorrowableQuantity: 5 },
+      dates: modelData.availability[0].dates
+    })
+  const inventoryPools = f.map(modelData.availability, 'inventoryPool')
+
+  return {
+    modelData,
+    inventoryPools,
+    initialInventoryPoolId: inventoryPools[0].id,
+    minDateLoaded: parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
+    maxDateLoaded: parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
+    spec
+  }
 }

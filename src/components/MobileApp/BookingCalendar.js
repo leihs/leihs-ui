@@ -15,7 +15,6 @@ import {
   eachDayOfInterval
 } from 'date-fns'
 import { de } from 'date-fns/locale'
-import ModalDialog from './DesignComponents/ModalDialog'
 import Section from './DesignComponents/Section'
 import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
@@ -45,8 +44,7 @@ export const BookingCalendar = ({
   initialInventoryPoolId,
   onInventoryPoolChange = noop,
   //
-  onSubmit = noop,
-  onCancel = noop
+  onSubmit = noop
 }) => {
   const today = startOfDay(new Date())
   const minDate = minDateTotal ? startOfDay(minDateTotal) : today
@@ -65,16 +63,18 @@ export const BookingCalendar = ({
   const allBlockedDates = calcAllBlockedDates(availabilityByDateAndPool[selectedPoolId], quantity)
   const { blockedDates, blockedStartDates, blockedEndDates } = allBlockedDates
 
-  const validationError = validateSelection(selectedRange, { minDate, maxDate }, allBlockedDates, quantity)
-  const isValidForm = !validationError
+  function validate() {
+    return validateSelection(selectedRange, { minDate, maxDate }, allBlockedDates, quantity)
+  }
+
+  const validationError = validate()
 
   function submit(e) {
     e.preventDefault()
-    onSubmit(stateForCallbacks())
-  }
-
-  function cancel() {
-    onCancel()
+    const validationError = validate()
+    if (!validationError) {
+      onSubmit(stateForCallbacks())
+    }
   }
 
   function changeQuantity(number) {
@@ -109,71 +109,59 @@ export const BookingCalendar = ({
     }
   }
   return (
-    <ModalDialog title="Gegenstand hinzufügen" className="ui-booking-calendar" shown>
-      <ModalDialog.Body>
-        <form
-          onSubmit={submit}
-          noValidate
-          className={hasUserInteracted ? 'was-validated' : ''}
-          autoComplete="off"
-          id="order-dialog-form"
-        >
-          <Stack space="4">
-            <Section>{modelData.name}</Section>
-            <Section title="Anzahl" collapsible>
-              <label htmlFor="quantity" className="visually-hidden">
-                Anzahl
-              </label>
-              <MinusPlusControl name="quantity" id="quantity" number={quantity} onChange={changeQuantity} min={1} />
-            </Section>
-            <Section title="Gerätepark" collapsible>
-              <label htmlFor="pool-id" className="visually-hidden">
-                Gerätepark
-              </label>
-              <select
-                name="pool-id"
-                id="pool-id"
-                value={selectedPoolId}
-                onChange={changeInventoryPool}
-                className="form-select"
-              >
-                {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
-                  <option key={id} value={id}>
-                    {name} (max. {totalBorrowableQuantity})
-                  </option>
-                ))}
-              </select>
-            </Section>
-            <Section title="Zeitraum" collapsible>
-              <fieldset>
-                <legend className="visually-hidden">Zeitraum</legend>
-                <DateRangePicker
-                  selectedRange={selectedRange}
-                  onChange={changeDateRange}
-                  onShownDateChange={changeShownDate}
-                  maxDateLoaded={maxDateLoaded}
-                  minDate={minDate}
-                  maxDate={maxDate}
-                  disabledDates={blockedDates}
-                  disabledStartDates={blockedStartDates}
-                  disabledEndDates={blockedEndDates}
-                  locale={de}
-                />
-              </fieldset>
-              {hasUserInteracted && validationError && <Warning>{validationError}</Warning>}
-            </Section>
-          </Stack>
-        </form>
-      </ModalDialog.Body>
-      <ModalDialog.Footer>
-        <button type="button" className="btn btn-secondary" onClick={cancel} form="order-dialog-form">
-          Abbrechen
-        </button>
-        <button type="submit" className="btn btn-primary" disabled={!isValidForm} form="order-dialog-form">
-          Hinzufügen
-        </button>
-      </ModalDialog.Footer>
-    </ModalDialog>
+    <form
+      onSubmit={submit}
+      noValidate
+      className={hasUserInteracted ? 'was-validated' : ''}
+      autoComplete="off"
+      id="order-dialog-form"
+    >
+      <Stack space="4">
+        <Section>{modelData.name}</Section>
+        <Section title={txt.quantity} collapsible>
+          <label htmlFor="quantity" className="visually-hidden">
+            {txt.quantity}
+          </label>
+          <MinusPlusControl name="quantity" id="quantity" number={quantity} onChange={changeQuantity} min={1} />
+        </Section>
+        <Section title={txt.pool} collapsible>
+          <label htmlFor="pool-id" className="visually-hidden">
+            {txt.pool}
+          </label>
+          <select
+            name="pool-id"
+            id="pool-id"
+            value={selectedPoolId}
+            onChange={changeInventoryPool}
+            className="form-select"
+          >
+            {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
+              <option key={id} value={id}>
+                {name} ({txt.max} {totalBorrowableQuantity})
+              </option>
+            ))}
+          </select>
+        </Section>
+        <Section title={txt.timeSpan} collapsible>
+          <fieldset>
+            <legend className="visually-hidden">{txt.timeSpan}</legend>
+            <DateRangePicker
+              selectedRange={selectedRange}
+              onChange={changeDateRange}
+              onShownDateChange={changeShownDate}
+              maxDateLoaded={maxDateLoaded}
+              minDate={minDate}
+              maxDate={maxDate}
+              disabledDates={blockedDates}
+              disabledStartDates={blockedStartDates}
+              disabledEndDates={blockedEndDates}
+              locale={de}
+            />
+          </fieldset>
+          {validationError && <Warning>{validationError}</Warning>}
+        </Section>
+      </Stack>
+    </form>
   )
 }
 
@@ -237,9 +225,7 @@ BookingCalendar.propTypes = {
   onInventoryPoolChange: PropTypes.func,
 
   /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
-  onSubmit: PropTypes.func.isRequired,
-  /** callback when user clicked the cancel button */
-  onCancel: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired
 }
 
 function getAvailabilityByDateAndPool(modelData) {
@@ -318,3 +304,13 @@ function validateSelection(
     }
   }
 }
+
+// Temporary text dict
+const txt = {
+  quantity: 'Anzahl',
+  pool: 'Gerätepark',
+  max: 'max.',
+  timeSpan: 'Zeitraum'
+}
+
+// TODO: use translation infrastructure for the texts in `txt` and `validateSelection`
