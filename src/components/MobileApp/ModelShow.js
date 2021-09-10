@@ -13,7 +13,7 @@ import PropertyTable from './DesignComponents/PropertyTable'
 
 const noop = () => {}
 
-export default function ModelShow({ model, onOrderClick = noop, onClickFavorite = noop }) {
+export default function ModelShow({ model, onOrderClick = noop, onClickFavorite = noop, t }) {
   const [imageIndex, setImageIndex] = useState(0)
 
   function addToFavoritesClick() {
@@ -69,15 +69,15 @@ export default function ModelShow({ model, onOrderClick = noop, onClickFavorite 
       <Stack space="5">
         <ActionButtonGroup>
           <button type="button" className="btn btn-primary" onClick={onOrderClick}>
-            Gegenstand hinzufügen
+            {t.addItemToCart}
           </button>
           {model.isFavorited ? (
             <button type="button" className="btn btn-secondary" onClick={removeFromFavoritesClick}>
-              Von Favoriten entfernen
+              {t.removeFromFavorites}
             </button>
           ) : (
             <button type="button" className="btn btn-secondary" onClick={addToFavoritesClick}>
-              Zu Favoriten hinzufügen
+              {t.addToFavorites}
             </button>
           )}
         </ActionButtonGroup>
