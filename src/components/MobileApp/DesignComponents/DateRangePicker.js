@@ -126,6 +126,7 @@ export default function DateRangePicker({
             defaultValue={dateFormatter(selectedRange.startDate)}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
+            onKeyPress={e => e.key === 'Enter' && handleInputBlur(e)}
             placeholder="Unbestimmt"
             autoComplete="off"
           />
@@ -142,6 +143,7 @@ export default function DateRangePicker({
             defaultValue={dateFormatter(selectedRange.endDate)}
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
+            onKeyPress={e => e.key === 'Enter' && handleInputBlur(e)}
             placeholder="Unbestimmt"
             autoComplete="off"
           />

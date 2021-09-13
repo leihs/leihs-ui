@@ -30050,6 +30050,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="startDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -30073,6 +30074,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="endDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -31221,6 +31223,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="startDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -31244,6 +31247,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="endDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -32334,6 +32338,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="startDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -32357,6 +32362,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="endDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -33440,6 +33446,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="startDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -33463,6 +33470,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
           name="endDate"
           onBlur={[Function]}
           onFocus={[Function]}
+          onKeyPress={[Function]}
           placeholder="Unbestimmt"
         />
         <label
@@ -34982,7 +34990,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Labe
 
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/MinusPlusControl MinusPlusControl 1`] = `
 <div
-  className=""
+  className="was-validated"
 >
   <h1>
     MinusPlusControl
@@ -35016,7 +35024,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
         className="form-control text-center"
         id="quantity"
         inputMode="numeric"
-        onBlur={[Function]}
+        onChange={[Function]}
         required={true}
         type="text"
       />
@@ -35110,7 +35118,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/MinusPlusControl Rest Props 1`] = `
-<div>
+<div
+  className="was-validated"
+>
   <h1>
     MinusPlusControl
   </h1>
@@ -35140,10 +35150,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
     >
       <input
         className="form-control text-center"
+        id="quantity"
         inputMode="numeric"
         name="quantity"
-        onBlur={[Function]}
-        placeholder="_"
+        onChange={[Function]}
+        placeholder="Zahl"
         type="text"
       />
       <div

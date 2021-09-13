@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import cx from 'classnames'
 import MinusPlusControl from './MinusPlusControl'
 
 export default {
@@ -8,22 +7,20 @@ export default {
 }
 
 export const minusPlusControl = () => {
-  const [number, setNumber] = useState(1)
-  const [dirty, setDirty] = useState(false)
+  const [value, setValue] = useState('1')
 
   function change(number) {
-    setNumber(number)
-    setDirty(true)
+    setValue(number)
   }
 
   return (
-    <div className={cx({ 'was-validated': dirty })}>
+    <div className="was-validated">
       <h1>MinusPlusControl</h1>
       <label htmlFor="quantity" className="form-label">
         Quantity (1 to 10)
       </label>
-      <MinusPlusControl number={number} onChange={change} required={true} min={1} max={10} id="quantity" />
-      {stateDebugging(number, change)}
+      <MinusPlusControl value={value} onChange={change} required={true} min={1} max={10} id="quantity" />
+      {stateDebugging(value, setValue)}
     </div>
   )
 }
@@ -31,12 +28,12 @@ minusPlusControl.storyName = 'MinusPlusControl'
 
 export function restProps() {
   return (
-    <div>
+    <div className="was-validated">
       <h1>MinusPlusControl</h1>
       <p className="text-muted">
         The attributes of the input field can be set using restProps (useful e.g. to set name or id)
       </p>
-      <MinusPlusControl max={5} placeholder="_" name="quantity" />
+      <MinusPlusControl max={5} placeholder="Zahl" name="quantity" id="quantity" />
     </div>
   )
 }

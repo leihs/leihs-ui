@@ -51,7 +51,6 @@ export const BookingCalendar = ({
   const maxDate = maxDateTotal ? startOfDay(maxDateTotal) : addMonths(minDate, 20 * 12)
 
   const [quantity, setQuantity] = useState(initialQuantity)
-  const [hasUserInteracted, setHasUserInteracted] = useState(false)
   const [selectedPoolId, setSelectedPoolId] = useState(initialInventoryPoolId || f.get(inventoryPools, '0.id'))
 
   const [selectedRange, setSelectedRange] = useState({
@@ -79,7 +78,6 @@ export const BookingCalendar = ({
 
   function changeQuantity(number) {
     setQuantity(number)
-    setHasUserInteracted(true)
     onQuantityChange(stateForCallbacks())
   }
 
@@ -91,7 +89,6 @@ export const BookingCalendar = ({
 
   function changeDateRange(range) {
     setSelectedRange(range)
-    setHasUserInteracted(true)
     onDatesChange(stateForCallbacks())
   }
 
@@ -109,20 +106,14 @@ export const BookingCalendar = ({
     }
   }
   return (
-    <form
-      onSubmit={submit}
-      noValidate
-      className={hasUserInteracted ? 'was-validated' : ''}
-      autoComplete="off"
-      id="order-dialog-form"
-    >
+    <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
       <Stack space="4">
         <Section>{modelData.name}</Section>
         <Section title={txt.quantity} collapsible>
           <label htmlFor="quantity" className="visually-hidden">
             {txt.quantity}
           </label>
-          <MinusPlusControl name="quantity" id="quantity" number={quantity} onChange={changeQuantity} min={1} />
+          <MinusPlusControl name="quantity" id="quantity" value={quantity} onChange={changeQuantity} min={1} />
         </Section>
         <Section title={txt.pool} collapsible>
           <label htmlFor="pool-id" className="visually-hidden">
@@ -264,7 +255,8 @@ function validateSelection(
   { blockedDates, blockedStartDates, blockedEndDates },
   wantedQuantity
 ) {
-  if (!wantedQuantity) {
+  wantedQuantity = parseInt(wantedQuantity, 10)
+  if (Number.isNaN(wantedQuantity) || wantedQuantity < 1) {
     return 'Verfügbarkeit kann nicht geprüft werden, da die Anzahl fehlt'
   }
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import cx from 'classnames'
 
-export default function MinusPlusControl({ className, number, onChange, min, max, ...restProps }) {
+export default function MinusPlusControl({ className, value, onChange, min, max, ...restProps }) {
   const inputRef = useRef()
   const minusBtnRef = useRef()
   const plusBtnRef = useRef()
@@ -11,17 +11,18 @@ export default function MinusPlusControl({ className, number, onChange, min, max
   const defaultNumber = isNaN(min) ? 1 : min
 
   useEffect(() => {
-    // PATCH to prevent crash in DOM-less tests
-    if (!inputRef.current) return
-    update(number)
-  }, [number, min, max])
+    if (!inputRef.current) return // (PATCH to prevent crash in DOM-less tests)
 
-  function update(num) {
-    if (isNaN(num)) {
-      inputRef.current.value = ''
+    update(value)
+  }, [value, min, max])
+
+  function update(value) {
+    value = value === undefined ? '' : value
+    const num = parseInt(value, 10)
+    inputRef.current.value = value
+    if (Number.isNaN(num)) {
       setValidity('Zahl eingeben')
     } else {
-      inputRef.current.value = num
       if (!isNaN(min) && num < min) {
         setValidity(`Minimal ${min}`)
       } else if (!isNaN(max) && num > max) {
@@ -40,8 +41,8 @@ export default function MinusPlusControl({ className, number, onChange, min, max
     msgRef.current.innerText = msg
   }
 
-  function emitChange(num) {
-    onChange && onChange(num)
+  function emitChange(value) {
+    onChange && onChange(value)
   }
 
   // event handlers:
@@ -52,10 +53,9 @@ export default function MinusPlusControl({ className, number, onChange, min, max
     emitChange(num)
   }
 
-  function blur(e) {
-    const num = parseInt(e.target.value, 10)
-    update(num)
-    emitChange(num)
+  function change(e) {
+    update(e.target.value)
+    emitChange(e.target.value)
   }
 
   function buttonMouseDown(e) {
@@ -84,7 +84,7 @@ export default function MinusPlusControl({ className, number, onChange, min, max
           ref={inputRef}
           type="text"
           inputMode="numeric"
-          onBlur={blur}
+          onChange={change}
         />
         <div ref={msgRef} className="invalid-feedback"></div>
       </div>
