@@ -69,6 +69,7 @@ export const required = () => {
     </div>
   )
 }
+
 export const constraints = () => {
   const [value, setValue] = useState('01.08.2021')
   return (
@@ -83,6 +84,46 @@ export const constraints = () => {
         label={<label htmlFor="the-date">Date</label>}
         minDate={new Date('2021-08-16')}
         maxDate={new Date('2021-08-22')}
+      />
+    </div>
+  )
+}
+
+// eslint-disable-next-line react/display-name
+const DummyInput = React.forwardRef((props, ref) => (
+  <div style={{ border: '1px dashed blue' }}>
+    <input ref={ref} {...props} data-dummy-input />
+  </div>
+))
+
+export const otherProps = () => {
+  const [value, setValue] = useState('01.08.2021')
+
+  return (
+    <div className="was-validated">
+      <h1>DatePicker</h1>
+      <p className="text-muted">
+        The attributes of the input field can be set using restProps (useful e.g. to set name, id, placeholder,
+        className etc)
+      </p>
+      <DatePicker
+        locale={de}
+        value={value}
+        label={<label htmlFor="the-date">Date</label>}
+        onChange={e => setValue(e.target.value)}
+        name="date-of-birth"
+        className="bg-info"
+      />
+      <p></p>
+      <p className="text-muted">
+        <code>inputComponent</code>: replace the native `input` component by a modified one if needed (e.g. for Reagent)
+      </p>
+      <DatePicker
+        locale={de}
+        value={value}
+        label={<label htmlFor="the-date">Date</label>}
+        onChange={e => setValue(e.target.value)}
+        inputComponent={DummyInput}
       />
     </div>
   )

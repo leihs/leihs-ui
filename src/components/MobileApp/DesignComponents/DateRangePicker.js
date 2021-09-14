@@ -20,7 +20,10 @@ export default function DateRangePicker({
   disabledStartDates,
   disabledEndDates,
   // other:
-  locale
+  locale,
+  inputComponent: InputComponent = 'input',
+  className,
+  ...restProps
 }) {
   const dateFormatter = date => format(date, 'P', { locale: locale })
   const dateParser = s => parse(s, 'P', new Date(), { locale: locale })
@@ -115,10 +118,10 @@ export default function DateRangePicker({
   }
 
   return (
-    <div className="date-range-picker">
+    <div className={cx('date-range-picker ui-date-range-picker', className)} {...restProps}>
       <div className="mb-3">
         <LabelInside>
-          <input
+          <InputComponent
             ref={startDateInput}
             name="startDate"
             id="startDate"
@@ -135,7 +138,7 @@ export default function DateRangePicker({
       </div>
       <div className="mb-0">
         <LabelInside>
-          <input
+          <InputComponent
             ref={endDateInput}
             name="endDate"
             id="endDate"
@@ -221,5 +224,7 @@ DateRangePicker.propTypes = {
   // other:
 
   /** the date-fns locale, e.g. `import { de } from 'date-fns/locale'` */
-  dateLocale: PropTypes.object
+  dateLocale: PropTypes.object,
+  /** component to use instead of the native 'input' component if needed (e.g. for Reagent) */
+  inputComponent: PropTypes.oneOfType([PropTypes.object, PropTypes.func, PropTypes.string])
 }

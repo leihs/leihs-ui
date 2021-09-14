@@ -1,8 +1,14 @@
 import React, { useRef } from 'react'
 import cx from 'classnames'
 import Icon, { iconCross } from './Icons'
+import PropTypes from 'prop-types'
 
-export default function InputWithClearButton({ className, onChange, ...restProps }) {
+export default function InputWithClearButton({
+  className,
+  onChange,
+  inputComponent: InputComponent = 'input',
+  ...restProps
+}) {
   const inputRef = useRef()
   function clearClick(e) {
     // FIXME: better trigger an "real" onChange directly on the input?
@@ -15,7 +21,7 @@ export default function InputWithClearButton({ className, onChange, ...restProps
   }
   return (
     <div className="position-relative">
-      <input
+      <InputComponent
         ref={inputRef}
         type="text"
         className={cx('form-control selectish-feedback-icon', className)}
@@ -35,4 +41,11 @@ export default function InputWithClearButton({ className, onChange, ...restProps
       </button>
     </div>
   )
+}
+
+InputWithClearButton.propTypes = {
+  className: PropTypes.string,
+  onChange: PropTypes.func,
+  /** component to use instead of the native 'input' component if needed (e.g. for Reagent) */
+  inputComponent: PropTypes.oneOfType([PropTypes.object, PropTypes.func, PropTypes.string])
 }

@@ -14,6 +14,7 @@ export default function DatePicker({
   label,
   minDate,
   maxDate,
+  inputComponent: InputComponent = 'input',
   ...restProps
 }) {
   const formatDate = date => format(date, 'P', { locale: locale })
@@ -110,7 +111,7 @@ export default function DatePicker({
       ref={containerRef}
     >
       <LabelInside>
-        <input
+        <InputComponent
           ref={inputRef}
           className={cx('form-control calendar-indicator', className)}
           value={value}
@@ -158,5 +159,7 @@ DatePicker.propTypes = {
   /** earliest date that can be selected */
   minDate: PropTypes.instanceOf(Date),
   /** latest date that can be selected */
-  maxDate: PropTypes.instanceOf(Date)
+  maxDate: PropTypes.instanceOf(Date),
+  /** component to use instead of the native 'input' component if needed (e.g. for Reagent) */
+  inputComponent: PropTypes.oneOfType([PropTypes.object, PropTypes.func, PropTypes.string])
 }

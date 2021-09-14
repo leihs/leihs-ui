@@ -1,7 +1,16 @@
 import React, { useEffect, useRef } from 'react'
 import cx from 'classnames'
+import PropTypes from 'prop-types'
 
-export default function MinusPlusControl({ className, value, onChange, min, max, ...restProps }) {
+export default function MinusPlusControl({
+  className,
+  value,
+  onChange,
+  min,
+  max,
+  inputComponent: InputComponent = 'input',
+  ...restProps
+}) {
   const inputRef = useRef()
   const minusBtnRef = useRef()
   const plusBtnRef = useRef()
@@ -78,7 +87,7 @@ export default function MinusPlusControl({ className, value, onChange, min, max,
         </button>
       </div>
       <div className="col-4">
-        <input
+        <InputComponent
           className={cx('form-control text-center', className)}
           {...restProps}
           ref={inputRef}
@@ -102,4 +111,11 @@ export default function MinusPlusControl({ className, value, onChange, min, max,
       </div>
     </div>
   )
+}
+
+MinusPlusControl.propTypes = {
+  className: PropTypes.string,
+  onChange: PropTypes.func,
+  /** component to use instead of the native 'input' component if needed (e.g. for Reagent) */
+  inputComponent: PropTypes.oneOfType([PropTypes.object, PropTypes.func, PropTypes.string])
 }

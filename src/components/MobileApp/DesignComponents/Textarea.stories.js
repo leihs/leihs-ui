@@ -108,3 +108,38 @@ export const uncontrolled = () => {
     </div>
   )
 }
+
+// eslint-disable-next-line react/display-name
+const MyInput = React.forwardRef((props, ref) => (
+  <div style={{ border: '1px dashed blue' }}>
+    <textarea ref={ref} {...props} data-dummy-input />
+  </div>
+))
+
+export const otherProps = ({ minRows, maxRows }) => {
+  const [message, setMessage] = useState('')
+
+  return (
+    <div>
+      <h1>Textarea</h1>
+      <p className="text-muted">
+        The attributes of the textarea can be set using restProps (useful e.g. to set placeholder, name or id)
+      </p>
+      <Textarea className="form-control" placeholder="Hello" name="message" id="message" />
+      <p></p>
+      <p className="text-muted">
+        <code>inputComponent</code>: replace the native `textarea` component by a modified one if needed (e.g. for
+        Reagent)
+      </p>
+      <Textarea
+        name="name"
+        value={message}
+        onChange={e => setMessage(e.target.value)}
+        className="form-control"
+        minRows={minRows}
+        maxRows={maxRows}
+        inputComponent={MyInput}
+      />
+    </div>
+  )
+}

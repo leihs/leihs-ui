@@ -79,3 +79,43 @@ export const inlineBlock = () => {
     </div>
   )
 }
+
+// eslint-disable-next-line react/display-name
+const DummyInput = React.forwardRef((props, ref) => (
+  <div style={{ border: '1px dashed blue' }}>
+    <input ref={ref} {...props} data-dummy-input />
+  </div>
+))
+
+export const otherProps = () => {
+  const [name, setName] = useState('')
+
+  return (
+    <div>
+      <h1>InputWithClearButton</h1>
+      <p className="text-muted">
+        The attributes of the input field can be set using restProps (useful e.g. to set name, id, placeholder,
+        className etc)
+      </p>
+      <InputWithClearButton
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={name}
+        onChange={e => setName(e.target.value)}
+        inputComponent={DummyInput}
+      />
+      <p className="text-muted">
+        <code>inputComponent</code>: replace the native `input` component by a modified one if needed (e.g. for Reagent)
+      </p>
+      <InputWithClearButton
+        type="text"
+        name="name"
+        placeholder="Name"
+        value={name}
+        onChange={e => setName(e.target.value)}
+        inputComponent={DummyInput}
+      />
+    </div>
+  )
+}

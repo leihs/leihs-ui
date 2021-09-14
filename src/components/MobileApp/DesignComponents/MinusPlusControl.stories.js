@@ -26,7 +26,14 @@ export const minusPlusControl = () => {
 }
 minusPlusControl.storyName = 'MinusPlusControl'
 
-export function restProps() {
+// eslint-disable-next-line react/display-name
+const DummyInput = React.forwardRef((props, ref) => (
+  <div style={{ border: '1px dashed blue' }}>
+    <input ref={ref} {...props} data-dummy-input />
+  </div>
+))
+
+export function otherProps() {
   return (
     <div className="was-validated">
       <h1>MinusPlusControl</h1>
@@ -34,6 +41,11 @@ export function restProps() {
         The attributes of the input field can be set using restProps (useful e.g. to set name or id)
       </p>
       <MinusPlusControl max={5} placeholder="Zahl" name="quantity" id="quantity" />
+      <p></p>
+      <p className="text-muted">
+        <code>inputComponent</code>: replace the native `input` component by a modified one if needed (e.g. for Reagent)
+      </p>
+      <MinusPlusControl inputComponent={DummyInput} />
     </div>
   )
 }

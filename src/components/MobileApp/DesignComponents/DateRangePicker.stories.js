@@ -120,6 +120,35 @@ export function lazyLoading() {
   )
 }
 
+// eslint-disable-next-line react/display-name
+const DummyInput = React.forwardRef((props, ref) => (
+  <div style={{ border: '1px dashed blue' }}>
+    <input ref={ref} {...props} data-dummy-input />
+  </div>
+))
+
+export function otherProps() {
+  const now = new Date()
+  const [selectedRange, setSelectedRange] = useState({ startDate: now, endDate: now })
+
+  return (
+    <div>
+      <h1>DateRangePicker</h1>
+      <p className="text-muted">Other props (so called `restProps`) are applied to the wrapper div</p>
+      <DateRangePicker
+        selectedRange={selectedRange}
+        onChange={setSelectedRange}
+        className="border border-primary p-3"
+      />
+      <p></p>
+      <p className="text-muted">
+        <code>inputComponent</code>: replace the native `input` component by a modified one if needed (e.g. for Reagent)
+      </p>
+      <DateRangePicker selectedRange={selectedRange} onChange={setSelectedRange} inputComponent={DummyInput} />
+    </div>
+  )
+}
+
 export const underlyingDateRangeComponent = () => {
   const now = new Date()
   const [selectedRange, setSelectedRange] = useState({
