@@ -1,4 +1,5 @@
 import React from 'react'
+import { action } from '@storybook/addon-actions'
 import Badge from './Badge'
 
 export default {
@@ -12,6 +13,18 @@ export const badge = () => {
       <h1>Badge</h1>
       <p className="text-muted">It typically shows some important attribute or status.</p>
       <Badge>12 Tage ab 27.5.2021</Badge>
+      <p className="text-muted mt-2">
+        It can also be a <code>{'<a>'}</code>.
+      </p>
+      <Badge as="a" href={'#example-link'}>
+        23 Tage ab 27.5.2021
+      </Badge>
+      <p className="text-muted mt-2">
+        It can also be a <code>{'<button>'}</code>.
+      </p>
+      <Badge as="button" className="btn btn-link" onClick={action('badge click')}>
+        42 Tage ab 27.5.2021
+      </Badge>
     </div>
   )
 }
