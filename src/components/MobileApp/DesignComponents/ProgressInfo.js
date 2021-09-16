@@ -13,26 +13,30 @@ export default function ProgressInfo({ title, info, totalCount, doneCount, small
 }
 
 ProgressInfo.propTypes = {
-  title: PropTypes.string.isRequired,
-  totalCount: PropTypes.number.isRequired,
-  doneCount: PropTypes.number.isRequired,
+  title: PropTypes.string,
+  totalCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  doneCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.node,
   small: PropTypes.bool,
   className: PropTypes.string
 }
 
 function Progressbar({ totalCount, doneCount }) {
-  if (totalCount === 0) {
-    return null
-  }
-  var percent = Number(doneCount / totalCount).toLocaleString(undefined, { style: 'percent', minimumFractionDigits: 0 })
+  let done = Number(doneCount / totalCount)
+  done = Number.isFinite(done) ? done : 0
+
+  // Percentage with 2 fraction digits e.g. "33.33%"
+  var donePercents = done.toLocaleString(undefined, {
+    style: 'percent',
+    minimumFractionDigits: 2
+  })
 
   return (
     <div className="progress" style={{ height: '0.5rem' }}>
       <div
         className="progress-bar rounded"
         role="progressbar"
-        style={{ width: percent }}
+        style={{ width: donePercents }}
         aria-valuenow={doneCount}
         aria-valuemin="0"
         aria-valuemax={totalCount}

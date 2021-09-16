@@ -32,19 +32,18 @@ export const options = () => {
         />
         <ProgressInfo title="Download in progress (normal)" info="33% done" totalCount="100" doneCount="33" />
       </div>
-      <p className="text-muted">Combinations:</p>
+      <p className="text-muted">Combinations</p>
       <div className="d-flex flex-column gap-3 mb-4">
+        <div className="text-muted">title + progressbar:</div>
         <ProgressInfo title="Download in progress" totalCount="100" doneCount="33" />
+        <div className="text-muted">progressbar + info:</div>
         <ProgressInfo info="33% of download done" totalCount="100" doneCount="33" />
+        <div className="text-muted">progressbar only:</div>
         <ProgressInfo totalCount="100" doneCount="33" />
-        <ProgressInfo
-          title="Text only"
-          info={
-            <>
-              No progressbar when <code>!totalCount</code>
-            </>
-          }
-        />
+        <div className="text-muted">
+          title/info only (when <code>!totalCount</code>):
+        </div>
+        <ProgressInfo title="Download stopped" info="You cancelled the download" doneCount="33" />
       </div>
       <p className="text-muted">Set arbitrary attributes with restProps:</p>
       <div className="d-flex flex-column gap-3 mb-4">
