@@ -43,6 +43,7 @@ const Components = {
     ProgressInfo: require('./components/MobileApp/DesignComponents/ProgressInfo').default,
     PropertyTable: require('./components/MobileApp/DesignComponents/PropertyTable').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,
+    Spinner: require('./components/MobileApp/DesignComponents/Spinner').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
     Stack: require('./components/MobileApp/DesignComponents/Stack').default,
     Textarea: require('./components/MobileApp/DesignComponents/Textarea').default,

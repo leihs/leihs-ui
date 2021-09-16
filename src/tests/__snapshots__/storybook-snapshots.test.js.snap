@@ -21758,6 +21758,21 @@ Array [
   <p
     className="text-muted"
   >
+    Button with wait spinner
+  </p>,
+  <p>
+    <button
+      className="btn btn-secondary"
+      disabled={false}
+      onClick={[Function]}
+      type="submit"
+    >
+      Click me
+    </button>
+  </p>,
+  <p
+    className="text-muted"
+  >
     See also: Design components to arrange buttons:
   </p>,
   <p
@@ -24024,7 +24039,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
           role="progressbar"
           style={
             Object {
-              "width": "33%",
+              "width": "33.00%",
             }
           }
         />
@@ -24059,7 +24074,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
           role="progressbar"
           style={
             Object {
-              "width": "33%",
+              "width": "33.00%",
             }
           }
         />
@@ -24074,11 +24089,16 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
   <p
     className="text-muted"
   >
-    Combinations:
+    Combinations
   </p>
   <div
     className="d-flex flex-column gap-3 mb-4"
   >
+    <div
+      className="text-muted"
+    >
+      title + progressbar:
+    </div>
     <div
       className="d-flex flex-column gap-1"
     >
@@ -24103,11 +24123,16 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
           role="progressbar"
           style={
             Object {
-              "width": "33%",
+              "width": "33.00%",
             }
           }
         />
       </div>
+    </div>
+    <div
+      className="text-muted"
+    >
+      progressbar + info:
     </div>
     <div
       className="d-flex flex-column gap-1"
@@ -24131,7 +24156,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
           role="progressbar"
           style={
             Object {
-              "width": "33%",
+              "width": "33.00%",
             }
           }
         />
@@ -24143,6 +24168,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
       </div>
     </div>
     <div
+      className="text-muted"
+    >
+      progressbar only:
+    </div>
+    <div
       className="d-flex flex-column gap-1"
     >
       <div
@@ -24164,11 +24194,20 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
           role="progressbar"
           style={
             Object {
-              "width": "33%",
+              "width": "33.00%",
             }
           }
         />
       </div>
+    </div>
+    <div
+      className="text-muted"
+    >
+      title/info only (when 
+      <code>
+        !totalCount
+      </code>
+      ):
     </div>
     <div
       className="d-flex flex-column gap-1"
@@ -24176,15 +24215,12 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
       <div
         className=""
       >
-        Text only
+        Download stopped
       </div>
       <div
         className="fw-light small"
       >
-        No progressbar when 
-        <code>
-          !totalCount
-        </code>
+        You cancelled the download
       </div>
     </div>
   </div>
@@ -24220,7 +24256,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
           role="progressbar"
           style={
             Object {
-              "width": "66%",
+              "width": "66.00%",
             }
           }
         />
@@ -24269,7 +24305,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
         role="progressbar"
         style={
           Object {
-            "width": "33%",
+            "width": "33.00%",
           }
         }
       />
@@ -24814,6 +24850,64 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Section Se
       The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
     </div>
   </section>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Spinner Spinner 1`] = `
+<div>
+  <h1>
+    Spinner
+  </h1>
+  <p
+    className="text-muted"
+  >
+    An animation indicating that the application is doing something.
+  </p>
+  <div
+    className="d-flex flex-column gap-3 mb-4"
+  >
+    <span
+      aria-hidden={true}
+      className="spinner-border spinner-border-sm"
+      role="status"
+    />
+  </div>
+  <p
+    className="text-muted"
+  >
+    Inside a button:
+  </p>
+  <div
+    className="d-flex flex-column gap-3 mb-4"
+  >
+    <button
+      className="btn btn-primary"
+      disabled={true}
+      type="button"
+    >
+      <span
+        aria-hidden={true}
+        className="spinner-border spinner-border-sm"
+        role="status"
+      />
+       Saving
+    </button>
+  </div>
+  <p
+    className="text-muted"
+  >
+    Example with "rest props":
+  </p>
+  <div
+    className="d-flex flex-column gap-3 mb-4"
+  >
+    <span
+      aria-hidden={true}
+      className="spinner-border spinner-border-sm m-auto"
+      data-example="example"
+      role="status"
+    />
+  </div>
 </div>
 `;
 
@@ -45141,7 +45235,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                     role="progressbar"
                     style={
                       Object {
-                        "width": "33%",
+                        "width": "33.33%",
                       }
                     }
                   />
@@ -45281,7 +45375,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                         role="progressbar"
                         style={
                           Object {
-                            "width": "33%",
+                            "width": "33.33%",
                           }
                         }
                       />
@@ -45345,7 +45439,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                         role="progressbar"
                         style={
                           Object {
-                            "width": "33%",
+                            "width": "33.33%",
                           }
                         }
                       />
@@ -45849,7 +45943,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                           role="progressbar"
                           style={
                             Object {
-                              "width": "33%",
+                              "width": "33.33%",
                             }
                           }
                         />
@@ -45952,7 +46046,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                           role="progressbar"
                           style={
                             Object {
-                              "width": "57%",
+                              "width": "57.14%",
                             }
                           }
                         />
@@ -46055,7 +46149,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                           role="progressbar"
                           style={
                             Object {
-                              "width": "75%",
+                              "width": "75.00%",
                             }
                           }
                         />
@@ -46094,7 +46188,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                           role="progressbar"
                           style={
                             Object {
-                              "width": "50%",
+                              "width": "50.00%",
                             }
                           }
                         />
@@ -46197,7 +46291,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                           role="progressbar"
                           style={
                             Object {
-                              "width": "67%",
+                              "width": "66.67%",
                             }
                           }
                         />
@@ -46920,7 +47014,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                   role="progressbar"
                   style={
                     Object {
-                      "width": "77%",
+                      "width": "76.67%",
                     }
                   }
                 />
