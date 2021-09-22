@@ -3,12 +3,12 @@ import { action } from '@storybook/addon-actions'
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 
 import { getOrderPanelMockData } from './StoryUtils/sample-props'
-import { BookingCalendar } from './BookingCalendar'
+import OrderPanel from './OrderPanel'
 import ModalDialog from './DesignComponents/ModalDialog'
 
 export default {
   title: 'MobileApp/Integrated Components/OrderPanel',
-  component: BookingCalendar,
+  component: OrderPanel,
   parameters: {
     layout: 'fullscreen',
     storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
@@ -28,7 +28,7 @@ export const withAllArguments = () => {
   return (
     <ModalDialog title="Gegenstand hinzufügen" className="ui-booking-calendar" shown>
       <ModalDialog.Body>
-        <BookingCalendar
+        <OrderPanel
           modelData={modelData}
           //
           minDateTotal={now}
@@ -82,7 +82,7 @@ export const withMinimalArguments = () => {
   return (
     <ModalDialog title="Gegenstand hinzufügen" className="ui-booking-calendar" shown>
       <ModalDialog.Body>
-        <BookingCalendar
+        <OrderPanel
           modelData={modelData}
           minDateLoaded={minDateLoaded}
           maxDateLoaded={maxDateLoaded}

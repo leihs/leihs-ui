@@ -3,7 +3,7 @@ import React from 'react'
 import ModalDialog from '../../../DesignComponents/ModalDialog'
 import Stack from '../../../DesignComponents/Stack'
 import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
-import { BookingCalendar } from '../../../BookingCalendar'
+import OrderPanel from '../../../OrderPanel'
 import { getOrderPanelMockData } from '../../../StoryUtils/sample-props'
 
 export default {
@@ -25,7 +25,7 @@ export const gegenstandBearbeiten = ({ onSubmit, onCancel, onRemoveClick }) => {
     <ModalDialog title="Gegenstand bearbeiten" shown>
       <ModalDialog.Body>
         <Stack space="4">
-          <BookingCalendar
+          <OrderPanel
             modelData={modelData}
             minDateLoaded={minDateLoaded}
             maxDateLoaded={maxDateLoaded}

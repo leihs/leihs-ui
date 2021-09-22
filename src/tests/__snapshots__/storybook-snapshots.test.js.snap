@@ -22518,7 +22518,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Badg
     It typically shows some important attribute or status.
   </p>
   <div
-    className="badge rounded-pill fw-light bg-secondary text-dark"
+    className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
     style={
       Object {
         "padding": "7px 20px 8px 20px",
@@ -22527,6 +22527,46 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Badg
   >
     12 Tage ab 27.5.2021
   </div>
+  <p
+    className="text-muted mt-2"
+  >
+    It can also be a 
+    <code>
+      &lt;a&gt;
+    </code>
+    .
+  </p>
+  <a
+    className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+    href="#example-link"
+    style={
+      Object {
+        "padding": "7px 20px 8px 20px",
+      }
+    }
+  >
+    23 Tage ab 27.5.2021
+  </a>
+  <p
+    className="text-muted mt-2"
+  >
+    It can also be a 
+    <code>
+      &lt;button&gt;
+    </code>
+    .
+  </p>
+  <button
+    className="badge rounded-pill fw-light bg-secondary text-dark btn btn-link ui-badge"
+    onClick={[Function]}
+    style={
+      Object {
+        "padding": "7px 20px 8px 20px",
+      }
+    }
+  >
+    42 Tage ab 27.5.2021
+  </button>
 </div>
 `;
 
@@ -22549,7 +22589,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Them
     .
   </p>
   <div
-    className="badge rounded-pill fw-light bg-danger"
+    className="badge rounded-pill fw-light bg-secondary text-dark bg-danger ui-badge"
     style={
       Object {
         "padding": "7px 20px 8px 20px",
@@ -45546,7 +45586,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark"
+                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -45612,7 +45652,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark"
+                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -45678,7 +45718,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark"
+                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47184,7 +47224,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-danger"
+                  className="badge rounded-pill fw-light bg-secondary text-dark bg-danger ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47250,7 +47290,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark"
+                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47316,7 +47356,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark"
+                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47943,7 +47983,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-danger"
+                  className="badge rounded-pill fw-light bg-secondary text-dark bg-danger ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47978,7 +48018,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark"
+                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",

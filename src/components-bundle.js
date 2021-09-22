@@ -21,7 +21,7 @@ const Components = {
 
   AppLayout,
   // "fach komponenten"
-  BookingCalendar: require('./components/MobileApp/BookingCalendar').BookingCalendar,
+  OrderPanel: require('./components/MobileApp/OrderPanel').default,
   CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
   FilterBubblePanelSwitcher: require('./components/MobileApp/TmpFilterBubblePanelSwitcher').default,
   ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,

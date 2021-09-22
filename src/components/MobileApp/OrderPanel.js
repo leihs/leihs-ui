@@ -23,8 +23,7 @@ import Warning from './DesignComponents/Warning'
 
 const noop = () => {}
 
-// FIXME: rename to OrderPanel
-export const BookingCalendar = ({
+const OrderPanel = ({
   modelData,
   //
   minDateTotal,
@@ -156,6 +155,8 @@ export const BookingCalendar = ({
   )
 }
 
+export default OrderPanel
+
 const modelDataPropType = PropTypes.shape({
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
@@ -176,7 +177,7 @@ const modelDataPropType = PropTypes.shape({
   ).isRequired
 })
 
-BookingCalendar.propTypes = {
+OrderPanel.propTypes = {
   /** availabilty and visits info from API */
   modelData: modelDataPropType.isRequired,
 
