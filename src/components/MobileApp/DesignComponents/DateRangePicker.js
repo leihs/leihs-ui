@@ -5,6 +5,10 @@ import { format, isValid, parse, isSameDay } from 'date-fns'
 import { DateRange } from '@leihs/calendar'
 import LabelInside from './LabelInside'
 
+const defaultTxt = {
+  from: 'Von',
+  until: 'Bis'
+}
 export default function DateRangePicker({
   // selection:
   selectedRange,
@@ -20,9 +24,10 @@ export default function DateRangePicker({
   disabledStartDates,
   disabledEndDates,
   // other:
-  locale,
   inputComponent: InputComponent = 'input',
   className,
+  locale,
+  txt = defaultTxt,
   ...restProps
 }) {
   const dateFormatter = date => format(date, 'P', { locale: locale })
@@ -133,7 +138,7 @@ export default function DateRangePicker({
             placeholder="Unbestimmt"
             autoComplete="off"
           />
-          <label htmlFor="startDate">Von</label>
+          <label htmlFor="startDate">{txt.from}</label>
         </LabelInside>
       </div>
       <div className="mb-0">
@@ -150,7 +155,7 @@ export default function DateRangePicker({
             placeholder="Unbestimmt"
             autoComplete="off"
           />
-          <label htmlFor="endDate">Bis</label>
+          <label htmlFor="endDate">{txt.until}</label>
         </LabelInside>
       </div>
       <div className={cx('leihs-calendar')}>

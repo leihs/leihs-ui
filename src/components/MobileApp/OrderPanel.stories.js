@@ -15,6 +15,36 @@ export default {
   }
 }
 
+const fake_locale = 'de-CH'
+const fake_txt = {
+  label: {
+    quantity: { 'de-CH': 'Anzahl' },
+    minus: { 'de-CH': 'Minus' },
+    plus: { 'de-CH': 'Plus' },
+    pool: { 'de-CH': 'Gerätepark' },
+    'pool-max-amount': { 'de-CH': '{pool} (max. {amount, number})' },
+    timespan: { 'de-CH': 'Zeitraum' },
+    from: { 'de-CH': 'Von' },
+    until: { 'de-CH': 'Bis' }
+  },
+  validate: {
+    'missing-quantity': { 'de-CH': 'Verfügbarkeit kann nicht geprüft werden, da die Anzahl fehlt' },
+    'invalid-start-date': { 'de-CH': 'Ungültiges Beginndatum' },
+    'invalid-end-date': { 'de-CH': 'Ungültiges Enddatum' },
+    'start-after-end': { 'de-CH': 'Enddatum muss nach Beginndatum sein' },
+    'end-date-to-late': { 'de-CH': 'Datum darf nicht nach {maxDate, date, small} sein' },
+    'start-date-to-early': { 'de-CH': 'Datum darf nicht vor {minDate, date, small} sein' },
+    'pool-closed-at-start-date': { 'de-CH': 'Gerätepark ist am {startDate, date, small} geschlossen' },
+    'pool-closed-at-end-date': { 'de-CH': 'Gerätepark ist am {endDate, date, small} geschlossen' },
+    'quantity-to-large-at-day': {
+      'de-CH': 'Gegenstand ist am {startDate, date, small} nicht in der gewünschten Menge verfügbar'
+    },
+    'quantity-to-large-in-range': {
+      'de-CH': 'Gegenstand ist in diesem Zeitraum nicht in der gewünschten Menge verfügbar'
+    }
+  }
+}
+
 export const withAllArguments = () => {
   const now = new Date(FAKE_STYLEGUIDE_TIME)
   const {
@@ -49,6 +79,8 @@ export const withAllArguments = () => {
           onInventoryPoolChange={action('pool-change')}
           //
           onSubmit={action('submit')}
+          locale={fake_locale}
+          txt={fake_txt}
         />
         <div className="m-4 text-muted">
           <h4>Debugging Info</h4>

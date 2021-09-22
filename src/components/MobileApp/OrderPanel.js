@@ -14,7 +14,10 @@ import {
   isBefore,
   eachDayOfInterval
 } from 'date-fns'
-import { de } from 'date-fns/locale'
+// NOTE: only import our supported langs to keep the bundle small (do not rely on bundling magic like "tree shaking" or "dead code elimination")
+import { de as DateFnsLocaleDE } from 'date-fns/locale'
+import { translate as t } from '../../lib/translate'
+import { Let } from '../Util'
 import Section from './DesignComponents/Section'
 import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
@@ -22,6 +25,8 @@ import Stack from './DesignComponents/Stack'
 import Warning from './DesignComponents/Warning'
 
 const noop = () => {}
+// NOTE: locale 'en' is built-in, so it does not need to and can not be selected
+const locales = { de: DateFnsLocaleDE }
 
 const OrderPanel = ({
   modelData,
@@ -43,7 +48,9 @@ const OrderPanel = ({
   initialInventoryPoolId,
   onInventoryPoolChange = noop,
   //
-  onSubmit = noop
+  onSubmit = noop,
+  locale,
+  txt = {}
 }) => {
   const today = startOfDay(new Date())
   const minDate = minDateTotal ? startOfDay(minDateTotal) : today
@@ -61,8 +68,13 @@ const OrderPanel = ({
   const allBlockedDates = calcAllBlockedDates(availabilityByDateAndPool[selectedPoolId], quantity)
   const { blockedDates, blockedStartDates, blockedEndDates } = allBlockedDates
 
+  const currentLocale = typeof locale === 'string' ? locales[locale.split('-')[0]] : locale
+  // eslint-disable-next-line no-console
+  if (!locale) console.warn(`Could not find locale date for '${locale}'!`)
+  const { label } = txt
+
   function validate() {
-    return validateSelection(selectedRange, { minDate, maxDate }, allBlockedDates, quantity)
+    return validateSelection(selectedRange, { minDate, maxDate }, allBlockedDates, quantity, locale, txt.validate)
   }
 
   const validationError = validate()
@@ -104,19 +116,27 @@ const OrderPanel = ({
       onShownDateChange({ date: targetDate })
     }
   }
+
   return (
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
       <Stack space="4">
         <Section>{modelData.name}</Section>
-        <Section title={txt.quantity} collapsible>
+        <Section title={t(label, 'quantity', locale)} collapsible>
           <label htmlFor="quantity" className="visually-hidden">
-            {txt.quantity}
+            {t(label, 'quantity', locale)}
           </label>
-          <MinusPlusControl name="quantity" id="quantity" value={quantity} onChange={changeQuantity} min={1} />
+          <MinusPlusControl
+            name="quantity"
+            id="quantity"
+            value={quantity}
+            onChange={changeQuantity}
+            min={1}
+            txt={{ minus: t(label, 'minus', locale), plus: t(label, 'plus', locale) }}
+          />
         </Section>
-        <Section title={txt.pool} collapsible>
+        <Section title={t(label, 'pool', locale)} collapsible>
           <label htmlFor="pool-id" className="visually-hidden">
-            {txt.pool}
+            {t(label, 'pool', locale)}
           </label>
           <select
             name="pool-id"
@@ -127,34 +147,40 @@ const OrderPanel = ({
           >
             {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
               <option key={id} value={id}>
-                {name} ({txt.max} {totalBorrowableQuantity})
+                {t(label, 'pool-max-amount', locale, { pool: name, amount: totalBorrowableQuantity })}
               </option>
             ))}
           </select>
         </Section>
-        <Section title={txt.timeSpan} collapsible>
-          <fieldset>
-            <legend className="visually-hidden">{txt.timeSpan}</legend>
-            <DateRangePicker
-              selectedRange={selectedRange}
-              onChange={changeDateRange}
-              onShownDateChange={changeShownDate}
-              maxDateLoaded={maxDateLoaded}
-              minDate={minDate}
-              maxDate={maxDate}
-              disabledDates={blockedDates}
-              disabledStartDates={blockedStartDates}
-              disabledEndDates={blockedEndDates}
-              locale={de}
-            />
-          </fieldset>
-          {validationError && <Warning>{validationError}</Warning>}
-        </Section>
+        <Let title={t(label, 'timespan', locale)}>
+          {({ title }) => (
+            <Section title={title} collapsible>
+              <fieldset>
+                <legend className="visually-hidden">{title}</legend>
+                <DateRangePicker
+                  selectedRange={selectedRange}
+                  onChange={changeDateRange}
+                  onShownDateChange={changeShownDate}
+                  maxDateLoaded={maxDateLoaded}
+                  minDate={minDate}
+                  maxDate={maxDate}
+                  disabledDates={blockedDates}
+                  disabledStartDates={blockedStartDates}
+                  disabledEndDates={blockedEndDates}
+                  locale={currentLocale}
+                  txt={{ from: t(label, 'from', locale), until: t(label, 'until', locale) }}
+                />
+              </fieldset>
+              {validationError && <Warning>{validationError}</Warning>}
+            </Section>
+          )}
+        </Let>
       </Stack>
     </form>
   )
 }
 
+OrderPanel.displayName = 'OrderPanel'
 export default OrderPanel
 
 const modelDataPropType = PropTypes.shape({
@@ -246,64 +272,52 @@ function getByDay(dateList, date) {
   throw TypeError
 }
 
-function formatDate(date) {
-  return format(date, 'P', { locale: de })
-}
-
 function validateSelection(
   { startDate, endDate },
   { minDate, maxDate },
   { blockedDates, blockedStartDates, blockedEndDates },
-  wantedQuantity
+  wantedQuantity,
+  locale,
+  txt = {}
 ) {
   wantedQuantity = parseInt(wantedQuantity, 10)
   if (Number.isNaN(wantedQuantity) || wantedQuantity < 1) {
-    return 'Verfügbarkeit kann nicht geprüft werden, da die Anzahl fehlt'
+    return t(txt['missing-quantity'], locale)
   }
 
   if (!isValid(startDate)) {
-    return 'Ungültiges Beginndatum'
+    return t(txt, 'invalid-start-date', locale)
   }
   if (!isValid(endDate)) {
-    return 'Ungültiges Enddatum'
+    return t(txt, 'invalid-end-date', locale)
   }
   if (isBefore(endDate, startDate)) {
-    return 'Enddatum muss nach Beginndatum sein'
+    return t(txt, 'start-after-end', locale)
   }
 
   if (endDate > maxDate) {
-    return `Datum darf nicht nach ${formatDate(maxDate)} sein`
+    return t(txt, 'end-date-to-late', locale, { maxDate })
   }
   if (startDate < minDate) {
-    return `Datum darf nicht vor ${formatDate(minDate)} sein`
+    return t(txt, 'start-date-to-early', locale, { minDate })
   }
 
   if (getByDay(blockedStartDates, startDate)) {
-    return `Gerätepark ist am ${formatDate(startDate)} geschlossen`
+    return t(txt, 'pool-closed-at-start-date', locale, { startDate })
   }
   if (getByDay(blockedEndDates, endDate)) {
-    return `Gerätepark ist am ${formatDate(endDate)} geschlossen`
+    return t(txt, 'pool-closed-at-end-date', locale, { endDate })
   }
 
   if (!f.isEmpty(blockedDates)) {
     if (isSameDay(startDate, endDate)) {
       if (getByDay(blockedDates, startDate)) {
-        return `Gegenstand ist am ${formatDate(startDate)} nicht in der gewünschten Menge verfügbar`
+        return t(txt, 'quantity-to-large-at-day', locale, { startDate })
       }
     } else {
       if (eachDayOfInterval({ start: startDate, end: endDate }).some(date => getByDay(blockedDates, date))) {
-        return `Gegenstand ist in diesem Zeitraum nicht in der gewünschten Menge verfügbar`
+        return t(txt, 'quantity-to-large-in-range', locale, {})
       }
     }
   }
 }
-
-// Temporary text dict
-const txt = {
-  quantity: 'Anzahl',
-  pool: 'Gerätepark',
-  max: 'max.',
-  timeSpan: 'Zeitraum'
-}
-
-// TODO: use translation infrastructure for the texts in `txt` and `validateSelection`

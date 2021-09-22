@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
 
+const defaultTxt = { minus: 'Minus', plus: 'Plus' }
+
 export default function MinusPlusControl({
   className,
   value,
@@ -9,6 +11,7 @@ export default function MinusPlusControl({
   min,
   max,
   inputComponent: InputComponent = 'input',
+  txt = defaultTxt,
   ...restProps
 }) {
   const inputRef = useRef()
@@ -83,7 +86,7 @@ export default function MinusPlusControl({
           onMouseDown={buttonMouseDown}
           tabIndex="-1"
         >
-          Minus
+          {txt.minus}
         </button>
       </div>
       <div className="col-4">
@@ -106,7 +109,7 @@ export default function MinusPlusControl({
           onMouseDown={buttonMouseDown}
           tabIndex="-1"
         >
-          Plus
+          {txt.plus}
         </button>
       </div>
     </div>
