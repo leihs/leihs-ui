@@ -23895,6 +23895,98 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Menu Menu 1`] = `
+Array [
+  <h1>
+    Menu
+  </h1>,
+  <p
+    className="text-muted"
+  >
+    Presents a grouped list of links or buttons
+  </p>,
+  <div
+    className="bg-light-shade"
+  >
+    <nav
+      className="py-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
+      style={
+        Object {
+          "maxWidth": "1440px",
+        }
+      }
+    >
+      <div
+        className="flex-fill text-center"
+      >
+        <h2
+          className="fw-normal"
+        >
+          Group 1
+        </h2>
+        <div
+          className="d-flex flex-column gap-3"
+        >
+          <a
+            className="btn btn-secondary rounded-pill"
+            href="#some/route"
+          >
+            Link 1
+          </a>
+          <a
+            className="btn btn-secondary rounded-pill"
+            href="#some/route"
+          >
+            Link 2
+          </a>
+        </div>
+      </div>
+      <div
+        className="flex-fill text-center"
+      >
+        <h2
+          className="fw-normal"
+        >
+          Group 2
+        </h2>
+        <div
+          className="d-flex flex-column gap-3"
+        >
+          <a
+            className="btn btn-secondary rounded-pill"
+            href="#some/route"
+          >
+            Link 3
+          </a>
+          <button
+            className="btn btn-secondary rounded-pill"
+            onClick={[Function]}
+          >
+            Button 4
+          </button>
+        </div>
+      </div>
+    </nav>
+  </div>,
+  <p />,
+  <p
+    className="text-muted"
+  >
+    For an example with more context see:
+  </p>,
+  <p
+    className="text-muted"
+  >
+    <button
+      className="btn btn-light btn-sm"
+      onClick={[Function]}
+    >
+      Wireframes &gt; Menu
+    </button>
+  </p>,
+]
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressInfo Options 1`] = `
 <div>
   <h1>
@@ -35926,6 +36018,104 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Navb
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout ErrorBoundary 1`] = `
+<div>
+  <h1>
+    PageLayout - ErrorBoundary
+  </h1>
+  <p
+    className="text-muted"
+  >
+    Navbar will stay alive when page content rendering crashes (and vice versa).
+  </p>
+  <div
+    className="shadow"
+  >
+    <div
+      className="pb-5 ui-page-layout"
+    >
+      <nav
+        className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      >
+        <div
+          className="navbar-nav"
+        >
+          <a
+            className="nav-item nav-link"
+          >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              <svg
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Menu Icon.svg
+              </svg>
+            </span>
+          </a>
+        </div>
+        <a
+          className="navbar-brand me-0 fw-bold"
+        >
+          leihs
+        </a>
+        <div
+          className="navbar-nav"
+        >
+          <a
+            className="nav-item nav-link position-relative"
+            href="/app/borrow/order"
+          >
+            <div
+              className="cart-badge position-absolute"
+              style={
+                Object {
+                  "right": "-8px",
+                  "top": "4px",
+                }
+              }
+            >
+              <span>
+                3
+              </span>
+            </div>
+            <svg
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Bag Icon.svg
+            </svg>
+          </a>
+        </div>
+      </nav>
+      <div
+        className="page-inset-x py-4 container-fluid"
+        style={
+          Object {
+            "maxWidth": "720px",
+          }
+        }
+      >
+        <button
+          className="btn btn-outline-danger"
+          onClick={[Function]}
+          type="button"
+        >
+          Crash it
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout Horizontal Inset 1`] = `
 <div>
   <h1>
@@ -37428,6 +37618,75 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Page
   <main
     className="ui-mainview"
   >
+    <nav
+      className="ui-main-nav navbar navbar-light text-xl shadow-md py-0 px-2 sticky-top flex-nowrap justify-content-between"
+      style={
+        Object {
+          "WebkitBackdropFilter": "blur(12px)",
+          "backgroundColor": "rgba(255, 255, 255, 0.83)",
+          "backgroundPosition": "initial initial",
+          "backgroundRepeat": "initial initial",
+          "borderBottomColor": "rgba(0, 0, 0, 0.08)",
+          "top": "0px",
+          "zIndex": 1000,
+        }
+      }
+    >
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="me-auto"
+        >
+          <a
+            className="nav-item nav-link px-0"
+            href="#/app/borrow/about"
+          >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              ☰
+            </span>
+          </a>
+        </div>
+      </div>
+      <div
+        className="mx-auto"
+      >
+        <a
+          className="navbar-brand m-0 font-black text-xl"
+          href="#/app/borrow/order"
+        >
+           LEIHS 
+        </a>
+      </div>
+      <div
+        className="navbar-nav w-100"
+      >
+        <div
+          className="ms-auto d-flex align-items-center"
+        >
+          <div
+            className="mx-auto px-2 text-xs"
+          >
+            <span
+              className="text-color-info"
+            />
+          </div>
+           
+          <a
+            className="nav-item nav-link px-0"
+            href="/app/borrow/order"
+          >
+            <span
+              className="ui-icon ui-icon-colored ui-shopping-cart-icon"
+            >
+              🛒
+            </span>
+          </a>
+        </div>
+      </div>
+    </nav>
     <div
       className="container-fluid p-0"
       style={
@@ -37450,7 +37709,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Page
           onClick={[Function]}
           type="button"
         >
-          Don't click this button
+          throw new Error
         </button>
       </div>
     </div>
@@ -41351,6 +41610,204 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
         </div>
       </section>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        aria-controls="menu"
+        aria-expanded={false}
+        className="nav-item nav-link"
+        onClick={[Function]}
+        role="button"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    aria-expanded={null}
+    className="collapse"
+    id="menu"
+  >
+    <div
+      className="bg-light-shade"
+    >
+      <nav
+        className="py-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
+        style={
+          Object {
+            "maxWidth": "1440px",
+          }
+        }
+      >
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Ausleihen
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Katalog
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Neue Ausleihe
+            </a>
+          </div>
+        </div>
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Joël Gähwiler
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Meine Ausleihen
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Benutzerkonto
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Abmelden
+            </a>
+          </div>
+        </div>
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Hilfe
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Dokumentation
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Unterstützung
+            </a>
+          </div>
+        </div>
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Sprache
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Deutsch
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              English
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <p
+      className="text-muted"
+    >
+      (Click the hamburger icon to open the menu)
+    </p>
   </div>
 </div>
 `;

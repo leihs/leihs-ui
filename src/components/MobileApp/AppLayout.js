@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames/dedupe'
+import { ErrorBoundary } from './ErrorBoundary'
 
 export const AppWrapper = ({ children }) => <div id="app">{children}</div>
 
@@ -115,39 +116,3 @@ export const Navbar = ({ brandName = 'LEIHS', menuItem, cartItem }) => (
     </div>
   </nav>
 )
-
-// https://reactjs.org/docs/error-boundaries.html
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { error: null, errorInfo: null }
-  }
-
-  componentDidCatch(error, errorInfo) {
-    // Catch errors in any components below and re-render with error message
-    this.setState({
-      error: error,
-      errorInfo: errorInfo
-    })
-    // You can also log error messages to an error reporting service here
-  }
-
-  render() {
-    if (this.state.errorInfo) {
-      // Error path
-      return (
-        <div style={{ background: 'blue', color: 'white', padding: '1em', minHeight: '100vh' }}>
-          <h2>Something went wrong!</h2>
-          <details open style={{ whiteSpace: 'pre-wrap' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {/* NOTE: stacktrace has absolute paths in snapshot tests, which breaks them! */}
-            {process.env.NODE_ENV === 'development' && this.state.errorInfo.componentStack}
-          </details>
-        </div>
-      )
-    }
-    // Normally, just render children
-    return this.props.children
-  }
-}

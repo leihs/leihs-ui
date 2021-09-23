@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import PageLayout from './PageLayout'
 import Navbar from './Navbar'
 
@@ -58,3 +58,35 @@ export const horizontalInset = () => {
     </div>
   )
 }
+
+function Crasher() {
+  const [crash, setCrash] = useState(false)
+  useEffect(() => {
+    if (crash) {
+      throw new Error('It crashed')
+    }
+  }, [crash])
+  return (
+    <>
+      <button type="button" className="btn btn-outline-danger" onClick={() => setCrash(true)}>
+        Crash it
+      </button>
+    </>
+  )
+}
+
+export const errorBoundary = () => {
+  const navbar = <Navbar brandName="leihs" cartItemCount={3} />
+  return (
+    <div>
+      <h1>PageLayout - ErrorBoundary</h1>
+      <p className="text-muted">Navbar will stay alive when page content rendering crashes (and vice versa).</p>
+      <div className="shadow">
+        <PageLayout navbar={navbar}>
+          <Crasher />
+        </PageLayout>
+      </div>
+    </div>
+  )
+}
+errorBoundary.storyName = 'ErrorBoundary'

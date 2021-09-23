@@ -115,7 +115,7 @@ export const homepage = () => (
   </AppWrapper>
 )
 
-export const page_with_error_crash = () => {
+function Crasher() {
   const [crash, setCrash] = useState(false)
   useEffect(() => {
     if (crash) {
@@ -123,13 +123,21 @@ export const page_with_error_crash = () => {
     }
   }, [crash])
   return (
+    <>
+      <button type="button" className="btn btn-outline-danger" onClick={() => setCrash(true)}>
+        throw new Error
+      </button>
+    </>
+  )
+}
+
+export const page_with_error_crash = () => {
+  return (
     <AppWrapper>
-      <MainView>
+      <MainView navbar={fakeNavbar}>
         <Page>
           <h1>Crash Test</h1>
-          <button type="button" className="btn btn-outline-danger" onClick={() => setCrash(true)}>
-            Don&apos;t click this button
-          </button>
+          <Crasher />
         </Page>
       </MainView>
     </AppWrapper>
