@@ -9,7 +9,7 @@ import f from 'lodash'
 
 const DEFAULT_TERM = ''
 const DEFAULT_POOL_ID = 'all'
-const DEFAULT_AVAILABLE_BETWEEN = false
+const DEFAULT_ONLY_AVAILABLE = false
 const DEFAULT_START_DATE = ''
 const DEFAULT_END_DATE = ''
 const DEFAULT_QUANTITY = 1
@@ -23,7 +23,7 @@ const ModelFilterForm = ({
   initialTerm = DEFAULT_TERM,
   initialUserId = user.id,
   initialPoolId = DEFAULT_POOL_ID,
-  initialAvailableBetween = DEFAULT_AVAILABLE_BETWEEN,
+  initialOnlyAvailable = DEFAULT_ONLY_AVAILABLE,
   initialStartDate = DEFAULT_START_DATE,
   initialEndDate = DEFAULT_END_DATE,
   initialQuantity = DEFAULT_QUANTITY,
@@ -34,7 +34,7 @@ const ModelFilterForm = ({
   const [term, setTerm] = useState(initialTerm)
   const [userId, setUserId] = useState(initialUserId)
   const [poolId, setPoolId] = useState(initialPoolId)
-  const [availableBetween, setAvailableBetween] = useState(initialAvailableBetween)
+  const [onlyAvailable, setOnlyAvailable] = useState(initialOnlyAvailable)
   const [startDate, setStartDate] = useState(initialStartDate)
   const [endDate, setEndDate] = useState(initialEndDate)
   const [quantity, setQuantity] = useState(initialQuantity)
@@ -43,7 +43,7 @@ const ModelFilterForm = ({
     setTerm(DEFAULT_TERM)
     setUserId(user.id)
     setPoolId(DEFAULT_POOL_ID)
-    setAvailableBetween(DEFAULT_AVAILABLE_BETWEEN)
+    setOnlyAvailable(DEFAULT_ONLY_AVAILABLE)
     setStartDate(DEFAULT_START_DATE)
     setEndDate(DEFAULT_END_DATE)
     setQuantity(DEFAULT_QUANTITY)
@@ -54,7 +54,7 @@ const ModelFilterForm = ({
       term: term,
       userId: userId,
       poolId: poolId,
-      'availableBetween?': availableBetween,
+      onlyAvailable: onlyAvailable,
       startDate: startDate,
       endDate: endDate,
       quantity: quantity
@@ -131,8 +131,8 @@ const ModelFilterForm = ({
                 <input
                   type="checkbox"
                   name="only-available"
-                  checked={!!availableBetween}
-                  onChange={e => setAvailableBetween(prevBool => !prevBool)}
+                  checked={!!onlyAvailable}
+                  onChange={e => setOnlyAvailable(prevBool => !prevBool)}
                   className="form-check-input"
                 />
                 <span className="form-check-label">Show available only</span>
@@ -140,7 +140,7 @@ const ModelFilterForm = ({
             </div>
           </div>
         </div>
-        {availableBetween && (
+        {onlyAvailable && (
           <div>
             <div>
               <label className="row">

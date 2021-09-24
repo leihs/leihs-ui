@@ -37577,7 +37577,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
             className="form-check"
           >
             <input
-              checked={true}
+              checked={false}
               className="form-check-input"
               name="only-available"
               onChange={[Function]}
@@ -37590,80 +37590,6 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
             </span>
           </label>
         </div>
-      </div>
-    </div>
-    <div>
-      <div>
-        <label
-          className="row"
-        >
-          <span
-            className="text-xs col-3 col-form-label"
-          >
-            From 
-          </span>
-          <div
-            className="col-9"
-          >
-            <input
-              className="form-control "
-              name="start-date"
-              onChange={[Function]}
-              placeholder="From"
-              required={true}
-              type="date"
-              value="2020-12-14"
-            />
-          </div>
-        </label>
-      </div>
-      <div>
-        <label
-          className="row"
-        >
-          <span
-            className="text-xs col-3 col-form-label"
-          >
-            Until 
-          </span>
-          <div
-            className="col-9"
-          >
-            <input
-              className="form-control "
-              name="end-date"
-              onChange={[Function]}
-              placeholder="Until"
-              required={true}
-              type="date"
-              value="2020-12-15"
-            />
-          </div>
-        </label>
-      </div>
-      <div>
-        <label
-          className="row"
-        >
-          <span
-            className="text-xs col-3 col-form-label"
-          >
-            Quantity 
-          </span>
-          <div
-            className="col-9"
-          >
-            <input
-              className="form-control "
-              min={1}
-              name="quantity"
-              onChange={[Function]}
-              placeholder="Quantity"
-              type="number"
-              value={2}
-            />
-          </div>
-        </label>
       </div>
     </div>
     <button
