@@ -1,7 +1,8 @@
 import React from 'react'
 
 export default {
-  title: 'MobileApp/Overview'
+  title: 'MobileApp/Overview',
+  parameters: { viewport: { defaultViewport: null } }
 }
 
 export function Overview() {

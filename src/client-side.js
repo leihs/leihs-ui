@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom'
 
 import Components from './components-bundle'
 export { Components }
+export { default as IntlMessageFormat } from 'intl-messageformat'
 
 export function hydrateComponent(container) {
   const data = container.dataset

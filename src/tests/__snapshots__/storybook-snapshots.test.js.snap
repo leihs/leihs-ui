@@ -44406,6 +44406,464 @@ exports[`Storybook HTML Snapshots MobileApp/Overview Overview 1`] = `
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Overview/Translations Translations 1`] = `
+<div
+  className="p-2"
+>
+  <h1>
+    Translation and Localization
+  </h1>
+  <h2>
+    Translation Function / Library
+  </h2>
+  <p>
+    More Docs: We use the
+     
+    <a
+      className="text-color-content-link"
+      href="https://formatjs.io/docs/core-concepts/icu-syntax"
+    >
+      ICU Message syntax
+    </a>
+     
+    and the
+     
+    <a
+      className="text-color-content-link"
+      href="https://formatjs.io/docs/intl-messageformat/#how-it-works"
+    >
+      <code>
+        IntlMessageFormat
+      </code>
+    </a>
+     
+    library from
+     
+    <a
+      className="text-color-content-link"
+      href="https://formatjs.io/"
+    >
+      Format.js
+    </a>
+    .
+  </p>
+  <h2>
+    Examples
+  </h2>
+  <h3>
+    Simple Text
+  </h3>
+  <ul
+    className="list-group mb-4"
+  >
+    <li
+      className="list-group-item"
+    >
+      <div
+        className="mb-1 preserve-linebreaks"
+      >
+        <p
+          className="d-block fs-3 font-monospace preserve-linebreaks"
+        >
+          <span
+            className="text-muted"
+          >
+            input: 
+          </span>
+          Hello, World!
+        </p>
+      </div>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        de-CH
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        Hello, World!
+      </p>
+    </li>
+  </ul>
+  <h3>
+    With Placeholders/Variables
+  </h3>
+  <ul
+    className="list-group mb-4"
+  >
+    <li
+      className="list-group-item"
+    >
+      <div
+        className="mb-1 preserve-linebreaks"
+      >
+        <p
+          className="d-block fs-3 font-monospace preserve-linebreaks"
+        >
+          <span
+            className="text-muted"
+          >
+            input: 
+          </span>
+          Hello {location}, my name is {name}!
+        </p>
+      </div>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"location":"World","name":"Normin"}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        de-CH
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        Hello World, my name is Normin!
+      </p>
+    </li>
+  </ul>
+  <h3>
+    With Plurals
+  </h3>
+  <ul
+    className="list-group mb-4"
+  >
+    <li
+      className="list-group-item"
+    >
+      <div
+        className="mb-1 preserve-linebreaks"
+      >
+        <p
+          className="d-block fs-3 font-monospace preserve-linebreaks"
+        >
+          <span
+            className="text-muted"
+          >
+            input: 
+          </span>
+          You have {numItems, plural,
+            =0 {no items.}
+            =1 {one item.}
+            other {# items.}}
+        </p>
+      </div>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"numItems":0}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        de-CH
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        You have no items.
+      </p>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"numItems":1}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        de-CH
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        You have one item.
+      </p>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"numItems":42}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        de-CH
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        You have 42 items.
+      </p>
+    </li>
+  </ul>
+  <h3>
+    Number formatting
+  </h3>
+  <ul
+    className="list-group mb-4"
+  >
+    <li
+      className="list-group-item"
+    >
+      <div
+        className="mb-1 preserve-linebreaks"
+      >
+        <p
+          className="d-block fs-3 font-monospace preserve-linebreaks"
+        >
+          <span
+            className="text-muted"
+          >
+            input: 
+          </span>
+          Die Anzahl ist: {count, number}!
+        </p>
+      </div>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"count":10000}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        en-GB
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        Die Anzahl ist: 10,000!
+      </p>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"count":10000}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        de-CH
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        Die Anzahl ist: 10’000!
+      </p>
+    </li>
+  </ul>
+  <h3>
+    Date formatting
+  </h3>
+  <ul
+    className="list-group mb-4"
+  >
+    <li
+      className="list-group-item"
+    >
+      <div
+        className="mb-1 preserve-linebreaks"
+      >
+        <p
+          className="d-block fs-3 font-monospace preserve-linebreaks"
+        >
+          <span
+            className="text-muted"
+          >
+            input: 
+          </span>
+          Local Date: {startDate, date}!
+        </p>
+      </div>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"startDate":2141337600000}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        en-GB
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        Local Date: 09/11/2037!
+      </p>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"startDate":2141337600000}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        en-US
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        Local Date: 11/9/2037!
+      </p>
+    </li>
+    <li
+      className="list-group-item"
+    >
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        values: 
+        {"startDate":2141337600000}
+      </span>
+      <span
+        className="fs-5 d-block text-muted font-monospace"
+      >
+        locale: 
+        de-CH
+      </span>
+      <p
+        className="mb-0 fs-2"
+      >
+        <span
+          className="fs-3 text-muted font-monospace"
+        >
+          result: 
+        </span>
+        Local Date: 9.11.2037!
+      </p>
+    </li>
+  </ul>
+  <h3
+    className="mb-0"
+  >
+    Edge Cases
+  </h3>
+  <small
+    className="mt-2 mb-4"
+  >
+    (only output is shown, see story source for details)
+  </small>
+  <h4
+    className="mt-2"
+  >
+    Missing Translations
+  </h4>
+  <p>
+    {{ missing: not-foo }}
+  </p>
+  <h4
+    className="mt-2"
+  >
+    Fallback Languages
+  </h4>
+  <p>
+    Fuh
+     /
+     
+    fou
+  </p>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategorie 1`] = `
 <div
   className="pb-5 ui-page-layout"
