@@ -117,7 +117,7 @@ export default function ModelShow({ model, onOrderClick = noop, onClickFavorite 
 function getRecommendsGrid(recommends) {
   const list = recommends.edges.map(({ node }) => ({
     id: node.id,
-    href: node.borrowUrl,
+    href: node.href,
     imgSrc: (node.images.find(() => true) || {}).imageUrl,
     caption: node.name,
     isFavorited: node.isFavorited
