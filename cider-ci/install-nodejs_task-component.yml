@@ -12,12 +12,14 @@ scripts:
 
       source ~/.nvm/nvm.sh
 
-      # cleanup leftovers from aborted installs (or npm upgrade might fail)
-      rm -rf  "$NVM_DIR"/versions/node/*/lib/node_modules/.npm-*
-
       nvm install "$NVM_NODEJS_VERSION"
       nvm use "$NVM_NODEJS_VERSION"
-      npm i -g npm@7
+
+      # NOTE: do NOT self-upgrade npm, instead use the version that is bundled with the nodejs release.
+      #       because the upgrad is not transactional, no script using `npm` could run in paralell (e.g. all js build jobs would need the same `exclusive_executor_resource` as is used here)
+      # # cleanup leftovers from aborted installs (or npm upgrade might fail)
+      # rm -rf  "$NVM_DIR"/versions/node/*/lib/node_modules/.npm-*
+      # npm i -g npm@7
 
       which node
       node --version
