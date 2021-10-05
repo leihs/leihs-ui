@@ -46,7 +46,7 @@ PageLayout.MetadataWithDetails = function PageLayoutMetadata({ summary, details 
   const dataInspect = typeof details === 'string' ? details : JSON.stringify(details, 0, 2)
   return (
     <PageLayout.Metadata>
-      <details open={false}>
+      <details open={false} className="list-unstyled">
         <summary style={{ display: 'block' }}>{summary}</summary>
         <pre className="fs-5 text-start mt-3">{dataInspect}</pre>
       </details>

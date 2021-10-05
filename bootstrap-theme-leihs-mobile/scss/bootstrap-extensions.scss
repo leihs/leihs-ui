@@ -5,6 +5,16 @@
   font-size: 0.75rem;
 }
 
+// support .list-unstyled on detail/summary since in theory it is styled like a list-item (but needs a special case for webkit)
+details.list-unstyled {
+  summary {
+    list-style-image: none;
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+}
+
 // add an icon to invalid feedback
 .invalid-feedback-icon {
   text-indent: -1.5em;
