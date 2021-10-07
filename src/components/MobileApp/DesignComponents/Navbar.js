@@ -15,10 +15,7 @@ export default function Navbar({
 }) {
   const showCartCounter = isNumber(cartItemCount)
   return (
-    <nav
-      className={cx('ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top', className)}
-      {...restProps}
-    >
+    <nav className={cx('ui-main-nav navbar navbar-light bg-light-shade border-bottom', className)} {...restProps}>
       <div className="navbar-nav">
         <a className="nav-item nav-link" {...menuItem}>
           <span className="ui-icon ui-menu-icon">
@@ -42,3 +39,13 @@ export default function Navbar({
     </nav>
   )
 }
+
+Navbar.MenuWrapper = ({ menuIsOpen, children }) => (
+  <div
+    className={cx('ui-main-menu-wrapper', 'sticky-top')}
+    style={menuIsOpen ? { height: '100vh', position: 'fixed', width: '100%' } : { height: '100%' }}
+  >
+    {children}
+  </div>
+)
+Navbar.MenuWrapper.displayName = 'Navbar.MenuWrapper'

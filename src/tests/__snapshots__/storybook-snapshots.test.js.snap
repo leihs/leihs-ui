@@ -23961,10 +23961,10 @@ Array [
     Presents a grouped list of links or buttons
   </p>,
   <div
-    className="bg-light-shade"
+    className="h-100 pb-5 bg-light-shade overflow-scroll"
   >
     <nav
-      className="py-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
+      className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
       style={
         Object {
           "maxWidth": "1440px",
@@ -40327,7 +40327,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40393,7 +40393,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40459,7 +40459,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40525,7 +40525,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40591,7 +40591,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40657,7 +40657,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40736,7 +40736,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40791,7 +40791,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top border border-primary"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom border border-primary"
     >
       <div
         className="navbar-nav"
@@ -40848,7 +40848,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40905,7 +40905,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
       <div
         className="navbar-nav"
@@ -40962,7 +40962,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Navb
     Navbar
   </h1>
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -41043,7 +41043,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       className="pb-5 ui-page-layout"
     >
       <nav
-        className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+        className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
       >
         <div
           className="navbar-nav"
@@ -41158,7 +41158,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       className="pb-5 ui-page-layout"
     >
       <nav
-        className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+        className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
       >
         <div
           className="navbar-nav"
@@ -41300,7 +41300,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       className="pb-5 ui-page-layout"
     >
       <nav
-        className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+        className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
       >
         <div
           className="navbar-nav"
@@ -43983,7 +43983,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -44869,7 +44869,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -45121,7 +45121,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -45420,7 +45420,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -45597,7 +45597,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -46245,7 +46245,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -47085,7 +47085,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -47142,10 +47142,10 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
     id="menu"
   >
     <div
-      className="bg-light-shade"
+      className="h-100 pb-5 bg-light-shade overflow-scroll"
     >
       <nav
-        className="py-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
+        className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
         style={
           Object {
             "maxWidth": "1440px",
@@ -47283,7 +47283,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegen
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -47382,7 +47382,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -47877,7 +47877,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
@@ -48176,7 +48176,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
   className="pb-5 ui-page-layout"
 >
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom sticky-top"
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
   >
     <div
       className="navbar-nav"
