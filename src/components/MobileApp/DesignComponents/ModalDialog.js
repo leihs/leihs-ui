@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cx from 'classnames'
+import cx from 'classnames/dedupe'
 
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
@@ -15,6 +15,8 @@ export default function ModalDialog({
   onClose,
   shown = false,
   closeOnBackgroundClick = false,
+  headerClassname,
+  contentClassName,
   ...restProps
 }) {
   const baseId = id ? id : `Modal-${String(Math.random()).slice(2)}`
@@ -28,12 +30,13 @@ export default function ModalDialog({
       fullscreen={'md-down'}
       backdrop={closeOnBackgroundClick ? true : 'static'}
       dialogClassName={className}
+      contentClassName={contentClassName}
       centered
       scrollable
       aria-labelledby={labelId}
       {...restProps}
     >
-      <Modal.Header closeButton={false} className="bg-light-shade border-bottom page-inset-x">
+      <Modal.Header closeButton={false} className={cx('bg-light-shade border-bottom page-inset-x', headerClassname)}>
         <Modal.Title id={labelId} as="div" className="m-auto fs-2 fw-bold">
           {title}
         </Modal.Title>
@@ -60,7 +63,12 @@ ModalDialog.Footer = function ModalDialogFooter({ children, actions, className, 
   }
   return (
     <Modal.Footer
-      className={cx('bg-light-shade border-top-0', 'd-flex justify-content-between', 'page-inset-x py-3', className)}
+      className={cx(
+        'bg-light-shade border-top-0',
+        'd-flex justify-content-between flex-row-reverse',
+        'page-inset-x py-3',
+        className
+      )}
       {...restProps}
     >
       {children}
@@ -95,13 +103,17 @@ function makeActionMenuFrom(actions) {
   const { primary, secondary } = actions
   return (
     <>
-      <Button variant="secondary" {...secondary}>
-        {secondary.label}
-      </Button>
+      {!!primary && (
+        <Button variant="primary" {...primary}>
+          {primary.label}
+        </Button>
+      )}
 
-      <Button variant="primary" {...primary}>
-        {primary.label}
-      </Button>
+      {!!secondary && (
+        <Button variant="secondary" {...secondary}>
+          {secondary.label}
+        </Button>
+      )}
     </>
   )
 }
