@@ -144,11 +144,11 @@ export const ausleiheBestaetigen = ({
         </form>
       </ModalDialog.Body>
       <ModalDialog.Footer>
-        <button type="button" className="btn btn-secondary" onClick={onCancel} form="the-form">
-          Abbrechen
-        </button>
         <button type="submit" className="btn btn-primary" form="the-form">
           Bestätigen
+        </button>
+        <button type="button" className="btn btn-secondary" onClick={onCancel} form="the-form">
+          Abbrechen
         </button>
       </ModalDialog.Footer>
     </ModalDialog>

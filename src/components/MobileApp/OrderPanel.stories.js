@@ -99,11 +99,11 @@ export const withAllArguments = () => {
         </div>
       </ModalDialog.Body>
       <ModalDialog.Footer>
-        <button type="button" className="btn btn-secondary" onClick={action('cancel')}>
-          Abbrechen
-        </button>
         <button type="submit" className="btn btn-primary" form="order-dialog-form">
           Hinzufügen
+        </button>
+        <button type="button" className="btn btn-secondary" onClick={action('cancel')}>
+          Abbrechen
         </button>
       </ModalDialog.Footer>
     </ModalDialog>
@@ -123,11 +123,11 @@ export const withMinimalArguments = () => {
         />
       </ModalDialog.Body>
       <ModalDialog.Footer>
-        <button type="button" className="btn btn-secondary" onClick={action('cancel')}>
-          Abbrechen
-        </button>
         <button type="submit" className="btn btn-primary" form="order-dialog-form">
           Hinzufügen
+        </button>
+        <button type="button" className="btn btn-secondary" onClick={action('cancel')}>
+          Abbrechen
         </button>
       </ModalDialog.Footer>
     </ModalDialog>

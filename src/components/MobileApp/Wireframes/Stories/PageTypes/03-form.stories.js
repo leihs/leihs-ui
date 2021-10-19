@@ -89,11 +89,11 @@ export const form = ({ onSubmit }) => {
         </form>
       </ModalDialog.Body>
       <ModalDialog.Footer>
-        <button type="cancel" className="btn btn-secondary" form="the-form">
-          Cancel
-        </button>
         <button type="submit" className="btn btn-primary" form="the-form">
           Save
+        </button>
+        <button type="cancel" className="btn btn-secondary" form="the-form">
+          Cancel
         </button>
       </ModalDialog.Footer>
     </ModalDialog>
