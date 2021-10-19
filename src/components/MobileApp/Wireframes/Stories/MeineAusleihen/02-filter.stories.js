@@ -196,11 +196,11 @@ export const filter = ({ onSubmit }) => {
         </form>
       </ModalDialog.Body>
       <ModalDialog.Footer>
-        <button type="button" onClick={clear} className="btn btn-secondary" form="order-filter-form">
-          Zurücksetzen
-        </button>
         <button type="submit" onClick={submit} className="btn btn-primary" form="order-filter-form">
           Auswählen
+        </button>
+        <button type="button" onClick={clear} className="btn btn-secondary" form="order-filter-form">
+          Zurücksetzen
         </button>
       </ModalDialog.Footer>
     </ModalDialog>

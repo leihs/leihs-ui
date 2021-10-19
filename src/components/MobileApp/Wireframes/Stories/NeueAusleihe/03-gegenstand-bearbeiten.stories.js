@@ -40,11 +40,11 @@ export const gegenstandBearbeiten = ({ onSubmit, onCancel, onRemoveClick }) => {
         </Stack>
       </ModalDialog.Body>
       <ModalDialog.Footer>
-        <button type="button" className="btn btn-secondary" onClick={onCancel}>
-          Abbrechen
-        </button>
         <button type="submit" className="btn btn-primary" form="order-dialog-form">
           Bestätigen
+        </button>
+        <button type="button" className="btn btn-secondary" onClick={onCancel}>
+          Abbrechen
         </button>
       </ModalDialog.Footer>
     </ModalDialog>
