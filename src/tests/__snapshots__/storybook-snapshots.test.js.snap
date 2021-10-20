@@ -22485,7 +22485,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ActionButt
     className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
   >
     <div
-      className="invalid-feedback invalid-feedback-icon d-block w-100"
+      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
     >
       I'm sorry, Dave. I'm afraid I can't do that.
     </div>
@@ -25490,7 +25490,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Re
     Set arbitrary attributes with restProps
   </p>
   <div
-    className="invalid-feedback invalid-feedback-icon d-block w-100 border border-primary"
+    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2 border border-primary"
     style={
       Object {
         "fontSize": "1rem",
@@ -25523,7 +25523,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Wa
     There is also an icon added so the message is not discernible by its color only.
   </p>
   <div
-    className="invalid-feedback invalid-feedback-icon d-block w-100"
+    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
   >
     1 Gegenstand ungültig
   </div>
@@ -25548,7 +25548,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Wr
     }
   >
     <div
-      className="invalid-feedback invalid-feedback-icon d-block w-100"
+      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis quod esse dolores quia perferendis minima architecto. Nobis itaque, unde quibusdam voluptatibus aut accusantium ipsa, facere autem deserunt, praesentium perspiciatis?
     </div>
@@ -47955,7 +47955,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
             className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
           >
             <div
-              className="invalid-feedback invalid-feedback-icon d-block w-100"
+              className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
             >
               1 Gegenstand ungültig
             </div>

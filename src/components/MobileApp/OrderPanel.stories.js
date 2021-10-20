@@ -23,9 +23,13 @@ const fake_txt = {
     plus: { 'de-CH': 'Plus' },
     pool: { 'de-CH': 'Gerätepark' },
     'pool-max-amount': { 'de-CH': '{pool} (max. {amount, number})' },
+    'user-delegation': { 'de-CH': 'Delegation' },
     timespan: { 'de-CH': 'Zeitraum' },
     from: { 'de-CH': 'Von' },
     until: { 'de-CH': 'Bis' }
+  },
+  'user-delegation-cant-be-changed-active-cart': {
+    'de-CH': 'Delegation kann nicht gewechselt werden, weil schon andere Reservationen vorhanden sind.'
   },
   validate: {
     'missing-quantity': { 'de-CH': 'Verfügbarkeit kann nicht geprüft werden, da die Anzahl fehlt' },
@@ -51,6 +55,8 @@ export const withAllArguments = () => {
     modelData,
     inventoryPools,
     initialInventoryPoolId,
+    userDelegations,
+    initialUserDelegation,
     minDateLoaded,
     maxDateLoaded,
     spec
@@ -77,6 +83,11 @@ export const withAllArguments = () => {
           inventoryPools={inventoryPools}
           initialInventoryPoolId={initialInventoryPoolId}
           onInventoryPoolChange={action('pool-change')}
+          //
+          userDelegations={userDelegations}
+          initialUserDelegation={initialUserDelegation}
+          userDelegationCanBeChanged={false}
+          onUserDelegationChange={action('user-delegation-change')}
           //
           onSubmit={action('submit')}
           locale={fake_locale}
@@ -120,6 +131,8 @@ export const withMinimalArguments = () => {
           maxDateLoaded={maxDateLoaded}
           inventoryPools={inventoryPools}
           onSubmit={action('submit')}
+          locale={fake_locale}
+          txt={fake_txt}
         />
       </ModalDialog.Body>
       <ModalDialog.Footer>

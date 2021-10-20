@@ -48,6 +48,11 @@ const OrderPanel = ({
   initialInventoryPoolId,
   onInventoryPoolChange = noop,
   //
+  userDelegations,
+  initialUserDelegationId,
+  userDelegationCanBeChanged = true,
+  onUserDelegationChange = noop,
+  //
   onSubmit = noop,
   locale,
   txt = {}
@@ -58,6 +63,7 @@ const OrderPanel = ({
 
   const [quantity, setQuantity] = useState(initialQuantity)
   const [selectedPoolId, setSelectedPoolId] = useState(initialInventoryPoolId || f.get(inventoryPools, '0.id'))
+  const [selectedUserDelegationId, setSelectedUserDelegationId] = useState(initialUserDelegationId)
 
   const [selectedRange, setSelectedRange] = useState({
     startDate: initialStartDate ? startOfDay(initialStartDate) : today,
@@ -98,6 +104,12 @@ const OrderPanel = ({
     onInventoryPoolChange(stateForCallbacks())
   }
 
+  function changeUserDelegation(e) {
+    const id = e.target.value
+    setSelectedUserDelegationId(id)
+    onUserDelegationChange(stateForCallbacks())
+  }
+
   function changeDateRange(range) {
     setSelectedRange(range)
     onDatesChange(stateForCallbacks())
@@ -107,7 +119,8 @@ const OrderPanel = ({
     startDate: selectedRange.startDate,
     endDate: selectedRange.endDate,
     quantity,
-    poolId: selectedPoolId
+    poolId: selectedPoolId,
+    delegationId: selectedUserDelegationId
   })
 
   function changeShownDate(newDate) {
@@ -152,6 +165,30 @@ const OrderPanel = ({
             ))}
           </select>
         </Section>
+        {userDelegations && userDelegations.length > 1 && (
+          <Section title={t(label, 'user-delegation', locale)} collapsible>
+            <label htmlFor="user-delegation-id" className="visually-hidden">
+              {t(label, 'user-delegation', locale)}
+            </label>
+            <select
+              name="user-delegation-id"
+              id="user-delegation-id"
+              value={selectedUserDelegationId}
+              onChange={changeUserDelegation}
+              className="form-select"
+              disabled={!userDelegationCanBeChanged}
+            >
+              {userDelegations.map(({ id, name }) => (
+                <option key={id} value={id}>
+                  {name}
+                </option>
+              ))}
+            </select>
+            {!userDelegationCanBeChanged && (
+              <Warning className="text-muted">{t(txt, 'user-delegation-cant-be-changed-active-cart', locale)}</Warning>
+            )}
+          </Section>
+        )}
         <Let title={t(label, 'timespan', locale)}>
           {({ title }) => (
             <Section title={title} collapsible>
@@ -227,7 +264,7 @@ OrderPanel.propTypes = {
 
   /** wanted quantity that is initially selected (defaults to 1) */
   initialQuantity: PropTypes.number,
-  /** callback when the wanted quantity is changed (defaults to noop) */
+  /** callback when the wanted quantity is changed */
   onQuantityChange: PropTypes.func,
 
   /** list of inventory pools for selecting */
@@ -239,8 +276,23 @@ OrderPanel.propTypes = {
   ).isRequired,
   /** initially selected pool */
   initialPoolId: PropTypes.string,
-  /** callback, when selected pool changes, called with `id`, defaults to noop */
+  /** callback, when selected pool changes */
   onInventoryPoolChange: PropTypes.func,
+
+  /** list of user delegations for selecting */
+
+  userDelegations: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired
+    }).isRequired
+  ).isRequired,
+  /** initially selected user delegation */
+  initialUserDelegationId: PropTypes.string,
+  /** set if user delegation can be changed or not */
+  userDelegationCanBeChanged: PropTypes.bool,
+  /** callback, when selected user delegation changes */
+  onUserDelegationChange: PropTypes.func,
 
   /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
   onSubmit: PropTypes.func.isRequired
