@@ -23,7 +23,7 @@ export const demo = () => {
     <PageLayoutMock>
       <PageLayout.Header title="Modal Dialog Demo">
         <FilterButton onClick={() => setModalOpen(!modalOpen)}>Click to open Modal</FilterButton>
-        <ModalDialog shown={modalOpen} onClose={handleClose} title="Modal Dialog Title">
+        <ModalDialog shown={modalOpen} title="Modal Dialog Title">
           <ModalDialog.Body>
             {new Array(3).fill().map((_, i) => (
               <p key={i}>Modal body text goes here.</p>
@@ -41,11 +41,41 @@ export const demo = () => {
   )
 }
 
+export const dismissible = () => {
+  const [modalOpen, setModalOpen] = useState(true)
+  const handleClose = () => setModalOpen(false)
+  return (
+    <PageLayoutMock>
+      <PageLayout.Header title="Dismissible dialog demo">
+        <FilterButton onClick={() => setModalOpen(!modalOpen)}>Click to open Modal</FilterButton>
+        <ModalDialog dismissible shown={modalOpen} onDismiss={handleClose} title="Dismissible dialog">
+          <ModalDialog.Body>
+            <p>A dismissible modal dialog can be closed in the following ways:</p>
+            <ul>
+              <li>Clicking the close button in the header</li>
+              <li>
+                Clicking on the backdrop (the area around the modal, which is only visible on larger screens however)
+              </li>
+              <li>Pressing the ESC key</li>
+            </ul>
+          </ModalDialog.Body>
+          <ModalDialog.Footer
+            actions={{
+              primary: { label: 'OK', onClick: handleClose },
+              secondary: { label: 'Abort', onClick: handleClose }
+            }}
+          ></ModalDialog.Footer>
+        </ModalDialog>
+      </PageLayout.Header>
+    </PageLayoutMock>
+  )
+}
+
 export const using_action_menu_config = () => {
   return (
     <PageLayoutMock>
       <PageLayout.Header title="Katalog">
-        <ModalDialog shown={true} title="Modal Dialog with Custom Action Menu" onClose={action('closing!')}>
+        <ModalDialog shown={true} title="Modal Dialog with Custom Action Menu">
           <ModalDialog.Body>
             {new Array(3).fill().map((_, i) => (
               <p key={i}>Modal body text goes here.</p>

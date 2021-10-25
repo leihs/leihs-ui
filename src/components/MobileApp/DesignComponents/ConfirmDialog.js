@@ -15,6 +15,8 @@ export default function ConfirmDialog({
   onConfirm,
   onCancel,
   isError = false,
+  dismissible = false,
+  onDismiss = () => {},
   ...restProps
 }) {
   const menuActions = {
@@ -44,6 +46,8 @@ export default function ConfirmDialog({
       contentClassName={cx(!!isError && 'border-danger border-2')}
       title={title}
       headerClassname={!!isError && [{ 'bg-light-shade': false }, 'bg-danger text-color-content-inverse']}
+      dismissible={dismissible}
+      onDismiss={onDismiss}
     >
       <ModalDialog.Body>{children}</ModalDialog.Body>
       <ModalDialog.Footer actions={menuActions}></ModalDialog.Footer>
@@ -60,5 +64,9 @@ ConfirmDialog.propTypes = {
   /** called when "OK" button is clicked */
   onConfirm: PropTypes.func.isRequired,
   /** optional, called when "Cancel" button is clicked */
-  onCancel: PropTypes.func
+  onCancel: PropTypes.func,
+  /* When true: display a close button in the header, enable backdrop and ESC key to hide the modal (hiding as such must be implemented by the `onDismiss` handler) */
+  dismissible: PropTypes.bool,
+  /* Handler which closes the modal when user e.g. clicks on backdrop (details see `dismissible` prop) */
+  onDismiss: PropTypes.func
 }

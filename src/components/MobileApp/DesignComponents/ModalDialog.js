@@ -5,16 +5,14 @@ import cx from 'classnames/dedupe'
 import Button from 'react-bootstrap/Button'
 import Modal from 'react-bootstrap/Modal'
 
-// TODO: support close button in header? its recommended.
-
 export default function ModalDialog({
   id,
   className,
   title,
   children,
-  onClose,
   shown = false,
-  closeOnBackgroundClick = false,
+  dismissible = false,
+  onDismiss = () => {},
   headerClassname,
   contentClassName,
   ...restProps
@@ -26,9 +24,10 @@ export default function ModalDialog({
   return (
     <Modal
       show={shown}
-      onHide={onClose}
+      onHide={onDismiss}
       fullscreen={'md-down'}
-      backdrop={closeOnBackgroundClick ? true : 'static'}
+      backdrop={dismissible ? true : 'static'}
+      keyboard={dismissible}
       dialogClassName={className}
       contentClassName={contentClassName}
       centered
@@ -36,7 +35,14 @@ export default function ModalDialog({
       aria-labelledby={labelId}
       {...restProps}
     >
-      <Modal.Header closeButton={false} className={cx('bg-light-shade border-bottom page-inset-x', headerClassname)}>
+      <Modal.Header
+        closeButton={dismissible}
+        className={cx(
+          'bg-light-shade border-bottom page-inset-x',
+          { 'dismissible-modal-header': dismissible },
+          headerClassname
+        )}
+      >
         <Modal.Title id={labelId} as="div" className="m-auto fs-2 fw-bold">
           {title}
         </Modal.Title>
@@ -81,10 +87,11 @@ ModalDialog.propTypes = {
   className: PropTypes.string,
   title: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  /* is called when the dialog is closed */
-  onClose: PropTypes.func,
   shown: PropTypes.bool,
-  closeOnBackgroundClick: PropTypes.bool
+  /* When true: display a close button in the header, enable backdrop and ESC key to hide the modal (hiding as such must be implemented by the `onDismiss` handler) */
+  dismissible: PropTypes.bool,
+  /* Handler which closes the modal when user e.g. clicks on backdrop (details see `dismissible` prop) */
+  onDismiss: PropTypes.func
 }
 
 ModalDialog.Body.propTypes = {

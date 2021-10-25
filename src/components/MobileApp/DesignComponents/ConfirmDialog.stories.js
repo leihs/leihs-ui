@@ -72,6 +72,24 @@ export const simple_alert = () => (
     </ConfirmDialog>
   </>
 )
+
+export const dismissible_alert = () => {
+  const [shown, setShown] = useState(true)
+  function dismiss() {
+    setShown(false)
+  }
+  return (
+    <>
+      <p className="text-center m-4">
+        <Button onClick={() => setShown(true)}>Show notification</Button>
+      </p>
+      <ConfirmDialog title="Hello" shown={shown} onConfirm={action('confirm')} dismissible onDismiss={dismiss}>
+        This message can be closed without clicking the big fat OK button.
+      </ConfirmDialog>
+    </>
+  )
+}
+
 export const simple_error_message = () => {
   const FAKE_ERROR_DETAILS = {
     message: 'No authenticated user.',
