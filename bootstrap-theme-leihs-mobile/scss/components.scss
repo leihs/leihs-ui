@@ -280,3 +280,14 @@
     padding-left: 4.25rem;
   }
 }
+
+/* Component: Modal (fine tuning: position of title and close button) */
+.dismissible-modal-header {
+  padding-left: 30px;
+  padding-right: 30px;
+  .btn-close {
+    position: absolute;
+    top: 17px;
+    right: 20px;
+  }
+}
