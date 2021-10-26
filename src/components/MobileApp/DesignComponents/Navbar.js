@@ -7,6 +7,7 @@ export default function Navbar({
   brandName,
   brandItem,
   cartItemCount,
+  invalidCartItemCount = 0,
   className,
   menuIsOpen = false,
   menuItem,
@@ -29,8 +30,11 @@ export default function Navbar({
       <div className="navbar-nav">
         <a href="/app/borrow/order" className="nav-item nav-link position-relative">
           {showCartCounter && (
-            <div className="cart-badge position-absolute" style={{ top: '4px', right: '-8px' }}>
-              <span>{cartItemCount || '0'}</span>
+            <div
+              className={cx('cart-badge position-absolute', { 'cart-badge--with-conflict': invalidCartItemCount > 0 })}
+              style={{ top: '4px', right: '-8px' }}
+            >
+              <span>{invalidCartItemCount > 0 ? '!' : cartItemCount || '0'}</span>
             </div>
           )}
           <Icon icon={iconBag} />
