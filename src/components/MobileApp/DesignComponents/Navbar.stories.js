@@ -47,15 +47,19 @@ export const moreExamples = () => {
       </div>
       <p className="text-muted">RestProps</p>
       <div className="mb-3">
-        <Navbar brandName="Leihs" className="border border-primary" />
+        <Navbar brandName="Leihs" cartItemCount={3} className="border border-primary" />
       </div>
       <p className="text-muted">Props for the hamburger</p>
       <div className="mb-3">
-        <Navbar brandName="Leihs" menuItem={{ className: 'border border-primary' }} />
+        <Navbar brandName="Leihs" cartItemCount={3} menuItem={{ className: 'border border-primary' }} />
       </div>
       <p className="text-muted">Props for the brand name</p>
       <div className="mb-3">
-        <Navbar brandName="Leihs" brandItem={{ className: 'border border-primary' }} />
+        <Navbar brandName="Leihs" cartItemCount={3} brandItem={{ className: 'border border-primary' }} />
+      </div>
+      <p className="text-muted">With cart conflict</p>
+      <div className="mb-3">
+        <Navbar brandName="Leihs" cartItemCount={3} withCartConflict />
       </div>
     </div>
   )
