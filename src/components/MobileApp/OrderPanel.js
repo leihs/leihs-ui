@@ -185,7 +185,9 @@ const OrderPanel = ({
               ))}
             </select>
             {!userDelegationCanBeChanged && (
-              <Warning className="text-muted">{t(txt, 'user-delegation-cant-be-changed-active-cart', locale)}</Warning>
+              <Warning className="text-muted">
+                {t(txt.validate, 'user-delegation-cant-be-changed-active-cart', locale)}
+              </Warning>
             )}
           </Section>
         )}
