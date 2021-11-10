@@ -154,7 +154,7 @@ export const neueAusleihe = ({
                 </ListCard.Title>
                 <ListCard.Body>{pool.name}</ListCard.Body>
                 <ListCard.Foot>
-                  <Badge className={reservation.isInvalid ? 'bg-danger' : undefined}>
+                  <Badge colorClassName={reservation.isInvalid ? 'bg-danger' : undefined}>
                     {reservation.durationDays} Tage{' '}
                     {reservation.isCompleted ? `bis ${reservation.endDate}` : `ab ${reservation.startDate}`}
                   </Badge>

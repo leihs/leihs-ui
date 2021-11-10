@@ -22518,7 +22518,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Badg
     It typically shows some important attribute or status.
   </p>
   <div
-    className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+    className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
     style={
       Object {
         "padding": "7px 20px 8px 20px",
@@ -22537,7 +22537,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Badg
     .
   </p>
   <a
-    className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+    className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
     href="#example-link"
     style={
       Object {
@@ -22557,7 +22557,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Badg
     .
   </p>
   <button
-    className="badge rounded-pill fw-light bg-secondary text-dark btn btn-link ui-badge"
+    className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
     onClick={[Function]}
     style={
       Object {
@@ -22578,18 +22578,26 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Them
   <p
     className="text-muted"
   >
-    Control the theme color with the 
+    Use the 
     <code>
-      className
+      colorClassName
     </code>
-     prop, e.g. 
+     prop to override the components default color classes (
     <code>
-      .bg-danger
+      bg-secondary text-dark
     </code>
-    .
+    ).
+  </p>
+  <p
+    className="text-muted"
+  >
+    Example with 
+    <code>
+      bg-danger
+    </code>
   </p>
   <div
-    className="badge rounded-pill fw-light bg-secondary text-dark bg-danger ui-badge"
+    className="badge rounded-pill fw-light border-0 bg-danger text-light ui-badge"
     style={
       Object {
         "padding": "7px 20px 8px 20px",
@@ -22598,9 +22606,26 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Them
   >
     12 Tage ab 27.5.2021
   </div>
-  <p>
-     
+  <p />
+  <p
+    className="text-muted"
+  >
+    Example with 
+    <code>
+      bg-warning text-dark
+    </code>
   </p>
+  <div
+    className="badge rounded-pill fw-light border-0 bg-warning text-dark ui-badge"
+    style={
+      Object {
+        "padding": "7px 20px 8px 20px",
+      }
+    }
+  >
+    12 Tage ab 27.5.2021
+  </div>
+  <p />
   <p
     className="text-muted"
   >
@@ -22610,6 +22635,15 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Badge Them
     </code>
      
     (Bootstrap does not automatically adjust it as for instance with buttons)
+  </p>
+  <p
+    className="text-muted"
+  >
+    Do not use the ordinary 
+    <code>
+      className
+    </code>
+     prop to modify colors unless you want to fight with CSS specifity.
   </p>
 </div>
 `;
@@ -46153,7 +46187,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -46219,7 +46253,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -46285,7 +46319,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47791,7 +47825,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark bg-danger ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-danger ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47857,7 +47891,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -47923,7 +47957,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -48550,7 +48584,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark bg-danger ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-danger ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",
@@ -48585,7 +48619,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
                 className="pt-3"
               >
                 <div
-                  className="badge rounded-pill fw-light bg-secondary text-dark ui-badge"
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
                   style={
                     Object {
                       "padding": "7px 20px 8px 20px",

@@ -52,7 +52,7 @@ export const show = ({ onItemClick }) => {
               <ListCard.Title>Item 1</ListCard.Title>
               <ListCard.Body>Where when and what</ListCard.Body>
               <ListCard.Foot>
-                <Badge className="bg-danger">Status bad</Badge>
+                <Badge colorClassName="bg-danger">Status bad</Badge>
               </ListCard.Foot>
             </ListCard>
             <ListCard onClick={onItemClick}>
