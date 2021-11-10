@@ -24090,7 +24090,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
     className="d-flex flex-column gap-3 mb-4"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className="small"
@@ -24125,7 +24125,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -24174,7 +24174,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
       title + progressbar:
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -24209,7 +24209,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
       progressbar + info:
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -24247,7 +24247,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
       progressbar only:
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -24284,7 +24284,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
       ):
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -24307,7 +24307,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
     className="d-flex flex-column gap-3 mb-4"
   >
     <div
-      className="d-flex flex-column gap-1 text-primary"
+      className="ui-progress-info d-flex flex-column gap-1 text-primary"
     >
       <div
         className=""
@@ -24356,7 +24356,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressIn
     A progressbar with a title and an info line.
   </p>
   <div
-    className="d-flex flex-column gap-1"
+    className="ui-progress-info d-flex flex-column gap-1"
   >
     <div
       className=""
@@ -45853,7 +45853,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
           >
             <div>
               <div
-                className="d-flex flex-column gap-1"
+                className="ui-progress-info d-flex flex-column gap-1"
               >
                 <div
                   className=""
@@ -45993,7 +45993,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                   className=""
                 >
                   <div
-                    className="d-flex flex-column gap-1"
+                    className="ui-progress-info d-flex flex-column gap-1"
                   >
                     <div
                       className="small"
@@ -46057,7 +46057,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                   className=""
                 >
                   <div
-                    className="d-flex flex-column gap-1"
+                    className="ui-progress-info d-flex flex-column gap-1"
                   >
                     <div
                       className="small"
@@ -46561,7 +46561,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className=""
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -46664,7 +46664,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className=""
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -46767,7 +46767,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className="mb-2"
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -46806,7 +46806,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className=""
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -46909,7 +46909,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className=""
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -47046,7 +47046,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className=""
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -47123,7 +47123,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className=""
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -47200,7 +47200,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                     className=""
                   >
                     <div
-                      className="d-flex flex-column gap-1"
+                      className="ui-progress-info d-flex flex-column gap-1"
                     >
                       <div
                         className="small"
@@ -47240,7 +47240,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47258,7 +47258,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47281,7 +47281,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47316,7 +47316,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47370,7 +47370,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47405,7 +47405,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47454,7 +47454,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47468,7 +47468,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47543,7 +47543,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47561,7 +47561,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47605,7 +47605,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47640,7 +47640,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47692,7 +47692,7 @@ Array [
       className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
     >
       <div
-        className="d-flex flex-column gap-1"
+        className="ui-progress-info d-flex flex-column gap-1"
       >
         <div
           className=""
@@ -47706,7 +47706,7 @@ Array [
         </div>
       </div>
       <div
-        className="d-flex flex-column gap-1"
+        className="ui-progress-info d-flex flex-column gap-1"
       >
         <div
           className=""
@@ -47778,7 +47778,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47826,7 +47826,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47911,7 +47911,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47946,7 +47946,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -47981,7 +47981,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48069,7 +48069,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48121,7 +48121,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48139,7 +48139,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48157,7 +48157,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48175,7 +48175,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48201,7 +48201,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48236,7 +48236,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48280,7 +48280,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48294,7 +48294,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48361,7 +48361,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48411,7 +48411,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48461,7 +48461,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48496,7 +48496,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48545,7 +48545,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48580,7 +48580,7 @@ Array [
       </div>
     </div>
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48630,7 +48630,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -48680,7 +48680,7 @@ Array [
     className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
   >
     <div
-      className="d-flex flex-column gap-1"
+      className="ui-progress-info d-flex flex-column gap-1"
     >
       <div
         className=""
@@ -49107,7 +49107,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
             className="mb-3"
           >
             <div
-              className="d-flex flex-column gap-1"
+              className="ui-progress-info d-flex flex-column gap-1"
             >
               <div
                 className=""
