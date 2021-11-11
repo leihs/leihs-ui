@@ -24784,67 +24784,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/PropertyTa
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Section Collapsing Options 1`] = `
-<div>
-  <h1>
-    Section
-  </h1>
-  <p
-    className="text-muted"
-  >
-    Uncollapsible example:
-  </p>
-  <section
-    className="mb-3"
-  >
-    <h2
-      className="section-title fw-normal"
-    >
-      <span
-        className=""
-        onClick={[Function]}
-        role=""
-      >
-        Ibex
-      </span>
-    </h2>
-    <div>
-      The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
-    </div>
-  </section>
-  <p
-    className="text-muted"
-  >
-    Default-collapsed example:
-  </p>
-  <section
-    className=""
-  >
-    <h2
-      className="section-title fw-normal"
-    >
-      <span
-        className="section-title__collapser"
-        onClick={[Function]}
-        role="button"
-      >
-        Ibex
-        <svg
-          className="section-title__arrow-icon section-title__arrow-icon--collapsed"
-          style={
-            Object {
-              "display": "inline",
-            }
-          }
-        >
-          Section Arrow.svg
-        </svg>
-      </span>
-    </h2>
-  </section>
-</div>
-`;
-
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Section Rest Props 1`] = `
 <div>
   <h1>
@@ -24862,7 +24801,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Section Re
       className="section-title fw-normal"
     >
       <span
-        className="section-title__collapser"
+        className="section-title__collapser ui-section-collapser"
         onClick={[Function]}
         role="button"
       >
@@ -24903,7 +24842,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Section Se
       className="section-title fw-normal"
     >
       <span
-        className="section-title__collapser"
+        className="section-title__collapser ui-section-collapser"
         onClick={[Function]}
         role="button"
       >
@@ -24924,6 +24863,187 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Section Se
       The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
     </div>
   </section>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Section State Options 1`] = `
+<div>
+  <h1>
+    Section
+  </h1>
+  <p
+    className="text-muted"
+  >
+    Not collapsible
+  </p>
+  <section
+    className="mb-4"
+  >
+    <h2
+      className="section-title fw-normal"
+    >
+      <span
+        className=""
+        onClick={[Function]}
+        role=""
+      >
+        Ibex
+      </span>
+    </h2>
+    <div>
+      The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+    </div>
+  </section>
+  <p
+    className="text-muted"
+  >
+    Uncontrolled, initially expanded (= default)
+  </p>
+  <section
+    className="mb-4"
+  >
+    <h2
+      className="section-title fw-normal"
+    >
+      <span
+        className="section-title__collapser ui-section-collapser"
+        onClick={[Function]}
+        role="button"
+      >
+        Ibex
+        <svg
+          className="section-title__arrow-icon"
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Section Arrow.svg
+        </svg>
+      </span>
+    </h2>
+    <div>
+      The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+    </div>
+  </section>
+  <p
+    className="text-muted"
+  >
+    Uncontrolled, initially collapsed
+  </p>
+  <section
+    className="mb-4"
+  >
+    <h2
+      className="section-title fw-normal"
+    >
+      <span
+        className="section-title__collapser ui-section-expander"
+        onClick={[Function]}
+        role="button"
+      >
+        Ibex
+        <svg
+          className="section-title__arrow-icon section-title__arrow-icon--collapsed"
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Section Arrow.svg
+        </svg>
+      </span>
+    </h2>
+  </section>
+  <p
+    className="text-muted"
+  >
+    Uncontrolled, with change notification
+    <br />
+    <span
+      className="fw-light"
+    >
+      (current state: 
+      expanded
+      )
+    </span>
+  </p>
+  <section
+    className="mb-4"
+  >
+    <h2
+      className="section-title fw-normal"
+    >
+      <span
+        className="section-title__collapser ui-section-collapser"
+        onClick={[Function]}
+        role="button"
+      >
+        Ibex
+        <svg
+          className="section-title__arrow-icon"
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Section Arrow.svg
+        </svg>
+      </span>
+    </h2>
+    <div>
+      The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+    </div>
+  </section>
+  <p
+    className="text-muted"
+  >
+    Section.Controlled
+     
+    <button
+      className="btn btn-outline-primary btn-sm fw-light ms-2"
+      onClick={[Function]}
+    >
+      collapse it!
+    </button>
+  </p>
+  <section
+    className=""
+  >
+    <h2
+      className="section-title fw-normal"
+    >
+      <span
+        className="section-title__collapser ui-section-collapser"
+        onClick={[Function]}
+        role="button"
+      >
+        Ibex
+        <svg
+          className="section-title__arrow-icon"
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Section Arrow.svg
+        </svg>
+      </span>
+    </h2>
+    <div>
+      The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+    </div>
+  </section>
+  <p>
+     
+  </p>
+  <p>
+     
+  </p>
 </div>
 `;
 
@@ -33808,7 +33928,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       className="section-title fw-normal"
     >
       <span
-        className="section-title__collapser"
+        className="section-title__collapser ui-section-collapser"
         onClick={[Function]}
         role="button"
       >
@@ -34921,7 +35041,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       className="section-title fw-normal"
     >
       <span
-        className="section-title__collapser"
+        className="section-title__collapser ui-section-collapser"
         onClick={[Function]}
         role="button"
       >
@@ -36036,7 +36156,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       className="section-title fw-normal"
     >
       <span
-        className="section-title__collapser"
+        className="section-title__collapser ui-section-collapser"
         onClick={[Function]}
         role="button"
       >
@@ -37144,7 +37264,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       className="section-title fw-normal"
     >
       <span
-        className="section-title__collapser"
+        className="section-title__collapser ui-section-collapser"
         onClick={[Function]}
         role="button"
       >
@@ -44230,7 +44350,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             className="section-title fw-normal"
           >
             <span
-              className="section-title__collapser"
+              className="section-title__collapser ui-section-collapser"
               onClick={[Function]}
               role="button"
             >
@@ -44415,7 +44535,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             className="section-title fw-normal"
           >
             <span
-              className="section-title__collapser"
+              className="section-title__collapser ui-section-collapser"
               onClick={[Function]}
               role="button"
             >
@@ -44470,7 +44590,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             className="section-title fw-normal"
           >
             <span
-              className="section-title__collapser"
+              className="section-title__collapser ui-section-collapser"
               onClick={[Function]}
               role="button"
             >
@@ -45103,7 +45223,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -45184,7 +45304,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -45660,7 +45780,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -45830,7 +45950,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -45917,7 +46037,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -45949,7 +46069,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -46111,7 +46231,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -46350,7 +46470,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -46479,7 +46599,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -46964,7 +47084,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -49085,7 +49205,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -49169,7 +49289,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -49231,7 +49351,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -49592,7 +49712,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -49719,7 +49839,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -49879,7 +49999,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -49929,7 +50049,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
@@ -50018,7 +50138,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
           className="section-title fw-normal"
         >
           <span
-            className="section-title__collapser"
+            className="section-title__collapser ui-section-collapser"
             onClick={[Function]}
             role="button"
           >
