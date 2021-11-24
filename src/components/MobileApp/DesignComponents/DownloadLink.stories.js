@@ -17,11 +17,11 @@ export const downloadLink = ({ onClick }) => {
     <div>
       <h1>DownloadLink</h1>
       <p className="text-muted">A link with a download icon:</p>
-      <p>
+      <div className="mb-3">
         <DownloadLink onClick={handleClick} href="some/route">
           Download the specification
         </DownloadLink>
-      </p>
+      </div>
       <p className="text-muted">To ensure spacing between multiple of them</p>
       <ul className="text-muted">
         <li>

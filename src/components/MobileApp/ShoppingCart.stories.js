@@ -5,7 +5,7 @@ import { AppWrapper, MainView, Navbar, Page } from './AppLayout'
 import { ReservationLines } from './ShoppingCart.js'
 
 export default {
-  title: 'MobileApp/Integrated Components/ShoppingCart',
+  title: 'MobileApp/Integrated Components/Old/ShoppingCart',
   component: ReservationLines
 }
 

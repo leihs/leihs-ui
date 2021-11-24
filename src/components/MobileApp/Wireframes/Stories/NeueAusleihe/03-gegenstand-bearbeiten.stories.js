@@ -5,6 +5,7 @@ import Stack from '../../../DesignComponents/Stack'
 import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
 import OrderPanel from '../../../OrderPanel'
 import { getOrderPanelMockData } from '../../../StoryUtils/sample-props'
+import { locale, orderPanelTexts } from '../../../StoryUtils/fake-localization'
 
 export default {
   title: 'MobileApp/Wireframes/Neue Ausleihe/Gegenstand bearbeiten',
@@ -31,6 +32,8 @@ export const gegenstandBearbeiten = ({ onSubmit, onCancel, onRemoveClick }) => {
             maxDateLoaded={maxDateLoaded}
             inventoryPools={inventoryPools}
             onSubmit={onSubmit}
+            locale={locale}
+            txt={orderPanelTexts}
           />
           <ActionButtonGroup>
             <button type="button" className="btn btn-secondary" onClick={onRemoveClick}>

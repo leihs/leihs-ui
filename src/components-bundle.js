@@ -1,5 +1,3 @@
-import Collapse from 'react-bootstrap/Collapse'
-
 import * as AppLayout from './components/MobileApp/AppLayout'
 import Bold from './components/Bold'
 import DebugProps from './components/DebugProps'
@@ -32,7 +30,6 @@ const Components = {
   Design: {
     ActionButtonGroup: require('./components/MobileApp/DesignComponents/ActionButtonGroup').default,
     Badge: require('./components/MobileApp/DesignComponents/Badge').default,
-    Collapse,
     ConfirmDialog: require('./components/MobileApp/DesignComponents/ConfirmDialog').default,
     DatePicker: require('./components/MobileApp/DesignComponents/DatePicker').default,
     DownloadLink: require('./components/MobileApp/DesignComponents/DownloadLink').default,

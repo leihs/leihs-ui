@@ -185,9 +185,9 @@ const OrderPanel = ({
               ))}
             </select>
             {!userDelegationCanBeChanged && (
-              <Warning className="text-muted">
+              <div className="text-muted fw-light mt-1">
                 {t(txt.validate, 'user-delegation-cant-be-changed-active-cart', locale)}
-              </Warning>
+              </div>
             )}
           </Section>
         )}
@@ -210,7 +210,7 @@ const OrderPanel = ({
                   txt={{ from: t(label, 'from', locale), until: t(label, 'until', locale) }}
                 />
               </fieldset>
-              {validationError && <Warning>{validationError}</Warning>}
+              {validationError && <Warning className="mt-2">{validationError}</Warning>}
             </Section>
           )}
         </Let>
@@ -288,7 +288,7 @@ OrderPanel.propTypes = {
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired
     }).isRequired
-  ).isRequired,
+  ),
   /** initially selected user delegation */
   initialUserDelegationId: PropTypes.string,
   /** set if user delegation can be changed or not */
@@ -297,7 +297,10 @@ OrderPanel.propTypes = {
   onUserDelegationChange: PropTypes.func,
 
   /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func.isRequired,
+
+  locale: PropTypes.string.isRequired,
+  txt: PropTypes.object.isRequired
 }
 
 function getAvailabilityByDateAndPool(modelData) {
@@ -336,7 +339,7 @@ function validateSelection(
 ) {
   wantedQuantity = parseInt(wantedQuantity, 10)
   if (Number.isNaN(wantedQuantity) || wantedQuantity < 1) {
-    return t(txt['missing-quantity'], locale)
+    return t(txt, 'missing-quantity', locale)
   }
 
   if (!isValid(startDate)) {

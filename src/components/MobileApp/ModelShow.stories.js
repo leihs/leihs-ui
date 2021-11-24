@@ -17,6 +17,11 @@ export const modelShow = ({ model, onClickFavorite, onOrderClick, orderPanelTmp 
         onOrderClick={onOrderClick}
         onClickFavorite={onClickFavorite}
         orderPanelTmp={orderPanelTmp}
+        t={{
+          addItemToCart: 'Gegenstand hinzufügen',
+          addToFavorites: 'Zu Favoriten hinzufügen',
+          removeFromFavorites: 'Von Favoriten entfernen'
+        }}
       />
     </PageLayoutMock>
   )

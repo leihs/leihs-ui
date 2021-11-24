@@ -13,7 +13,7 @@ export default function ProgressInfo({ title, info, totalCount, doneCount, small
 }
 
 ProgressInfo.propTypes = {
-  title: PropTypes.string,
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.object]),
   totalCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   doneCount: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   info: PropTypes.node,

@@ -205,5 +205,11 @@ ModelShow.propTypes = {
   /** callback when the order button is clicked, arguments: none */
   onOrderClick: PropTypes.func.isRequired,
   /** order panel */
-  orderPanelTmp: PropTypes.node
+  orderPanelTmp: PropTypes.node,
+  /** Translations */
+  t: PropTypes.shape({
+    addItemToCart: PropTypes.string.isRequired,
+    removeFromFavorites: PropTypes.string.isRequired,
+    addToFavorites: PropTypes.string.isRequired
+  }).isRequired
 }

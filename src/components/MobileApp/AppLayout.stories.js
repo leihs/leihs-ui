@@ -5,7 +5,7 @@ import SquareImageGrid from './DesignComponents/SquareImageGrid'
 import { categoryListPropsV1 as exampleCategoryProps } from '../MobileApp/StoryUtils/sample-props'
 
 export default {
-  title: 'MobileApp/Integrated Components/AppLayout',
+  title: 'MobileApp/Integrated Components/Old/AppLayout',
   parameters: { layout: 'fullscreen' }
 }
 

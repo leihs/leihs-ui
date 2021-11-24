@@ -22485,7 +22485,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ActionButt
     className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
   >
     <div
-      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
+      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
     >
       I'm sorry, Dave. I'm afraid I can't do that.
     </div>
@@ -22658,7 +22658,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
   >
     A link with a download icon:
   </p>
-  <p>
+  <div
+    className="mb-3"
+  >
     <a
       className="d-flex"
       href="some/route"
@@ -22680,7 +22682,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/DownloadLi
         Download the specification
       </div>
     </a>
-  </p>
+  </div>
   <p
     className="text-muted"
   >
@@ -25253,7 +25255,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 1
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             />
           </a>
         </div>
@@ -25313,7 +25315,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 2 (a favorite)
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             >
               it is a favorite
             </div>
@@ -25361,7 +25363,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 3
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             >
               it is dimmed
             </div>
@@ -25409,7 +25411,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 4 with much text text text
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             />
           </a>
         </div>
@@ -25467,7 +25469,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 1
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             />
           </a>
         </div>
@@ -25527,7 +25529,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 2 (a favorite)
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             >
               it is a favorite
             </div>
@@ -25575,7 +25577,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 3
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             >
               it is dimmed
             </div>
@@ -25623,7 +25625,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
               Item 4 with much text text text
             </div>
             <div
-              className="small text-muted"
+              className="small fw-light"
             />
           </a>
         </div>
@@ -25644,7 +25646,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Re
     Set arbitrary attributes with restProps
   </p>
   <div
-    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2 border border-primary"
+    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0 border border-primary"
     style={
       Object {
         "fontSize": "1rem",
@@ -25677,7 +25679,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Wa
     There is also an icon added so the message is not discernible by its color only.
   </p>
   <div
-    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
+    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
   >
     1 Gegenstand ungültig
   </div>
@@ -25702,7 +25704,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Wr
     }
   >
     <div
-      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
+      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis quod esse dolores quia perferendis minima architecto. Nobis itaque, unde quibusdam voluptatibus aut accusantium ipsa, facere autem deserunt, praesentium perspiciatis?
     </div>
@@ -42095,7 +42097,611 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Stack
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empty Cart With Call To Action 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadcrumbs Level 0 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <div
+      className="text-center mb-4"
+    >
+      <h1>
+        Wirbeltiere
+      </h1>
+      <button
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
+        type="button"
+      >
+        Filter
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadcrumbs Level 1 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <div
+      className="text-center mb-4"
+    >
+      <h1>
+        <span
+          className="d-inline-block fs-2 mb-1"
+        >
+          <ul
+            className="ui-category-breadcrumbs list-inline fw-normal"
+          >
+            <li>
+              <a
+                href="cat/1"
+              >
+                Wirbeltiere
+              </a>
+            </li>
+          </ul>
+        </span>
+        <br />
+        Säugetiere
+      </h1>
+      <button
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
+        type="button"
+      >
+        Filter
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadcrumbs Level 2 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <div
+      className="text-center mb-4"
+    >
+      <h1>
+        <span
+          className="d-inline-block fs-2 mb-1"
+        >
+          <ul
+            className="ui-category-breadcrumbs list-inline fw-normal"
+          >
+            <li>
+              <a
+                href="cat/1"
+              >
+                Wirbeltiere
+              </a>
+            </li>
+            <li>
+              <a
+                href="cat/1/2"
+              >
+                Säugetiere
+              </a>
+            </li>
+          </ul>
+        </span>
+        <br />
+        Bären
+      </h1>
+      <button
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
+        type="button"
+      >
+        Filter
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelList Example 1 1`] = `
+<div
+  className="row g-0 d-flex flex-wrap mx-n2 ui-models-list"
+>
+  <div
+    className="col-6 col-sm-3"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="rounded border square-container position-relative overflow-hidden"
+      >
+        <a
+          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="pt-2"
+      >
+        <a
+          className="stretched-link"
+          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
+        >
+          <div
+            className="small"
+          >
+            Assitasche zu Alexa / Sony
+          </div>
+          <div
+            className="small fw-light"
+          >
+            Birkle / Steiner
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="rounded border square-container position-relative overflow-hidden"
+      >
+        <a
+          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="pt-2"
+      >
+        <a
+          className="stretched-link"
+          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
+        >
+          <div
+            className="small"
+          >
+            AVCHD-Kamera Sony HXR-NX5E
+          </div>
+          <div
+            className="small fw-light"
+          >
+            Sony
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3"
+    style={
+      Object {
+        "opacity": 0.35,
+      }
+    }
+  >
+    <div
+      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="rounded border square-container position-relative overflow-hidden"
+      >
+        <a
+          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="pt-2"
+      >
+        <a
+          className="stretched-link"
+          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
+        >
+          <div
+            className="small"
+          >
+            AVCHD-Kamera Sony HXR-NX5R
+          </div>
+          <div
+            className="small fw-light"
+          >
+            Sony
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="rounded border square-container position-relative overflow-hidden"
+      >
+        <a
+          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="pt-2"
+      >
+        <a
+          className="stretched-link"
+          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
+        >
+          <div
+            className="small"
+          >
+            BluRay-Player Sony BDP-S490 3D
+          </div>
+          <div
+            className="small fw-light"
+          >
+            Sony
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3"
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  >
+    <div
+      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="rounded border square-container position-relative overflow-hidden"
+      >
+        <a
+          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="pt-2"
+      >
+        <a
+          className="stretched-link"
+          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
+        >
+          <div
+            className="small"
+          >
+            CD-Player Sony CDP-XE370
+          </div>
+          <div
+            className="small fw-light"
+          >
+            Sony
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div
+    className="col-6 col-sm-3"
+    style={
+      Object {
+        "opacity": 0.35,
+      }
+    }
+  >
+    <div
+      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
+      style={
+        Object {
+          "opacity": 1,
+        }
+      }
+    >
+      <div
+        className="rounded border square-container position-relative overflow-hidden"
+      >
+        <a
+          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
+        >
+          <div
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+          />
+        </a>
+      </div>
+      <div
+        className="pt-2"
+      >
+        <a
+          className="stretched-link"
+          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
+        >
+          <div
+            className="small"
+          >
+            Fernbedienung Kamera Sony RM-1BP
+          </div>
+          <div
+            className="small fw-light"
+          >
+            Sony
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/AppLayout Empty Cart With Call To Action 1`] = `
 <div
   id="app"
 >
@@ -42220,7 +42826,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empt
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empty Page 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/AppLayout Empty Page 1`] = `
 <div
   id="app"
 >
@@ -42323,7 +42929,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empt
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empty Page With Subtitle And Backlink 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/AppLayout Empty Page With Subtitle And Backlink 1`] = `
 <div
   id="app"
 >
@@ -42438,7 +43044,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Empt
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Homepage 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/AppLayout Homepage 1`] = `
 <div
   id="app"
 >
@@ -42730,7 +43336,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Home
                       Audio
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -42776,7 +43382,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Home
                       Beleuchtungstechnik
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -42822,7 +43428,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Home
                       Effektgeräte Veranstaltungstechnik
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -42868,7 +43474,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Home
                       Externe Massenspeicher
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -42882,7 +43488,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Home
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Page with Crash (Error Boundary) 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/AppLayout Page with Crash (Error Boundary) 1`] = `
 <div
   id="app"
 >
@@ -42988,7 +43594,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/AppLayout Page
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterForm Full Example 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/ModelFilterForm Full Example 1`] = `
 <div
   className="px-3 py-4 bg-light mt-3 mb-3"
 >
@@ -43139,7 +43745,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterForm Minimal Example 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/ModelFilterForm Minimal Example 1`] = `
 <div
   className="px-3 py-4 bg-light mt-3 mb-3"
 >
@@ -43255,7 +43861,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterForm Minimal With Delegation Example 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/ModelFilterForm Minimal With Delegation Example 1`] = `
 <div
   className="px-3 py-4 bg-light mt-3 mb-3"
 >
@@ -43406,302 +44012,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelFilterFor
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ModelList Example 1 1`] = `
-<div
-  className="row g-0 d-flex flex-wrap mx-n2 ui-models-list"
->
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-      >
-        <a
-          className="stretched-link"
-          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
-        >
-          <div
-            className="small"
-          >
-            Assitasche zu Alexa / Sony
-          </div>
-          <div
-            className="small text-muted"
-          >
-            Birkle / Steiner
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-      >
-        <a
-          className="stretched-link"
-          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
-        >
-          <div
-            className="small"
-          >
-            AVCHD-Kamera Sony HXR-NX5E
-          </div>
-          <div
-            className="small text-muted"
-          >
-            Sony
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 0.35,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-      >
-        <a
-          className="stretched-link"
-          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
-        >
-          <div
-            className="small"
-          >
-            AVCHD-Kamera Sony HXR-NX5R
-          </div>
-          <div
-            className="small text-muted"
-          >
-            Sony
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-      >
-        <a
-          className="stretched-link"
-          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
-        >
-          <div
-            className="small"
-          >
-            BluRay-Player Sony BDP-S490 3D
-          </div>
-          <div
-            className="small text-muted"
-          >
-            Sony
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 1,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-      >
-        <a
-          className="stretched-link"
-          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
-        >
-          <div
-            className="small"
-          >
-            CD-Player Sony CDP-XE370
-          </div>
-          <div
-            className="small text-muted"
-          >
-            Sony
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-  <div
-    className="col-6 col-sm-3"
-    style={
-      Object {
-        "opacity": 0.35,
-      }
-    }
-  >
-    <div
-      className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative ui-models-list-item"
-      style={
-        Object {
-          "opacity": 1,
-        }
-      }
-    >
-      <div
-        className="rounded border square-container position-relative overflow-hidden"
-      >
-        <a
-          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
-        >
-          <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
-          />
-        </a>
-      </div>
-      <div
-        className="pt-2"
-      >
-        <a
-          className="stretched-link"
-          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
-        >
-          <div
-            className="small"
-          >
-            Fernbedienung Kamera Sony RM-1BP
-          </div>
-          <div
-            className="small text-muted"
-          >
-            Sony
-          </div>
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ShoppingCart Example Cart 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/ShoppingCart Example Cart 1`] = `
 <div
   id="app"
 >
@@ -44019,7 +44330,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ShoppingCart E
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Integrated Components/ShoppingCart Example Lines 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/ShoppingCart Example Lines 1`] = `
 <div>
   );
   <ul
@@ -44625,7 +44936,7 @@ exports[`Storybook HTML Snapshots MobileApp/Overview Overview 1`] = `
     Leihs Borrow App UI
   </h1>
   <p>
-    Built using a set of design components and Bootstrap.
+    Built using a set of design components on top of Bootstrap.
   </p>
   <h2>
     Story breakdown
@@ -44655,7 +44966,7 @@ exports[`Storybook HTML Snapshots MobileApp/Overview Overview 1`] = `
       <h2>
         Bootstrap Theme
       </h2>
-      Which Boostrap classes are to be used. Reference about colors, spacing, typography etc.
+      Reference about colors, spacing, typography etc.
     </li>
     <li
       className="list-group-item"
@@ -44663,7 +44974,13 @@ exports[`Storybook HTML Snapshots MobileApp/Overview Overview 1`] = `
       <h2>
         Integrated Components
       </h2>
-      Showcase of the ready components (as used in the production app)
+      A few ready-made partial views for the app.
+       
+      <span
+        className="fw-light"
+      >
+        Note that most views are composed by the app directly using the design components and Bootstrap classes.
+      </span>
     </li>
   </ul>
 </div>
@@ -45284,7 +45601,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
                       Audio
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -45365,7 +45682,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
                       Audio
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -45526,7 +45843,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                       Audio
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -45572,7 +45889,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                       Foto
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -45618,7 +45935,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                       Video
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -45664,7 +45981,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
                       Musikinstrumente & Zubehör
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -45841,7 +46158,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
                       Audio
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -48822,21 +49139,53 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
 <div
   className="pb-5 ui-page-layout"
 >
-  <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  <div
+    className="ui-main-menu-wrapper sticky-top"
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
   >
-    <div
-      className="navbar-nav"
+    <nav
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
     >
-      <a
-        aria-controls="menu"
-        aria-expanded={false}
-        className="nav-item nav-link"
-        onClick={[Function]}
-        role="button"
+      <div
+        className="navbar-nav"
       >
-        <span
-          className="ui-icon ui-menu-icon"
+        <a
+          aria-controls="menu"
+          aria-expanded={false}
+          className="nav-item nav-link"
+          onClick={[Function]}
+          role="button"
+        >
+          <span
+            className="ui-icon ui-menu-icon"
+          >
+            <svg
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Menu Icon.svg
+            </svg>
+          </span>
+        </a>
+      </div>
+      <a
+        className="navbar-brand me-0 fw-bold"
+      >
+        Leihs
+      </a>
+      <div
+        className="navbar-nav"
+      >
+        <a
+          className="nav-item nav-link position-relative"
+          href="/app/borrow/order"
         >
           <svg
             style={
@@ -48845,42 +49194,14 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
               }
             }
           >
-            Menu Icon.svg
+            Bag Icon.svg
           </svg>
-        </span>
-      </a>
-    </div>
-    <a
-      className="navbar-brand me-0 fw-bold"
-    >
-      Leihs
-    </a>
+        </a>
+      </div>
+    </nav>
     <div
-      className="navbar-nav"
-    >
-      <a
-        className="nav-item nav-link position-relative"
-        href="/app/borrow/order"
-      >
-        <svg
-          style={
-            Object {
-              "display": "inline",
-            }
-          }
-        >
-          Bag Icon.svg
-        </svg>
-      </a>
-    </div>
-  </nav>
-  <div
-    aria-expanded={null}
-    className="collapse"
-    id="menu"
-  >
-    <div
-      className="h-100 pb-5 bg-light-shade overflow-scroll"
+      className="h-100 pb-5 bg-light-shade overflow-scroll d-none"
+      id="menu"
     >
       <nav
         className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
@@ -49584,7 +49905,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Auslei
             className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
           >
             <div
-              className="invalid-feedback invalid-feedback-icon d-block w-100 mt-2"
+              className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
             >
               1 Gegenstand ungültig
             </div>
@@ -49773,7 +50094,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
                       Audio
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>
@@ -49819,7 +50140,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
                       Foto
                     </div>
                     <div
-                      className="small text-muted"
+                      className="small fw-light"
                     />
                   </a>
                 </div>

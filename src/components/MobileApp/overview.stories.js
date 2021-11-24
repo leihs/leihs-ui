@@ -2,14 +2,14 @@ import React from 'react'
 
 export default {
   title: 'MobileApp/Overview',
-  parameters: { viewport: { defaultViewport: null } }
+  parameters: { viewport: { defaultViewport: 'reset' } }
 }
 
 export function Overview() {
   return (
     <div>
       <h1>Leihs Borrow App UI</h1>
-      <p>Built using a set of design components and Bootstrap.</p>
+      <p>Built using a set of design components on top of Bootstrap.</p>
       <h2>Story breakdown</h2>
       <ul className="list-group">
         <li className="list-group-item">
@@ -22,11 +22,13 @@ export function Overview() {
         </li>
         <li className="list-group-item">
           <h2>Bootstrap Theme</h2>
-          Which Boostrap classes are to be used. Reference about colors, spacing, typography etc.
+          Reference about colors, spacing, typography etc.
         </li>
         <li className="list-group-item">
-          <h2>Integrated Components</h2>
-          Showcase of the ready components (as used in the production app)
+          <h2>Integrated Components</h2>A few ready-made partial views for the app.{' '}
+          <span className="fw-light">
+            Note that most views are composed by the app directly using the design components and Bootstrap classes.
+          </span>
         </li>
       </ul>
     </div>

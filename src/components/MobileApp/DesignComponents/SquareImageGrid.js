@@ -21,7 +21,7 @@ export default function SquareImageGrid({ list = [], className, itemClassName, .
             <div className="pt-2">
               <a className="stretched-link" href={href}>
                 <div className="small">{caption}</div>
-                <div className="small text-muted">{subCaption}</div>
+                <div className="small fw-light">{subCaption}</div>
               </a>
             </div>
           </div>

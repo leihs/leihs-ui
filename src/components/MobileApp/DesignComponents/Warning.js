@@ -4,7 +4,7 @@ import cx from 'classnames/dedupe'
 
 export default function Warning({ children, className, ...restProps }) {
   return (
-    <div className={cx('invalid-feedback invalid-feedback-icon d-block w-100 mt-2', className)} {...restProps}>
+    <div className={cx('invalid-feedback invalid-feedback-icon d-block w-100 mt-0', className)} {...restProps}>
       {children}
     </div>
   )

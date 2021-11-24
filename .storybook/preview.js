@@ -3,6 +3,7 @@ import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 import React, { useLayoutEffect } from 'react'
 import './fake-time'
 
+// Note: `addon-viewport` automatically adds viewport 'reset' to the following list for a responsive view
 const VIEWPORTS = ['iphone5', 'galaxys9', 'iphonex', 'iphonexsmax', 'ipad']
 const DEFAULT_VIEWPORT = 'iphonex'
 

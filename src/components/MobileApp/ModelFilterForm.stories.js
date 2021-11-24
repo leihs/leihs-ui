@@ -3,7 +3,7 @@ import { action } from '@storybook/addon-actions'
 import ModelFilterForm from './ModelFilterForm'
 
 export default {
-  title: 'MobileApp/Integrated Components/ModelFilterForm',
+  title: 'MobileApp/Integrated Components/Old/ModelFilterForm',
   component: ModelFilterForm,
   parameters: {
     // layout: 'fullscreen'

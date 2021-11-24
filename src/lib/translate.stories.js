@@ -3,7 +3,7 @@ import { translate } from '../lib/translate'
 
 export default {
   title: 'MobileApp/Overview/Translations',
-  parameters: { layout: 'fullscreen', viewport: { defaultViewport: false } }
+  parameters: { viewport: { defaultViewport: 'reset' } }
 }
 
 // NOTE: shortcut for the examples, they are always in just 1 language and key is same as string
