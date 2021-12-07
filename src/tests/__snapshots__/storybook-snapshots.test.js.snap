@@ -44632,12 +44632,12 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
         className="text-center mb-4"
       >
         <h1>
-          Nutzerdaten
+          Benutzerkonto
         </h1>
         <h2
           className="fw-light"
         >
-          Joël Gähwiler
+          Anna Beispiel
         </h2>
         <div
           className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
@@ -44646,9 +44646,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             className="btn btn-secondary"
             onClick={[Function]}
             type="button"
-          >
-            Abmelden
-          </button>
+          />
         </div>
       </div>
       <div
@@ -44708,7 +44706,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
                       }
                     }
                   >
-                    joel.gaehwiler@zhdk.ch
+                    anna.beispiel@example1.com
                   </td>
                 </tr>
                 <tr
@@ -44732,7 +44730,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
                       }
                     }
                   >
-                    joel.gaehwiler@example.com
+                    anna@example2.com
                   </td>
                 </tr>
                 <tr
@@ -44794,7 +44792,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
                       }
                     }
                   >
-                    Organisations-ID
+                    ID
                   </td>
                   <td
                     className="text-break pt-2"
@@ -44804,7 +44802,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
                       }
                     }
                   >
-                    170663
+                    1234567
                   </td>
                 </tr>
                 <tr
@@ -44872,16 +44870,47 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
               />
               <div
                 className="py-3 position-relative ui-list-card"
+                style={
+                  Object {
+                    "cursor": "pointer",
+                    "minHeight": "4.375rem",
+                  }
+                }
               >
+                <a
+                  className="float-end text-end ps-5 stretched-link"
+                  href="example"
+                  style={
+                    Object {
+                      "paddingBottom": "0.75rem",
+                      "paddingTop": "0.5rem",
+                    }
+                  }
+                >
+                  <svg
+                    style={
+                      Object {
+                        "display": "inline",
+                      }
+                    }
+                  >
+                    Item Arrow.svg
+                  </svg>
+                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  Master Design
+                  <a
+                    className="stretched-link"
+                    href="example"
+                  >
+                    Master Design
+                  </a>
                 </div>
                 <div
                   className="small"
                 >
-                  Corina Zuberbühler
+                  Maria Bernasconi
                 </div>
               </div>
               <hr
@@ -44919,9 +44948,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             </span>
           </h2>
           <div>
-            <p>
-              (noch keine)
-            </p>
+            <p />
           </div>
         </section>
       </div>

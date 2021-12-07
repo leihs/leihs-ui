@@ -12,10 +12,8 @@ import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 
 const BASE_CLASS = 'ui-user-profile'
 
-function UserProfilePage({ txt, currentUser, contracts, onLogoutClick, ...restProps }) {
-  const { user } = currentUser
-  const { delegations } = user
-  const { pageTitle, sectionContracts, sectionDelegations } = txt
+function UserProfilePage({ txt, user, delegations, contracts, onLogoutClick, ...restProps }) {
+  const { pageTitle, sectionUserData, sectionContracts, sectionDelegations, logout, noContracts } = txt
 
   const isLocalUser = user.organization === 'local'
 
@@ -28,7 +26,7 @@ function UserProfilePage({ txt, currentUser, contracts, onLogoutClick, ...restPr
       ? []
       : [
           ['Organisation', user.organization],
-          ['Organisations-ID', user.orgId]
+          ['ID', user.orgId]
         ]),
 
     user.badgeId && ['Badge-ID', user.badgeId]
@@ -42,22 +40,26 @@ function UserProfilePage({ txt, currentUser, contracts, onLogoutClick, ...restPr
         {!!onLogoutClick && (
           <ActionButtonGroup>
             <button type="button" className="btn btn-secondary" onClick={onLogoutClick}>
-              Abmelden
+              {logout}
             </button>
           </ActionButtonGroup>
         )}
       </PageLayout.Header>
       <Stack space="5">
-        <Section title="Nutzerdaten" collapsible>
+        <Section title={sectionUserData} collapsible>
           <PropertyTable properties={userDataTable} />
         </Section>
         {!!delegations.length && (
           <Section title={sectionDelegations} collapsible>
             <ListCard.Stack>
-              {delegations.map(({ id, name, responsible }) => (
-                <ListCard key={id}>
-                  <ListCard.Title>{name}</ListCard.Title>
-                  <ListCard.Body>{responsible.name}</ListCard.Body>
+              {delegations.map(({ id, name, responsibleName, href }) => (
+                <ListCard key={id} href={href}>
+                  <ListCard.Title>
+                    <a href={href} className="stretched-link">
+                      {name}
+                    </a>
+                  </ListCard.Title>
+                  <ListCard.Body>{responsibleName}</ListCard.Body>
                 </ListCard>
               ))}
             </ListCard.Stack>
@@ -65,7 +67,7 @@ function UserProfilePage({ txt, currentUser, contracts, onLogoutClick, ...restPr
         )}
         <Section title={sectionContracts} collapsible>
           {!contracts.length ? (
-            <p>(noch keine)</p>
+            <p>{noContracts}</p>
           ) : (
             <Stack space="3">
               {contracts.map(({ id, downloadUrl, displayName }) => {
@@ -84,7 +86,9 @@ function UserProfilePage({ txt, currentUser, contracts, onLogoutClick, ...restPr
 }
 
 UserProfilePage.propTypes = {
-  currentUser: PropTypes.object,
+  user: PropTypes.object.isRequired,
+  delegations: PropTypes.array.isRequired,
+  contracts: PropTypes.array.isRequired,
   onLogoutClick: PropTypes.func
 }
 
