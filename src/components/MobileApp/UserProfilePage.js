@@ -52,14 +52,25 @@ function UserProfilePage({ txt, user, delegations, contracts, onLogoutClick, ...
         {!!delegations.length && (
           <Section title={sectionDelegations} collapsible>
             <ListCard.Stack>
-              {delegations.map(({ id, name, responsibleName, href }) => (
+              {delegations.map(({ id, name, responsibleName, responsibleEmail, href }) => (
                 <ListCard key={id} href={href}>
                   <ListCard.Title>
-                    <a href={href} className="stretched-link">
-                      {name}
-                    </a>
+                    {href ? (
+                      <a href={href} className="stretched-link">
+                        {name}
+                      </a>
+                    ) : (
+                      name
+                    )}
                   </ListCard.Title>
-                  <ListCard.Body>{responsibleName}</ListCard.Body>
+                  <ListCard.Body>
+                    <div>{responsibleName}</div>
+                    {responsibleEmail && (
+                      <div className="pt-1">
+                        <a href={'mailto:' + responsibleEmail}>{responsibleEmail}</a>
+                      </div>
+                    )}
+                  </ListCard.Body>
                 </ListCard>
               ))}
             </ListCard.Stack>

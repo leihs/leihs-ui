@@ -45,5 +45,13 @@ const user = {
   suspensions: [],
   inventoryPools: []
 }
-const delegations = [{ id: '123', name: 'Master Design', responsibleName: 'Maria Bernasconi', href: 'example' }]
+const delegations = [
+  {
+    id: '123',
+    name: 'Master Design',
+    responsibleName: 'Maria Bernasconi',
+    responsibleEmail: 'maria@example3.com'
+    // href: 'example' // (not used by app)
+  }
+]
 const contracts = []

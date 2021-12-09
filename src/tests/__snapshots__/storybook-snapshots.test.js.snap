@@ -44870,47 +44870,27 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
               />
               <div
                 className="py-3 position-relative ui-list-card"
-                style={
-                  Object {
-                    "cursor": "pointer",
-                    "minHeight": "4.375rem",
-                  }
-                }
               >
-                <a
-                  className="float-end text-end ps-5 stretched-link"
-                  href="example"
-                  style={
-                    Object {
-                      "paddingBottom": "0.75rem",
-                      "paddingTop": "0.5rem",
-                    }
-                  }
-                >
-                  <svg
-                    style={
-                      Object {
-                        "display": "inline",
-                      }
-                    }
-                  >
-                    Item Arrow.svg
-                  </svg>
-                </a>
                 <div
                   className="mb-1 text-truncate"
                 >
-                  <a
-                    className="stretched-link"
-                    href="example"
-                  >
-                    Master Design
-                  </a>
+                  Master Design
                 </div>
                 <div
                   className="small"
                 >
-                  Maria Bernasconi
+                  <div>
+                    Maria Bernasconi
+                  </div>
+                  <div
+                    className="pt-1"
+                  >
+                    <a
+                      href="mailto:maria@example3.com"
+                    >
+                      maria@example3.com
+                    </a>
+                  </div>
                 </div>
               </div>
               <hr
