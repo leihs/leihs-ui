@@ -85,6 +85,10 @@
     width: initial;
   }
 
+  .rdrDay {
+    background-color: transparent;
+  }
+
   .rdrMonthPassiveOverlay {
     background-color: transparent;
   }
@@ -139,6 +143,25 @@
         }
       }
     }
+
+    .rdrInRange,
+    .rdrStartEdge,
+    .rdrEndEdge,
+    .rdrDayInPreview,
+    .rdrDayStartPreview,
+    .rdrDayEndPreview {
+      border-radius: 0;
+    }
+    .rdrStartEdge,
+    .rdrDayStartPreview {
+      border-top-left-radius: 2em;
+      border-bottom-left-radius: 2em;
+    }
+    .rdrEndEdge,
+    .rdrDayEndPreview {
+      border-top-right-radius: 2em;
+      border-bottom-right-radius: 2em;
+    }
   }
 
   // Disabled start/end dates
@@ -150,24 +173,28 @@
     background-position: 50% 50%;
     color: transparent;
   }
+  // Non-pickup days
   .rdrDayDisabledStart:not(.rdrDayPassive) {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.03);
     .rdrStartEdge {
       background-color: $red;
       & ~ .rdrDayNumber span {
         @include start-end-warn-icon();
+        color: transparent !important;
       }
     }
     .rdrDayStartPreview {
       border-color: $red;
     }
   }
+  // Non-return days
   .rdrDayDisabledEnd:not(.rdrDayPassive) {
-    background-color: transparent;
+    background-color: rgba(0, 0, 0, 0.03);
     .rdrEndEdge {
       background-color: $red;
       & ~ .rdrDayNumber span {
         @include start-end-warn-icon();
+        color: transparent !important;
       }
     }
     .rdrDayEndPreview {
@@ -175,34 +202,65 @@
     }
   }
 
-  // disabled dates
-  .rdrDayDisabled:not(.rdrDayPassive) {
+  // Days in past (FIXME: It's a hack. Days in past are only disabled as start but not as end days. leihs-calendar should allow to mark past days)
+  .rdrDayDisabledStart:not(.rdrDayPassive):not(.rdrDayDisabledEnd) {
     background-color: transparent;
-    .rdrInRange,
-    .rdrStartEdge,
-    .rdrEndEdge,
-    .rdrSelected {
-      background-color: $red;
+    .rdrDayNumber {
+      span {
+        color: rgba(0, 0, 0, 0.4);
+      }
     }
+  }
 
-    .rdrDayStartPreview,
-    .rdrDayInPreview,
-    .rdrDayEndPreview {
-      border-color: $red;
-    }
-
+  // Days with under-availability
+  .rdrDayDisabled {
     .rdrDayNumber span {
-      text-decoration: none;
-      color: $red;
+      color: $black;
+    }
+
+    &:not(.rdrDayPassive) {
+      // (the above selector only to match specifity of inherited css and avoid !important)
+
+      background-image: repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 5px,
+        rgba($red, 0.25) 0,
+        rgba($red, 0.25) 6px
+      );
+      background-attachment: fixed;
+
+      .rdrInRange,
+      .rdrStartEdge,
+      .rdrEndEdge,
+      .rdrSelected {
+        background-color: $red;
+      }
+
+      .rdrDayStartPreview,
+      .rdrDayInPreview,
+      .rdrDayEndPreview {
+        border-color: $red;
+      }
+
+      .rdrDayNumber {
+        span {
+          text-decoration: none;
+        }
+      }
     }
   }
 
   // days of adjacent months ("passive")
   .rdrDayPassive {
     background-color: transparent;
-    .rdrDayNumber span {
-      text-decoration: none;
-      color: $gray;
+    .rdrDayNumber {
+      span {
+        color: transparent;
+        &:after {
+          display: none; // marker for today
+        }
+      }
     }
   }
 
@@ -218,8 +276,21 @@
 /* Component: DateRangePicker (see also .leihs-calendar) */
 
 .date-range-picker {
+  // hide the div with the built-in input fields
+  .rdrDateDisplayWrapper {
+    display: none;
+  }
+  // box's height should not change depending on number of weeks
   .rdrMonth {
     height: 16rem;
+  }
+
+  // red border when invalid
+  .rdrCalendarWrapper {
+    border: 1px solid transparent;
+  }
+  &.invalid-date-range .rdrCalendarWrapper {
+    border-color: $red;
   }
 }
 

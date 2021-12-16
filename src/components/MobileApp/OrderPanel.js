@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import PropTypes from 'prop-types'
 import f from 'lodash'
 import {
   startOfDay,
@@ -8,11 +7,12 @@ import {
   endOfMonth,
   isAfter,
   parseISO,
-  format,
-  isSameDay,
   isValid,
   isBefore,
-  eachDayOfInterval
+  eachDayOfInterval,
+  addDays,
+  isSameDay,
+  startOfMonth
 } from 'date-fns'
 // NOTE: only import our supported langs to keep the bundle small (do not rely on bundling magic like "tree shaking" or "dead code elimination")
 import { de as DateFnsLocaleDE } from 'date-fns/locale'
@@ -23,6 +23,7 @@ import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
 import Stack from './DesignComponents/Stack'
 import Warning from './DesignComponents/Warning'
+import orderPanelPropTypes from './OrderPanelPropTypes'
 
 const noop = () => {}
 // NOTE: locale 'en' is built-in, so it does not need to and can not be selected
@@ -31,8 +32,7 @@ const locales = { de: DateFnsLocaleDE }
 const OrderPanel = ({
   modelData,
   //
-  minDateTotal,
-  minDateLoaded,
+  now,
   maxDateTotal,
   maxDateLoaded,
   onShownDateChange = noop,
@@ -57,38 +57,85 @@ const OrderPanel = ({
   locale,
   txt = {}
 }) => {
-  const today = startOfDay(new Date())
-  const minDate = minDateTotal ? startOfDay(minDateTotal) : today
-  const maxDate = maxDateTotal ? startOfDay(maxDateTotal) : addMonths(minDate, 20 * 12)
+  const today = startOfDay(now ? now : new Date())
+  const maxDate = maxDateTotal ? startOfDay(maxDateTotal) : addMonths(today, 20 * 12)
 
   const [quantity, setQuantity] = useState(initialQuantity)
-  const [selectedPoolId, setSelectedPoolId] = useState(initialInventoryPoolId || f.get(inventoryPools, '0.id'))
+  const [selectedPoolId, setSelectedPoolId] = useState(
+    initialInventoryPoolId || f.get(inventoryPools, '0.id') || 'NO_POOLS'
+  )
   const [selectedUserDelegationId, setSelectedUserDelegationId] = useState(initialUserDelegationId)
+
+  // Make sure the selected pool is in list (otherwise fill-in a surrogate)
+  const poolFromList = inventoryPools.find(x => x.id === selectedPoolId)
+  const selectedPool = poolFromList || {
+    id: selectedPoolId,
+    name: t(txt.validate, 'unknown-pool', locale),
+    isSurrogate: true
+  }
+  const selectablePools = poolFromList ? inventoryPools : [selectedPool, ...inventoryPools]
+
+  // Get availability data for selected pool
+  const { availability } = modelData
+  const poolAvailability = (() => {
+    const tmp = availability.find(x => x.inventoryPool.id === selectedPool.id)
+    if (!tmp) {
+      return { inventoryPool: selectedPool, dates: [] }
+    }
+    return {
+      ...tmp,
+      dates: tmp.dates.map(x => ({
+        ...x,
+        parsedDate: parseISO(x.date)
+      }))
+    }
+  })()
+
+  // Extract data for DateRangePicker
+  const { disabledDates, disabledStartDates, disabledEndDates, minDate } = getDateRangePickerConstraints(
+    poolAvailability,
+    today,
+    quantity
+  )
 
   const [selectedRange, setSelectedRange] = useState({
     startDate: initialStartDate ? startOfDay(initialStartDate) : today,
-    endDate: initialEndDate ? startOfDay(initialEndDate) : today
+    endDate: initialEndDate ? startOfDay(initialEndDate) : addDays(today, 1)
   })
-
-  const availabilityByDateAndPool = getAvailabilityByDateAndPool(modelData)
-  const allBlockedDates = calcAllBlockedDates(availabilityByDateAndPool[selectedPoolId], quantity)
-  const { blockedDates, blockedStartDates, blockedEndDates } = allBlockedDates
 
   const currentLocale = typeof locale === 'string' ? locales[locale.split('-')[0]] : locale
   // eslint-disable-next-line no-console
   if (!locale) console.warn(`Could not find locale date for '${locale}'!`)
   const { label } = txt
 
+  // Validation
   function validate() {
-    return validateSelection(selectedRange, { minDate, maxDate }, allBlockedDates, quantity, locale, txt.validate)
+    const poolError = validatePool(selectedPool, locale, txt.validate)
+    if (poolError) {
+      return { poolError }
+    }
+    const dateRangeErrors = validateDateRange(
+      selectedRange,
+      today,
+      maxDate,
+      poolAvailability,
+      quantity,
+      locale,
+      txt.validate
+    )
+    if (dateRangeErrors && dateRangeErrors.length > 0) {
+      return { dateRangeErrors: [...dateRangeErrors] }
+    }
+    return { isValid: true }
   }
+  const validationResult = validate()
 
-  const validationError = validate()
+  // Event handlers
 
   function submit(e) {
     e.preventDefault()
-    const validationError = validate()
-    if (!validationError) {
+    const validationResult = validate()
+    if (validationResult.isValid) {
       onSubmit(stateForCallbacks())
     }
   }
@@ -158,12 +205,15 @@ const OrderPanel = ({
             onChange={changeInventoryPool}
             className="form-select"
           >
-            {f.map(inventoryPools, ({ id, name, totalBorrowableQuantity }) => (
+            {f.map(selectablePools, ({ id, name, totalBorrowableQuantity }) => (
               <option key={id} value={id}>
-                {t(label, 'pool-max-amount', locale, { pool: name, amount: totalBorrowableQuantity })}
+                {totalBorrowableQuantity
+                  ? t(label, 'pool-max-amount', locale, { pool: name, amount: totalBorrowableQuantity })
+                  : name}
               </option>
             ))}
           </select>
+          {validationResult.poolError && <Warning className="mt-2">{validationResult.poolError}</Warning>}
         </Section>
         {userDelegations && userDelegations.length > 1 && (
           <Section title={t(label, 'user-delegation', locale)} collapsible>
@@ -191,190 +241,188 @@ const OrderPanel = ({
             )}
           </Section>
         )}
-        <Let title={t(label, 'timespan', locale)}>
-          {({ title }) => (
-            <Section title={title} collapsible>
-              <fieldset>
-                <legend className="visually-hidden">{title}</legend>
-                <DateRangePicker
-                  selectedRange={selectedRange}
-                  onChange={changeDateRange}
-                  onShownDateChange={changeShownDate}
-                  maxDateLoaded={maxDateLoaded}
-                  minDate={minDate}
-                  maxDate={maxDate}
-                  disabledDates={blockedDates}
-                  disabledStartDates={blockedStartDates}
-                  disabledEndDates={blockedEndDates}
-                  locale={currentLocale}
-                  txt={{ from: t(label, 'from', locale), until: t(label, 'until', locale) }}
-                />
-              </fieldset>
-              {validationError && <Warning className="mt-2">{validationError}</Warning>}
-            </Section>
-          )}
-        </Let>
+        {!validationResult.poolError && (
+          <Let title={t(label, 'timespan', locale)}>
+            {({ title }) => (
+              <Section title={title} collapsible>
+                <fieldset>
+                  <legend className="visually-hidden">{title}</legend>
+                  <DateRangePicker
+                    selectedRange={selectedRange}
+                    onChange={changeDateRange}
+                    onShownDateChange={changeShownDate}
+                    maxDateLoaded={maxDateLoaded}
+                    minDate={minDate}
+                    maxDate={maxDate}
+                    disabledDates={disabledDates}
+                    disabledStartDates={disabledStartDates}
+                    disabledEndDates={disabledEndDates}
+                    locale={currentLocale}
+                    txt={{ from: t(label, 'from', locale), until: t(label, 'until', locale) }}
+                    className={validationResult.dateRangeErrors ? 'invalid-date-range' : ''}
+                  />
+                </fieldset>
+                {validationResult.dateRangeErrors &&
+                  validationResult.dateRangeErrors.map((msg, i) => (
+                    <React.Fragment key={i}>
+                      <Warning className="mt-2">{msg}</Warning>
+                    </React.Fragment>
+                  ))}
+              </Section>
+            )}
+          </Let>
+        )}
       </Stack>
     </form>
   )
 }
 
 OrderPanel.displayName = 'OrderPanel'
+OrderPanel.propTypes = orderPanelPropTypes
 export default OrderPanel
 
-const modelDataPropType = PropTypes.shape({
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  availability: PropTypes.arrayOf(
-    PropTypes.shape({
-      inventoryPool: PropTypes.shape({
-        id: PropTypes.string.isRequired
-      }).isRequired,
-      dates: PropTypes.arrayOf(
-        PropTypes.shape({
-          date: PropTypes.string.isRequired,
-          endDateRestriction: PropTypes.any,
-          quantity: PropTypes.number.isRequired,
-          startDateRestriction: PropTypes.any
-        })
-      ).isRequired
-    })
-  ).isRequired
-})
-
-OrderPanel.propTypes = {
-  /** availabilty and visits info from API */
-  modelData: modelDataPropType.isRequired,
-
-  /** earliest date that can be selected or navigated to, defaults to today */
-  minDateTotal: PropTypes.instanceOf(Date),
-  /** earliest date for which data was loaded. NOTE: navigating further into past is NOT supported! */
-  minDateLoaded: PropTypes.instanceOf(Date).isRequired,
-  /** latest date that can be selected or navigated to, defaults to `minDateTotal` + 20 years */
-  maxDateTotal: PropTypes.instanceOf(Date),
-  /** Latest date for which data has be loaded. Navigating further will trigger "onShownDateChange" callback */
-  maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
-  /** callback, when more data needs to be loaded. arguments: `{date}`, defaults to noop */
-  onShownDateChange: PropTypes.func,
-
-  /** start date that is initially selected (defaults to today) */
-  initialStartDate: PropTypes.instanceOf(Date),
-  /** end date that is initially selected (defaults to today) */
-  initialEndDate: PropTypes.instanceOf(Date),
-  /** callback when the selected date range is changed (defaults to noop) */
-  onDatesChange: PropTypes.func,
-
-  /** wanted quantity that is initially selected (defaults to 1) */
-  initialQuantity: PropTypes.number,
-  /** callback when the wanted quantity is changed */
-  onQuantityChange: PropTypes.func,
-
-  /** list of inventory pools for selecting */
-  inventoryPools: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    }).isRequired
-  ).isRequired,
-  /** initially selected pool */
-  initialPoolId: PropTypes.string,
-  /** callback, when selected pool changes */
-  onInventoryPoolChange: PropTypes.func,
-
-  /** list of user delegations for selecting */
-
-  userDelegations: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    }).isRequired
-  ),
-  /** initially selected user delegation */
-  initialUserDelegationId: PropTypes.string,
-  /** set if user delegation can be changed or not */
-  userDelegationCanBeChanged: PropTypes.bool,
-  /** callback, when selected user delegation changes */
-  onUserDelegationChange: PropTypes.func,
-
-  /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
-  onSubmit: PropTypes.func.isRequired,
-
-  locale: PropTypes.string.isRequired,
-  txt: PropTypes.object.isRequired
-}
-
-function getAvailabilityByDateAndPool(modelData) {
-  return f.fromPairs(
-    f.map(modelData.availability, abp => [abp.inventoryPool.id, f.fromPairs(f.map(abp.dates, i => [i.date, i]))])
-  )
-}
-
-function calcAllBlockedDates(availabilityByDate = {}, wantedQuantity = 1) {
-  const blockedDates = []
-  const blockedStartDates = []
-  const blockedEndDates = []
-  Object.keys(availabilityByDate).forEach(date => {
-    const day = parseISO(date)
-    const dat = availabilityByDate[date]
-    if (!dat || dat.quantity < wantedQuantity) blockedDates.push(day)
-    if (dat.startDateRestriction) blockedStartDates.push(day)
-    if (dat.endDateRestriction) blockedEndDates.push(day)
-  })
-  return { blockedDates, blockedStartDates, blockedEndDates }
+function getDateRangePickerConstraints(poolAvailability, today, wantedQuantity) {
+  const { dates, inventoryPool } = poolAvailability
+  const { reservationAdvanceDays } = inventoryPool
+  const minBorrowDate = addDays(today, reservationAdvanceDays || 0)
+  const getDates = filter => [...dates.filter(filter).map(x => x.parsedDate)]
+  return {
+    disabledDates: getDates(x => x.quantity < wantedQuantity && x.parsedDate >= minBorrowDate),
+    disabledStartDates: getDates(x => x.startDateRestriction || x.parsedDate < minBorrowDate),
+    disabledEndDates: getDates(x => x.endDateRestriction && x.parsedDate >= minBorrowDate),
+    minDate: startOfMonth(today) // (NOT `minBorrowDate`, since RDR would mark them with `rdrDayDisabled`, making them look like overbooked)
+  }
 }
 
 function getByDay(dateList, date) {
-  if (f.isArray(dateList)) return f.find(dateList, day => isSameDay(day, date))
-  if (f.isObject(dateList)) return dateList[format(date, 'yyyy-MM-dd')]
-  throw TypeError
+  return dateList.find(x => isSameDay(x.parsedDate, date))
 }
 
-function validateSelection(
-  { startDate, endDate },
-  { minDate, maxDate },
-  { blockedDates, blockedStartDates, blockedEndDates },
-  wantedQuantity,
-  locale,
-  txt = {}
-) {
-  wantedQuantity = parseInt(wantedQuantity, 10)
-  if (Number.isNaN(wantedQuantity) || wantedQuantity < 1) {
-    return t(txt, 'missing-quantity', locale)
+function validatePool(inventoryPool, locale, txt) {
+  if (inventoryPool.userHasNoAccess) {
+    return t(txt, 'no-pool-access', locale)
+  }
+  if (inventoryPool.userIsSuspended) {
+    return t(txt, 'pool-suspension', locale)
+  }
+  if (!inventoryPool.totalBorrowableQuantity) {
+    return t(txt, 'item-not-available-in-pool', locale)
+  }
+  if (inventoryPool.isSurrogate) {
+    return t(txt, 'unknown-pool', locale)
+  }
+}
+
+function validateDateRange(selectedRange, today, maxDate, poolAvailability, wantedQuantity, locale, txt) {
+  const { startDate, endDate } = selectedRange
+  const { dates, inventoryPool } = poolAvailability
+  const { reservationAdvanceDays, maximumReservationTime } = inventoryPool
+
+  const basicValidityMessage = (() => {
+    // Ensure that a valid quantity is given (the quantity field also has its own validator, so this is an exceptional case)
+    wantedQuantity = parseInt(wantedQuantity, 10)
+    if (Number.isNaN(wantedQuantity) || wantedQuantity < 1) {
+      return t(txt, 'missing-quantity', locale)
+    }
+
+    // Formal validity of dates (DateRangePicker guarantees for that, so this is an exceptional case)
+    if (!isValid(startDate)) {
+      return t(txt, 'invalid-start-date', locale)
+    }
+    if (!isValid(endDate)) {
+      return t(txt, 'invalid-end-date', locale)
+    }
+    if (isBefore(endDate, startDate)) {
+      return t(txt, 'start-after-end', locale)
+    }
+  })()
+
+  if (basicValidityMessage) {
+    return [basicValidityMessage]
   }
 
-  if (!isValid(startDate)) {
-    return t(txt, 'invalid-start-date', locale)
-  }
-  if (!isValid(endDate)) {
-    return t(txt, 'invalid-end-date', locale)
-  }
-  if (isBefore(endDate, startDate)) {
-    return t(txt, 'start-after-end', locale)
-  }
-
-  if (endDate > maxDate) {
-    return t(txt, 'end-date-to-late', locale, { maxDate })
-  }
-  if (startDate < minDate) {
-    return t(txt, 'start-date-to-early', locale, { minDate })
-  }
-
-  if (getByDay(blockedStartDates, startDate)) {
-    return t(txt, 'pool-closed-at-start-date', locale, { startDate })
-  }
-  if (getByDay(blockedEndDates, endDate)) {
-    return t(txt, 'pool-closed-at-end-date', locale, { endDate })
-  }
-
-  if (!f.isEmpty(blockedDates)) {
-    if (isSameDay(startDate, endDate)) {
-      if (getByDay(blockedDates, startDate)) {
-        return t(txt, 'quantity-to-large-at-day', locale, { startDate })
-      }
+  // Start date
+  const minBorrowDate = addDays(today, reservationAdvanceDays || 0)
+  const isOneDayPeriod = isSameDay(startDate, endDate)
+  const startDateMessage = (() => {
+    // Future-only
+    if (startDate < today) {
+      return t(txt, 'start-date-in-past', locale)
     } else {
-      if (eachDayOfInterval({ start: startDate, end: endDate }).some(date => getByDay(blockedDates, date))) {
+      if (startDate < minBorrowDate) {
+        return t(txt, 'start-date-not-before', locale, { days: reservationAdvanceDays })
+      }
+    }
+
+    // Closed pool
+    const txtPoolClosed = isOneDayPeriod ? 'pool-closed-at-start-and-end-date' : 'pool-closed-at-start-date'
+    const startDateInfo = getByDay(dates, startDate)
+    if (startDateInfo) {
+      if (startDateInfo.startDateRestriction === 'CLOSE_TIME') {
+        return t(txt, txtPoolClosed, locale, { startDate })
+      } else if (startDateInfo.startDateRestriction === 'VISITS_CAPACITY_REACHED') {
+        return t(txt, txtPoolClosed, locale, { startDate }) + t(txt, 'pool-closed-max-visits', locale)
+      } else if (startDateInfo.startDateRestriction === 'BEFORE_EARLIEST_POSSIBLE_PICK_UP_DATE') {
+        // (This case should have been prevented by the future-only rule above)
+        return t(txt, 'start-date-not-before', locale, { days: reservationAdvanceDays })
+      }
+    }
+  })()
+
+  const endDateMessage = (() => {
+    if (isOneDayPeriod) return // (because then the error is already mentioned in startDateMessage)
+
+    // Max date
+    if (endDate > maxDate) {
+      return t(txt, 'end-date-too-late', locale, { maxDate })
+    }
+
+    // Closed pool
+    if (endDate < minBorrowDate) {
+      // (report issues only for non-past dates)
+      return
+    }
+    const endDateInfo = getByDay(dates, endDate)
+    if (endDateInfo) {
+      if (endDateInfo.endDateRestriction === 'CLOSE_TIME') {
+        return t(txt, 'pool-closed-at-end-date', locale, { endDate })
+      } else if (endDateInfo.endDateRestriction === 'VISITS_CAPACITY_REACHED') {
+        return t(txt, 'pool-closed-at-end-date', locale, { endDate }) + t(txt, 'pool-closed-max-visits', locale)
+      }
+    }
+  })()
+
+  // Available quantity
+  const availabilityMessage = (() => {
+    const noAvailDates = [
+      ...eachDayOfInterval({ start: startDate, end: endDate }).filter(d => {
+        if (d < minBorrowDate) {
+          // (report issues only for non-past dates)
+          return
+        }
+        const dateInfo = getByDay(dates, d)
+        return dateInfo && dateInfo.quantity < wantedQuantity
+      })
+    ]
+    if (noAvailDates.length > 0) {
+      if (noAvailDates.length === 1) {
+        const startDate = noAvailDates[0]
+        return t(txt, 'quantity-to-large-at-day', locale, { startDate })
+      } else {
         return t(txt, 'quantity-to-large-in-range', locale, {})
       }
     }
-  }
+  })()
+
+  // Max reservation time
+  const maximumReservationTimeMessage = (() => {
+    if (maximumReservationTime) {
+      const maxEndDate = addDays(startDate, maximumReservationTime - 1)
+      if (endDate > maxEndDate) {
+        return t(txt, 'maximum-reservation-time', locale, { days: maximumReservationTime })
+      }
+    }
+  })()
+
+  return [...[startDateMessage, endDateMessage, availabilityMessage, maximumReservationTimeMessage].filter(x => !!x)]
 }

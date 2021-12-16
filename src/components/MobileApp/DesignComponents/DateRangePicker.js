@@ -61,10 +61,8 @@ export default function DateRangePicker({
   function handleRangeFocusChange(range) {
     if (range[1] === 1) {
       setFocus('endDate')
-      endDateInput.current.focus()
     } else {
       setFocus('startDate')
-      startDateInput.current.focus()
     }
   }
 
@@ -95,9 +93,8 @@ export default function DateRangePicker({
             endDate: endDate >= date ? endDate : date
           })
         }
-      } else {
-        setStartDateInvalid(!valid)
       }
+      setStartDateInvalid(!valid)
     }
     function handleEndDate(date) {
       if (valid) {
@@ -107,9 +104,8 @@ export default function DateRangePicker({
             endDate: date
           })
         }
-      } else {
-        setEndDateInvalid(!valid)
       }
+      setEndDateInvalid(!valid)
     }
     if (e.target.name === 'startDate') {
       handleStartDate(date)
@@ -141,7 +137,7 @@ export default function DateRangePicker({
           <label htmlFor="startDate">{txt.from}</label>
         </LabelInside>
       </div>
-      <div className="mb-0">
+      <div className="mb-3">
         <LabelInside>
           <InputComponent
             ref={endDateInput}

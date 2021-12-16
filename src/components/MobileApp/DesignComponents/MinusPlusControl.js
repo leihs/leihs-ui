@@ -71,7 +71,6 @@ export default function MinusPlusControl({
   }
 
   function buttonMouseDown(e) {
-    inputRef.current.focus()
     e.preventDefault() // (so the button does not get focus)
   }
 
