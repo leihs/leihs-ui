@@ -53,6 +53,12 @@ const model = {
       filename: 'QX1204USB_Q1204USB_QSG_WW.pdf',
       attachmentUrl: '/app/borrow/attachments/3a05e6be-77ec-47c4-81cf-aa2dc2719c0e/QX1204USB_Q1204USB_QSG_WW.pdf',
       size: 3379663
+    },
+    {
+      id: '3a05e6be-77ec-47c4-81cf-aa2dc2719c0f',
+      filename: 'QX1204USB_Q1204USB_QSG_ZZ.pdf',
+      attachmentUrl: '/app/borrow/attachments/3a05e6be-77ec-47c4-81cf-aa2dc2719c0e/QX1204USB_Q1204USB_QSG_WW.pdf',
+      size: 3379663
     }
   ],
   properties: [

@@ -96,11 +96,13 @@ export default function ModelShow({ model, onOrderClick = noop, onClickFavorite 
 
         {model.attachments.length > 0 && (
           <Section title="Dokumente" collapsible>
-            {model.attachments.map((attachment, i) => (
-              <div key={attachment.id}>
-                <DownloadLink href={attachment.attachmentUrl}>{attachment.filename}</DownloadLink>
-              </div>
-            ))}
+            <Stack space="3">
+              {model.attachments.map((attachment, i) => (
+                <div key={attachment.id}>
+                  <DownloadLink href={attachment.attachmentUrl}>{attachment.filename}</DownloadLink>
+                </div>
+              ))}
+            </Stack>
           </Section>
         )}
 

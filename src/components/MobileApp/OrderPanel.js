@@ -398,7 +398,7 @@ function validateDateRange(selectedRange, today, maxDate, poolAvailability, want
       ...eachDayOfInterval({ start: startDate, end: endDate }).filter(d => {
         if (d < minBorrowDate) {
           // (report issues only for non-past dates)
-          return
+          return false
         }
         const dateInfo = getByDay(dates, d)
         return dateInfo && dateInfo.quantity < wantedQuantity

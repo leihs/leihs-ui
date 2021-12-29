@@ -105,6 +105,10 @@ $link-decoration: none;
 
 // Buttons + Forms
 
+$btn-transition: none;
+$btn-active-bg-shade-amount: 20%;
+$btn-hover-bg-shade-amount: 5%;
+
 // - inputs and buttons with more padding
 $input-btn-padding-y: 0.875rem;
 $input-btn-padding-x: 1.25rem;

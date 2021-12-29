@@ -49,10 +49,9 @@ export default function DatePicker({
 
   function handleCalendarDateChange(d) {
     setValidDate(d)
+    updateValidationState(formatDate(d))
     const stubEvent = { target: { value: formatDate(d) } }
     onChange(stubEvent)
-    setCalendarActive(false)
-    inputRef.current.focus()
   }
 
   function handleClickOutside(e) {
@@ -101,6 +100,13 @@ export default function DatePicker({
     setWasValidated(true)
   }
 
+  function openCalendarButtonClick(e) {
+    setCalendarActive(active => !active)
+  }
+  function openCalendarButtonMouseDown(e) {
+    e.preventDefault() // (so the button does not get focus)
+  }
+
   return (
     <div
       className={cx('date-picker', {
@@ -110,20 +116,31 @@ export default function DatePicker({
       })}
       ref={containerRef}
     >
-      <LabelInside>
-        <InputComponent
-          ref={inputRef}
-          className={cx('form-control calendar-indicator', className)}
-          value={value}
-          onFocus={handleFocus}
-          onBlur={handleBlur}
-          onChange={handleChange}
-          required={required}
-          autoComplete="off"
-          {...restProps}
-        />
-        {label}
-      </LabelInside>
+      <div className="position-relative">
+        <LabelInside>
+          <InputComponent
+            ref={inputRef}
+            className={cx('form-control calendar-indicator', className)}
+            value={value}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
+            onChange={handleChange}
+            required={required}
+            autoComplete="off"
+            {...restProps}
+          />
+          {label}
+        </LabelInside>
+        <button
+          className="btn position-absolute"
+          type="button"
+          title="Eingabe löschen"
+          tabIndex="-1"
+          onClick={openCalendarButtonClick}
+          onMouseDown={openCalendarButtonMouseDown}
+          style={{ top: 0, right: 0 }}
+        ></button>
+      </div>
       <div className="leihs-calendar rounded-bottom">
         <Calendar
           key={validDate || 1} // force update shown date if changed via text input

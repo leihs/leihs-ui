@@ -2,9 +2,10 @@ import React from 'react'
 import cx from 'classnames'
 
 export default function Stack({ children, divided = false, space = 0, className, ...restProps }) {
-  const length = React.Children.count(children)
+  const nonEmptyChildren = [...React.Children.toArray(children).filter(Boolean)]
+  const length = nonEmptyChildren.length
   return (
-    React.Children.map(children, (child, i) => {
+    nonEmptyChildren.map((child, i) => {
       const isLast = i + 1 === length
       return (
         <div key={i} className={cx(isLast ? '' : 'mb-' + space, className)} {...restProps}>

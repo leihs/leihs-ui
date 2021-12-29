@@ -13,7 +13,8 @@ export const inputWithClearButton = () => {
     <div>
       <h1>InputWithClearButton</h1>
       <p className="text-muted">
-        A drop-in replacement for {`<input type="text" />`}, but with an integrated clear button.
+        An {`<input type="text" />`} with an integrated clear button. Like an {`<input type="search" />`} but with fixed
+        design (not browser dependent)
       </p>
       <p className="text-muted">Controlled input example (state-bound):</p>
       <div className="d-grid gap-3">
@@ -37,16 +38,6 @@ export const inputWithClearButton = () => {
   )
 }
 inputWithClearButton.storyName = 'InputWithClearButton'
-
-export const uncontrolled = () => {
-  return (
-    <div>
-      <h1>InputWithClearButton</h1>
-      <p className="text-muted">As an uncontrolled input:</p>
-      <InputWithClearButton name="name" placeholder="Name" defaultValue="James Bond" />
-    </div>
-  )
-}
 
 export const inlineBlock = () => {
   const [firstName, setFirstName] = useState('James')
