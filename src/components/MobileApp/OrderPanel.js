@@ -15,7 +15,7 @@ import {
   startOfMonth
 } from 'date-fns'
 // NOTE: only import our supported langs to keep the bundle small (do not rely on bundling magic like "tree shaking" or "dead code elimination")
-import { de as DateFnsLocaleDE } from 'date-fns/locale'
+import { de as DateFnsLocaleDE, enGB as DateFnsLocaleEN } from 'date-fns/locale'
 import { translate as t } from '../../lib/translate'
 import { Let } from '../Util'
 import Section from './DesignComponents/Section'
@@ -26,8 +26,7 @@ import Warning from './DesignComponents/Warning'
 import orderPanelPropTypes from './OrderPanelPropTypes'
 
 const noop = () => {}
-// NOTE: locale 'en' is built-in, so it does not need to and can not be selected
-const locales = { de: DateFnsLocaleDE }
+const locales = { de: DateFnsLocaleDE, en: DateFnsLocaleEN }
 
 const OrderPanel = ({
   modelData,
