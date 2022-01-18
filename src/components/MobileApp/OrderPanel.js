@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import f from 'lodash'
 import {
   startOfDay,
@@ -52,10 +52,16 @@ const OrderPanel = ({
   userDelegationCanBeChanged = true,
   onUserDelegationChange = noop,
   //
+  onValidate = noop,
   onSubmit = noop,
   locale,
   txt = {}
 }) => {
+  const currentLocale = typeof locale === 'string' ? locales[locale.split('-')[0]] : locale
+  // eslint-disable-next-line no-console
+  if (!locale) console.warn(`Could not find locale date for '${locale}'!`)
+  const { label } = txt
+
   const today = startOfDay(now ? now : new Date())
   const maxDate = maxDateTotal ? startOfDay(maxDateTotal) : addMonths(today, 20 * 12)
 
@@ -65,50 +71,76 @@ const OrderPanel = ({
   )
   const [selectedUserDelegationId, setSelectedUserDelegationId] = useState(initialUserDelegationId)
 
-  // Make sure the selected pool is in list (otherwise fill-in a surrogate)
-  const poolFromList = inventoryPools.find(x => x.id === selectedPoolId)
-  const selectedPool = poolFromList || {
-    id: selectedPoolId,
-    name: t(txt.validate, 'unknown-pool', locale),
-    isSurrogate: true
-  }
-  const selectablePools = poolFromList ? inventoryPools : [selectedPool, ...inventoryPools]
-
-  // Get availability data for selected pool
-  const { availability } = modelData
-  const poolAvailability = (() => {
-    const tmp = availability.find(x => x.inventoryPool.id === selectedPool.id)
-    if (!tmp) {
-      return { inventoryPool: selectedPool, dates: [] }
-    }
-    return {
-      ...tmp,
-      dates: tmp.dates.map(x => ({
-        ...x,
-        parsedDate: parseISO(x.date)
-      }))
-    }
-  })()
-
-  // Extract data for DateRangePicker
-  const { disabledDates, disabledStartDates, disabledEndDates, minDate } = getDateRangePickerConstraints(
-    poolAvailability,
-    today,
-    quantity
-  )
-
   const [selectedRange, setSelectedRange] = useState({
     startDate: initialStartDate ? startOfDay(initialStartDate) : today,
     endDate: initialEndDate ? startOfDay(initialEndDate) : addDays(today, 1)
   })
 
-  const currentLocale = typeof locale === 'string' ? locales[locale.split('-')[0]] : locale
-  // eslint-disable-next-line no-console
-  if (!locale) console.warn(`Could not find locale date for '${locale}'!`)
-  const { label } = txt
+  // State depending on the input states (e.g. validation result)
+  const [dependentState, setDependentState] = useState()
+  useEffect(() => {
+    // Make sure the selected pool is in list (otherwise fill-in a surrogate)
+    const poolFromList = inventoryPools.find(x => x.id === selectedPoolId)
+    const selectedPool = poolFromList || {
+      id: selectedPoolId,
+      name: t(txt.validate, 'unknown-pool', locale),
+      isSurrogate: true
+    }
+    const selectablePools = poolFromList ? inventoryPools : [selectedPool, ...inventoryPools]
+
+    // Get availability data for selected pool
+    const { availability } = modelData
+    const poolAvailability = (() => {
+      const tmp = availability.find(x => x.inventoryPool.id === selectedPool.id)
+      if (!tmp) {
+        return { inventoryPool: selectedPool, dates: [] }
+      }
+      return {
+        ...tmp,
+        dates: tmp.dates.map(x => ({
+          ...x,
+          parsedDate: parseISO(x.date)
+        }))
+      }
+    })()
+
+    // Extract data for DateRangePicker
+    const { disabledDates, disabledStartDates, disabledEndDates, minDate } = getDateRangePickerConstraints(
+      poolAvailability,
+      today,
+      quantity
+    )
+
+    // Validation
+    const validationResult = validate(selectedPool, poolAvailability)
+
+    setDependentState({
+      selectablePools,
+      selectedPool,
+      poolAvailability,
+      disabledDates,
+      disabledStartDates,
+      disabledEndDates,
+      minDate,
+      validationResult
+    })
+
+    onValidate(validationResult.isValid)
+  }, [
+    quantity,
+    selectedPoolId,
+    selectedUserDelegationId,
+    selectedRange,
+    modelData,
+    maxDateTotal,
+    maxDateLoaded,
+    inventoryPools,
+    userDelegations,
+    locale
+  ])
 
   // Validation
-  function validate() {
+  function validate(selectedPool, poolAvailability) {
     const poolError = validatePool(selectedPool, locale, txt.validate)
     if (poolError) {
       return { poolError }
@@ -127,13 +159,12 @@ const OrderPanel = ({
     }
     return { isValid: true }
   }
-  const validationResult = validate()
 
   // Event handlers
 
   function submit(e) {
     e.preventDefault()
-    const validationResult = validate()
+    const validationResult = validate(dependentState.selectedPool, dependentState.poolAvailability)
     if (validationResult.isValid) {
       onSubmit(stateForCallbacks())
     }
@@ -175,6 +206,18 @@ const OrderPanel = ({
       onShownDateChange({ date: targetDate })
     }
   }
+
+  if (!dependentState) {
+    return null
+  }
+  const {
+    selectablePools,
+    disabledDates,
+    disabledStartDates,
+    disabledEndDates,
+    minDate,
+    validationResult
+  } = dependentState
 
   return (
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
@@ -286,7 +329,7 @@ function getDateRangePickerConstraints(poolAvailability, today, wantedQuantity) 
   const minBorrowDate = addDays(today, reservationAdvanceDays || 0)
   const getDates = filter => [...dates.filter(filter).map(x => x.parsedDate)]
   return {
-    disabledDates: getDates(x => x.quantity < wantedQuantity && x.parsedDate >= minBorrowDate),
+    disabledDates: getDates(x => x.quantity < wantedQuantity && x.parsedDate >= today),
     disabledStartDates: getDates(x => x.startDateRestriction || x.parsedDate < minBorrowDate),
     disabledEndDates: getDates(x => x.endDateRestriction && x.parsedDate >= minBorrowDate),
     minDate: startOfMonth(today) // (NOT `minBorrowDate`, since RDR would mark them with `rdrDayDisabled`, making them look like overbooked)

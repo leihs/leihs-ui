@@ -79,6 +79,8 @@ export default {
 
   /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
   onSubmit: PropTypes.func.isRequired,
+  /** function which is called initially and on each form value change with true (valid) or false (invalid)  */
+  onValidate: PropTypes.func,
 
   locale: PropTypes.string.isRequired,
   txt: PropTypes.object.isRequired

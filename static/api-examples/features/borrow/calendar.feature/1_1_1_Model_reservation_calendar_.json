@@ -66,6 +66,114 @@
                   },
                   "dates": [
                     {
+                      "date": "2020-04-06",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-07",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-08",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-09",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-10",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-11",
+                      "endDateRestriction": "CLOSE_TIME",
+                      "quantity": 0,
+                      "startDateRestriction": "CLOSE_TIME"
+                    },
+                    {
+                      "date": "2020-04-12",
+                      "endDateRestriction": "CLOSE_TIME",
+                      "quantity": 0,
+                      "startDateRestriction": "CLOSE_TIME"
+                    },
+                    {
+                      "date": "2020-04-13",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-14",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-15",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-16",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-17",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-18",
+                      "endDateRestriction": "CLOSE_TIME",
+                      "quantity": 0,
+                      "startDateRestriction": "CLOSE_TIME"
+                    },
+                    {
+                      "date": "2020-04-19",
+                      "endDateRestriction": "CLOSE_TIME",
+                      "quantity": 0,
+                      "startDateRestriction": "CLOSE_TIME"
+                    },
+                    {
+                      "date": "2020-04-20",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-21",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-22",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-23",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
                       "date": "2020-04-24",
                       "endDateRestriction": null,
                       "quantity": 0,

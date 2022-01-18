@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 import { locale as fakeLocale, orderPanelTexts as fakeTxt } from './StoryUtils/fake-localization'
@@ -18,6 +18,7 @@ export default {
 
 export const withAllArguments = () => {
   const now = new Date(FAKE_STYLEGUIDE_TIME)
+  const [isValid, setIsValid] = useState()
   const {
     modelData,
     inventoryPools,
@@ -57,6 +58,7 @@ export const withAllArguments = () => {
           onUserDelegationChange={action('user-delegation-change')}
           //
           onSubmit={action('submit')}
+          onValidate={setIsValid}
           locale={fakeLocale}
           txt={fakeTxt}
         />
@@ -77,7 +79,7 @@ export const withAllArguments = () => {
         </div>
       </ModalDialog.Body>
       <ModalDialog.Footer>
-        <button type="submit" className="btn btn-primary" form="order-dialog-form">
+        <button type="submit" className="btn btn-primary" form="order-dialog-form" disabled={!isValid}>
           Hinzufügen
         </button>
         <button type="button" className="btn btn-secondary" onClick={action('cancel')}>
