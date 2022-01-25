@@ -8,7 +8,7 @@ import { getOrderPanelMockData } from '../../../StoryUtils/sample-props'
 import { locale, orderPanelTexts } from '../../../StoryUtils/fake-localization'
 
 export default {
-  title: 'MobileApp/Wireframes/Neue Ausleihe/Gegenstand bearbeiten',
+  title: 'MobileApp/Wireframes/Warenkorb/Gegenstand bearbeiten',
   parameters: {
     layout: 'fullscreen',
     storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)

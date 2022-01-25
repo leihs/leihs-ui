@@ -8,15 +8,15 @@ import ListCard from '../../../DesignComponents/ListCard'
 import ProgressInfo from '../../../DesignComponents/ProgressInfo'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Ausleihen/Liste',
+  title: 'MobileApp/Wireframes/Meine Bestellungen/Liste',
   parameters: { layout: 'fullscreen' }
 }
 
 export const liste = ({ ordersByBasicState }) => {
   return (
     <PageLayoutMock>
-      <PageLayout.Header title="Meine Ausleihen">
-        <FilterButton>Alle Ausleihen</FilterButton>
+      <PageLayout.Header title="Meine Bestellungen">
+        <FilterButton>Alle Bestellungen</FilterButton>
       </PageLayout.Header>
 
       <Stack space="5">
@@ -74,7 +74,7 @@ const ordersByBasicState = [
         stateGroups: [
           {
             title: 'Genehmigung',
-            info: '1 von 3 Geräteparks genehmigt',
+            info: '1 von 3 Inventarparks genehmigt',
             totalCount: 3,
             doneCount: 1
           }
@@ -171,7 +171,7 @@ const ordersByBasicState = [
         isCompleted: true,
         stateGroups: [
           {
-            title: 'Ausleihe wurde abgelehnt'
+            title: 'Bestellung wurde abgelehnt'
           }
         ]
       },

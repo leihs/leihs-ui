@@ -11,7 +11,7 @@ import FilterButton from '../../../DesignComponents/FilterButton'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Ausleihen/Detail',
+  title: 'MobileApp/Wireframes/Meine Bestellungen/Detail',
   parameters: { layout: 'fullscreen' }
 }
 
@@ -31,7 +31,7 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
             {order.isCancellable && (
               <ActionButtonGroup>
                 <button type="button" className="btn btn-secondary" onClick={() => onOrderCancelClick()}>
-                  Ausleihe stornieren
+                  Bestellung stornieren
                 </button>
               </ActionButtonGroup>
             )}
@@ -42,7 +42,7 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
           {order.purpose}
         </Section>
 
-        <Section title="Geräteparks" collapsible>
+        <Section title="Inventarparks" collapsible>
           <ListCard.Stack>
             {order.pools.map(({ name, modelCount, orderStateLabel }, i) => (
               <ListCard key={i}>
@@ -64,7 +64,7 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
 
         <Section title="Gegenstände" collapsible className="position-relative">
           <FilterButton className="position-absolute top-0 end-0" onClick={() => alert('TODO (what does it do?)')}>
-            Alle Geräteparks
+            Alle Inventarparks
           </FilterButton>
           <ListCard.Stack>
             {order.models.map(({ reservation, model, pool }, i) => (
@@ -108,7 +108,7 @@ const sampleOrder = {
   stateGroups: [
     {
       title: 'In der Genehmigung',
-      info: '1 von 3 Geräteparks genehmigt',
+      info: '1 von 3 Inventarparks genehmigt',
       totalCount: 3,
       doneCount: 1
     }
@@ -199,7 +199,7 @@ const sampleOrder = {
   ],
   delegation: {
     id: 'a06ec573-d8da-4999-81fa-63226a8b00b7',
-    name: 'Joël Gähwiler',
+    name: 'Anna Beispiel',
     isUser: true
   },
   documents: [

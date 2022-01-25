@@ -4,7 +4,7 @@ export const orderPanelTexts = {
     quantity: { 'de-CH': 'Anzahl' },
     minus: { 'de-CH': 'Minus' },
     plus: { 'de-CH': 'Plus' },
-    pool: { 'de-CH': 'Gerätepark' },
+    pool: { 'de-CH': 'Inventarpark' },
     'pool-max-amount': { 'de-CH': '{pool} (max. {amount, number})' },
     'user-delegation': { 'de-CH': 'Delegation' },
     timespan: { 'de-CH': 'Zeitraum' },
@@ -38,10 +38,10 @@ export const orderPanelTexts = {
 
     'maximum-reservation-time': { 'de-CH': 'Maximale Reservationsdauer ist beschränkt auf {days} Tage' },
 
-    'no-pool-access': { 'de-CH': 'Keine Berechtigung für diesen Gerätepark' },
-    'pool-suspension': { 'de-CH': 'Sperre für diesen Gerätepark' },
-    'item-not-available-in-pool': { 'de-CH': 'Gegenstand in diesem Gerätepark nicht verfügbar' },
-    'unknown-pool': { 'de-CH': 'Unbekannter Gerätepark' },
+    'no-pool-access': { 'de-CH': 'Keine Berechtigung für diesen Inventarpark' },
+    'pool-suspension': { 'de-CH': 'Sperre für diesen Inventarpark' },
+    'item-not-available-in-pool': { 'de-CH': 'Gegenstand in diesem Inventarpark nicht verfügbar' },
+    'unknown-pool': { 'de-CH': 'Unbekannter Inventarpark' },
 
     'user-delegation-cant-be-changed-active-cart': {
       'de-CH': 'Delegation kann nicht gewechselt werden, weil schon andere Reservationen vorhanden sind.'

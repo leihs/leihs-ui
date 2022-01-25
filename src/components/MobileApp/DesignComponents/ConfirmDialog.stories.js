@@ -131,7 +131,7 @@ export const simple_confirm_loading = () => (
 export const cancel_order_de = () => (
   <>
     <ConfirmDialog
-      title="Ausleihe stornieren"
+      title="Bestellung stornieren"
       shown={true}
       confirmLabel="Stornieren"
       cancelLabel="Abbrechen"

@@ -11,7 +11,7 @@ import DatePicker from '../../../DesignComponents/DatePicker'
 import Warning from '../../../DesignComponents/Warning'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Ausleihen/Filter',
+  title: 'MobileApp/Wireframes/Meine Bestellungen/Filter',
   parameters: {
     layout: 'fullscreen',
     storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
@@ -46,7 +46,7 @@ export const filter = ({ onSubmit }) => {
   ]
   const user = {
     id: 'a06ec573-d8da-4999-81fa-63226a8b00b7',
-    name: 'Joël Gähwiler'
+    name: 'Anna Beispiel'
   }
   const initialTerm = 'Mikrofon'
   const initialStartDate = ''
@@ -85,7 +85,7 @@ export const filter = ({ onSubmit }) => {
   }
 
   return (
-    <ModalDialog title="Meine Ausleihen filtern" shown>
+    <ModalDialog title="Meine Bestellungen filtern" shown>
       <ModalDialog.Body>
         <form action="/search" onSubmit={submit} autoComplete="off" id="order-filter-form">
           <Stack space="4">
@@ -171,9 +171,9 @@ export const filter = ({ onSubmit }) => {
                 </div>
               </fieldset>
             </Section>
-            <Section title="Gerätepark" collapsible>
+            <Section title="Inventarpark" collapsible>
               <label htmlFor="pool-id" className="visually-hidden">
-                Gerätepark
+                Inventarpark
               </label>
               <select
                 className="form-select"

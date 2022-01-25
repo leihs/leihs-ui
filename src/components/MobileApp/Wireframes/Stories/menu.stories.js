@@ -26,10 +26,10 @@ export function menu() {
           <Menu show={isOpen} id="menu">
             <Menu.Group title="Ausleihen">
               <Menu.Link href="#some/route">Katalog</Menu.Link>
-              <Menu.Link href="#some/route">Neue Ausleihe</Menu.Link>
+              <Menu.Link href="#some/route">Warenkorb</Menu.Link>
             </Menu.Group>
-            <Menu.Group title="Joël Gähwiler">
-              <Menu.Link href="#some/route">Meine Ausleihen</Menu.Link>
+            <Menu.Group title="Benutzer">
+              <Menu.Link href="#some/route">Meine Bestellungen</Menu.Link>
               <Menu.Link href="#some/route">Benutzerkonto</Menu.Link>
               <Menu.Link href="#some/route">Abmelden</Menu.Link>
             </Menu.Group>

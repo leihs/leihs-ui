@@ -43180,7 +43180,7 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/Old/AppLayout 
                   <option
                     value="all"
                   >
-                    Allen Geräteparks
+                    Alle Inventarparks
                   </option>
                   <option
                     value="8bd16d45-056d-5590-bc7f-12849f034351"
@@ -44644,7 +44644,9 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             className="btn btn-secondary"
             onClick={[Function]}
             type="button"
-          />
+          >
+            Abmelden
+          </button>
         </div>
       </div>
       <div
@@ -44926,7 +44928,9 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
             </span>
           </h2>
           <div>
-            <p />
+            <p>
+              Keine Verträge vorhanden
+            </p>
           </div>
         </section>
       </div>
@@ -46195,7 +46199,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail Detail 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Detail Detail 1`] = `
 <div
   className="pb-5 ui-page-layout"
 >
@@ -46344,7 +46348,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 <div
                   className="fw-light small"
                 >
-                  1 von 3 Geräteparks genehmigt
+                  1 von 3 Inventarparks genehmigt
                 </div>
               </div>
             </div>
@@ -46360,7 +46364,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                 onClick={[Function]}
                 type="button"
               >
-                Ausleihe stornieren
+                Bestellung stornieren
               </button>
             </div>
           </div>
@@ -46413,7 +46417,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             onClick={[Function]}
             role="button"
           >
-            Geräteparks
+            Inventarparks
             <svg
               className="section-title__arrow-icon"
               style={
@@ -46484,7 +46488,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                     <div
                       className="fw-light very-small"
                     >
-                      1 von 3 Geräteparks genehmigt
+                      1 von 3 Inventarparks genehmigt
                     </div>
                   </div>
                 </div>
@@ -46548,7 +46552,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
                     <div
                       className="fw-light very-small"
                     >
-                      1 von 3 Geräteparks genehmigt
+                      1 von 3 Inventarparks genehmigt
                     </div>
                   </div>
                 </div>
@@ -46600,7 +46604,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
             }
             type="button"
           >
-            Alle Geräteparks
+            Alle Inventarparks
           </button>
           <div
             className="mb-0"
@@ -46834,7 +46838,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
           </span>
         </h2>
         <div>
-          Joël Gähwiler
+          Anna Beispiel
            (persönlich)
         </div>
       </section>
@@ -46849,7 +46853,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Detail De
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Liste 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Liste Liste 1`] = `
 <div
   className="pb-5 ui-page-layout"
 >
@@ -46926,7 +46930,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
       className="text-center mb-4"
     >
       <h1>
-        Meine Ausleihen
+        Meine Bestellungen
       </h1>
       <button
         className="ui-filter-bubble btn btn-primary btn-sm rounded-pill px-4 very-small"
@@ -46938,7 +46942,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
         }
         type="button"
       >
-        Alle Ausleihen
+        Alle Bestellungen
       </button>
     </div>
     <div
@@ -47064,7 +47068,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                       <div
                         className="fw-light very-small"
                       >
-                        1 von 3 Geräteparks genehmigt
+                        1 von 3 Inventarparks genehmigt
                       </div>
                     </div>
                   </div>
@@ -47600,7 +47604,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
                       <div
                         className="small"
                       >
-                        Ausleihe wurde abgelehnt
+                        Bestellung wurde abgelehnt
                       </div>
                     </div>
                   </div>
@@ -47695,7 +47699,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Liste Lis
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Status Summary Details Approval 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Status Summary Details Approval 1`] = `
 Array [
   <h1>
     \`My Rentals\` Status Summary
@@ -47717,7 +47721,7 @@ Array [
       <div
         className=""
       >
-        Ausleihe wurde storniert
+        Bestellung wurde storniert
       </div>
     </div>
   </div>,
@@ -47735,7 +47739,7 @@ Array [
       <div
         className=""
       >
-        Ausleihe wurde abgelehnt
+        Bestellung wurde abgelehnt
       </div>
     </div>
   </div>,
@@ -47975,6 +47979,83 @@ Array [
       </div>
     </div>
   </div>,
+  <p
+    className="text-muted"
+  >
+    Expiration
+  </p>,
+  <p
+    className="text-muted"
+  >
+    Reservation items have the temporal pseudo-status 
+    <b>
+      \`expired (not approved)\`
+    </b>
+     when they are are neither rejected nor approved until the reservation end date.
+  </p>,
+  <p
+    className="text-muted"
+  >
+    All items are expired:
+  </p>,
+  <div
+    className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
+  >
+    <div
+      className="ui-progress-info d-flex flex-column gap-1"
+    >
+      <div
+        className=""
+      >
+        Abgelaufen (nicht genehmigt)
+      </div>
+    </div>
+  </div>,
+  <p
+    className="text-muted"
+  >
+    Some expired, some still to be approved:
+  </p>,
+  <div
+    className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
+  >
+    <div
+      className="ui-progress-info d-flex flex-column gap-1"
+    >
+      <div
+        className=""
+      >
+        Genehmigung
+      </div>
+      <div
+        className="progress"
+        style={
+          Object {
+            "height": "0.5rem",
+          }
+        }
+      >
+        <div
+          aria-valuemax={5}
+          aria-valuemin="0"
+          aria-valuenow={2}
+          className="progress-bar rounded"
+          role="progressbar"
+          style={
+            Object {
+              "width": "40.00%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="fw-light small"
+      >
+        0 von 5 Gegenständen genehmigt (2 abgelaufen)
+      </div>
+    </div>
+  </div>,
+  " ",
   <div>
      
   </div>,
@@ -47984,7 +48065,7 @@ Array [
 ]
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Status Summary Details Pickup 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Status Summary Details Pickup 1`] = `
 Array [
   <h1>
     \`My Rentals\` Status Summary
@@ -48002,7 +48083,7 @@ Array [
   >
     Reservation items have the temporal pseudo-status 
     <b>
-      expired
+      \`expired (not picked up)\`
     </b>
      when they are not picked up until the reservation end date.
   </p>,
@@ -48020,7 +48101,7 @@ Array [
       <div
         className=""
       >
-        Ausleihe abgelaufen
+        Abgelaufen (nicht abgeholt)
       </div>
     </div>
   </div>,
@@ -48223,7 +48304,7 @@ Array [
 ]
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Status Summary Details Return 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Status Summary Details Return 1`] = `
 Array [
   <h1>
     \`My Rentals\` Status Summary
@@ -48346,7 +48427,7 @@ Array [
 ]
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Status Summary Structure 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Status Summary Structure 1`] = `
 Array [
   <h1>
     \`My Rentals\` Status Summary
@@ -48598,7 +48679,7 @@ Array [
       <div
         className=""
       >
-        Ausleihe wurde storniert
+        Bestellung wurde storniert
       </div>
     </div>
   </div>,
@@ -48616,7 +48697,25 @@ Array [
       <div
         className=""
       >
-        Ausleihe wurde abgelehnt
+        Bestellung wurde abgelehnt
+      </div>
+    </div>
+  </div>,
+  <p
+    className="text-muted"
+  >
+    Approval - not approved in time:
+  </p>,
+  <div
+    className="border rounded py-3 px-2 mb-4 d-flex flex-column gap-2"
+  >
+    <div
+      className="ui-progress-info d-flex flex-column gap-1"
+    >
+      <div
+        className=""
+      >
+        Abgelaufen (nicht genehmigt)
       </div>
     </div>
   </div>,
@@ -48634,7 +48733,7 @@ Array [
       <div
         className=""
       >
-        Ausleihe abgelaufen
+        Abgelaufen (nicht abgeholt)
       </div>
     </div>
   </div>,
@@ -48810,7 +48909,7 @@ Array [
 ]
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Ausleihen/Status Summary Typical Flow 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Status Summary Typical Flow 1`] = `
 Array [
   <h1>
     \`My Rentals\` Status Summary
@@ -49267,7 +49366,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
               className="btn btn-secondary rounded-pill"
               href="#some/route"
             >
-              Neue Ausleihe
+              Warenkorb
             </a>
           </div>
         </div>
@@ -49277,7 +49376,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
           <h2
             className="fw-normal"
           >
-            Joël Gähwiler
+            Benutzer
           </h2>
           <div
             className="d-flex flex-column gap-3"
@@ -49286,7 +49385,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
               className="btn btn-secondary rounded-pill"
               href="#some/route"
             >
-              Meine Ausleihen
+              Meine Bestellungen
             </a>
             <a
               className="btn btn-secondary rounded-pill"
@@ -49368,676 +49467,6 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
     >
       (Click the hamburger icon to open the menu)
     </p>
-  </div>
-</div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Cart Constraints Cart Constraints 1`] = `
-<div
-  className="pb-5"
->
-  <h1>
-    Cart Constraints
-  </h1>
-  <ul
-    className="text-muted"
-  >
-    <li>
-      Today is Tuesday, April 7 2020
-    </li>
-    <li>
-      Work days Mo-Fr
-    </li>
-    <li>
-      April 10-13 Easter holiday
-    </li>
-    <li>
-      April 17-20 1 item of 3 inavailable 
-    </li>
-    <li>
-      April 27 max visits reached
-    </li>
-    <li>
-      Advance days = 1 (i.e. earliest pickup tomorrow April 8)
-    </li>
-    <li>
-      Maximum reservation time = 10 days
-    </li>
-  </ul>
-</div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Cart Constraints Invalid Pool Selected 1`] = `
-<div
-  className="pb-5"
->
-  <h1>
-    Cart Constraints - Invalid pool selected
-  </h1>
-  <p
-    className="text-muted"
-  >
-    This is only to expect when a reservation was made before, but then got invalid while being in the cart (unsubmitted order)
-  </p>
-  <p
-    className="text-muted"
-  >
-    Use the "Gerätepark" selector to see all cases:
-  </p>
-  <ol
-    className="text-muted"
-  >
-    <li>
-      A valid pool
-    </li>
-    <li>
-      Selected pool has no items
-    </li>
-    <li>
-      Pool the user can not access
-    </li>
-    <li>
-      Pool where the user is suspended
-    </li>
-  </ol>
-  <p
-    className="text-muted"
-  >
-    The initially selected pool id is unknown on purpose. The app should always provide the pool details for a preselected invalid pool, otherwise the user does not see what the problem is.
-  </p>
-</div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Keine Gegenstände Keine Gegenstände 1`] = `
-<div
-  className="pb-5 ui-page-layout"
->
-  <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
-  >
-    <div
-      className="navbar-nav"
-    >
-      <a
-        className="nav-item nav-link"
-      >
-        <span
-          className="ui-icon ui-menu-icon"
-        >
-          <svg
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
-          >
-            Menu Icon.svg
-          </svg>
-        </span>
-      </a>
-    </div>
-    <a
-      className="navbar-brand me-0 fw-bold"
-    >
-      Leihs
-    </a>
-    <div
-      className="navbar-nav"
-    >
-      <a
-        className="nav-item nav-link position-relative"
-        href="/app/borrow/order"
-      >
-        <div
-          className="cart-badge position-absolute"
-          style={
-            Object {
-              "right": "-8px",
-              "top": "4px",
-            }
-          }
-        >
-          <span>
-            3
-          </span>
-        </div>
-        <svg
-          style={
-            Object {
-              "display": "inline",
-            }
-          }
-        >
-          Bag Icon.svg
-        </svg>
-      </a>
-    </div>
-  </nav>
-  <div
-    className="page-inset-x py-4 container-fluid"
-    style={
-      Object {
-        "maxWidth": "720px",
-      }
-    }
-  >
-    <div
-      className="text-center mb-4"
-    >
-      <h1>
-        Neue Ausleihe
-      </h1>
-    </div>
-    <div
-      className="mb-4 text-center"
-    >
-      Noch keine Gegenstände hinzugefügt
-    </div>
-    <div
-      className="text-center"
-    >
-      <a
-        className="text-decoration-underline"
-        href="/app/borrow/"
-      >
-        Hier geht's zum Katalog
-      </a>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Wireframes/Neue Ausleihe/Neue Ausleihe Neue Ausleihe 1`] = `
-<div
-  className="pb-5 ui-page-layout"
->
-  <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
-  >
-    <div
-      className="navbar-nav"
-    >
-      <a
-        className="nav-item nav-link"
-      >
-        <span
-          className="ui-icon ui-menu-icon"
-        >
-          <svg
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
-          >
-            Menu Icon.svg
-          </svg>
-        </span>
-      </a>
-    </div>
-    <a
-      className="navbar-brand me-0 fw-bold"
-    >
-      Leihs
-    </a>
-    <div
-      className="navbar-nav"
-    >
-      <a
-        className="nav-item nav-link position-relative"
-        href="/app/borrow/order"
-      >
-        <div
-          className="cart-badge position-absolute"
-          style={
-            Object {
-              "right": "-8px",
-              "top": "4px",
-            }
-          }
-        >
-          <span>
-            3
-          </span>
-        </div>
-        <svg
-          style={
-            Object {
-              "display": "inline",
-            }
-          }
-        >
-          Bag Icon.svg
-        </svg>
-      </a>
-    </div>
-  </nav>
-  <div
-    className="page-inset-x py-4 container-fluid"
-    style={
-      Object {
-        "maxWidth": "720px",
-      }
-    }
-  >
-    <div
-      className="text-center mb-4"
-    >
-      <h1>
-        Neue Ausleihe
-      </h1>
-    </div>
-    <div
-      className="mb-5"
-    >
-      <section
-        className=""
-      >
-        <h2
-          className="section-title fw-normal"
-        >
-          <span
-            className="section-title__collapser ui-section-collapser"
-            onClick={[Function]}
-            role="button"
-          >
-            Status
-            <svg
-              className="section-title__arrow-icon"
-              style={
-                Object {
-                  "display": "inline",
-                }
-              }
-            >
-              Section Arrow.svg
-            </svg>
-          </span>
-        </h2>
-        <div>
-          <div
-            className="mb-3"
-          >
-            <div
-              className="ui-progress-info d-flex flex-column gap-1"
-            >
-              <div
-                className=""
-              >
-                Zeitlimit
-              </div>
-              <div
-                className="progress"
-                style={
-                  Object {
-                    "height": "0.5rem",
-                  }
-                }
-              >
-                <div
-                  aria-valuemax="30"
-                  aria-valuemin="0"
-                  aria-valuenow="23"
-                  className="progress-bar rounded"
-                  role="progressbar"
-                  style={
-                    Object {
-                      "width": "76.67%",
-                    }
-                  }
-                />
-              </div>
-              <div
-                className="fw-light small"
-              >
-                Noch 23 Minuten übrig
-              </div>
-            </div>
-          </div>
-          <div
-            className=""
-          >
-            <div
-              className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
-            >
-              <button
-                className="btn btn-secondary"
-                type="button"
-              >
-                Zeitlimit zurückstellen
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-    </div>
-    <div
-      className="mb-5"
-    >
-      <section
-        className=""
-      >
-        <h2
-          className="section-title fw-normal"
-        >
-          <span
-            className="section-title__collapser ui-section-collapser"
-            onClick={[Function]}
-            role="button"
-          >
-            Delegation
-            <svg
-              className="section-title__arrow-icon"
-              style={
-                Object {
-                  "display": "inline",
-                }
-              }
-            >
-              Section Arrow.svg
-            </svg>
-          </span>
-        </h2>
-        <div>
-          <label
-            className="visually-hidden"
-            htmlFor="user-id"
-            required={true}
-          >
-            Delegation
-          </label>
-          <select
-            className="form-select"
-            id="user-id"
-            name="user-id"
-            onChange={[Function]}
-            value="a06ec573-d8da-4999-81fa-63226a8b00b7"
-          >
-            <option
-              value="a06ec573-d8da-4999-81fa-63226a8b00b7"
-            >
-              Joël Gähwiler
-               (persönlich)
-            </option>
-            <option
-              value="37372089-450b-49ec-8486-fcc3a9e6ae22"
-            >
-              Delegation 1
-            </option>
-            <option
-              value="3013ff5a-0203-4ec5-bda5-61871ddd5dc7"
-            >
-              Delegation 2
-            </option>
-          </select>
-        </div>
-      </section>
-    </div>
-    <div
-      className="mb-5"
-    >
-      <section
-        className="position-relative"
-      >
-        <h2
-          className="section-title fw-normal"
-        >
-          <span
-            className="section-title__collapser ui-section-collapser"
-            onClick={[Function]}
-            role="button"
-          >
-            Gegenstände
-            <svg
-              className="section-title__arrow-icon"
-              style={
-                Object {
-                  "display": "inline",
-                }
-              }
-            >
-              Section Arrow.svg
-            </svg>
-          </span>
-        </h2>
-        <div>
-          <div
-            className="mb-0"
-          >
-            <hr
-              className="page-inset-x-inverse my-0"
-            />
-            <div
-              className="py-3 position-relative ui-list-card"
-              onClick={[Function]}
-              style={
-                Object {
-                  "cursor": "pointer",
-                  "minHeight": "4.375rem",
-                }
-              }
-            >
-              <a
-                className="float-end text-end ps-5 stretched-link"
-                style={
-                  Object {
-                    "paddingBottom": "0.75rem",
-                    "paddingTop": "0.5rem",
-                  }
-                }
-              >
-                <svg
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
-                >
-                  Item Arrow.svg
-                </svg>
-              </a>
-              <div
-                className="mb-1 text-truncate"
-              >
-                1
-                x 
-                ARRI Alexa DTE-SXS Super 35mm
-              </div>
-              <div
-                className="small"
-              >
-                Ausleihe Toni-Areal
-              </div>
-              <div
-                className="pt-3"
-              >
-                <div
-                  className="badge rounded-pill fw-light border-0 bg-danger ui-badge"
-                  style={
-                    Object {
-                      "padding": "9px 20px 9px 20px",
-                    }
-                  }
-                >
-                  13
-                   Tage
-                   
-                  ab 26.5.2021
-                </div>
-              </div>
-            </div>
-            <hr
-              className="page-inset-x-inverse my-0"
-            />
-          </div>
-          <div
-            className="mb-0"
-          >
-            <div
-              className="py-3 position-relative ui-list-card"
-              onClick={[Function]}
-              style={
-                Object {
-                  "cursor": "pointer",
-                  "minHeight": "4.375rem",
-                }
-              }
-            >
-              <a
-                className="float-end text-end ps-5 stretched-link"
-                style={
-                  Object {
-                    "paddingBottom": "0.75rem",
-                    "paddingTop": "0.5rem",
-                  }
-                }
-              >
-                <svg
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
-                >
-                  Item Arrow.svg
-                </svg>
-              </a>
-              <div
-                className="mb-1 text-truncate"
-              >
-                2
-                x 
-                Glasfilter Tiffen 4x4 Pol
-              </div>
-              <div
-                className="small"
-              >
-                Ausleihe Toni-Areal
-              </div>
-              <div
-                className="pt-3"
-              >
-                <div
-                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
-                  style={
-                    Object {
-                      "padding": "9px 20px 9px 20px",
-                    }
-                  }
-                >
-                  12
-                   Tage
-                   
-                  ab 27.5.2021
-                </div>
-              </div>
-            </div>
-            <hr
-              className="page-inset-x-inverse my-0"
-            />
-          </div>
-          <div
-            className=""
-          >
-            <div
-              className="py-3 position-relative ui-list-card"
-              onClick={[Function]}
-              style={
-                Object {
-                  "cursor": "pointer",
-                  "minHeight": "4.375rem",
-                }
-              }
-            >
-              <a
-                className="float-end text-end ps-5 stretched-link"
-                style={
-                  Object {
-                    "paddingBottom": "0.75rem",
-                    "paddingTop": "0.5rem",
-                  }
-                }
-              >
-                <svg
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
-                >
-                  Item Arrow.svg
-                </svg>
-              </a>
-              <div
-                className="mb-1 text-truncate"
-              >
-                1
-                x 
-                Monitor HD LCD Panasonic
-              </div>
-              <div
-                className="small"
-              >
-                Werkstattausleihe
-              </div>
-              <div
-                className="pt-3"
-              >
-                <div
-                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
-                  style={
-                    Object {
-                      "padding": "9px 20px 9px 20px",
-                    }
-                  }
-                >
-                  3
-                   Tage
-                   
-                  ab 6.6.2021
-                </div>
-              </div>
-            </div>
-            <hr
-              className="page-inset-x-inverse my-0"
-            />
-          </div>
-        </div>
-      </section>
-    </div>
-    <div
-      className=""
-    >
-      <section
-        className=""
-      >
-        <div>
-          <div
-            className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
-          >
-            <div
-              className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
-            >
-              1 Gegenstand ungültig
-            </div>
-            <button
-              className="btn btn-primary"
-              disabled="1 Gegenstand ungültig"
-              onClick={[Function]}
-              type="submit"
-            >
-              Ausleihe bestätigen
-            </button>
-            <button
-              className="btn btn-secondary"
-              type="button"
-            >
-              Ausleihe löschen
-            </button>
-          </div>
-        </div>
-      </section>
-    </div>
   </div>
 </div>
 `;
@@ -50695,6 +50124,676 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
       className="text-center text-black-50 fw-light mt-5 pt-3"
     >
       ID: 12345
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Cart Constraints Cart Constraints 1`] = `
+<div
+  className="pb-5"
+>
+  <h1>
+    Cart Constraints
+  </h1>
+  <ul
+    className="text-muted"
+  >
+    <li>
+      Today is Tuesday, April 7 2020
+    </li>
+    <li>
+      Work days Mo-Fr
+    </li>
+    <li>
+      April 10-13 Easter holiday
+    </li>
+    <li>
+      April 17-20 1 item of 3 inavailable 
+    </li>
+    <li>
+      April 27 max visits reached
+    </li>
+    <li>
+      Advance days = 1 (i.e. earliest pickup tomorrow April 8)
+    </li>
+    <li>
+      Maximum reservation time = 10 days
+    </li>
+  </ul>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Cart Constraints Invalid Pool Selected 1`] = `
+<div
+  className="pb-5"
+>
+  <h1>
+    Cart Constraints - Invalid pool selected
+  </h1>
+  <p
+    className="text-muted"
+  >
+    This is only to expect when a reservation was made before, but then got invalid while being in the cart (unsubmitted order)
+  </p>
+  <p
+    className="text-muted"
+  >
+    Use the "Inventarpark" selector to see all cases:
+  </p>
+  <ol
+    className="text-muted"
+  >
+    <li>
+      A valid pool
+    </li>
+    <li>
+      Selected pool has no items
+    </li>
+    <li>
+      Pool the user can not access
+    </li>
+    <li>
+      Pool where the user is suspended
+    </li>
+  </ol>
+  <p
+    className="text-muted"
+  >
+    The initially selected pool id is unknown on purpose. The app should always provide the pool details for a preselected invalid pool, otherwise the user does not see what the problem is.
+  </p>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Keine Gegenstände Keine Gegenstände 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <div
+      className="text-center mb-4"
+    >
+      <h1>
+        Warenkorb
+      </h1>
+    </div>
+    <div
+      className="mb-4 text-center"
+    >
+      Noch keine Gegenstände hinzugefügt
+    </div>
+    <div
+      className="text-center"
+    >
+      <a
+        className="text-decoration-underline"
+        href="/app/borrow/"
+      >
+        Hier geht's zum Katalog
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Warenkorb Warenkorb 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav"
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <div
+      className="text-center mb-4"
+    >
+      <h1>
+        Warenkorb
+      </h1>
+    </div>
+    <div
+      className="mb-5"
+    >
+      <section
+        className=""
+      >
+        <h2
+          className="section-title fw-normal"
+        >
+          <span
+            className="section-title__collapser ui-section-collapser"
+            onClick={[Function]}
+            role="button"
+          >
+            Status
+            <svg
+              className="section-title__arrow-icon"
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Section Arrow.svg
+            </svg>
+          </span>
+        </h2>
+        <div>
+          <div
+            className="mb-3"
+          >
+            <div
+              className="ui-progress-info d-flex flex-column gap-1"
+            >
+              <div
+                className=""
+              >
+                Zeitlimit
+              </div>
+              <div
+                className="progress"
+                style={
+                  Object {
+                    "height": "0.5rem",
+                  }
+                }
+              >
+                <div
+                  aria-valuemax="30"
+                  aria-valuemin="0"
+                  aria-valuenow="23"
+                  className="progress-bar rounded"
+                  role="progressbar"
+                  style={
+                    Object {
+                      "width": "76.67%",
+                    }
+                  }
+                />
+              </div>
+              <div
+                className="fw-light small"
+              >
+                Noch 23 Minuten übrig
+              </div>
+            </div>
+          </div>
+          <div
+            className=""
+          >
+            <div
+              className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
+            >
+              <button
+                className="btn btn-secondary"
+                type="button"
+              >
+                Zeitlimit zurückstellen
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="mb-5"
+    >
+      <section
+        className=""
+      >
+        <h2
+          className="section-title fw-normal"
+        >
+          <span
+            className="section-title__collapser ui-section-collapser"
+            onClick={[Function]}
+            role="button"
+          >
+            Delegation
+            <svg
+              className="section-title__arrow-icon"
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Section Arrow.svg
+            </svg>
+          </span>
+        </h2>
+        <div>
+          <label
+            className="visually-hidden"
+            htmlFor="user-id"
+            required={true}
+          >
+            Delegation
+          </label>
+          <select
+            className="form-select"
+            id="user-id"
+            name="user-id"
+            onChange={[Function]}
+            value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+          >
+            <option
+              value="a06ec573-d8da-4999-81fa-63226a8b00b7"
+            >
+              Anna Beispiel
+               (persönlich)
+            </option>
+            <option
+              value="37372089-450b-49ec-8486-fcc3a9e6ae22"
+            >
+              Delegation 1
+            </option>
+            <option
+              value="3013ff5a-0203-4ec5-bda5-61871ddd5dc7"
+            >
+              Delegation 2
+            </option>
+          </select>
+        </div>
+      </section>
+    </div>
+    <div
+      className="mb-5"
+    >
+      <section
+        className="position-relative"
+      >
+        <h2
+          className="section-title fw-normal"
+        >
+          <span
+            className="section-title__collapser ui-section-collapser"
+            onClick={[Function]}
+            role="button"
+          >
+            Gegenstände
+            <svg
+              className="section-title__arrow-icon"
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Section Arrow.svg
+            </svg>
+          </span>
+        </h2>
+        <div>
+          <div
+            className="mb-0"
+          >
+            <hr
+              className="page-inset-x-inverse my-0"
+            />
+            <div
+              className="py-3 position-relative ui-list-card"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "minHeight": "4.375rem",
+                }
+              }
+            >
+              <a
+                className="float-end text-end ps-5 stretched-link"
+                style={
+                  Object {
+                    "paddingBottom": "0.75rem",
+                    "paddingTop": "0.5rem",
+                  }
+                }
+              >
+                <svg
+                  style={
+                    Object {
+                      "display": "inline",
+                    }
+                  }
+                >
+                  Item Arrow.svg
+                </svg>
+              </a>
+              <div
+                className="mb-1 text-truncate"
+              >
+                1
+                x 
+                ARRI Alexa DTE-SXS Super 35mm
+              </div>
+              <div
+                className="small"
+              >
+                Ausleihe Toni-Areal
+              </div>
+              <div
+                className="pt-3"
+              >
+                <div
+                  className="badge rounded-pill fw-light border-0 bg-danger ui-badge"
+                  style={
+                    Object {
+                      "padding": "9px 20px 9px 20px",
+                    }
+                  }
+                >
+                  13
+                   Tage
+                   
+                  ab 26.5.2021
+                </div>
+              </div>
+            </div>
+            <hr
+              className="page-inset-x-inverse my-0"
+            />
+          </div>
+          <div
+            className="mb-0"
+          >
+            <div
+              className="py-3 position-relative ui-list-card"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "minHeight": "4.375rem",
+                }
+              }
+            >
+              <a
+                className="float-end text-end ps-5 stretched-link"
+                style={
+                  Object {
+                    "paddingBottom": "0.75rem",
+                    "paddingTop": "0.5rem",
+                  }
+                }
+              >
+                <svg
+                  style={
+                    Object {
+                      "display": "inline",
+                    }
+                  }
+                >
+                  Item Arrow.svg
+                </svg>
+              </a>
+              <div
+                className="mb-1 text-truncate"
+              >
+                2
+                x 
+                Glasfilter Tiffen 4x4 Pol
+              </div>
+              <div
+                className="small"
+              >
+                Ausleihe Toni-Areal
+              </div>
+              <div
+                className="pt-3"
+              >
+                <div
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
+                  style={
+                    Object {
+                      "padding": "9px 20px 9px 20px",
+                    }
+                  }
+                >
+                  12
+                   Tage
+                   
+                  ab 27.5.2021
+                </div>
+              </div>
+            </div>
+            <hr
+              className="page-inset-x-inverse my-0"
+            />
+          </div>
+          <div
+            className=""
+          >
+            <div
+              className="py-3 position-relative ui-list-card"
+              onClick={[Function]}
+              style={
+                Object {
+                  "cursor": "pointer",
+                  "minHeight": "4.375rem",
+                }
+              }
+            >
+              <a
+                className="float-end text-end ps-5 stretched-link"
+                style={
+                  Object {
+                    "paddingBottom": "0.75rem",
+                    "paddingTop": "0.5rem",
+                  }
+                }
+              >
+                <svg
+                  style={
+                    Object {
+                      "display": "inline",
+                    }
+                  }
+                >
+                  Item Arrow.svg
+                </svg>
+              </a>
+              <div
+                className="mb-1 text-truncate"
+              >
+                1
+                x 
+                Monitor HD LCD Panasonic
+              </div>
+              <div
+                className="small"
+              >
+                Werkstattausleihe
+              </div>
+              <div
+                className="pt-3"
+              >
+                <div
+                  className="badge rounded-pill fw-light border-0 bg-secondary text-dark ui-badge"
+                  style={
+                    Object {
+                      "padding": "9px 20px 9px 20px",
+                    }
+                  }
+                >
+                  3
+                   Tage
+                   
+                  ab 6.6.2021
+                </div>
+              </div>
+            </div>
+            <hr
+              className="page-inset-x-inverse my-0"
+            />
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className=""
+    >
+      <section
+        className=""
+      >
+        <div>
+          <div
+            className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
+          >
+            <div
+              className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
+            >
+              1 Gegenstand ungültig
+            </div>
+            <button
+              className="btn btn-primary"
+              disabled="1 Gegenstand ungültig"
+              onClick={[Function]}
+              type="submit"
+            >
+              Bestellung bestätigen
+            </button>
+            <button
+              className="btn btn-secondary"
+              type="button"
+            >
+              Warenkorb löschen
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 </div>

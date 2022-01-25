@@ -5,14 +5,14 @@ import Stack from '../../../DesignComponents/Stack'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/Neue Ausleihe/Keine Gegenstände',
+  title: 'MobileApp/Wireframes/Warenkorb/Keine Gegenstände',
   parameters: { layout: 'fullscreen' }
 }
 
 export const keineGegenstaende = () => {
   return (
     <PageLayoutMock>
-      <PageLayout.Header title="Neue Ausleihe"></PageLayout.Header>
+      <PageLayout.Header title="Warenkorb"></PageLayout.Header>
       <Stack space="4" className="text-center">
         Noch keine Gegenstände hinzugefügt
         <a href="/app/borrow/" className="text-decoration-underline">

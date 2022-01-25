@@ -32,7 +32,7 @@ const fakeSearchForm = (
         <span className="text-xs col-3 col-form-label">Aus </span>
         <div className="col-9">
           <select className="form-select" name="user-id">
-            <option value="all">Allen Geräteparks</option>
+            <option value="all">Alle Inventarparks</option>
             <option value="8bd16d45-056d-5590-bc7f-12849f034351">Ausleihe Toni-Areal</option>
             <option value="a02b8163-9a16-5066-b48e-9eb74cf8b791">Fundus-DDK</option>
             <option value="5dd25b58-fa56-5095-bd97-2696d92c2fb1">IT-Zentrum</option>

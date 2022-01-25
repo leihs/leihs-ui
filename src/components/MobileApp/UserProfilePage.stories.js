@@ -17,7 +17,9 @@ export function userProfilePage({ onLogoutClick }) {
     pageTitle: 'Benutzerkonto',
     sectionUserData: 'Nutzerdaten',
     sectionContracts: 'Verträge',
-    sectionDelegations: 'Delegationen'
+    sectionDelegations: 'Delegationen',
+    logout: 'Abmelden',
+    noContracts: 'Keine Verträge vorhanden'
   }
   return (
     <PageLayoutMock>

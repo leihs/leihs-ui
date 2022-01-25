@@ -11,7 +11,7 @@ import Warning from '../../../DesignComponents/Warning'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/Neue Ausleihe/Neue Ausleihe',
+  title: 'MobileApp/Wireframes/Warenkorb/Warenkorb',
   parameters: { layout: 'fullscreen' },
   argTypes: {
     onResetTimeLimitClick: { action: 'reset-time-limit' },
@@ -82,7 +82,7 @@ export default {
     },
     user: {
       id: 'a06ec573-d8da-4999-81fa-63226a8b00b7',
-      name: 'Joël Gähwiler'
+      name: 'Anna Beispiel'
     },
     delegations: [
       { id: '37372089-450b-49ec-8486-fcc3a9e6ae22', name: 'Delegation 1' },
@@ -115,7 +115,7 @@ export const neueAusleihe = ({
 
   return (
     <PageLayoutMock>
-      <PageLayout.Header title="Neue Ausleihe"></PageLayout.Header>
+      <PageLayout.Header title="Warenkorb"></PageLayout.Header>
 
       <Stack space="5">
         <Section title="Status" collapsible>
@@ -168,10 +168,10 @@ export const neueAusleihe = ({
           <ActionButtonGroup>
             {errorMessage && <Warning>{errorMessage}</Warning>}
             <button type="submit" className="btn btn-primary" disabled={errorMessage} onClick={confirmClick}>
-              Ausleihe bestätigen
+              Bestellung bestätigen
             </button>
             <button type="button" className="btn btn-secondary" onClick={onDeleteClick}>
-              Ausleihe löschen
+              Warenkorb löschen
             </button>
           </ActionButtonGroup>
         </Section>
@@ -179,4 +179,4 @@ export const neueAusleihe = ({
     </PageLayoutMock>
   )
 }
-neueAusleihe.storyName = 'Neue Ausleihe'
+neueAusleihe.storyName = 'Warenkorb'

@@ -2,7 +2,7 @@ import React from 'react'
 import ProgressInfo from '../../../DesignComponents/ProgressInfo'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Ausleihen/Status Summary'
+  title: 'MobileApp/Wireframes/Meine Bestellungen/Status Summary'
 }
 
 const statusLabels = {
@@ -10,9 +10,10 @@ const statusLabels = {
   TO_PICKUP: 'Abholung',
   TO_RETURN: 'Rückgabe',
   RETURNED: 'Alle Gegenstände zurückgebracht',
-  REJECTED: 'Ausleihe wurde abgelehnt',
-  CANCELED: 'Ausleihe wurde storniert',
-  EXPIRED: 'Ausleihe abgelaufen',
+  REJECTED: 'Bestellung wurde abgelehnt',
+  EXPIRED_UNAPPROVED: 'Abgelaufen (nicht genehmigt)',
+  CANCELED: 'Bestellung wurde storniert',
+  EXPIRED: 'Abgelaufen (nicht abgeholt)',
   OVERDUE: 'Rückgabe überfällig'
 }
 
@@ -96,6 +97,10 @@ export function structure() {
       <p className="text-muted">Approval - all items rejected:</p>
       <Example>
         <ProgressInfo title={statusLabels.REJECTED} />
+      </Example>
+      <p className="text-muted">Approval - not approved in time:</p>
+      <Example>
+        <ProgressInfo title={statusLabels.EXPIRED_UNAPPROVED} />
       </Example>
       <p className="text-muted">Pick up - customer missed all items:</p>
       <Example>
@@ -305,6 +310,24 @@ export function detailsApproval() {
           doneCount={0}
         />
       </Example>
+      <p className="text-muted">Expiration</p>
+      <p className="text-muted">
+        Reservation items have the temporal pseudo-status <b>`expired (not approved)`</b> when they are are neither
+        rejected nor approved until the reservation end date.
+      </p>
+      <p className="text-muted">All items are expired:</p>
+      <Example>
+        <ProgressInfo title={statusLabels.EXPIRED_UNAPPROVED} />
+      </Example>
+      <p className="text-muted">Some expired, some still to be approved:</p>
+      <Example>
+        <ProgressInfo
+          title={statusLabels.IN_APPROVAL}
+          info="0 von 5 Gegenständen genehmigt (2 abgelaufen)"
+          totalCount={5}
+          doneCount={2}
+        />
+      </Example>{' '}
       <div>&nbsp;</div>
       <div>&nbsp;</div>
     </>
@@ -318,8 +341,8 @@ export function detailsPickup() {
       <h2>Details: Pickup</h2>
       <p className="text-muted">Expiration</p>
       <p className="text-muted">
-        Reservation items have the temporal pseudo-status <b>expired</b> when they are not picked up until the
-        reservation end date.
+        Reservation items have the temporal pseudo-status <b>`expired (not picked up)`</b> when they are not picked up
+        until the reservation end date.
       </p>
       <p className="text-muted">All items are expired:</p>
       <Example>

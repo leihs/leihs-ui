@@ -7,7 +7,7 @@ import Section from '../../../DesignComponents/Section'
 import Textarea from '../../../DesignComponents/Textarea'
 
 export default {
-  title: 'MobileApp/Wireframes/Neue Ausleihe/Ausleihe bestätigen',
+  title: 'MobileApp/Wireframes/Warenkorb/Bestellung bestätigen',
   parameters: {
     layout: 'fullscreen',
     storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
@@ -23,7 +23,7 @@ export default {
     ],
     user: {
       id: 'a06ec573-d8da-4999-81fa-63226a8b00b7',
-      name: 'Joël Gähwiler'
+      name: 'Anna Beispiel'
     },
     initialTitle: 'Videomodul',
     initialPurpose: 'Material für Videomodul im 3. Semester.',
@@ -31,7 +31,7 @@ export default {
   }
 }
 
-export const ausleiheBestaetigen = ({
+export const bestellungBestaetigen = ({
   delegations,
   user,
   onSubmit,
@@ -77,7 +77,7 @@ export const ausleiheBestaetigen = ({
     }
   }
   return (
-    <ModalDialog title="Neue Ausleihe bestätigen" shown>
+    <ModalDialog title="Bestellung bestätigen" shown>
       <ModalDialog.Body>
         <form
           onSubmit={submit}
@@ -155,4 +155,4 @@ export const ausleiheBestaetigen = ({
   )
 }
 
-ausleiheBestaetigen.storyName = 'Ausleihe bestätigen'
+bestellungBestaetigen.storyName = 'Bestellung bestätigen'

@@ -7,7 +7,7 @@ import { locale as fakeLocale, orderPanelTexts as fakeTxt } from '../../../Story
 import { eachDayOfInterval, formatISO, getDay } from 'date-fns'
 
 export default {
-  title: 'MobileApp/Wireframes/Neue Ausleihe/Cart Constraints'
+  title: 'MobileApp/Wireframes/Warenkorb/Cart Constraints'
 }
 
 export const cartConstraints = () => {
@@ -108,7 +108,7 @@ export function invalidPoolSelected() {
         This is only to expect when a reservation was made before, but then got invalid while being in the cart
         (unsubmitted order)
       </p>
-      <p className="text-muted">Use the &quot;Gerätepark&quot; selector to see all cases:</p>
+      <p className="text-muted">Use the &quot;Inventarpark&quot; selector to see all cases:</p>
       <ol className="text-muted">
         <li>A valid pool</li>
         <li>Selected pool has no items</li>

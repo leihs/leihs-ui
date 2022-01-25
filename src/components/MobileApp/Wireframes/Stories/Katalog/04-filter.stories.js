@@ -38,7 +38,7 @@ export const filter = ({ onSubmit }) => {
   ]
   const user = {
     id: 'a06ec573-d8da-4999-81fa-63226a8b00b7',
-    name: 'Joël Gähwiler'
+    name: 'Anna Beispiel'
   }
   const initialTerm = 'Mikrofon'
   const initialStartDate = ''
@@ -134,11 +134,11 @@ export const filter = ({ onSubmit }) => {
                 {isEndDateBeforeStartDate && <Warning>Bis-Datum ist vor Von-Datum</Warning>}
               </Stack>
             </Section>
-            <Section title="Geräteparks" collapsible>
+            <Section title="Inventarparks" collapsible>
               <div className="d-flex flex-column gap-3">
                 <div>
                   <label htmlFor="pool-id" className="visually-hidden">
-                    Geräteparks
+                    Inventarparks
                   </label>
                   <select
                     className="form-select"
@@ -148,7 +148,7 @@ export const filter = ({ onSubmit }) => {
                     onChange={e => setPoolId(e.target.value)}
                   >
                     <option value="all" key="all">
-                      Alle Geräteparks
+                      Alle Inventarparks
                     </option>
                     {pools.map(p => (
                       <option value={p.id} key={p.id}>
@@ -159,7 +159,7 @@ export const filter = ({ onSubmit }) => {
                 </div>
                 <ActionButtonGroup>
                   <button type="button" className="btn btn-secondary" onClick={() => alert('TODO')}>
-                    Gerätepark hinzufügen
+                    Inventarparks hinzufügen
                   </button>
                 </ActionButtonGroup>
               </div>
