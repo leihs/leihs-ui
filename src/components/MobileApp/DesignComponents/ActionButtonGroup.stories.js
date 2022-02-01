@@ -55,13 +55,13 @@ export const withWarning = ({ onClick }) => {
         Add a <code>{'<Warning />'}</code> component to explain why a button is disabled
       </p>
       <ActionButtonGroup>
-        <Warning>{"I'm sorry, Dave. I'm afraid I can't do that."}</Warning>
         <button type="button" className="btn btn-primary" disabled>
           Open the pod bay doors, HAL
         </button>
         <button type="button" className="btn btn-secondary" onClick={onClick}>
           Go in through the emergency air lock
         </button>
+        <Warning>{"I'm sorry, Dave. I'm afraid I can't do that."}</Warning>
       </ActionButtonGroup>
     </div>
   )

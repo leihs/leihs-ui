@@ -22450,11 +22450,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ActionButt
   <div
     className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
   >
-    <div
-      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
-    >
-      I'm sorry, Dave. I'm afraid I can't do that.
-    </div>
     <button
       className="btn btn-primary"
       disabled={true}
@@ -22469,6 +22464,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ActionButt
     >
       Go in through the emergency air lock
     </button>
+    <div
+      className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
+    >
+      I'm sorry, Dave. I'm afraid I can't do that.
+    </div>
   </div>
 </div>
 `;
@@ -23968,98 +23968,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
     />
   </div>
 </div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Menu Menu 1`] = `
-Array [
-  <h1>
-    Menu
-  </h1>,
-  <p
-    className="text-muted"
-  >
-    Presents a grouped list of links or buttons
-  </p>,
-  <div
-    className="h-100 pb-5 bg-light-shade overflow-scroll"
-  >
-    <nav
-      className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
-      style={
-        Object {
-          "maxWidth": "1440px",
-        }
-      }
-    >
-      <div
-        className="flex-fill text-center"
-      >
-        <h2
-          className="fw-normal"
-        >
-          Group 1
-        </h2>
-        <div
-          className="d-flex flex-column gap-3"
-        >
-          <a
-            className="btn btn-secondary rounded-pill"
-            href="#some/route"
-          >
-            Link 1
-          </a>
-          <a
-            className="btn btn-secondary rounded-pill"
-            href="#some/route"
-          >
-            Link 2
-          </a>
-        </div>
-      </div>
-      <div
-        className="flex-fill text-center"
-      >
-        <h2
-          className="fw-normal"
-        >
-          Group 2
-        </h2>
-        <div
-          className="d-flex flex-column gap-3"
-        >
-          <a
-            className="btn btn-secondary rounded-pill"
-            href="#some/route"
-          >
-            Link 3
-          </a>
-          <button
-            className="btn btn-secondary rounded-pill"
-            onClick={[Function]}
-          >
-            Button 4
-          </button>
-        </div>
-      </div>
-    </nav>
-  </div>,
-  <p />,
-  <p
-    className="text-muted"
-  >
-    For an example with more context see:
-  </p>,
-  <p
-    className="text-muted"
-  >
-    <button
-      className="btn btn-light btn-sm"
-      onClick={[Function]}
-    >
-      Wireframes &gt; Menu
-    </button>
-  </p>,
-]
 `;
 
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ProgressInfo Options 1`] = `
@@ -40457,6 +40365,102 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Text
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Menu Menu 1`] = `
+Array [
+  <h1>
+    Menu
+  </h1>,
+  <p
+    className="text-muted"
+  >
+    Presents a grouped list of links or buttons
+  </p>,
+  <div
+    className="position-relative"
+  >
+    <div
+      className="ui-menu h-100 pb-5 bg-light-shade overflow-scroll"
+    >
+      <nav
+        className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
+        style={
+          Object {
+            "maxWidth": "1440px",
+          }
+        }
+      >
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Group 1
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Link 1
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Link 2
+            </a>
+          </div>
+        </div>
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Group 2
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              href="#some/route"
+            >
+              Link 3
+            </a>
+            <button
+              className="btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              Button 4
+            </button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>,
+  <p />,
+  <p
+    className="text-muted"
+  >
+    For an example with more context see:
+  </p>,
+  <p
+    className="text-muted"
+  >
+    <button
+      className="btn btn-light btn-sm"
+      onClick={[Function]}
+    >
+      Wireframes &gt; Menu
+    </button>
+  </p>,
+]
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Counter Examples 1`] = `
 <div>
   <h1>
@@ -40475,6 +40479,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40501,11 +40510,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -40541,6 +40556,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40567,11 +40587,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -40607,6 +40633,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40633,11 +40664,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -40673,6 +40710,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40699,11 +40741,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -40739,6 +40787,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40765,11 +40818,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -40805,6 +40864,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40831,11 +40895,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -40884,6 +40954,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40907,11 +40982,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
         className="navbar-brand me-0 fw-bold"
       />
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <svg
             style={
@@ -40939,6 +41020,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -40964,11 +41050,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -41009,6 +41101,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="border border-primary"
@@ -41034,11 +41131,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -41079,6 +41182,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -41104,11 +41212,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute"
@@ -41149,6 +41263,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link"
@@ -41174,11 +41293,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <div
             className="cart-badge position-absolute cart-badge--with-conflict"
@@ -41219,6 +41344,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Navb
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -41245,11 +41375,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Navb
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -41300,6 +41436,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       >
         <div
           className="navbar-nav"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
           <a
             className="nav-item nav-link"
@@ -41325,11 +41466,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
           leihs
         </a>
         <div
-          className="navbar-nav"
+          className="navbar-nav flex-row-reverse"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
           <a
             className="nav-item nav-link position-relative"
             href="/app/borrow/order"
+            role="button"
           >
             <div
               className="cart-badge position-absolute"
@@ -41415,6 +41562,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       >
         <div
           className="navbar-nav"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
           <a
             className="nav-item nav-link"
@@ -41440,11 +41592,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
           leihs
         </a>
         <div
-          className="navbar-nav"
+          className="navbar-nav flex-row-reverse"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
           <a
             className="nav-item nav-link position-relative"
             href="/app/borrow/order"
+            role="button"
           >
             <div
               className="cart-badge position-absolute"
@@ -41557,6 +41715,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       >
         <div
           className="navbar-nav"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
           <a
             className="nav-item nav-link"
@@ -41582,11 +41745,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
           leihs
         </a>
         <div
-          className="navbar-nav"
+          className="navbar-nav flex-row-reverse"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
           <a
             className="nav-item nav-link position-relative"
             href="/app/borrow/order"
+            role="button"
           >
             <div
               className="cart-badge position-absolute"
@@ -41849,6 +42018,254 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutM
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/ProfileMenu ProfileMenu 1`] = `
+Array [
+  <h1>
+    ProfileMenu
+  </h1>,
+  <div
+    className="position-relative"
+  >
+    <div
+      className="ui-profile-menu h-100 overflow-scroll bg-light-shade"
+    >
+      <div
+        className="page-inset-x py-4 container-fluid"
+        style={
+          Object {
+            "maxWidth": "720px",
+          }
+        }
+      >
+        <h1
+          className="text-center mb-4"
+        >
+          Profil wechseln
+        </h1>
+        <div
+          className="d-flex flex-column gap-3"
+        >
+          <button
+            className="btn d-flex align-items-top btn-outline-dark"
+            onClick={[Function]}
+          >
+            <div
+              className="text-start"
+              style={
+                Object {
+                  "flex": "2.4rem 0 0",
+                }
+              }
+            >
+              <div
+                className="d-inline-block text-center fw-normal position-relative"
+              >
+                AB
+              </div>
+            </div>
+            <div
+              className="text-start"
+            >
+              Anna Beispiel (persönlich)
+            </div>
+          </button>
+          <button
+            className="btn d-flex align-items-top btn-outline-dark"
+            onClick={[Function]}
+          >
+            <div
+              className="text-start"
+              style={
+                Object {
+                  "flex": "2.4rem 0 0",
+                }
+              }
+            >
+              <div
+                className="d-inline-block text-center fw-normal position-relative"
+              >
+                P1
+              </div>
+            </div>
+            <div
+              className="text-start"
+            >
+              Projektteam 1
+            </div>
+          </button>
+          <button
+            className="btn d-flex align-items-top btn-dark"
+            onClick={[Function]}
+          >
+            <div
+              className="text-start"
+              style={
+                Object {
+                  "flex": "2.4rem 0 0",
+                }
+              }
+            >
+              <div
+                className="d-inline-block text-center fw-normal position-relative"
+              >
+                P2
+              </div>
+            </div>
+            <div
+              className="text-start"
+            >
+              Projektteam 2
+            </div>
+          </button>
+          <div
+            className="py-3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+  <p />,
+  <p
+    className="text-muted"
+  >
+    For an example with more context see:
+  </p>,
+  <p
+    className="text-muted"
+  >
+    <button
+      className="btn btn-light btn-sm"
+      onClick={[Function]}
+    >
+      Wireframes &gt; Profile Switch
+    </button>
+  </p>,
+]
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/ProfileMenu Waiting State 1`] = `
+Array [
+  <h1>
+    ProfileMenu - Waiting state
+  </h1>,
+  <div
+    className="position-relative"
+  >
+    <div
+      className="ui-profile-menu h-100 overflow-scroll bg-light-shade"
+    >
+      <div
+        className="page-inset-x py-4 container-fluid"
+        style={
+          Object {
+            "maxWidth": "720px",
+          }
+        }
+      >
+        <h1
+          className="text-center mb-4"
+        >
+          Profil wechseln
+        </h1>
+        <div
+          className="d-flex flex-column gap-3"
+        >
+          <button
+            className="btn d-flex align-items-top btn-outline-dark"
+            onClick={[Function]}
+          >
+            <div
+              className="text-start"
+              style={
+                Object {
+                  "flex": "2.4rem 0 0",
+                }
+              }
+            >
+              <div
+                className="d-inline-block text-center fw-normal position-relative"
+              >
+                AB
+                <span
+                  aria-hidden={true}
+                  className="spinner-border spinner-border-sm position-absolute"
+                  role="status"
+                  style={
+                    Object {
+                      "height": "1.6rem",
+                      "left": "-0.2rem",
+                      "opacity": "1",
+                      "top": "-0.1rem",
+                      "width": "1.6rem",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="text-start"
+            >
+              Anna Beispiel (persönlich)
+            </div>
+          </button>
+          <button
+            className="btn d-flex align-items-top btn-outline-dark"
+            onClick={[Function]}
+          >
+            <div
+              className="text-start"
+              style={
+                Object {
+                  "flex": "2.4rem 0 0",
+                }
+              }
+            >
+              <div
+                className="d-inline-block text-center fw-normal position-relative"
+              >
+                P1
+              </div>
+            </div>
+            <div
+              className="text-start"
+            >
+              Projektteam 1
+            </div>
+          </button>
+          <button
+            className="btn d-flex align-items-top btn-dark"
+            onClick={[Function]}
+          >
+            <div
+              className="text-start"
+              style={
+                Object {
+                  "flex": "2.4rem 0 0",
+                }
+              }
+            >
+              <div
+                className="d-inline-block text-center fw-normal position-relative"
+              >
+                P2
+              </div>
+            </div>
+            <div
+              className="text-start"
+            >
+              Projektteam 2
+            </div>
+          </button>
+          <div
+            className="py-3"
+          />
+        </div>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Stack Divided 1`] = `
 <div>
   <h1>
@@ -42100,6 +42517,11 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -42125,11 +42547,17 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -42196,6 +42624,11 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -42221,11 +42654,17 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -42308,6 +42747,11 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -42333,11 +42777,17 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -44589,6 +45039,11 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -44614,11 +45069,17 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/UserProfilePag
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -45492,6 +45953,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -45517,11 +45983,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -45754,6 +46226,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -45779,11 +46256,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -46067,6 +46550,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -46092,11 +46580,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -46252,6 +46746,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Detail
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -46277,11 +46776,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Detail
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -46906,6 +47411,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Liste 
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -46931,11 +47441,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Liste 
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -49330,6 +49846,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
     >
       <div
         className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           aria-controls="menu"
@@ -49359,11 +49880,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
         Leihs
       </a>
       <div
-        className="navbar-nav"
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
       >
         <a
           className="nav-item nav-link position-relative"
           href="/app/borrow/order"
+          role="button"
         >
           <svg
             style={
@@ -49378,7 +49905,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
       </div>
     </nav>
     <div
-      className="h-100 pb-5 bg-light-shade overflow-scroll d-none"
+      className="ui-menu h-100 pb-5 bg-light-shade overflow-scroll d-none"
       id="menu"
     >
       <nav
@@ -49524,6 +50051,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -49549,11 +50081,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -49833,6 +50371,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -49858,11 +50401,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -50177,6 +50726,248 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Show Show 1
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Switch 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <div
+    className="ui-main-menu-wrapper sticky-top"
+    style={
+      Object {
+        "height": "100%",
+      }
+    }
+  >
+    <nav
+      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+    >
+      <div
+        className="navbar-nav"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
+      >
+        <a
+          aria-controls="menu"
+          aria-expanded={false}
+          className="nav-item nav-link"
+          onClick={[Function]}
+          role="button"
+        >
+          <span
+            className="ui-icon ui-menu-icon"
+          >
+            <svg
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Menu Icon.svg
+            </svg>
+          </span>
+        </a>
+      </div>
+      <a
+        className="navbar-brand me-0 fw-bold"
+        onClick={[Function]}
+        role="button"
+      >
+        Leihs
+      </a>
+      <div
+        className="navbar-nav flex-row-reverse"
+        style={
+          Object {
+            "width": "74px",
+          }
+        }
+      >
+        <a
+          className="nav-item nav-link position-relative"
+          onClick={[Function]}
+          role="button"
+        >
+          <div
+            className="cart-badge position-absolute"
+            style={
+              Object {
+                "right": "-8px",
+                "top": "4px",
+              }
+            }
+          >
+            <span>
+              0
+            </span>
+          </div>
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Bag Icon.svg
+          </svg>
+        </a>
+        <div
+          className="nav-item mt-1"
+          style={
+            Object {
+              "width": "48px",
+            }
+          }
+        >
+          <a
+            aria-controls="profile-menu"
+            aria-expanded={false}
+            className="ui-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+            onClick={[Function]}
+            role="button"
+            style={
+              Object {
+                "height": "24px",
+                "marginTop": "3px",
+                "minWidth": "36px",
+                "padding": "1px 4px 0 4px",
+              }
+            }
+          >
+            AB
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div
+      className="ui-menu h-100 pb-5 bg-light-shade overflow-scroll d-none"
+      id="menu"
+    >
+      <nav
+        className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
+        style={
+          Object {
+            "maxWidth": "1440px",
+          }
+        }
+      >
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Ausleihen
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              ...
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              ...
+            </a>
+          </div>
+        </div>
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Benutzerdaten
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              ...
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              ...
+            </a>
+          </div>
+        </div>
+        <div
+          className="flex-fill text-center"
+        >
+          <h2
+            className="fw-normal"
+          >
+            Leihs
+          </h2>
+          <div
+            className="d-flex flex-column gap-3"
+          >
+            <a
+              className="btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              ...
+            </a>
+            <a
+              className="btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              ...
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <p
+      className="text-muted"
+    >
+      Interactive story which shows how to switch the profile.
+    </p>
+    <p
+      className="text-muted pt-5"
+    >
+      More stories about 
+      <code>
+        \`ProfileMenu\`
+      </code>
+      :
+    </p>
+    <p
+      className="text-muted"
+    >
+      <button
+        className="btn btn-light btn-sm"
+        onClick={[Function]}
+      >
+        Design Components &gt; Layout &gt; ProfileMenu
+      </button>
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Cart Constraints Cart Constraints 1`] = `
 <div
   className="pb-5"
@@ -50262,6 +51053,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Keine Gegenstä
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -50287,11 +51083,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Keine Gegenstä
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"
@@ -50361,6 +51163,11 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Warenkorb Waren
   >
     <div
       className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link"
@@ -50386,11 +51193,17 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Warenkorb Waren
       Leihs
     </a>
     <div
-      className="navbar-nav"
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
     >
       <a
         className="nav-item nav-link position-relative"
         href="/app/borrow/order"
+        role="button"
       >
         <div
           className="cart-badge position-absolute"

@@ -4,7 +4,10 @@ import cx from 'classnames'
 
 export default function Menu({ show = true, children, className, ...restProps }) {
   return (
-    <div className={cx('h-100 pb-5 bg-light-shade overflow-scroll', { 'd-none': !show }, className)} {...restProps}>
+    <div
+      className={cx('ui-menu h-100 pb-5 bg-light-shade overflow-scroll', { 'd-none': !show }, className)}
+      {...restProps}
+    >
       <nav
         className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
         style={{ maxWidth: '1440px' }}

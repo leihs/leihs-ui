@@ -30,6 +30,7 @@ const locales = { de: DateFnsLocaleDE, en: DateFnsLocaleEN }
 
 const OrderPanel = ({
   modelData,
+  profileName,
   //
   now,
   maxDateTotal,
@@ -46,11 +47,6 @@ const OrderPanel = ({
   inventoryPools,
   initialInventoryPoolId,
   onInventoryPoolChange = noop,
-  //
-  userDelegations,
-  initialUserDelegationId,
-  userDelegationCanBeChanged = true,
-  onUserDelegationChange = noop,
   //
   onValidate = noop,
   onSubmit = noop,
@@ -69,8 +65,6 @@ const OrderPanel = ({
   const [selectedPoolId, setSelectedPoolId] = useState(
     initialInventoryPoolId || f.get(inventoryPools, '0.id') || 'NO_POOLS'
   )
-  const [selectedUserDelegationId, setSelectedUserDelegationId] = useState(initialUserDelegationId)
-
   const [selectedRange, setSelectedRange] = useState({
     startDate: initialStartDate ? startOfDay(initialStartDate) : today,
     endDate: initialEndDate ? startOfDay(initialEndDate) : addDays(today, 1)
@@ -127,18 +121,7 @@ const OrderPanel = ({
 
     onValidate(validationResult.isValid)
     // eslint-disable-next-line react-hooks/exhaustive-deps -- FIXME: look into this, its either a real problem or a linter bug
-  }, [
-    quantity,
-    selectedPoolId,
-    selectedUserDelegationId,
-    selectedRange,
-    modelData,
-    maxDateTotal,
-    maxDateLoaded,
-    inventoryPools,
-    userDelegations,
-    locale
-  ])
+  }, [quantity, selectedPoolId, selectedRange, modelData, maxDateTotal, maxDateLoaded, inventoryPools, locale])
 
   // Validation
   function validate(selectedPool, poolAvailability) {
@@ -182,12 +165,6 @@ const OrderPanel = ({
     onInventoryPoolChange(stateForCallbacks())
   }
 
-  function changeUserDelegation(e) {
-    const id = e.target.value
-    setSelectedUserDelegationId(id)
-    onUserDelegationChange(stateForCallbacks())
-  }
-
   function changeDateRange(range) {
     setSelectedRange(range)
     onDatesChange(stateForCallbacks())
@@ -197,8 +174,7 @@ const OrderPanel = ({
     startDate: selectedRange.startDate,
     endDate: selectedRange.endDate,
     quantity,
-    poolId: selectedPoolId,
-    delegationId: selectedUserDelegationId
+    poolId: selectedPoolId
   })
 
   function changeShownDate(newDate) {
@@ -218,6 +194,11 @@ const OrderPanel = ({
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
       <Stack space="4">
         <Section>{modelData.name}</Section>
+        {profileName && (
+          <Section title={t(label, 'user-delegation', locale)} collapsible>
+            {profileName}
+          </Section>
+        )}
         <Section title={t(label, 'quantity', locale)} collapsible>
           <label htmlFor="quantity" className="visually-hidden">
             {t(label, 'quantity', locale)}
@@ -252,32 +233,6 @@ const OrderPanel = ({
           </select>
           {validationResult.poolError && <Warning className="mt-2">{validationResult.poolError}</Warning>}
         </Section>
-        {userDelegations && userDelegations.length > 1 && (
-          <Section title={t(label, 'user-delegation', locale)} collapsible>
-            <label htmlFor="user-delegation-id" className="visually-hidden">
-              {t(label, 'user-delegation', locale)}
-            </label>
-            <select
-              name="user-delegation-id"
-              id="user-delegation-id"
-              value={selectedUserDelegationId}
-              onChange={changeUserDelegation}
-              className="form-select"
-              disabled={!userDelegationCanBeChanged}
-            >
-              {userDelegations.map(({ id, name }) => (
-                <option key={id} value={id}>
-                  {name}
-                </option>
-              ))}
-            </select>
-            {!userDelegationCanBeChanged && (
-              <div className="text-muted fw-light mt-1">
-                {t(txt.validate, 'user-delegation-cant-be-changed-active-cart', locale)}
-              </div>
-            )}
-          </Section>
-        )}
         {!validationResult.poolError && (
           <Let title={t(label, 'timespan', locale)}>
             {({ title }) => (

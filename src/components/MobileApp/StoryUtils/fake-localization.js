@@ -41,10 +41,6 @@ export const orderPanelTexts = {
     'no-pool-access': { 'de-CH': 'Keine Berechtigung für diesen Inventarpark' },
     'pool-suspension': { 'de-CH': 'Sperre für diesen Inventarpark' },
     'item-not-available-in-pool': { 'de-CH': 'Gegenstand in diesem Inventarpark nicht verfügbar' },
-    'unknown-pool': { 'de-CH': 'Unbekannter Inventarpark' },
-
-    'user-delegation-cant-be-changed-active-cart': {
-      'de-CH': 'Delegation kann nicht gewechselt werden, weil schon andere Reservationen vorhanden sind.'
-    }
+    'unknown-pool': { 'de-CH': 'Unbekannter Inventarpark' }
   }
 }

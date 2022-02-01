@@ -25,6 +25,8 @@ const modelDataPropType = PropTypes.shape({
 const OrderPanelPropTypes = {
   /** availabilty and visits info from API */
   modelData: modelDataPropType.isRequired,
+  /** Current profile (user personal or delegation) */
+  profileName: PropTypes.string,
 
   /** earliest date that can be selected or navigated to, defaults to today */
   minDateTotal: PropTypes.instanceOf(Date),
@@ -61,21 +63,6 @@ const OrderPanelPropTypes = {
   initialInventoryPoolId: PropTypes.string,
   /** callback, when selected pool changes */
   onInventoryPoolChange: PropTypes.func,
-
-  /** list of user delegations for selecting */
-
-  userDelegations: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
-    }).isRequired
-  ),
-  /** initially selected user delegation */
-  initialUserDelegationId: PropTypes.string,
-  /** set if user delegation can be changed or not */
-  userDelegationCanBeChanged: PropTypes.bool,
-  /** callback, when selected user delegation changes */
-  onUserDelegationChange: PropTypes.func,
 
   /** callback, submits user selection. arguments: `{startDate, endDate, quantity, poolId}` */
   onSubmit: PropTypes.func.isRequired,

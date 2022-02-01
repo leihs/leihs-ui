@@ -23,8 +23,6 @@ export const withAllArguments = () => {
     modelData,
     inventoryPools,
     initialInventoryPoolId,
-    userDelegations,
-    initialUserDelegation,
     minDateLoaded,
     maxDateLoaded,
     spec
@@ -51,11 +49,6 @@ export const withAllArguments = () => {
           inventoryPools={inventoryPools}
           initialInventoryPoolId={initialInventoryPoolId}
           onInventoryPoolChange={action('pool-change')}
-          //
-          userDelegations={userDelegations}
-          initialUserDelegation={initialUserDelegation}
-          userDelegationCanBeChanged={false}
-          onUserDelegationChange={action('user-delegation-change')}
           //
           onSubmit={action('submit')}
           onValidate={setIsValid}

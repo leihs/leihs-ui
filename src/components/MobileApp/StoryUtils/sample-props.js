@@ -97,17 +97,16 @@ export function getOrderPanelMockData() {
     })
   const inventoryPools = f.map(modelData.availability, 'inventoryPool')
   const userDelegations = [
-    { id: '2216bad8-36d3-4719-9d1e-a9c26d23045c', name: 'Normin Normalo' },
+    { id: '2216bad8-36d3-4719-9d1e-a9c26d23045c', name: 'Normin Normalo (persönlich)' },
     { id: '879280bd-3840-48dd-bae4-7fb121ca446a', type: 'delegation', name: 'Movie Production Team' },
     { id: '30d1f5a3-1402-406c-8d36-0b400c5a83f0', type: 'delegation', name: 'Teaching Photography' }
   ]
 
   return {
     modelData,
+    profileName: userDelegations[0],
     inventoryPools,
     initialInventoryPoolId: inventoryPools[0].id,
-    userDelegations,
-    initialUserDelegationId: userDelegations[0].id,
     minDateLoaded: parseISO(f.get(f.first(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     maxDateLoaded: parseISO(f.get(f.last(f.get(apiData, 'models.edges.0.node.availability.0.dates')), 'date')),
     spec

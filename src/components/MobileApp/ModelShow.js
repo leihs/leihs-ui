@@ -10,10 +10,19 @@ import DownloadLink from './DesignComponents/DownloadLink'
 import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 import SquareImage from './DesignComponents/SquareImage'
 import PropertyTable from './DesignComponents/PropertyTable'
+import Warning from './DesignComponents/Warning'
 
 const noop = () => {}
 
-export default function ModelShow({ model, onOrderClick = noop, onClickFavorite = noop, t }) {
+export default function ModelShow({
+  model,
+  onOrderClick = noop,
+  onClickFavorite = noop,
+  t,
+  isAddButtonEnabled,
+  isFavoriteButtonEnabled,
+  buttonInfo
+}) {
   const [imageIndex, setImageIndex] = useState(0)
 
   function addToFavoritesClick() {
@@ -68,7 +77,7 @@ export default function ModelShow({ model, onOrderClick = noop, onClickFavorite 
 
       <Stack space="5">
         <ActionButtonGroup>
-          <button type="button" className="btn btn-primary" onClick={onOrderClick}>
+          <button type="button" className="btn btn-primary" onClick={onOrderClick} disabled={!isAddButtonEnabled}>
             {t.addItemToCart}
           </button>
           {model.isFavorited ? (
@@ -76,10 +85,16 @@ export default function ModelShow({ model, onOrderClick = noop, onClickFavorite 
               {t.removeFromFavorites}
             </button>
           ) : (
-            <button type="button" className="btn btn-secondary" onClick={addToFavoritesClick}>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={addToFavoritesClick}
+              disabled={!isFavoriteButtonEnabled}
+            >
               {t.addToFavorites}
             </button>
           )}
+          {buttonInfo && <Warning>{buttonInfo}</Warning>}
         </ActionButtonGroup>
 
         {model.description && (
@@ -217,5 +232,11 @@ ModelShow.propTypes = {
     addItemToCart: PropTypes.string.isRequired,
     removeFromFavorites: PropTypes.string.isRequired,
     addToFavorites: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  /** is "add" enabled? */
+  isAddButtonEnabled: PropTypes.bool,
+  /** is "add to favorites" enabled? */
+  isFavoriteButtonEnabled: PropTypes.bool,
+  /** info why buttons are disabled */
+  buttonInfo: PropTypes.string
 }

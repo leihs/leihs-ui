@@ -3,7 +3,7 @@ import React from 'react'
 import Menu from './Menu'
 
 export default {
-  title: 'MobileApp/Design Components/Content/Menu',
+  title: 'MobileApp/Design Components/Layout/Menu',
   component: Menu
 }
 
@@ -12,16 +12,18 @@ export function menu() {
     <>
       <h1>Menu</h1>
       <p className="text-muted">Presents a grouped list of links or buttons</p>
-      <Menu>
-        <Menu.Group title="Group 1">
-          <Menu.Link href="#some/route">Link 1</Menu.Link>
-          <Menu.Link href="#some/route">Link 2</Menu.Link>
-        </Menu.Group>
-        <Menu.Group title="Group 2">
-          <Menu.Link href="#some/route">Link 3</Menu.Link>
-          <Menu.Button onClick={() => alert('Button 4 was clicked')}>Button 4</Menu.Button>
-        </Menu.Group>
-      </Menu>
+      <div className="position-relative">
+        <Menu>
+          <Menu.Group title="Group 1">
+            <Menu.Link href="#some/route">Link 1</Menu.Link>
+            <Menu.Link href="#some/route">Link 2</Menu.Link>
+          </Menu.Group>
+          <Menu.Group title="Group 2">
+            <Menu.Link href="#some/route">Link 3</Menu.Link>
+            <Menu.Button onClick={() => alert('Button 4 was clicked')}>Button 4</Menu.Button>
+          </Menu.Group>
+        </Menu>
+      </div>
       <p></p>
       <p className="text-muted">For an example with more context see:</p>
       <p className="text-muted">
