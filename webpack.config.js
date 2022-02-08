@@ -5,7 +5,9 @@ const createReactAppConfig = createReactAppConfigFactory(
   process.env['NODE_ENV'] === 'production' ? 'production' : 'development'
 )
 
-// NOTE: export 2 configs: 1 with and 1 without react included (conditional export by using a function did not work as documented!)
+// NOTE: export 2 configs:
+// * server-side library, for usage in nodejs, with bundled React
+// * client-side library, for importing into browser code, without bundled React (the consuming app provides the correct version)
 
 const baseConfig = Object.assign({}, createReactAppConfig, {
   output: Object.assign({}, createReactAppConfig.output, {
@@ -53,21 +55,31 @@ const externalsConfig = {
 }
 
 module.exports = [
-  // all the bundles
+  // all the bundles, server-side
   {
     ...baseConfig,
+    target: 'node',
     entry: {
       main: './src/.emptyDummy.js', // ignored, but must be present so CRA works…
-      'leihs-ui-client-side': './src/client-side.js',
       'leihs-ui-server-side': './src/server-side.js'
+    }
+  },
+  // all the bundles, client-side
+  {
+    ...baseConfig,
+    target: 'web',
+    entry: {
+      main: './src/.emptyDummy.js', // ignored, but must be present so CRA works…
+      'leihs-ui-client-side': './src/client-side.js'
     }
   },
   // all the bundles, with external react
   {
     ...baseConfig,
+    target: 'web', // its the default, but just to be explicit…
     entry: {
       main: './src/.emptyDummy.js', // ignored, but must be present so CRA works…
-      'leihs-ui-client-side-external-react': './src/client-side.js',
+      'leihs-ui-client-side-external-react': './src/client-side.js'
     },
     ...externalsConfig
   },
@@ -81,8 +93,8 @@ module.exports = [
       path: path.resolve(__dirname, 'dist'),
       filename: 'ui-components/index.js',
       // library: "LeihsUI",
-      libraryExport: "default",
-      libraryTarget: 'umd',
+      libraryExport: 'default',
+      libraryTarget: 'umd'
     }),
     ...externalsConfig
   }

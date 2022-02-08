@@ -1,5 +1,3 @@
-import '@babel/polyfill'
-
 import React from 'react'
 import ReactDOMServer from 'react-dom/server'
 import assert from 'assert'

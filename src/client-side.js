@@ -1,3 +1,9 @@
+// polyfills
+import 'core-js/es/map'
+import 'core-js/es/set'
+import 'raf/polyfill'
+
+// regaular dependencies
 import React from 'react'
 import ReactDOM from 'react-dom'
 
