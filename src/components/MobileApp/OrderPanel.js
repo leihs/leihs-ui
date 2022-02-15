@@ -126,6 +126,7 @@ const OrderPanel = ({
     })
 
     onValidate(validationResult.isValid)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- FIXME: look into this, its either a real problem or a linter bug
   }, [
     quantity,
     selectedPoolId,
@@ -210,14 +211,8 @@ const OrderPanel = ({
   if (!dependentState) {
     return null
   }
-  const {
-    selectablePools,
-    disabledDates,
-    disabledStartDates,
-    disabledEndDates,
-    minDate,
-    validationResult
-  } = dependentState
+  const { selectablePools, disabledDates, disabledStartDates, disabledEndDates, minDate, validationResult } =
+    dependentState
 
   return (
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">

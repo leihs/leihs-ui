@@ -12,56 +12,58 @@ export default {
   component: DatePicker
 }
 
-// eslint-disable-next-line react/display-name
-const makeBaseStory = ({ initialValue, onlyFuture, wasValidated, ...props }) => () => {
-  const [selectedDate, setSelectedDate] = useState(initialValue)
-  //
-  const onChange = event => {
-    setSelectedDate(event.target.value)
+const makeBaseStory =
+  ({ initialValue, onlyFuture, wasValidated, ...props }) =>
+  // eslint-disable-next-line react/display-name
+  () => {
+    const [selectedDate, setSelectedDate] = useState(initialValue)
+    //
+    const onChange = event => {
+      setSelectedDate(event.target.value)
+    }
+
+    return (
+      <div>
+        <div className={cx('form-group', { 'was-validated': wasValidated })}>
+          <label>{'Input to simulate "app state" for Controlled Input'}</label>
+
+          <input
+            type="text"
+            required
+            value={selectedDate}
+            onChange={onChange}
+            className="form-control"
+            months={1}
+            {...props}
+          />
+
+          <small className="form-text text-muted">
+            selected date: <samp>{JSON.stringify(selectedDate)}</samp>
+          </small>
+        </div>
+
+        <div className={cx('form-group', { 'was-validated': wasValidated })}>
+          <label>DatePicker (Controlled Input)</label>
+
+          <DatePicker
+            required
+            value={selectedDate}
+            onChange={onChange}
+            className="m-auto"
+            displayMode="date"
+            showPreview={false}
+            months={1}
+            minDate={onlyFuture ? 'now' : null}
+            {...props}
+          />
+
+          <small className="form-text text-muted">
+            selected date: <samp>{JSON.stringify(selectedDate)}</samp>
+          </small>
+        </div>
+      </div>
+    )
   }
-
-  return (
-    <div>
-      <div className={cx('form-group', { 'was-validated': wasValidated })}>
-        <label>{'Input to simulate "app state" for Controlled Input'}</label>
-
-        <input
-          type="text"
-          required
-          value={selectedDate}
-          onChange={onChange}
-          className="form-control"
-          months={1}
-          {...props}
-        />
-
-        <small className="form-text text-muted">
-          selected date: <samp>{JSON.stringify(selectedDate)}</samp>
-        </small>
-      </div>
-
-      <div className={cx('form-group', { 'was-validated': wasValidated })}>
-        <label>DatePicker (Controlled Input)</label>
-
-        <DatePicker
-          required
-          value={selectedDate}
-          onChange={onChange}
-          className="m-auto"
-          displayMode="date"
-          showPreview={false}
-          months={1}
-          minDate={onlyFuture ? 'now' : null}
-          {...props}
-        />
-
-        <small className="form-text text-muted">
-          selected date: <samp>{JSON.stringify(selectedDate)}</samp>
-        </small>
-      </div>
-    </div>
-  )
-}
 
 export const datepicker_future_no_value = makeBaseStory({ initialValue: undefined, onlyFuture: true })
 datepicker_future_no_value.storyName = 'Datepicker, no initial value, only future dates'

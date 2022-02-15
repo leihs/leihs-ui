@@ -70,14 +70,15 @@
     "@storybook/addons": "^6.3.3",
     "@storybook/preset-create-react-app": "^3.2.0",
     "@storybook/react": "^6.3.3",
-    "@zeit/ncc": "^0.22.3",
-    "core-js": "^3.14.0",
-    "eslint": "^5.16.0",
-    "eslint-config-prettier": "^2.7.0",
-    "eslint-config-react-app": "^3.0.8",
-    "eslint-plugin-prettier": "^2.6.2",
+    "@vercel/ncc": "^0.33.3",
+    "babel-eslint": "^9.0.0",
+    "core-js": "^3.21.0",
+    "eslint": "^8.9.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-config-react-app": "^7.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
     "mockdate": "^2.0.5",
-    "prettier": "^1.19.1",
+    "prettier": "^2.5.1",
     "prettier-eslint": "^8.8.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -92,7 +93,7 @@
     "semi": false,
     "trailingComma": "none",
     "bracketSpacing": true,
-    "jsxBracketSameLine": false
+    "arrowParens": "avoid"
   },
   "eslintConfig": {
     "plugins": [
@@ -103,13 +104,16 @@
       "react-app",
       "eslint:recommended",
       "prettier",
-      "prettier/react",
-      "prettier/standard",
       "plugin:react/recommended"
+    ],
+    "ignorePatterns": [
+      "src/static/**",
+      "src/theme/**",
+      "src/theme-mobile/**"
     ],
     "rules": {
       "prettier/prettier": [
-        "error"
+        "warn"
       ],
       "react/prop-types": "off"
     },
@@ -120,6 +124,15 @@
         ],
         "rules": {
           "react/prop-types": "error"
+        }
+      },
+      {
+        "files": [
+          "src/**/*.stories.js"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off",
+          "react-hooks/rules-of-hooks": "off"
         }
       }
     ]

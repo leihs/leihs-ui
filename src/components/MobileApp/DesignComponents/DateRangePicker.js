@@ -79,6 +79,7 @@ export default function DateRangePicker({
     endDateInput.current && (endDateInput.current.value = dateFormatter(selectedRange.endDate))
     setStartDateInvalid(false)
     setEndDateInvalid(false)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- FIXME: look into this, its either a real problem or a linter bug
   }, [selectedRange])
 
   function handleInputBlur(e) {

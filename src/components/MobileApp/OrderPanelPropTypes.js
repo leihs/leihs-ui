@@ -22,7 +22,7 @@ const modelDataPropType = PropTypes.shape({
   ).isRequired
 })
 
-export default {
+const OrderPanelPropTypes = {
   /** availabilty and visits info from API */
   modelData: modelDataPropType.isRequired,
 
@@ -85,3 +85,5 @@ export default {
   locale: PropTypes.string.isRequired,
   txt: PropTypes.object.isRequired
 }
+
+export default OrderPanelPropTypes

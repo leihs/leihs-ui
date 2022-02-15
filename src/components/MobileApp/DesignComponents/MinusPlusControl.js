@@ -26,6 +26,7 @@ export default function MinusPlusControl({
     if (!inputRef.current) return // (PATCH to prevent crash in DOM-less tests)
 
     update(value)
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- FIXME: look into this, its either a real problem or a linter bug
   }, [value, min, max])
 
   function update(value) {

@@ -67,6 +67,7 @@ export default function DatePicker({
       setValidDate(tryParseDate(value))
       updateValidationState(value)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- FIXME: look into this, its either a real problem or a linter bug
   }, [value])
 
   // Hide calendar on outside-click
