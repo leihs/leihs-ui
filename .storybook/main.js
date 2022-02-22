@@ -1,4 +1,5 @@
 module.exports = {
+  core: { builder: 'webpack5' },
   stories: [
     // "global" stories first,
     '../src/stories/*.stories.js',
