@@ -7,8 +7,6 @@
   "scripts": {
     "build": "webpack --config webpack/prod.config.js",
     "watch": "webpack --watch --config webpack/prod.config.js",
-    "postinstall": "npm run -S ensure-sass",
-    "ensure-sass": "echo '[!] trying to rebuild node-sass in case it is broken'; node -p \"require('node-sass').info\" &> /dev/null || npm rebuild node-sass",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -21,17 +19,17 @@
     "bootstrap": "^5.0.2"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.6",
-    "css-loader": "^5.2.6",
+    "autoprefixer": "^10.4.2",
+    "css-loader": "^6.6.0",
     "mini-css-extract-plugin": "^1.6.0",
-    "node-sass": "^6.0.0",
-    "postcss-loader": "^5.3.0",
+    "postcss-loader": "^6.2.1",
     "precss": "^4.0.0",
-    "sass-loader": "^12.0.0",
-    "style-loader": "^2.0.0",
+    "sass": "^1.49.8",
+    "sass-loader": "^12.6.0",
+    "style-loader": "^3.3.1",
     "url-loader": "^4.1.1",
-    "webpack": "^5.38.1",
-    "webpack-cli": "^4.7.0"
+    "webpack": "^5.68.0",
+    "webpack-cli": "^4.9.2"
   },
   "prettier": {
     "printWidth": 80,

@@ -64,7 +64,9 @@ details.list-unstyled {
     margin-bottom: map-get($spacers, 1) !important;
   }
   .form-control.form-control-plaintext {
-    @extend .form-control-plaintext.form-control-sm;
+    // https://sass-lang.com/documentation/breaking-changes/extend-compound
+    @extend .form-control-plaintext;
+    @extend .form-control-sm;
   }
   .form-control {
     @extend .form-control-sm;

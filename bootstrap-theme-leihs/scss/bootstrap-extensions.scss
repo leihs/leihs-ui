@@ -30,7 +30,9 @@
     margin-bottom: map-get($spacers, 1) !important;
   }
   .form-control.form-control-plaintext {
-    @extend .form-control-plaintext.form-control-sm;
+    // https://sass-lang.com/documentation/breaking-changes/extend-compound
+    @extend .form-control-plaintext;
+    @extend .form-control-sm;
   }
   .form-control {
     @extend .form-control-sm;
@@ -44,7 +46,7 @@
 // which only works on some possibly nested `<input/>`, making sibling of ancestors like
 // `.invalid-feedback` *impossible* to style otherwise).
 @mixin custom-control-form-validation-state-selector($state) {
-  @if ($state == "valid" or $state == "invalid") {
+  @if ($state == 'valid' or $state == 'invalid') {
     .was-validated .custom-control-mark-#{$state} #{if(&, "&", "")},
     #{if(&, "&", "")}.is-#{$state} {
       @content;
@@ -70,15 +72,16 @@
   }
 }
 
-
 // datepicker custom control
 .custom-datepicker {
-  .custom-datepicker-textinput, .custom-datepicker-calendar-container {
+  .custom-datepicker-textinput,
+  .custom-datepicker-calendar-container {
     // NOTE: from bootstrap's .form-control
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   & .custom-control-focussed {
-    .custom-datepicker-textinput, .custom-datepicker-calendar-container {
+    .custom-datepicker-textinput,
+    .custom-datepicker-calendar-container {
       border-color: $input-focus-border-color !important;
     }
     .custom-datepicker-textinput {
@@ -101,19 +104,23 @@
     }
   }
   .custom-datepicker-calendar-container {
-
     @include custom-control-form-validation-state-selector($state) {
       border-color: $color;
 
       & .custom-control-focussed {
-        .custom-datepicker-textinput, .custom-datepicker-calendar-container {
+        .custom-datepicker-textinput,
+        .custom-datepicker-calendar-container {
           border-color: $color;
-          box-shadow: 0 0 0 $input-focus-width rgba($color, .25);
+          box-shadow: 0 0 0 $input-focus-width rgba($color, 0.25);
         }
       }
     }
   }
 }
 @each $state, $data in $form-validation-states {
-  @include custom-datepicker-form-validation-state($state, map-get($data, color), map-get($data, icon));
+  @include custom-datepicker-form-validation-state(
+    $state,
+    map-get($data, color),
+    map-get($data, icon)
+  );
 }

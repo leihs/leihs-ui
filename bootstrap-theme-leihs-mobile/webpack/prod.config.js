@@ -10,6 +10,7 @@ module.exports = {
     filename: '[name].js'
   },
   devtool: 'source-map',
+  optimization: {},
   module: {
     rules: [
       {
@@ -21,7 +22,7 @@ module.exports = {
             loader: 'postcss-loader', // Run post css actions
             options: {
               postcssOptions: {
-                plugins: function() {
+                plugins: function () {
                   // post css plugins, can be exported to postcss.config.js
                   return [require('precss'), require('autoprefixer')]
                 }
@@ -32,18 +33,16 @@ module.exports = {
         ]
       },
 
-      // // plain css
-      // {
-      //   test: /\.css$/,
-      //   use: ['style-loader', 'css-loader']
-      // },
+      // plain css
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      },
 
       // fonts
       {
         test: /\.(woff|woff2)$/,
-        use: {
-          loader: 'url-loader'
-        }
+        type: 'asset/resource'
       },
 
       // images
