@@ -40390,7 +40390,7 @@ Array [
         }
       >
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -40401,21 +40401,27 @@ Array [
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Link 1
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Link 2
             </a>
+            <a
+              className="ui-menu-item ui-menu-item-selected btn btn-secondary rounded-pill border"
+              href="#some/route"
+            >
+              Link 3 - selected
+            </a>
           </div>
         </div>
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -40425,17 +40431,23 @@ Array [
           <div
             className="d-flex flex-column gap-3"
           >
-            <a
-              className="btn btn-secondary rounded-pill"
-              href="#some/route"
-            >
-              Link 3
-            </a>
             <button
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               Button 4
+            </button>
+            <button
+              className="ui-menu-item ui-menu-item-selected btn btn-secondary rounded-pill border"
+              onClick={[Function]}
+            >
+              Button 5 - selected
+            </button>
+            <button
+              className="ui-menu-item btn btn-secondary rounded-pill"
+              onClick={[Function]}
+            >
+              Button 6
             </button>
           </div>
         </div>
@@ -49917,7 +49929,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
         }
       >
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -49928,13 +49940,13 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Katalog
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Warenkorb
@@ -49942,7 +49954,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
           </div>
         </div>
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -49953,19 +49965,19 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Meine Bestellungen
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Benutzerkonto
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Abmelden
@@ -49973,7 +49985,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
           </div>
         </div>
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -49984,13 +49996,13 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Dokumentation
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Unterstützung
@@ -49998,7 +50010,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
           </div>
         </div>
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -50009,13 +50021,13 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Deutsch
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               href="#some/route"
             >
               English
@@ -50855,7 +50867,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Sw
         }
       >
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -50866,13 +50878,13 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Sw
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               ...
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               ...
@@ -50880,7 +50892,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Sw
           </div>
         </div>
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -50891,13 +50903,13 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Sw
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               ...
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               ...
@@ -50905,7 +50917,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Sw
           </div>
         </div>
         <div
-          className="flex-fill text-center"
+          className="ui-menu-group flex-fill text-center"
         >
           <h2
             className="fw-normal"
@@ -50916,13 +50928,13 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Sw
             className="d-flex flex-column gap-3"
           >
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               ...
             </a>
             <a
-              className="btn btn-secondary rounded-pill"
+              className="ui-menu-item btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               ...

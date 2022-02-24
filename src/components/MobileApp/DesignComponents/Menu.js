@@ -20,24 +20,42 @@ export default function Menu({ show = true, children, className, ...restProps })
 
 Menu.Group = function MenuGroup({ children, title, className, ...restProps }) {
   return (
-    <div className={cx('flex-fill text-center', className)} {...restProps}>
+    <div className={cx('ui-menu-group flex-fill text-center', className)} {...restProps}>
       {title && <h2 className="fw-normal">{title}</h2>}
       <div className="d-flex flex-column gap-3">{children}</div>
     </div>
   )
 }
 
-Menu.Link = function MenuLink({ children, className, ...restProps }) {
+Menu.Link = function MenuLink({ children, isSelected, className, ...restProps }) {
   return (
-    <a className={cx('btn btn-secondary rounded-pill', className)} {...restProps}>
+    <a
+      className={cx(
+        'ui-menu-item',
+        { 'ui-menu-item-selected': isSelected },
+        'btn btn-secondary rounded-pill',
+        { border: isSelected },
+        className
+      )}
+      {...restProps}
+    >
       {children}
     </a>
   )
 }
 
-Menu.Button = function MenuButton({ children, className, ...restProps }) {
+Menu.Button = function MenuButton({ children, isSelected, className, ...restProps }) {
   return (
-    <button className={cx('btn btn-secondary rounded-pill', className)} {...restProps}>
+    <button
+      className={cx(
+        'ui-menu-item',
+        { 'ui-menu-item-selected': isSelected },
+        'btn btn-secondary rounded-pill',
+        { border: isSelected },
+        className
+      )}
+      {...restProps}
+    >
       {children}
     </button>
   )

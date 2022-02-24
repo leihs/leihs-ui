@@ -17,10 +17,16 @@ export function menu() {
           <Menu.Group title="Group 1">
             <Menu.Link href="#some/route">Link 1</Menu.Link>
             <Menu.Link href="#some/route">Link 2</Menu.Link>
+            <Menu.Link href="#some/route" isSelected>
+              Link 3 - selected
+            </Menu.Link>
           </Menu.Group>
           <Menu.Group title="Group 2">
-            <Menu.Link href="#some/route">Link 3</Menu.Link>
             <Menu.Button onClick={() => alert('Button 4 was clicked')}>Button 4</Menu.Button>
+            <Menu.Button onClick={() => alert('Button 5 was clicked')} isSelected>
+              Button 5 - selected
+            </Menu.Button>
+            <Menu.Button onClick={() => alert('Button 6 was clicked')}>Button 6</Menu.Button>
           </Menu.Group>
         </Menu>
       </div>
