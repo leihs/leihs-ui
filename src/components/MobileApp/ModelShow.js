@@ -83,19 +83,19 @@ export default function ModelShow({ model, onOrderClick = noop, onClickFavorite 
         </ActionButtonGroup>
 
         {model.description && (
-          <Section title="Beschreibung" collapsible>
+          <Section title={t.description} collapsible>
             <div>{model.description}</div>
           </Section>
         )}
 
         {model.properties.length > 0 && (
-          <Section title="Eigenschaften" collapsible>
+          <Section title={t.properties} collapsible>
             <PropertyTable properties={model.properties} />
           </Section>
         )}
 
         {model.attachments.length > 0 && (
-          <Section title="Dokumente" collapsible>
+          <Section title={t.documents} collapsible>
             <Stack space="3">
               {model.attachments.map((attachment, i) => (
                 <div key={attachment.id}>
@@ -107,7 +107,7 @@ export default function ModelShow({ model, onOrderClick = noop, onClickFavorite 
         )}
 
         {model.recommends && model.recommends.edges && model.recommends.edges.length > 0 && (
-          <Section title="Ergänzende Gegenstände" collapsible>
+          <Section title={t.compatibles} collapsible>
             {getRecommendsGrid(model.recommends)}
           </Section>
         )}
@@ -210,6 +210,10 @@ ModelShow.propTypes = {
   orderPanelTmp: PropTypes.node,
   /** Translations */
   t: PropTypes.shape({
+    description: PropTypes.string.isRequired,
+    properties: PropTypes.string.isRequired,
+    documents: PropTypes.string.isRequired,
+    compatibles: PropTypes.string.isRequired,
     addItemToCart: PropTypes.string.isRequired,
     removeFromFavorites: PropTypes.string.isRequired,
     addToFavorites: PropTypes.string.isRequired

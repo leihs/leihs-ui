@@ -20,7 +20,11 @@ export const modelShow = ({ model, onClickFavorite, onOrderClick, orderPanelTmp 
         t={{
           addItemToCart: 'Gegenstand hinzufügen',
           addToFavorites: 'Zu Favoriten hinzufügen',
-          removeFromFavorites: 'Von Favoriten entfernen'
+          removeFromFavorites: 'Von Favoriten entfernen',
+          description: 'Beschreibung',
+          properties: 'Eigenschaften',
+          documents: 'Dokumente',
+          compatibles: 'Ergänzende Gegenstände'
         }}
       />
     </PageLayoutMock>
