@@ -98,3 +98,22 @@ The changes made to `package{-lock}.json` MUST not be checked in (this is a comp
 ```bash
 npm add -D ./test
 ```
+
+## Icons
+
+This repository also includes custom icons contained in `./static/borrow-app-icons`.
+
+| Icon Name       | designed by                               | based on                                        |
+| --------------- | ----------------------------------------- | ----------------------------------------------- |
+| Arrow Icon      | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Bag Icon        | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Calendar Cross  | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Calendar Icon   | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Cross Icon      | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Download Icon   | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Item Arrow      | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Menu Close Icon | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Menu Icon       | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Section Arrow   | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+| Slider Icon     | Max Albrecht <https://github.com/eins78>  | <https://icons.getbootstrap.com/icons/sliders/> |
+| Star Icon       | Joël Gähwiler <https://github.com/256dpi> |                                                 |

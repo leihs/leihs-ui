@@ -10,6 +10,7 @@ import { ReactComponent as IconMenuCloseSvg } from '../../../static/borrow-app-i
 import { ReactComponent as IconMenuSvg } from '../../../static/borrow-app-icons/Menu Icon.svg'
 import { ReactComponent as IconSectionArrowSvg } from '../../../static/borrow-app-icons/Section Arrow.svg'
 import { ReactComponent as IconStarSvg } from '../../../static/borrow-app-icons/Star Icon.svg'
+import { ReactComponent as IconFilterSvg } from '../../../static/borrow-app-icons/Sliders Icon.svg'
 
 export default function Icon({ icon, style, ...restProps }) {
   const styleInner = { display: 'inline', ...style }
@@ -28,6 +29,7 @@ export const iconMenuClose = props => <IconMenuCloseSvg {...props} />
 export const iconMenu = props => <IconMenuSvg {...props} />
 export const iconSectionArrow = props => <IconSectionArrowSvg {...props} />
 export const iconStar = props => <IconStarSvg {...props} />
+export const iconFilter = props => <IconFilterSvg height="24px" width="24px" {...props} />
 
 export const allIcons = [
   iconArrow,
@@ -40,5 +42,6 @@ export const allIcons = [
   iconMenuClose,
   iconMenu,
   iconSectionArrow,
-  iconStar
+  iconStar,
+  iconFilter
 ]
