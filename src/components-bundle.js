@@ -22,6 +22,7 @@ const Components = {
   OrderPanel: require('./components/MobileApp/OrderPanel').default,
   CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
   FilterBubblePanelSwitcher: require('./components/MobileApp/TmpFilterBubblePanelSwitcher').default,
+  ModelSearchFilter: require('./components/MobileApp/ModelSearchFilter').default,
   ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   ModelList: require('./components/MobileApp/ModelList').default,
   ModelShow: require('./components/MobileApp/ModelShow').default,

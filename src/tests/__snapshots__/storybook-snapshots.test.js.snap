@@ -22884,7 +22884,28 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/FilterButt
     }
     type="button"
   >
-    Verfügbar ab 8.6.2021
+    <svg
+      height="24px"
+      style={
+        Object {
+          "display": "inline",
+          "marginRight": "0.8rem",
+        }
+      }
+      width="24px"
+    >
+      Sliders Icon.svg
+    </svg>
+    <span
+      className="position-relative"
+      style={
+        Object {
+          "top": "0.1em",
+        }
+      }
+    >
+      Verfügbar ab 8.6.2021
+    </span>
   </button>
 </div>
 `;
@@ -22909,12 +22930,33 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/FilterButt
     }
     type="button"
   >
-    <div>
-      Lorem ipsum dolor sit amet
-    </div>
-    <div>
-      consetetur sadipscing elitr
-    </div>
+    <svg
+      height="24px"
+      style={
+        Object {
+          "display": "inline",
+          "marginRight": "0.8rem",
+        }
+      }
+      width="24px"
+    >
+      Sliders Icon.svg
+    </svg>
+    <span
+      className="position-relative"
+      style={
+        Object {
+          "top": "0.1em",
+        }
+      }
+    >
+      <div>
+        Lorem ipsum dolor sit amet
+      </div>
+      <div>
+        consetetur sadipscing elitr
+      </div>
+    </span>
   </button>
 </div>
 `;
@@ -22939,7 +22981,28 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/FilterButt
     }
     type="button"
   >
-    Button with warning color
+    <svg
+      height="24px"
+      style={
+        Object {
+          "display": "inline",
+          "marginRight": "0.8rem",
+        }
+      }
+      width="24px"
+    >
+      Sliders Icon.svg
+    </svg>
+    <span
+      className="position-relative"
+      style={
+        Object {
+          "top": "0.1em",
+        }
+      }
+    >
+      Button with warning color
+    </span>
   </button>
 </div>
 `;
@@ -23384,6 +23447,42 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Icons Icon
         className="mb-0"
       >
         &lt;Icon icon={iconStar} /&gt;
+      </pre>
+    </div>
+  </div>
+  <div
+    className="d-flex align-items-end mb-3"
+  >
+    <div
+      className="pe-3 text-center"
+    >
+      <div
+        style={
+          Object {
+            "width": "2rem",
+          }
+        }
+      >
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      className="small"
+    >
+      <pre
+        className="mb-0"
+      >
+        &lt;Icon icon={iconFilter} /&gt;
       </pre>
     </div>
   </div>
@@ -41853,7 +41952,28 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayoutH
       }
       type="button"
     >
-      FilterButton
+      <svg
+        height="24px"
+        style={
+          Object {
+            "display": "inline",
+            "marginRight": "0.8rem",
+          }
+        }
+        width="24px"
+      >
+        Sliders Icon.svg
+      </svg>
+      <span
+        className="position-relative"
+        style={
+          Object {
+            "top": "0.1em",
+          }
+        }
+      >
+        FilterButton
+      </span>
     </button>
   </div>
 </div>
@@ -42604,7 +42724,28 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
         }
         type="button"
       >
-        Filter
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          Filter
+        </span>
       </button>
     </div>
   </div>
@@ -42727,7 +42868,28 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
         }
         type="button"
       >
-        Filter
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          Filter
+        </span>
       </button>
     </div>
   </div>
@@ -42857,7 +43019,28 @@ exports[`Storybook HTML Snapshots MobileApp/Integrated Components/CategoryBreadc
         }
         type="button"
       >
-        Filter
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          Filter
+        </span>
       </button>
     </div>
   </div>
@@ -45940,6 +46123,339 @@ exports[`Storybook HTML Snapshots MobileApp/Overview/Translations Translations 1
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog Suchresultate 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+        role="button"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <div
+      className="text-center mb-4"
+    >
+      <h1>
+        Suchresultate
+      </h1>
+      <div
+        className="ui-model-search-filter"
+      >
+        <form
+          onSubmit={[Function]}
+        >
+          <div
+            className="input-group mb-2"
+          >
+            <input
+              autoComplete="off"
+              className="form-control border border-primary"
+              name="term"
+              onChange={[Function]}
+              placeholder="Suchen…"
+              type="search"
+              value=""
+            />
+            <button
+              className="input-group-text btn btn-primary"
+              type="button"
+            >
+              <svg
+                height="24px"
+                style={
+                  Object {
+                    "display": "inline",
+                    "marginRight": "0.4rem",
+                  }
+                }
+                width="24px"
+              >
+                Sliders Icon.svg
+              </svg>
+              <span
+                className="position-relative"
+                style={
+                  Object {
+                    "top": "0.1em",
+                  }
+                }
+              >
+                Filter
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div
+        className="input-group mb-2"
+      >
+        <input
+          className="form-control border border-primary"
+          defaultValue="Beamer"
+          placeholder="Suche nach…"
+          type="text"
+        />
+        <button
+          className="input-group-text btn btn-primary"
+          type="button"
+        >
+          <svg
+            className="me-1"
+            height="24px"
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+            width="24px"
+          >
+            Sliders Icon.svg
+          </svg>
+          <span
+            className="position-relative"
+            style={
+              Object {
+                "top": "0.1em",
+              }
+            }
+          >
+            Filter
+          </span>
+        </button>
+      </div>
+      <div
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill very-small mb-1 me-1 ps-3 pe-2 "
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingBottom": "6px",
+            "paddingTop": "7px",
+          }
+        }
+      >
+        <span
+          role="button"
+        >
+          Ausleihe Toni-Areal
+        </span>
+        <span
+          role="button"
+        >
+          <svg
+            className="ms-1"
+            onClick={[Function]}
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Cross Icon.svg
+          </svg>
+        </span>
+      </div>
+      <div
+        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill very-small mb-1 me-1 ps-3 pe-2 "
+        onClick={[Function]}
+        style={
+          Object {
+            "paddingBottom": "6px",
+            "paddingTop": "7px",
+          }
+        }
+      >
+        <span
+          role="button"
+        >
+          1 Stück verfügbar 23.-28.05.
+        </span>
+        <span
+          role="button"
+        >
+          <svg
+            className="ms-1"
+            onClick={[Function]}
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Cross Icon.svg
+          </svg>
+        </span>
+      </div>
+    </div>
+    <pre>
+      {
+  "currentFilters": {
+    "term": "beamer",
+    "poolIds": null
+  }
+}
+    </pre>
+    <div
+      className=""
+    >
+      <section
+        className=""
+      >
+        <h2
+          className="section-title fw-normal"
+        >
+          <span
+            className="section-title__collapser ui-section-collapser"
+            onClick={[Function]}
+            role="button"
+          >
+            Gegenstände
+            <svg
+              className="section-title__arrow-icon"
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Section Arrow.svg
+            </svg>
+          </span>
+        </h2>
+        <div>
+          <div
+            className="row g-0 d-flex flex-wrap mx-n2"
+          >
+            <div
+              className="col-6 col-sm-3"
+              style={
+                Object {
+                  "opacity": 1,
+                }
+              }
+            >
+              <div
+                className="max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative"
+                style={
+                  Object {
+                    "opacity": 1,
+                  }
+                }
+              >
+                <div
+                  className="rounded border square-container position-relative overflow-hidden"
+                >
+                  <a
+                    href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                  >
+                    <img
+                      alt=""
+                      className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+                      src="5d302b26-5737-48e7-a90d-e65f22d8c065.jpg"
+                    />
+                  </a>
+                </div>
+                <div
+                  className="pt-2"
+                >
+                  <a
+                    className="stretched-link"
+                    href="#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf"
+                  >
+                    <div
+                      className="small"
+                    >
+                      Audio
+                    </div>
+                    <div
+                      className="small fw-light"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategorie 1`] = `
 <div
   className="pb-5 ui-page-layout"
@@ -46040,7 +46556,28 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Kategorie Kategor
         }
         type="button"
       >
-        Nur Ausleihe Toni, jetzt verfügbar
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          Nur Ausleihe Toni, jetzt verfügbar
+        </span>
       </button>
     </div>
     <div
@@ -46313,7 +46850,28 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Start Start 1`] =
         }
         type="button"
       >
-        Nur Ausleihe Toni, jetzt verfügbar
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          Nur Ausleihe Toni, jetzt verfügbar
+        </span>
       </button>
     </div>
     <div
@@ -46643,7 +47201,28 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog/Unterkategorie Un
         }
         type="button"
       >
-        Nur Ausleihe Toni, jetzt verfügbar
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          Nur Ausleihe Toni, jetzt verfügbar
+        </span>
       </button>
     </div>
     <div
@@ -47149,7 +47728,28 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Detail
             }
             type="button"
           >
-            Alle Inventarparks
+            <svg
+              height="24px"
+              style={
+                Object {
+                  "display": "inline",
+                  "marginRight": "0.8rem",
+                }
+              }
+              width="24px"
+            >
+              Sliders Icon.svg
+            </svg>
+            <span
+              className="position-relative"
+              style={
+                Object {
+                  "top": "0.1em",
+                }
+              }
+            >
+              Alle Inventarparks
+            </span>
           </button>
           <div
             className="mb-0"
@@ -47498,7 +48098,28 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Liste 
         }
         type="button"
       >
-        Alle Bestellungen
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          Alle Bestellungen
+        </span>
       </button>
     </div>
     <div
@@ -50144,7 +50765,28 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Page Typology/Index Index
         }
         type="button"
       >
-        FilterButton
+        <svg
+          height="24px"
+          style={
+            Object {
+              "display": "inline",
+              "marginRight": "0.8rem",
+            }
+          }
+          width="24px"
+        >
+          Sliders Icon.svg
+        </svg>
+        <span
+          className="position-relative"
+          style={
+            Object {
+              "top": "0.1em",
+            }
+          }
+        >
+          FilterButton
+        </span>
       </button>
     </div>
     <div
