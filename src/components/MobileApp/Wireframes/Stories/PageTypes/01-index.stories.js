@@ -16,8 +16,8 @@ export default {
   }
 }
 
-const img1 = require('../../../../../static/example-images/models/62f4cb3c-999d-53ec-9426-298ebacd208a.jpg').default
-const img2 = require('../../../../../static/example-images/categories/286f85ba-e1a1-5c36-b03b-cf443f81d77d.jpg').default
+const img1 = require('../../../../../static/example-images/models/62f4cb3c-999d-53ec-9426-298ebacd208a.jpg')
+const img2 = require('../../../../../static/example-images/categories/286f85ba-e1a1-5c36-b03b-cf443f81d77d.jpg')
 
 export const index = ({ onFilterClick, onItemClick }) => {
   return (

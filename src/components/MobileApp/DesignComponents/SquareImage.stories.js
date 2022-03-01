@@ -6,7 +6,7 @@ export default {
   component: SquareImage
 }
 
-const imgSrc = require('../../../static/example-images/categories/2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg').default
+const imgSrc = require('../../../static/example-images/categories/2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg')
 
 export const squareImage = () => {
   return (

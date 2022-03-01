@@ -27,7 +27,7 @@ const FAKE_DATA = {
           coverImage: {
             id: 'e2d0cfdf-745c-57cb-8c6b-09c14af6bb51',
             'image-url':
-              require('../../static/example-images/models/e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg').default ||
+              require('../../static/example-images/models/e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg') ||
               'fake-url-for-storyshots-e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg'
           }
         },
@@ -50,7 +50,7 @@ const FAKE_DATA = {
           coverImage: {
             id: '0350f864-3e72-43dc-9365-b5f8ca277063',
             'image-url':
-              require('../../static/example-images/models/0350f864-3e72-43dc-9365-b5f8ca277063.jpg').default ||
+              require('../../static/example-images/models/0350f864-3e72-43dc-9365-b5f8ca277063.jpg') ||
               'fake-url-for-storyshots-0350f864-3e72-43dc-9365-b5f8ca277063.jpg'
           }
         },

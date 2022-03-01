@@ -40,15 +40,15 @@ const model = {
   images: [
     {
       id: '4f64adb0-6325-4eb1-bf36-8a73a986ed4b',
-      imageUrl: require('../../static/example-images/models/4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg').default
+      imageUrl: require('../../static/example-images/models/4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg')
     },
     {
       id: 'a7991363-b891-492d-b727-8d026e3a8b78',
-      imageUrl: require('../../static/example-images/models/a7991363-b891-492d-b727-8d026e3a8b78.png').default
+      imageUrl: require('../../static/example-images/models/a7991363-b891-492d-b727-8d026e3a8b78.png')
     },
     {
       id: 'fefad5b3-a080-43aa-9cbb-9a544611fc1a',
-      imageUrl: require('../../static/example-images/models/fefad5b3-a080-43aa-9cbb-9a544611fc1a.png').default
+      imageUrl: require('../../static/example-images/models/fefad5b3-a080-43aa-9cbb-9a544611fc1a.png')
     }
   ],
   attachments: [
@@ -79,7 +79,7 @@ const model = {
           images: [
             {
               id: 'c526e47e-020f-5c8b-88f2-a740797b67e0',
-              imageUrl: require('../../static/example-images/models/c526e47e-020f-5c8b-88f2-a740797b67e0.jpg').default
+              imageUrl: require('../../static/example-images/models/c526e47e-020f-5c8b-88f2-a740797b67e0.jpg')
             }
           ]
         }
@@ -92,7 +92,7 @@ const model = {
           images: [
             {
               id: '811f9d50-5915-5f2b-8a66-9ffb9b8a7dfe',
-              imageUrl: require('../../static/example-images/models/811f9d50-5915-5f2b-8a66-9ffb9b8a7dfe.jpg').default
+              imageUrl: require('../../static/example-images/models/811f9d50-5915-5f2b-8a66-9ffb9b8a7dfe.jpg')
             }
           ],
           isFavorited: true

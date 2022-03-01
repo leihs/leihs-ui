@@ -31,13 +31,13 @@ const listGridProps = {
     {
       id: 1,
       href: null,
-      imgSrc: require('../../../static/example-images/models/e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg').default,
+      imgSrc: require('../../../static/example-images/models/e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg'),
       caption: 'Item 1'
     },
     {
       id: 2,
       href: null,
-      imgSrc: require('../../../static/example-images/models/4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg').default,
+      imgSrc: require('../../../static/example-images/models/4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg'),
       caption: 'Item 2 (a favorite)',
       subCaption: 'it is a favorite',
       isFavorited: true
