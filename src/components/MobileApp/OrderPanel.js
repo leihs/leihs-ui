@@ -156,18 +156,18 @@ const OrderPanel = ({
 
   function changeQuantity(number) {
     setQuantity(number)
-    onQuantityChange(stateForCallbacks())
+    onQuantityChange({ ...stateForCallbacks(), quantity: number })
   }
 
   function changeInventoryPool(e) {
     const id = e.target.value
     setSelectedPoolId(id)
-    onInventoryPoolChange(stateForCallbacks())
+    onInventoryPoolChange({ ...stateForCallbacks(), poolId: id })
   }
 
   function changeDateRange(range) {
     setSelectedRange(range)
-    onDatesChange(stateForCallbacks())
+    onDatesChange({ ...stateForCallbacks(), ...range })
   }
 
   const stateForCallbacks = () => ({
