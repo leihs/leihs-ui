@@ -3,9 +3,6 @@ import f from 'lodash'
 import {
   startOfDay,
   addMonths,
-  min,
-  endOfMonth,
-  isAfter,
   parseISO,
   isValid,
   isBefore,
@@ -35,7 +32,7 @@ const OrderPanel = ({
   now,
   maxDateTotal,
   maxDateLoaded,
-  onShownDateChange = noop,
+  onCalendarNavigate = noop,
   //
   initialStartDate,
   initialEndDate,
@@ -177,11 +174,8 @@ const OrderPanel = ({
     poolId: selectedPoolId
   })
 
-  function changeShownDate(newDate) {
-    const targetDate = min([addMonths(endOfMonth(newDate), 3), maxDate])
-    if (isAfter(targetDate, maxDateLoaded)) {
-      onShownDateChange({ date: targetDate })
-    }
+  function handleCalendarNavigate(newDate) {
+    onCalendarNavigate({ date: newDate })
   }
 
   if (!dependentState) {
@@ -242,7 +236,7 @@ const OrderPanel = ({
                   <DateRangePicker
                     selectedRange={selectedRange}
                     onChange={changeDateRange}
-                    onShownDateChange={changeShownDate}
+                    onCalendarNavigate={handleCalendarNavigate}
                     maxDateLoaded={maxDateLoaded}
                     minDate={minDate}
                     maxDate={maxDate}

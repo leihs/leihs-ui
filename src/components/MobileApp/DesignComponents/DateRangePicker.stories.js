@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { parseISO, format, endOfMonth } from 'date-fns'
+import { parseISO, format, endOfMonth, addYears } from 'date-fns'
 import { de } from 'date-fns/locale'
 import { DateRange } from '@leihs/calendar'
 import DateRangePicker from './DateRangePicker'
@@ -13,9 +13,7 @@ export default {
 function rangeDebugInfo(selectedRange) {
   return (
     <Section title="selected range" collapsible className="text-muted pt-4">
-      <small className="fw-light">
-        <samp>{JSON.stringify(selectedRange)}</samp>
-      </small>
+      {format(selectedRange.startDate, 'P', { locale: de })} - {format(selectedRange.endDate, 'P', { locale: de })}
     </Section>
   )
 }
@@ -86,19 +84,26 @@ export function constraints() {
 export function lazyLoading() {
   const now = new Date()
   const [selectedRange, setSelectedRange] = useState({ startDate: now, endDate: now })
-  const [shownDate, setShownDate] = useState(now)
   const [maxDateLoaded, setMaxDateLoaded] = useState(endOfMonth(now))
   const [loading, setLoading] = useState(false)
 
-  async function handleShownDateChange(date) {
+  async function loadUntil(date) {
     const newMax = endOfMonth(date)
     if (newMax > maxDateLoaded) {
       setLoading(true)
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      setShownDate(date)
+      await new Promise(resolve => setTimeout(resolve, 350))
       setMaxDateLoaded(newMax)
       setLoading(false)
     }
+  }
+
+  function handleCalendarNavigate(date) {
+    loadUntil(date)
+  }
+
+  function handleChange(range) {
+    setSelectedRange(range)
+    loadUntil(range.endDate)
   }
 
   return (
@@ -108,12 +113,11 @@ export function lazyLoading() {
         maxDateLoaded = {format(maxDateLoaded, 'P', { locale: de })} {loading && <span>...loading...</span>}
       </p>
       <DateRangePicker
-        selectedRange={selectedRange}
-        onChange={setSelectedRange}
         locale={de}
-        shownDate={shownDate}
-        onShownDateChange={handleShownDateChange}
         maxDateLoaded={maxDateLoaded}
+        selectedRange={selectedRange}
+        onChange={handleChange}
+        onCalendarNavigate={handleCalendarNavigate}
       />
       {rangeDebugInfo(selectedRange)}
     </div>
@@ -171,6 +175,7 @@ export const underlyingDateRangeComponent = () => {
         dateDisplayFormat={'P'}
         months={1}
         minDate={now}
+        maxDate={addYears(now, 10)}
         ranges={[selectedRange]}
         onChange={onChange}
         maxDateLoaded={parseISO('2020-07-31')}

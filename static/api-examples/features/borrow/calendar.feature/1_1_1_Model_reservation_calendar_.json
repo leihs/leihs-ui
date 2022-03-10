@@ -66,6 +66,36 @@
                   },
                   "dates": [
                     {
+                      "date": "2020-04-01",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-02",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-03",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-04",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
+                      "date": "2020-04-05",
+                      "endDateRestriction": null,
+                      "quantity": 0,
+                      "startDateRestriction": null
+                    },
+                    {
                       "date": "2020-04-06",
                       "endDateRestriction": null,
                       "quantity": 0,

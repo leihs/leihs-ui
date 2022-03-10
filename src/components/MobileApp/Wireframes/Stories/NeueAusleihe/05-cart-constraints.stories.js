@@ -49,11 +49,11 @@ export const cartConstraints = () => {
         <li>April 27 max visits reached</li>
         <li>Advance days = 1 (i.e. earliest pickup tomorrow April 8)</li>
         <li>Maximum reservation time = 10 days</li>
+        <li>Max date May 31</li>
       </ul>
       <OrderPanel
         modelData={modelData}
         maxDateTotal={maxDate}
-        maxDateLoaded={maxDate}
         inventoryPools={[pool1, pool2]}
         initialQuantity={3}
         onSubmit={action('submit')}

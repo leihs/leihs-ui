@@ -15,7 +15,7 @@ export default function DateRangePicker({
   onChange,
   // shown date & loading state:
   shownDate = selectedRange ? selectedRange.startDate : undefined,
-  onShownDateChange,
+  onCalendarNavigate,
   maxDateLoaded,
   // date constraints:
   minDate,
@@ -165,7 +165,7 @@ export default function DateRangePicker({
           shownDate={shownDate}
           focusedRange={focusedRange}
           onRangeFocusChange={handleRangeFocusChange}
-          onShownDateChange={onShownDateChange}
+          onShownDateChange={onCalendarNavigate}
           maxDateLoaded={maxDateLoaded}
           loadingIndicator={<div>LOADING...</div>}
           // date constraints:
@@ -203,11 +203,14 @@ DateRangePicker.propTypes = {
 
   // shown date & loading state:
 
-  /** a date in the month to be shown, defaults to `selectedRange.startDate` */
+  /** a date in the month to initially be shown, defaults to `selectedRange.startDate` */
   shownDate: PropTypes.instanceOf(Date),
-  /** callback then the shown month changes (argument: a date in the now-shown month) */
-  onShownDateChange: PropTypes.func,
-  /** date until which the the list of disabled dates were loaded (when a date beyond that is selected, `onShownDateChange` is called) */
+  /** callback when the shown month is changed using the calendar navigation (argument: a date in the now-shown month) */
+  onCalendarNavigate: PropTypes.func,
+  /** Date until which the underlying data was loaded (availability, holidays etc).
+   * When given, calendar shows a "loading" overlay for any month after this date. The controlling component
+   * must subscribe to `onCalendarNavigate` to update this date, and also to `onChange` (to handle start date
+   * modification via keyboard). */
   maxDateLoaded: PropTypes.instanceOf(Date),
 
   // date constraints:

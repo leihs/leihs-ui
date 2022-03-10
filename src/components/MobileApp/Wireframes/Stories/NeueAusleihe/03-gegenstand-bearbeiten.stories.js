@@ -21,14 +21,13 @@ export default {
 }
 
 export const gegenstandBearbeiten = ({ onSubmit, onCancel, onRemoveClick }) => {
-  const { modelData, inventoryPools, minDateLoaded, maxDateLoaded } = getOrderPanelMockData()
+  const { modelData, inventoryPools, maxDateLoaded } = getOrderPanelMockData()
   return (
     <ModalDialog title="Gegenstand bearbeiten" shown>
       <ModalDialog.Body>
         <Stack space="4">
           <OrderPanel
             modelData={modelData}
-            minDateLoaded={minDateLoaded}
             maxDateLoaded={maxDateLoaded}
             inventoryPools={inventoryPools}
             onSubmit={onSubmit}

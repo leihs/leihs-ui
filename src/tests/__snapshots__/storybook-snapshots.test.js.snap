@@ -33962,13 +33962,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </span>
     </h2>
     <div>
-      <small
-        className="fw-light"
-      >
-        <samp>
-          {"startDate":"2021-07-11T00:00:00.000Z","endDate":"2021-07-17T00:00:00.000Z"}
-        </samp>
-      </small>
+      11.07.2021
+       - 
+      17.07.2021
     </div>
   </section>
 </div>
@@ -35075,13 +35071,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </span>
     </h2>
     <div>
-      <small
-        className="fw-light"
-      >
-        <samp>
-          {"startDate":"2020-04-07T11:05:21.622Z","endDate":"2020-04-07T11:05:21.622Z"}
-        </samp>
-      </small>
+      07.04.2020
+       - 
+      07.04.2020
     </div>
   </section>
 </div>
@@ -36190,13 +36182,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </span>
     </h2>
     <div>
-      <small
-        className="fw-light"
-      >
-        <samp>
-          {"startDate":"2020-04-07T11:05:21.622Z","endDate":"2020-04-07T11:05:21.622Z"}
-        </samp>
-      </small>
+      07.04.2020
+       - 
+      07.04.2020
     </div>
   </section>
 </div>
@@ -37298,13 +37286,9 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
       </span>
     </h2>
     <div>
-      <small
-        className="fw-light"
-      >
-        <samp>
-          {"startDate":"2020-04-07T11:05:21.622Z","endDate":"2020-04-07T11:05:21.622Z"}
-        </samp>
-      </small>
+      07.04.2020
+       - 
+      07.04.2020
     </div>
   </section>
 </div>
@@ -51010,6 +50994,9 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Warenkorb/Cart Constraint
     </li>
     <li>
       Maximum reservation time = 10 days
+    </li>
+    <li>
+      Max date May 31
     </li>
   </ul>
 </div>

@@ -28,14 +28,15 @@ const OrderPanelPropTypes = {
   /** Current profile (user personal or delegation) */
   profileName: PropTypes.string,
 
-  /** earliest date that can be selected or navigated to, defaults to today */
-  minDateTotal: PropTypes.instanceOf(Date),
-  /** latest date that can be selected or navigated to, defaults to `minDateTotal` + 20 years */
+  /** current date (defaults to system time). Defines the min selectable date, the default date selection and the initially shown month  */
+  now: PropTypes.instanceOf(Date),
+  /** latest date that can be selected or navigated to, defaults to `now` + 20 years */
   maxDateTotal: PropTypes.instanceOf(Date),
-  /** Latest date for which data has be loaded. Navigating further will trigger "onShownDateChange" callback */
+  /** Date until which the underlying data was loaded (availability, holidays etc).
+   * Directly wired to the equally named prop of `DateRangePicker` (see there for more info) */
   maxDateLoaded: PropTypes.instanceOf(Date).isRequired,
-  /** callback, when more data needs to be loaded. arguments: `{date}`, defaults to noop */
-  onShownDateChange: PropTypes.func,
+  /** callback when the shown month is changed using the calendar navigation (argument: `{date}`) */
+  onCalendarNavigate: PropTypes.func,
 
   /** start date that is initially selected (defaults to today) */
   initialStartDate: PropTypes.instanceOf(Date),
@@ -45,7 +46,7 @@ const OrderPanelPropTypes = {
   onDatesChange: PropTypes.func,
 
   /** wanted quantity that is initially selected (defaults to 1) */
-  initialQuantity: PropTypes.number,
+  initialQuantity: PropTypes.oneOfType(PropTypes.number, PropTypes.string),
   /** callback when the wanted quantity is changed */
   onQuantityChange: PropTypes.func,
 

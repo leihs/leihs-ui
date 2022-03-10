@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { action } from '@storybook/addon-actions'
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 import { locale as fakeLocale, orderPanelTexts as fakeTxt } from './StoryUtils/fake-localization'
+import { addYears, endOfMonth } from 'date-fns'
 
 import { getOrderPanelMockData } from './StoryUtils/sample-props'
 import OrderPanel from './OrderPanel'
@@ -16,17 +17,33 @@ export default {
   }
 }
 
-export const withAllArguments = () => {
+export const orderPanel = () => {
   const now = new Date(FAKE_STYLEGUIDE_TIME)
-  const [isValid, setIsValid] = useState()
   const {
     modelData,
     inventoryPools,
     initialInventoryPoolId,
-    minDateLoaded,
-    maxDateLoaded,
+    maxDateLoaded: initialMaxDateLoaded,
     spec
   } = getOrderPanelMockData()
+
+  const [isValid, setIsValid] = useState()
+  const [maxDateLoaded, setMaxDateLoaded] = useState(initialMaxDateLoaded)
+  function handleCalendarNavigate({ date }) {
+    const newMax = endOfMonth(date)
+    if (newMax > maxDateLoaded) {
+      setMaxDateLoaded(newMax)
+    }
+    action('calendar-navigate')
+  }
+  function handleDatesChange({ startDate }) {
+    const newMax = endOfMonth(startDate)
+    if (newMax > maxDateLoaded) {
+      setMaxDateLoaded(newMax)
+    }
+    action('dates-change')
+  }
+
   return (
     <ModalDialog title="Gegenstand hinzufügen" className="ui-booking-calendar" shown>
       <ModalDialog.Body>
@@ -34,14 +51,13 @@ export const withAllArguments = () => {
           modelData={modelData}
           //
           minDateTotal={now}
-          minDateLoaded={minDateLoaded}
-          maxDateTotal={new Date('2030-01-01')}
+          maxDateTotal={addYears(now, 10)}
           maxDateLoaded={maxDateLoaded}
-          onShownDateChange={action('shown-date-change')}
+          onCalendarNavigate={handleCalendarNavigate}
           //
           initialStartDate={now}
           initialEndDate={now}
-          onDatesChange={action('dates-change')}
+          onDatesChange={handleDatesChange}
           //
           initialQuantity={2}
           onQuantityChange={action('quantity-change')}
@@ -82,29 +98,5 @@ export const withAllArguments = () => {
     </ModalDialog>
   )
 }
-export const withMinimalArguments = () => {
-  const { modelData, inventoryPools, minDateLoaded, maxDateLoaded } = getOrderPanelMockData()
-  return (
-    <ModalDialog title="Gegenstand hinzufügen" className="ui-booking-calendar" shown>
-      <ModalDialog.Body>
-        <OrderPanel
-          modelData={modelData}
-          minDateLoaded={minDateLoaded}
-          maxDateLoaded={maxDateLoaded}
-          inventoryPools={inventoryPools}
-          onSubmit={action('submit')}
-          locale={fakeLocale}
-          txt={fakeTxt}
-        />
-      </ModalDialog.Body>
-      <ModalDialog.Footer>
-        <button type="submit" className="btn btn-primary" form="order-dialog-form">
-          Hinzufügen
-        </button>
-        <button type="button" className="btn btn-secondary" onClick={action('cancel')}>
-          Abbrechen
-        </button>
-      </ModalDialog.Footer>
-    </ModalDialog>
-  )
-}
+
+orderPanel.storyName = 'OrderPanel'
