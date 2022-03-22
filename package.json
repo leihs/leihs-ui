@@ -28,7 +28,7 @@
     "storybook": "start-storybook -p 9009 -s static"
   },
   "engines": {
-    "node": ">=16.14.0",
+    "node": ">=14.17.3",
     "npm": ">=7.24.2"
   },
   "peerDependencies": {
