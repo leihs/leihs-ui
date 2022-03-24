@@ -366,3 +366,24 @@
     right: 20px;
   }
 }
+
+/* Component: Info message */
+$info-color: $gray-600;
+$info-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='#{$info-color}'><circle cx='6' cy='6' r='4.5'/><line stroke-linecap='round' stroke-width='1.2' x1='6' x2='6' y1='6' y2='8' /><circle cx='6' cy='4.2' r='.7' fill='#{$info-color}' stroke='none'/></svg>");
+.info-message {
+  text-indent: -1.5em;
+  padding-left: 1.5em;
+  font-size: $font-size-sm;
+  color: $info-color;
+
+  &::before {
+    content: '';
+    background-image: escape-svg($info-icon);
+    background-repeat: no-repeat;
+    padding-left: 1.5em;
+    background-position: 0 0.0625em;
+    background-size: 1.2em;
+    width: 2em;
+    display: inline;
+  }
+}

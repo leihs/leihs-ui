@@ -20,6 +20,7 @@ import MinusPlusControl from './DesignComponents/MinusPlusControl'
 import DateRangePicker from './DesignComponents/DateRangePicker'
 import Stack from './DesignComponents/Stack'
 import Warning from './DesignComponents/Warning'
+import InfoMessage from './DesignComponents/InfoMessage'
 import orderPanelPropTypes from './OrderPanelPropTypes'
 
 const noop = () => {}
@@ -181,8 +182,15 @@ const OrderPanel = ({
   if (!dependentState) {
     return null
   }
-  const { selectablePools, disabledDates, disabledStartDates, disabledEndDates, minDate, validationResult } =
-    dependentState
+  const {
+    selectablePools,
+    selectedPool,
+    disabledDates,
+    disabledStartDates,
+    disabledEndDates,
+    minDate,
+    validationResult
+  } = dependentState
 
   return (
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
@@ -225,7 +233,13 @@ const OrderPanel = ({
               </option>
             ))}
           </select>
-          {validationResult.poolError && <Warning className="mt-2">{validationResult.poolError}</Warning>}
+          {validationResult.poolError ? (
+            <Warning className="mt-2">{validationResult.poolError}</Warning>
+          ) : (
+            <InfoMessage className="mt-2">
+              {t(label, 'pool-max-amount-info', locale, { amount: selectedPool.totalBorrowableQuantity })}
+            </InfoMessage>
+          )}
         </Section>
         {!validationResult.poolError && (
           <Let title={t(label, 'timespan', locale)}>

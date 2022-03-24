@@ -6,6 +6,7 @@ export const orderPanelTexts = {
     plus: { 'de-CH': 'Plus' },
     pool: { 'de-CH': 'Inventarpark' },
     'pool-max-amount': { 'de-CH': '{pool} (max. {amount, number})' },
+    'pool-max-amount-info': { 'de-CH': 'Maximal verfügbarer Bestand: {amount, number}' },
     'user-delegation': { 'de-CH': 'Delegation' },
     timespan: { 'de-CH': 'Zeitraum' },
     from: { 'de-CH': 'Von' },

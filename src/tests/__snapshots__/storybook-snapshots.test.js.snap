@@ -25640,10 +25640,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Rest Props 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning & Info InfoMessage 1`] = `
 <div>
   <h1>
-    Warning
+    InfoMessage
+  </h1>
+  <p
+    className="text-muted"
+  >
+    Marks non-critical information (hints, annotations, instructions, friendly reminders etc.).
+  </p>
+  <p
+    className="text-muted"
+  >
+    Same behaviour as 
+    <code>
+      Warning
+    </code>
+    , but in gray and with info icon.
+  </p>
+  <div
+    className="info-message"
+  >
+    Zeitangabe in Sekunden
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning & Info Rest Props 1`] = `
+<div>
+  <h1>
+    Warning & Info
   </h1>
   <p
     className="text-muted"
@@ -25651,7 +25678,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Re
     Set arbitrary attributes with restProps
   </p>
   <div
-    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0 border border-primary"
+    className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0 border border-primary mb-3"
     style={
       Object {
         "fontSize": "1rem",
@@ -25660,10 +25687,20 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Re
   >
     1 Gegenstand ungültig
   </div>
+  <div
+    className="info-message border border-primary"
+    style={
+      Object {
+        "fontSize": "1rem",
+      }
+    }
+  >
+    Zeitangabe in Sekunden
+  </div>
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Warning 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning & Info Warning 1`] = `
 <div>
   <h1>
     Warning
@@ -25691,10 +25728,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Wa
 </div>
 `;
 
-exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Wrap 1`] = `
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning & Info Wrap 1`] = `
 <div>
   <h1>
-    Warning
+    Warning & Info
   </h1>
   <p
     className="text-muted"
@@ -25710,6 +25747,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Warning Wr
   >
     <div
       className="invalid-feedback invalid-feedback-icon d-block w-100 mt-0"
+    >
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis quod esse dolores quia perferendis minima architecto. Nobis itaque, unde quibusdam voluptatibus aut accusantium ipsa, facere autem deserunt, praesentium perspiciatis?
+    </div>
+    <div
+      className="info-message"
     >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta officiis quod esse dolores quia perferendis minima architecto. Nobis itaque, unde quibusdam voluptatibus aut accusantium ipsa, facere autem deserunt, praesentium perspiciatis?
     </div>
