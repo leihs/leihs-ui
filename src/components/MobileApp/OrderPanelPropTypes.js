@@ -46,7 +46,7 @@ const OrderPanelPropTypes = {
   onDatesChange: PropTypes.func,
 
   /** wanted quantity that is initially selected (defaults to 1) */
-  initialQuantity: PropTypes.oneOfType(PropTypes.number, PropTypes.string),
+  initialQuantity: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   /** callback when the wanted quantity is changed */
   onQuantityChange: PropTypes.func,
 

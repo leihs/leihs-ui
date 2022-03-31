@@ -50488,6 +50488,227 @@ Array [
 ]
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Meine Bestellungen/Wiederholen Wiederholen 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+        role="button"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <p
+      className="text-muted"
+    >
+      Interactive story which shows how to repeat an order.
+    </p>
+    <p
+      className="text-muted mb-5"
+    >
+      <label>
+        <input
+          checked={false}
+          onChange={[Function]}
+          type="checkbox"
+        />
+         
+        Order with options
+      </label>
+    </p>
+    <div
+      className="text-center mb-4"
+    >
+      <h1>
+        Video Semesterprojekt
+      </h1>
+      <h2
+        className="fw-light"
+      >
+        Zwischen 26.5.2020 und 7.6.2020, 8 Gegenstände
+      </h2>
+    </div>
+    <div
+      className="mb-5"
+    >
+      <section
+        className=""
+      >
+        <h2
+          className="section-title fw-normal"
+        >
+          <span
+            className="section-title__collapser ui-section-collapser"
+            onClick={[Function]}
+            role="button"
+          >
+            Status
+            <svg
+              className="section-title__arrow-icon"
+              style={
+                Object {
+                  "display": "inline",
+                }
+              }
+            >
+              Section Arrow.svg
+            </svg>
+          </span>
+        </h2>
+        <div>
+          <div
+            className="mb-3"
+          >
+            <div>
+              ...
+            </div>
+          </div>
+          <div
+            className=""
+          >
+            <div
+              className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
+            >
+              <button
+                className="btn btn-secondary"
+                onClick={[Function]}
+                type="button"
+              >
+                Bestellung wiederholen
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div
+      className="mb-5"
+    >
+      <section
+        className=""
+      >
+        <h2
+          className="section-title fw-normal"
+        >
+          <span
+            className=""
+            onClick={[Function]}
+            role=""
+          >
+            Zweck
+          </span>
+        </h2>
+        <div>
+          ...
+        </div>
+      </section>
+    </div>
+    <div
+      className=""
+    >
+      <section
+        className=""
+      >
+        <h2
+          className="section-title fw-normal"
+        >
+          <span
+            className=""
+            onClick={[Function]}
+            role=""
+          >
+            Gegenstände
+          </span>
+        </h2>
+        <div>
+          ...
+        </div>
+      </section>
+    </div>
+    <div>
+       
+    </div>
+    <div>
+       
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
 <div
   className="pb-5 ui-page-layout"
