@@ -1,6 +1,5 @@
 import React from 'react'
-import cx from 'classnames'
-// import FilterBubble from '../../../DesignComponents/FilterButton'
+import { action } from '@storybook/addon-actions'
 import SquareImageGrid from '../../../DesignComponents/SquareImageGrid'
 import Section from '../../../DesignComponents/Section'
 import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
@@ -8,32 +7,62 @@ import PageLayout from '../../../DesignComponents/PageLayout'
 import Stack from '../../../DesignComponents/Stack'
 import ModelSearchFilter from '../../../ModelSearchFilter'
 import { modelListProps } from '../../../StoryUtils/sample-props'
-import Icon, { iconFilter, iconCross } from '../../../DesignComponents/Icons'
 
 export default {
   title: 'MobileApp/Wireframes/Katalog',
   parameters: { layout: 'fullscreen' }
 }
-
+const EXAMPLE_TRANSLATIONS = {
+  'search-input-label': {
+    'de-CH': 'Suche',
+    'en-GB': 'Search'
+  },
+  'search-input-placeholder': {
+    'de-CH': 'Suchen…',
+    'en-GB': 'Search…'
+  },
+  'search-filter-label': {
+    'de-CH': 'Filter',
+    'en-GB': 'Filter'
+  },
+  'availability-label': {
+    'de-CH': '{quantity} Stück verfügbar {startDate, date, narrow} – {endDate, date, narrow}',
+    'en-GB':
+      '{quantity} {quantity, plural, =1 {item} other {items}} available {startDate, date, narrow} – {endDate, date, narrow}'
+  }
+}
 // just 1 case for now
 const FAKE_SEARCH_PROPS = {
   currentFilters: {
-    term: 'beamer',
-    poolIds: null
-  }
+    term: 'beamer!',
+    poolIds: [{ id: 1, label: 'pool A' }],
+    onlyAvailable: true,
+    quantity: 3,
+    startDate: '2022-04-21',
+    endDate: '2022-04-24'
+  },
+  locale: 'de-CH',
+  onSubmit: action('onSubmit '),
+  onChangeSearchTerm: action('onChangeSearchTerm'),
+  onOpenPanel: action('onOpenPanel'),
+  onClearFilter: filter => action('onClearFilter')(filter)
 }
 
 export const Suchresultate = () => {
   return (
     <PageLayoutMock>
       <PageLayout.Header title="Suchresultate">
-        <ModelSearchFilter />
-        <SearchFilterCombinedInput filterLabel="Filter" searchTerm={'Beamer'} />
-
-        <FilterItemButton>Ausleihe Toni-Areal</FilterItemButton>
-        <FilterItemButton>1 Stück verfügbar 23.-28.05.</FilterItemButton>
+        <ModelSearchFilter
+          currentFilters={FAKE_SEARCH_PROPS.currentFilters}
+          onOpenPanel={FAKE_SEARCH_PROPS.onOpenPanel}
+          onClearFilter={FAKE_SEARCH_PROPS.onClearFilter}
+          onSubmit={FAKE_SEARCH_PROPS.onSubmit}
+          onChangeSearchTerm={FAKE_SEARCH_PROPS.onChangeSearchTerm}
+          locale={FAKE_SEARCH_PROPS.locale}
+          txt={EXAMPLE_TRANSLATIONS}
+        />
       </PageLayout.Header>
-      <pre>{JSON.stringify(FAKE_SEARCH_PROPS, 0, 2)}</pre>
+
       <Stack space="4">
         <Section title="Gegenstände" collapsible>
           <SquareImageGrid {...modelListProps} />
@@ -42,66 +71,3 @@ export const Suchresultate = () => {
     </PageLayoutMock>
   )
 }
-
-function SearchFilterCombinedInput({ searchTerm, filterLabel }) {
-  return (
-    <div className="input-group mb-2">
-      <input
-        type="text"
-        className="form-control border border-primary"
-        placeholder="Suche nach…"
-        defaultValue={searchTerm}
-      />
-      <button type="button" className="input-group-text btn btn-primary">
-        <Icon icon={iconFilter} className="me-1" />
-        <span className="position-relative" style={{ top: '0.1em' }}>
-          {filterLabel}
-        </span>
-      </button>
-    </div>
-  )
-}
-
-function FilterBubble({ children, className, style, as: Elm = 'div', ...restProps }) {
-  return (
-    <Elm
-      className={cx('ui-filter-bubble', 'btn btn-primary btn-sm rounded-pill very-small mb-1 me-1', className)}
-      style={{ paddingTop: '7px', paddingBottom: '6px', ...style }}
-      {...restProps}
-    >
-      {children}
-    </Elm>
-  )
-}
-
-function FilterItemButton({ children, ...restProps }) {
-  return (
-    <FilterBubble {...restProps} className="ps-3 pe-2 " onClick={() => alert('edit filters!')}>
-      <span role="button">{children}</span>
-      <span role="button">
-        <Icon
-          icon={iconCross}
-          className="ms-1"
-          onClick={e => {
-            e.stopPropagation()
-            alert('clear this filter!')
-          }}
-        ></Icon>
-      </span>
-    </FilterBubble>
-  )
-}
-// function FilterMenuButton({ children, ...restProps }) {
-//   return (
-//     <FilterBubble as="button" type="button" className="ps-2 pe-3" {...restProps} onClick={() => alert('edit filters')}>
-//       <Icon icon={iconFilter} className="me-1" /> {children}
-//     </FilterBubble>
-//   )
-// }
-
-// // try:
-// <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-//   <button type="button" class="btn btn-danger">Left</button>
-//   <button type="button" class="btn btn-warning">Middle</button>
-//   <button type="button" class="btn btn-success">Right</button>
-// </div>

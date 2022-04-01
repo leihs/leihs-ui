@@ -46259,22 +46259,32 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog Suchresultate 1`]
         className="ui-model-search-filter"
       >
         <form
+          action="#"
+          method="get"
           onSubmit={[Function]}
+          role="search"
         >
           <div
             className="input-group mb-2"
           >
             <input
+              aria-autocomplete="both"
+              autoCapitalize="off"
               autoComplete="off"
+              autoCorrect="off"
+              autoFocus=""
               className="form-control border border-primary"
               name="term"
               onChange={[Function]}
               placeholder="Suchen…"
+              spellCheck="false"
+              title="Suche"
               type="search"
-              value=""
+              value="beamer!"
             />
             <button
               className="input-group-text btn btn-primary"
+              onClick={[Function]}
               type="button"
             >
               <svg
@@ -46301,116 +46311,81 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Katalog Suchresultate 1`]
               </span>
             </button>
           </div>
+          <div
+            className="ui-filter-bubble btn btn-primary btn-sm rounded-pill very-small mb-1 me-1 ps-3 pe-2 "
+            style={
+              Object {
+                "paddingBottom": "6px",
+                "paddingTop": "7px",
+              }
+            }
+          >
+            <span
+              onClick={[Function]}
+              role="button"
+            >
+              pool A
+            </span>
+            <span
+              role="button"
+            >
+              <svg
+                className="ms-1"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Cross Icon.svg
+              </svg>
+            </span>
+          </div>
+          <div
+            className="ui-filter-bubble btn btn-primary btn-sm rounded-pill very-small mb-1 me-1 ps-3 pe-2 "
+            style={
+              Object {
+                "paddingBottom": "6px",
+                "paddingTop": "7px",
+              }
+            }
+          >
+            <span
+              onClick={[Function]}
+              role="button"
+            >
+              3 Stück verfügbar 21.4.2022 – 24.4.2022
+            </span>
+            <span
+              role="button"
+            >
+              <svg
+                className="ms-1"
+                onClick={[Function]}
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Cross Icon.svg
+              </svg>
+            </span>
+          </div>
+          <div
+            className="visually-hidden"
+          >
+            <button
+              aria-label="Suche"
+              type="submit"
+            >
+              Suche
+            </button>
+          </div>
         </form>
       </div>
-      <div
-        className="input-group mb-2"
-      >
-        <input
-          className="form-control border border-primary"
-          defaultValue="Beamer"
-          placeholder="Suche nach…"
-          type="text"
-        />
-        <button
-          className="input-group-text btn btn-primary"
-          type="button"
-        >
-          <svg
-            className="me-1"
-            height="24px"
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
-            width="24px"
-          >
-            Sliders Icon.svg
-          </svg>
-          <span
-            className="position-relative"
-            style={
-              Object {
-                "top": "0.1em",
-              }
-            }
-          >
-            Filter
-          </span>
-        </button>
-      </div>
-      <div
-        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill very-small mb-1 me-1 ps-3 pe-2 "
-        onClick={[Function]}
-        style={
-          Object {
-            "paddingBottom": "6px",
-            "paddingTop": "7px",
-          }
-        }
-      >
-        <span
-          role="button"
-        >
-          Ausleihe Toni-Areal
-        </span>
-        <span
-          role="button"
-        >
-          <svg
-            className="ms-1"
-            onClick={[Function]}
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
-          >
-            Cross Icon.svg
-          </svg>
-        </span>
-      </div>
-      <div
-        className="ui-filter-bubble btn btn-primary btn-sm rounded-pill very-small mb-1 me-1 ps-3 pe-2 "
-        onClick={[Function]}
-        style={
-          Object {
-            "paddingBottom": "6px",
-            "paddingTop": "7px",
-          }
-        }
-      >
-        <span
-          role="button"
-        >
-          1 Stück verfügbar 23.-28.05.
-        </span>
-        <span
-          role="button"
-        >
-          <svg
-            className="ms-1"
-            onClick={[Function]}
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
-          >
-            Cross Icon.svg
-          </svg>
-        </span>
-      </div>
     </div>
-    <pre>
-      {
-  "currentFilters": {
-    "term": "beamer",
-    "poolIds": null
-  }
-}
-    </pre>
     <div
       className=""
     >

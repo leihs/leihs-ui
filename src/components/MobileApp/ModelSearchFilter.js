@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
-import { format as formatDate, parseISO as parseDate } from 'date-fns'
+import { parseISO as parseDate } from 'date-fns'
 import Icon, { iconFilter, iconCross } from './DesignComponents/Icons'
+
+import { translate as t } from '../../lib/translate'
 
 const BASE_CLASS = 'ui-model-search-filter'
 
@@ -9,9 +11,8 @@ export default function ModelSearchFilter({
   className,
   availableFilters = {},
   currentFilters = {},
-  searchPlaceholder = 'Suchen…',
-  filterLabel = 'Filter',
   locale,
+  txt,
   onChangeSearchTerm,
   onSubmit,
   onOpenPanel,
@@ -27,6 +28,9 @@ export default function ModelSearchFilter({
   return (
     <div className={cx(BASE_CLASS, className)} {...restProps}>
       <form
+        action="#"
+        role="search"
+        method="get"
         onSubmit={e => {
           e.preventDefault()
           onSubmit({ searchTerm })
@@ -36,8 +40,9 @@ export default function ModelSearchFilter({
           onFilterClick={onOpenPanel}
           searchTerm={searchTerm}
           onSearchTermChange={onChangeTerm}
-          filterLabel={filterLabel}
-          searchPlaceholder={searchPlaceholder}
+          searchLabel={t(txt, 'search-input-label', locale)}
+          searchPlaceholder={t(txt, 'search-input-placeholder', locale)}
+          filterLabel={t(txt, 'search-filter-label', locale)}
         />
 
         {!!poolIds &&
@@ -52,25 +57,48 @@ export default function ModelSearchFilter({
 
         {!!onlyAvailable && (
           <FilterItemButton onFilterClick={onOpenPanel} onClear={() => onClearFilter({ type: 'onlyAvailable' })}>
-            {quantity} Stück verfügbar {decorateDateRange({ startDate, endDate, locale })}
+            {t(txt, 'availability-label', locale, {
+              startDate: parseDate(startDate),
+              endDate: parseDate(endDate),
+              quantity
+            })}
           </FilterItemButton>
         )}
+        <div className="visually-hidden">
+          <button type="submit" aria-label={t(txt, 'search-input-label', locale)}>
+            {t(txt, 'search-input-label', locale)}
+          </button>
+        </div>
       </form>
     </div>
   )
 }
 
-function SearchFilterCombinedInput({ searchTerm, onSearchTermChange, filterLabel, searchPlaceholder, onFilterClick }) {
+function SearchFilterCombinedInput({
+  searchTerm,
+  onSearchTermChange,
+  filterLabel,
+  searchLabel,
+  searchPlaceholder,
+  onFilterClick
+}) {
   return (
     <div className="input-group mb-2">
       <input
-        type="search" // TODO: use InputWithClearButton (needs style fixes)
-        autoComplete="off"
+        // TODO: use InputWithClearButton (needs style fixes)
+        type="search"
         className="form-control border border-primary"
         name="term"
+        title={searchLabel}
         value={searchTerm}
         onChange={e => onSearchTermChange(e.target.value)}
         placeholder={searchPlaceholder}
+        aria-autocomplete="both"
+        autoComplete="off"
+        autoCapitalize="off"
+        autoCorrect="off"
+        autoFocus=""
+        spellCheck="false"
       />
       <button type="button" className="input-group-text btn btn-primary" onClick={onFilterClick}>
         <Icon icon={iconFilter} style={{ marginRight: '0.4rem' }} />
@@ -82,7 +110,7 @@ function SearchFilterCombinedInput({ searchTerm, onSearchTermChange, filterLabel
   )
 }
 
-/** shows 1 filter item in a bubble with a "clear" button */
+// shows 1 filter item in a bubble with a "clear" button
 function FilterItemButton({ children, onFilterClick, onClear, ...restProps }) {
   return (
     <FilterBubble {...restProps} className="ps-3 pe-2 ">
@@ -113,15 +141,4 @@ function FilterBubble({ children, className, style, as: Elm = 'div', ...restProp
       {children}
     </Elm>
   )
-}
-
-function decorateDateRange({ startDate, endDate, locale }) {
-  const dateSep = ' – ' // special unicode inside!
-  const fmtd = date => formatDate(parseDate(date), 'P', { locale })
-  try {
-    return `${fmtd(startDate)}${dateSep}${fmtd(endDate)}`
-  } catch (error) {
-    console.error(error)
-    return `${startDate}${dateSep}${endDate}` // fallback, why not
-  }
 }
