@@ -1,13 +1,24 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { format, isValid, parse, isSameDay } from 'date-fns'
+import {
+  format,
+  isValid,
+  parse,
+  isSameDay,
+  eachDayOfInterval,
+  addDays,
+  startOfMonth,
+  isFirstDayOfMonth
+} from 'date-fns'
 import { DateRange } from '@leihs/calendar'
 import LabelInside from './LabelInside'
 
 const defaultTxt = {
   from: 'Von',
-  until: 'Bis'
+  until: 'Bis',
+  placeholderFrom: 'Unbestimmt',
+  placeholderUntil: 'Unbestimmt'
 }
 export default function DateRangePicker({
   // selection:
@@ -119,6 +130,14 @@ export default function DateRangePicker({
     setFocus(e.target.name)
   }
 
+  // gray out days before min date
+  let minDateStartOfMonth = minDate
+  let datesBeforeMinDate = []
+  if (minDate && !isFirstDayOfMonth(minDate)) {
+    minDateStartOfMonth = startOfMonth(minDate)
+    datesBeforeMinDate = eachDayOfInterval({ start: minDateStartOfMonth, end: addDays(minDate, -1) })
+  }
+
   return (
     <div className={cx('date-range-picker ui-date-range-picker', className)} {...restProps}>
       <div className="mb-3">
@@ -132,7 +151,7 @@ export default function DateRangePicker({
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
             onKeyPress={e => e.key === 'Enter' && handleInputBlur(e)}
-            placeholder="Unbestimmt"
+            placeholder={txt.placeholderFrom}
             autoComplete="off"
           />
           <label htmlFor="startDate">{txt.from}</label>
@@ -149,7 +168,7 @@ export default function DateRangePicker({
             onBlur={handleInputBlur}
             onFocus={handleInputFocus}
             onKeyPress={e => e.key === 'Enter' && handleInputBlur(e)}
-            placeholder="Unbestimmt"
+            placeholder={txt.placeholderUntil}
             autoComplete="off"
           />
           <label htmlFor="endDate">{txt.until}</label>
@@ -169,10 +188,10 @@ export default function DateRangePicker({
           maxDateLoaded={maxDateLoaded}
           loadingIndicator={<div>LOADING...</div>}
           // date constraints:
-          minDate={minDate}
+          minDate={minDateStartOfMonth}
           maxDate={maxDate}
           disabledDates={disabledDates}
-          disabledStartDates={disabledStartDates}
+          disabledStartDates={[...datesBeforeMinDate, ...(disabledStartDates || [])]}
           disabledEndDates={disabledEndDates}
           allowSelectionOfDisabledDates
           // appearance and behaviour:

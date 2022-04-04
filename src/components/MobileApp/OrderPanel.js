@@ -258,7 +258,12 @@ const OrderPanel = ({
                     disabledStartDates={disabledStartDates}
                     disabledEndDates={disabledEndDates}
                     locale={currentLocale}
-                    txt={{ from: t(label, 'from', locale), until: t(label, 'until', locale) }}
+                    txt={{
+                      from: t(label, 'from', locale),
+                      until: t(label, 'until', locale),
+                      placeholderFrom: t(label, 'undefined', locale),
+                      placeholderUntil: t(label, 'undefined', locale)
+                    }}
                     className={validationResult.dateRangeErrors ? 'invalid-date-range' : ''}
                   />
                 </fieldset>

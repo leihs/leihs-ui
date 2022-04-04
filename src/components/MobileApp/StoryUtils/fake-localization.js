@@ -10,7 +10,8 @@ export const orderPanelTexts = {
     'user-delegation': { 'de-CH': 'Delegation' },
     timespan: { 'de-CH': 'Zeitraum' },
     from: { 'de-CH': 'Von' },
-    until: { 'de-CH': 'Bis' }
+    until: { 'de-CH': 'Bis' },
+    undefined: { 'de-CH': 'Unbestimmt' }
   },
   validate: {
     'missing-quantity': { 'de-CH': 'Verfügbarkeit kann nicht geprüft werden, da die Anzahl fehlt' },

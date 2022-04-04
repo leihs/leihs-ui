@@ -33,6 +33,7 @@ const Components = {
     Badge: require('./components/MobileApp/DesignComponents/Badge').default,
     ConfirmDialog: require('./components/MobileApp/DesignComponents/ConfirmDialog').default,
     DatePicker: require('./components/MobileApp/DesignComponents/DatePicker').default,
+    DateRangePicker: require('./components/MobileApp/DesignComponents/DateRangePicker').default,
     DownloadLink: require('./components/MobileApp/DesignComponents/DownloadLink').default,
     FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
     InfoMessage: require('./components/MobileApp/DesignComponents/InfoMessage').default,

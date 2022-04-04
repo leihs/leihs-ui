@@ -33171,7 +33171,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay rdrDayDisabled rdrDayStartOfMonth"
+                className="rdrDay rdrDayDisabledStart rdrDayStartOfMonth"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33186,7 +33186,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                     "color": "#3d91ff",
                   }
                 }
-                tabIndex={-1}
                 type="button"
               >
                 <span
@@ -33198,7 +33197,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay rdrDayDisabled"
+                className="rdrDay rdrDayDisabledStart"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33213,7 +33212,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                     "color": "#3d91ff",
                   }
                 }
-                tabIndex={-1}
                 type="button"
               >
                 <span
@@ -33225,7 +33223,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay rdrDayDisabled rdrDayWeekend"
+                className="rdrDay rdrDayDisabledStart rdrDayWeekend"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33240,7 +33238,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                     "color": "#3d91ff",
                   }
                 }
-                tabIndex={-1}
                 type="button"
               >
                 <span
@@ -33252,7 +33249,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay rdrDayDisabled rdrDayWeekend rdrDayEndOfWeek"
+                className="rdrDay rdrDayDisabledStart rdrDayWeekend rdrDayEndOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33267,7 +33264,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                     "color": "#3d91ff",
                   }
                 }
-                tabIndex={-1}
                 type="button"
               >
                 <span
