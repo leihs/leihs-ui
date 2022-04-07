@@ -96,25 +96,86 @@ export const with_onclick = () => {
 }
 with_onclick.storyName = 'Using onClick'
 
+export const oneLineLink = () => {
+  return (
+    <div>
+      <h1>ListCard</h1>
+      <div className="d-flex flex-column gap-4">
+        <div>
+          <p className="text-muted">
+            By default the geometry of linked card assumes content with two lines (or more). To keep the heights evenly
+            distributed this is not changed for cards which have one line only:
+          </p>
+          <ListCard.Stack>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>Something</ListCard.Title>
+              <ListCard.Body>With two lines</ListCard.Body>
+            </ListCard>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>A One Liner</ListCard.Title>
+            </ListCard>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>Another thing</ListCard.Title>
+              <ListCard.Body>With two lines</ListCard.Body>
+            </ListCard>
+          </ListCard.Stack>
+        </div>
+        <div>
+          <p className="text-muted">
+            However when most or all cards have only one line, a lot of whitespace and also some assymetry results:
+          </p>
+          <ListCard.Stack>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>Ibex</ListCard.Title>
+            </ListCard>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>Marmot</ListCard.Title>
+            </ListCard>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>Ptarmigan</ListCard.Title>
+            </ListCard>
+          </ListCard.Stack>
+        </div>
+        <div>
+          <p className="text-muted">
+            For a more compact look, apply the <code>`oneLine`</code> prop:
+          </p>
+          <ListCard.Stack>
+            <ListCard onClick={() => {}} oneLine>
+              <ListCard.Title>Ibex</ListCard.Title>
+            </ListCard>
+            <ListCard onClick={() => {}} oneLine>
+              <ListCard.Title>Marmot</ListCard.Title>
+            </ListCard>
+            <ListCard onClick={() => {}} oneLine>
+              <ListCard.Title>Ptarmigan</ListCard.Title>
+            </ListCard>
+          </ListCard.Stack>
+        </div>
+        <div></div>
+      </div>
+    </div>
+  )
+}
+
 export const edgeCases = () => {
   return (
     <div>
       <h1>ListCard</h1>
-      <p className="text-muted">Example with long title (truncated with an ellipsis):</p>
-      <ListCard.Stack>
-        <ListCard>
-          <ListCard.Title>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
-          </ListCard.Title>
-        </ListCard>
-      </ListCard.Stack>
-      <p className="text-muted">
-        Example with a link, but only one line of content. Note that the angle icon position is not affected by the
-        content size:
-      </p>
-      <ListCard.Stack>
-        <ListCard onClick={() => {}}>Lorem ipsum</ListCard>
-      </ListCard.Stack>
+      <div className="d-flex flex-column gap-4">
+        <div>
+          <p className="text-muted">Example with long title (truncated with an ellipsis):</p>
+          <ListCard.Stack>
+            <ListCard>
+              <ListCard.Title>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
+              </ListCard.Title>
+            </ListCard>
+          </ListCard.Stack>
+        </div>
+
+        <div></div>
+      </div>
     </div>
   )
 }

@@ -5,13 +5,13 @@ import Stack from './Stack'
 
 const BASE_CLASS = 'ui-list-card'
 
-export default function ListCard({ onClick, href, children, className, style, ...restProps }) {
+export default function ListCard({ onClick, href, children, className, style, oneLine, ...restProps }) {
   const clickable = !!(onClick || href)
   // NOTE: .position-relative is needed on outer card so that .streched-link will work correctly
   const wrapperClass = cx('py-3 position-relative', className, BASE_CLASS)
   const styleAttr = clickable
     ? {
-        minHeight: '4.375rem',
+        minHeight: oneLine ? '0' : '4.375rem',
         cursor: 'pointer',
         ...style
       }
@@ -25,10 +25,14 @@ export default function ListCard({ onClick, href, children, className, style, ..
           className={cx('float-end text-end ps-5', {
             'stretched-link': clickable
           })}
-          style={{
-            paddingTop: '0.5rem',
-            paddingBottom: '0.75rem'
-          }}
+          style={
+            oneLine
+              ? {}
+              : {
+                  paddingTop: '0.5rem',
+                  paddingBottom: '0.75rem'
+                }
+          }
         >
           <Icon icon={iconItemArrow} />
         </a>
