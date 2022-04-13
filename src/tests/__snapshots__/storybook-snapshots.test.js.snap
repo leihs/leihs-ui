@@ -40450,7 +40450,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
     className="row g-2"
   >
     <div
-      className="col-4"
+      className="col-3"
     >
       <button
         className="btn btn-secondary w-100"
@@ -40459,11 +40459,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
         tabIndex="-1"
         type="button"
       >
-        Minus
+        -
       </button>
     </div>
     <div
-      className="col-4"
+      className="col-6"
     >
       <input
         className="form-control text-center"
@@ -40478,7 +40478,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
       />
     </div>
     <div
-      className="col-4"
+      className="col-3"
     >
       <button
         className="btn btn-secondary w-100"
@@ -40487,7 +40487,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
         tabIndex="-1"
         type="button"
       >
-        Plus
+        +
       </button>
     </div>
   </div>
@@ -40578,7 +40578,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
     className="row g-2"
   >
     <div
-      className="col-4"
+      className="col-3"
     >
       <button
         className="btn btn-secondary w-100"
@@ -40587,11 +40587,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
         tabIndex="-1"
         type="button"
       >
-        Minus
+        -
       </button>
     </div>
     <div
-      className="col-4"
+      className="col-6"
     >
       <input
         className="form-control text-center"
@@ -40607,7 +40607,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
       />
     </div>
     <div
-      className="col-4"
+      className="col-3"
     >
       <button
         className="btn btn-secondary w-100"
@@ -40616,7 +40616,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
         tabIndex="-1"
         type="button"
       >
-        Plus
+        +
       </button>
     </div>
   </div>
@@ -40633,7 +40633,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
     className="row g-2"
   >
     <div
-      className="col-4"
+      className="col-3"
     >
       <button
         className="btn btn-secondary w-100"
@@ -40642,11 +40642,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
         tabIndex="-1"
         type="button"
       >
-        Minus
+        -
       </button>
     </div>
     <div
-      className="col-4"
+      className="col-6"
     >
       <div
         style={
@@ -40668,7 +40668,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
       />
     </div>
     <div
-      className="col-4"
+      className="col-3"
     >
       <button
         className="btn btn-secondary w-100"
@@ -40677,7 +40677,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Minu
         tabIndex="-1"
         type="button"
       >
-        Plus
+        +
       </button>
     </div>
   </div>

@@ -77,7 +77,7 @@ export default function MinusPlusControl({
 
   return (
     <div className="row g-2">
-      <div className="col-4">
+      <div className="col-3">
         <button
           ref={minusBtnRef}
           type="button"
@@ -86,10 +86,10 @@ export default function MinusPlusControl({
           onMouseDown={buttonMouseDown}
           tabIndex="-1"
         >
-          {txt.minus}
+          -
         </button>
       </div>
-      <div className="col-4">
+      <div className="col-6">
         <InputComponent
           className={cx('form-control text-center', className)}
           {...restProps}
@@ -100,7 +100,7 @@ export default function MinusPlusControl({
         />
         <div ref={msgRef} className="invalid-feedback"></div>
       </div>
-      <div className="col-4">
+      <div className="col-3">
         <button
           ref={plusBtnRef}
           type="button"
@@ -109,7 +109,7 @@ export default function MinusPlusControl({
           onMouseDown={buttonMouseDown}
           tabIndex="-1"
         >
-          {txt.plus}
+          +
         </button>
       </div>
     </div>
