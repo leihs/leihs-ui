@@ -201,19 +201,6 @@ const OrderPanel = ({
             {profileName}
           </Section>
         )}
-        <Section title={t(label, 'quantity', locale)} collapsible>
-          <label htmlFor="quantity" className="visually-hidden">
-            {t(label, 'quantity', locale)}
-          </label>
-          <MinusPlusControl
-            name="quantity"
-            id="quantity"
-            value={quantity}
-            onChange={changeQuantity}
-            min={1}
-            txt={{ minus: t(label, 'minus', locale), plus: t(label, 'plus', locale) }}
-          />
-        </Section>
         <Section title={t(label, 'pool', locale)} collapsible>
           <label htmlFor="pool-id" className="visually-hidden">
             {t(label, 'pool', locale)}
@@ -241,39 +228,55 @@ const OrderPanel = ({
             </InfoMessage>
           )}
         </Section>
+
         {!validationResult.poolError && (
           <Let title={t(label, 'timespan', locale)}>
             {({ title }) => (
-              <Section title={title} collapsible>
-                <fieldset>
-                  <legend className="visually-hidden">{title}</legend>
-                  <DateRangePicker
-                    selectedRange={selectedRange}
-                    onChange={changeDateRange}
-                    onCalendarNavigate={handleCalendarNavigate}
-                    maxDateLoaded={maxDateLoaded}
-                    minDate={minDate}
-                    maxDate={maxDate}
-                    disabledDates={disabledDates}
-                    disabledStartDates={disabledStartDates}
-                    disabledEndDates={disabledEndDates}
-                    locale={currentLocale}
-                    txt={{
-                      from: t(label, 'from', locale),
-                      until: t(label, 'until', locale),
-                      placeholderFrom: t(label, 'undefined', locale),
-                      placeholderUntil: t(label, 'undefined', locale)
-                    }}
-                    className={validationResult.dateRangeErrors ? 'invalid-date-range' : ''}
+              <Stack space="4">
+                <Section title={t(label, 'quantity', locale)} collapsible>
+                  <label htmlFor="quantity" className="visually-hidden">
+                    {t(label, 'quantity', locale)}
+                  </label>
+                  <MinusPlusControl
+                    name="quantity"
+                    id="quantity"
+                    value={quantity}
+                    onChange={changeQuantity}
+                    min={1}
+                    txt={{ minus: t(label, 'minus', locale), plus: t(label, 'plus', locale) }}
                   />
-                </fieldset>
-                {validationResult.dateRangeErrors &&
-                  validationResult.dateRangeErrors.map((msg, i) => (
-                    <React.Fragment key={i}>
-                      <Warning className="mt-2">{msg}</Warning>
-                    </React.Fragment>
-                  ))}
-              </Section>
+                </Section>
+                <Section title={title} collapsible>
+                  <fieldset>
+                    <legend className="visually-hidden">{title}</legend>
+                    <DateRangePicker
+                      selectedRange={selectedRange}
+                      onChange={changeDateRange}
+                      onCalendarNavigate={handleCalendarNavigate}
+                      maxDateLoaded={maxDateLoaded}
+                      minDate={minDate}
+                      maxDate={maxDate}
+                      disabledDates={disabledDates}
+                      disabledStartDates={disabledStartDates}
+                      disabledEndDates={disabledEndDates}
+                      locale={currentLocale}
+                      txt={{
+                        from: t(label, 'from', locale),
+                        until: t(label, 'until', locale),
+                        placeholderFrom: t(label, 'undefined', locale),
+                        placeholderUntil: t(label, 'undefined', locale)
+                      }}
+                      className={validationResult.dateRangeErrors ? 'invalid-date-range' : ''}
+                    />
+                  </fieldset>
+                  {validationResult.dateRangeErrors &&
+                    validationResult.dateRangeErrors.map((msg, i) => (
+                      <React.Fragment key={i}>
+                        <Warning className="mt-2">{msg}</Warning>
+                      </React.Fragment>
+                    ))}
+                </Section>
+              </Stack>
             )}
           </Let>
         )}
