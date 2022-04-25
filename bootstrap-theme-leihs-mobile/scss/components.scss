@@ -1,4 +1,4 @@
-/* 
+/*
  * Component Styles for Borrow Mobile App
  */
 
@@ -365,6 +365,12 @@
     top: 17px;
     right: 20px;
   }
+}
+
+/* Component: Menu */
+.leihs-menu .leihs-menu-item-selected {
+  background-color: $gray-600 !important;
+  color: $text-color-content-inverse !important;
 }
 
 /* Component: Info message */

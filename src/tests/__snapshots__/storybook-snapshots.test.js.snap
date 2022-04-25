@@ -40881,7 +40881,7 @@ Array [
     className="position-relative"
   >
     <div
-      className="ui-menu h-100 pb-5 bg-light-shade overflow-scroll"
+      className="ui-menu leihs-menu h-100 pb-5 bg-light-shade overflow-scroll"
     >
       <nav
         className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
@@ -40915,7 +40915,7 @@ Array [
               Link 2
             </a>
             <a
-              className="ui-menu-item ui-menu-item-selected btn btn-secondary rounded-pill border"
+              className="ui-menu-item ui-menu-item-selected leihs-menu-item-selected btn btn-secondary rounded-pill"
               href="#some/route"
             >
               Link 3 - selected
@@ -40940,7 +40940,7 @@ Array [
               Button 4
             </button>
             <button
-              className="ui-menu-item ui-menu-item-selected btn btn-secondary rounded-pill border"
+              className="ui-menu-item ui-menu-item-selected leihs-menu-item-selected btn btn-secondary rounded-pill"
               onClick={[Function]}
             >
               Button 5 - selected
@@ -51137,7 +51137,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Menu Menu 1`] = `
       </div>
     </nav>
     <div
-      className="ui-menu h-100 pb-5 bg-light-shade overflow-scroll d-none"
+      className="ui-menu leihs-menu h-100 pb-5 bg-light-shade overflow-scroll d-none"
       id="menu"
     >
       <nav
@@ -52096,7 +52096,7 @@ exports[`Storybook HTML Snapshots MobileApp/Wireframes/Profile Switch Profile Sw
       </div>
     </nav>
     <div
-      className="ui-menu h-100 pb-5 bg-light-shade overflow-scroll d-none"
+      className="ui-menu leihs-menu h-100 pb-5 bg-light-shade overflow-scroll d-none"
       id="menu"
     >
       <nav

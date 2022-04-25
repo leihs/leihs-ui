@@ -5,7 +5,7 @@ import cx from 'classnames'
 export default function Menu({ show = true, children, className, ...restProps }) {
   return (
     <div
-      className={cx('ui-menu h-100 pb-5 bg-light-shade overflow-scroll', { 'd-none': !show }, className)}
+      className={cx('ui-menu leihs-menu h-100 pb-5 bg-light-shade overflow-scroll', { 'd-none': !show }, className)}
       {...restProps}
     >
       <nav
@@ -32,9 +32,8 @@ Menu.Link = function MenuLink({ children, isSelected, className, ...restProps })
     <a
       className={cx(
         'ui-menu-item',
-        { 'ui-menu-item-selected': isSelected },
+        { 'ui-menu-item-selected leihs-menu-item-selected': isSelected },
         'btn btn-secondary rounded-pill',
-        { border: isSelected },
         className
       )}
       {...restProps}
@@ -49,9 +48,8 @@ Menu.Button = function MenuButton({ children, isSelected, className, ...restProp
     <button
       className={cx(
         'ui-menu-item',
-        { 'ui-menu-item-selected': isSelected },
+        { 'ui-menu-item-selected leihs-menu-item-selected': isSelected },
         'btn btn-secondary rounded-pill',
-        { border: isSelected },
         className
       )}
       {...restProps}
