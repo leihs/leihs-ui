@@ -196,12 +196,8 @@ const OrderPanel = ({
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
       <Stack space="4">
         <Section>{modelData.name}</Section>
-        {profileName && (
-          <Section title={t(label, 'user-delegation', locale)} collapsible>
-            {profileName}
-          </Section>
-        )}
-        <Section title={t(label, 'pool', locale)} collapsible>
+        {profileName && <Section title={t(label, 'user-delegation', locale)}>{profileName}</Section>}
+        <Section title={t(label, 'pool', locale)}>
           <label htmlFor="pool-id" className="visually-hidden">
             {t(label, 'pool', locale)}
           </label>
@@ -233,7 +229,7 @@ const OrderPanel = ({
           <Let title={t(label, 'timespan', locale)}>
             {({ title }) => (
               <Stack space="4">
-                <Section title={t(label, 'quantity', locale)} collapsible>
+                <Section title={t(label, 'quantity', locale)}>
                   <label htmlFor="quantity" className="visually-hidden">
                     {t(label, 'quantity', locale)}
                   </label>
@@ -246,7 +242,7 @@ const OrderPanel = ({
                     txt={{ minus: t(label, 'minus', locale), plus: t(label, 'plus', locale) }}
                   />
                 </Section>
-                <Section title={title} collapsible>
+                <Section title={title}>
                   <fieldset>
                     <legend className="visually-hidden">{title}</legend>
                     <DateRangePicker
