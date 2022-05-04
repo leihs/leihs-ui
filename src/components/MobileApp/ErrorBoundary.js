@@ -1,4 +1,5 @@
 import React from 'react'
+import ErrorView from './DesignComponents/ErrorView'
 
 // https://reactjs.org/docs/error-boundaries.html
 export class ErrorBoundary extends React.Component {
@@ -18,23 +19,17 @@ export class ErrorBoundary extends React.Component {
 
   render() {
     if (this.state.errorInfo) {
-      // Error path
+      const txt = this.props.txt || {}
       return (
-        <div className="alert alert-primary overflow-scroll">
-          <h2>Something went wrong</h2>
-          <button className="btn btn-primary btn-sm me-3" onClick={() => document.location.reload()}>
-            Reload current page
-          </button>
-          <button className="btn btn-primary btn-sm" onClick={() => (document.location.href = '/')}>
-            Go to start page
-          </button>
-          <details style={{ whiteSpace: 'pre-wrap', fontSize: '0.75rem', marginTop: '1rem' }}>
-            {this.state.error && this.state.error.toString()}
-            <br />
-            {/* NOTE: stacktrace has absolute paths in snapshot tests, which breaks them! */}
-            {process.env.NODE_ENV === 'development' && this.state.errorInfo.componentStack}
-          </details>
-        </div>
+        <ErrorView
+          title={txt.title}
+          message={this.state.error && this.state.error.toString()}
+          details={process.env.NODE_ENV === 'development' && this.state.errorInfo.componentStack}
+          actions={[
+            { title: txt.reload, onClick: () => document.location.reload(), variant: 'button' },
+            { title: txt.goToStart, href: '/', variant: 'link-button' }
+          ]}
+        />
       )
     }
     // Normally, just render children

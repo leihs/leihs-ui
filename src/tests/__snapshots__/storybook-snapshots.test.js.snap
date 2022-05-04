@@ -41940,7 +41940,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     Navbar will stay alive when page content rendering crashes (and vice versa).
   </p>
   <div
-    className="shadow"
+    className="shadow mb-4"
   >
     <div
       className="pb-5 ui-page-layout"
@@ -42025,16 +42025,57 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
           }
         }
       >
-        <button
-          className="btn btn-outline-danger"
-          onClick={[Function]}
-          type="button"
+        <div
+          className="alert alert-danger"
         >
-          Crash it
-        </button>
+          <h2>
+            Error displaying this content
+          </h2>
+          <details
+            className="mb-3"
+          >
+            <div
+              className="preserve-linebreaks small"
+            >
+              - bar
+- baz
+            </div>
+          </details>
+          <div
+            className="d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start"
+          >
+            <button
+              className="btn btn-dark"
+              onClick={[Function]}
+            >
+              Reload current page
+            </button>
+            <a
+              className="btn btn-link"
+              href="/"
+            >
+              Go to start page
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
+  <p
+    className="text-muted"
+  >
+    For an interactive example see:
+  </p>
+  <p
+    className="text-muted"
+  >
+    <button
+      className="btn btn-light btn-sm"
+      onClick={[Function]}
+    >
+      Wireframes &gt; Errors
+    </button>
+  </p>
 </div>
 `;
 
@@ -46539,6 +46580,183 @@ exports[`Storybook HTML Snapshots MobileApp/Overview/Translations Translations 1
      
     fou
   </p>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Wireframes/Errors Errors 1`] = `
+<div
+  className="pb-5 ui-page-layout"
+>
+  <nav
+    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom"
+  >
+    <div
+      className="navbar-nav"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
+    >
+      <a
+        className="nav-item nav-link"
+      >
+        <span
+          className="ui-icon ui-menu-icon"
+        >
+          <svg
+            style={
+              Object {
+                "display": "inline",
+              }
+            }
+          >
+            Menu Icon.svg
+          </svg>
+        </span>
+      </a>
+    </div>
+    <a
+      className="navbar-brand me-0 fw-bold"
+    >
+      Leihs
+    </a>
+    <div
+      className="navbar-nav flex-row-reverse"
+      style={
+        Object {
+          "width": "74px",
+        }
+      }
+    >
+      <a
+        className="nav-item nav-link position-relative"
+        href="/app/borrow/order"
+        role="button"
+      >
+        <div
+          className="cart-badge position-absolute"
+          style={
+            Object {
+              "right": "-8px",
+              "top": "4px",
+            }
+          }
+        >
+          <span>
+            3
+          </span>
+        </div>
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Bag Icon.svg
+        </svg>
+      </a>
+    </div>
+  </nav>
+  <div
+    className="page-inset-x py-4 container-fluid"
+    style={
+      Object {
+        "maxWidth": "720px",
+      }
+    }
+  >
+    <h1>
+      Errors
+    </h1>
+    <div
+      className="mb-4"
+    >
+      <div>
+        <h2>
+          Initial fetching (routing)
+        </h2>
+        <p
+          className="text-muted"
+        >
+          Inline error message is shown in place of the content which is affected by the error. Depending on the situation the message can replace the whole page content or only parts of it.
+        </p>
+        <p>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+            type="button"
+          >
+            Load something
+          </button>
+        </p>
+        <p
+          className="text-muted"
+        >
+          Variant: unauthorized
+        </p>
+        <p>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+            type="button"
+          >
+            Load something (unauthorized)
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      className="mb-4"
+    >
+      <div>
+        <h2>
+          Non-routing events
+        </h2>
+        <p
+          className="text-muted"
+        >
+          A modal notification is shown. 
+        </p>
+        <p>
+          <button
+            className="btn btn-primary"
+            onClick={[Function]}
+            type="button"
+          >
+            Do something
+          </button>
+        </p>
+      </div>
+    </div>
+    <div
+      className=""
+    >
+      <div>
+        <h2>
+          Component rendering
+        </h2>
+        <p
+          className="text-muted"
+        >
+          Component exceptions are caught and displayed by the layout's ErrorBoundary.
+        </p>
+        <button
+          className="btn btn-primary"
+          onClick={[Function]}
+          type="button"
+        >
+          Crash this component
+        </button>
+        <p
+          className="text-muted small mt-1"
+        >
+          Ignore the dark-coloured overlay that is shown first, it does not exist in production
+        </p>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 

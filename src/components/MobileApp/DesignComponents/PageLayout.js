@@ -2,13 +2,19 @@ import React from 'react'
 import cx from 'classnames'
 import { ErrorBoundary } from '../ErrorBoundary'
 
-export default function PageLayout({ children, navbar, className, ...restProps }) {
+export default function PageLayout({ children, navbar, className, errorBoundaryTxt, ...restProps }) {
+  errorBoundaryTxt = {
+    title: 'Error displaying this content',
+    reload: 'Reload current page',
+    goToStart: 'Go to start page',
+    ...errorBoundaryTxt
+  }
   const BASE_CLASS = 'ui-page-layout'
   return (
     <div className={cx('pb-5', className, BASE_CLASS)} {...restProps}>
-      <ErrorBoundary>{navbar}</ErrorBoundary>
+      <ErrorBoundary txt={errorBoundaryTxt}>{navbar}</ErrorBoundary>
       <div className="page-inset-x py-4 container-fluid" style={{ maxWidth: '720px' }}>
-        <ErrorBoundary>{children}</ErrorBoundary>
+        <ErrorBoundary txt={errorBoundaryTxt}>{children}</ErrorBoundary>
       </div>
     </div>
   )

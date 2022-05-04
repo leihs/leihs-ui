@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
+import { linkTo } from '@storybook/addon-links'
 import PageLayout from './PageLayout'
+import ErrorView from './ErrorView'
 import Navbar from './Navbar'
 
 export default {
@@ -59,33 +61,30 @@ export const horizontalInset = () => {
   )
 }
 
-function Crasher() {
-  const [crash, setCrash] = useState(false)
-  useEffect(() => {
-    if (crash) {
-      throw new Error('It crashed')
-    }
-  }, [crash])
-  return (
-    <>
-      <button type="button" className="btn btn-outline-danger" onClick={() => setCrash(true)}>
-        Crash it
-      </button>
-    </>
-  )
-}
-
 export const errorBoundary = () => {
   const navbar = <Navbar brandName="leihs" cartItemCount={3} />
   return (
     <div>
       <h1>PageLayout - ErrorBoundary</h1>
       <p className="text-muted">Navbar will stay alive when page content rendering crashes (and vice versa).</p>
-      <div className="shadow">
+      <div className="shadow mb-4">
         <PageLayout navbar={navbar}>
-          <Crasher />
+          <ErrorView
+            title="Error displaying this content"
+            details={'- bar\n- baz'}
+            actions={[
+              { title: 'Reload current page', onClick: () => document.location.reload(), variant: 'button' },
+              { title: 'Go to start page', href: '/', variant: 'link-button' }
+            ]}
+          />
         </PageLayout>
       </div>
+      <p className="text-muted">For an interactive example see:</p>
+      <p className="text-muted">
+        <button className="btn btn-light btn-sm" onClick={linkTo('MobileApp/Wireframes/Errors')}>
+          Wireframes &gt; Errors
+        </button>
+      </p>
     </div>
   )
 }

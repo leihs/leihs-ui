@@ -35,6 +35,8 @@ const Components = {
     DatePicker: require('./components/MobileApp/DesignComponents/DatePicker').default,
     DateRangePicker: require('./components/MobileApp/DesignComponents/DateRangePicker').default,
     DownloadLink: require('./components/MobileApp/DesignComponents/DownloadLink').default,
+    ErrorNotification: require('./components/MobileApp/DesignComponents/ErrorNotification').default,
+    ErrorView: require('./components/MobileApp/DesignComponents/ErrorView').default,
     FilterButton: require('./components/MobileApp/DesignComponents/FilterButton').default,
     InfoMessage: require('./components/MobileApp/DesignComponents/InfoMessage').default,
     InputWithClearButton: require('./components/MobileApp/DesignComponents/InputWithClearButton').default,
