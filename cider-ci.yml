@@ -30,6 +30,8 @@ jobs:
     name: 'All Tests OK'
     depends_on: &ALLOK_DEP
       test passed: { type: job, job_key: test, states: [passed] }
+      build passed: { type: job, job_key: build, states: [passed] }
+      lint passed: { type: job, job_key: lint, states: [passed] }
     run_when: *ALLOK_DEP
     task: 'echo ALL OK'
 
