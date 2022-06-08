@@ -1,14 +1,14 @@
 import React from 'react'
-import FilterButton from '../../../DesignComponents/FilterButton'
-import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
-import PageLayout from '../../../DesignComponents/PageLayout'
-import Stack from '../../../DesignComponents/Stack'
-import Section from '../../../DesignComponents/Section'
-import ListCard from '../../../DesignComponents/ListCard'
-import ProgressInfo from '../../../DesignComponents/ProgressInfo'
+import FilterButton from '../../DesignComponents/FilterButton'
+import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
+import PageLayout from '../../DesignComponents/PageLayout'
+import Stack from '../../DesignComponents/Stack'
+import Section from '../../DesignComponents/Section'
+import ListCard from '../../DesignComponents/ListCard'
+import ProgressInfo from '../../DesignComponents/ProgressInfo'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Bestellungen/Liste',
+  title: 'MobileApp/Prototypes/Meine Bestellungen/Liste',
   parameters: { layout: 'fullscreen' }
 }
 
@@ -16,7 +16,7 @@ export const liste = ({ ordersByBasicState }) => {
   return (
     <PageLayoutMock>
       <PageLayout.Header title="Meine Bestellungen">
-        <FilterButton>Alle Bestellungen</FilterButton>
+        <FilterButton>Zeige Suche/Filter</FilterButton>
       </PageLayout.Header>
 
       <Stack space="5">
@@ -116,7 +116,7 @@ const ordersByBasicState = [
           },
           {
             title: 'Rückgabe',
-            info: '2 von 4 Gegenständen abgeholt',
+            info: '2 von 4 Gegenständen zurückgebracht',
             totalCount: 4,
             doneCount: 2
           }

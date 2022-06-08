@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
-import ModalDialog from '../../../DesignComponents/ModalDialog'
-import Stack from '../../../DesignComponents/Stack'
-import Section from '../../../DesignComponents/Section'
-import LabelInside from '../../../DesignComponents/LabelInside'
-import InputWithClearButton from '../../../DesignComponents/InputWithClearButton'
+import ModalDialog from '../../DesignComponents/ModalDialog'
+import Stack from '../../DesignComponents/Stack'
+import Section from '../../DesignComponents/Section'
+import LabelInside from '../../DesignComponents/LabelInside'
+import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
 
 export default {
-  title: 'MobileApp/Wireframes/Page Typology/Form',
+  title: 'MobileApp/Prototypes/Page Typology/Form',
   parameters: {
     layout: 'fullscreen',
     storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
@@ -17,6 +17,7 @@ export default {
 
 export const form = ({ onSubmit }) => {
   const [wasSubmitted, setWasSubmitted] = useState()
+  const [term, setTerm] = useState('')
 
   function submit(e) {
     e.preventDefault()
@@ -38,14 +39,22 @@ export const form = ({ onSubmit }) => {
           id="the-form"
         >
           <Stack space="4">
-            <Section collapsible title="Search term">
+            <Section title="Search term">
               <label htmlFor="field-1" className="visually-hidden">
                 Search term
               </label>
-              <InputWithClearButton type="text" id="field-1" name="field-1" className="form-control" required />
+              <InputWithClearButton
+                type="text"
+                id="field-1"
+                name="field-1"
+                className="form-control"
+                required
+                value={term}
+                onChange={e => setTerm(e.target.value)}
+              />
               <div className="invalid-feedback">Required field</div>
             </Section>
-            <Section collapsible title="Pool">
+            <Section title="Pool">
               <label htmlFor="field-2" className="visually-hidden">
                 Pool
               </label>
@@ -56,7 +65,7 @@ export const form = ({ onSubmit }) => {
                 <option value="value-3">ITZ</option>
               </select>
             </Section>
-            <Section collapsible title="Availability">
+            <Section title="Availability">
               <fieldset>
                 <legend className="visually-hidden">Availability</legend>
                 <div className="d-flex flex-column gap-3">

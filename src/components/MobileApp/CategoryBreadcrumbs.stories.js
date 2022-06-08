@@ -5,7 +5,7 @@ import FilterButton from './DesignComponents/FilterButton'
 import PageLayoutMock from './StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Integrated Components/CategoryBreadcrumbs',
+  title: 'MobileApp/Feature Components/CategoryBreadcrumbs',
   component: CategoryBreadcrumbs,
   parameters: {
     layout: 'fullscreen'

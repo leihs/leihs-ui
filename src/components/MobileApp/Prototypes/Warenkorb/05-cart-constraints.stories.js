@@ -2,12 +2,12 @@ import React from 'react'
 
 import { action } from '@storybook/addon-actions'
 
-import OrderPanel from '../../../OrderPanel'
-import { locale as fakeLocale, orderPanelTexts as fakeTxt } from '../../../StoryUtils/fake-localization'
+import OrderPanel from '../../OrderPanel'
+import { locale as fakeLocale, orderPanelTexts as fakeTxt } from '../../StoryUtils/fake-localization'
 import { eachDayOfInterval, formatISO, getDay } from 'date-fns'
 
 export default {
-  title: 'MobileApp/Wireframes/Warenkorb/Cart Constraints'
+  title: 'MobileApp/Prototypes/Warenkorb/Cart Constraints'
 }
 
 export const cartConstraints = () => {
@@ -54,6 +54,7 @@ export const cartConstraints = () => {
       <OrderPanel
         modelData={modelData}
         maxDateTotal={maxDate}
+        maxDateLoaded={maxDate}
         inventoryPools={[pool1, pool2]}
         initialQuantity={3}
         onSubmit={action('submit')}

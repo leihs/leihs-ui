@@ -2,18 +2,18 @@ import React, { useState } from 'react'
 import { de } from 'date-fns/locale'
 import { addDays, addYears, format, isValid, startOfDay } from 'date-fns'
 
-import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
-import ModalDialog from '../../../DesignComponents/ModalDialog'
-import ConfirmDialog from '../../../DesignComponents/ConfirmDialog'
-import PageLayout from '../../../DesignComponents/PageLayout'
-import Section from '../../../DesignComponents/Section'
-import Stack from '../../../DesignComponents/Stack'
-import DateRangePicker from '../../../DesignComponents/DateRangePicker'
-import Warning from '../../../DesignComponents/Warning'
-import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
+import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
+import ModalDialog from '../../DesignComponents/ModalDialog'
+import ConfirmDialog from '../../DesignComponents/ConfirmDialog'
+import PageLayout from '../../DesignComponents/PageLayout'
+import Section from '../../DesignComponents/Section'
+import Stack from '../../DesignComponents/Stack'
+import DateRangePicker from '../../DesignComponents/DateRangePicker'
+import Warning from '../../DesignComponents/Warning'
+import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Bestellungen/Wiederholen',
+  title: 'MobileApp/Prototypes/Meine Bestellungen/Wiederholen',
   parameters: { layout: 'fullscreen' }
 }
 

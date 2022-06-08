@@ -26,8 +26,8 @@ export function profileMenu() {
       <p></p>
       <p className="text-muted">For an example with more context see:</p>
       <p className="text-muted">
-        <button className="btn btn-light btn-sm" onClick={linkTo('MobileApp/Wireframes/Profile Switch')}>
-          Wireframes &gt; Profile Switch
+        <button className="btn btn-light btn-sm" onClick={linkTo('MobileApp/Prototypes/Profile Switch')}>
+          Prototypes &gt; Profile Switch
         </button>
       </p>
     </>

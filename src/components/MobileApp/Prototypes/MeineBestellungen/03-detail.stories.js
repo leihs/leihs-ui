@@ -1,17 +1,16 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
-import Stack from '../../../DesignComponents/Stack'
-import Section from '../../../DesignComponents/Section'
-import ListCard from '../../../DesignComponents/ListCard'
-import PageLayout from '../../../DesignComponents/PageLayout'
-import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
-import Badge from '../../../DesignComponents/Badge'
-import ProgressInfo from '../../../DesignComponents/ProgressInfo'
-import FilterButton from '../../../DesignComponents/FilterButton'
-import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
+import Stack from '../../DesignComponents/Stack'
+import Section from '../../DesignComponents/Section'
+import ListCard from '../../DesignComponents/ListCard'
+import PageLayout from '../../DesignComponents/PageLayout'
+import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
+import Badge from '../../DesignComponents/Badge'
+import ProgressInfo from '../../DesignComponents/ProgressInfo'
+import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Bestellungen/Detail',
+  title: 'MobileApp/Prototypes/Meine Bestellungen/Detail',
   parameters: { layout: 'fullscreen' }
 }
 
@@ -36,6 +35,11 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
               </ActionButtonGroup>
             )}
           </Stack>
+        </Section>
+
+        <Section title="Bestellung für" collapsible>
+          {order.delegation.name}
+          {order.delegation.isUser && ' (persönlich)'}
         </Section>
 
         <Section title="Zweck" collapsible>
@@ -63,9 +67,6 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
         </Section>
 
         <Section title="Gegenstände" collapsible className="position-relative">
-          <FilterButton className="position-absolute top-0 end-0" onClick={() => alert('TODO (what does it do?)')}>
-            Alle Inventarparks
-          </FilterButton>
           <ListCard.Stack>
             {order.models.map(({ reservation, model, pool }, i) => (
               <ListCard key={i} onClick={() => onItemClick(reservation.id)}>
@@ -82,11 +83,6 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
               </ListCard>
             ))}
           </ListCard.Stack>
-        </Section>
-
-        <Section title="Delegation" collapsible>
-          {order.delegation.name}
-          {order.delegation.isUser && ' (persönlich)'}
         </Section>
       </Stack>
 

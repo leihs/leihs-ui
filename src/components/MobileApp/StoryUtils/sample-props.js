@@ -60,10 +60,14 @@ export const categoryList = [
 export const subCategoryListProps = {
   list: [
     {
-      id: '78920f6d-57c1-5231-b0c4-f58dcddc64cf',
-      href: '#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf',
-      imgSrc: require('../../../static/example-images/categories/5d302b26-5737-48e7-a90d-e65f22d8c065.jpg'),
-      caption: 'Audio'
+      id: '78920f6d-57c1-5231-b0c4-f58dcddc6400',
+      href: '#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc6400',
+      caption: 'Kopfhörer'
+    },
+    {
+      id: '78920f6d-57c1-5231-b0c4-f58dcddc6401',
+      href: '#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc6401',
+      caption: 'Lautsprecher'
     }
   ]
 }
@@ -71,12 +75,47 @@ export const subCategoryListProps = {
 export const modelListProps = {
   list: [
     {
-      id: '78920f6d-57c1-5231-b0c4-f58dcddc64cf',
-      href: '#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc64cf',
-      imgSrc: require('../../../static/example-images/categories/5d302b26-5737-48e7-a90d-e65f22d8c065.jpg'),
-      caption: 'Audio'
+      id: '4f64adb0-6325-4eb1-bf36-8a73a986ed4b',
+      href: '#app/borrow/models/4f64adb0-6325-4eb1-bf36-8a73a986ed4b',
+      imgSrc: require('../../../static/example-images/models/4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg'),
+      caption: 'Audio-Mischpult Behringer XENYX Q1204USB'
+    },
+    {
+      id: '720ecc22-ae14-576b-aa23-c09ee71103ad',
+      href: '#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad',
+      caption: 'BluRay-Player Sony BDP-S490 3D',
+      subCaption: 'Sony',
+      imgSrc: require('../../../static/example-images/models/4d446da0-81ae-5dd4-a2b0-f9adae2de0d4.jpg')
     }
   ]
+}
+
+export const modelSearchFilterProps = {
+  currentFilters: {},
+  locale: 'de-CH',
+  onSubmit: () => {},
+  onChangeSearchTerm: () => {},
+  onOpenPanel: () => {},
+  onClearFilter: () => {},
+  txt: {
+    'search-input-label': {
+      'de-CH': 'Suche',
+      'en-GB': 'Search'
+    },
+    'search-input-placeholder': {
+      'de-CH': 'Suchen…',
+      'en-GB': 'Search…'
+    },
+    'search-filter-label': {
+      'de-CH': 'Filter',
+      'en-GB': 'Filter'
+    },
+    'availability-label': {
+      'de-CH': '{quantity} Stück verfügbar {startDate, date, narrow} – {endDate, date, narrow}',
+      'en-GB':
+        '{quantity} {quantity, plural, =1 {item} other {items}} available {startDate, date, narrow} – {endDate, date, narrow}'
+    }
+  }
 }
 
 export function getOrderPanelMockData() {

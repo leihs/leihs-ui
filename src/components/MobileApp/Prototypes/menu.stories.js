@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 
-import Navbar from '../../DesignComponents/Navbar'
-import Menu from '../../DesignComponents/Menu'
-import PageLayout from '../../DesignComponents/PageLayout'
+import Navbar from '../DesignComponents/Navbar'
+import Menu from '../DesignComponents/Menu'
+import PageLayout from '../DesignComponents/PageLayout'
 
 export default {
-  title: 'MobileApp/Wireframes/Menu',
+  title: 'MobileApp/Prototypes/Menu',
   parameters: { layout: 'fullscreen' }
 }
 

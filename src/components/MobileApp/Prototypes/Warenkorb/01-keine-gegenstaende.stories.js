@@ -1,11 +1,11 @@
 import React from 'react'
 
-import PageLayout from '../../../DesignComponents/PageLayout'
-import Stack from '../../../DesignComponents/Stack'
-import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
+import PageLayout from '../../DesignComponents/PageLayout'
+import Stack from '../../DesignComponents/Stack'
+import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/Warenkorb/Keine Gegenstände',
+  title: 'MobileApp/Prototypes/Warenkorb/Keine Gegenstände',
   parameters: { layout: 'fullscreen' }
 }
 

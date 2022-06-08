@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react'
 
-import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
-import Stack from '../../DesignComponents/Stack'
-import ErrorNotification from '../../DesignComponents/ErrorNotification'
-import ErrorView from '../../DesignComponents/ErrorView'
+import PageLayoutMock from '../StoryUtils/PageLayoutMock'
+import Stack from '../DesignComponents/Stack'
+import ErrorNotification from '../DesignComponents/ErrorNotification'
+import ErrorView from '../DesignComponents/ErrorView'
 
 export default {
-  title: 'MobileApp/Wireframes/Errors',
+  title: 'MobileApp/Prototypes/Errors',
   parameters: {
     layout: 'fullscreen'
   }

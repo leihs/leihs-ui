@@ -13,7 +13,8 @@ module.exports = {
     '@storybook/addon-docs',
     '@storybook/addon-controls',
     '@storybook/addon-links',
-    '@storybook/addon-viewport/register',
-    '@storybook/addon-a11y/register'
-  ]
+    '@storybook/addon-viewport',
+    '@storybook/addon-a11y'
+  ],
+  staticDirs: ['../static']
 }

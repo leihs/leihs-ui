@@ -5,30 +5,54 @@ export default {
   parameters: { viewport: { defaultViewport: 'reset' } }
 }
 
+const drawling = `┌───────────────────────────────────────────────────────────────────┐
+│                                                                   │
+│ Borrow App (CLJS)                                                 │
+│                                                                   │
+└────────────┬────────┬───────────────┬─────────────────────────────┘
+             │        │               │                              
+┌────────────┼────────┼───────────────┼─────────────────────────────┐
+│            │        │               │                             │
+│ Leihs UI   │        │           ┌───▼───────────────────────┐     │
+│            │        │           │    Feature Components     │     │
+│            │        │           └───────┬──────────────┬────┘     │
+│            │        │                   │              │          │
+│            │    ┌───▼───────────────────▼──────────┐   │          │
+│            │    │        Design Components         │   │          │
+│            │    └───────────────┬──────────────────┘   │          │
+│            │                    │                      │          │
+│     ┌──────▼────────────────────▼──────────────────────▼────┐     │
+│     │                    Bootstrap Theme                    │     │
+│     └───────────────────────────────────────────────────────┘     │
+│                                                                   │
+└───────────────────────────────────────────────────────────────────┘`
+
 export function Overview() {
   return (
     <div>
-      <h1>Leihs Borrow App UI</h1>
-      <p>Built using a set of design components on top of Bootstrap.</p>
+      <h1>Leihs UI components for Borrow App</h1>
+      <p>A set of design components on top of a Bootstrap theme.</p>
+      <pre style={{ fontSize: '0.8rem', fontFamily: 'Monaco, Monospace' }}>{drawling}</pre>
       <h2>Story breakdown</h2>
       <ul className="list-group">
         <li className="list-group-item">
-          <h2>Wireframes</h2>
-          How views can be composed using design components and Bootstrap classes
+          <h2>Bootstrap Theme</h2>
+          <div>Reference about colors, spacing, typography etc.</div>
         </li>
         <li className="list-group-item">
           <h2>Design Components</h2>
-          Detailed stories about all available design components
+          <div>Detailed stories about all available design components.</div>
         </li>
         <li className="list-group-item">
-          <h2>Bootstrap Theme</h2>
-          Reference about colors, spacing, typography etc.
+          <h2>Feature Components</h2>
+          <div>
+            Describing the few available feature components (why &quot;few&quot;? because features are preferably
+            composed in Borrow App).
+          </div>
         </li>
         <li className="list-group-item">
-          <h2>Integrated Components</h2>A few ready-made partial views for the app.{' '}
-          <span className="fw-light">
-            Note that most views are composed by the app directly using the design components and Bootstrap classes.
-          </span>
+          <h2>Prototypes</h2>
+          <div>Conceptual drafts for the feature composition in Borrow App.</div>
         </li>
       </ul>
     </div>

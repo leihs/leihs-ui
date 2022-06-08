@@ -9,7 +9,7 @@ import OrderPanel from './OrderPanel'
 import ModalDialog from './DesignComponents/ModalDialog'
 
 export default {
-  title: 'MobileApp/Integrated Components/OrderPanel',
+  title: 'MobileApp/Feature Components/OrderPanel',
   component: OrderPanel,
   parameters: {
     layout: 'fullscreen',

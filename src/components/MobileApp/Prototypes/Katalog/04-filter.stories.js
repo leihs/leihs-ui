@@ -3,19 +3,18 @@ import { action } from '@storybook/addon-actions'
 import { de } from 'date-fns/locale'
 import { addYears, isAfter, startOfToday, startOfTomorrow } from 'date-fns'
 
-import Section from '../../../DesignComponents/Section'
-import InputWithClearButton from '../../../DesignComponents/InputWithClearButton'
-import ModalDialog from '../../../DesignComponents/ModalDialog'
-import Stack from '../../../DesignComponents/Stack'
-import Warning from '../../../DesignComponents/Warning'
-import DateRangePicker from '../../../DesignComponents/DateRangePicker'
-import MinusPlusControl from '../../../DesignComponents/MinusPlusControl'
+import Section from '../../DesignComponents/Section'
+import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
+import ModalDialog from '../../DesignComponents/ModalDialog'
+import Stack from '../../DesignComponents/Stack'
+import Warning from '../../DesignComponents/Warning'
+import DateRangePicker from '../../DesignComponents/DateRangePicker'
+import MinusPlusControl from '../../DesignComponents/MinusPlusControl'
 
 export default {
-  title: 'MobileApp/Wireframes/Katalog/Filter',
+  title: 'MobileApp/Prototypes/Katalog/Filter',
   parameters: {
-    layout: 'fullscreen',
-    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+    layout: 'fullscreen'
   },
   args: {
     onSubmit: action('apply'),
@@ -66,11 +65,11 @@ export const filter = ({ onSubmit, onDismiss }) => {
   }
 
   return (
-    <ModalDialog title="Katalog filtern" shown dismissible onDismiss={onDismiss}>
+    <ModalDialog title="Filter" shown dismissible onDismiss={onDismiss}>
       <ModalDialog.Body>
         <form onSubmit={submit} noValidate autoComplete="off" id="model-filter-form">
           <Stack space="4">
-            <Section title="Stichwort" collapsible>
+            <Section title="Stichwort">
               <label htmlFor="term" className="visually-hidden">
                 Stichwort
               </label>
@@ -82,32 +81,7 @@ export const filter = ({ onSubmit, onDismiss }) => {
                 onChange={e => setTerm(e.target.value)}
               />
             </Section>
-            <Section title="Inventarparks" collapsible>
-              <div className="d-flex flex-column gap-3">
-                <div>
-                  <label htmlFor="pool-id" className="visually-hidden">
-                    Inventarparks
-                  </label>
-                  <select
-                    className="form-select"
-                    name="pool-id"
-                    id="pool-id"
-                    value={poolId}
-                    onChange={e => setPoolId(e.target.value)}
-                  >
-                    <option value="all" key="all">
-                      Alle Inventarparks
-                    </option>
-                    {pools.map(p => (
-                      <option value={p.id} key={p.id}>
-                        {p.name}
-                      </option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-            </Section>
-            <Section title="Verfügbarkeit" collapsible>
+            <Section title="Verfügbarkeit">
               <div className="form-check mb-3">
                 <input
                   type="checkbox"
@@ -138,7 +112,7 @@ export const filter = ({ onSubmit, onDismiss }) => {
               )}
             </Section>
             {onlyAvailable && (
-              <Section collapsible title="Anzahl">
+              <Section title="Anzahl">
                 <MinusPlusControl
                   name="quantity"
                   id="quantity"
@@ -148,6 +122,31 @@ export const filter = ({ onSubmit, onDismiss }) => {
                 />
               </Section>
             )}
+            <Section title="Inventarparks">
+              <div className="d-flex flex-column gap-3">
+                <div>
+                  <label htmlFor="pool-id" className="visually-hidden">
+                    Inventarparks
+                  </label>
+                  <select
+                    className="form-select"
+                    name="pool-id"
+                    id="pool-id"
+                    value={poolId}
+                    onChange={e => setPoolId(e.target.value)}
+                  >
+                    <option value="all" key="all">
+                      Alle Inventarparks
+                    </option>
+                    {pools.map(p => (
+                      <option value={p.id} key={p.id}>
+                        {p.name}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+            </Section>
           </Stack>
         </form>
       </ModalDialog.Body>

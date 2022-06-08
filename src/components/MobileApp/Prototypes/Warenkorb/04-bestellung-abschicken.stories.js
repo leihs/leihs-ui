@@ -1,16 +1,15 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
 
-import ModalDialog from '../../../DesignComponents/ModalDialog'
-import Stack from '../../../DesignComponents/Stack'
-import Section from '../../../DesignComponents/Section'
-import Textarea from '../../../DesignComponents/Textarea'
+import ModalDialog from '../../DesignComponents/ModalDialog'
+import Stack from '../../DesignComponents/Stack'
+import Section from '../../DesignComponents/Section'
+import Textarea from '../../DesignComponents/Textarea'
 
 export default {
-  title: 'MobileApp/Wireframes/Warenkorb/Bestellung bestätigen',
+  title: 'MobileApp/Prototypes/Warenkorb/Bestellung abschicken',
   parameters: {
-    layout: 'fullscreen',
-    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+    layout: 'fullscreen'
   },
   argTypes: {
     onSubmit: { action: 'submit' },
@@ -31,32 +30,19 @@ export default {
   }
 }
 
-export const bestellungBestaetigen = ({
-  delegations,
-  user,
-  onSubmit,
-  onCancel,
-  initialTitle,
-  initialPurpose,
-  initialUserId
-}) => {
+export const bestellungAbschicken = ({ user, onSubmit, onCancel, initialTitle, initialPurpose, initialUserId }) => {
   const [title, setTitle] = useState(initialTitle)
   const [purpose, setPurpose] = useState(initialPurpose)
-  const [userId, setUserId] = useState(initialUserId)
 
   const [formValidated, setFormValidated] = useState()
   const [titleValidated, setTitleValidated] = useState()
   const [summaryValidated, setSummaryValidated] = useState()
-  const [userIdValidated, setUserIdValidated] = useState()
 
   function blurTitle() {
     setTitleValidated(true)
   }
   function blurSummary() {
     setSummaryValidated(true)
-  }
-  function blurUserId() {
-    setUserIdValidated(true)
   }
 
   function changeTitle(e) {
@@ -65,19 +51,16 @@ export const bestellungBestaetigen = ({
   function changePurpose(e) {
     setPurpose(e.target.value)
   }
-  function changeUserId(e) {
-    setUserId(e.target.value)
-  }
 
   function submit(e) {
     e.preventDefault()
     setFormValidated(true)
     if (e.target.checkValidity()) {
-      onSubmit({ title, purpose, userId })
+      onSubmit({ title, purpose })
     }
   }
   return (
-    <ModalDialog title="Bestellung bestätigen" shown>
+    <ModalDialog title="Bestellung abschicken" shown>
       <ModalDialog.Body>
         <form
           onSubmit={submit}
@@ -87,7 +70,7 @@ export const bestellungBestaetigen = ({
           id="the-form"
         >
           <Stack space="4">
-            <Section title="Titel" collapsible className={cx({ 'was-validated': titleValidated })}>
+            <Section title="Titel" className={cx({ 'was-validated': titleValidated })}>
               <label htmlFor="title" className="visually-hidden">
                 Titel
               </label>
@@ -102,7 +85,7 @@ export const bestellungBestaetigen = ({
                 onBlur={blurTitle}
               />
             </Section>
-            <Section title="Zweck" collapsible className={cx({ 'was-validated': summaryValidated })}>
+            <Section title="Zweck" className={cx({ 'was-validated': summaryValidated })}>
               <label htmlFor="purpose" className="visually-hidden">
                 Zweck
               </label>
@@ -118,34 +101,12 @@ export const bestellungBestaetigen = ({
                 onBlur={blurSummary}
               />
             </Section>
-            <Section title="Delegation" collapsible className={cx({ 'was-validated': userIdValidated })}>
-              <label htmlFor="user-id" className="visually-hidden" required>
-                Delegation
-              </label>
-              <select
-                name="user-id"
-                id="user-id"
-                className="form-select"
-                value={userId}
-                onChange={changeUserId}
-                onBlur={blurUserId}
-              >
-                <option value={user.id} key={user.id}>
-                  {user.name} (persönlich)
-                </option>
-                {delegations.map(d => (
-                  <option value={d.id} key={d.id}>
-                    {d.name}
-                  </option>
-                ))}
-              </select>
-            </Section>
           </Stack>
         </form>
       </ModalDialog.Body>
       <ModalDialog.Footer>
         <button type="submit" className="btn btn-primary" form="the-form">
-          Bestätigen
+          Abschicken
         </button>
         <button type="button" className="btn btn-secondary" onClick={onCancel} form="the-form">
           Abbrechen
@@ -155,4 +116,4 @@ export const bestellungBestaetigen = ({
   )
 }
 
-bestellungBestaetigen.storyName = 'Bestellung bestätigen'
+bestellungAbschicken.storyName = 'Bestellung abschicken'

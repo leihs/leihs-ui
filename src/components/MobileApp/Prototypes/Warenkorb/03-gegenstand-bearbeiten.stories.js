@@ -1,17 +1,16 @@
 import React from 'react'
 
-import ModalDialog from '../../../DesignComponents/ModalDialog'
-import Stack from '../../../DesignComponents/Stack'
-import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
-import OrderPanel from '../../../OrderPanel'
-import { getOrderPanelMockData } from '../../../StoryUtils/sample-props'
-import { locale, orderPanelTexts } from '../../../StoryUtils/fake-localization'
+import ModalDialog from '../../DesignComponents/ModalDialog'
+import Stack from '../../DesignComponents/Stack'
+import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
+import OrderPanel from '../../OrderPanel'
+import { getOrderPanelMockData } from '../../StoryUtils/sample-props'
+import { locale, orderPanelTexts } from '../../StoryUtils/fake-localization'
 
 export default {
-  title: 'MobileApp/Wireframes/Warenkorb/Gegenstand bearbeiten',
+  title: 'MobileApp/Prototypes/Warenkorb/Gegenstand bearbeiten',
   parameters: {
-    layout: 'fullscreen',
-    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+    layout: 'fullscreen'
   },
   argTypes: {
     onSubmit: { action: 'submit' },

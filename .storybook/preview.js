@@ -54,8 +54,16 @@ export const parameters = {
       order: [
         '*',
         'MobileApp',
-        ['Overview', 'Wireframes', ['Page Typology', 'Katalog', 'Warenkorb'], 'Design Components', 'Bootstrap Theme']
+        [
+          'Overview',
+          'Bootstrap Theme',
+          'Design Components',
+          'Feature Components',
+          'Prototypes',
+          ['Page Typology', 'Katalog', 'Warenkorb']
+        ]
       ]
     }
-  }
+  },
+  controls: { expanded: true }
 }

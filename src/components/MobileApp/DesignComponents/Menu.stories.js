@@ -33,8 +33,8 @@ export function menu() {
       <p></p>
       <p className="text-muted">For an example with more context see:</p>
       <p className="text-muted">
-        <button className="btn btn-light btn-sm" onClick={linkTo('MobileApp/Wireframes/Menu')}>
-          Wireframes &gt; Menu
+        <button className="btn btn-light btn-sm" onClick={linkTo('MobileApp/Prototypes/Menu')}>
+          Prototypes &gt; Menu
         </button>
       </p>
     </>

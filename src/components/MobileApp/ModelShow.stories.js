@@ -4,7 +4,7 @@ import PageLayoutMock from './StoryUtils/PageLayoutMock'
 import ModelShow from './ModelShow'
 
 export default {
-  title: 'MobileApp/Integrated Components/Model Show',
+  title: 'MobileApp/Feature Components/Model Show',
   parameters: { layout: 'fullscreen', storyshots: { disable: true } },
   component: ModelShow
 }

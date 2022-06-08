@@ -1,4 +1,3 @@
-import * as AppLayout from './components/MobileApp/AppLayout'
 import Bold from './components/Bold'
 import DebugProps from './components/DebugProps'
 import Navbar from './components/Navbar'
@@ -17,13 +16,10 @@ const Components = {
   Navbar,
   DatePicker: require('./components/DatePicker').default,
 
-  AppLayout,
   // "fach komponenten"
   OrderPanel: require('./components/MobileApp/OrderPanel').default,
   CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
-  FilterBubblePanelSwitcher: require('./components/MobileApp/TmpFilterBubblePanelSwitcher').default,
   ModelSearchFilter: require('./components/MobileApp/ModelSearchFilter').default,
-  ModelFilterForm: require('./components/MobileApp/ModelFilterForm').default,
   ModelList: require('./components/MobileApp/ModelList').default,
   ModelShow: require('./components/MobileApp/ModelShow').default,
 

@@ -3,18 +3,17 @@ import { action } from '@storybook/addon-actions'
 import { de } from 'date-fns/locale'
 import { isAfter, parse } from 'date-fns'
 
-import Section from '../../../DesignComponents/Section'
-import InputWithClearButton from '../../../DesignComponents/InputWithClearButton'
-import ModalDialog from '../../../DesignComponents/ModalDialog'
-import Stack from '../../../DesignComponents/Stack'
-import DatePicker from '../../../DesignComponents/DatePicker'
-import Warning from '../../../DesignComponents/Warning'
+import Section from '../../DesignComponents/Section'
+import InputWithClearButton from '../../DesignComponents/InputWithClearButton'
+import ModalDialog from '../../DesignComponents/ModalDialog'
+import Stack from '../../DesignComponents/Stack'
+import DatePicker from '../../DesignComponents/DatePicker'
+import Warning from '../../DesignComponents/Warning'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Bestellungen/Filter',
+  title: 'MobileApp/Prototypes/Meine Bestellungen/Filter',
   parameters: {
-    layout: 'fullscreen',
-    storyshots: { disable: true } // (related to ModalDialog, see https://github.com/leihs/leihs/issues/1125)
+    layout: 'fullscreen'
   },
   args: {
     onSubmit: action('submit')
@@ -23,10 +22,6 @@ export default {
 
 export const filter = ({ onSubmit }) => {
   // data
-  const delegations = [
-    { id: '37372089-450b-49ec-8486-fcc3a9e6ae22', name: 'Delegation 1' },
-    { id: '3013ff5a-0203-4ec5-bda5-61871ddd5dc7', name: 'Delegation 2' }
-  ]
   const pools = [
     { id: '8bd16d45-056d-5590-bc7f-12849f034351', name: 'Ausleihe Toni-Areal' },
     { id: '5863967f-9804-4909-a9b7-92254616d6b2', name: 'FM-Inventar' },
@@ -85,34 +80,11 @@ export const filter = ({ onSubmit }) => {
   }
 
   return (
-    <ModalDialog title="Meine Bestellungen filtern" shown>
+    <ModalDialog title="Filter" shown>
       <ModalDialog.Body>
         <form action="/search" onSubmit={submit} autoComplete="off" id="order-filter-form">
           <Stack space="4">
-            {delegations && (
-              <Section title="Delegation" collapsible>
-                <label htmlFor="user-id" className="visually-hidden">
-                  Delegation
-                </label>
-                <select
-                  className="form-select"
-                  name="user-id"
-                  id="user-id"
-                  value={delegationId}
-                  onChange={e => setDelegationId(e.target.value)}
-                >
-                  <option value={user.id} key={user.id}>
-                    {user.name} (persönlich)
-                  </option>
-                  {delegations.map(d => (
-                    <option value={d.id} key={d.id}>
-                      {d.name}
-                    </option>
-                  ))}
-                </select>
-              </Section>
-            )}
-            <Section title="Stichwort" collapsible>
+            <Section title="Stichwort">
               <label htmlFor="term" className="visually-hidden">
                 Stichwort
               </label>
@@ -124,7 +96,7 @@ export const filter = ({ onSubmit }) => {
                 onChange={e => setTerm(e.target.value)}
               />
             </Section>
-            <Section title="Status" collapsible>
+            <Section title="Status">
               <label htmlFor="order-state" className="visually-hidden">
                 Status
               </label>
@@ -145,7 +117,7 @@ export const filter = ({ onSubmit }) => {
                 ))}
               </select>
             </Section>
-            <Section title="Zeitraum" collapsible>
+            <Section title="Zeitraum">
               <fieldset>
                 <legend className="visually-hidden">Zeitraum</legend>
                 <div className="d-flex flex-column gap-3">
@@ -171,7 +143,7 @@ export const filter = ({ onSubmit }) => {
                 </div>
               </fieldset>
             </Section>
-            <Section title="Inventarpark" collapsible>
+            <Section title="Inventarpark">
               <label htmlFor="pool-id" className="visually-hidden">
                 Inventarpark
               </label>
@@ -197,7 +169,7 @@ export const filter = ({ onSubmit }) => {
       </ModalDialog.Body>
       <ModalDialog.Footer>
         <button type="submit" onClick={submit} className="btn btn-primary" form="order-filter-form">
-          Auswählen
+          Anwenden
         </button>
         <button type="button" onClick={clear} className="btn btn-secondary" form="order-filter-form">
           Zurücksetzen

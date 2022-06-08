@@ -6,7 +6,7 @@ import PageLayoutMock from './StoryUtils/PageLayoutMock'
 import UserProfilePage from './UserProfilePage.js'
 
 export default {
-  title: 'MobileApp/Integrated Components/UserProfilePage',
+  title: 'MobileApp/Feature Components/UserProfilePage',
   component: UserProfilePage,
   parameters: { layout: 'fullscreen' },
   args: { onLogoutClick: action() }

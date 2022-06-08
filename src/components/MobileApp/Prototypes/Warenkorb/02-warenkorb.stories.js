@@ -1,17 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
-import Badge from '../../../DesignComponents/Badge'
-import ListCard from '../../../DesignComponents/ListCard'
-import PageLayout from '../../../DesignComponents/PageLayout'
-import ProgressInfo from '../../../DesignComponents/ProgressInfo'
-import Section from '../../../DesignComponents/Section'
-import Stack from '../../../DesignComponents/Stack'
-import Warning from '../../../DesignComponents/Warning'
-import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
+import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
+import Badge from '../../DesignComponents/Badge'
+import ListCard from '../../DesignComponents/ListCard'
+import PageLayout from '../../DesignComponents/PageLayout'
+import ProgressInfo from '../../DesignComponents/ProgressInfo'
+import Section from '../../DesignComponents/Section'
+import Stack from '../../DesignComponents/Stack'
+import Warning from '../../DesignComponents/Warning'
+import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Wireframes/Warenkorb/Warenkorb',
+  title: 'MobileApp/Prototypes/Warenkorb/Warenkorb',
   parameters: { layout: 'fullscreen' },
   argTypes: {
     onResetTimeLimitClick: { action: 'reset-time-limit' },
@@ -31,7 +31,7 @@ export default {
             durationDays: 13,
             quantity: 1,
             isCompleted: false,
-            isInvalid: true // TODO: unconfirmed model name
+            isInvalid: true
           },
           model: {
             id: '40ca9617-f879-5092-8789-b583f8064f9c',
@@ -94,23 +94,14 @@ export default {
 
 export const neueAusleihe = ({
   order,
-  user,
-  delegations,
   onResetTimeLimitClick,
-  onDelegationChange,
   onItemClick,
   onConfirmClick,
   onDeleteClick,
   errorMessage
 }) => {
-  const [userId, setUserId] = useState(user.id)
-
   function confirmClick() {
-    onConfirmClick({ userId })
-  }
-  function userIdChange(e) {
-    setUserId(e.target.value)
-    onDelegationChange(e.target.value)
+    onConfirmClick({})
   }
 
   return (
@@ -129,20 +120,8 @@ export const neueAusleihe = ({
           </Stack>
         </Section>
 
-        <Section title="Delegation" collapsible>
-          <label htmlFor="user-id" className="visually-hidden" required>
-            Delegation
-          </label>
-          <select name="user-id" id="user-id" className="form-select" value={userId} onChange={userIdChange}>
-            <option value={user.id} key={user.id}>
-              {user.name} (persönlich)
-            </option>
-            {delegations.map(d => (
-              <option value={d.id} key={d.id}>
-                {d.name}
-              </option>
-            ))}
-          </select>
+        <Section title="Bestellung für" collapsible>
+          Anna Beispiel (persönlich)
         </Section>
 
         <Section title="Gegenstände" collapsible className="position-relative">
@@ -168,7 +147,7 @@ export const neueAusleihe = ({
           <ActionButtonGroup>
             {errorMessage && <Warning>{errorMessage}</Warning>}
             <button type="submit" className="btn btn-primary" disabled={errorMessage} onClick={confirmClick}>
-              Bestellung bestätigen
+              Bestellung abschicken
             </button>
             <button type="button" className="btn btn-secondary" onClick={onDeleteClick}>
               Warenkorb löschen

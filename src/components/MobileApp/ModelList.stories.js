@@ -3,11 +3,8 @@ import React from 'react'
 import ModelList from './ModelList'
 
 export default {
-  title: 'MobileApp/Integrated Components/ModelList',
-  component: ModelList,
-  parameters: {
-    // layout: 'fullscreen'
-  }
+  title: 'MobileApp/Feature Components/ModelList',
+  component: ModelList
 }
 
 const exampleProps1 = {
@@ -58,4 +55,6 @@ const exampleProps1 = {
   ]
 }
 
-export const Example1 = () => <ModelList {...exampleProps1} />
+export const modelList = () => <ModelList {...exampleProps1} />
+
+modelList.storyName = 'ModelList'

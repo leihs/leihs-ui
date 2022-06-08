@@ -90,14 +90,9 @@ Therefore, pushing to the `next` branch instead of `master` should be done for s
   - whatever is on `next` has to be included in the next push to `master` in `leihs-ui`
   - whatever is on `master` has to be included in the next push to `master` in _any repository that uses_ `leihs-ui`!
 
-## tests
+## Snapshot testing
 
-To run the tests locally, additonal dependencies must be installed.
-The changes made to `package{-lock}.json` MUST not be checked in (this is a compromise because in most apps we dont need to run tests).
-
-```bash
-npm add -D ./test
-```
+`npm run test`: render snapshots of all stories (using `@storybook/addon-storyshots`). "Prototypes" stories are excluded from snapshots.
 
 ## Icons
 

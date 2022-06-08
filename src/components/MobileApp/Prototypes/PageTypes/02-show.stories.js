@@ -1,15 +1,15 @@
 import React from 'react'
-import PageLayout from '../../../DesignComponents/PageLayout'
-import Stack from '../../../DesignComponents/Stack'
-import Section from '../../../DesignComponents/Section'
-import ActionButtonGroup from '../../../DesignComponents/ActionButtonGroup'
-import PropertyTable from '../../../DesignComponents/PropertyTable'
-import ListCard from '../../../DesignComponents/ListCard'
-import PageLayoutMock from '../../../StoryUtils/PageLayoutMock'
-import Badge from '../../../DesignComponents/Badge'
+import PageLayout from '../../DesignComponents/PageLayout'
+import Stack from '../../DesignComponents/Stack'
+import Section from '../../DesignComponents/Section'
+import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
+import PropertyTable from '../../DesignComponents/PropertyTable'
+import ListCard from '../../DesignComponents/ListCard'
+import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
+import Badge from '../../DesignComponents/Badge'
 
 export default {
-  title: 'MobileApp/Wireframes/Page Typology/Show',
+  title: 'MobileApp/Prototypes/Page Typology/Show',
   parameters: { layout: 'fullscreen' },
 
   argTypes: {

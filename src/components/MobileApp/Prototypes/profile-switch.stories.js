@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import { linkTo } from '@storybook/addon-links'
 
-import Navbar from '../../DesignComponents/Navbar'
-import Menu from '../../DesignComponents/Menu'
-import PageLayout from '../../DesignComponents/PageLayout'
-import ProfileMenu from '../../DesignComponents/ProfileMenu'
+import Navbar from '../DesignComponents/Navbar'
+import Menu from '../DesignComponents/Menu'
+import PageLayout from '../DesignComponents/PageLayout'
+import ProfileMenu from '../DesignComponents/ProfileMenu'
 
 export default {
-  title: 'MobileApp/Wireframes/Profile Switch',
+  title: 'MobileApp/Prototypes/Profile Switch',
   parameters: {
     layout: 'fullscreen'
   }

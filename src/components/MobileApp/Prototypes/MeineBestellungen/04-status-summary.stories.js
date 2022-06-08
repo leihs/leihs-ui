@@ -1,8 +1,8 @@
 import React from 'react'
-import ProgressInfo from '../../../DesignComponents/ProgressInfo'
+import ProgressInfo from '../../DesignComponents/ProgressInfo'
 
 export default {
-  title: 'MobileApp/Wireframes/Meine Bestellungen/Status Summary'
+  title: 'MobileApp/Prototypes/Meine Bestellungen/Status Summary'
 }
 
 const statusLabels = {
