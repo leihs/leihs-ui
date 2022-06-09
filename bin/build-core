@@ -1,12 +1,14 @@
 #!/usr/bin/env bash
-
 set -eux
-
 cd "$(dirname ${BASH_SOURCE})/.."
 
-./bin/deps-install
+INSTALL_DEPS="${INSTALL_DEPS:-YES}"
 
-# those could run in parallel
+if test "$INSTALL_DEPS" = "YES"; then
+  ./bin/deps-install
+fi
+
+# NOTE: those could run in parallel
 npm run build:theme
 npm run build:ssr
 

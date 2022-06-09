@@ -1,5 +1,6 @@
 #!/bin/sh -eu
 
+mkdir -p src static
 rm -f src/static src/theme src/legacy static/theme static/theme-mobile
 
 cd src

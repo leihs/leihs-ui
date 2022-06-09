@@ -1,0 +1,17 @@
+/.git
+/.dockerignore
+/Dockerfile
+/Dockerfile*
+/docker-compose*
+/.env*
+/bin/docker*
+
+/dist
+/build
+
+/cider-ci
+/cider-ci*
+/README*
+/node_modules/
+/bootstrap-theme-leihs/node_modules/
+/bootstrap-theme-leihs-mobile/node_modules/
