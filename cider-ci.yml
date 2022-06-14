@@ -1,15 +1,7 @@
 jobs:
-  lint:
-    name: Lint
-    run_when:
-      any branch is pushed: { type: branch, include_match: ^.*$ }
-    include: cider-ci/task_defaults.yml
-    tasks:
-      lint:
-        include: cider-ci/lint_task-component.yml
-
+  # NOTE: the other jobs depend on build, even though its not strictly needed because of caching, but so we know where to look for the full log
   build:
-    name: Build
+    name: Build `dist`
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
     include: cider-ci/task_defaults.yml
@@ -17,14 +9,29 @@ jobs:
       build:
         include: cider-ci/build_task-component.yml
 
-  test:
-    name: Test
+  lint:
+    name: Lint
+    depends_on:
+      build is done: { type: job, job_key: build, states: [passed] }
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
+      build is done: { type: job, job_key: build, states: [passed] }
+    include: cider-ci/task_defaults.yml
+    tasks:
+      lint:
+        include: cider-ci/lint_task-component.yml
+
+  test:
+    name: Test
+    depends_on:
+      build is done: { type: job, job_key: build, states: [passed] }
+    run_when:
+      any branch is pushed: { type: branch, include_match: ^.*$ }
+      build is done: { type: job, job_key: build, states: [passed] }
     include: cider-ci/task_defaults.yml
     tasks:
       build-and-test:
-        include: cider-ci/build-and-test_task-component.yml
+        include: cider-ci/test_task-component.yml
 
   all-ok:
     name: 'All Tests OK'

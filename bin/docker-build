@@ -9,6 +9,8 @@ VERSION_NAME="${VERSION_NAME:-dev}"
 STAGE="${STAGE:-dist}"
 IMAGE_WORKDIR="/leihs-ui"
 DIST_DIR="dist"
+THEME_DIR="bootstrap-theme-leihs/build"
+THEME_MOBILE_DIR="bootstrap-theme-leihs-mobile/build"
 
 # short tree hash - does only change when the content changes
 git_tree="$(git log -n1 --format="%t" HEAD)"
@@ -36,6 +38,8 @@ fi
 rm -rf "${DIST_DIR}" && mkdir -p "${DIST_DIR}"
 container_id="$(docker create "$tag" .)"
 docker cp -La "$container_id:${IMAGE_WORKDIR}/${DIST_DIR}/." "${DIST_DIR}/"
+docker cp -La "$container_id:${IMAGE_WORKDIR}/${THEME_DIR}/." "${THEME_DIR}/"
+docker cp -La "$container_id:${IMAGE_WORKDIR}/${THEME_MOBILE_DIR}/." "${THEME_MOBILE_DIR}/"
 docker rm "$container_id"
 ls -la "${DIST_DIR}"
 

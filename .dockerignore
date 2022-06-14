@@ -1,4 +1,5 @@
 /.git
+/.DS_Store
 /.dockerignore
 /Dockerfile
 /Dockerfile*
@@ -11,6 +12,8 @@
 
 /cider-ci
 /cider-ci*
+/.cider-ci
+/.cider-ci*
 /README*
 /node_modules/
 /bootstrap-theme-leihs/node_modules/

@@ -4,7 +4,7 @@ traits:
 
 scripts:
   install-ruby:
-    exclusive_executor_resource: ruby-install_{{$RUBY}}
+    exclusive_executor_resource: ruby-install_{{RUBY}}
     timeout: 20 Minutes
     body: |
       #!/usr/bin/env bash

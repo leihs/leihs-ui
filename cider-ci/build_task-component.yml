@@ -1,14 +1,20 @@
 include:
   - path: cider-ci/install-ruby_task-component.yml
-  - path: cider-ci/install-nodejs_task-component.yml
 
 scripts:
   build-ui:
-    timeout: 10 minutes
-    body: |
-      source ~/.nvm/nvm.sh && nvm use "$NVM_NODEJS_VERSION"
-      ./bin/build
-    exclusive_executor_resource: leihs-ui-build
+    timeout: 20 minutes
+    exclusive_executor_resource: leihs-ui-docker-build_{{CIDER_CI_TREE_ID}}
     start_when:
       install-ruby-passed: { script_key: install-ruby }
-      install-nodejs-passed: { script_key: install-nodejs }
+    body: |
+      set -exu
+      export IMAGE_NAME="$DIST_IMAGE_NAME"
+      export VERSION_NAME="$DIST_VERSION_NAME"
+
+      USE_DOCKER=YES bin/build
+
+      docker image inspect "${IMAGE_NAME}:${VERSION_NAME}"
+      ls -lah dist/
+
+      echo; echo OK; echo

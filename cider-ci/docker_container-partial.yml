@@ -1,0 +1,36 @@
+include: cider-ci/build_task-component.yml
+
+scripts:
+  build-runner:
+    start_when:
+      build-ui: { script_key: build-ui }
+    timeout: 10 minutes
+    exclusive_executor_resource: leihs-ui-runner-docker-build_{{CIDER_CI_TREE_ID}}
+    body: |
+      set -exu
+      docker buildx build --target runner -t "$RUNNER_IMAGE_NAME" -f Dockerfile .
+      docker image inspect "$RUNNER_IMAGE_NAME"
+      echo; echo OK; echo
+
+  start-container:
+    start_when:
+      build-ui: { script_key: build-ui }
+      build-runner: { script_key: build-runner }
+    body: |
+      # NOTE: dont use `-t` because in CI there is no interactive TTY!
+      docker run -d -i \
+        -e CI \
+        --name "$RUNNER_CONTAINER_NAME" \
+        "$RUNNER_IMAGE_NAME"
+
+  cleanup-container:
+    start_when:
+      test finished: { script_key: test, states: [aborted, defective, passed, failed, skipped] }
+    timeout: 5 minutes
+    body: |
+      set -exu
+      docker stop "$RUNNER_CONTAINER_NAME"
+      docker rm "$RUNNER_CONTAINER_NAME"
+      # NOTE: removes this tag from the image, but if there are more tags the image wont be deleted!
+      docker image rm "$RUNNER_IMAGE_NAME"
+      echo; echo OK; echo

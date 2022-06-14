@@ -1,7 +1,16 @@
 task_defaults:
+  traits:
+    Docker Engine: true
+
   environment_variables:
-    CI: 'true' # needed for frontend build packages, they detect CI vs DEV this way
-    RUBY: '{{RUBY_ENGINE}}-{{RUBY_VERSION}}'
+    CI: 'true'
+
     RUBY_ENGINE: ruby
     RUBY_VERSION: 2.7.2
-    NVM_NODEJS_VERSION: '16'
+    RUBY: '{{RUBY_ENGINE}}-{{RUBY_VERSION}}'
+
+    DIST_IMAGE_NAME: 'leihs-ui'
+    DIST_VERSION_NAME: 'trial-{{CIDER_CI_TRIAL_ID}}'
+
+    RUNNER_IMAGE_NAME: 'leihs-ui-runner:trial-{{CIDER_CI_TRIAL_ID}}'
+    RUNNER_CONTAINER_NAME: 'leihs-ui-trial-{{CIDER_CI_TRIAL_ID}}'

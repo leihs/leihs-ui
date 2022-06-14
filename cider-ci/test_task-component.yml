@@ -9,5 +9,6 @@ scripts:
       container is running: { script_key: start-container }
     timeout: 10 minutes
     body: |
+      # NOTE: dont use `-t` because in CI there is no interactive TTY!
       docker exec -i "$RUNNER_CONTAINER_NAME" \
-        npm run ci:lint
+        npm run test

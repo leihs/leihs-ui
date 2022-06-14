@@ -16,6 +16,7 @@ LOCAL_CACHE_DIR="${LOCAL_CACHE_DIR:-"${TMPDIR:-/tmp/}/leihs-build-cache"}"
 LOCAL_CACHED_ARTEFACT_PATH="${LOCAL_CACHE_DIR}/${ARTEFACT_NAME}_${DIGEST}.tgz"
 S3_CACHED_ARTEFACT_NAME="${ARTEFACT_NAME}_${DIGEST}.tgz"
 BUILD_CACHE_DISABLED="${BUILD_CACHE_DISABLED:-NO}"
+USE_DOCKER="${USE_DOCKER:-NO}"
 
 set +x
 
@@ -30,12 +31,22 @@ else
   exit 1
 fi
 
+if [ $USE_DOCKER == "YES" ] ||  [ $USE_DOCKER == "NO" ]; then
+  echo "USE_DOCKER=$USE_DOCKER"
+else
+  echo 'USE_DOCKER must be initially unset, or "YES", or "NO"'
+  exit 1
+fi
 
 
 ### functions #################################################################
 
 function build {
-  ./bin/build-core || { echo "build error!"; exit 1; }
+  if [ $USE_DOCKER == "YES" ]; then
+    bin/docker-build  || { echo "build error!"; exit 1; }
+  else
+    ./bin/build-core || { echo "build error!"; exit 1; }
+  fi
 }
 
 function pack {
