@@ -14,7 +14,4 @@ scripts:
 
       USE_DOCKER=YES bin/build
 
-      docker image inspect "${IMAGE_NAME}:${VERSION_NAME}"
-      ls -lah dist/
-
       echo; echo OK; echo
