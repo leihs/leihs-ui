@@ -46,15 +46,15 @@ export const translations = () => (
 
     <p>
       More Docs: We use the{' '}
-      <a className="text-color-content-link" href="https://formatjs.io/docs/core-concepts/icu-syntax">
+      <a className="link-primary" href="https://formatjs.io/docs/core-concepts/icu-syntax">
         ICU Message syntax
       </a>{' '}
       and the{' '}
-      <a className="text-color-content-link" href="https://formatjs.io/docs/intl-messageformat/#how-it-works">
+      <a className="link-primary" href="https://formatjs.io/docs/intl-messageformat/#how-it-works">
         <code>IntlMessageFormat</code>
       </a>{' '}
       library from{' '}
-      <a className="text-color-content-link" href="https://formatjs.io/">
+      <a className="link-primary" href="https://formatjs.io/">
         Format.js
       </a>
       .

@@ -6,6 +6,8 @@
 // while we work on the mobile app/"new borrow" and the regular theme is used in other parts of leihs.
 // the 2 themes should be unified, at the latest when "new borrow" is extended to be responsive.
 
+// Bootstrap
+
 @import '~bootstrap/scss/functions';
 @import '~bootstrap/scss/mixins';
 
@@ -15,24 +17,21 @@
 
 @import './variables-overrides';
 
-@import './scss/reset';
-
 @import '~bootstrap/scss/bootstrap';
 
+// Font Awesome
+
 @import '~@fortawesome/fontawesome-svg-core/styles.css';
+
+// Leihs Calendar
 
 @import '~@leihs/calendar/dist/styles.css'; // main css file
 @import '~@leihs/calendar/dist/theme/default.css'; // theme css file
 
-@import './scss/decoration';
-@import './scss/typography';
-@import './scss/colors';
+// Custom styles
+
+@import './scss/globals';
 @import './scss/bootstrap-extensions';
-@import './scss/bootstrap-fixes';
-@import './scss/app-fixes';
 @import './scss/fonts';
 @import './scss/utilities';
 @import './scss/components';
-
-// FIXME: remove this (part of the temporary pre-2021-wireframes design)
-@import './scss/tmp-pre2021';

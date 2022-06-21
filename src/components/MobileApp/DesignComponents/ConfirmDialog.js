@@ -45,7 +45,7 @@ export default function ConfirmDialog({
       className={cx(className)}
       contentClassName={cx(!!isError && 'border-danger border-2')}
       title={title}
-      headerClassname={!!isError && [{ 'bg-light-shade': false }, 'bg-danger text-color-content-inverse']}
+      headerClassname={!!isError && [{ 'bg-light-shade': false }, 'bg-danger text-light']}
       dismissible={dismissible}
       onDismiss={onDismiss}
     >

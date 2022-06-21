@@ -25497,7 +25497,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     >
       <img
         alt=""
-        className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+        className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
         src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
       />
     </a>
@@ -25520,7 +25520,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
   >
     <a>
       <div
-        className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+        className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
       />
     </a>
   </div>
@@ -25543,7 +25543,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     <a>
       <img
         alt=""
-        className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+        className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
         src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
       />
     </a>
@@ -25567,7 +25567,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     <a>
       <img
         alt=""
-        className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+        className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
         src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
       />
     </a>
@@ -25617,7 +25617,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
               src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
             />
           </a>
@@ -25679,7 +25679,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
               src="4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg"
             />
           </a>
@@ -25728,7 +25728,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
             />
           </a>
         </div>
@@ -25776,7 +25776,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
             />
           </a>
         </div>
@@ -25835,7 +25835,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
               src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
             />
           </a>
@@ -25897,7 +25897,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
               src="4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg"
             />
           </a>
@@ -25946,7 +25946,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
             />
           </a>
         </div>
@@ -25994,7 +25994,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
             />
           </a>
         </div>
@@ -43534,7 +43534,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
           href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
         >
           <div
-            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-content-muted"
+            className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
           />
         </a>
       </div>
@@ -43583,7 +43583,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
             src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
           />
         </a>
@@ -43633,7 +43633,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
             src="43cd9671-8ab2-5960-8426-4f9b235b449d.jpg"
           />
         </a>
@@ -43683,7 +43683,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
             src="4d446da0-81ae-5dd4-a2b0-f9adae2de0d4.jpg"
           />
         </a>
@@ -43733,7 +43733,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
             src="8e17238d-9ee2-402c-a469-20300d7b08fc.jpg"
           />
         </a>
@@ -43783,7 +43783,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-content position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
             src="ad8a36fd-1bec-5be5-a702-326e4e49d756.jpg"
           />
         </a>
@@ -44330,7 +44330,7 @@ exports[`Storybook HTML Snapshots MobileApp/Overview/Translations Translations 1
     More Docs: We use the
      
     <a
-      className="text-color-content-link"
+      className="link-primary"
       href="https://formatjs.io/docs/core-concepts/icu-syntax"
     >
       ICU Message syntax
@@ -44339,7 +44339,7 @@ exports[`Storybook HTML Snapshots MobileApp/Overview/Translations Translations 1
     and the
      
     <a
-      className="text-color-content-link"
+      className="link-primary"
       href="https://formatjs.io/docs/intl-messageformat/#how-it-works"
     >
       <code>
@@ -44350,7 +44350,7 @@ exports[`Storybook HTML Snapshots MobileApp/Overview/Translations Translations 1
     library from
      
     <a
-      className="text-color-content-link"
+      className="link-primary"
       href="https://formatjs.io/"
     >
       Format.js
