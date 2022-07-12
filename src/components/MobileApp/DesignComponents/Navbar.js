@@ -1,7 +1,6 @@
 import React from 'react'
 import Icon, { iconMenu, iconMenuClose, iconBag } from './Icons'
 import cx from 'classnames'
-import isNumber from 'lodash.isnumber'
 
 export default function Navbar({
   brandName,
@@ -58,7 +57,7 @@ function getProfileButton({ onClick, profileShort, isOpen, ...restProps }) {
 }
 
 function getCartButton({ cartItemCount, invalidCartItemCount, ...restProps }) {
-  const showCartCounter = isNumber(cartItemCount)
+  const showCartCounter = !!cartItemCount || cartItemCount === 0
   return (
     <a role="button" className="nav-item nav-link position-relative" {...restProps}>
       {showCartCounter && (
@@ -66,7 +65,7 @@ function getCartButton({ cartItemCount, invalidCartItemCount, ...restProps }) {
           className={cx('cart-badge position-absolute', { 'cart-badge--with-conflict': invalidCartItemCount > 0 })}
           style={{ top: '4px', right: '-8px' }}
         >
-          <span>{invalidCartItemCount > 0 ? '!' : cartItemCount || '0'}</span>
+          <span>{invalidCartItemCount > 0 ? '!' : cartItemCount}</span>
         </div>
       )}
       <Icon icon={iconBag} />

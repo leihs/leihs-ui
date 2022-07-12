@@ -1,6 +1,5 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-// import f from 'lodash'
 
 const VisuallyHidden = ({ children, ...props }) => {
   // hidden by default, only shown if props.if is given AND false

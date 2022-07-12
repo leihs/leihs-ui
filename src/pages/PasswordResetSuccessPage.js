@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import f from 'lodash'
 
 import Navbar from '../components/Navbar'
 import FlashMessages from '../components/FlashMessages'

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import f from 'lodash'
 import {
   startOfDay,
   addMonths,
@@ -60,9 +59,7 @@ const OrderPanel = ({
   const maxDate = maxDateTotal ? startOfDay(maxDateTotal) : addMonths(today, 20 * 12)
 
   const [quantity, setQuantity] = useState(initialQuantity)
-  const [selectedPoolId, setSelectedPoolId] = useState(
-    initialInventoryPoolId || f.get(inventoryPools, '0.id') || 'NO_POOLS'
-  )
+  const [selectedPoolId, setSelectedPoolId] = useState(initialInventoryPoolId || inventoryPools?.[0]?.id || 'NO_POOLS')
   const [selectedRange, setSelectedRange] = useState({
     startDate: initialStartDate ? startOfDay(initialStartDate) : today,
     endDate: initialEndDate ? startOfDay(initialEndDate) : addDays(today, 1)
@@ -208,7 +205,7 @@ const OrderPanel = ({
             onChange={changeInventoryPool}
             className="form-select"
           >
-            {f.map(selectablePools, ({ id, name, totalBorrowableQuantity }) => (
+            {selectablePools.map(({ id, name, totalBorrowableQuantity }) => (
               <option key={id} value={id}>
                 {totalBorrowableQuantity
                   ? t(label, 'pool-max-amount', locale, { pool: name, amount: totalBorrowableQuantity })

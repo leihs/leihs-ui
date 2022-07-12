@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef, useMemo } from 'react'
 import PropTypes from 'prop-types'
-// import f from 'lodash'
 import cx from 'classnames/dedupe'
 import {
   isValid,
