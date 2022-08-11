@@ -104,12 +104,26 @@
     "es": "Cancelar y volver",
     "gsw": "X"
   },
+  "password_create_button_text": {
+    "de": "Passwort erstellen",
+    "en": "Create password",
+    "fr": "Créer un mot de passe",
+    "es": "Crear contraseña",
+    "gsw": "Passwort setze"
+  },
+  "password_forgot_button_text": {
+    "de": "Passwort vergessen?",
+    "en": "Forgot password?",
+    "fr": "Mot de passe oublié?",
+    "es": "¿Contraseña olvidada?",
+    "gsw": "Passwort vergësse?"
+  },
   "password_forgot_title": {
     "de": "Passwort vergessen",
     "en": "Forgot password",
     "fr": "Mot de passe oublié",
     "es": "Contraseña olvidada",
-    "gsw": "Passwort vergessen"
+    "gsw": "Passwort vergësse"
   },
   "password_forgot_description": {
     "de": "Erhalte einen Bestätigungscode per Email, um das Passwort zurückzusetzen",
