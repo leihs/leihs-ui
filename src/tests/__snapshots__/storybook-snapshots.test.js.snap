@@ -18087,14 +18087,9 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
             role="alert"
           >
             <p
-              className="font-weight-bold"
+              className="font-weight-bold mb-0"
             >
-              Anmelden ist mit diesem Benutzerkonto nicht möglich! 
-            </p>
-            <p
-              className="small"
-            >
-              Bitte prüfen Sie Ihre E-Mail-Adresse oder den Benutzernamen. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.
+              ⟪undefined⟫
             </p>
           </div>
         </div>
@@ -18646,26 +18641,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 2 External Auth Opt
             <small />
           </form>
         </div>
-        <form
-          action="/password-reset/forgot-password"
-          method="GET"
-        >
-          <div
-            className="TMP mt-4 h3 font-monospace"
-          >
-            <input
-              name="user"
-              type="hidden"
-              value="malbrech"
-            />
-            <button
-              className="btn btn-large btn-block btn-warning"
-              type="submit"
-            >
-              forgot password?
-            </button>
-          </div>
-        </form>
       </section>
     </div>
   </div>
@@ -18989,26 +18964,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password And Extern
             Weiter
           </button>
         </form>
-        <form
-          action="/password-reset/forgot-password"
-          method="GET"
-        >
-          <div
-            className="TMP mt-4 h3 font-monospace"
-          >
-            <input
-              name="user"
-              type="hidden"
-              value="malbrech"
-            />
-            <button
-              className="btn btn-large btn-block btn-warning"
-              type="submit"
-            >
-              forgot password?
-            </button>
-          </div>
-        </form>
       </section>
     </div>
   </div>
@@ -19262,26 +19217,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Step 2 Password Auth Only 
             Weiter
           </button>
         </form>
-        <form
-          action="/password-reset/forgot-password"
-          method="GET"
-        >
-          <div
-            className="TMP mt-4 h3 font-monospace"
-          >
-            <input
-              name="user"
-              type="hidden"
-              value="malbrech"
-            />
-            <button
-              className="btn btn-large btn-block btn-warning"
-              type="submit"
-            >
-              forgot password?
-            </button>
-          </div>
-        </form>
       </section>
     </div>
   </div>
@@ -19473,14 +19408,9 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
             role="alert"
           >
             <p
-              className="font-weight-bold"
+              className="font-weight-bold mb-0"
             >
-              Falsches Passwort! 
-            </p>
-            <p
-              className="small"
-            >
-              Überprüfen Sie Ihr Passwort und versuchen Sie es erneut. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.
+              ⟪undefined⟫
             </p>
           </div>
         </div>
@@ -19961,14 +19891,9 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
             role="alert"
           >
             <p
-              className="font-weight-bold"
+              className="font-weight-bold mb-0"
             >
-              Anmelden ist mit diesem Benutzerkonto nicht möglich! 
-            </p>
-            <p
-              className="small"
-            >
-              Bitte prüfen Sie Ihre E-Mail-Adresse oder den Benutzernamen. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.
+              ⟪undefined⟫
             </p>
           </div>
         </div>
@@ -20202,14 +20127,9 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Invali
             role="alert"
           >
             <p
-              className="font-weight-bold"
+              className="font-weight-bold mb-0"
             >
-              Keine Email-Adresse vorhanden!
-            </p>
-            <p
-              className="small"
-            >
-              Das Passwort für dieses Benutzerkonto kann nicht zurückgesetzt werden, weil keine Email-Adresse im System vorhanden ist. Bitte prüfen Sie den angegebenen Benutzernamen. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.
+              ⟪undefined⟫
             </p>
           </div>
         </div>
@@ -21568,7 +21488,7 @@ exports[`Storybook HTML Snapshots Features/Passwort Reset Forgot Password Token 
             <p
               className="font-weight-bold mb-0"
             >
-              Entschuldigung, der Link zum Zurücksetzen des Passworts ist abgelaufen!
+              ⟪undefined⟫
             </p>
           </div>
         </div>

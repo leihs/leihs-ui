@@ -18,7 +18,7 @@ class Page extends Component {
   render(props = this.props) {
     const t = T(props.navbar.config.locales)
     const userParam = f.get(props, 'userParam')
-    const flashMessages = f.get(props, 'flashMessages')
+    const flashMessages = f.map(f.get(props, 'flashMessages'), m => f.merge(m, { message: t(f.get(m, 'messageID')) }))
 
     return (
       <div className="bg-paper h-100">

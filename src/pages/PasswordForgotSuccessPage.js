@@ -19,11 +19,11 @@ class Page extends Component {
 
         <CenteredCard title={t('password_forgot_title')}>
           <FlashMessages
-            messages={[{ message: props.message, level: 'success' }]}
+            messages={[{ message: t(props.messageID), level: 'success' }]}
             className="rounded"
             messageClasses="h5 rounded"
           />
-          <a href={props.resetPwLink}>go here to reset the password using the token in the email</a>
+          <a href={props.resetPwLink}>{t(props.resetPwLinkTextID)}</a>
         </CenteredCard>
       </div>
     )

@@ -81,7 +81,7 @@
     "en": "Login with password",
     "fr": "Connexion avec mot de passe",
     "es": "Iniciar sesión con contraseña",
-    "gsw": "Iilogge midde Passwort"
+    "gsw": "Iilogge mit Passwort"
   },
   "sign_in_password": {
     "de": "Passwort",
@@ -102,7 +102,21 @@
     "en": "Cancel and go back",
     "fr": "Annuler et revenir",
     "es": "Cancelar y volver",
-    "gsw": "X"
+    "gsw": "Abbräche und zrugg"
+  },
+  "sign_in_wrong_password_flash_message": {
+    "de": "Falsches Passwort!  \nÜberprüfen Sie Ihr Passwort und versuchen Sie es erneut. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.",
+    "en": "Wrong password!  \nCheck your password and try again. Contact leihs support if the problem persists.",
+    "fr": "Mauvais mot de passe!  \nVérifiez votre mot de passe et réessayez. Contactez l'assistance leihs si le problème persiste.",
+    "es": "¡Contraseña incorrecta!  \nVerifique su contraseña y vuelva a intentarlo. Póngase en contacto con el soporte de leihs si el problema persiste.",
+    "gsw": "Falsches Passwort!  \nÜberprüefet Sie Ihres Passwort und probieret Sie's namal. Kontaktieret Sie dä leihs-Support, wänn s'Problem wiiter beschtaat."
+  },
+  "sign_in_invalid_user_flash_message": {
+    "de": "Anmelden ist mit diesem Benutzerkonto nicht möglich!  \nBitte prüfen Sie Ihre E-Mail-Adresse oder den Benutzernamen. Kontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.",
+    "en": "Login is not possible with this user account!  \nPlease check your email address or username. Contact leihs support if the problem persists.",
+    "fr": "La connexion n'est pas possible avec ce compte utilisateur!  \nVeuillez vérifier votre adresse e-mail ou votre nom d'utilisateur. Contactez l'assistance leihs si le problème persiste.",
+    "es": "¡No es posible iniciar sesión con esta cuenta de usuario!  \nPor favor, compruebe su dirección de correo electrónico o nombre de usuario. Póngase en contacto con el soporte de leihs si el problema persiste.",
+    "gsw": "Aamälde mit däm Benutzerkonto nöd mögli!  \nBitte prüefet Sie Ihri E-Mail-Adrässe oder dä Benutzername. Kontaktieret Sie dä leihs-Support, wänn s'Problem wiiter beschtaat."
   },
   "password_create_button_text": {
     "de": "Passwort erstellen",
@@ -130,7 +144,7 @@
     "en": "Receive a verification code by email to reset the password",
     "fr": "Recevoir un code de vérification par email pour réinitialiser le mot de passe",
     "es": "Reciba un código de verificación por correo electrónico para restablecer la contraseña",
-    "gsw": "Erhalte einen Bestätigungscode per Email, um das Passwort zurückzusetzen"
+    "gsw": "Sie chömet än Code per E-Mail über, mit däm chönd Sie dänn s'Passwort zruggsetze"
   },
   "password_forgot_continue": {
     "de": "Weiter",
@@ -138,6 +152,27 @@
     "fr": "Continuer",
     "es": "Continuar",
     "gsw": "Wiiter"
+  },
+  "password_forgot_userparam_label": {
+    "de": "Benutzername oder E-Mail",
+    "en": "Username or E-Mail",
+    "fr": "Nom d'utilisateur ou email",
+    "es": "Nombre de usuario o correo electrónico",
+    "gsw": "Benutzername oder E-Mail"
+  },
+  "password_forgot_check_email_message": {
+    "de": "Prüfen Sie Ihren E-Mail-Posteingang!",
+    "en": "Check your email inbox!",
+    "fr": "Vérifiez votre boîte mail!",
+    "es": "¡Revise su bandeja de entrada de correo electrónico!",
+    "gsw": "Sie söttet jetzt es E-Mail überchoo ha!"
+  },
+  "password_forgot_user_has_no_email_flash_text": {
+    "de": "Keine Email-Adresse vorhanden!  \nDas Passwort für dieses Benutzerkonto kann nicht zurückgesetzt werden, weil keine Email-Adresse im System vorhanden ist.  \nBitte prüfen Sie den angegebenen Benutzernamen.  \nKontaktieren Sie den leihs-Support, falls das Problem weiterhin besteht.",
+    "en": "No email address available!  \nThe password for this user account cannot be reset because there is no email address in the system.  \nPlease check the username provided.  \nContact leihs support if the problem persists.",
+    "fr": "Aucune adresse e-mail disponible !  \nLe mot de passe de ce compte utilisateur ne peut pas être réinitialisé car il n'y a pas d'adresse e-mail dans le système.  \nVeuillez vérifier le nom d'utilisateur fourni.  \nContactez le support de Leihs si le problème persiste.",
+    "es": "¡No hay dirección de correo electrónico disponible!  \nLa contraseña de esta cuenta de usuario no se puede restablecer porque no hay una dirección de correo electrónico en el sistema.  \nCompruebe el nombre de usuario proporcionado.  \nPóngase en contacto con el soporte de leihs si el problema persiste.",
+    "gsw": "Käi Email-Adrässe vorhande!  \nS'Passwort für das Benutzerkonto chann nöd zrugggsetzt werde, will käi Email-Adrässe im System vorhanden isch.  \nBitte prüefet Sie dä Benutzernamen wo Sie iiggää händ.  \nKontaktieret Sie dä leihs-Support, wänn s'Problem wiiter beschtaat."
   },
   "password_reset_continue": {
     "de": "Weiter",
@@ -151,14 +186,7 @@
     "en": "Reset Password",
     "fr": "Réinitialiser le mot de passe",
     "es": "Restablecer contraseña",
-    "gsw": "Passwort zurücksetzen"
-  },
-  "password_forgot_userparam_label": {
-    "de": "Benutzername oder E-Mail",
-    "en": "Username or E-Mail",
-    "fr": "Nom d'utilisateur ou email",
-    "es": "Nombre de usuario o correo electrónico",
-    "gsw": "Benutzername oder E-Mail"
+    "gsw": "Passwort zruggsetze"
   },
   "password_reset_userparam_label": {
     "de": "Benutzername oder E-Mail",
@@ -172,49 +200,35 @@
     "en": "secret token",
     "fr": "jeton secret",
     "es": "ficha secreta",
-    "gsw": "Geheimer Token"
+    "gsw": "Dä gheimi Code"
   },
   "password_reset_newpassword_label": {
     "de": "Neues Passwort",
     "en": "New Password",
     "fr": "Nouveau mot de passe",
     "es": "Nueva contraseña",
-    "gsw": "New Password"
+    "gsw": "S'neu Passwort"
   },
   "password_reset_success_message": {
     "de": "Passwort wurde erfolgreich gespeichert!",
     "en": "Password has been successfully saved!",
     "fr": "Le mot de passe a été enregistré avec succès!",
     "es": "La contraseña se ha guardado correctamente!",
-    "gsw": "Passwort wurde erfolgreich gespeichert!"
+    "gsw": "S'Passwort isch gschpeicheret worde!"
   },
   "password_reset_success_action": {
     "de": "Hierher gehen um sich erneut anzumelden",
     "en": "Go here to sign in again",
     "fr": "Allez ici pour vous connecter à nouveau",
     "es": "Vaya aquí para volver a iniciar sesión",
-    "gsw": "go here to sign in again"
+    "gsw": "Da ane gaa zum neu iilogge"
   },
-  "xxx": {
-    "de": "X",
-    "en": "X",
-    "fr": "X",
-    "es": "X",
-    "gsw": "X"
-  },
-  "xxx": {
-    "de": "X",
-    "en": "X",
-    "fr": "X",
-    "es": "X",
-    "gsw": "X"
-  },
-  "xxx": {
-    "de": "X",
-    "en": "X",
-    "fr": "X",
-    "es": "X",
-    "gsw": "X"
+  "password_reset_link_test": {
+    "de": "Gehen Sie hierher, um das Passwort mit dem Token in der E-Mail zurückzusetzen!",
+    "en": "Go here to reset the password using the token in the email!",
+    "fr": "Allez ici pour réinitialiser le mot de passe en utilisant le jeton dans l'e-mail!",
+    "es": "¡Vaya aquí para restablecer la contraseña usando el token en el correo electrónico!",
+    "gsw": "Da ane gaa zum s'Passwort mit äm Code us äm E-Mail zruggzsetze!"
   },
   "homepage_hero_title": {
     "de": "Geräte-Ausleihe und Inventarverwaltungssystem",
