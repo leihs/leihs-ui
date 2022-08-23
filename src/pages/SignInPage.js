@@ -22,7 +22,9 @@ class SignInPage extends Component {
   render(props = this.props) {
     const t = T(props.navbar.config.locales)
     const authSystems = f.get(props, 'authSystems')
-    const flashMessages = f.map(f.get(props, 'flashMessages'), m => f.merge(m, { message: t(f.get(m, 'messageID')) }))
+    const flashMessages = f.map(f.get(props, 'flashMessages'), m =>
+      f.merge(m, { message: m.messageID ? t(m.messageID) : m.message })
+    )
     const authFlow = f.merge(f.get(props, 'authFlow'), {
       title: t('sign_in_title')
     })
