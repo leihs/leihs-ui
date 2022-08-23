@@ -174,6 +174,13 @@
     "es": "¡No hay dirección de correo electrónico disponible!  \nLa contraseña de esta cuenta de usuario no se puede restablecer porque no hay una dirección de correo electrónico en el sistema.  \nCompruebe el nombre de usuario proporcionado.  \nPóngase en contacto con el soporte de leihs si el problema persiste.",
     "gsw": "Käi Email-Adrässe vorhande!  \nS'Passwort für das Benutzerkonto chann nöd zrugggsetzt werde, will käi Email-Adrässe im System vorhanden isch.  \nBitte prüefet Sie dä Benutzernamen wo Sie iiggää händ.  \nKontaktieret Sie dä leihs-Support, wänn s'Problem wiiter beschtaat."
   },
+  "password_forgot_email_sending_disabled_text": {
+    "de": "Das Versenden von Emails ist zur Zeit deaktiviert!  \nDer Grund dafür sind in der Regel Wartungsarbeiten. Kontaktieren Sie den leihs-Support, falls das Problem länger besteht.",
+    "en": "Sending of emails is currently disabled!  \nThis is usually due to maintenance work. Contact the leihs support if the problem persists.",
+    "fr": "L'envoi d'e-mails est actuellement désactivé!  \nCela est généralement dû à des travaux de maintenance. Contactez l'assistance leihs si le problème persiste.",
+    "es": "¡El envío de correos electrónicos está actualmente deshabilitado!  \nEsto suele deberse a trabajos de mantenimiento. Póngase en contacto con el soporte de leihs si el problema persiste.",
+    "gsw": "Dä Versand vo E-Mails isch im Momänt deaktiviert!  \nNormalerwiis isch das wäge Wartigs-Arbätä. Kontaktieret Sie dä leihs-Support, wänn s’Problem länger ahebet."
+  },
   "password_reset_continue": {
     "de": "Weiter",
     "en": "Continue",
