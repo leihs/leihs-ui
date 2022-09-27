@@ -1,20 +1,47 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 import { ErrorBoundary } from '../ErrorBoundary'
 
-export default function PageLayout({ children, navbar, className, errorBoundaryTxt, ...restProps }) {
+export default function PageLayout({
+  children,
+  topBar,
+  nav,
+  navShown,
+  flyout,
+  flyoutShown,
+  onContentClick,
+  className,
+  errorBoundaryTxt,
+  ...restProps
+}) {
   errorBoundaryTxt = {
     title: 'Error displaying this content',
     reload: 'Reload current page',
     goToStart: 'Go to start page',
     ...errorBoundaryTxt
   }
-  const BASE_CLASS = 'ui-page-layout'
   return (
-    <div className={cx('pb-5', className, BASE_CLASS)} {...restProps}>
-      <ErrorBoundary txt={errorBoundaryTxt}>{navbar}</ErrorBoundary>
-      <div className="page-inset-x py-4 container-fluid" style={{ maxWidth: '720px' }}>
-        <ErrorBoundary txt={errorBoundaryTxt}>{children}</ErrorBoundary>
+    <div className={cx('ui-page-layout', 'page-layout', className)} {...restProps}>
+      <div className="page-layout__top-bar">
+        <ErrorBoundary txt={errorBoundaryTxt}>{topBar}</ErrorBoundary>
+      </div>
+      <div className="page-layout__main">
+        <div className={cx('page-layout__nav page-inset-x', navShown && !flyoutShown ? '' : 'd-none', 'd-lg-block')}>
+          <div className="page-layout__nav-container">
+            <ErrorBoundary txt={errorBoundaryTxt}>{nav}</ErrorBoundary>
+          </div>
+        </div>
+        <div className="ui-page-content page-layout__content page-inset-x" onClick={onContentClick}>
+          <ErrorBoundary txt={errorBoundaryTxt}>{children}</ErrorBoundary>
+        </div>
+        {flyoutShown && (
+          <div className={cx('page-layout__flyout page-inset-x', flyoutShown ? '' : 'd-none', '')}>
+            <div className="page-layout__nav-container">
+              <ErrorBoundary txt={errorBoundaryTxt}>{flyout}</ErrorBoundary>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
@@ -60,3 +87,28 @@ PageLayout.MetadataWithDetails = function PageLayoutMetadata({ summary, details 
   )
 }
 PageLayout.MetadataWithDetails.displayName = 'PageLayout.MetadataWithDetails'
+
+PageLayout.propTypes = {
+  /** Element to show in content zone */
+  children: PropTypes.node,
+  /** Element to show in the top bar zone */
+  topBar: PropTypes.node,
+  /** Element to show in nav zone (mobile: hideable full screen overlay, desktop: static left side bar) */
+  nav: PropTypes.node,
+  /** Show nav overlay (relevant for mobile mode only) */
+  navShown: PropTypes.bool,
+  /** Show nav flyout (mobile: hideable full screen overlay, desktop: hideable right side bar) */
+  flyout: PropTypes.node,
+  /** Show nav flayout */
+  flyoutShown: PropTypes.bool,
+  /** Emitted on click in content zone (so the controlling component can hide the overlay)  */
+  onContentClick: PropTypes.func,
+  /** CSS class of the wrapping element */
+  className: PropTypes.string,
+  /** Localized texts for the error screen */
+  errorBoundaryTxt: PropTypes.shape({
+    title: PropTypes.string,
+    reload: PropTypes.string,
+    goToStart: PropTypes.string
+  })
+}

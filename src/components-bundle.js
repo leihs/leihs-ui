@@ -42,7 +42,7 @@ const Components = {
     ModalDialog: require('./components/MobileApp/DesignComponents/ModalDialog').default,
     Navbar: require('./components/MobileApp/DesignComponents/Navbar').default,
     PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
-    ProfileMenu: require('./components/MobileApp/DesignComponents/ProfileMenu').default,
+    ProfileMenuButton: require('./components/MobileApp/DesignComponents/ProfileMenuButton').default,
     ProgressInfo: require('./components/MobileApp/DesignComponents/ProgressInfo').default,
     PropertyTable: require('./components/MobileApp/DesignComponents/PropertyTable').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,

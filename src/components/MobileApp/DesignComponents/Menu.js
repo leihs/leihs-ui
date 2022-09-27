@@ -2,18 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-export default function Menu({ show = true, children, className, ...restProps }) {
+export default function Menu({ children, className, ...restProps }) {
   return (
-    <div
-      className={cx('ui-menu leihs-menu h-100 pb-5 bg-light-shade overflow-scroll', { 'd-none': !show }, className)}
-      {...restProps}
-    >
-      <nav
-        className="py-5 mb-5 page-inset-x container-fluid d-flex flex-column justify-content-between flex-md-row gap-5"
-        style={{ maxWidth: '1440px' }}
-      >
-        {children}
-      </nav>
+    <div className={cx('ui-menu leihs-menu', className)} {...restProps}>
+      <nav className="d-flex flex-column justify-content-between gap-5">{children}</nav>
     </div>
   )
 }
@@ -27,35 +19,36 @@ Menu.Group = function MenuGroup({ children, title, className, ...restProps }) {
   )
 }
 
-Menu.Link = function MenuLink({ children, isSelected, className, ...restProps }) {
+Menu.HorizontalGroup = function MenuGroup({ children, title, className, ...restProps }) {
   return (
-    <a
-      className={cx(
-        'ui-menu-item',
-        { 'ui-menu-item-selected leihs-menu-item-selected': isSelected },
-        'btn btn-secondary rounded-pill',
-        className
-      )}
-      {...restProps}
-    >
-      {children}
-    </a>
+    <div className={cx('ui-menu-group flex-fill text-center', className)} {...restProps}>
+      {title && <h2 className="fw-normal">{title}</h2>}
+      <div className="d-flex flex-row gap-2 justify-content-center flex-wrap">{children}</div>
+    </div>
   )
 }
 
-Menu.Button = function MenuButton({ children, isSelected, className, ...restProps }) {
+Menu.Link = function MenuLink(props) {
+  return MenuItem({ El: 'a', ...props })
+}
+
+Menu.Button = function MenuButton(props) {
+  return MenuItem({ El: 'button', ...props })
+}
+
+function MenuItem({ El, children, isSelected, className, ...restProps }) {
   return (
-    <button
+    <El
       className={cx(
         'ui-menu-item',
-        { 'ui-menu-item-selected leihs-menu-item-selected': isSelected },
-        'btn btn-secondary rounded-pill',
+        { 'ui-menu-item-selected leihs-menu-item--selected': isSelected },
+        'btn btn-secondary rounded-pill flex-grow-1',
         className
       )}
       {...restProps}
     >
       {children}
-    </button>
+    </El>
   )
 }
 
