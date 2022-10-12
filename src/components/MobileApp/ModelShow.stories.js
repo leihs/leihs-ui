@@ -17,6 +17,8 @@ export const modelShow = ({ model, onClickFavorite, onOrderClick, orderPanelTmp 
         onOrderClick={onOrderClick}
         onClickFavorite={onClickFavorite}
         orderPanelTmp={orderPanelTmp}
+        isAddButtonEnabled={true}
+        isFavoriteButtonEnabled={true}
         t={{
           addItemToCart: 'Gegenstand hinzufügen',
           addToFavorites: 'Zu Favoriten hinzufügen',
@@ -24,7 +26,9 @@ export const modelShow = ({ model, onClickFavorite, onOrderClick, orderPanelTmp 
           description: 'Beschreibung',
           properties: 'Eigenschaften',
           documents: 'Dokumente',
-          compatibles: 'Ergänzende Gegenstände'
+          compatibles: 'Ergänzende Gegenstände',
+          previousImage: 'Vorheriges Bild',
+          nextImage: 'Nächstes Bild'
         }}
       />
     </PageLayoutMock>

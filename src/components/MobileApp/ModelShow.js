@@ -11,6 +11,7 @@ import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 import SquareImage from './DesignComponents/SquareImage'
 import PropertyTable from './DesignComponents/PropertyTable'
 import Warning from './DesignComponents/Warning'
+import Icon, { iconArrowLeft, iconArrowRight } from './DesignComponents/Icons'
 
 const noop = () => {}
 
@@ -40,24 +41,48 @@ export default function ModelShow({
   function handleImageBulletClick(index) {
     setImageIndex(index)
   }
+
+  function handleLeftArrowClick() {
+    setImageIndex(x => (model.images.length + x - 1) % model.images.length)
+  }
+
+  function handleRightArrowClick() {
+    setImageIndex(x => (x + 1) % model.images.length)
+  }
+
   return (
     <>
       <PageLayout.Header title={model.name} className="mb-5" />
 
       {model.images.length > 1 && (
-        <div className="mb-4">
-          <SwipeableViews
-            enableMouseEvents={true}
-            resistance={true}
-            onChangeIndex={handleImageSwipe}
-            index={imageIndex}
-          >
-            {model.images.map((image, i) => {
-              return <SquareImage key={i} imgSrc={image.imageUrl} className="mb-3" />
-            })}
-          </SwipeableViews>
-
-          <div className="text-center">
+        <div className="slide-button-visibility-controller">
+          <div className="position-relative">
+            <button
+              className="btn btn-secondary slide-button slide-button--previous"
+              aria-label={t.previousImage}
+              onClick={handleLeftArrowClick}
+            >
+              <Icon icon={iconArrowLeft} height="35" width="20" />
+            </button>
+            <button
+              className="btn btn-secondary slide-button slide-button--next"
+              aria-label={t.nextImage}
+              onClick={handleRightArrowClick}
+            >
+              <Icon icon={iconArrowRight} height="35" width="20" />
+            </button>
+            <SwipeableViews
+              enableMouseEvents={true}
+              resistance={true}
+              onChangeIndex={handleImageSwipe}
+              index={imageIndex}
+            >
+              {model.images.map((image, i) => {
+                return <SquareImage key={i} imgSrc={image.imageUrl} className="mb-3 pe-none" />
+              })}
+            </SwipeableViews>
+          </div>
+          <div className="mb-4 text-center">
             {model.images.map((image, i) => (
               <button
                 type="button"

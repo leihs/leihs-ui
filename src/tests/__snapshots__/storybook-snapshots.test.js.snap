@@ -23070,6 +23070,74 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Icons Icon
             }
           }
         >
+          Arrow Left.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      className="small"
+    >
+      <pre
+        className="mb-0"
+      >
+        &lt;Icon icon={iconArrowLeft} /&gt;
+      </pre>
+    </div>
+  </div>
+  <div
+    className="d-flex align-items-end mb-3"
+  >
+    <div
+      className="pe-3 text-center"
+    >
+      <div
+        style={
+          Object {
+            "width": "2rem",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Arrow Right.svg
+        </svg>
+      </div>
+    </div>
+    <div
+      className="small"
+    >
+      <pre
+        className="mb-0"
+      >
+        &lt;Icon icon={iconArrowRight} /&gt;
+      </pre>
+    </div>
+  </div>
+  <div
+    className="d-flex align-items-end mb-3"
+  >
+    <div
+      className="pe-3 text-center"
+    >
+      <div
+        style={
+          Object {
+            "width": "2rem",
+          }
+        }
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
           Bag Icon.svg
         </svg>
       </div>

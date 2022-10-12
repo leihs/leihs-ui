@@ -1,5 +1,7 @@
 import React from 'react'
 import { ReactComponent as IconArrowSvg } from '../../../static/borrow-app-icons/Arrow Icon.svg'
+import { ReactComponent as IconArrowLeftSvg } from '../../../static/borrow-app-icons/Arrow Left.svg'
+import { ReactComponent as IconArrowRightSvg } from '../../../static/borrow-app-icons/Arrow Right.svg'
 import { ReactComponent as IconBagSvg } from '../../../static/borrow-app-icons/Bag Icon.svg'
 import { ReactComponent as IconCalendarCrossSvg } from '../../../static/borrow-app-icons/Calendar Cross.svg'
 import { ReactComponent as IconCalendarSvg } from '../../../static/borrow-app-icons/Calendar Icon.svg'
@@ -19,6 +21,8 @@ export default function Icon({ icon, style, ...restProps }) {
 }
 
 export const iconArrow = props => <IconArrowSvg {...props} />
+export const iconArrowLeft = props => <IconArrowLeftSvg {...props} />
+export const iconArrowRight = props => <IconArrowRightSvg {...props} />
 export const iconBag = props => <IconBagSvg {...props} />
 export const iconCalendarCross = props => <IconCalendarCrossSvg {...props} />
 export const iconCalendar = props => <IconCalendarSvg {...props} />
@@ -33,6 +37,8 @@ export const iconFilter = props => <IconFilterSvg height="24px" width="24px" {..
 
 export const allIcons = [
   iconArrow,
+  iconArrowLeft,
+  iconArrowRight,
   iconBag,
   iconCalendarCross,
   iconCalendar,
