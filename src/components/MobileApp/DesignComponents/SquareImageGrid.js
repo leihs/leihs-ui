@@ -6,7 +6,7 @@ import SquareImage from './SquareImage'
 export default function SquareImageGrid({ list = [], className, itemClassName, ...restProps }) {
   return (
     <div className={cx('row g-0 d-flex flex-wrap mx-n2', className)} {...restProps}>
-      {list.map(({ id, href, imgSrc, caption, subCaption, isDimmed, isFavorited }) => (
+      {list.map(({ id, href, imgSrc, placeholder, caption, subCaption, isDimmed, isFavorited }) => (
         <div key={id} className="col-6 col-sm-3" style={{ opacity: isDimmed ? 0.35 : 1 }}>
           <div
             className={cx('max-w-sm overflow-hidden bg-white mx-2 mb-3 position-relative', itemClassName)}
@@ -17,7 +17,7 @@ export default function SquareImageGrid({ list = [], className, itemClassName, .
                 <Icon icon={iconStar} />
               </div>
             )}
-            <SquareImage href={href} imgSrc={imgSrc} className="rounded border" />
+            <SquareImage href={href} imgSrc={imgSrc} placeholder={placeholder} className="rounded border" />
             <div className="pt-2">
               <a className="stretched-link" href={href}>
                 <div className="small">{caption}</div>

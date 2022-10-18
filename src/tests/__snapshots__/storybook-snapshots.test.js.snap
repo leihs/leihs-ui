@@ -25521,15 +25521,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
   <p
     className="text-muted"
   >
-    When no imgSrc prop is provided, a placeholder is rendered
+    When no imgSrc prop is provided, a gray space is rendered as the default placeholder
+  </p>
+  <div
+    className="border border-gray-200 mb-3 square-container position-relative overflow-hidden"
+  >
+    <a>
+      <div
+        className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
+      />
+    </a>
+  </div>
+  <p
+    className="text-muted"
+  >
+    The placeholder can also be set via props (shown centered)
   </p>
   <div
     className="border border-gray-200 square-container position-relative overflow-hidden"
   >
     <a>
       <div
-        className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
-      />
+        className="position-absolute h-100 w-100 d-flex justify-content-center align-items-center"
+      >
+        <div>
+          <div
+            className="shadow"
+          >
+            whatever placeholder you want
+          </div>
+        </div>
+      </div>
     </a>
   </div>
 </div>
@@ -25569,6 +25591,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
   >
     Shows an image centered in a full width square box regardless of its size and ratio.
   </p>
+  <p
+    className="text-muted"
+  >
+    (Note that the border is set via className for illustrative purposes)
+  </p>
   <div
     className="border border-gray-200 mb-3 square-container position-relative overflow-hidden"
   >
@@ -25583,8 +25610,13 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
   <p
     className="text-muted"
   >
-    (Note that the border is set via className for illustrative purposes)
+    Example image used (not square!):
   </p>
+  <img
+    alt="Example"
+    className="border w-50 mb-3"
+    src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+  />
 </div>
 `;
 
