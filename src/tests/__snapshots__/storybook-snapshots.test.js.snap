@@ -25631,10 +25631,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     Set arbitrary attributes with restProps
   </p>
   <div
-    className="row g-0 d-flex flex-wrap mx-n2 text-primary"
+    className="ui-square-image-grid row g-0 d-flex flex-wrap mx-n2 text-primary"
   >
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 1,
@@ -25670,19 +25670,19 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 1
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             />
           </a>
         </div>
       </div>
     </div>
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 1,
@@ -25732,12 +25732,12 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 2 (a favorite)
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             >
               it is a favorite
             </div>
@@ -25746,7 +25746,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
       </div>
     </div>
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 0.35,
@@ -25780,12 +25780,12 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 3
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             >
               it is dimmed
             </div>
@@ -25794,7 +25794,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
       </div>
     </div>
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 1,
@@ -25828,12 +25828,12 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 4 with much text text text
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             />
           </a>
         </div>
@@ -25849,10 +25849,10 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     SquareImageGrid
   </h1>
   <div
-    className="row g-0 d-flex flex-wrap mx-n2"
+    className="ui-square-image-grid row g-0 d-flex flex-wrap mx-n2"
   >
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 1,
@@ -25888,19 +25888,19 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 1
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             />
           </a>
         </div>
       </div>
     </div>
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 1,
@@ -25950,12 +25950,12 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 2 (a favorite)
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             >
               it is a favorite
             </div>
@@ -25964,7 +25964,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
       </div>
     </div>
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 0.35,
@@ -25998,12 +25998,12 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 3
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             >
               it is dimmed
             </div>
@@ -26012,7 +26012,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
       </div>
     </div>
     <div
-      className="col-6 col-sm-3"
+      className="ui-square-image-grid-item col-6 col-sm-3"
       style={
         Object {
           "opacity": 1,
@@ -26046,12 +26046,12 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
             href={null}
           >
             <div
-              className="small"
+              className="ui-caption small"
             >
               Item 4 with much text text text
             </div>
             <div
-              className="small fw-light"
+              className="ui-sub-caption small fw-light"
             />
           </a>
         </div>
@@ -44496,10 +44496,10 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
 
 exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelList 1`] = `
 <div
-  className="row g-0 d-flex flex-wrap mx-n2 ui-models-list"
+  className="ui-square-image-grid row g-0 d-flex flex-wrap mx-n2 ui-models-list"
 >
   <div
-    className="col-6 col-sm-3"
+    className="ui-square-image-grid-item col-6 col-sm-3"
     style={
       Object {
         "opacity": 1,
@@ -44533,12 +44533,12 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
           href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
         >
           <div
-            className="small"
+            className="ui-caption small"
           >
             Assitasche zu Alexa / Sony
           </div>
           <div
-            className="small fw-light"
+            className="ui-sub-caption small fw-light"
           >
             Birkle / Steiner
           </div>
@@ -44547,7 +44547,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
     </div>
   </div>
   <div
-    className="col-6 col-sm-3"
+    className="ui-square-image-grid-item col-6 col-sm-3"
     style={
       Object {
         "opacity": 1,
@@ -44583,12 +44583,12 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
           href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
         >
           <div
-            className="small"
+            className="ui-caption small"
           >
             AVCHD-Kamera Sony HXR-NX5E
           </div>
           <div
-            className="small fw-light"
+            className="ui-sub-caption small fw-light"
           >
             Sony
           </div>
@@ -44597,7 +44597,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
     </div>
   </div>
   <div
-    className="col-6 col-sm-3"
+    className="ui-square-image-grid-item col-6 col-sm-3"
     style={
       Object {
         "opacity": 0.35,
@@ -44633,12 +44633,12 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
           href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
         >
           <div
-            className="small"
+            className="ui-caption small"
           >
             AVCHD-Kamera Sony HXR-NX5R
           </div>
           <div
-            className="small fw-light"
+            className="ui-sub-caption small fw-light"
           >
             Sony
           </div>
@@ -44647,7 +44647,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
     </div>
   </div>
   <div
-    className="col-6 col-sm-3"
+    className="ui-square-image-grid-item col-6 col-sm-3"
     style={
       Object {
         "opacity": 1,
@@ -44683,12 +44683,12 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
           href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
         >
           <div
-            className="small"
+            className="ui-caption small"
           >
             BluRay-Player Sony BDP-S490 3D
           </div>
           <div
-            className="small fw-light"
+            className="ui-sub-caption small fw-light"
           >
             Sony
           </div>
@@ -44697,7 +44697,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
     </div>
   </div>
   <div
-    className="col-6 col-sm-3"
+    className="ui-square-image-grid-item col-6 col-sm-3"
     style={
       Object {
         "opacity": 1,
@@ -44733,12 +44733,12 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
           href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
         >
           <div
-            className="small"
+            className="ui-caption small"
           >
             CD-Player Sony CDP-XE370
           </div>
           <div
-            className="small fw-light"
+            className="ui-sub-caption small fw-light"
           >
             Sony
           </div>
@@ -44747,7 +44747,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
     </div>
   </div>
   <div
-    className="col-6 col-sm-3"
+    className="ui-square-image-grid-item col-6 col-sm-3"
     style={
       Object {
         "opacity": 0.35,
@@ -44783,12 +44783,12 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
           href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
         >
           <div
-            className="small"
+            className="ui-caption small"
           >
             Fernbedienung Kamera Sony RM-1BP
           </div>
           <div
-            className="small fw-light"
+            className="ui-sub-caption small fw-light"
           >
             Sony
           </div>
