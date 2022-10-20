@@ -49,6 +49,7 @@ const Components = {
     Spinner: require('./components/MobileApp/DesignComponents/Spinner').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
     Stack: require('./components/MobileApp/DesignComponents/Stack').default,
+    TemplateIcon: require('./components/MobileApp/DesignComponents/TemplateIcon').default,
     Textarea: require('./components/MobileApp/DesignComponents/Textarea').default,
     Warning: require('./components/MobileApp/DesignComponents/Warning').default
   },
