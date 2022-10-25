@@ -24,7 +24,9 @@ export default function PageLayout({
   return (
     <div className={cx('ui-page-layout', 'page-layout', className)} {...restProps}>
       <div className="page-layout__top-bar">
-        <ErrorBoundary txt={errorBoundaryTxt}>{topBar}</ErrorBoundary>
+        <div className="page-layout__top-bar-container">
+          <ErrorBoundary txt={errorBoundaryTxt}>{topBar}</ErrorBoundary>
+        </div>
       </div>
       <div className="page-layout__main">
         <div className={cx('page-layout__nav page-inset-x', navShown && !flyoutShown ? '' : 'd-none', 'd-lg-block')}>

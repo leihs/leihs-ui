@@ -27,10 +27,7 @@ export default function Navbar({
 }) {
   const showCartCounter = !!cartItemCount || cartItemCount === 0
   return (
-    <nav
-      className={cx('ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4', className)}
-      {...restProps}
-    >
+    <nav className={cx('ui-main-nav navbar navbar-light', className)} {...restProps}>
       {/* Burger */}
       <div className="navbar-nav d-lg-none" style={{ width: '74px' }}>
         <a role="button" className="nav-item nav-link" aria-expanded={mainMenuIsOpen} {...mainMenuLinkProps}>
@@ -51,7 +48,9 @@ export default function Navbar({
         <a role="button" className="nav-item nav-link position-relative" style={{ top: '1px' }} {...cartItemLinkProps}>
           {showCartCounter && (
             <div
-              className={cx('cart-badge position-absolute', { 'cart-badge--with-conflict': invalidCartItemCount > 0 })}
+              className={cx('cart-badge position-absolute', {
+                'cart-badge--with-conflict': invalidCartItemCount > 0
+              })}
               style={{ top: '4px', right: '-8px' }}
             >
               <span>{invalidCartItemCount > 0 ? '!' : cartItemCount}</span>
@@ -79,20 +78,22 @@ export default function Navbar({
         )}
 
         {/* Sub App */}
-        <div className="nav-item d-none d-md-block">
-          <a
-            role="button"
-            className={cx(
-              'd-inline-block text-center fw-normal border border-dark rounded-1',
-              appMenuIsOpen ? 'bg-secondary' : 'bg-light-shade'
-            )}
-            style={{ minWidth: '36px', height: '24px', padding: '1px 4px 0 4px', marginTop: '3px' }}
-            aria-expanded={appMenuIsOpen}
-            {...appMenuLinkProps}
-          >
-            {appMenuLinkLabel}
-          </a>
-        </div>
+        {appMenuLinkLabel && (
+          <div className="nav-item d-none d-md-block">
+            <a
+              role="button"
+              className={cx(
+                'd-inline-block text-center fw-normal border border-dark rounded-1',
+                appMenuIsOpen ? 'bg-secondary' : 'bg-light-shade'
+              )}
+              style={{ minWidth: '36px', height: '24px', padding: '1px 4px 0 4px', marginTop: '3px' }}
+              aria-expanded={appMenuIsOpen}
+              {...appMenuLinkProps}
+            >
+              {appMenuLinkLabel}
+            </a>
+          </div>
+        )}
       </div>
     </nav>
   )

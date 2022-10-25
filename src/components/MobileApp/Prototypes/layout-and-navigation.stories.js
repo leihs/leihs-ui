@@ -59,8 +59,11 @@ export function layoutAndNavigation() {
             <Menu.Link onClick={dismissOverlay}>Meine Bestellungen</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Favoriten</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Inventarparks</Menu.Link>
+          </Menu.Group>
+          <Menu.Group className="d-none d-lg-block">
             <Menu.Link onClick={dismissOverlay}>Dokumentation</Menu.Link>
           </Menu.Group>
+
           <Menu.Group title="Ausleihen" className="d-lg-none">
             <Menu.Link onClick={dismissOverlay}>Katalog</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Warenkorb</Menu.Link>

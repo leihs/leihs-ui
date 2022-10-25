@@ -61,7 +61,14 @@ export const realisticExample = () => {
   }
   return (
     <PageLayout
-      topBar={<Navbar cartItemCount={3} mainMenuLinkProps={{ onClick: onMenuItemClick }} mainMenuIsOpen={navShown} />}
+      topBar={
+        <Navbar
+          cartItemCount={3}
+          mainMenuLinkProps={{ onClick: onMenuItemClick }}
+          mainMenuIsOpen={navShown}
+          appMenuLinkLabel="Bereich"
+        />
+      }
       nav={
         <Menu>
           <Menu.Group title="Group 1">
@@ -94,6 +101,7 @@ export const horizontalInset = () => {
   return (
     <PageLayout topBar={<div className="bg-light-shade p-3 h-100">Top bar</div>}>
       <PageLayout.Header title="PageLayout - Horizontal Inset" />
+      <p className="text-muted">Note: available only below `md` breakpoint</p>
       <p className="text-muted">The content area of the page layout has a horizontal inset (padding).</p>
       <p className="text-muted">
         If for some reason edge-to-edge content is needed, use the <code>.page-inset-x-inverse</code> class.

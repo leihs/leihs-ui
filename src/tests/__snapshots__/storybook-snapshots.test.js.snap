@@ -41201,7 +41201,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -41326,7 +41326,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -41451,7 +41451,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -41576,7 +41576,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -41701,7 +41701,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -41826,7 +41826,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Coun
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -41964,7 +41964,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -42026,23 +42026,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
             Bag Icon.svg
           </svg>
         </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
-        </div>
       </div>
     </nav>
   </div>
@@ -42055,7 +42038,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4 border border-primary"
+      className="ui-main-nav navbar navbar-light border border-primary"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -42130,23 +42113,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
             Bag Icon.svg
           </svg>
         </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
-        </div>
       </div>
     </nav>
   </div>
@@ -42159,7 +42125,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -42234,23 +42200,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
             Bag Icon.svg
           </svg>
         </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
-        </div>
       </div>
     </nav>
   </div>
@@ -42263,7 +42212,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -42338,23 +42287,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
             Bag Icon.svg
           </svg>
         </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
-        </div>
       </div>
     </nav>
   </div>
@@ -42367,7 +42299,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -42442,23 +42374,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
             Bag Icon.svg
           </svg>
         </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
-        </div>
       </div>
     </nav>
   </div>
@@ -42471,7 +42386,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -42546,23 +42461,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
             Bag Icon.svg
           </svg>
         </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="border border-primary"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
-        </div>
       </div>
     </nav>
   </div>
@@ -42575,7 +42473,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
     className="mb-3"
   >
     <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+      className="ui-main-nav navbar navbar-light"
     >
       <div
         className="navbar-nav d-lg-none"
@@ -42650,23 +42548,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar More
             Bag Icon.svg
           </svg>
         </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
-        </div>
       </div>
     </nav>
   </div>
@@ -42679,7 +42560,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Navbar Navb
     Navbar
   </h1>
   <nav
-    className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+    className="ui-main-nav navbar navbar-light"
   >
     <div
       className="navbar-nav d-lg-none"
@@ -42835,9 +42716,13 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="page-layout__top-bar"
   >
     <div
-      className="bg-light-shade p-3 h-100"
+      className="page-layout__top-bar-container"
     >
-      Top bar
+      <div
+        className="bg-light-shade p-3 h-100"
+      >
+        Top bar
+      </div>
     </div>
   </div>
   <div
@@ -42929,9 +42814,13 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="page-layout__top-bar"
   >
     <div
-      className="bg-light-shade p-3 h-100"
+      className="page-layout__top-bar-container"
     >
-      Top bar
+      <div
+        className="bg-light-shade p-3 h-100"
+      >
+        Top bar
+      </div>
     </div>
   </div>
   <div
@@ -42954,6 +42843,11 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
           PageLayout - Horizontal Inset
         </h1>
       </div>
+      <p
+        className="text-muted"
+      >
+        Note: available only below \`md\` breakpoint
+      </p>
       <p
         className="text-muted"
       >
@@ -43004,29 +42898,33 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="page-layout__top-bar"
   >
     <div
-      className="bg-light-shade p-3 h-100"
+      className="page-layout__top-bar-container"
     >
-      Top bar
-      <label
-        className="ms-3 d-lg-none"
+      <div
+        className="bg-light-shade p-3 h-100"
       >
-        <input
-          checked={false}
-          onChange={[Function]}
-          type="checkbox"
-        />
-         Show nav
-      </label>
-      <label
-        className="ms-3"
-      >
-        <input
-          checked={false}
-          onChange={[Function]}
-          type="checkbox"
-        />
-         Show flyout
-      </label>
+        Top bar
+        <label
+          className="ms-3 d-lg-none"
+        >
+          <input
+            checked={false}
+            onChange={[Function]}
+            type="checkbox"
+          />
+           Show nav
+        </label>
+        <label
+          className="ms-3"
+        >
+          <input
+            checked={false}
+            onChange={[Function]}
+            type="checkbox"
+          />
+           Show flyout
+        </label>
+      </div>
     </div>
   </div>
   <div
@@ -43090,26 +42988,76 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
   <div
     className="page-layout__top-bar"
   >
-    <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+    <div
+      className="page-layout__top-bar-container"
     >
-      <div
-        className="navbar-nav d-lg-none"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
+      <nav
+        className="ui-main-nav navbar navbar-light"
       >
-        <a
-          aria-expanded={false}
-          className="nav-item nav-link"
-          onClick={[Function]}
-          role="button"
+        <div
+          className="navbar-nav d-lg-none"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
-          <span
-            className="ui-icon ui-menu-icon"
+          <a
+            aria-expanded={false}
+            className="nav-item nav-link"
+            onClick={[Function]}
+            role="button"
           >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              <svg
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Menu Icon.svg
+              </svg>
+            </span>
+          </a>
+        </div>
+        <a
+          className="navbar-brand me-0 fw-bold"
+        >
+          Leihs
+        </a>
+        <div
+          className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
+        >
+          <a
+            className="nav-item nav-link position-relative"
+            role="button"
+            style={
+              Object {
+                "top": "1px",
+              }
+            }
+          >
+            <div
+              className="cart-badge position-absolute"
+              style={
+                Object {
+                  "right": "-8px",
+                  "top": "4px",
+                }
+              }
+            >
+              <span>
+                3
+              </span>
+            </div>
             <svg
               style={
                 Object {
@@ -43117,75 +43065,31 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
                 }
               }
             >
-              Menu Icon.svg
+              Bag Icon.svg
             </svg>
-          </span>
-        </a>
-      </div>
-      <a
-        className="navbar-brand me-0 fw-bold"
-      >
-        Leihs
-      </a>
-      <div
-        className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
-      >
-        <a
-          className="nav-item nav-link position-relative"
-          role="button"
-          style={
-            Object {
-              "top": "1px",
-            }
-          }
-        >
+          </a>
           <div
-            className="cart-badge position-absolute"
-            style={
-              Object {
-                "right": "-8px",
-                "top": "4px",
-              }
-            }
+            className="nav-item d-none d-md-block"
           >
-            <span>
-              3
-            </span>
+            <a
+              aria-expanded={false}
+              className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
+              }
+            >
+              Bereich
+            </a>
           </div>
-          <svg
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
-          >
-            Bag Icon.svg
-          </svg>
-        </a>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          />
         </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div
     className="page-layout__main"
@@ -44001,25 +43905,75 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
   <div
     className="page-layout__top-bar"
   >
-    <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+    <div
+      className="page-layout__top-bar-container"
     >
-      <div
-        className="navbar-nav d-lg-none"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
+      <nav
+        className="ui-main-nav navbar navbar-light"
       >
-        <a
-          aria-expanded={false}
-          className="nav-item nav-link"
-          role="button"
+        <div
+          className="navbar-nav d-lg-none"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
-          <span
-            className="ui-icon ui-menu-icon"
+          <a
+            aria-expanded={false}
+            className="nav-item nav-link"
+            role="button"
           >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              <svg
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Menu Icon.svg
+              </svg>
+            </span>
+          </a>
+        </div>
+        <a
+          className="navbar-brand me-0 fw-bold"
+        >
+          Leihs
+        </a>
+        <div
+          className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
+        >
+          <a
+            className="nav-item nav-link position-relative"
+            role="button"
+            style={
+              Object {
+                "top": "1px",
+              }
+            }
+          >
+            <div
+              className="cart-badge position-absolute"
+              style={
+                Object {
+                  "right": "-8px",
+                  "top": "4px",
+                }
+              }
+            >
+              <span>
+                3
+              </span>
+            </div>
             <svg
               style={
                 Object {
@@ -44027,101 +43981,55 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
                 }
               }
             >
-              Menu Icon.svg
+              Bag Icon.svg
             </svg>
-          </span>
-        </a>
-      </div>
-      <a
-        className="navbar-brand me-0 fw-bold"
-      >
-        Leihs
-      </a>
-      <div
-        className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
-      >
-        <a
-          className="nav-item nav-link position-relative"
-          role="button"
-          style={
-            Object {
-              "top": "1px",
-            }
-          }
-        >
+          </a>
           <div
-            className="cart-badge position-absolute"
+            className="nav-item"
             style={
               Object {
-                "right": "-8px",
-                "top": "4px",
+                "width": "48px",
               }
             }
           >
-            <span>
-              3
-            </span>
+            <a
+              aria-expanded={false}
+              className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
+              }
+            >
+              AB
+            </a>
           </div>
-          <svg
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
+          <div
+            className="nav-item d-none d-md-block"
           >
-            Bag Icon.svg
-          </svg>
-        </a>
-        <div
-          className="nav-item"
-          style={
-            Object {
-              "width": "48px",
-            }
-          }
-        >
-          <a
-            aria-expanded={false}
-            className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
+            <a
+              aria-expanded={false}
+              className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
               }
-            }
-          >
-            AB
-          </a>
+            >
+              Bereich
+            </a>
+          </div>
         </div>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          >
-            Bereich
-          </a>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div
     className="page-layout__main"
@@ -44188,25 +44096,75 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
   <div
     className="page-layout__top-bar"
   >
-    <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+    <div
+      className="page-layout__top-bar-container"
     >
-      <div
-        className="navbar-nav d-lg-none"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
+      <nav
+        className="ui-main-nav navbar navbar-light"
       >
-        <a
-          aria-expanded={false}
-          className="nav-item nav-link"
-          role="button"
+        <div
+          className="navbar-nav d-lg-none"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
-          <span
-            className="ui-icon ui-menu-icon"
+          <a
+            aria-expanded={false}
+            className="nav-item nav-link"
+            role="button"
           >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              <svg
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Menu Icon.svg
+              </svg>
+            </span>
+          </a>
+        </div>
+        <a
+          className="navbar-brand me-0 fw-bold"
+        >
+          Leihs
+        </a>
+        <div
+          className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
+        >
+          <a
+            className="nav-item nav-link position-relative"
+            role="button"
+            style={
+              Object {
+                "top": "1px",
+              }
+            }
+          >
+            <div
+              className="cart-badge position-absolute"
+              style={
+                Object {
+                  "right": "-8px",
+                  "top": "4px",
+                }
+              }
+            >
+              <span>
+                3
+              </span>
+            </div>
             <svg
               style={
                 Object {
@@ -44214,101 +44172,55 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
                 }
               }
             >
-              Menu Icon.svg
+              Bag Icon.svg
             </svg>
-          </span>
-        </a>
-      </div>
-      <a
-        className="navbar-brand me-0 fw-bold"
-      >
-        Leihs
-      </a>
-      <div
-        className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
-      >
-        <a
-          className="nav-item nav-link position-relative"
-          role="button"
-          style={
-            Object {
-              "top": "1px",
-            }
-          }
-        >
+          </a>
           <div
-            className="cart-badge position-absolute"
+            className="nav-item"
             style={
               Object {
-                "right": "-8px",
-                "top": "4px",
+                "width": "48px",
               }
             }
           >
-            <span>
-              3
-            </span>
+            <a
+              aria-expanded={false}
+              className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
+              }
+            >
+              AB
+            </a>
           </div>
-          <svg
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
+          <div
+            className="nav-item d-none d-md-block"
           >
-            Bag Icon.svg
-          </svg>
-        </a>
-        <div
-          className="nav-item"
-          style={
-            Object {
-              "width": "48px",
-            }
-          }
-        >
-          <a
-            aria-expanded={false}
-            className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
+            <a
+              aria-expanded={false}
+              className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
               }
-            }
-          >
-            AB
-          </a>
+            >
+              Bereich
+            </a>
+          </div>
         </div>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          >
-            Bereich
-          </a>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div
     className="page-layout__main"
@@ -44391,25 +44303,75 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
   <div
     className="page-layout__top-bar"
   >
-    <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+    <div
+      className="page-layout__top-bar-container"
     >
-      <div
-        className="navbar-nav d-lg-none"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
+      <nav
+        className="ui-main-nav navbar navbar-light"
       >
-        <a
-          aria-expanded={false}
-          className="nav-item nav-link"
-          role="button"
+        <div
+          className="navbar-nav d-lg-none"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
-          <span
-            className="ui-icon ui-menu-icon"
+          <a
+            aria-expanded={false}
+            className="nav-item nav-link"
+            role="button"
           >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              <svg
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Menu Icon.svg
+              </svg>
+            </span>
+          </a>
+        </div>
+        <a
+          className="navbar-brand me-0 fw-bold"
+        >
+          Leihs
+        </a>
+        <div
+          className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
+        >
+          <a
+            className="nav-item nav-link position-relative"
+            role="button"
+            style={
+              Object {
+                "top": "1px",
+              }
+            }
+          >
+            <div
+              className="cart-badge position-absolute"
+              style={
+                Object {
+                  "right": "-8px",
+                  "top": "4px",
+                }
+              }
+            >
+              <span>
+                3
+              </span>
+            </div>
             <svg
               style={
                 Object {
@@ -44417,101 +44379,55 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
                 }
               }
             >
-              Menu Icon.svg
+              Bag Icon.svg
             </svg>
-          </span>
-        </a>
-      </div>
-      <a
-        className="navbar-brand me-0 fw-bold"
-      >
-        Leihs
-      </a>
-      <div
-        className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
-      >
-        <a
-          className="nav-item nav-link position-relative"
-          role="button"
-          style={
-            Object {
-              "top": "1px",
-            }
-          }
-        >
+          </a>
           <div
-            className="cart-badge position-absolute"
+            className="nav-item"
             style={
               Object {
-                "right": "-8px",
-                "top": "4px",
+                "width": "48px",
               }
             }
           >
-            <span>
-              3
-            </span>
+            <a
+              aria-expanded={false}
+              className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
+              }
+            >
+              AB
+            </a>
           </div>
-          <svg
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
+          <div
+            className="nav-item d-none d-md-block"
           >
-            Bag Icon.svg
-          </svg>
-        </a>
-        <div
-          className="nav-item"
-          style={
-            Object {
-              "width": "48px",
-            }
-          }
-        >
-          <a
-            aria-expanded={false}
-            className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
+            <a
+              aria-expanded={false}
+              className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
               }
-            }
-          >
-            AB
-          </a>
+            >
+              Bereich
+            </a>
+          </div>
         </div>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          >
-            Bereich
-          </a>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div
     className="page-layout__main"
@@ -44922,25 +44838,75 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/UserProfilePage U
   <div
     className="page-layout__top-bar"
   >
-    <nav
-      className="ui-main-nav navbar navbar-light bg-light-shade border-bottom px-lg-4"
+    <div
+      className="page-layout__top-bar-container"
     >
-      <div
-        className="navbar-nav d-lg-none"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
+      <nav
+        className="ui-main-nav navbar navbar-light"
       >
-        <a
-          aria-expanded={false}
-          className="nav-item nav-link"
-          role="button"
+        <div
+          className="navbar-nav d-lg-none"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
         >
-          <span
-            className="ui-icon ui-menu-icon"
+          <a
+            aria-expanded={false}
+            className="nav-item nav-link"
+            role="button"
           >
+            <span
+              className="ui-icon ui-menu-icon"
+            >
+              <svg
+                style={
+                  Object {
+                    "display": "inline",
+                  }
+                }
+              >
+                Menu Icon.svg
+              </svg>
+            </span>
+          </a>
+        </div>
+        <a
+          className="navbar-brand me-0 fw-bold"
+        >
+          Leihs
+        </a>
+        <div
+          className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
+          style={
+            Object {
+              "width": "74px",
+            }
+          }
+        >
+          <a
+            className="nav-item nav-link position-relative"
+            role="button"
+            style={
+              Object {
+                "top": "1px",
+              }
+            }
+          >
+            <div
+              className="cart-badge position-absolute"
+              style={
+                Object {
+                  "right": "-8px",
+                  "top": "4px",
+                }
+              }
+            >
+              <span>
+                3
+              </span>
+            </div>
             <svg
               style={
                 Object {
@@ -44948,101 +44914,55 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/UserProfilePage U
                 }
               }
             >
-              Menu Icon.svg
+              Bag Icon.svg
             </svg>
-          </span>
-        </a>
-      </div>
-      <a
-        className="navbar-brand me-0 fw-bold"
-      >
-        Leihs
-      </a>
-      <div
-        className="navbar-nav flex-row-reverse gap-2 gap-lg-3 align-items-center"
-        style={
-          Object {
-            "width": "74px",
-          }
-        }
-      >
-        <a
-          className="nav-item nav-link position-relative"
-          role="button"
-          style={
-            Object {
-              "top": "1px",
-            }
-          }
-        >
+          </a>
           <div
-            className="cart-badge position-absolute"
+            className="nav-item"
             style={
               Object {
-                "right": "-8px",
-                "top": "4px",
+                "width": "48px",
               }
             }
           >
-            <span>
-              3
-            </span>
+            <a
+              aria-expanded={false}
+              className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
+              }
+            >
+              AB
+            </a>
           </div>
-          <svg
-            style={
-              Object {
-                "display": "inline",
-              }
-            }
+          <div
+            className="nav-item d-none d-md-block"
           >
-            Bag Icon.svg
-          </svg>
-        </a>
-        <div
-          className="nav-item"
-          style={
-            Object {
-              "width": "48px",
-            }
-          }
-        >
-          <a
-            aria-expanded={false}
-            className="ui-user-profile-button d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
+            <a
+              aria-expanded={false}
+              className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
+              role="button"
+              style={
+                Object {
+                  "height": "24px",
+                  "marginTop": "3px",
+                  "minWidth": "36px",
+                  "padding": "1px 4px 0 4px",
+                }
               }
-            }
-          >
-            AB
-          </a>
+            >
+              Bereich
+            </a>
+          </div>
         </div>
-        <div
-          className="nav-item d-none d-md-block"
-        >
-          <a
-            aria-expanded={false}
-            className="d-inline-block text-center fw-normal border border-dark rounded-1 bg-light-shade"
-            role="button"
-            style={
-              Object {
-                "height": "24px",
-                "marginTop": "3px",
-                "minWidth": "36px",
-                "padding": "1px 4px 0 4px",
-              }
-            }
-          >
-            Bereich
-          </a>
-        </div>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </div>
   <div
     className="page-layout__main"

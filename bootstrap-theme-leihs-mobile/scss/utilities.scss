@@ -17,13 +17,15 @@
 }
 
 /* Horizontal inset of pages (which is not covered by the default $spacers) */
-.page-inset-x {
-  padding-left: 20px;
-  padding-right: 20px;
-  /* Use this to invert it (break out of it) */
-  & &-inverse {
-    margin-left: -20px;
-    margin-right: -20px;
+@include media-breakpoint-down(md) {
+  .page-inset-x {
+    padding-left: 20px;
+    padding-right: 20px;
+    /* Use this to invert it (break out of it) */
+    & &-inverse {
+      margin-left: -20px;
+      margin-right: -20px;
+    }
   }
 }
 
