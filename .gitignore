@@ -11,3 +11,4 @@ tmp
 /src/theme
 /src/legacy
 /static/theme
+/.DS_store
