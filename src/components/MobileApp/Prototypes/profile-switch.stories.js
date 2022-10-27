@@ -67,5 +67,10 @@ const delegations = [
     id: 'D.003',
     profileName: 'Eine superduper Ausstellung über lange Titel - Raum 302 - 2.8.-31.8.2022',
     shortName: 'ES'
+  },
+  {
+    id: 'D.004',
+    profileName: 'mini 3',
+    shortName: 'm3'
   }
 ]

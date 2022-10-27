@@ -43466,78 +43466,54 @@ Array [
           className="d-flex flex-column gap-3"
         >
           <button
-            className="btn btn-secondary rounded-pill d-flex justify-content-center align-items-top"
+            className="btn btn-secondary rounded-pill"
           >
             <div
-              style={
-                Object {
-                  "flex": "2.4rem 0 0",
-                }
-              }
+              className="d-inline-block position-relative"
             >
-              <div
-                className="d-inline-block text-center fw-normal position-relative"
-              >
-                AB
-              </div>
+              AB
             </div>
-            <div>
-              Anna Beispiel (persönlich)
-            </div>
+             
+            • 
+            Anna Beispiel (persönlich)
           </button>
           <button
-            className="btn btn-secondary rounded-pill d-flex justify-content-center align-items-top ui-menu-item-selected leihs-menu-item--selected"
+            className="btn btn-secondary rounded-pill ui-menu-item-selected leihs-menu-item--selected"
           >
             <div
-              style={
-                Object {
-                  "flex": "2.4rem 0 0",
-                }
-              }
+              className="d-inline-block position-relative"
             >
-              <div
-                className="d-inline-block text-center fw-normal position-relative"
-              >
-                P1
-              </div>
+              P1
             </div>
-            <div>
-              Projektteam 1
-            </div>
+             
+            • 
+            Projektteam 1
           </button>
           <button
-            className="btn btn-secondary rounded-pill d-flex justify-content-center align-items-top"
+            className="btn btn-secondary rounded-pill"
           >
             <div
-              style={
-                Object {
-                  "flex": "2.4rem 0 0",
-                }
-              }
+              className="d-inline-block position-relative"
             >
-              <div
-                className="d-inline-block text-center fw-normal position-relative"
-              >
-                P2
-                <span
-                  aria-hidden={true}
-                  className="spinner-border spinner-border-sm position-absolute text-muted"
-                  role="status"
-                  style={
-                    Object {
-                      "height": "1.6rem",
-                      "left": "-0.2rem",
-                      "opacity": "1",
-                      "top": "-0.1rem",
-                      "width": "1.6rem",
-                    }
+              P2
+              <span
+                aria-hidden={true}
+                className="spinner-border spinner-border-sm position-absolute text-muted"
+                role="status"
+                style={
+                  Object {
+                    "height": "1.6rem",
+                    "left": "-0.2rem",
+                    "opacity": "1",
+                    "top": "-0.1rem",
+                    "width": "1.6rem",
                   }
-                />
-              </div>
+                }
+              />
             </div>
-            <div>
-              Projektteam 2
-            </div>
+             
+            • 
+            Projektteam 2
           </button>
         </div>
       </div>
@@ -43574,64 +43550,40 @@ Array [
           className="d-flex flex-column gap-3"
         >
           <button
-            className="btn btn-secondary rounded-pill d-flex justify-content-center align-items-top"
+            className="btn btn-secondary rounded-pill"
           >
             <div
-              style={
-                Object {
-                  "flex": "2.4rem 0 0",
-                }
-              }
+              className="d-inline-block position-relative"
             >
-              <div
-                className="d-inline-block text-center fw-normal position-relative"
-              >
-                AB
-              </div>
+              AB
             </div>
-            <div>
-              Anna Beispiel (persönlich)
-            </div>
+             
+            • 
+            Anna Beispiel (persönlich)
           </button>
           <button
-            className="btn btn-secondary rounded-pill d-flex justify-content-center align-items-top ui-menu-item-selected leihs-menu-item--selected"
+            className="btn btn-secondary rounded-pill ui-menu-item-selected leihs-menu-item--selected"
           >
             <div
-              style={
-                Object {
-                  "flex": "2.4rem 0 0",
-                }
-              }
+              className="d-inline-block position-relative"
             >
-              <div
-                className="d-inline-block text-center fw-normal position-relative"
-              >
-                P1
-              </div>
+              P1
             </div>
-            <div>
-              Projektteam 1
-            </div>
+             
+            • 
+            Projektteam 1
           </button>
           <button
-            className="btn btn-secondary rounded-pill d-flex justify-content-center align-items-top"
+            className="btn btn-secondary rounded-pill"
           >
             <div
-              style={
-                Object {
-                  "flex": "2.4rem 0 0",
-                }
-              }
+              className="d-inline-block position-relative"
             >
-              <div
-                className="d-inline-block text-center fw-normal position-relative"
-              >
-                P2
-              </div>
+              P2
             </div>
-            <div>
-              Projektteam 2
-            </div>
+             
+            • 
+            Projektteam 2
           </button>
         </div>
       </div>

@@ -7,23 +7,21 @@ export default function ProfileMenuButton({ profile, isSelected, isLoading, onCl
   return (
     <button
       className={cx(
-        'btn btn-secondary rounded-pill d-flex justify-content-center align-items-top',
+        'btn btn-secondary rounded-pill',
         isSelected ? 'ui-menu-item-selected leihs-menu-item--selected' : ''
       )}
       onClick={onClick}
     >
-      <div style={{ flex: '2.4rem 0 0' }}>
-        <div className="d-inline-block text-center fw-normal position-relative">
-          {profile.shortName}
-          {isLoading && (
-            <Spinner
-              className="position-absolute text-muted"
-              style={{ left: '-0.2rem', top: '-0.1rem', opacity: '1', width: '1.6rem', height: '1.6rem' }}
-            />
-          )}
-        </div>
-      </div>
-      <div>{profile.profileName}</div>
+      <div className="d-inline-block position-relative">
+        {profile.shortName}
+        {isLoading && (
+          <Spinner
+            className="position-absolute text-muted"
+            style={{ left: '-0.2rem', top: '-0.1rem', opacity: '1', width: '1.6rem', height: '1.6rem' }}
+          />
+        )}
+      </div>{' '}
+      • {profile.profileName}
     </button>
   )
 }

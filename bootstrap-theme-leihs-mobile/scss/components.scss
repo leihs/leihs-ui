@@ -450,9 +450,9 @@ $layout-width: 1000px;
     background-color: $light-shade;
     @include media-breakpoint-up(lg) {
       & {
-        padding-top: 30px;
+        padding-top: 50px;
         left: calc(50% - $layout-width / 2 + 15px);
-        width: 300px;
+        width: 290px;
         background-color: transparent;
       }
     }
@@ -472,7 +472,7 @@ $layout-width: 1000px;
     background-color: $light-shade;
     @include media-breakpoint-up(md) {
       & {
-        padding-top: 30px;
+        padding-top: 50px;
         width: 440px;
         border-left: 1px solid $gray;
       }
@@ -488,9 +488,9 @@ $layout-width: 1000px;
 
     @include media-breakpoint-up(lg) {
       & {
-        max-width: $layout-width - 300px - 40px;
+        max-width: $layout-width - 290px - 60px;
         padding-top: 50px;
-        margin-left: 300px + 40px;
+        margin-left: 290px + 60px;
       }
     }
   }

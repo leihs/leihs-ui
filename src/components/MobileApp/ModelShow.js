@@ -52,7 +52,7 @@ export default function ModelShow({
 
   return (
     <>
-      <PageLayout.Header title={model.name} className="mb-5" />
+      <PageLayout.Header title={model.name} />
 
       {model.images.length > 1 && (
         <div className="slide-button-visibility-controller">
