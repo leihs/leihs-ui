@@ -74,12 +74,6 @@ else
   source ./bin/require-clean-working-tree
   require-clean-working-tree
 
-  # RUBY on CI for ./bin/s3-cache-helper
-  RUBY="${RUBY:-EMPTY}"
-  if [ "${RUBY}" != 'EMPTY' ]; then
-    export PATH=~/.rubies/$RUBY/bin:$PATH
-  fi
-
   echo "LOCAL_CACHED_ARTEFACT_PATH: $LOCAL_CACHED_ARTEFACT_PATH"
 
   if [ -e $LOCAL_CACHED_ARTEFACT_PATH ]; then

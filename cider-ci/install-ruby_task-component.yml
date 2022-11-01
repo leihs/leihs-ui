@@ -1,21 +1,12 @@
 traits:
-  ruby-install: true
+  asdf-ruby: true
   Bash: true
 
 scripts:
   install-ruby:
-    exclusive_executor_resource: ruby-install
+    exclusive_executor_resource: asdf-ruby
     timeout: 20 Minutes
     body: |
       #!/usr/bin/env bash
-      set -euxo
-
-      export PATH=~/.rubies/$RUBY/bin:$PATH
-
-      if [ ! -d ~/.rubies/$RUBY ]; then
-        RUBY_INSTALL_SRC_DIR=/tmp/src-${RUBY}
-        rm -rf ${RUBY_INSTALL_SRC_DIR}
-        ruby-install --src-dir ${RUBY_INSTALL_SRC_DIR}} --no-install-deps $RUBY_ENGINE $RUBY_VERSION
-      fi
-
-
+      set -eux
+      asdf install ruby

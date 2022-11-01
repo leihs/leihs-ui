@@ -5,10 +5,6 @@ task_defaults:
   environment_variables:
     CI: 'true'
 
-    RUBY_ENGINE: ruby
-    RUBY_VERSION: 2.7.6
-    RUBY: '{{RUBY_ENGINE}}-{{RUBY_VERSION}}'
-
     DIST_IMAGE_NAME: 'leihs-ui'
     DIST_VERSION_NAME: 'trial-{{CIDER_CI_TRIAL_ID}}'
 
