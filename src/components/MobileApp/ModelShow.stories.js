@@ -120,7 +120,7 @@ const model = {
       }
     ]
   },
-  totalBorrowableQuantities: [
+  totalReservableQuantities: [
     {
       inventoryPool: {
         id: '3977012c-ce0e-501f-889b-8715fdb5d83b'

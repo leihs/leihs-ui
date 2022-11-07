@@ -14,11 +14,11 @@ export const cartConstraints = () => {
   const pool1 = {
     id: 'Pool001',
     name: 'Zoo Zürich',
-    totalBorrowableQuantity: 3,
+    totalReservableQuantity: 3,
     reservationAdvanceDays: 1,
     maximumReservationTime: 10
   }
-  const pool2 = { id: 'Pool002', name: 'Zoo Basel', totalBorrowableQuantity: 1 }
+  const pool2 = { id: 'Pool002', name: 'Zoo Basel', totalReservableQuantity: 1 }
 
   const maxDate = new Date('2020-05-31')
 
@@ -71,12 +71,12 @@ export function invalidPoolSelected() {
   const pool1 = {
     id: 'Pool001',
     name: 'Valid pool',
-    totalBorrowableQuantity: 3
+    totalReservableQuantity: 3
   }
   const poolWithoutItem = {
     id: 'Pool002',
     name: 'Pool without the item',
-    totalBorrowableQuantity: 0
+    totalReservableQuantity: 0
   }
   const noAccessPool = {
     id: 'Pool003',

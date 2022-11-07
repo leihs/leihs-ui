@@ -205,10 +205,10 @@ const OrderPanel = ({
             onChange={changeInventoryPool}
             className="form-select"
           >
-            {selectablePools.map(({ id, name, totalBorrowableQuantity }) => (
+            {selectablePools.map(({ id, name, totalReservableQuantity }) => (
               <option key={id} value={id}>
-                {totalBorrowableQuantity
-                  ? t(label, 'pool-max-amount', locale, { pool: name, amount: totalBorrowableQuantity })
+                {totalReservableQuantity
+                  ? t(label, 'pool-max-amount', locale, { pool: name, amount: totalReservableQuantity })
                   : name}
               </option>
             ))}
@@ -217,7 +217,7 @@ const OrderPanel = ({
             <Warning className="mt-2">{validationResult.poolError}</Warning>
           ) : (
             <InfoMessage className="mt-2">
-              {t(label, 'pool-max-amount-info', locale, { amount: selectedPool.totalBorrowableQuantity })}
+              {t(label, 'pool-max-amount-info', locale, { amount: selectedPool.totalReservableQuantity })}
             </InfoMessage>
           )}
         </Section>
@@ -306,7 +306,7 @@ function validatePool(inventoryPool, locale, txt) {
   if (inventoryPool.userIsSuspended) {
     return t(txt, 'pool-suspension', locale)
   }
-  if (!inventoryPool.totalBorrowableQuantity) {
+  if (!inventoryPool.totalReservableQuantity) {
     return t(txt, 'item-not-available-in-pool', locale)
   }
   if (inventoryPool.isSurrogate) {

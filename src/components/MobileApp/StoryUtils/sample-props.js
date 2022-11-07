@@ -130,7 +130,7 @@ export function getOrderPanelMockData() {
   const FAKE_SECOND_POOL_ID = '53f78fc0-2b0b-4f67-a207-b08d2a3c47b2'
   modelData.availability.length < 2 &&
     modelData.availability.push({
-      inventoryPool: { id: FAKE_SECOND_POOL_ID, name: 'Ein anderer Inventarpark', totalBorrowableQuantity: 3 },
+      inventoryPool: { id: FAKE_SECOND_POOL_ID, name: 'Ein anderer Inventarpark', totalReservableQuantity: 3 },
       dates: modelData.availability[0].dates
     })
   const inventoryPools = modelData.availability.map(x => x.inventoryPool)

@@ -55,7 +55,7 @@ const OrderPanelPropTypes = {
     PropTypes.shape({
       id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
-      totalBorrowableQuantity: PropTypes.number,
+      totalReservableQuantity: PropTypes.number,
       userHasNoAccess: PropTypes.bool,
       userIsSuspended: PropTypes.bool
     }).isRequired

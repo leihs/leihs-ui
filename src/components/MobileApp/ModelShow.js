@@ -212,7 +212,7 @@ const modelPropTypes = {
       })
     )
   }),
-  totalBorrowableQuantities: PropTypes.arrayOf(
+  totalReservableQuantities: PropTypes.arrayOf(
     PropTypes.shape({
       inventoryPool: PropTypes.shape({
         id: PropTypes.string.isRequired
