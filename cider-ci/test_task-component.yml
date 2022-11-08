@@ -10,5 +10,5 @@ scripts:
     timeout: 10 minutes
     body: |
       # NOTE: dont use `-t` because in CI there is no interactive TTY!
-      docker exec -i "$RUNNER_CONTAINER_NAME" \
+      docker exec -i "$RUNNER_UI_CONTAINER_NAME" \
         npm run test

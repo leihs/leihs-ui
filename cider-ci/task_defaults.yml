@@ -5,8 +5,8 @@ task_defaults:
   environment_variables:
     CI: 'true'
 
-    DIST_IMAGE_NAME: 'leihs-ui'
+    DIST_UI_IMAGE_NAME: 'leihs-ui'
     DIST_VERSION_NAME: 'trial-{{CIDER_CI_TRIAL_ID}}'
 
-    RUNNER_IMAGE_NAME: 'leihs-ui-runner:trial-{{CIDER_CI_TRIAL_ID}}'
-    RUNNER_CONTAINER_NAME: 'leihs-ui-trial-{{CIDER_CI_TRIAL_ID}}'
+    RUNNER_UI_IMAGE_NAME: 'leihs-ui-runner:trial-{{CIDER_CI_TRIAL_ID}}'
+    RUNNER_UI_CONTAINER_NAME: 'leihs-ui-trial-{{CIDER_CI_TRIAL_ID}}'

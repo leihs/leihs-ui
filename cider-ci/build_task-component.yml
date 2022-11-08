@@ -9,7 +9,6 @@ scripts:
       install-ruby-passed: { script_key: install-ruby }
     body: |
       set -exu
-      export IMAGE_NAME="$DIST_IMAGE_NAME"
       export VERSION_NAME="$DIST_VERSION_NAME"
 
       USE_DOCKER=YES bin/build

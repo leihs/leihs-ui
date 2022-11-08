@@ -9,5 +9,5 @@ scripts:
       container is running: { script_key: start-container }
     timeout: 10 minutes
     body: |
-      docker exec -i "$RUNNER_CONTAINER_NAME" \
+      docker exec -i "$RUNNER_UI_CONTAINER_NAME" \
         npm run ci:lint
