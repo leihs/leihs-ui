@@ -4,6 +4,7 @@ import { action } from '@storybook/addon-actions'
 
 import OrderPanel from '../../OrderPanel'
 import { locale as fakeLocale, orderPanelTexts as fakeTxt } from '../../StoryUtils/fake-localization'
+import { de as dateLocale } from 'date-fns/locale'
 import { eachDayOfInterval, formatISO, getDay } from 'date-fns'
 
 export default {
@@ -59,6 +60,7 @@ export const cartConstraints = () => {
         initialQuantity={3}
         onSubmit={action('submit')}
         locale={fakeLocale}
+        dateLocale={dateLocale}
         txt={fakeTxt}
       />
     </div>
@@ -129,6 +131,7 @@ export function invalidPoolSelected() {
         initialQuantity={3}
         onSubmit={action('submit')}
         locale={fakeLocale}
+        dateLocale={dateLocale}
         txt={fakeTxt}
       />
     </div>

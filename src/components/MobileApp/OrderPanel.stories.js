@@ -3,6 +3,7 @@ import { action } from '@storybook/addon-actions'
 import { FAKE_STYLEGUIDE_TIME } from '../../../.storybook/fake-time'
 import { locale as fakeLocale, orderPanelTexts as fakeTxt } from './StoryUtils/fake-localization'
 import { addYears, endOfMonth } from 'date-fns'
+import { de as dateLocale } from 'date-fns/locale'
 
 import { getOrderPanelMockData } from './StoryUtils/sample-props'
 import OrderPanel from './OrderPanel'
@@ -69,6 +70,7 @@ export const orderPanel = () => {
           onSubmit={action('submit')}
           onValidate={setIsValid}
           locale={fakeLocale}
+          dateLocale={dateLocale}
           txt={fakeTxt}
         />
         <div className="m-4 text-muted">

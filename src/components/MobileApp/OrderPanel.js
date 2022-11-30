@@ -10,8 +10,7 @@ import {
   isSameDay,
   startOfMonth
 } from 'date-fns'
-// NOTE: only import our supported langs to keep the bundle small (do not rely on bundling magic like "tree shaking" or "dead code elimination")
-import { de as DateFnsLocaleDE, enGB as DateFnsLocaleEN } from 'date-fns/locale'
+import { enGB as defaultDateLocale } from 'date-fns/locale'
 import { translate as t } from '../../lib/translate'
 import { Let } from '../Util'
 import Section from './DesignComponents/Section'
@@ -23,7 +22,6 @@ import InfoMessage from './DesignComponents/InfoMessage'
 import orderPanelPropTypes from './OrderPanelPropTypes'
 
 const noop = () => {}
-const locales = { de: DateFnsLocaleDE, en: DateFnsLocaleEN }
 
 const OrderPanel = ({
   modelData,
@@ -48,11 +46,9 @@ const OrderPanel = ({
   onValidate = noop,
   onSubmit = noop,
   locale,
+  dateLocale,
   txt = {}
 }) => {
-  const currentLocale = typeof locale === 'string' ? locales[locale.split('-')[0]] : locale
-  // eslint-disable-next-line no-console
-  if (!locale) console.warn(`Could not find locale date for '${locale}'!`)
   const { label } = txt
 
   const today = startOfDay(now ? now : new Date())
@@ -252,7 +248,7 @@ const OrderPanel = ({
                       disabledDates={disabledDates}
                       disabledStartDates={disabledStartDates}
                       disabledEndDates={disabledEndDates}
-                      locale={currentLocale}
+                      locale={dateLocale || defaultDateLocale}
                       txt={{
                         from: t(label, 'from', locale),
                         until: t(label, 'until', locale),

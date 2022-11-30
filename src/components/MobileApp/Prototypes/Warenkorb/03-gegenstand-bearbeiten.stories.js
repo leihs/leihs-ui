@@ -6,6 +6,7 @@ import ActionButtonGroup from '../../DesignComponents/ActionButtonGroup'
 import OrderPanel from '../../OrderPanel'
 import { getOrderPanelMockData } from '../../StoryUtils/sample-props'
 import { locale, orderPanelTexts } from '../../StoryUtils/fake-localization'
+import { de as dateLocale } from 'date-fns/locale'
 
 export default {
   title: 'MobileApp/Prototypes/Warenkorb/Gegenstand bearbeiten',
@@ -31,6 +32,7 @@ export const gegenstandBearbeiten = ({ onSubmit, onCancel, onRemoveClick }) => {
             inventoryPools={inventoryPools}
             onSubmit={onSubmit}
             locale={locale}
+            dateLocale={dateLocale}
             txt={orderPanelTexts}
           />
           <ActionButtonGroup>

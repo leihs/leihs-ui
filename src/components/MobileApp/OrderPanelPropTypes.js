@@ -70,7 +70,11 @@ const OrderPanelPropTypes = {
   /** function which is called initially and on each form value change with true (valid) or false (invalid)  */
   onValidate: PropTypes.func,
 
+  /** ISO localization string, like "en-GB" or "de-CH" */
   locale: PropTypes.string.isRequired,
+  /** date localization from date-fns/locale. Default: en-GB */
+  dateLocale: PropTypes.object,
+  /** translation map */
   txt: PropTypes.object.isRequired
 }
 
