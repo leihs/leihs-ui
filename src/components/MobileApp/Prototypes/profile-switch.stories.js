@@ -61,12 +61,12 @@ const delegations = [
   {
     id: 'D.002',
     profileName: 'Filmprojektgruppe Zoo',
-    shortName: 'FP'
+    shortName: 'FZ'
   },
   {
     id: 'D.003',
     profileName: 'Eine superduper Ausstellung über lange Titel - Raum 302 - 2.8.-31.8.2022',
-    shortName: 'ES'
+    shortName: 'EsA'
   },
   {
     id: 'D.004',
