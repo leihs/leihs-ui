@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 set -eu
 
-
 ### VARIABLES and PWD #########################################################
 
 set -x
+
+asdf install ruby
 
 PROJECT_NAME="leihs-ui"
 
