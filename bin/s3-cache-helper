@@ -1,4 +1,4 @@
-#!/usr/bin/env ruby
+#!/usr/bin/ruby
 
 # NOTE: early abort if no config - keep it pure ruby to support more environments
 ENV_CONFIG = {
