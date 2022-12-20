@@ -1,0 +1,11 @@
+scripts:
+  build-ui:
+    timeout: 20 minutes
+    exclusive_executor_resource: leihs-ui-build_{{CIDER_CI_TREE_ID}}
+    body: |
+      #!/usr/bin/env bash
+      set -euo pipefail
+
+      export VERSION_NAME="$DIST_VERSION_NAME"
+      ./bin/build
+      echo; echo OK; echo

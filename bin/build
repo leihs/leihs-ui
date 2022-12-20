@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-set -eu
+set -euo pipefail
 
 
 ### VARIABLES and PWD #########################################################
-
-set -x
 
 PROJECT_NAME="leihs-ui"
 
@@ -14,11 +12,7 @@ ARTEFACT_PATHS="./dist ./bootstrap-theme-leihs/build ./bootstrap-theme-leihs-mob
 DIGEST="$(git -C "$PROJECT_DIR" log -n 1 HEAD --pretty=%T)"
 LOCAL_CACHE_DIR="${LOCAL_CACHE_DIR:-"${TMPDIR:-/tmp/}/leihs-build-cache"}"
 LOCAL_CACHED_ARTEFACT_PATH="${LOCAL_CACHE_DIR}/${ARTEFACT_NAME}_${DIGEST}.tgz"
-S3_CACHED_ARTEFACT_NAME="${ARTEFACT_NAME}_${DIGEST}.tgz"
 BUILD_CACHE_DISABLED="${BUILD_CACHE_DISABLED:-NO}"
-USE_DOCKER="${USE_DOCKER:-NO}"
-
-set +x
 
 cd "${PROJECT_DIR}"
 echo "PWD: $PWD"
@@ -31,22 +25,10 @@ else
   exit 1
 fi
 
-if [ $USE_DOCKER == "YES" ] ||  [ $USE_DOCKER == "NO" ]; then
-  echo "USE_DOCKER=$USE_DOCKER"
-else
-  echo 'USE_DOCKER must be initially unset, or "YES", or "NO"'
-  exit 1
-fi
-
-
 ### functions #################################################################
 
 function build {
-  if [ $USE_DOCKER == "YES" ]; then
-    bin/docker-build  || { echo "build error!"; exit 1; }
-  else
-    ./bin/build-core || { echo "build error!"; exit 1; }
-  fi
+  ./bin/build-core || { echo "build error!"; exit 1; }
 }
 
 function pack {
@@ -65,40 +47,18 @@ function extract {
 ### MAIN ######################################################################
 
 if [ $BUILD_CACHE_DISABLED == "YES" ]; then
-
   echo "INFO: BUILD_CACHE_DISABLED is YES, building and nothing else"
   build
-
 else
-
-  source ./bin/require-clean-working-tree
+  source ./bin/require-clean-working-tree.sh
   require-clean-working-tree
-
   echo "LOCAL_CACHED_ARTEFACT_PATH: $LOCAL_CACHED_ARTEFACT_PATH"
-
   if [ -e $LOCAL_CACHED_ARTEFACT_PATH ]; then
-
     echo "INFO: locally cached artefact found, extracting, and caching ..."
     extract
-
-    ./bin/s3-cache-helper upload -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
   else
-
-    echo "S3_CACHED_ARTEFACT_NAME: $S3_CACHED_ARTEFACT_NAME"
-    echo "INFO: trying to download from S3 cache"
-    ./bin/s3-cache-helper download -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
-
-    if [ -e $LOCAL_CACHED_ARTEFACT_PATH ]; then
-
-      echo "INFO: artefact found, extracting "
-      extract
-    else
-
-      echo "INFO: no cached artefact found: building, packing, and caching ..."
-      build
-      pack
-      ./bin/s3-cache-helper upload -n "$S3_CACHED_ARTEFACT_NAME" -p "$LOCAL_CACHED_ARTEFACT_PATH"
-    fi
+    build
+    pack
   fi
 fi
 

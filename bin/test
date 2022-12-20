@@ -7,16 +7,7 @@ INSTALL_DEPS="${INSTALL_DEPS:-YES}"
 
 cd $PROJECT_DIR
 
-./bin/env/nodejs-setup
+./bin/deps-install-dev
 
-if test "$INSTALL_DEPS" = "YES"; then
-  ./bin/deps-install
-fi
-
-# NOTE: those could run in parallel
-npm run build:theme
-npm run build:ssr
-
-cd -
-
+npm run test
 # vi: ft=sh

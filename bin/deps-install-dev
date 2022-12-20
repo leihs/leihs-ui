@@ -1,7 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
 
-#!/usr/bin/env bash -eux
+PROJECT_DIR="$(cd -- "$(dirname "${BASH_SOURCE}")" > /dev/null 2>&1 ; cd .. ; pwd -P)"
+cd $PROJECT_DIR
 
-cd "$(dirname ${BASH_SOURCE})/.."
+./bin/env/nodejs-setup
 
 cd bootstrap-theme-leihs
 # NOTE: optimize network access, first try with local cache only
@@ -12,3 +15,5 @@ npm install --no-audit --offline || npm install --no-audit
 
 cd ..
 npm install --no-audit --offline || npm install --no-audit
+
+# vi: ft=sh

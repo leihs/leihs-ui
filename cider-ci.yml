@@ -4,10 +4,10 @@ jobs:
     name: Build `dist`
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
-    include: cider-ci/task_defaults.yml
+    include: cider-ci/task-components/defaults.yml
     tasks:
       build:
-        include: cider-ci/build_task-component.yml
+        include: cider-ci/task-components/build.yml
 
   lint:
     name: Lint
@@ -16,10 +16,10 @@ jobs:
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
       build is done: { type: job, job_key: build, states: [passed] }
-    include: cider-ci/task_defaults.yml
+    include: cider-ci/task-components/defaults.yml
     tasks:
       lint:
-        include: cider-ci/lint_task-component.yml
+        include: cider-ci/task-components/lint.yml
 
   test:
     name: Test
@@ -28,10 +28,12 @@ jobs:
     run_when:
       any branch is pushed: { type: branch, include_match: ^.*$ }
       build is done: { type: job, job_key: build, states: [passed] }
-    include: cider-ci/task_defaults.yml
+    include: cider-ci/task-components/defaults.yml
     tasks:
       build-and-test:
-        include: cider-ci/test_task-component.yml
+        include: 
+          - cider-ci/task-components/build.yml
+          - cider-ci/task-components/test.yml
 
   all-ok:
     name: 'All Tests OK'

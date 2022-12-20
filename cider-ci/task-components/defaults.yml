@@ -1,0 +1,6 @@
+task_defaults:
+  environment_variables:
+    CI: 'true'
+    DIST_UI_IMAGE_NAME: 'leihs-ui'
+    DIST_VERSION_NAME: 'trial-{{CIDER_CI_TRIAL_ID}}'
+    LEIHS_UI_DIR: '{{CIDER_CI_WORKING_DIR}}'

@@ -1,0 +1,11 @@
+environment_variables:
+  CI: 'true'
+
+scripts:
+  test:
+    timeout: 10 minutes
+    start_when:
+      ui has been built:
+        script_key: build-ui
+    body: |
+      ./bin/test

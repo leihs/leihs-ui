@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-
-set -eu
+set -euo pipefail
 
 UI_DIR="$(dirname ${BASH_SOURCE})/.."
 cd "${UI_DIR}"

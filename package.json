@@ -18,7 +18,7 @@
     "build:symlinks": "bin/build-symlinks",
     "now-build": "npm i -g npm@7 && bin/build-core && npm run -s build:storybook",
     "build-lib": "npm run -s build:lib",
-    "lint": "eslint --fix 'src/{,**/}*.js{,x}' && npm run -s lint:json",
+    "lint": "npx eslint --fix 'src/{,**/}*.js{,x}' && npm run -s lint:json",
     "ci:lint": "eslint 'src/{,**/}*.js{,x}' && npm run -s ci:lint:json",
     "lint:json": "prettier --write 'src/{,**/}*.json'",
     "ci:lint:json": "prettier --list-different 'src/{,**/}*.json'",
