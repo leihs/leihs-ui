@@ -25,7 +25,7 @@ export default function ModalDialog({
     <Modal
       show={shown}
       onHide={onDismiss}
-      fullscreen={'md-down'}
+      fullscreen={'sm-down'}
       backdrop={dismissible ? true : 'static'}
       keyboard={dismissible}
       dialogClassName={className}

@@ -85,8 +85,9 @@
   }
 }
 
-/* Component: Modal (fine tuning: position of title and close button) */
+/* Component: Modal */
 .dismissible-modal-header {
+  // fine tuning: position of title and close button
   padding-left: 30px;
   padding-right: 30px;
   .btn-close {
@@ -94,6 +95,11 @@
     top: 17px;
     right: 20px;
   }
+}
+
+.modal-content {
+  // min width must correspond with body
+  min-width: 300px;
 }
 
 /* Component: Menu */

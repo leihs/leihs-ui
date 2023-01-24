@@ -1,16 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import {
-  format,
-  isValid,
-  parse,
-  isSameDay,
-  eachDayOfInterval,
-  addDays,
-  startOfMonth,
-  isFirstDayOfMonth
-} from 'date-fns'
+import { format, isValid, parse, isSameDay, startOfMonth, isFirstDayOfMonth, isBefore } from 'date-fns'
 import { DateRange } from '@leihs/calendar'
 import LabelInside from './LabelInside'
 
@@ -39,6 +30,8 @@ export default function DateRangePicker({
   className,
   locale,
   txt = defaultTxt,
+  dayButtonClass,
+  dayContentRenderer,
   ...restProps
 }) {
   const dateFormatter = date => format(date, 'P', { locale: locale })
@@ -130,12 +123,24 @@ export default function DateRangePicker({
     setFocus(e.target.name)
   }
 
-  // gray out days before min date
-  let minDateStartOfMonth = minDate
-  let datesBeforeMinDate = []
-  if (minDate && !isFirstDayOfMonth(minDate)) {
-    minDateStartOfMonth = startOfMonth(minDate)
-    datesBeforeMinDate = eachDayOfInterval({ start: minDateStartOfMonth, end: addDays(minDate, -1) })
+  const minDateStartOfMonth = minDate && !isFirstDayOfMonth(minDate) ? startOfMonth(minDate) : minDate
+
+  function getDayConfig(day) {
+    const isPast = isBefore(day, minDate) && !isSameDay(day, minDate)
+    const isDisabled = !isPast && disabledDates && disabledDates.some(d => isSameDay(day, d))
+    const isDisabledStart = !isPast && disabledStartDates && disabledStartDates.some(d => isSameDay(day, d))
+    const isDisabledEnd = !isPast && disabledEndDates && disabledEndDates.some(d => isSameDay(day, d))
+    const customClassNames = cx(
+      'cal-day',
+      {
+        'cal-day--past': isPast,
+        'cal-day--under-availability': isDisabled,
+        'cal-day--invalid-as-start': isDisabledStart,
+        'cal-day--invalid-as-end': isDisabledEnd
+      },
+      dayButtonClass
+    )
+    return { customClassNames }
   }
 
   return (
@@ -190,10 +195,6 @@ export default function DateRangePicker({
           // date constraints:
           minDate={minDateStartOfMonth}
           maxDate={maxDate}
-          disabledDates={disabledDates}
-          disabledStartDates={[...datesBeforeMinDate, ...(disabledStartDates || [])]}
-          disabledEndDates={disabledEndDates}
-          allowSelectionOfDisabledDates
           // appearance and behaviour:
           className="m-0 w-100 rounded bg-light-shade"
           direction="vertical"
@@ -203,6 +204,9 @@ export default function DateRangePicker({
           rangeColors={['rgb(150, 150, 150)']}
           editableDateInputs={false}
           locale={locale}
+          fixedHeight={true}
+          dayContentRenderer={dayContentRenderer}
+          dayConfigGetter={getDayConfig}
         />
       </div>
     </div>
@@ -250,5 +254,9 @@ DateRangePicker.propTypes = {
   /** the date-fns locale, e.g. `import { de } from 'date-fns/locale'` */
   dateLocale: PropTypes.object,
   /** component to use instead of the native 'input' component if needed (e.g. for Reagent) */
-  inputComponent: PropTypes.oneOfType([PropTypes.object, PropTypes.func, PropTypes.string])
+  inputComponent: PropTypes.oneOfType([PropTypes.object, PropTypes.func, PropTypes.string]),
+  /** class applied to all day buttons */
+  dayButtonClass: PropTypes.string,
+  /** Overrides the content of the day buttons, e.g. `day => <span>{format(day, 'd')</span>` */
+  dayContentRenderer: PropTypes.func
 }

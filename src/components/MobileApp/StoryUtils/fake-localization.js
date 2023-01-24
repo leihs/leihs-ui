@@ -11,7 +11,8 @@ export const orderPanelTexts = {
     timespan: { 'de-CH': 'Zeitraum' },
     from: { 'de-CH': 'Von' },
     until: { 'de-CH': 'Bis' },
-    undefined: { 'de-CH': 'Unbestimmt' }
+    undefined: { 'de-CH': 'Unbestimmt' },
+    'show-day-quants': { 'de-CH': 'Verfügbarkeit im Kalender anzeigen' }
   },
   validate: {
     'missing-quantity': { 'de-CH': 'Verfügbarkeit kann nicht geprüft werden, da die Anzahl fehlt' },

@@ -8,7 +8,8 @@ import {
   eachDayOfInterval,
   addDays,
   isSameDay,
-  startOfMonth
+  format,
+  formatISO
 } from 'date-fns'
 import { enGB as defaultDateLocale } from 'date-fns/locale'
 import { translate as t } from '../../lib/translate'
@@ -20,6 +21,7 @@ import Stack from './DesignComponents/Stack'
 import Warning from './DesignComponents/Warning'
 import InfoMessage from './DesignComponents/InfoMessage'
 import orderPanelPropTypes from './OrderPanelPropTypes'
+import cx from 'classnames'
 
 const noop = () => {}
 
@@ -42,6 +44,9 @@ const OrderPanel = ({
   inventoryPools,
   initialInventoryPoolId,
   onInventoryPoolChange = noop,
+  //
+  initialShowDayQuants = false,
+  onShowDayQuantsChange = noop,
   //
   onValidate = noop,
   onSubmit = noop,
@@ -95,6 +100,7 @@ const OrderPanel = ({
       today,
       quantity
     )
+    const maxQuantityByDay = getMaxQuantityByDay(poolAvailability)
 
     // Validation
     const validationResult = validate(selectedPool, poolAvailability)
@@ -107,6 +113,7 @@ const OrderPanel = ({
       disabledStartDates,
       disabledEndDates,
       minDate,
+      maxQuantityByDay,
       validationResult
     })
 
@@ -134,6 +141,8 @@ const OrderPanel = ({
     }
     return { isValid: true }
   }
+
+  const [showDayQuants, setShowDayQuants] = useState(initialShowDayQuants)
 
   // Event handlers
 
@@ -172,6 +181,11 @@ const OrderPanel = ({
     onCalendarNavigate({ date: newDate })
   }
 
+  function changeShowDayQuants(e) {
+    setShowDayQuants(e.target.checked)
+    onShowDayQuantsChange(e.target.checked)
+  }
+
   if (!dependentState) {
     return null
   }
@@ -182,8 +196,20 @@ const OrderPanel = ({
     disabledStartDates,
     disabledEndDates,
     minDate,
+    maxQuantityByDay,
     validationResult
   } = dependentState
+
+  function renderDay(day) {
+    const isoDate = formatISO(day, { representation: 'date' })
+    const nofAvailable = day >= minDate ? maxQuantityByDay[isoDate] : undefined
+    return (
+      <>
+        <span className="opcal__day-num">{format(day, 'd')}</span>
+        {nofAvailable !== undefined && <div className="opcal__day-quantity">{nofAvailable}</div>}
+      </>
+    )
+  }
 
   return (
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
@@ -255,7 +281,12 @@ const OrderPanel = ({
                         placeholderFrom: t(label, 'undefined', locale),
                         placeholderUntil: t(label, 'undefined', locale)
                       }}
-                      className={validationResult.dateRangeErrors ? 'invalid-date-range' : ''}
+                      className={cx(
+                        validationResult.dateRangeErrors ? 'invalid-date-range' : '',
+                        showDayQuants ? 'opcal--show-day-quants' : ''
+                      )}
+                      dayButtonClass={'opcal__day'}
+                      dayContentRenderer={renderDay}
                     />
                   </fieldset>
                   {validationResult.dateRangeErrors &&
@@ -264,6 +295,20 @@ const OrderPanel = ({
                         <Warning className="mt-2">{msg}</Warning>
                       </React.Fragment>
                     ))}
+                  <div className="fw-light mt-3">
+                    <div className="form-check form-switch d-inline-block">
+                      <input
+                        type="checkbox"
+                        className="form-check-input"
+                        id="show-day-quants"
+                        checked={showDayQuants}
+                        onChange={changeShowDayQuants}
+                      />
+                      <label className="form-check-label" htmlFor="show-day-quants">
+                        {t(label, 'show-day-quants', locale)}
+                      </label>
+                    </div>
+                  </div>
                 </Section>
               </Stack>
             )}
@@ -287,8 +332,14 @@ function getDateRangePickerConstraints(poolAvailability, today, wantedQuantity) 
     disabledDates: getDates(x => x.quantity < wantedQuantity && x.parsedDate >= today),
     disabledStartDates: getDates(x => x.startDateRestriction || x.parsedDate < minBorrowDate),
     disabledEndDates: getDates(x => x.endDateRestriction && x.parsedDate >= minBorrowDate),
-    minDate: startOfMonth(today) // (NOT `minBorrowDate`, since RDR would mark them with `rdrDayDisabled`, making them look like overbooked)
+    minDate: minBorrowDate
   }
+}
+
+function getMaxQuantityByDay(poolAvailability) {
+  return Object.fromEntries(
+    poolAvailability.dates.map(x => [formatISO(x.parsedDate, { representation: 'date' }), x.quantity])
+  )
 }
 
 function getByDay(dateList, date) {
