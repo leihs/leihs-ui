@@ -51,7 +51,7 @@ export const orderPanel = () => {
         <OrderPanel
           modelData={modelData}
           //
-          minDateTotal={now}
+          now={now}
           maxDateTotal={addYears(now, 10)}
           maxDateLoaded={maxDateLoaded}
           onCalendarNavigate={handleCalendarNavigate}
@@ -60,7 +60,7 @@ export const orderPanel = () => {
           initialEndDate={now}
           onDatesChange={handleDatesChange}
           //
-          initialQuantity={2}
+          initialQuantity={1}
           onQuantityChange={action('quantity-change')}
           //
           inventoryPools={inventoryPools}

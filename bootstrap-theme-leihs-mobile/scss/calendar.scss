@@ -51,16 +51,10 @@
     color: $body-color;
     font-weight: $font-weight-normal;
     text-transform: uppercase;
-    @media (width > 480px) {
-      font-size: 1rem;
-    }
   }
 
   .rdrDayNumber {
     font-weight: $font-weight-normal;
-    @media (width > 480px) {
-      font-size: 1rem;
-    }
   }
 
   // Selection preview
@@ -103,16 +97,11 @@
     border-bottom-right-radius: 2em;
   }
 
-  // Days which are marked "past" or date out of range (i.e. before min or after max date)
+  // Days which are past, before min date or disabled on component level: mark selection red
   .cal-day--past,
-  .rdrDayDisabled {
+  .rdrDayDisabled,
+  .cal-day--before-min-date {
     background-color: transparent;
-    .rdrDayNumber {
-      span {
-        color: rgba(0, 0, 0, 0.4);
-        text-decoration: none !important;
-      }
-    }
     .rdrStartEdge,
     .rdrInRange,
     .rdrEndEdge,
@@ -125,6 +114,16 @@
     .rdrDayEndPreview,
     .rdrDayHovered {
       border-color: $red;
+    }
+  }
+  // Days which are past or disabled on component level: gray font
+  .cal-day--past,
+  .rdrDayDisabled {
+    .rdrDayNumber {
+      span {
+        color: rgba(0, 0, 0, 0.4);
+        text-decoration: none !important;
+      }
     }
   }
 
@@ -170,7 +169,7 @@
     background-position: 50% 50%;
     color: transparent;
   }
-  // Non-pickup days
+  // Non-pickup (close) days
   .cal-day--invalid-as-start {
     background-color: rgba(0, 0, 0, 0.03);
     .rdrStartEdge {
@@ -184,7 +183,7 @@
       border-color: $red;
     }
   }
-  // Non-return days
+  // Non-return (close) days
   .cal-day--invalid-as-end {
     background-color: rgba(0, 0, 0, 0.03);
     .rdrEndEdge {
@@ -238,40 +237,50 @@
 /* Available quantity per day (defined by OrderPanel component) */
 
 .opcal {
-  &__day-quantity {
-    color: $gray-600;
-    font-size: 0.8rem;
-    font-weight: 400;
-    line-height: 1.1;
-    padding: 0;
-    margin-top: 11px;
-    display: none;
-  }
-}
-
-.opcal--show-day-quants .opcal {
   &__day {
     > .rdrDayNumber {
-      justify-content: left;
-      padding-left: 28%;
-      gap: 8%;
+      line-height: normal;
+      flex-direction: column;
+      top: 3px;
+    }
+    > .rdrStartEdge,
+    .rdrInRange,
+    .rdrEndEdge {
+      top: 3px;
+      height: 32px;
+    }
+    > .rdrDayStartPreview,
+    .rdrDayInPreview,
+    .rdrDayEndPreview {
+      top: 1px;
+      height: 36px;
     }
   }
 
   &__day-num {
-    min-width: 30%;
-    text-align: center;
+    display: block;
+    position: relative;
 
     // indicator for "today"
     &:after {
-      width: 25% !important;
-      left: 40% !important;
-      bottom: 3px !important;
+      bottom: -1px !important;
+      height: 1.5px !important;
+      width: 12px !important;
+    }
+    &--with-quantity {
+      &:after {
+        bottom: 0 !important;
+        height: 1.5px !important;
+      }
     }
   }
 
   &__day-quantity {
-    display: block;
+    color: $black;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.1;
+    padding: 0;
   }
 }
 

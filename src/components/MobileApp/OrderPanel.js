@@ -202,11 +202,14 @@ const OrderPanel = ({
 
   function renderDay(day) {
     const isoDate = formatISO(day, { representation: 'date' })
-    const nofAvailable = day >= minDate ? maxQuantityByDay[isoDate] : undefined
+    const nofAvailable = showDayQuants && day >= today ? maxQuantityByDay[isoDate] : undefined
+    const showQuantity = nofAvailable !== undefined
     return (
       <>
-        <span className="opcal__day-num">{format(day, 'd')}</span>
-        {nofAvailable !== undefined && <div className="opcal__day-quantity">{nofAvailable}</div>}
+        <span className={cx('opcal__day-num', { 'opcal__day-num--with-quantity': showQuantity })}>
+          {format(day, 'd')}
+        </span>
+        {showQuantity && <div className="opcal__day-quantity">{nofAvailable}</div>}
       </>
     )
   }
@@ -269,6 +272,7 @@ const OrderPanel = ({
                       onChange={changeDateRange}
                       onCalendarNavigate={handleCalendarNavigate}
                       maxDateLoaded={maxDateLoaded}
+                      now={today}
                       minDate={minDate}
                       maxDate={maxDate}
                       disabledDates={disabledDates}
@@ -281,11 +285,8 @@ const OrderPanel = ({
                         placeholderFrom: t(label, 'undefined', locale),
                         placeholderUntil: t(label, 'undefined', locale)
                       }}
-                      className={cx(
-                        validationResult.dateRangeErrors ? 'invalid-date-range' : '',
-                        showDayQuants ? 'opcal--show-day-quants' : ''
-                      )}
-                      dayButtonClass={'opcal__day'}
+                      className={cx(validationResult.dateRangeErrors ? 'invalid-date-range' : '')}
+                      dayButtonClass={cx('opcal__day')}
                       dayContentRenderer={renderDay}
                     />
                   </fieldset>

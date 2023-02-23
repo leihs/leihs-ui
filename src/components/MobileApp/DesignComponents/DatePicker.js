@@ -154,6 +154,7 @@ export default function DatePicker({
           onChange={handleCalendarDateChange}
           minDate={minDate}
           maxDate={maxDate}
+          weekdayDisplayFormat="EEEEEE"
           showMonthAndYearPickers={false}
         />
       </div>

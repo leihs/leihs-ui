@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 import cx from 'classnames'
-import { format, isValid, parse, isSameDay, startOfMonth, isFirstDayOfMonth, isBefore } from 'date-fns'
+import { format, isValid, parse, isSameDay, startOfMonth, isFirstDayOfMonth, isBefore, startOfDay } from 'date-fns'
 import { DateRange } from '@leihs/calendar'
 import LabelInside from './LabelInside'
 
@@ -20,6 +20,7 @@ export default function DateRangePicker({
   onCalendarNavigate,
   maxDateLoaded,
   // date constraints:
+  now,
   minDate,
   maxDate,
   disabledDates,
@@ -34,6 +35,8 @@ export default function DateRangePicker({
   dayContentRenderer,
   ...restProps
 }) {
+  const today = startOfDay(now ? now : new Date())
+
   const dateFormatter = date => format(date, 'P', { locale: locale })
   const dateParser = s => parse(s, 'P', new Date(), { locale: locale })
 
@@ -126,14 +129,16 @@ export default function DateRangePicker({
   const minDateStartOfMonth = minDate && !isFirstDayOfMonth(minDate) ? startOfMonth(minDate) : minDate
 
   function getDayConfig(day) {
-    const isPast = isBefore(day, minDate) && !isSameDay(day, minDate)
-    const isDisabled = !isPast && disabledDates && disabledDates.some(d => isSameDay(day, d))
-    const isDisabledStart = !isPast && disabledStartDates && disabledStartDates.some(d => isSameDay(day, d))
-    const isDisabledEnd = !isPast && disabledEndDates && disabledEndDates.some(d => isSameDay(day, d))
+    const isPast = isBefore(day, today)
+    const isBeforeMinDate = isBefore(day, minDate)
+    const isDisabled = !isBeforeMinDate && disabledDates && disabledDates.some(d => isSameDay(day, d))
+    const isDisabledStart = !isBeforeMinDate && disabledStartDates && disabledStartDates.some(d => isSameDay(day, d))
+    const isDisabledEnd = !isBeforeMinDate && disabledEndDates && disabledEndDates.some(d => isSameDay(day, d))
     const customClassNames = cx(
       'cal-day',
       {
         'cal-day--past': isPast,
+        'cal-day--before-min-date': isBeforeMinDate,
         'cal-day--under-availability': isDisabled,
         'cal-day--invalid-as-start': isDisabledStart,
         'cal-day--invalid-as-end': isDisabledEnd
@@ -200,6 +205,7 @@ export default function DateRangePicker({
           direction="vertical"
           months={1}
           weekStartsOn={1}
+          weekdayDisplayFormat="EEEEEE"
           showMonthAndYearPickers={false}
           rangeColors={['rgb(150, 150, 150)']}
           editableDateInputs={false}

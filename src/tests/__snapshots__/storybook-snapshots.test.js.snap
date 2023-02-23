@@ -26311,37 +26311,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -27582,37 +27582,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -28848,37 +28848,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -29906,37 +29906,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -31162,37 +31162,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -32412,37 +32412,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -33507,37 +33507,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -33545,7 +33545,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               onMouseLeave={[Function]}
             >
               <button
-                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayDisabled rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--before-min-date rdrDayPassive rdrDayDisabled rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33572,7 +33572,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayDisabled"
+                className="rdrDay cal-day cal-day--before-min-date rdrDayPassive rdrDayDisabled"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33599,7 +33599,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayDisabled"
+                className="rdrDay cal-day cal-day--before-min-date rdrDayPassive rdrDayDisabled"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33626,7 +33626,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day cal-day--past rdrDayStartOfMonth"
+                className="rdrDay cal-day cal-day--before-min-date rdrDayStartOfMonth"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33652,7 +33652,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day cal-day--past"
+                className="rdrDay cal-day cal-day--before-min-date"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33678,7 +33678,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day cal-day--past rdrDayWeekend"
+                className="rdrDay cal-day cal-day--before-min-date rdrDayWeekend"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33704,7 +33704,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day cal-day--past rdrDayWeekend rdrDayEndOfWeek"
+                className="rdrDay cal-day cal-day--before-min-date rdrDayWeekend rdrDayEndOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -33730,7 +33730,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--before-min-date rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -34858,37 +34858,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mon
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Tue
+                Tu
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Wed
+                We
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Thu
+                Th
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fri
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sat
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sun
+                Su
               </span>
             </div>
             <div
@@ -34896,7 +34896,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               onMouseLeave={[Function]}
             >
               <button
-                className="rdrDay cal-day rdrDayPassive rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -34923,7 +34923,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayPassive"
+                className="rdrDay cal-day cal-day--past rdrDayPassive"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -34950,7 +34950,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfMonth"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfMonth"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -34976,7 +34976,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -35002,7 +35002,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -35028,7 +35028,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -35054,7 +35054,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend rdrDayEndOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend rdrDayEndOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -35080,7 +35080,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36158,37 +36158,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -36196,7 +36196,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               onMouseLeave={[Function]}
             >
               <button
-                className="rdrDay cal-day rdrDayPassive rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36223,7 +36223,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayPassive"
+                className="rdrDay cal-day cal-day--past rdrDayPassive"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36250,7 +36250,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfMonth"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfMonth"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36276,7 +36276,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36302,7 +36302,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36328,7 +36328,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36354,7 +36354,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend rdrDayEndOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend rdrDayEndOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -36380,7 +36380,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37451,37 +37451,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mo.
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Di.
+                Di
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Mi.
+                Mi
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Do.
+                Do
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fr.
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sa.
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                So.
+                So
               </span>
             </div>
             <div
@@ -37489,7 +37489,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               onMouseLeave={[Function]}
             >
               <button
-                className="rdrDay cal-day rdrDayPassive rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37516,7 +37516,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayPassive"
+                className="rdrDay cal-day cal-day--past rdrDayPassive"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37543,7 +37543,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfMonth"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfMonth"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37569,7 +37569,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37595,7 +37595,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37621,7 +37621,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37647,7 +37647,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend rdrDayEndOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend rdrDayEndOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -37673,7 +37673,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38749,37 +38749,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mon
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Tue
+                Tu
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Wed
+                We
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Thu
+                Th
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fri
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sat
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sun
+                Su
               </span>
             </div>
             <div
@@ -38787,7 +38787,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               onMouseLeave={[Function]}
             >
               <button
-                className="rdrDay cal-day rdrDayPassive rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38814,7 +38814,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayPassive"
+                className="rdrDay cal-day cal-day--past rdrDayPassive"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38841,7 +38841,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfMonth"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfMonth"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38867,7 +38867,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38893,7 +38893,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38919,7 +38919,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38945,7 +38945,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend rdrDayEndOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend rdrDayEndOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -38971,7 +38971,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40031,37 +40031,37 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               <span
                 className="rdrWeekDay"
               >
-                Mon
+                Mo
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Tue
+                Tu
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Wed
+                We
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Thu
+                Th
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Fri
+                Fr
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sat
+                Sa
               </span>
               <span
                 className="rdrWeekDay"
               >
-                Sun
+                Su
               </span>
             </div>
             <div
@@ -40069,7 +40069,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
               onMouseLeave={[Function]}
             >
               <button
-                className="rdrDay cal-day rdrDayPassive rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayPassive rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40096,7 +40096,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayPassive"
+                className="rdrDay cal-day cal-day--past rdrDayPassive"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40123,7 +40123,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfMonth"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfMonth"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40149,7 +40149,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40175,7 +40175,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day"
+                className="rdrDay cal-day cal-day--past"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40201,7 +40201,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40227,7 +40227,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayWeekend rdrDayEndOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayWeekend rdrDayEndOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -40253,7 +40253,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day rdrDayStartOfWeek"
+                className="rdrDay cal-day cal-day--past rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}

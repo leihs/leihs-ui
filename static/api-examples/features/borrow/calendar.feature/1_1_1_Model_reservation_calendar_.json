@@ -62,121 +62,122 @@
                   "inventoryPool": {
                     "id": "7d32a165-7879-4dda-b33d-4d5c842a20de",
                     "name": "Videopool",
-                    "totalReservableQuantity": 5
+                    "totalReservableQuantity": 5,
+                    "reservationAdvanceDays": 1
                   },
                   "dates": [
                     {
                       "date": "2020-04-01",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-02",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-03",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-04",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-05",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-06",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-07",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-08",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-09",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-10",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-11",
                       "endDateRestriction": "CLOSE_TIME",
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": "CLOSE_TIME"
                     },
                     {
                       "date": "2020-04-12",
                       "endDateRestriction": "CLOSE_TIME",
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": "CLOSE_TIME"
                     },
                     {
                       "date": "2020-04-13",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-14",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-15",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-16",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-17",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
                       "date": "2020-04-18",
                       "endDateRestriction": "CLOSE_TIME",
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": "CLOSE_TIME"
                     },
                     {
                       "date": "2020-04-19",
                       "endDateRestriction": "CLOSE_TIME",
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": "CLOSE_TIME"
                     },
                     {
@@ -212,13 +213,13 @@
                     {
                       "date": "2020-04-25",
                       "endDateRestriction": "CLOSE_TIME",
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": "CLOSE_TIME"
                     },
                     {
                       "date": "2020-04-26",
                       "endDateRestriction": "CLOSE_TIME",
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": "CLOSE_TIME"
                     },
                     {
@@ -230,7 +231,7 @@
                     {
                       "date": "2020-04-28",
                       "endDateRestriction": null,
-                      "quantity": 0,
+                      "quantity": 1,
                       "startDateRestriction": null
                     },
                     {
