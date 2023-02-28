@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import cx from 'classnames'
 import PropTypes from 'prop-types'
+import Icon, { iconCircleMinus, iconCirclePlus } from './Icons'
 
 const defaultTxt = { minus: 'Minus', plus: 'Plus' }
 
@@ -85,8 +86,10 @@ export default function MinusPlusControl({
           onClick={() => add(-1)}
           onMouseDown={buttonMouseDown}
           tabIndex="-1"
+          aria-label="Minus 1"
+          title="Minus 1"
         >
-          -
+          <Icon icon={iconCircleMinus} />
         </button>
       </div>
       <div className="col-6">
@@ -107,9 +110,11 @@ export default function MinusPlusControl({
           className="btn btn-secondary w-100"
           onClick={() => add(1)}
           onMouseDown={buttonMouseDown}
+          aria-label="Plus 1"
+          title="Plus 1"
           tabIndex="-1"
         >
-          +
+          <Icon icon={iconCirclePlus} />
         </button>
       </div>
     </div>

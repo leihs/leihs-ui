@@ -42,7 +42,7 @@ export const stateOptions = () => {
       <p className="text-muted">
         Uncontrolled, with change notification
         <br />
-        <span className="fw-light">(current state: {collapsed1 ? 'collapsed' : 'expanded'})</span>
+        <span className="small">(current state: {collapsed1 ? 'collapsed' : 'expanded'})</span>
       </p>
       <Section title="Ibex" collapsible onToggleCollapse={setCollapsed1} className="mb-4">
         {sampleText}

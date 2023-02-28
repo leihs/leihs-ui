@@ -11,7 +11,7 @@ import DatePicker from '../../DesignComponents/DatePicker'
 import Warning from '../../DesignComponents/Warning'
 
 export default {
-  title: 'MobileApp/Prototypes/Meine Bestellungen/Filter',
+  title: 'MobileApp/Prototypes/Bestellungen/Filter',
   parameters: {
     layout: 'fullscreen'
   },

@@ -4,10 +4,17 @@ import cx from 'classnames'
 
 export default function ProgressInfo({ title, info, totalCount, doneCount, small, className, ...restProps }) {
   return (
-    <div className={cx('ui-progress-info d-flex flex-column gap-1', className)} {...restProps}>
+    <div
+      className={cx(
+        'ui-progress-info progress-info d-flex flex-column gap-1 fw-bold',
+        className,
+        small ? 'progress-info--small' : ''
+      )}
+      {...restProps}
+    >
       <div className={cx(small ? 'small' : '')}>{title}</div>
       {totalCount && <Progressbar totalCount={totalCount} doneCount={doneCount} />}
-      {info && <div className={cx('fw-light', small ? 'very-small' : 'small')}>{info}</div>}
+      {info && <div className={cx(small ? 'very-small' : 'small')}>{info}</div>}
     </div>
   )
 }

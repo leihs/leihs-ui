@@ -131,9 +131,9 @@ export default function DateRangePicker({
   function getDayConfig(day) {
     const isPast = isBefore(day, today)
     const isBeforeMinDate = isBefore(day, minDate)
-    const isDisabled = !isBeforeMinDate && disabledDates && disabledDates.some(d => isSameDay(day, d))
-    const isDisabledStart = !isBeforeMinDate && disabledStartDates && disabledStartDates.some(d => isSameDay(day, d))
-    const isDisabledEnd = !isBeforeMinDate && disabledEndDates && disabledEndDates.some(d => isSameDay(day, d))
+    const isDisabled = !isPast && disabledDates && disabledDates.some(d => isSameDay(day, d))
+    const isDisabledStart = !isPast && disabledStartDates && disabledStartDates.some(d => isSameDay(day, d))
+    const isDisabledEnd = !isPast && disabledEndDates && disabledEndDates.some(d => isSameDay(day, d))
     const customClassNames = cx(
       'cal-day',
       {
@@ -210,7 +210,7 @@ export default function DateRangePicker({
           rangeColors={['rgb(150, 150, 150)']}
           editableDateInputs={false}
           locale={locale}
-          fixedHeight={true}
+          fixedHeight={false}
           dayContentRenderer={dayContentRenderer}
           dayConfigGetter={getDayConfig}
         />

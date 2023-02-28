@@ -1,7 +1,6 @@
 import React from 'react'
 import CategoryBreadcrumbs from './CategoryBreadcrumbs'
 import PageLayout from './DesignComponents/PageLayout'
-import FilterButton from './DesignComponents/FilterButton'
 import PageLayoutMock from './StoryUtils/PageLayoutMock'
 
 export default {
@@ -25,9 +24,12 @@ export const level2 = () => (
           getPathForCategory={x => `cat/${x}`}
         />
       }
-    >
-      <FilterButton>Filter</FilterButton>
-    </PageLayout.Header>
+    ></PageLayout.Header>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate
+      architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium?
+      Recusandae, nesciunt?
+    </p>
   </PageLayoutMock>
 )
 
@@ -38,16 +40,22 @@ export const level1 = () => (
       preTitle={
         <CategoryBreadcrumbs ancestorCats={[{ id: '1', name: 'Wirbeltiere' }]} getPathForCategory={x => `cat/${x}`} />
       }
-    >
-      <FilterButton>Filter</FilterButton>
-    </PageLayout.Header>
+    ></PageLayout.Header>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate
+      architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium?
+      Recusandae, nesciunt?
+    </p>
   </PageLayoutMock>
 )
 
 export const level0 = () => (
   <PageLayoutMock>
-    <PageLayout.Header title="Wirbeltiere">
-      <FilterButton>Filter</FilterButton>
-    </PageLayout.Header>
+    <PageLayout.Header title="Wirbeltiere"></PageLayout.Header>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate
+      architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium?
+      Recusandae, nesciunt?
+    </p>
   </PageLayoutMock>
 )

@@ -98,12 +98,12 @@ export const modelSearchFilterProps = {
   onClearFilter: () => {},
   txt: {
     'search-input-label': {
-      'de-CH': 'Suche',
+      'de-CH': 'Suchen',
       'en-GB': 'Search'
     },
     'search-input-placeholder': {
-      'de-CH': 'Suchen…',
-      'en-GB': 'Search…'
+      'de-CH': 'Suchbegriff',
+      'en-GB': 'Search term'
     },
     'search-filter-label': {
       'de-CH': 'Filter',

@@ -1,21 +1,30 @@
 import React from 'react'
-import Navbar from './Navbar'
+import Topnav from './Topnav'
 
 export default {
-  title: 'MobileApp/Design Components/Layout/Navbar',
-  component: Navbar
+  title: 'MobileApp/Design Components/Layout/Topnav',
+  component: Topnav
 }
+
+const sampleMenuItems = [
+  { href: '#', label: 'Link 1' },
+  { href: '#', label: 'Link 2' },
+  { href: '#', label: 'Link 3', selected: true }
+]
 
 export const navbar = () => {
   return (
     <div>
-      <h1>Navbar</h1>
-      <Navbar cartItemCount={3} userProfileShort="AB" appMenuLinkLabel="Bereich" />
+      <h1>Topnav</h1>
+      <div className="shadow px-2">
+        <Topnav cartItemCount={3} userProfileShort="AB" appMenuLinkLabel="Ausleihen" mainMenuItems={sampleMenuItems} />
+      </div>
       <p></p>
-      <p className="text-muted">The navbar has the following 5 elements:</p>
+      <p className="text-muted">The navbar has the following 6 elements:</p>
       <ul className="text-muted">
-        <li>The app title (&quot;brand&quot;) with home link (mobile: centered; desktop: left) </li>
-        <li>Hamburger with the main menu (desktop: hidden)</li>
+        <li>App title (&quot;brand&quot;) with home link (mobile: centered; desktop: left) </li>
+        <li>Hamburger menu link (desktop: hidden)</li>
+        <li>Main menu inline (mobile: hidden)</li>
         <li>Cart icon with link to cart</li>
         <li>User/profile menu button</li>
         <li>App switch button (mobile: hidden)</li>
@@ -28,17 +37,17 @@ export const counterExamples = () => {
   const countVariants = [0, 3, 11, 68, 524, 999999999]
   return (
     <div>
-      <h1>Navbar</h1>
+      <h1>Topnav</h1>
       <p className="text-muted">How different counter values are rendered</p>
       {countVariants.map((cartItemCount, i) => {
         const navbarProps = {
           cartItemCount,
           userProfileShort: 'AB',
-          appMenuLinkLabel: 'Bereich'
+          appMenuLinkLabel: 'Ausleihen'
         }
         return (
           <div key={i} className="mb-3">
-            <Navbar {...navbarProps} />
+            <Topnav {...navbarProps} />
           </div>
         )
       })}
@@ -49,34 +58,34 @@ export const counterExamples = () => {
 export const moreExamples = () => {
   return (
     <div>
-      <h1>Navbar</h1>
+      <h1>Topnav</h1>
       <p className="text-muted">Unbound (default props)</p>
       <div className="mb-3">
-        <Navbar />
+        <Topnav />
       </div>
       <p className="text-muted">RestProps</p>
       <div className="mb-3">
-        <Navbar cartItemCount={3} className="border border-primary" />
+        <Topnav cartItemCount={3} className="border border-primary" />
       </div>
       <p className="text-muted">Props for the hamburger</p>
       <div className="mb-3">
-        <Navbar cartItemCount={3} mainMenuLinkProps={{ className: 'border border-primary' }} />
+        <Topnav cartItemCount={3} mainMenuLinkProps={{ className: 'border border-primary' }} />
       </div>
       <p className="text-muted">Props for the a tag surrounding the brand name</p>
       <div className="mb-3">
-        <Navbar cartItemCount={3} brandLinkProps={{ className: 'border border-primary' }} />
+        <Topnav cartItemCount={3} brandLinkProps={{ className: 'border border-primary' }} />
       </div>
       <p className="text-muted">Props for the user menu link button</p>
       <div className="mb-3">
-        <Navbar cartItemCount={3} userMenuLinkProps={{ className: 'border border-primary' }} />
+        <Topnav cartItemCount={3} userMenuLinkProps={{ className: 'border border-primary' }} />
       </div>
       <p className="text-muted">Props for the user app switcher button</p>
       <div className="mb-3">
-        <Navbar cartItemCount={3} appMenuLinkProps={{ className: 'border border-primary' }} />
+        <Topnav cartItemCount={3} appMenuLinkProps={{ className: 'border border-primary' }} />
       </div>
       <p className="text-muted">With cart conflict</p>
       <div className="mb-3">
-        <Navbar cartItemCount={3} invalidCartItemCount={1} />
+        <Topnav cartItemCount={3} invalidCartItemCount={1} />
       </div>
     </div>
   )

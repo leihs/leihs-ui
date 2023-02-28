@@ -217,8 +217,14 @@ const OrderPanel = ({
   return (
     <form onSubmit={submit} noValidate className="was-validated" autoComplete="off" id="order-dialog-form">
       <Stack space="4">
-        <Section>{modelData.name}</Section>
-        {profileName && <Section title={t(label, 'user-delegation', locale)}>{profileName}</Section>}
+        <Section>
+          <div className="fw-bold">{modelData.name}</div>
+        </Section>
+        {profileName && (
+          <Section title={t(label, 'user-delegation', locale)}>
+            <div className="fw-bold">{profileName}</div>
+          </Section>
+        )}
         <Section title={t(label, 'pool', locale)}>
           <label htmlFor="pool-id" className="visually-hidden">
             {t(label, 'pool', locale)}
@@ -296,7 +302,7 @@ const OrderPanel = ({
                         <Warning className="mt-2">{msg}</Warning>
                       </React.Fragment>
                     ))}
-                  <div className="fw-light mt-3">
+                  <div className="mt-3">
                     <div className="form-check form-switch d-inline-block">
                       <input
                         type="checkbox"
@@ -331,8 +337,8 @@ function getDateRangePickerConstraints(poolAvailability, today, wantedQuantity) 
   const getDates = filter => [...dates.filter(filter).map(x => x.parsedDate)]
   return {
     disabledDates: getDates(x => x.quantity < wantedQuantity && x.parsedDate >= today),
-    disabledStartDates: getDates(x => x.startDateRestriction || x.parsedDate < minBorrowDate),
-    disabledEndDates: getDates(x => x.endDateRestriction && x.parsedDate >= minBorrowDate),
+    disabledStartDates: getDates(x => x.startDateRestriction === 'CLOSE_TIME'),
+    disabledEndDates: getDates(x => x.endDateRestriction === 'CLOSE_TIME'),
     minDate: minBorrowDate
   }
 }

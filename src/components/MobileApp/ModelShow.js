@@ -11,7 +11,7 @@ import ActionButtonGroup from './DesignComponents/ActionButtonGroup'
 import SquareImage from './DesignComponents/SquareImage'
 import PropertyTable from './DesignComponents/PropertyTable'
 import Warning from './DesignComponents/Warning'
-import Icon, { iconArrowLeft, iconArrowRight } from './DesignComponents/Icons'
+import Icon, { iconArrowLeft, iconArrowRight, iconStar } from './DesignComponents/Icons'
 
 const noop = () => {}
 
@@ -52,8 +52,14 @@ export default function ModelShow({
 
   return (
     <>
-      <PageLayout.Header title={model.name} />
-
+      <PageLayout.Header
+        title={
+          <>
+            {model.isFavorited && <Icon icon={iconStar} style={{ marginRight: '8px', marginTop: '-5px' }} />}
+            {model.name}
+          </>
+        }
+      />
       {model.images.length > 1 && (
         <div className="slide-button-visibility-controller">
           <div className="position-relative">
@@ -78,7 +84,13 @@ export default function ModelShow({
               index={imageIndex}
             >
               {model.images.map((image, i) => {
-                return <SquareImage key={i} imgSrc={image.imageUrl} className="mb-3 pe-none" />
+                return (
+                  <SquareImage
+                    key={i}
+                    imgSrc={image.imageUrl}
+                    className="mb-3 pe-none square-container--not-too-high"
+                  />
+                )
               })}
             </SwipeableViews>
           </div>
@@ -96,7 +108,7 @@ export default function ModelShow({
       )}
       {model.images.length === 1 && (
         <div className="mb-4">
-          <SquareImage imgSrc={model.images[0].imageUrl} />
+          <SquareImage imgSrc={model.images[0].imageUrl} className="square-container--not-too-high" />
         </div>
       )}
 
@@ -124,7 +136,7 @@ export default function ModelShow({
 
         {model.description && (
           <Section title={t.description} collapsible>
-            <div>{model.description}</div>
+            <div className="fw-bold decorate-links">{model.description}</div>
           </Section>
         )}
 

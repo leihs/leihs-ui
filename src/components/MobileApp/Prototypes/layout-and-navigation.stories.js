@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 
-import Navbar from '../DesignComponents/Navbar'
+import Topnav from '../DesignComponents/Topnav'
 import Menu from '../DesignComponents/Menu'
 import PageLayout from '../DesignComponents/PageLayout'
+import ListCard from '../DesignComponents/ListCard'
+import ActionButtonGroup from '../DesignComponents/ActionButtonGroup'
 
 export default {
   title: 'MobileApp/Prototypes/Layout And Navigation',
@@ -28,11 +30,18 @@ export function layoutAndNavigation() {
   return (
     <PageLayout
       topBar={
-        <Navbar
+        <Topnav
           brandName="Leihs"
           brandLinkProps={{ role: 'button', onClick: dismissOverlay }}
           mainMenuIsOpen={overlay === 'main'}
           mainMenuLinkProps={{ onClick: onMainMenubuttonClick, 'aria-controls': 'menu' }}
+          mainMenuItems={[
+            { href: '#', label: 'Katalog', selected: true },
+            { href: '#', label: 'Bestellungen' },
+            { href: '#', label: 'Favoriten' },
+            { href: '#', label: 'Inventarparks' },
+            { href: '#', label: 'Hilfe' }
+          ]}
           cartItemCount={0}
           cartItemLinkProps={{ onClick: dismissOverlay }}
           userMenuIsOpen={overlay === 'user'}
@@ -42,60 +51,44 @@ export function layoutAndNavigation() {
             'aria-controls': 'user-menu'
           }}
           appMenuIsOpen={overlay === 'app'}
-          appMenuLinkLabel="Bereich"
+          appMenuLinkLabel="Ausleihen"
           appMenuLinkProps={{
             onClick: onAppButtonClick,
             'aria-controls': 'app-menu'
           }}
         />
       }
-      nav={
+      nav1={
         <Menu id="menu">
-          <Menu.Group className="d-none d-lg-block">
-            <Menu.Link onClick={dismissOverlay} isSelected>
-              Katalog
-            </Menu.Link>
-            <Menu.Link onClick={dismissOverlay}>Warenkorb</Menu.Link>
-            <Menu.Link onClick={dismissOverlay}>Meine Bestellungen</Menu.Link>
-            <Menu.Link onClick={dismissOverlay}>Favoriten</Menu.Link>
-            <Menu.Link onClick={dismissOverlay}>Inventarparks</Menu.Link>
-          </Menu.Group>
-          <Menu.Group className="d-none d-lg-block">
-            <Menu.Link onClick={dismissOverlay}>Dokumentation</Menu.Link>
-          </Menu.Group>
-
-          <Menu.Group title="Ausleihen" className="d-lg-none">
+          <Menu.Group title="Ausleihen">
             <Menu.Link onClick={dismissOverlay}>Katalog</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Warenkorb</Menu.Link>
-            <Menu.Link onClick={dismissOverlay}>Meine Bestellungen</Menu.Link>
+            <Menu.Link onClick={dismissOverlay}>Bestellungen</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Favoriten</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Inventarparks</Menu.Link>
-            <Menu.Link onClick={dismissOverlay}>Dokumentation</Menu.Link>
+            <Menu.Link onClick={dismissOverlay}>Hilfe</Menu.Link>
           </Menu.Group>
-          <Menu.Group title="Weitere Bereiche" className="d-lg-none">
+          <Menu.Group title="Weitere Bereiche">
             <Menu.Link onClick={dismissOverlay}>Leihs Admin</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Bedarfsermittlung</Menu.Link>
             <Menu.Link onClick={dismissOverlay}>Ausleihe Toni-Areal</Menu.Link>
           </Menu.Group>
         </Menu>
       }
-      navShown={overlay === 'main'}
-      flyout={
+      nav1Shown={overlay === 'main'}
+      nav2={
         overlay === 'user' ? (
           <Menu id="user-menu">
             <Menu.Group title="Anna Beispiel">
               <Menu.Link href="">Benutzerdaten</Menu.Link>
               <Menu.Link href="">Abmelden</Menu.Link>
             </Menu.Group>
-            <Menu.HorizontalGroup title="Sprache">
+            <Menu.Group title="Sprache">
               <Menu.Link href="" isSelected>
-                de
+                Deutsch
               </Menu.Link>
-              <Menu.Link href="">en</Menu.Link>
-              <Menu.Link href="">fr</Menu.Link>
-            </Menu.HorizontalGroup>
-            <Menu.Group title="Profil wechseln">
-              <p className="text-muted">(only for users with delegations - see separate story)</p>
+              <Menu.Link href="">English</Menu.Link>
+              <Menu.Link href="">Français</Menu.Link>
             </Menu.Group>
           </Menu>
         ) : (
@@ -111,7 +104,7 @@ export function layoutAndNavigation() {
           </Menu>
         )
       }
-      flyoutShown={overlay === 'user' || overlay === 'app'}
+      nav2Shown={overlay === 'user' || overlay === 'app'}
       onContentClick={dismissOverlay}
     >
       <PageLayout.Header title="Page Title"></PageLayout.Header>
@@ -122,14 +115,27 @@ export function layoutAndNavigation() {
       <p className="text-muted">
         Click the button with the user&apos;s initials (&quot;AB&quot;) to open the user menu.
       </p>
-      <p>
+      <h1 className="d-sm-none">xs</h1>
+      <h1 className="d-none d-sm-block d-md-none">sm</h1>
+      <h1 className="d-none d-md-block d-lg-none">md</h1>
+      <h1 className="d-none d-lg-block">lg, xl, xxl</h1>
+      <p className="fw-bold">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum ducimus perspiciatis voluptatibus
         molestiae deserunt suscipit nobis temporibus saepe quos. Quos id amet a nam dicta distinctio unde minima
         obcaecati? Laboriosam velit in dicta dignissimos ullam, suscipit dolore? Facilis corrupti amet, facere placeat,
         inventore dolorum nemo molestias repellat consequuntur error iure architecto necessitatibus tenetur voluptas
         fugiat, totam maiores odio illo?
       </p>
-      <p>
+      <ListCard.Stack className="mb-4">
+        <ListCard>
+          <ListCard.Title>List card</ListCard.Title>
+        </ListCard>
+      </ListCard.Stack>
+      <ActionButtonGroup className="mb-4">
+        <button className="btn btn-primary">Button</button>
+        <button className="btn btn-secondary">Button</button>
+      </ActionButtonGroup>
+      <p className="fw-bold">
         Ut animi nostrum explicabo, exercitationem cupiditate quia perferendis labore ex blanditiis architecto!
         Architecto cum repellat laudantium impedit quo? Quo velit facilis qui fugiat eos dicta dolores cum fugit
         voluptatum quaerat! Unde optio voluptatem sed laboriosam dolorum doloribus itaque vel cum harum animi, possimus
@@ -137,13 +143,6 @@ export function layoutAndNavigation() {
         Voluptas? Velit voluptatum labore consectetur expedita corporis perferendis fugit non doloremque tempore nisi
         corrupti, beatae voluptates soluta, nemo omnis reiciendis pariatur magnam quasi veritatis sapiente eveniet! Odio
         neque officia at praesentium.
-      </p>
-      <p>
-        Amet tenetur, quibusdam tempore consectetur aut vel reprehenderit corrupti minus distinctio ipsum
-        necessitatibus, fugiat nemo tempora. Suscipit sequi officia qui delectus autem beatae quasi! Architecto odio
-        delectus facere numquam repellendus! Optio nam consequuntur eaque, nobis accusamus officia. Fuga obcaecati
-        deserunt consectetur saepe voluptatibus officia necessitatibus in rem nisi beatae, perspiciatis corrupti ad
-        vitae suscipit corporis quas nulla odit. Esse, consequatur.
       </p>
     </PageLayout>
   )

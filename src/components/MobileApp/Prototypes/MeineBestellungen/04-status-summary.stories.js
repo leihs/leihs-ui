@@ -2,7 +2,7 @@ import React from 'react'
 import ProgressInfo from '../../DesignComponents/ProgressInfo'
 
 export default {
-  title: 'MobileApp/Prototypes/Meine Bestellungen/Status Summary'
+  title: 'MobileApp/Prototypes/Bestellungen/Status Summary'
 }
 
 const statusLabels = {
@@ -158,7 +158,7 @@ export function typicalFlow() {
       <h2>Typical Flow</h2>
       <p className="text-muted">
         Customer has ordered and is waiting for approval.{' '}
-        <span className="fw-light">
+        <span className="small">
           Only the approval status row is shown because pickup and return sub process have not been started yet.
         </span>
       </p>
@@ -172,7 +172,7 @@ export function typicalFlow() {
       </Example>
       <p className="text-muted">
         Lending manager has approved the order.{' '}
-        <span className="fw-light">
+        <span className="small">
           The pickup sub process has started. The status row for approval is now hidden because the sub process is
           complete.
         </span>
@@ -187,7 +187,7 @@ export function typicalFlow() {
       </Example>
       <p className="text-muted">
         Customer did pick up the first item.{' '}
-        <span className="fw-light">The return sub process has started, the pickup sub process is ongoing.</span>
+        <span className="small">The return sub process has started, the pickup sub process is ongoing.</span>
       </p>
       <Example>
         <ProgressInfo
@@ -204,7 +204,7 @@ export function typicalFlow() {
         />
       </Example>
       <p className="text-muted">
-        Customer picked more items and returned one. <span className="fw-light">Both sub processes ongoing.</span>
+        Customer picked more items and returned one. <span className="small">Both sub processes ongoing.</span>
       </p>
       <Example>
         <ProgressInfo
@@ -222,7 +222,7 @@ export function typicalFlow() {
       </Example>
       <p className="text-muted">
         Customer picked the last items.{' '}
-        <span className="fw-light">Pick-up sub process is complete and therefore hidden now.</span>
+        <span className="small">Pick-up sub process is complete and therefore hidden now.</span>
       </p>
       <Example>
         <ProgressInfo
@@ -234,7 +234,7 @@ export function typicalFlow() {
       </Example>
       <p className="text-muted">
         Customer returned all items.{' '}
-        <span className="fw-light">The rental has ended and the terminal status is shown (plain title only)</span>
+        <span className="small">The rental has ended and the terminal status is shown (plain title only)</span>
       </p>
       <Example>
         <ProgressInfo title={statusLabels.RETURNED} />

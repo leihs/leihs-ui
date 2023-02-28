@@ -13,7 +13,7 @@ import Warning from '../../DesignComponents/Warning'
 import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Prototypes/Meine Bestellungen/Wiederholen',
+  title: 'MobileApp/Prototypes/Bestellungen/Wiederholen',
   parameters: { layout: 'fullscreen' }
 }
 

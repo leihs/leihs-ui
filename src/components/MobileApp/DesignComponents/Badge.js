@@ -6,7 +6,7 @@ export default function Badge({ children, as: Elm = 'div', className, colorClass
   return (
     <Elm
       className={cx(
-        'badge rounded-pill fw-light border-0',
+        'badge rounded-pill fw-bold border-0',
         colorClassName ? colorClassName : 'bg-secondary text-dark',
         className,
         'ui-badge'

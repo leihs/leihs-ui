@@ -162,14 +162,22 @@ export const edgeCases = () => {
   return (
     <div>
       <h1>ListCard</h1>
-      <div className="d-flex flex-column gap-4">
+      <div className="d-flex flex-column gap-4" style={{ maxWidth: '25rem' }}>
         <div>
-          <p className="text-muted">Example with long title (truncated with an ellipsis):</p>
+          <p className="text-muted">Examples with long title:</p>
           <ListCard.Stack>
             <ListCard>
               <ListCard.Title>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
               </ListCard.Title>
+            </ListCard>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
+              </ListCard.Title>
+            </ListCard>
+            <ListCard onClick={() => {}}>
+              <ListCard.Title>LoremipsumdolorsitametconsecteturadipisicingelitLiberominusdebitislabore</ListCard.Title>
             </ListCard>
           </ListCard.Stack>
         </div>
@@ -198,9 +206,5 @@ export const restProps = ({ onItemClick }) => {
 }
 
 function getFoot(family) {
-  return (
-    <span>
-      <span className="fw-light">Family:</span> {family}
-    </span>
-  )
+  return <span>Family: {family}</span>
 }

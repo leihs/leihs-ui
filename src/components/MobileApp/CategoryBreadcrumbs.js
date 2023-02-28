@@ -9,7 +9,7 @@ export default function CategoryBreadcrumbs({ ancestorCats, getPathForCategory, 
   })
 
   return (
-    <ul className={cx(className, 'ui-category-breadcrumbs list-inline fw-normal')} {...restProps}>
+    <ul className={cx(className, 'ui-category-breadcrumbs category-breadcrumbs list-inline fw-normal')} {...restProps}>
       {breadcrumbs.map(({ id, name, url }, index, all) => (
         <li key={id}>
           <a href={url}>{name}</a>

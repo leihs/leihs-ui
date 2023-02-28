@@ -121,7 +121,7 @@ export const neueAusleihe = ({
         </Section>
 
         <Section title="Bestellung für" collapsible>
-          Anna Beispiel (persönlich)
+          <div className="fw-bold">Anna Beispiel (persönlich)</div>
         </Section>
 
         <Section title="Gegenstände" collapsible className="position-relative">

@@ -8,7 +8,7 @@ const BASE_CLASS = 'ui-list-card'
 export default function ListCard({ onClick, href, children, className, style, oneLine, ...restProps }) {
   const clickable = !!(onClick || href)
   // NOTE: .position-relative is needed on outer card so that .streched-link will work correctly
-  const wrapperClass = cx('py-3 position-relative', className, BASE_CLASS)
+  const wrapperClass = cx('py-3 list-card position-relative', className, BASE_CLASS)
   const styleAttr = clickable
     ? {
         minHeight: oneLine ? '0' : '4.375rem',
@@ -22,7 +22,7 @@ export default function ListCard({ onClick, href, children, className, style, on
       {clickable && (
         <a
           href={href}
-          className={cx('float-end text-end ps-5', {
+          className={cx('float-end text-end ps-4', {
             'stretched-link': clickable
           })}
           style={
@@ -52,21 +52,21 @@ ListCard.Stack = function ListCardStack({ children, className, ...restProps }) {
 
 ListCard.Title = function ListCardTitle({ children, className, ...restProps }) {
   return (
-    <div className={cx('mb-1 text-truncate', className)} {...restProps}>
+    <div className={cx('list-card__title mb-1 fw-bold text-break', className)} data-test-id="title" {...restProps}>
       {children}
     </div>
   )
 }
 ListCard.Body = function ListCardBody({ children, className, ...restProps }) {
   return (
-    <div className={cx('small', className)} {...restProps}>
+    <div className={cx('list-card__body small fw-normal', className)} data-test-id="body" {...restProps}>
       {children}
     </div>
   )
 }
 ListCard.Foot = function ListCardFoot({ children, className, ...restProps }) {
   return (
-    <div className={cx('pt-3', className)} {...restProps}>
+    <div className={cx('list-card__foot pt-2 fw-normal', className)} data-test-id="foot" {...restProps}>
       {children}
     </div>
   )

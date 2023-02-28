@@ -13,7 +13,7 @@ export default function FilterButton({ children, className, style, ...restProps 
       {...restProps}
     >
       <Icon icon={iconFilter} style={{ marginRight: '0.8rem' }} />
-      <span className="position-relative" style={{ top: '0.1em' }}>
+      <span className="position-relative fw-bold" style={{ top: '0.1em' }}>
         {children}
       </span>
     </button>

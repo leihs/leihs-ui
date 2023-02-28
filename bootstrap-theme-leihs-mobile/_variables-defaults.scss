@@ -12,14 +12,11 @@ $font-family-sans-serif: 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
   sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
   'Noto Color Emoji';
 
-// TODO: try Fira Mono (pairs well and is less narrow than Source Code Pro_
-// $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
-
 // font weights
-$font-weight-light: 400;
-$font-weight-normal: 600;
-$font-weight-bold: 700;
-$headings-font-weight: 700;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 600;
+$headings-font-weight: 600;
 
 // line heights
 $line-height-base: 1.25;
@@ -37,14 +34,14 @@ $h5-font-size: $font-size-base * 0.625;
 $h6-font-size: $font-size-base * 0.5;
 
 // spacers
-$spacer: calc(1rem * 15/16);
+$spacer: calc(1rem * 15 / 16);
 $spacers: (
   0: 0,
-  1: calc($spacer * 1/3),
-  2: calc($spacer * 2/3),
+  1: calc($spacer * 1 / 3),
+  2: calc($spacer * 2 / 3),
   3: $spacer,
   4: $spacer * 2,
-  5: calc($spacer * 50/15)
+  5: calc($spacer * 50 / 15)
 );
 $headings-margin-bottom: $spacer;
 $paragraph-margin-bottom: $spacer;
@@ -73,8 +70,8 @@ $gray-700: rgb(80, 80, 80);
 $gray-800: rgb(58, 58, 58);
 $gray-900: rgb(37, 37, 37);
 
-$light-shade: rgb(242, 242, 242); // design color "Light Shade" (buttons)
-$light-gray: rgb(230, 230, 230); // design color "Light Gray" (background)
+$light-shade: rgb(242, 242, 242); // design color "Light Shade" (background)
+$light-gray: $gray-300; // design color "Light Gray" (buttons)
 $gray: rgb(204, 204, 204); // design color "Gray" (borders)
 
 $design-colors: (
@@ -100,7 +97,7 @@ $border-color: $gray;
 
 // Links
 $link-color: $body-color;
-$link-hover-color: lighten($link-color, 30%);
+//$link-hover-color: lighten($link-color, 30%);
 $link-decoration: none;
 
 // Buttons + Forms
@@ -118,6 +115,9 @@ $input-color: $body-color;
 $input-bg: $light-shade;
 $input-border-color: $light-shade;
 
+// - inputs and buttons font weight
+$input-font-weight: $font-weight-bold;
+
 // - inputs and buttons focus
 $input-btn-focus-width: 0;
 $input-focus-border-color: $blue;
@@ -129,18 +129,16 @@ $form-select-indicator: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/20
 // Select feedback icon has too much padding by default
 $form-select-feedback-icon-position: center right $input-btn-padding-x + 1.5rem;
 
-// Navbar
-$navbar-light-color: $body-color;
-$navbar-padding-y: 5px;
-$navbar-padding-x: 15px;
+// switch
+$form-switch-color: black;
 
 // Modals
-$modal-backdrop-bg: tint-color($primary, 94%);
-$modal-backdrop-opacity: 0.85;
-$modal-content-border-color: rgba(shade-color($primary, 80%), 0.15);
+$modal-backdrop-bg: $black;
+$modal-backdrop-opacity: 0.5;
+$modal-content-border-color: $gray;
 
 // NOTE: target height for single line title in modal header is then navbar height (50px)
 $modal-header-padding-y: 15px;
-$modal-header-padding-x: $navbar-padding-x;
+$modal-header-padding-x: 15px;
 // simplify animation:
 $modal-fade-transform: none;

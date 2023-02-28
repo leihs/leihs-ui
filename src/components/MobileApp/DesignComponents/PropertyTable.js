@@ -9,10 +9,10 @@ export default function PropertyTable({ properties, className, style, ...restPro
           const paddingClassName = i === 0 ? '' : 'pt-2'
           return (
             <tr key={i} className="align-top">
-              <td className={cx('fw-light pe-3 text-break', paddingClassName)} style={{ width: '33%' }}>
+              <td className={cx('fw-normal pe-3 text-break', paddingClassName)} style={{ width: '33%' }}>
                 {key}
               </td>
-              <td className={cx('text-break', paddingClassName)} style={{ width: '66%' }}>
+              <td className={cx('fw-bold text-break', paddingClassName)} style={{ width: '66%' }}>
                 {value}
               </td>
             </tr>

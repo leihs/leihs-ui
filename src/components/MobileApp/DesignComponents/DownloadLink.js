@@ -7,7 +7,7 @@ export default function DownloadLink({ children, href, className, ...restProps }
   return (
     <a {...linkProps}>
       <Icon icon={iconDownload} style={{ marginRight: '10px', marginTop: '2px', flex: '16px 0 0' }} />
-      <div>{children}</div>
+      <div className="fw-bold">{children}</div>
     </a>
   )
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { linkTo } from '@storybook/addon-links'
 import PageLayout from './PageLayout'
 import ErrorView from './ErrorView'
-import Navbar from './Navbar'
+import Topnav from './Topnav'
 import Menu from './Menu'
 
 export default {
@@ -16,57 +16,59 @@ const lorem =
   'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.'
 
 export const pageLayout = () => {
-  const [navShown, setNavShown] = useState(false)
-  const [flyoutShown, setFlyoutShown] = useState(false)
+  const [nav1Shown, setNav1Shown] = useState(false)
+  const [nav2Shown, setNav2Shown] = useState(false)
 
   return (
     <PageLayout
       topBar={
         <div className="bg-light-shade p-3 h-100">
-          Top bar
-          <label className="ms-3 d-lg-none">
-            <input type="checkbox" checked={navShown} onChange={x => setNavShown(x.target.checked)} /> Show nav
+          Top row
+          <label className="ms-3 d-md-none">
+            <input type="checkbox" checked={nav1Shown} onChange={x => setNav1Shown(x.target.checked)} /> Show nav1
           </label>
           <label className="ms-3">
-            <input type="checkbox" checked={flyoutShown} onChange={x => setFlyoutShown(x.target.checked)} /> Show flyout
+            <input type="checkbox" checked={nav2Shown} onChange={x => setNav2Shown(x.target.checked)} /> Show nav2
           </label>
         </div>
       }
-      nav={<div className="bg-light-gray p-2 h-100">Nav</div>}
-      navShown={navShown}
-      flyout={<div className="bg-light-gray p-2 h-100">Flyout</div>}
-      flyoutShown={flyoutShown}
+      nav1={<div className="bg-light-gray p-2 h-100">Nav 1</div>}
+      nav1Shown={nav1Shown}
+      nav2={<div className="bg-light-gray p-2 h-100">Nav 2</div>}
+      nav2Shown={nav2Shown}
     >
       <PageLayout.Header title="PageLayout - Zones" />
-      <p className="text-muted">The layout consists of three zones:</p>
+      <p className="text-muted">Layout zones:</p>
       <ul className="text-muted">
-        <li>Top bar</li>
-        <li>Nav</li>
-        <li>Content</li>
+        <li>Top row</li>
+        <li>
+          Main row
+          <ul>
+            <li>Nav1 (xs+sm: full overlay, md+: hidden)</li>
+            <li>Nav2 (xs+sm: full overlay, md+: offcanvas on the right)</li>
+            <li>Content</li>
+          </ul>
+        </li>
       </ul>
-      <p className="text-muted">
-        Breakpoint: in a small window (below 992px) the nav zone will be hidden unless the prop `navShown` is set. In a
-        larger window the nav will statically show on the left hand side.
-      </p>
     </PageLayout>
   )
 }
 pageLayout.storyName = 'PageLayout'
 
 export const realisticExample = () => {
-  const [navShown, setNavShown] = useState(false)
+  const [nav1Shown, setNav1Shown] = useState(false)
 
   function onMenuItemClick(e) {
-    setNavShown(x => !x)
+    setNav1Shown(x => !x)
   }
   return (
     <PageLayout
       topBar={
-        <Navbar
+        <Topnav
           cartItemCount={3}
           mainMenuLinkProps={{ onClick: onMenuItemClick }}
-          mainMenuIsOpen={navShown}
-          appMenuLinkLabel="Bereich"
+          mainMenuIsOpen={nav1Shown}
+          appMenuLinkLabel="Ausleihen"
         />
       }
       nav={
@@ -85,7 +87,7 @@ export const realisticExample = () => {
           </Menu.Group>
         </Menu>
       }
-      navShown={navShown}
+      nav1Shown={nav1Shown}
     >
       <PageLayout.Header title="PageLayout - Realistic Example" />
       <p>{lorem}</p>

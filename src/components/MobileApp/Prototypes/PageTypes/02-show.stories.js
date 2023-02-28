@@ -28,7 +28,7 @@ export const show = ({ onItemClick }) => {
       <Stack space="5">
         <Section title="Some info" collapsible>
           <Stack space="3">
-            {lorem}
+            <div className="fw-bold">{lorem}</div>
             <ActionButtonGroup>
               <button type="button" className="btn btn-secondary">
                 Some action

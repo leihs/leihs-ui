@@ -4,10 +4,7 @@ import cx from 'classnames'
 
 export default function ActionButtonGroup({ children, className, ...restProps }) {
   return (
-    <div
-      className={cx('d-flex flex-column flex-wrap gap-2 flex-md-row text-center text-md-start', className)}
-      {...restProps}
-    >
+    <div className={cx('d-flex flex-column flex-wrap gap-2 flex-sm-row', className)} {...restProps}>
       {children}
     </div>
   )

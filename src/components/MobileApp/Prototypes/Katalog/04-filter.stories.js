@@ -82,7 +82,7 @@ export const filter = ({ onSubmit, onDismiss }) => {
               />
             </Section>
             <Section title="Verfügbarkeit">
-              <div className="form-check mb-3">
+              <div className="form-check form-switch mb-3">
                 <input
                   type="checkbox"
                   className="form-check-input"
@@ -92,7 +92,7 @@ export const filter = ({ onSubmit, onDismiss }) => {
                   onChange={e => setOnlyAvailable(e.target.checked)}
                 />
                 <label htmlFor="only-available" className="form-check-label">
-                  Nur verfügbare anzeigen
+                  Datum wählen (von/bis)
                 </label>
               </div>
               {onlyAvailable && (

@@ -37,13 +37,9 @@ export default function ModalDialog({
     >
       <Modal.Header
         closeButton={dismissible}
-        className={cx(
-          'bg-light-shade border-bottom page-inset-x',
-          { 'dismissible-modal-header': dismissible },
-          headerClassname
-        )}
+        className={cx('bg-light-shade border-bottom', { 'dismissible-modal-header': dismissible }, headerClassname)}
       >
-        <Modal.Title id={labelId} as="div" className="m-auto fs-2 fw-bold">
+        <Modal.Title id={labelId} as="div" className="m-auto fs-2">
           {title}
         </Modal.Title>
       </Modal.Header>
@@ -55,7 +51,7 @@ export default function ModalDialog({
 
 ModalDialog.Body = function ModalDialogBody({ children, className, ...restProps }) {
   return (
-    <Modal.Body className={cx('page-inset-x py-4', className)} {...restProps}>
+    <Modal.Body className={className} {...restProps}>
       {children}
     </Modal.Body>
   )
@@ -69,12 +65,7 @@ ModalDialog.Footer = function ModalDialogFooter({ children, actions, className, 
   }
   return (
     <Modal.Footer
-      className={cx(
-        'bg-light-shade border-top-0',
-        'd-flex justify-content-between flex-row-reverse',
-        'page-inset-x py-3',
-        className
-      )}
+      className={cx('bg-light-shade border-top', 'd-flex justify-content-between flex-row-reverse', className)}
       {...restProps}
     >
       {children}

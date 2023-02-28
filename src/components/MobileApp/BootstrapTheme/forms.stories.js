@@ -12,7 +12,7 @@ export const elements = () => {
       <h1>Forms - Elements</h1>
       <p className="text-muted">Text input field:</p>
       <div className="mb-3">
-        <input type="text" name="name" className="form-control" />
+        <input type="text" name="name" className="form-control" placeholder="Placeholder" />
       </div>
       <p className="text-muted">Textarea:</p>
       <div className="mb-3">
@@ -27,6 +27,15 @@ export const elements = () => {
       <p className="text-muted">Checkbox:</p>
       <div className="mb-3">
         <div className="form-check">
+          <input type="checkbox" id="elements-checkbox" className="form-check-input" />
+          <label className="form-check-label" htmlFor="elements-checkbox">
+            Label
+          </label>
+        </div>
+      </div>
+      <p className="text-muted">Switch:</p>
+      <div className="mb-3">
+        <div className="form-check form-switch">
           <input type="checkbox" id="elements-checkbox" className="form-check-input" />
           <label className="form-check-label" htmlFor="elements-checkbox">
             Label
@@ -82,6 +91,15 @@ export function validationFeedback() {
       <p className="text-muted">Checkbox:</p>
       <div className="mb-3">
         <div className="form-check">
+          <input type="checkbox" id="elements-checkbox" className="form-check-input is-invalid" />
+          <label className="form-check-label" htmlFor="elements-checkbox">
+            Label
+          </label>
+        </div>
+      </div>
+      <p className="text-muted">Switch:</p>
+      <div className="mb-3">
+        <div className="form-check form-switch">
           <input type="checkbox" id="elements-checkbox" className="form-check-input is-invalid" />
           <label className="form-check-label" htmlFor="elements-checkbox">
             Label

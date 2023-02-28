@@ -6,10 +6,10 @@ import { ErrorBoundary } from '../ErrorBoundary'
 export default function PageLayout({
   children,
   topBar,
-  nav,
-  navShown,
-  flyout,
-  flyoutShown,
+  nav1,
+  nav1Shown,
+  nav2,
+  nav2Shown,
   onContentClick,
   className,
   errorBoundaryTxt,
@@ -23,24 +23,28 @@ export default function PageLayout({
   }
   return (
     <div className={cx('ui-page-layout', 'page-layout', className)} {...restProps}>
-      <div className="page-layout__top-bar">
-        <div className="page-layout__top-bar-container">
+      <div className="page-layout__top-row">
+        <div className="page-layout__top-nav-container">
           <ErrorBoundary txt={errorBoundaryTxt}>{topBar}</ErrorBoundary>
         </div>
       </div>
-      <div className="page-layout__main">
-        <div className={cx('page-layout__nav page-inset-x', navShown && !flyoutShown ? '' : 'd-none', 'd-lg-block')}>
-          <div className="page-layout__nav-container">
-            <ErrorBoundary txt={errorBoundaryTxt}>{nav}</ErrorBoundary>
+      <div className="page-layout__main-row">
+        {nav1Shown && (
+          <div className="page-layout__nav1">
+            <div className="page-layout__nav-container">
+              <ErrorBoundary txt={errorBoundaryTxt}>{nav1}</ErrorBoundary>
+            </div>
           </div>
-        </div>
+        )}
+
         <div className="ui-page-content page-layout__content page-inset-x" onClick={onContentClick}>
           <ErrorBoundary txt={errorBoundaryTxt}>{children}</ErrorBoundary>
         </div>
-        {flyoutShown && (
-          <div className={cx('page-layout__flyout page-inset-x', flyoutShown ? '' : 'd-none', '')}>
+
+        {nav2Shown && (
+          <div className="page-layout__nav2">
             <div className="page-layout__nav-container">
-              <ErrorBoundary txt={errorBoundaryTxt}>{flyout}</ErrorBoundary>
+              <ErrorBoundary txt={errorBoundaryTxt}>{nav2}</ErrorBoundary>
             </div>
           </div>
         )}
@@ -51,7 +55,7 @@ export default function PageLayout({
 
 PageLayout.Header = function PageLayoutHeader({ preTitle, title, subTitle, children, className, ...restProps }) {
   return (
-    <div className={cx('text-center mb-4', className)} {...restProps}>
+    <div className={cx('text-center-if-layout-allows mb-4', className)} {...restProps}>
       <h1>
         {preTitle && (
           <>
@@ -61,7 +65,7 @@ PageLayout.Header = function PageLayoutHeader({ preTitle, title, subTitle, child
         )}
         {title}
       </h1>
-      {subTitle && <h2 className="fw-light">{subTitle}</h2>}
+      {subTitle && <h2>{subTitle}</h2>}
       {children}
     </div>
   )
@@ -70,7 +74,7 @@ PageLayout.Header.displayName = 'PageLayout.Header'
 
 PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...restProps }) {
   return (
-    <div className={cx('text-center text-black-50 fw-light mt-5 pt-3', className)} {...restProps}>
+    <div className={cx('text-center-if-layout-allows text-black-50 mt-5 pt-3', className)} {...restProps}>
       {children}
     </div>
   )
@@ -95,14 +99,14 @@ PageLayout.propTypes = {
   children: PropTypes.node,
   /** Element to show in the top bar zone */
   topBar: PropTypes.node,
-  /** Element to show in nav zone (mobile: hideable full screen overlay, desktop: static left side bar) */
-  nav: PropTypes.node,
-  /** Show nav overlay (relevant for mobile mode only) */
-  navShown: PropTypes.bool,
-  /** Show nav flyout (mobile: hideable full screen overlay, desktop: hideable right side bar) */
-  flyout: PropTypes.node,
-  /** Show nav flayout */
-  flyoutShown: PropTypes.bool,
+  /** Nav 1 (xs+sm: full overlay, md+: hidden) */
+  nav1: PropTypes.node,
+  /** Show nav 1 */
+  nav1Shown: PropTypes.bool,
+  /** Nav 2 (xs+sm: full overlay, md+: offcanvas on the right) */
+  nav2: PropTypes.node,
+  /** Show nav 2 */
+  nav2Shown: PropTypes.bool,
   /** Emitted on click in content zone (so the controlling component can hide the overlay)  */
   onContentClick: PropTypes.func,
   /** CSS class of the wrapping element */

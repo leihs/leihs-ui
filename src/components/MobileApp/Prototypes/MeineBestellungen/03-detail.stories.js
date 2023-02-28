@@ -10,7 +10,7 @@ import ProgressInfo from '../../DesignComponents/ProgressInfo'
 import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
 
 export default {
-  title: 'MobileApp/Prototypes/Meine Bestellungen/Detail',
+  title: 'MobileApp/Prototypes/Bestellungen/Detail',
   parameters: { layout: 'fullscreen' }
 }
 
@@ -38,32 +38,14 @@ export const detail = ({ order, onOrderCancelClick, onItemClick }) => {
         </Section>
 
         <Section title="Bestellung für" collapsible>
-          {order.delegation.name}
-          {order.delegation.isUser && ' (persönlich)'}
+          <div className="fw-bold">
+            {order.delegation.name}
+            {order.delegation.isUser && ' (persönlich)'}
+          </div>
         </Section>
 
         <Section title="Zweck" collapsible>
-          {order.purpose}
-        </Section>
-
-        <Section title="Inventarparks" collapsible>
-          <ListCard.Stack>
-            {order.pools.map(({ name, modelCount, orderStateLabel }, i) => (
-              <ListCard key={i}>
-                <ListCard.Title>{name}</ListCard.Title>
-                <ListCard.Body>
-                  {modelCount} Gegenstände {orderStateLabel}
-                </ListCard.Body>
-                <ListCard.Foot>
-                  <Stack space="2">
-                    {order.stateGroups.map((stateGroup, i) => (
-                      <ProgressInfo key={i} {...stateGroup} small={true} />
-                    ))}
-                  </Stack>
-                </ListCard.Foot>
-              </ListCard>
-            ))}
-          </ListCard.Stack>
+          <div className="fw-bold">{order.purpose}</div>
         </Section>
 
         <Section title="Gegenstände" collapsible className="position-relative">

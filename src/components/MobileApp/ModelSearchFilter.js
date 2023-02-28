@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import cx from 'classnames'
 import { parseISO as parseDate } from 'date-fns'
-import Icon, { iconFilter, iconCross } from './DesignComponents/Icons'
+import Icon, { iconFilter, iconCircleCross } from './DesignComponents/Icons'
 
 import { translate as t } from '../../lib/translate'
 
@@ -64,11 +64,6 @@ export default function ModelSearchFilter({
             })}
           </FilterItemButton>
         )}
-        <div className="visually-hidden">
-          <button type="submit" aria-label={t(txt, 'search-input-label', locale)}>
-            {t(txt, 'search-input-label', locale)}
-          </button>
-        </div>
       </form>
     </div>
   )
@@ -83,11 +78,11 @@ function SearchFilterCombinedInput({
   onFilterClick
 }) {
   return (
-    <div className="input-group mb-2">
+    <div className="mb-2 position-relative">
       <input
-        // TODO: use InputWithClearButton (needs style fixes)
-        type="search"
+        type="text"
         className="form-control border border-primary"
+        style={{ paddingRight: '150px' }}
         name="term"
         title={searchLabel}
         value={searchTerm}
@@ -99,13 +94,23 @@ function SearchFilterCombinedInput({
         autoCorrect="off"
         autoFocus=""
         spellCheck="false"
+        tabIndex="1"
       />
-      <button type="button" className="input-group-text btn btn-primary" onClick={onFilterClick}>
-        <Icon icon={iconFilter} style={{ marginRight: '0.4rem' }} />
-        <span className="position-relative" style={{ top: '0.1em' }}>
-          {filterLabel}
-        </span>
-      </button>
+      <div className="position-absolute" style={{ top: '-2px', right: '-2px' }}>
+        <button
+          type="button"
+          onClick={onFilterClick}
+          aria-label={filterLabel}
+          title={filterLabel}
+          className="btn"
+          tabIndex="2"
+        >
+          <Icon icon={iconFilter} />
+        </button>
+        <button type="submit" className="btn btn-primary rounded-0 rounded-end" aria-label={searchLabel} tabIndex="3">
+          {searchLabel}
+        </button>
+      </div>
     </div>
   )
 }
@@ -113,14 +118,16 @@ function SearchFilterCombinedInput({
 // shows 1 filter item in a bubble with a "clear" button
 function FilterItemButton({ children, onFilterClick, onClear, ...restProps }) {
   return (
-    <FilterBubble {...restProps} className="ps-3 pe-2 ">
+    <FilterBubble {...restProps} className="ps-3 pe-2" style={{ borderRadius: '1rem' }}>
       <span role="button" onClick={onFilterClick}>
         {children}
       </span>
       <span role="button">
         <Icon
-          icon={iconCross}
-          className="ms-1"
+          icon={iconCircleCross}
+          style={{ marginLeft: '10px', marginRight: '0px', marginTop: '-3px' }}
+          height="14"
+          width="14"
           onClick={e => {
             e.stopPropagation()
             onClear()
@@ -134,7 +141,7 @@ function FilterItemButton({ children, onFilterClick, onClear, ...restProps }) {
 function FilterBubble({ children, className, style, as: Elm = 'div', ...restProps }) {
   return (
     <Elm
-      className={cx('ui-filter-bubble', 'btn btn-primary btn-sm rounded-pill very-small mb-1 me-1', className)}
+      className={cx('ui-filter-bubble', 'btn btn-primary btn-sm rounded-pill very-small mb-1 me-1 fw-bold', className)}
       style={{ paddingTop: '7px', paddingBottom: '6px', ...style }}
       {...restProps}
     >

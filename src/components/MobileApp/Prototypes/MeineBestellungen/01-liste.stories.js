@@ -1,22 +1,35 @@
 import React from 'react'
-import FilterButton from '../../DesignComponents/FilterButton'
 import PageLayoutMock from '../../StoryUtils/PageLayoutMock'
 import PageLayout from '../../DesignComponents/PageLayout'
 import Stack from '../../DesignComponents/Stack'
 import Section from '../../DesignComponents/Section'
 import ListCard from '../../DesignComponents/ListCard'
 import ProgressInfo from '../../DesignComponents/ProgressInfo'
+import ModelSearchFilter from '../../ModelSearchFilter'
+import { modelSearchFilterProps } from '../../StoryUtils/sample-props'
 
 export default {
-  title: 'MobileApp/Prototypes/Meine Bestellungen/Liste',
-  parameters: { layout: 'fullscreen' }
+  title: 'MobileApp/Prototypes/Bestellungen/Liste',
+  parameters: { layout: 'fullscreen' },
+  argTypes: {
+    onOpenPanel: { action: 'open panel' },
+    onSubmit: { action: 'submit' },
+    onChangeSearchTerm: { action: 'change search term' }
+  }
 }
 
-export const liste = ({ ordersByBasicState }) => {
+export const liste = ({ onOpenPanel, onSubmit, onChangeSearchTerm, ordersByBasicState }) => {
   return (
     <PageLayoutMock>
-      <PageLayout.Header title="Meine Bestellungen">
-        <FilterButton>Zeige Suche/Filter</FilterButton>
+      <PageLayout.Header title="Bestellungen">
+        <ModelSearchFilter
+          currentFilters={[]}
+          onOpenPanel={onOpenPanel}
+          onSubmit={onSubmit}
+          onChangeSearchTerm={onChangeSearchTerm}
+          locale="de-CH"
+          txt={modelSearchFilterProps.txt}
+        />
       </PageLayout.Header>
 
       <Stack space="5">
@@ -30,21 +43,25 @@ export const liste = ({ ordersByBasicState }) => {
                   return (
                     <div key={order.id}>
                       <ListCard href={orderLink}>
-                        <ListCard.Title>
-                          <a href={orderLink}>{order.title}</a>
-                        </ListCard.Title>
-                        <ListCard.Body>
-                          {order.durationDays} Tage{' '}
-                          {order.isCompleted ? `bis ${order.endDate}` : `ab ${order.startDate}`}, {order.modelCount}{' '}
-                          {order.modelCount === 1 ? 'Gegenstand' : 'Gegenstände'}
-                        </ListCard.Body>
-                        <ListCard.Foot>
-                          <Stack space="2">
-                            {order.stateGroups.map((stateGroup, i) => (
-                              <ProgressInfo key={i} {...stateGroup} small={true} />
-                            ))}
-                          </Stack>
-                        </ListCard.Foot>
+                        <div className="d-md-flex flex-row gap-5 justify-content-fill">
+                          <div className="list-card__md-flex-col">
+                            <ListCard.Title>
+                              <a href={orderLink}>{order.title}</a>
+                            </ListCard.Title>
+                            <ListCard.Body>
+                              {order.durationDays} Tage{' '}
+                              {order.isCompleted ? `bis ${order.endDate}` : `ab ${order.startDate}`}, {order.modelCount}{' '}
+                              {order.modelCount === 1 ? 'Gegenstand' : 'Gegenstände'}
+                            </ListCard.Body>
+                          </div>
+                          <ListCard.Foot className="list-card__foot--md-flex-col">
+                            <Stack space="2">
+                              {order.stateGroups.map((stateGroup, i) => (
+                                <ProgressInfo key={i} {...stateGroup} small={true} />
+                              ))}
+                            </Stack>
+                          </ListCard.Foot>
+                        </div>
                       </ListCard>
                     </div>
                   )

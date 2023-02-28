@@ -16,14 +16,14 @@ const Components = {
   Navbar,
   DatePicker: require('./components/DatePicker').default,
 
-  // "fach komponenten"
+  // Feature components
   OrderPanel: require('./components/MobileApp/OrderPanel').default,
   CategoryBreadcrumbs: require('./components/MobileApp/CategoryBreadcrumbs').default,
   ModelSearchFilter: require('./components/MobileApp/ModelSearchFilter').default,
   ModelList: require('./components/MobileApp/ModelList').default,
   ModelShow: require('./components/MobileApp/ModelShow').default,
 
-  // "design komponenten"
+  // Design components
   Design: {
     ActionButtonGroup: require('./components/MobileApp/DesignComponents/ActionButtonGroup').default,
     Badge: require('./components/MobileApp/DesignComponents/Badge').default,
@@ -40,7 +40,6 @@ const Components = {
     Menu: require('./components/MobileApp/DesignComponents/Menu').default,
     MinusPlusControl: require('./components/MobileApp/DesignComponents/MinusPlusControl').default,
     ModalDialog: require('./components/MobileApp/DesignComponents/ModalDialog').default,
-    Navbar: require('./components/MobileApp/DesignComponents/Navbar').default,
     PageLayout: require('./components/MobileApp/DesignComponents/PageLayout').default,
     ProfileMenuButton: require('./components/MobileApp/DesignComponents/ProfileMenuButton').default,
     ProgressInfo: require('./components/MobileApp/DesignComponents/ProgressInfo').default,
@@ -51,6 +50,7 @@ const Components = {
     Stack: require('./components/MobileApp/DesignComponents/Stack').default,
     TemplateIcon: require('./components/MobileApp/DesignComponents/TemplateIcon').default,
     Textarea: require('./components/MobileApp/DesignComponents/Textarea').default,
+    Topnav: require('./components/MobileApp/DesignComponents/Topnav').default,
     Warning: require('./components/MobileApp/DesignComponents/Warning').default
   },
 

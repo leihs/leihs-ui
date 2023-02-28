@@ -1,23 +1,6 @@
 /*
- * Component Styles for Borrow Mobile App
+ * Component Styles for Borrow App
  */
-
-/* Component: CartBadge (circle indicating the number of items in the shopping cart) */
-
-.cart-badge {
-  background-color: $body-color;
-  color: white;
-  font-size: 14px;
-  border-radius: 19px;
-  min-width: 19px;
-  height: 19px;
-  padding: 0.5px 5px 0 5px;
-  text-align: center;
-
-  &--with-conflict {
-    background-color: $red !important;
-  }
-}
 
 /* Component: SectionTitle (collapsible) */
 
@@ -36,8 +19,8 @@
 
 .square-image-grid {
   &__favorite-marker {
-    padding-right: 0.5rem;
-    padding-top: 0.15rem;
+    padding-right: 0.55rem;
+    padding-top: 0.35rem;
     right: 0;
     top: 0;
     z-index: 1;
@@ -78,6 +61,7 @@
     width: 4rem;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: $font-weight-normal;
   }
 
   :is(input, textarea, select):first-of-type {
@@ -97,9 +81,33 @@
   }
 }
 
+.modal-dialog {
+  max-width: map-get($grid-breakpoints, sm);
+}
+
 .modal-content {
   // min width must correspond with body
   min-width: 300px;
+}
+
+.modal-header {
+  padding: 15px 30px;
+  @include media-breakpoint-up(md) {
+  }
+}
+
+.modal-body {
+  padding: 30px 20px;
+  @include media-breakpoint-up(md) {
+    padding: 30px 30px;
+  }
+}
+
+.modal-footer {
+  padding: 15px 20px;
+  @include media-breakpoint-up(md) {
+    padding: 15px 30px;
+  }
 }
 
 /* Component: Menu */
@@ -160,6 +168,52 @@ $info-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' view
   .slide-button-visibility-controller:hover {
     .slide-button {
       display: block;
+    }
+  }
+}
+
+/* Category breadcrumbs (mostly bootstrap-utility-styled) */
+
+ul.category-breadcrumbs {
+  margin-bottom: 0;
+  > li {
+    a {
+      font-weight: 400;
+      color: $primary;
+    }
+    @include media-breakpoint-up(md) {
+      display: inline-block;
+      + li:before {
+        content: '/';
+        margin: 0 5px;
+      }
+    }
+    @include media-breakpoint-down(md) {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+/* Progress info (mostly bootstrap-utility-styled) */
+
+.progress-info--small {
+  @include media-breakpoint-up(sm) {
+    max-width: 400px;
+  }
+}
+
+/* Extension of List card component foot to align it on a 2nd column on md+ screen (wrap in d-md-flex to make it work)  */
+
+.list-card {
+  @include media-breakpoint-up(md) {
+    &__md-flex-col {
+      flex: 55% 0 0;
+      max-width: 55%;
+    }
+    &__foot--md-flex-col {
+      flex: 45% 0 0;
+      margin: -10px 0 5px 0;
+      padding-right: 40px;
     }
   }
 }
