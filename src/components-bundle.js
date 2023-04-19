@@ -46,6 +46,7 @@ const Components = {
     PropertyTable: require('./components/MobileApp/DesignComponents/PropertyTable').default,
     Section: require('./components/MobileApp/DesignComponents/Section').default,
     Spinner: require('./components/MobileApp/DesignComponents/Spinner').default,
+    SquareImage: require('./components/MobileApp/DesignComponents/SquareImage').default,
     SquareImageGrid: require('./components/MobileApp/DesignComponents/SquareImageGrid').default,
     Stack: require('./components/MobileApp/DesignComponents/Stack').default,
     TemplateIcon: require('./components/MobileApp/DesignComponents/TemplateIcon').default,

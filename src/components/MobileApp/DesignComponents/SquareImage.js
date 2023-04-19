@@ -1,7 +1,15 @@
 import React from 'react'
 import cx from 'classnames'
 
-export default function SquareImage({ href, imgSrc, placeholder, className, ...restProps }) {
+export default function SquareImage({
+  href,
+  imgSrc,
+  placeholder,
+  className,
+  imgClassName,
+  paddingClassName = 'p-2',
+  ...restProps
+}) {
   return (
     <div {...restProps} className={cx(className, 'square-container position-relative overflow-hidden')}>
       <a href={href}>
@@ -9,7 +17,11 @@ export default function SquareImage({ href, imgSrc, placeholder, className, ...r
           <img
             src={imgSrc}
             alt=""
-            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className={cx(
+              'bg-body position-absolute object-contain object-center img-fluid h-100 w-100',
+              imgClassName,
+              paddingClassName
+            )}
           />
         ) : placeholder ? (
           <div className="position-absolute h-100 w-100 d-flex justify-content-center align-items-center">

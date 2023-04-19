@@ -126,11 +126,13 @@ export default function DateRangePicker({
     setFocus(e.target.name)
   }
 
-  const minDateStartOfMonth = minDate && !isFirstDayOfMonth(minDate) ? startOfMonth(minDate) : minDate
+  const minDateDayStart = minDate ? startOfDay(minDate) : undefined
+  const minDateStartOfMonth =
+    minDateDayStart && !isFirstDayOfMonth(minDateDayStart) ? startOfMonth(minDate) : minDateDayStart
 
   function getDayConfig(day) {
     const isPast = isBefore(day, today)
-    const isBeforeMinDate = isBefore(day, minDate)
+    const isBeforeMinDate = isBefore(day, minDateDayStart)
     const isDisabled = !isPast && disabledDates && disabledDates.some(d => isSameDay(day, d))
     const isDisabledStart = !isPast && disabledStartDates && disabledStartDates.some(d => isSameDay(day, d))
     const isDisabledEnd = !isPast && disabledEndDates && disabledEndDates.some(d => isSameDay(day, d))

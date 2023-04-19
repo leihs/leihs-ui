@@ -1,6 +1,8 @@
 import React from 'react'
 import { action } from '@storybook/addon-actions'
 import ListCard from './ListCard'
+import SquareImage from './SquareImage'
+import Badge from './Badge'
 
 export default {
   title: 'MobileApp/Design Components/Content/ListCard',
@@ -9,6 +11,8 @@ export default {
     onItemClick: action('on item click')
   }
 }
+
+const imgSrc = require('../../../static/example-images/categories/2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg')
 
 export const listCard = () => {
   return (
@@ -36,7 +40,7 @@ export const listCard = () => {
         </li>
       </ul>
       <ListCard.Stack>
-        <ListCard href="#fake-link-1">
+        <ListCard>
           <ListCard.Title>Ibex</ListCard.Title>
           <ListCard.Body>
             The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild
@@ -95,6 +99,37 @@ export const with_onclick = () => {
   )
 }
 with_onclick.storyName = 'Using onClick'
+
+export const withImage = () => {
+  return (
+    <div>
+      <h1>ListCard</h1>
+      <p className="text-muted">With image</p>
+      <ListCard.Stack>
+        <ListCard img={<SquareImage imgSrc={imgSrc} />}>
+          <ListCard.Title>Ibex</ListCard.Title>
+          <ListCard.Body>
+            The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild
+            goat that lives in the mountains of the European Alps.
+          </ListCard.Body>
+          <ListCard.Foot>{getFoot('Bovidae')}</ListCard.Foot>
+        </ListCard>
+        <ListCard img={<SquareImage />} href="#fake-link-2" foot={getFoot('Sciuridae')}>
+          <ListCard.Title>Marmot</ListCard.Title>
+          <ListCard.Body>
+            Marmots are relatively large ground squirrels in the genus Marmota, with 15 species living in Asia, Europe,
+            and North America.
+          </ListCard.Body>
+          <ListCard.Foot>{getFoot('Sciuridae')}</ListCard.Foot>
+        </ListCard>
+        <ListCard href="#fake-link-3" img={<SquareImage imgSrc={imgSrc} />}>
+          <ListCard.Title>Ptarmigan</ListCard.Title>
+          <ListCard.Foot>{getFoot('Phasianidae')}</ListCard.Foot>
+        </ListCard>
+      </ListCard.Stack>
+    </div>
+  )
+}
 
 export const oneLineLink = () => {
   return (
@@ -188,6 +223,34 @@ export const edgeCases = () => {
   )
 }
 
+export const flexFoot = ({ onItemClick }) => {
+  return (
+    <div>
+      <h1>ListCard</h1>
+      <p className="text-muted">
+        Example where the footer is arranged in 2nd column for screen size md+ (make sure to remove the top padding the
+        footer has by default)
+      </p>
+      <ListCard.Stack>
+        <ListCard onClick={onItemClick}>
+          <div className="d-md-flex">
+            <div style={{ flex: '1 1 52%' }} className="pe-4">
+              <ListCard.Title>Ibex</ListCard.Title>
+              <ListCard.Body>
+                The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of
+                wild goat that lives in the mountains of the European Alps.
+              </ListCard.Body>
+            </div>
+            <div style={{ flex: '1 1 48%' }}>
+              <ListCard.Foot className="very-small p-md-0">{getFoot('Bovidae')}</ListCard.Foot>
+            </div>
+          </div>
+        </ListCard>
+      </ListCard.Stack>
+    </div>
+  )
+}
+
 export const restProps = ({ onItemClick }) => {
   return (
     <div>
@@ -206,5 +269,5 @@ export const restProps = ({ onItemClick }) => {
 }
 
 function getFoot(family) {
-  return <span>Family: {family}</span>
+  return <Badge>Family: {family}</Badge>
 }

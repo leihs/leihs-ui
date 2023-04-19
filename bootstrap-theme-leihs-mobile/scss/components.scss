@@ -202,18 +202,60 @@ ul.category-breadcrumbs {
   }
 }
 
-/* Extension of List card component foot to align it on a 2nd column on md+ screen (wrap in d-md-flex to make it work)  */
+/* List card */
 
 .list-card {
-  @include media-breakpoint-up(md) {
-    &__md-flex-col {
-      flex: 55% 0 0;
-      max-width: 55%;
+  padding: 15px 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  &--clickable {
+    cursor: pointer;
+  }
+  &--clickable:not(&--one-line) {
+    min-height: 70px;
+  }
+  &__image {
+    display: none; // hide for xs screen
+    margin-top: -5px;
+    margin-bottom: -5px;
+    @include media-breakpoint-up(sm) {
+      display: block;
+      flex: 0 0 100px;
     }
-    &__foot--md-flex-col {
-      flex: 45% 0 0;
-      margin: -10px 0 5px 0;
-      padding-right: 40px;
-    }
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+
+  &__arrow {
+    flex: 0 0 auto;
+    display: block;
+    text-align: right;
+    padding-left: 10px;
+  }
+
+  &:not(&--one-line) &__arrow {
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
+
+  // Placeable components:
+
+  &__title {
+    margin-bottom: 5px;
+    font-weight: $font-weight-bold;
+    word-break: break-word;
+  }
+
+  &__body {
+    font-size: $font-size-sm;
+  }
+
+  &__foot {
+    padding-top: 10px;
   }
 }

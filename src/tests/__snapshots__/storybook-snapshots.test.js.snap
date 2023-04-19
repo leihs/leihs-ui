@@ -23781,13 +23781,17 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
           className="page-inset-x-inverse my-0"
         />
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card ui-list-card"
         >
           <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
+            className="list-card__content"
           >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
+            </div>
           </div>
         </div>
         <hr
@@ -23798,23 +23802,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
         className="mb-0"
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -23826,12 +23828,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Libero minus debitis labore
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -23841,23 +23837,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
         className=""
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              LoremipsumdolorsitametconsecteturadipisicingelitLiberominusdebitislabore
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -23869,12 +23863,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            LoremipsumdolorsitametconsecteturadipisicingelitLiberominusdebitislabore
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -23882,6 +23870,100 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard E
       </div>
     </div>
     <div />
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard Flex Foot 1`] = `
+<div>
+  <h1>
+    ListCard
+  </h1>
+  <p
+    className="text-muted"
+  >
+    Example where the footer is arranged in 2nd column for screen size md+ (make sure to remove the top padding the footer has by default)
+  </p>
+  <div
+    className=""
+  >
+    <hr
+      className="page-inset-x-inverse my-0"
+    />
+    <div
+      className="list-card list-card--clickable ui-list-card"
+      onClick={[Function]}
+    >
+      <div
+        className="list-card__content"
+      >
+        <div
+          className="d-md-flex"
+        >
+          <div
+            className="pe-4"
+            style={
+              Object {
+                "flex": "1 1 52%",
+              }
+            }
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Ibex
+            </div>
+            <div
+              className="list-card__body"
+              data-test-id="body"
+            >
+              The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+            </div>
+          </div>
+          <div
+            style={
+              Object {
+                "flex": "1 1 48%",
+              }
+            }
+          >
+            <div
+              className="list-card__foot very-small p-md-0"
+              data-test-id="foot"
+            >
+              <div
+                className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+                style={
+                  Object {
+                    "padding": "9px 20px 9px 20px",
+                  }
+                }
+              >
+                Family: 
+                Bovidae
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a
+        className="list-card__arrow"
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Item Arrow.svg
+        </svg>
+      </a>
+    </div>
+    <hr
+      className="page-inset-x-inverse my-0"
+    />
   </div>
 </div>
 `;
@@ -23942,54 +24024,39 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
       className="page-inset-x-inverse my-0"
     />
     <div
-      className="py-3 list-card position-relative ui-list-card"
-      style={
-        Object {
-          "cursor": "pointer",
-          "minHeight": "4.375rem",
-        }
-      }
+      className="list-card ui-list-card"
     >
-      <a
-        className="float-end text-end ps-4 stretched-link"
-        href="#fake-link-1"
-        style={
-          Object {
-            "paddingBottom": "0.75rem",
-            "paddingTop": "0.5rem",
-          }
-        }
+      <div
+        className="list-card__content"
       >
-        <svg
-          style={
-            Object {
-              "display": "inline",
-            }
-          }
+        <div
+          className="list-card__title"
+          data-test-id="title"
         >
-          Item Arrow.svg
-        </svg>
-      </a>
-      <div
-        className="list-card__title mb-1 fw-bold text-break"
-        data-test-id="title"
-      >
-        Ibex
-      </div>
-      <div
-        className="list-card__body small fw-normal"
-        data-test-id="body"
-      >
-        The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
-      </div>
-      <div
-        className="list-card__foot pt-2 fw-normal very-small"
-        data-test-id="foot"
-      >
-        <span>
-          Family: 
-          Bovidae
-        </span>
+          Ibex
+        </div>
+        <div
+          className="list-card__body"
+          data-test-id="body"
+        >
+          The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+        </div>
+        <div
+          className="list-card__foot very-small"
+          data-test-id="foot"
+        >
+          <div
+            className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+            style={
+              Object {
+                "padding": "9px 20px 9px 20px",
+              }
+            }
+          >
+            Family: 
+            Bovidae
+          </div>
+        </div>
       </div>
     </div>
     <hr
@@ -24000,29 +24067,49 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
     className="mb-0"
   >
     <div
-      className="py-3 list-card position-relative ui-list-card"
+      className="list-card list-card--clickable ui-list-card"
       foot={
-        <span>
+        <Badge>
           Family: 
           Sciuridae
-        </span>
-      }
-      style={
-        Object {
-          "cursor": "pointer",
-          "minHeight": "4.375rem",
-        }
+        </Badge>
       }
     >
+      <div
+        className="list-card__content"
+      >
+        <div
+          className="list-card__title"
+          data-test-id="title"
+        >
+          Marmot
+        </div>
+        <div
+          className="list-card__body"
+          data-test-id="body"
+        >
+          Marmots are relatively large ground squirrels in the genus Marmota, with 15 species living in Asia, Europe, and North America.
+        </div>
+        <div
+          className="list-card__foot very-small"
+          data-test-id="foot"
+        >
+          <div
+            className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+            style={
+              Object {
+                "padding": "9px 20px 9px 20px",
+              }
+            }
+          >
+            Family: 
+            Sciuridae
+          </div>
+        </div>
+      </div>
       <a
-        className="float-end text-end ps-4 stretched-link"
+        className="list-card__arrow stretched-link"
         href="#fake-link-2"
-        style={
-          Object {
-            "paddingBottom": "0.75rem",
-            "paddingTop": "0.5rem",
-          }
-        }
       >
         <svg
           style={
@@ -24034,27 +24121,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
           Item Arrow.svg
         </svg>
       </a>
-      <div
-        className="list-card__title mb-1 fw-bold text-break"
-        data-test-id="title"
-      >
-        Marmot
-      </div>
-      <div
-        className="list-card__body small fw-normal"
-        data-test-id="body"
-      >
-        Marmots are relatively large ground squirrels in the genus Marmota, with 15 species living in Asia, Europe, and North America.
-      </div>
-      <div
-        className="list-card__foot pt-2 fw-normal very-small"
-        data-test-id="foot"
-      >
-        <span>
-          Family: 
-          Sciuridae
-        </span>
-      </div>
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -24064,23 +24130,43 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
     className=""
   >
     <div
-      className="py-3 list-card position-relative ui-list-card"
-      style={
-        Object {
-          "cursor": "pointer",
-          "minHeight": "4.375rem",
-        }
-      }
+      className="list-card list-card--clickable ui-list-card"
     >
+      <div
+        className="list-card__content"
+      >
+        <div
+          className="list-card__title"
+          data-test-id="title"
+        >
+          Ptarmigan
+        </div>
+        <div
+          className="list-card__body"
+          data-test-id="body"
+        >
+          The rock ptarmigan (Lagopus muta) is a medium-sized game bird in the grouse family
+        </div>
+        <div
+          className="list-card__foot very-small"
+          data-test-id="foot"
+        >
+          <div
+            className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+            style={
+              Object {
+                "padding": "9px 20px 9px 20px",
+              }
+            }
+          >
+            Family: 
+            Phasianidae
+          </div>
+        </div>
+      </div>
       <a
-        className="float-end text-end ps-4 stretched-link"
+        className="list-card__arrow stretched-link"
         href="#fake-link-3"
-        style={
-          Object {
-            "paddingBottom": "0.75rem",
-            "paddingTop": "0.5rem",
-          }
-        }
       >
         <svg
           style={
@@ -24092,27 +24178,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard L
           Item Arrow.svg
         </svg>
       </a>
-      <div
-        className="list-card__title mb-1 fw-bold text-break"
-        data-test-id="title"
-      >
-        Ptarmigan
-      </div>
-      <div
-        className="list-card__body small fw-normal"
-        data-test-id="body"
-      >
-        The rock ptarmigan (Lagopus muta) is a medium-sized game bird in the grouse family
-      </div>
-      <div
-        className="list-card__foot pt-2 fw-normal very-small"
-        data-test-id="foot"
-      >
-        <span>
-          Family: 
-          Phasianidae
-        </span>
-      </div>
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -24138,9 +24203,13 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard M
       className="page-inset-x-inverse my-0"
     />
     <div
-      className="py-3 list-card position-relative ui-list-card"
+      className="list-card ui-list-card"
     >
-      Ibex
+      <div
+        className="list-card__content"
+      >
+        Ibex
+      </div>
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -24150,9 +24219,13 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard M
     className="mb-0"
   >
     <div
-      className="py-3 list-card position-relative ui-list-card"
+      className="list-card ui-list-card"
     >
-      Marmot
+      <div
+        className="list-card__content"
+      >
+        Marmot
+      </div>
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -24162,9 +24235,13 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard M
     className=""
   >
     <div
-      className="py-3 list-card position-relative ui-list-card"
+      className="list-card ui-list-card"
     >
-      Ptarmigan
+      <div
+        className="list-card__content"
+      >
+        Ptarmigan
+      </div>
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -24194,23 +24271,27 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
           className="page-inset-x-inverse my-0"
         />
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Something
+            </div>
+            <div
+              className="list-card__body"
+              data-test-id="body"
+            >
+              With two lines
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24222,18 +24303,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Something
-          </div>
-          <div
-            className="list-card__body small fw-normal"
-            data-test-id="body"
-          >
-            With two lines
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24243,23 +24312,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
         className="mb-0"
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              A One Liner
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24271,12 +24338,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            A One Liner
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24286,23 +24347,27 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
         className=""
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Another thing
+            </div>
+            <div
+              className="list-card__body"
+              data-test-id="body"
+            >
+              With two lines
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24314,18 +24379,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Another thing
-          </div>
-          <div
-            className="list-card__body small fw-normal"
-            data-test-id="body"
-          >
-            With two lines
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24345,23 +24398,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
           className="page-inset-x-inverse my-0"
         />
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Ibex
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24373,12 +24424,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Ibex
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24388,23 +24433,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
         className="mb-0"
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Marmot
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24416,12 +24459,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Marmot
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24431,23 +24468,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
         className=""
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "4.375rem",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Ptarmigan
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={
-              Object {
-                "paddingBottom": "0.75rem",
-                "paddingTop": "0.5rem",
-              }
-            }
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24459,12 +24494,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Ptarmigan
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24488,18 +24517,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
           className="page-inset-x-inverse my-0"
         />
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable list-card--one-line ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "0",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Ibex
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={Object {}}
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24511,12 +24543,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Ibex
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24526,18 +24552,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
         className="mb-0"
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable list-card--one-line ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "0",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Marmot
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={Object {}}
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24549,12 +24578,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Marmot
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24564,18 +24587,21 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
         className=""
       >
         <div
-          className="py-3 list-card position-relative ui-list-card"
+          className="list-card list-card--clickable list-card--one-line ui-list-card"
           onClick={[Function]}
-          style={
-            Object {
-              "cursor": "pointer",
-              "minHeight": "0",
-            }
-          }
         >
+          <div
+            className="list-card__content"
+          >
+            <div
+              className="list-card__title"
+              data-test-id="title"
+            >
+              Ptarmigan
+            </div>
+          </div>
           <a
-            className="float-end text-end ps-4 stretched-link"
-            style={Object {}}
+            className="list-card__arrow"
           >
             <svg
               style={
@@ -24587,12 +24613,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard O
               Item Arrow.svg
             </svg>
           </a>
-          <div
-            className="list-card__title mb-1 fw-bold text-break"
-            data-test-id="title"
-          >
-            Ptarmigan
-          </div>
         </div>
         <hr
           className="page-inset-x-inverse my-0"
@@ -24615,23 +24635,43 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard R
     Set arbitrary attributes with restProps
   </p>
   <div
-    className="py-3 list-card position-relative border border-primary text-primary p-2 ui-list-card"
+    className="list-card list-card--clickable border border-primary text-primary p-2 ui-list-card"
     onClick={[Function]}
-    style={
-      Object {
-        "cursor": "pointer",
-        "minHeight": "4.375rem",
-      }
-    }
   >
+    <div
+      className="list-card__content"
+    >
+      <div
+        className="list-card__title"
+        data-test-id="title"
+      >
+        Ibex
+      </div>
+      <div
+        className="list-card__body"
+        data-test-id="body"
+      >
+        The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+      </div>
+      <div
+        className="list-card__foot very-small"
+        data-test-id="foot"
+      >
+        <div
+          className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+          style={
+            Object {
+              "padding": "9px 20px 9px 20px",
+            }
+          }
+        >
+          Family: 
+          Bovidae
+        </div>
+      </div>
+    </div>
     <a
-      className="float-end text-end ps-4 stretched-link"
-      style={
-        Object {
-          "paddingBottom": "0.75rem",
-          "paddingTop": "0.5rem",
-        }
-      }
+      className="list-card__arrow"
     >
       <svg
         style={
@@ -24643,27 +24683,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard R
         Item Arrow.svg
       </svg>
     </a>
-    <div
-      className="list-card__title mb-1 fw-bold text-break"
-      data-test-id="title"
-    >
-      Ibex
-    </div>
-    <div
-      className="list-card__body small fw-normal"
-      data-test-id="body"
-    >
-      The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
-    </div>
-    <div
-      className="list-card__foot pt-2 fw-normal very-small"
-      data-test-id="foot"
-    >
-      <span>
-        Family: 
-        Bovidae
-      </span>
-    </div>
   </div>
 </div>
 `;
@@ -24693,23 +24712,16 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
       className="page-inset-x-inverse my-0"
     />
     <div
-      className="py-3 list-card position-relative ui-list-card"
+      className="list-card list-card--clickable ui-list-card"
       onClick={[Function]}
-      style={
-        Object {
-          "cursor": "pointer",
-          "minHeight": "4.375rem",
-        }
-      }
     >
+      <div
+        className="list-card__content"
+      >
+        Ibex
+      </div>
       <a
-        className="float-end text-end ps-4 stretched-link"
-        style={
-          Object {
-            "paddingBottom": "0.75rem",
-            "paddingTop": "0.5rem",
-          }
-        }
+        className="list-card__arrow"
       >
         <svg
           style={
@@ -24721,7 +24733,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
           Item Arrow.svg
         </svg>
       </a>
-      Ibex
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -24731,23 +24742,16 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
     className="mb-0"
   >
     <div
-      className="py-3 list-card position-relative ui-list-card"
+      className="list-card list-card--clickable ui-list-card"
       onClick={[Function]}
-      style={
-        Object {
-          "cursor": "pointer",
-          "minHeight": "4.375rem",
-        }
-      }
     >
+      <div
+        className="list-card__content"
+      >
+        Marmot
+      </div>
       <a
-        className="float-end text-end ps-4 stretched-link"
-        style={
-          Object {
-            "paddingBottom": "0.75rem",
-            "paddingTop": "0.5rem",
-          }
-        }
+        className="list-card__arrow"
       >
         <svg
           style={
@@ -24759,7 +24763,6 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
           Item Arrow.svg
         </svg>
       </a>
-      Marmot
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -24769,23 +24772,16 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
     className=""
   >
     <div
-      className="py-3 list-card position-relative ui-list-card"
+      className="list-card list-card--clickable ui-list-card"
       onClick={[Function]}
-      style={
-        Object {
-          "cursor": "pointer",
-          "minHeight": "4.375rem",
-        }
-      }
     >
+      <div
+        className="list-card__content"
+      >
+        Ptarmigan
+      </div>
       <a
-        className="float-end text-end ps-4 stretched-link"
-        style={
-          Object {
-            "paddingBottom": "0.75rem",
-            "paddingTop": "0.5rem",
-          }
-        }
+        className="list-card__arrow"
       >
         <svg
           style={
@@ -24797,7 +24793,222 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard U
           Item Arrow.svg
         </svg>
       </a>
-      Ptarmigan
+    </div>
+    <hr
+      className="page-inset-x-inverse my-0"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/ListCard With Image 1`] = `
+<div>
+  <h1>
+    ListCard
+  </h1>
+  <p
+    className="text-muted"
+  >
+    With image
+  </p>
+  <div
+    className="mb-0"
+  >
+    <hr
+      className="page-inset-x-inverse my-0"
+    />
+    <div
+      className="list-card ui-list-card"
+    >
+      <div
+        className="list-card__image"
+      >
+        <div
+          className="square-container position-relative overflow-hidden"
+        >
+          <a>
+            <img
+              alt=""
+              className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
+              src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        className="list-card__content"
+      >
+        <div
+          className="list-card__title"
+          data-test-id="title"
+        >
+          Ibex
+        </div>
+        <div
+          className="list-card__body"
+          data-test-id="body"
+        >
+          The Alpine ibex (Capra ibex), also known as the steinbock, bouquetin, or simply ibex, is a species of wild goat that lives in the mountains of the European Alps.
+        </div>
+        <div
+          className="list-card__foot"
+          data-test-id="foot"
+        >
+          <div
+            className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+            style={
+              Object {
+                "padding": "9px 20px 9px 20px",
+              }
+            }
+          >
+            Family: 
+            Bovidae
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr
+      className="page-inset-x-inverse my-0"
+    />
+  </div>
+  <div
+    className="mb-0"
+  >
+    <div
+      className="list-card list-card--clickable ui-list-card"
+      foot={
+        <Badge>
+          Family: 
+          Sciuridae
+        </Badge>
+      }
+    >
+      <div
+        className="list-card__image"
+      >
+        <div
+          className="square-container position-relative overflow-hidden"
+        >
+          <a>
+            <div
+              className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        className="list-card__content"
+      >
+        <div
+          className="list-card__title"
+          data-test-id="title"
+        >
+          Marmot
+        </div>
+        <div
+          className="list-card__body"
+          data-test-id="body"
+        >
+          Marmots are relatively large ground squirrels in the genus Marmota, with 15 species living in Asia, Europe, and North America.
+        </div>
+        <div
+          className="list-card__foot"
+          data-test-id="foot"
+        >
+          <div
+            className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+            style={
+              Object {
+                "padding": "9px 20px 9px 20px",
+              }
+            }
+          >
+            Family: 
+            Sciuridae
+          </div>
+        </div>
+      </div>
+      <a
+        className="list-card__arrow stretched-link"
+        href="#fake-link-2"
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Item Arrow.svg
+        </svg>
+      </a>
+    </div>
+    <hr
+      className="page-inset-x-inverse my-0"
+    />
+  </div>
+  <div
+    className=""
+  >
+    <div
+      className="list-card list-card--clickable ui-list-card"
+    >
+      <div
+        className="list-card__image"
+      >
+        <div
+          className="square-container position-relative overflow-hidden"
+        >
+          <a>
+            <img
+              alt=""
+              className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
+              src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+            />
+          </a>
+        </div>
+      </div>
+      <div
+        className="list-card__content"
+      >
+        <div
+          className="list-card__title"
+          data-test-id="title"
+        >
+          Ptarmigan
+        </div>
+        <div
+          className="list-card__foot"
+          data-test-id="foot"
+        >
+          <div
+            className="badge rounded-pill fw-bold border-0 bg-secondary text-dark ui-badge"
+            style={
+              Object {
+                "padding": "9px 20px 9px 20px",
+              }
+            }
+          >
+            Family: 
+            Phasianidae
+          </div>
+        </div>
+      </div>
+      <a
+        className="list-card__arrow stretched-link"
+        href="#fake-link-3"
+      >
+        <svg
+          style={
+            Object {
+              "display": "inline",
+            }
+          }
+        >
+          Item Arrow.svg
+        </svg>
+      </a>
     </div>
     <hr
       className="page-inset-x-inverse my-0"
@@ -25835,6 +26046,57 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/Spinner Sp
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImage Class Name 1`] = `
+<div>
+  <h1>
+    SquareImage
+  </h1>
+  <p
+    className="text-muted"
+  >
+    Override styling with 
+    <code>
+      className
+    </code>
+     and 
+    <code>
+      imgClassName
+    </code>
+  </p>
+  <div
+    className="shadow mb-4 square-container position-relative overflow-hidden"
+  >
+    <a>
+      <img
+        alt=""
+        className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 bg-light-shade p-2"
+        src="62f4cb3c-999d-53ec-9426-298ebacd208a.jpg"
+      />
+    </a>
+  </div>
+  <p
+    className="text-muted"
+  >
+    Example with padding 0 (note that this has to be applied via 
+    <code>
+      paddingClassName
+    </code>
+     to override the built-in padding of 2):
+  </p>
+  <div
+    className="border square-container position-relative overflow-hidden"
+  >
+    <a>
+      <img
+        alt=""
+        className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-0"
+        src="62f4cb3c-999d-53ec-9426-298ebacd208a.jpg"
+      />
+    </a>
+  </div>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImage Link 1`] = `
 <div>
   <h1>
@@ -25853,7 +26115,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     >
       <img
         alt=""
-        className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+        className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
         src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
       />
     </a>
@@ -25921,7 +26183,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     <a>
       <img
         alt=""
-        className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+        className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
         src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
       />
     </a>
@@ -25945,25 +26207,59 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
     (Note that the border is set via className for illustrative purposes)
   </p>
   <div
-    className="border border-gray-200 mb-3 square-container position-relative overflow-hidden"
+    style={
+      Object {
+        "maxWidth": "200px",
+      }
+    }
   >
-    <a>
-      <img
-        alt=""
-        className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
-        src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
-      />
-    </a>
+    <div
+      className="border border-gray-200 mb-3 square-container position-relative overflow-hidden"
+    >
+      <a>
+        <img
+          alt=""
+          className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
+          src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+        />
+      </a>
+    </div>
+    <div
+      className="border border-gray-200 mb-3 square-container position-relative overflow-hidden"
+    >
+      <a>
+        <img
+          alt=""
+          className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
+          src="62f4cb3c-999d-53ec-9426-298ebacd208a.jpg"
+        />
+      </a>
+    </div>
   </div>
   <p
     className="text-muted"
   >
-    Example image used (not square!):
+    Example images used (landscape + portrait):
   </p>
   <img
     alt="Example"
-    className="border w-50 mb-3"
+    className="border me-3"
     src="2b4c8bd3-3d65-5e68-bf7a-3649ec67a1a2.jpg"
+    style={
+      Object {
+        "width": "100px",
+      }
+    }
+  />
+  <img
+    alt="Example"
+    className="border"
+    src="62f4cb3c-999d-53ec-9426-298ebacd208a.jpg"
+    style={
+      Object {
+        "height": "100px",
+      }
+    }
   />
 </div>
 `;
@@ -26005,7 +26301,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
               src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
             />
           </a>
@@ -26067,7 +26363,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
               src="4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg"
             />
           </a>
@@ -26223,7 +26519,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
               src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
             />
           </a>
@@ -26285,7 +26581,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Content/SquareImag
           >
             <img
               alt=""
-              className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+              className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
               src="4f64adb0-6325-4eb1-bf36-8a73a986ed4b.jpg"
             />
           </a>
@@ -34044,7 +34340,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Date
                 </span>
               </button>
               <button
-                className="rdrDay cal-day cal-day--before-min-date rdrDayStartOfWeek"
+                className="rdrDay cal-day rdrDayStartOfWeek"
                 onBlur={[Function]}
                 onFocus={[Function]}
                 onKeyDown={[Function]}
@@ -44363,7 +44659,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
             src="e2d0cfdf-745c-57cb-8c6b-09c14af6bb51.jpg"
           />
         </a>
@@ -44413,7 +44709,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
             src="43cd9671-8ab2-5960-8426-4f9b235b449d.jpg"
           />
         </a>
@@ -44463,7 +44759,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
             src="4d446da0-81ae-5dd4-a2b0-f9adae2de0d4.jpg"
           />
         </a>
@@ -44513,7 +44809,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
             src="8e17238d-9ee2-402c-a469-20300d7b08fc.jpg"
           />
         </a>
@@ -44563,7 +44859,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         >
           <img
             alt=""
-            className="bg-body position-absolute object-contain object-center img-fluid p-2 h-100 w-100"
+            className="bg-body position-absolute object-contain object-center img-fluid h-100 w-100 p-2"
             src="ad8a36fd-1bec-5be5-a702-326e4e49d756.jpg"
           />
         </a>
@@ -44978,29 +45274,33 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/UserProfilePage U
                   className="page-inset-x-inverse my-0"
                 />
                 <div
-                  className="py-3 list-card position-relative ui-list-card"
+                  className="list-card ui-list-card"
                 >
                   <div
-                    className="list-card__title mb-1 fw-bold text-break"
-                    data-test-id="title"
+                    className="list-card__content"
                   >
-                    Master Design
-                  </div>
-                  <div
-                    className="list-card__body small fw-normal"
-                    data-test-id="body"
-                  >
-                    <div>
-                      Maria Bernasconi
+                    <div
+                      className="list-card__title"
+                      data-test-id="title"
+                    >
+                      Master Design
                     </div>
                     <div
-                      className="pt-1"
+                      className="list-card__body"
+                      data-test-id="body"
                     >
-                      <a
-                        href="mailto:maria@example3.com"
+                      <div>
+                        Maria Bernasconi
+                      </div>
+                      <div
+                        className="pt-1"
                       >
-                        maria@example3.com
-                      </a>
+                        <a
+                          href="mailto:maria@example3.com"
+                        >
+                          maria@example3.com
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

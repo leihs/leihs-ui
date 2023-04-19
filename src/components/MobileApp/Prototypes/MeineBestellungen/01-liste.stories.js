@@ -43,8 +43,8 @@ export const liste = ({ onOpenPanel, onSubmit, onChangeSearchTerm, ordersByBasic
                   return (
                     <div key={order.id}>
                       <ListCard href={orderLink}>
-                        <div className="d-md-flex flex-row gap-5 justify-content-fill">
-                          <div className="list-card__md-flex-col">
+                        <div className="d-md-flex">
+                          <div style={{ flex: '1 1 53%' }} className="pe-4">
                             <ListCard.Title>
                               <a href={orderLink}>{order.title}</a>
                             </ListCard.Title>
@@ -54,13 +54,15 @@ export const liste = ({ onOpenPanel, onSubmit, onChangeSearchTerm, ordersByBasic
                               {order.modelCount === 1 ? 'Gegenstand' : 'Gegenstände'}
                             </ListCard.Body>
                           </div>
-                          <ListCard.Foot className="list-card__foot--md-flex-col">
-                            <Stack space="2">
-                              {order.stateGroups.map((stateGroup, i) => (
-                                <ProgressInfo key={i} {...stateGroup} small={true} />
-                              ))}
-                            </Stack>
-                          </ListCard.Foot>
+                          <div style={{ flex: '1 1 47%' }}>
+                            <ListCard.Foot className="p-md-0 pe-md-3">
+                              <Stack space="2">
+                                {order.stateGroups.map((stateGroup, i) => (
+                                  <ProgressInfo key={i} {...stateGroup} small={true} />
+                                ))}
+                              </Stack>
+                            </ListCard.Foot>
+                          </div>
                         </div>
                       </ListCard>
                     </div>
