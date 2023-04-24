@@ -176,20 +176,30 @@ $info-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' view
 
 ul.category-breadcrumbs {
   margin-bottom: 0;
+  text-align: center;
   > li {
     a {
       font-weight: 400;
       color: $primary;
     }
-    @include media-breakpoint-up(md) {
+  }
+
+  @include media-breakpoint-down(md) {
+    > li {
+      margin-bottom: 8px;
+      &:last-child {
+        margin-bottom: 12px;
+      }
+    }
+  }
+  @include media-breakpoint-up(md) {
+    margin-bottom: 8px;
+    > li {
       display: inline-block;
       + li:before {
         content: '/';
         margin: 0 5px;
       }
-    }
-    @include media-breakpoint-down(md) {
-      margin-bottom: 8px;
     }
   }
 }
@@ -257,5 +267,38 @@ ul.category-breadcrumbs {
 
   &__foot {
     padding-top: 10px;
+  }
+}
+
+/* List menu */
+$arrow-icon: url("data:image/svg+xml,<svg width='12px' height='7px' viewBox='0 0 12 7' version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'><g id='Section-Arrow' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd' stroke-linecap='round' stroke-linejoin='round'><polyline id='Path-2' stroke='currentColor' stroke-width='1.5' points='1 1 6 6 11 1'></polyline></g></svg>");
+.list-menu {
+  &__item {
+    position: relative;
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: transparent;
+    padding: 5px 0 3px 0;
+    word-wrap: break-word;
+    line-height: 1.4;
+
+    &--breadcrumb {
+      font-size: 14px;
+      &::after {
+        content: $arrow-icon;
+        position: absolute;
+        top: 5px;
+        left: -20px;
+        transform: rotate(90deg);
+      }
+    }
+    &--current {
+      padding-top: 12px;
+      font-weight: 600;
+    }
+    /* &--child {
+    } */
   }
 }

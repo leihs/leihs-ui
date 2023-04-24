@@ -96,9 +96,13 @@ $burger-breakpoint: 820px; // somewhat more then `md` to have enough space for h
     min-height: calc(100vh - 51px);
     padding-top: 30px;
     padding-bottom: 4rem;
+    margin: 0;
+  }
+
+  &__content-container {
     margin: 0 auto;
-    max-width: $content-max-width;
     @include media-breakpoint-up(md) {
+      max-width: $content-max-width;
       @if (not $md-center) {
         margin: 0;
       }

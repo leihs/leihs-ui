@@ -1,20 +1,26 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import cx from 'classnames'
 
-export default function CategoryBreadcrumbs({ ancestorCats, getPathForCategory, className, ...restProps }) {
-  const breadcrumbs = ancestorCats.map((cat, index, all) => {
-    // NOTE: path to cat needs to include all parents of the parent itself (`/categories/myparent/myself`)
-    const breadcrumbIds = all.slice(0, index + 1).map(c => c.id)
-    return { ...cat, url: getPathForCategory(breadcrumbIds.join('/')) }
-  })
-
+export default function CategoryBreadcrumbs({ ancestorCats, className, ...restProps }) {
   return (
     <ul className={cx(className, 'ui-category-breadcrumbs category-breadcrumbs list-inline fw-normal')} {...restProps}>
-      {breadcrumbs.map(({ id, name, url }, index, all) => (
+      {ancestorCats.map(({ id, name, url }) => (
         <li key={id}>
           <a href={url}>{name}</a>
         </li>
       ))}
     </ul>
   )
+}
+
+CategoryBreadcrumbs.propTypes = {
+  ancestorCats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired
+    })
+  ),
+  className: PropTypes.string
 }

@@ -37,7 +37,7 @@ export default function PageLayout({
           </div>
         )}
 
-        <div className="ui-page-content page-layout__content page-inset-x" onClick={onContentClick}>
+        <div className="ui-page-content page-layout__content" onClick={onContentClick}>
           <ErrorBoundary txt={errorBoundaryTxt}>{children}</ErrorBoundary>
         </div>
 
@@ -71,6 +71,14 @@ PageLayout.Header = function PageLayoutHeader({ preTitle, title, subTitle, child
   )
 }
 PageLayout.Header.displayName = 'PageLayout.Header'
+
+PageLayout.ContentContainer = function PageLayoutContentContainer({ children, className, ...restProps }) {
+  return (
+    <div className={cx('page-layout__content-container page-inset-x', className)} {...restProps}>
+      {children}
+    </div>
+  )
+}
 
 PageLayout.Metadata = function PageLayoutMetadata({ children, className, ...restProps }) {
   return (

@@ -107,43 +107,45 @@ export function layoutAndNavigation() {
       nav2Shown={overlay === 'user' || overlay === 'app'}
       onContentClick={dismissOverlay}
     >
-      <PageLayout.Header title="Page Title"></PageLayout.Header>
-      <p className="text-muted d-lg-none">Click the hamburger icon to open the main menu.</p>
-      <p className="text-muted d-none d-lg-block">
-        Click the button &quot;Bereich&quot; to open the app switcher menu.
-      </p>
-      <p className="text-muted">
-        Click the button with the user&apos;s initials (&quot;AB&quot;) to open the user menu.
-      </p>
-      <h1 className="d-sm-none">xs</h1>
-      <h1 className="d-none d-sm-block d-md-none">sm</h1>
-      <h1 className="d-none d-md-block d-lg-none">md</h1>
-      <h1 className="d-none d-lg-block">lg, xl, xxl</h1>
-      <p className="fw-bold">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum ducimus perspiciatis voluptatibus
-        molestiae deserunt suscipit nobis temporibus saepe quos. Quos id amet a nam dicta distinctio unde minima
-        obcaecati? Laboriosam velit in dicta dignissimos ullam, suscipit dolore? Facilis corrupti amet, facere placeat,
-        inventore dolorum nemo molestias repellat consequuntur error iure architecto necessitatibus tenetur voluptas
-        fugiat, totam maiores odio illo?
-      </p>
-      <ListCard.Stack className="mb-4">
-        <ListCard>
-          <ListCard.Title>List card</ListCard.Title>
-        </ListCard>
-      </ListCard.Stack>
-      <ActionButtonGroup className="mb-4">
-        <button className="btn btn-primary">Button</button>
-        <button className="btn btn-secondary">Button</button>
-      </ActionButtonGroup>
-      <p className="fw-bold">
-        Ut animi nostrum explicabo, exercitationem cupiditate quia perferendis labore ex blanditiis architecto!
-        Architecto cum repellat laudantium impedit quo? Quo velit facilis qui fugiat eos dicta dolores cum fugit
-        voluptatum quaerat! Unde optio voluptatem sed laboriosam dolorum doloribus itaque vel cum harum animi, possimus
-        illo magni cupiditate non minus quos soluta quasi excepturi accusantium sit deleniti provident dicta eos quas?
-        Voluptas? Velit voluptatum labore consectetur expedita corporis perferendis fugit non doloremque tempore nisi
-        corrupti, beatae voluptates soluta, nemo omnis reiciendis pariatur magnam quasi veritatis sapiente eveniet! Odio
-        neque officia at praesentium.
-      </p>
+      <PageLayout.ContentContainer>
+        <PageLayout.Header title="Page Title"></PageLayout.Header>
+        <p className="text-muted d-lg-none">Click the hamburger icon to open the main menu.</p>
+        <p className="text-muted d-none d-lg-block">
+          Click the button &quot;Bereich&quot; to open the app switcher menu.
+        </p>
+        <p className="text-muted">
+          Click the button with the user&apos;s initials (&quot;AB&quot;) to open the user menu.
+        </p>
+        <h1 className="d-sm-none">xs</h1>
+        <h1 className="d-none d-sm-block d-md-none">sm</h1>
+        <h1 className="d-none d-md-block d-lg-none">md</h1>
+        <h1 className="d-none d-lg-block">lg, xl, xxl</h1>
+        <p className="fw-bold">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi nostrum ducimus perspiciatis voluptatibus
+          molestiae deserunt suscipit nobis temporibus saepe quos. Quos id amet a nam dicta distinctio unde minima
+          obcaecati? Laboriosam velit in dicta dignissimos ullam, suscipit dolore? Facilis corrupti amet, facere
+          placeat, inventore dolorum nemo molestias repellat consequuntur error iure architecto necessitatibus tenetur
+          voluptas fugiat, totam maiores odio illo?
+        </p>
+        <ListCard.Stack className="mb-4">
+          <ListCard>
+            <ListCard.Title>List card</ListCard.Title>
+          </ListCard>
+        </ListCard.Stack>
+        <ActionButtonGroup className="mb-4">
+          <button className="btn btn-primary">Button</button>
+          <button className="btn btn-secondary">Button</button>
+        </ActionButtonGroup>
+        <p className="fw-bold">
+          Ut animi nostrum explicabo, exercitationem cupiditate quia perferendis labore ex blanditiis architecto!
+          Architecto cum repellat laudantium impedit quo? Quo velit facilis qui fugiat eos dicta dolores cum fugit
+          voluptatum quaerat! Unde optio voluptatem sed laboriosam dolorum doloribus itaque vel cum harum animi,
+          possimus illo magni cupiditate non minus quos soluta quasi excepturi accusantium sit deleniti provident dicta
+          eos quas? Voluptas? Velit voluptatum labore consectetur expedita corporis perferendis fugit non doloremque
+          tempore nisi corrupti, beatae voluptates soluta, nemo omnis reiciendis pariatur magnam quasi veritatis
+          sapiente eveniet! Odio neque officia at praesentium.
+        </p>
+      </PageLayout.ContentContainer>
     </PageLayout>
   )
 }
