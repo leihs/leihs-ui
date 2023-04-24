@@ -67,6 +67,11 @@ export const subCategoryListProps = {
       id: '78920f6d-57c1-5231-b0c4-f58dcddc6401',
       href: '#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc6401',
       caption: 'Lautsprecher'
+    },
+    {
+      id: '78920f6d-57c1-5231-b0c4-f58dcddc6421',
+      href: '#app/borrow/categories/78920f6d-57c1-5231-b0c4-f58dcddc6402',
+      caption: 'Mikrophone'
     }
   ]
 }

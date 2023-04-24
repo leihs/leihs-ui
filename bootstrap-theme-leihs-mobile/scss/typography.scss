@@ -3,6 +3,11 @@ body {
   hyphens: auto;
 }
 
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
 // font size even smaller than Bootstrap's small / .small
 .very-small {
   font-size: 0.75rem;

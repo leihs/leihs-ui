@@ -37,6 +37,7 @@ const Components = {
     InfoMessage: require('./components/MobileApp/DesignComponents/InfoMessage').default,
     InputWithClearButton: require('./components/MobileApp/DesignComponents/InputWithClearButton').default,
     ListCard: require('./components/MobileApp/DesignComponents/ListCard').default,
+    ListMenu: require('./components/MobileApp/DesignComponents/ListMenu').default,
     Menu: require('./components/MobileApp/DesignComponents/Menu').default,
     MinusPlusControl: require('./components/MobileApp/DesignComponents/MinusPlusControl').default,
     ModalDialog: require('./components/MobileApp/DesignComponents/ModalDialog').default,

@@ -18,10 +18,9 @@ export const level2 = () => (
       preTitle={
         <CategoryBreadcrumbs
           ancestorCats={[
-            { id: '1', name: 'Wirbeltiere' },
-            { id: '2', name: 'Säugetiere' }
+            { id: '1', name: 'Wirbeltiere', url: 'cat/1' },
+            { id: '2', name: 'Säugetiere', url: 'cat/1/2' }
           ]}
-          getPathForCategory={x => `cat/${x}`}
         />
       }
     ></PageLayout.Header>
@@ -37,9 +36,7 @@ export const level1 = () => (
   <PageLayoutMock>
     <PageLayout.Header
       title="Säugetiere"
-      preTitle={
-        <CategoryBreadcrumbs ancestorCats={[{ id: '1', name: 'Wirbeltiere' }]} getPathForCategory={x => `cat/${x}`} />
-      }
+      preTitle={<CategoryBreadcrumbs ancestorCats={[{ id: '1', name: 'Wirbeltiere', url: 'cat/1' }]} />}
     ></PageLayout.Header>
     <p>
       Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate

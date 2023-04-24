@@ -41608,6 +41608,279 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Form Controls/Text
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/ListMenu List Menu 1`] = `
+Array [
+  <h1>
+    ListMenu
+  </h1>,
+  <p
+    className="text-muted"
+  >
+    A compact simple menu intended as side nav
+  </p>,
+  <div
+    className="mb-4"
+  >
+    <div
+      className="list-menu"
+    >
+      <nav>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Mikrophone
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child list-menu__item--selected"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Lautsprecher
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Analoge Peripheriegeräte
+        </a>
+      </nav>
+    </div>
+  </div>,
+  <p
+    className="text-muted"
+  >
+    Edge cases:
+  </p>,
+  <div
+    className="mb-4"
+    style={
+      Object {
+        "maxWidth": "300px",
+      }
+    }
+  >
+    <div
+      className="list-menu"
+    >
+      <nav>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Long Phrase: Voluptatibus nobis sed id modi dolor unde veritatis? Provident?
+        </a>
+         
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          LongWordVoluptatibusnobissedidmodidolorundeveritatis?Provident?
+        </a>
+        <button
+          className="list-menu__item list-menu__item--child"
+          onClick={[Function]}
+        >
+          This is a button (not a link)
+        </button>
+      </nav>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/ListMenu Menu With Breadcrumbs 1`] = `
+Array [
+  <h1>
+    ListMenu
+  </h1>,
+  <p
+    className="text-muted"
+  >
+    Menu with breadcrumbs
+  </p>,
+  <p
+    className="text-muted"
+  >
+    Level 1 (dash indicates nested categories):
+  </p>,
+  <div
+    className="ms-4 mb-4"
+  >
+    <div
+      className="list-menu"
+    >
+      <nav>
+        <a
+          className="list-menu__item list-menu__item--breadcrumb"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Alle Kategorien
+        </a>
+        <div
+          className="list-menu__item list-menu__item--current"
+        >
+          Fotografie
+        </div>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          <div
+            className="list-menu__dash"
+          >
+             
+          </div>
+          Fotografie analog
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          <div
+            className="list-menu__dash"
+          >
+             
+          </div>
+          Fotografie digital
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Blitz/Licht/Studio
+        </a>
+      </nav>
+    </div>
+  </div>,
+  <p
+    className="text-muted"
+  >
+    Level 2:
+  </p>,
+  <div
+    className="ms-4 mb-4"
+  >
+    <div
+      className="list-menu"
+    >
+      <nav>
+        <a
+          className="list-menu__item list-menu__item--breadcrumb"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Alle Kategorien
+        </a>
+        <a
+          className="list-menu__item list-menu__item--breadcrumb"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Fotografie
+        </a>
+        <div
+          className="list-menu__item list-menu__item--current"
+        >
+          Fotografie digital
+        </div>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Digitale Mittelformatkameras
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Digitale Spiegelreflexkameras
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Kompaktkameras
+        </a>
+      </nav>
+    </div>
+  </div>,
+  <p
+    className="text-muted"
+  >
+    Level 3 (without children; siblings are shown):
+  </p>,
+  <div
+    className="ms-4 mb-4"
+  >
+    <div
+      className="list-menu"
+    >
+      <nav>
+        <a
+          className="list-menu__item list-menu__item--breadcrumb"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Alle Kategorien
+        </a>
+        <a
+          className="list-menu__item list-menu__item--breadcrumb"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Fotografie
+        </a>
+        <a
+          className="list-menu__item list-menu__item--breadcrumb list-menu__item--selected"
+          href="#some/route"
+          onClick={[Function]}
+          style={
+            Object {
+              "marginBottom": "12px",
+            }
+          }
+        >
+          Fotografie digital
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Digitale Mittelformatkameras
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child list-menu__item--selected"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Digitale Spiegelreflexkameras
+        </a>
+        <a
+          className="list-menu__item list-menu__item--child"
+          href="#some/route"
+          onClick={[Function]}
+        >
+          Kompaktkameras
+        </a>
+      </nav>
+    </div>
+  </div>,
+]
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Menu Group 1`] = `
 Array [
   <h1>
@@ -41920,6 +42193,67 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/Menu Select
 </div>
 `;
 
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout Custom Content Layout 1`] = `
+<div
+  className="ui-page-layout page-layout"
+>
+  <div
+    className="page-layout__top-row"
+  >
+    <div
+      className="page-layout__top-nav-container"
+    >
+      <div
+        className="py-3"
+      >
+        Top bar
+      </div>
+    </div>
+  </div>
+  <div
+    className="page-layout__main-row"
+  >
+    <div
+      className="ui-page-content page-layout__content"
+    >
+      <div
+        className="row"
+      >
+        <div
+          className="col-lg-3 d-none d-lg-block"
+        >
+          <div
+            className="page-layout__content-container page-inset-x"
+          >
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam expedita ea minus? Corporis quos explicabo perspiciatis, sapiente eligendi consequuntur recusandae doloremque quidem, nostrum consequatur non minima voluptate rerum commodi possimus!
+          </div>
+        </div>
+        <div
+          className="col-lg-9"
+        >
+          <div
+            className="page-layout__content-container page-inset-x"
+          >
+            <div
+              className="text-center-if-layout-allows mb-4"
+            >
+              <h1>
+                Custom Content Layout
+              </h1>
+            </div>
+            <p
+              className="text-muted"
+            >
+              This example shows a responsive 2-column layout
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout ErrorBoundary 1`] = `
 <div
   className="ui-page-layout page-layout"
@@ -41931,7 +42265,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       className="page-layout__top-nav-container"
     >
       <div
-        className="bg-light-shade p-3 h-100"
+        className="py-3"
       >
         Top bar
       </div>
@@ -41941,71 +42275,75 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="page-layout__main-row"
   >
     <div
-      className="ui-page-content page-layout__content page-inset-x"
+      className="ui-page-content page-layout__content"
     >
       <div
-        className="text-center-if-layout-allows mb-4"
+        className="page-layout__content-container page-inset-x"
       >
-        <h1>
-          PageLayout - Error Boundaries
-        </h1>
-      </div>
-      <p
-        className="text-muted"
-      >
-        When a rendering crash happens, the error will be bounded to the zone where it happened (top bar, nav or content).
-      </p>
-      <div
-        className="shadow mb-4"
-      />
-      <div
-        className="alert alert-danger"
-      >
-        <h2>
-          Error displaying this content
-        </h2>
-        <details
-          className="mb-3"
-        >
-          <div
-            className="preserve-linebreaks small"
-          >
-            - bar
-- baz
-          </div>
-        </details>
         <div
-          className="d-flex flex-column flex-wrap gap-2 flex-sm-row"
+          className="text-center-if-layout-allows mb-4"
+        >
+          <h1>
+            PageLayout - Error Boundaries
+          </h1>
+        </div>
+        <p
+          className="text-muted"
+        >
+          When a rendering crash happens, the error will be bounded to the zone where it happened (top bar, nav or content).
+        </p>
+        <div
+          className="shadow mb-4"
+        />
+        <div
+          className="alert alert-danger"
+        >
+          <h2>
+            Error displaying this content
+          </h2>
+          <details
+            className="mb-3"
+          >
+            <div
+              className="preserve-linebreaks small"
+            >
+              - bar
+- baz
+            </div>
+          </details>
+          <div
+            className="d-flex flex-column flex-wrap gap-2 flex-sm-row"
+          >
+            <button
+              className="btn btn-dark"
+              onClick={[Function]}
+            >
+              Reload current page
+            </button>
+            <a
+              className="btn btn-link"
+              href="/"
+            >
+              Go to start page
+            </a>
+          </div>
+        </div>
+        <p
+          className="text-muted"
+        >
+          For an interactive example check out the "Errors" story (click on "Crash this component"):
+        </p>
+        <p
+          className="text-muted"
         >
           <button
-            className="btn btn-dark"
+            className="btn btn-light btn-sm"
             onClick={[Function]}
           >
-            Reload current page
+            Prototypes &gt; Errors
           </button>
-          <a
-            className="btn btn-link"
-            href="/"
-          >
-            Go to start page
-          </a>
-        </div>
+        </p>
       </div>
-      <p
-        className="text-muted"
-      >
-        For an interactive example check out the "Errors" story (click on "Crash this component"):
-      </p>
-      <p
-        className="text-muted"
-      >
-        <button
-          className="btn btn-light btn-sm"
-          onClick={[Function]}
-        >
-          Prototypes &gt; Errors
-        </button>
-      </p>
     </div>
   </div>
 </div>
@@ -42022,7 +42360,7 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
       className="page-layout__top-nav-container"
     >
       <div
-        className="bg-light-shade p-3 h-100"
+        className="py-3"
       >
         Top bar
       </div>
@@ -42032,138 +42370,61 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="page-layout__main-row"
   >
     <div
-      className="ui-page-content page-layout__content page-inset-x"
+      className="ui-page-content page-layout__content"
     >
       <div
-        className="text-center-if-layout-allows mb-4"
+        className="page-layout__content-container page-inset-x"
       >
-        <h1>
-          PageLayout - Horizontal Inset
-        </h1>
-      </div>
-      <p
-        className="text-muted"
-      >
-        Note: available only below \`md\` breakpoint
-      </p>
-      <p
-        className="text-muted"
-      >
-        The content area of the page layout has a horizontal inset (padding).
-      </p>
-      <p
-        className="text-muted"
-      >
-        If for some reason edge-to-edge content is needed, use the 
-        <code>
-          .page-inset-x-inverse
-        </code>
-         class.
-      </p>
-      <p
-        className="text-muted"
-      >
-        To re-apply horizontal inset, use 
-        <code>
-          .page-inset-x
-        </code>
-      </p>
-      <div
-        className="border mb-3"
-      >
-        Normal content
-      </div>
-      <div
-        className="border mb-3 page-inset-x-inverse"
-      >
-        Edge-to-edge content
-      </div>
-      <div
-        className="border mb-3 page-inset-x-inverse page-inset-x"
-      >
-        Edge-to-edge content, inset re-applied
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout PageLayout 1`] = `
-<div
-  className="ui-page-layout page-layout"
->
-  <div
-    className="page-layout__top-row"
-  >
-    <div
-      className="page-layout__top-nav-container"
-    >
-      <div
-        className="bg-light-shade p-3 h-100"
-      >
-        Top row
-        <label
-          className="ms-3 d-md-none"
+        <div
+          className="text-center-if-layout-allows mb-4"
         >
-          <input
-            checked={false}
-            onChange={[Function]}
-            type="checkbox"
-          />
-           Show nav1
-        </label>
-        <label
-          className="ms-3"
+          <h1>
+            PageLayout - Horizontal Inset
+          </h1>
+        </div>
+        <p
+          className="text-muted"
         >
-          <input
-            checked={false}
-            onChange={[Function]}
-            type="checkbox"
-          />
-           Show nav2
-        </label>
+          Note: available only below \`md\` breakpoint
+        </p>
+        <p
+          className="text-muted"
+        >
+          The content area of the page layout has a horizontal inset (padding).
+        </p>
+        <p
+          className="text-muted"
+        >
+          If for some reason edge-to-edge content is needed, use the 
+          <code>
+            .page-inset-x-inverse
+          </code>
+           class.
+        </p>
+        <p
+          className="text-muted"
+        >
+          To re-apply horizontal inset, use 
+          <code>
+            .page-inset-x
+          </code>
+        </p>
+        <div
+          className="border mb-3"
+        >
+          Normal content
+        </div>
+        <div
+          className="border mb-3 page-inset-x-inverse"
+        >
+          Edge-to-edge content
+        </div>
+        <div
+          className="border mb-3 page-inset-x-inverse page-inset-x"
+        >
+          Edge-to-edge content, inset re-applied
+        </div>
       </div>
-    </div>
-  </div>
-  <div
-    className="page-layout__main-row"
-  >
-    <div
-      className="ui-page-content page-layout__content page-inset-x"
-    >
-      <div
-        className="text-center-if-layout-allows mb-4"
-      >
-        <h1>
-          PageLayout - Zones
-        </h1>
-      </div>
-      <p
-        className="text-muted"
-      >
-        Layout zones:
-      </p>
-      <ul
-        className="text-muted"
-      >
-        <li>
-          Top row
-        </li>
-        <li>
-          Main row
-          <ul>
-            <li>
-              Nav1 (xs+sm: full overlay, md+: hidden)
-            </li>
-            <li>
-              Nav2 (xs+sm: full overlay, md+: offcanvas on the right)
-            </li>
-            <li>
-              Content
-            </li>
-          </ul>
-        </li>
-      </ul>
     </div>
   </div>
 </div>
@@ -42291,30 +42552,201 @@ exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout 
     className="page-layout__main-row"
   >
     <div
-      className="ui-page-content page-layout__content page-inset-x"
+      className="ui-page-content page-layout__content"
     >
       <div
-        className="text-center-if-layout-allows mb-4"
+        className="page-layout__content-container page-inset-x"
       >
-        <h1>
-          PageLayout - Realistic Example
-        </h1>
+        <div
+          className="text-center-if-layout-allows mb-4"
+        >
+          <h1>
+            PageLayout - Realistic Example
+          </h1>
+        </div>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+        </p>
       </div>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storybook HTML Snapshots MobileApp/Design Components/Layout/PageLayout Zones 1`] = `
+<div
+  className="ui-page-layout page-layout"
+>
+  <div
+    className="page-layout__top-row"
+  >
+    <div
+      className="page-layout__top-nav-container"
+    >
+      <div
+        className="pt-3"
+        style={
+          Object {
+            "borderColor": "blue",
+            "borderStyle": "dashed",
+            "borderWidth": "1px",
+            "height": "50px",
+          }
+        }
+      >
+        Top row
+        <label
+          className="ms-2"
+        >
+          <input
+            checked={false}
+            onChange={[Function]}
+            type="checkbox"
+          />
+           Show nav1
+        </label>
+        <label
+          className="ms-2"
+        >
+          <input
+            checked={false}
+            onChange={[Function]}
+            type="checkbox"
+          />
+           Show nav2
+        </label>
+      </div>
+    </div>
+  </div>
+  <div
+    className="page-layout__main-row"
+  >
+    <div
+      className="ui-page-content page-layout__content"
+    >
+      <div
+        style={
+          Object {
+            "border": "1px green dashed",
+          }
+        }
+      >
+        <div
+          className="page-layout__content-container page-inset-x"
+        >
+          <div
+            className="text-center-if-layout-allows mb-4"
+          >
+            <h1>
+              PageLayout - Zones
+            </h1>
+          </div>
+          <p
+            className="text-muted"
+          >
+            Layout zones:
+          </p>
+          <ul
+            className="text-muted"
+          >
+            <li>
+              <b>
+                Top row
+              </b>
+               (
+              <span
+                style={
+                  Object {
+                    "color": "blue",
+                  }
+                }
+              >
+                blue lines
+              </span>
+              )
+            </li>
+            <li>
+              <b>
+                Main row
+              </b>
+               (
+              <span
+                style={
+                  Object {
+                    "color": "green",
+                  }
+                }
+              >
+                green lines
+              </span>
+              )
+              <ul>
+                <li>
+                  <b>
+                    Nav 1
+                  </b>
+                   (xs+sm: full overlay, md+: hidden)
+                </li>
+                <li>
+                  <b>
+                    Nav 2
+                  </b>
+                   (xs+sm: full overlay, md+: offcanvas on the right)
+                </li>
+                <li>
+                  <b>
+                    Content
+                  </b>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p
+            className="text-muted"
+          >
+            Views can arrange the content using the container and header components:
+          </p>
+        </div>
+        <div
+          className="page-layout__content-container page-inset-x"
+          style={
+            Object {
+              "border": "1px dotted #976B34",
+              "marginBottom": "1rem",
+            }
+          }
+        >
+          <code>
+            PageLayout.ContentContainer
+          </code>
+          <div
+            className="text-center-if-layout-allows mb-4"
+            style={
+              Object {
+                "backgroundColor": "#F1E4C9",
+              }
+            }
+          >
+            <h1 />
+            <code>
+              PageLayout.Header
+            </code>
+          </div>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum repudiandae perferendis, sed vero inventore ullam esse voluptates adipisci laudantium ipsa, veritatis assumenda fuga sunt, fugit impedit deserunt blanditiis doloribus accusamus!
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -44245,18 +44677,22 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
     className="page-layout__main-row"
   >
     <div
-      className="ui-page-content page-layout__content page-inset-x"
+      className="ui-page-content page-layout__content"
     >
       <div
-        className="text-center-if-layout-allows mb-4"
+        className="page-layout__content-container page-inset-x"
       >
-        <h1>
-          Wirbeltiere
-        </h1>
+        <div
+          className="text-center-if-layout-allows mb-4"
+        >
+          <h1>
+            Wirbeltiere
+          </h1>
+        </div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium? Recusandae, nesciunt?
+        </p>
       </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium? Recusandae, nesciunt?
-      </p>
     </div>
   </div>
 </div>
@@ -44386,34 +44822,38 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
     className="page-layout__main-row"
   >
     <div
-      className="ui-page-content page-layout__content page-inset-x"
+      className="ui-page-content page-layout__content"
     >
       <div
-        className="text-center-if-layout-allows mb-4"
+        className="page-layout__content-container page-inset-x"
       >
-        <h1>
-          <span
-            className="d-inline-block fs-2 mb-1"
-          >
-            <ul
-              className="ui-category-breadcrumbs category-breadcrumbs list-inline fw-normal"
+        <div
+          className="text-center-if-layout-allows mb-4"
+        >
+          <h1>
+            <span
+              className="d-inline-block fs-2 mb-1"
             >
-              <li>
-                <a
-                  href="cat/1"
-                >
-                  Wirbeltiere
-                </a>
-              </li>
-            </ul>
-          </span>
-          <br />
-          Säugetiere
-        </h1>
+              <ul
+                className="ui-category-breadcrumbs category-breadcrumbs list-inline fw-normal"
+              >
+                <li>
+                  <a
+                    href="cat/1"
+                  >
+                    Wirbeltiere
+                  </a>
+                </li>
+              </ul>
+            </span>
+            <br />
+            Säugetiere
+          </h1>
+        </div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium? Recusandae, nesciunt?
+        </p>
       </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium? Recusandae, nesciunt?
-      </p>
     </div>
   </div>
 </div>
@@ -44543,41 +44983,45 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/CategoryBreadcrum
     className="page-layout__main-row"
   >
     <div
-      className="ui-page-content page-layout__content page-inset-x"
+      className="ui-page-content page-layout__content"
     >
       <div
-        className="text-center-if-layout-allows mb-4"
+        className="page-layout__content-container page-inset-x"
       >
-        <h1>
-          <span
-            className="d-inline-block fs-2 mb-1"
-          >
-            <ul
-              className="ui-category-breadcrumbs category-breadcrumbs list-inline fw-normal"
+        <div
+          className="text-center-if-layout-allows mb-4"
+        >
+          <h1>
+            <span
+              className="d-inline-block fs-2 mb-1"
             >
-              <li>
-                <a
-                  href="cat/1"
-                >
-                  Wirbeltiere
-                </a>
-              </li>
-              <li>
-                <a
-                  href="cat/1/2"
-                >
-                  Säugetiere
-                </a>
-              </li>
-            </ul>
-          </span>
-          <br />
-          Bären
-        </h1>
+              <ul
+                className="ui-category-breadcrumbs category-breadcrumbs list-inline fw-normal"
+              >
+                <li>
+                  <a
+                    href="cat/1"
+                  >
+                    Wirbeltiere
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="cat/1/2"
+                  >
+                    Säugetiere
+                  </a>
+                </li>
+              </ul>
+            </span>
+            <br />
+            Bären
+          </h1>
+        </div>
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium? Recusandae, nesciunt?
+        </p>
       </div>
-      <p>
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse repudiandae non totam voluptatem voluptate architecto, eius exercitationem enim unde sunt nostrum neque iste consequuntur et perspiciatis quas praesentium? Recusandae, nesciunt?
-      </p>
     </div>
   </div>
 </div>
@@ -45028,322 +45472,326 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/UserProfilePage U
     className="page-layout__main-row"
   >
     <div
-      className="ui-page-content page-layout__content page-inset-x"
+      className="ui-page-content page-layout__content"
     >
       <div
-        className="ui-user-profile"
+        className="page-layout__content-container page-inset-x"
       >
         <div
-          className="text-center-if-layout-allows mb-4"
+          className="ui-user-profile"
         >
-          <h1>
-            Benutzerkonto
-          </h1>
-          <h2>
-            Anna Beispiel
-          </h2>
           <div
-            className="d-flex flex-column flex-wrap gap-2 flex-sm-row"
+            className="text-center-if-layout-allows mb-4"
           >
-            <button
-              className="btn btn-secondary"
-              onClick={[Function]}
-              type="button"
-            >
-              Abmelden
-            </button>
-          </div>
-        </div>
-        <div
-          className="mb-5"
-        >
-          <section
-            className=""
-          >
-            <h2
-              className="section-title fw-normal"
-            >
-              <span
-                className="section-title__collapser ui-section-collapser"
-                onClick={[Function]}
-                role="button"
-              >
-                Nutzerdaten
-                <svg
-                  className="section-title__arrow-icon"
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
-                >
-                  Section Arrow.svg
-                </svg>
-              </span>
+            <h1>
+              Benutzerkonto
+            </h1>
+            <h2>
+              Anna Beispiel
             </h2>
-            <div>
-              <table
-                style={
-                  Object {
-                    "tableLayout": "fixed",
-                  }
-                }
+            <div
+              className="d-flex flex-column flex-wrap gap-2 flex-sm-row"
+            >
+              <button
+                className="btn btn-secondary"
+                onClick={[Function]}
+                type="button"
               >
-                <tbody>
-                  <tr
-                    className="align-top"
-                  >
-                    <td
-                      className="fw-normal pe-3 text-break"
-                      style={
-                        Object {
-                          "width": "33%",
-                        }
-                      }
-                    >
-                      Email
-                    </td>
-                    <td
-                      className="fw-bold text-break"
-                      style={
-                        Object {
-                          "width": "66%",
-                        }
-                      }
-                    >
-                      anna.beispiel@example1.com
-                    </td>
-                  </tr>
-                  <tr
-                    className="align-top"
-                  >
-                    <td
-                      className="fw-normal pe-3 text-break pt-2"
-                      style={
-                        Object {
-                          "width": "33%",
-                        }
-                      }
-                    >
-                      Zweit-Email
-                    </td>
-                    <td
-                      className="fw-bold text-break pt-2"
-                      style={
-                        Object {
-                          "width": "66%",
-                        }
-                      }
-                    >
-                      anna@example2.com
-                    </td>
-                  </tr>
-                  <tr
-                    className="align-top"
-                  >
-                    <td
-                      className="fw-normal pe-3 text-break pt-2"
-                      style={
-                        Object {
-                          "width": "33%",
-                        }
-                      }
-                    >
-                      Telefon
-                    </td>
-                    <td
-                      className="fw-bold text-break pt-2"
-                      style={
-                        Object {
-                          "width": "66%",
-                        }
-                      }
-                    >
-                      079 444 44 44
-                    </td>
-                  </tr>
-                  <tr
-                    className="align-top"
-                  >
-                    <td
-                      className="fw-normal pe-3 text-break pt-2"
-                      style={
-                        Object {
-                          "width": "33%",
-                        }
-                      }
-                    >
-                      Organisation
-                    </td>
-                    <td
-                      className="fw-bold text-break pt-2"
-                      style={
-                        Object {
-                          "width": "66%",
-                        }
-                      }
-                    >
-                      zhdk.ch
-                    </td>
-                  </tr>
-                  <tr
-                    className="align-top"
-                  >
-                    <td
-                      className="fw-normal pe-3 text-break pt-2"
-                      style={
-                        Object {
-                          "width": "33%",
-                        }
-                      }
-                    >
-                      ID
-                    </td>
-                    <td
-                      className="fw-bold text-break pt-2"
-                      style={
-                        Object {
-                          "width": "66%",
-                        }
-                      }
-                    >
-                      1234567
-                    </td>
-                  </tr>
-                  <tr
-                    className="align-top"
-                  >
-                    <td
-                      className="fw-normal pe-3 text-break pt-2"
-                      style={
-                        Object {
-                          "width": "33%",
-                        }
-                      }
-                    >
-                      Badge-ID
-                    </td>
-                    <td
-                      className="fw-bold text-break pt-2"
-                      style={
-                        Object {
-                          "width": "66%",
-                        }
-                      }
-                    >
-                      E012XAMPLE
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+                Abmelden
+              </button>
             </div>
-          </section>
-        </div>
-        <div
-          className="mb-5"
-        >
-          <section
-            className=""
+          </div>
+          <div
+            className="mb-5"
           >
-            <h2
-              className="section-title fw-normal"
+            <section
+              className=""
             >
-              <span
-                className="section-title__collapser ui-section-collapser"
-                onClick={[Function]}
-                role="button"
+              <h2
+                className="section-title fw-normal"
               >
-                Delegationen
-                <svg
-                  className="section-title__arrow-icon"
+                <span
+                  className="section-title__collapser ui-section-collapser"
+                  onClick={[Function]}
+                  role="button"
+                >
+                  Nutzerdaten
+                  <svg
+                    className="section-title__arrow-icon"
+                    style={
+                      Object {
+                        "display": "inline",
+                      }
+                    }
+                  >
+                    Section Arrow.svg
+                  </svg>
+                </span>
+              </h2>
+              <div>
+                <table
                   style={
                     Object {
-                      "display": "inline",
+                      "tableLayout": "fixed",
                     }
                   }
                 >
-                  Section Arrow.svg
-                </svg>
-              </span>
-            </h2>
-            <div>
-              <div
-                className=""
+                  <tbody>
+                    <tr
+                      className="align-top"
+                    >
+                      <td
+                        className="fw-normal pe-3 text-break"
+                        style={
+                          Object {
+                            "width": "33%",
+                          }
+                        }
+                      >
+                        Email
+                      </td>
+                      <td
+                        className="fw-bold text-break"
+                        style={
+                          Object {
+                            "width": "66%",
+                          }
+                        }
+                      >
+                        anna.beispiel@example1.com
+                      </td>
+                    </tr>
+                    <tr
+                      className="align-top"
+                    >
+                      <td
+                        className="fw-normal pe-3 text-break pt-2"
+                        style={
+                          Object {
+                            "width": "33%",
+                          }
+                        }
+                      >
+                        Zweit-Email
+                      </td>
+                      <td
+                        className="fw-bold text-break pt-2"
+                        style={
+                          Object {
+                            "width": "66%",
+                          }
+                        }
+                      >
+                        anna@example2.com
+                      </td>
+                    </tr>
+                    <tr
+                      className="align-top"
+                    >
+                      <td
+                        className="fw-normal pe-3 text-break pt-2"
+                        style={
+                          Object {
+                            "width": "33%",
+                          }
+                        }
+                      >
+                        Telefon
+                      </td>
+                      <td
+                        className="fw-bold text-break pt-2"
+                        style={
+                          Object {
+                            "width": "66%",
+                          }
+                        }
+                      >
+                        079 444 44 44
+                      </td>
+                    </tr>
+                    <tr
+                      className="align-top"
+                    >
+                      <td
+                        className="fw-normal pe-3 text-break pt-2"
+                        style={
+                          Object {
+                            "width": "33%",
+                          }
+                        }
+                      >
+                        Organisation
+                      </td>
+                      <td
+                        className="fw-bold text-break pt-2"
+                        style={
+                          Object {
+                            "width": "66%",
+                          }
+                        }
+                      >
+                        zhdk.ch
+                      </td>
+                    </tr>
+                    <tr
+                      className="align-top"
+                    >
+                      <td
+                        className="fw-normal pe-3 text-break pt-2"
+                        style={
+                          Object {
+                            "width": "33%",
+                          }
+                        }
+                      >
+                        ID
+                      </td>
+                      <td
+                        className="fw-bold text-break pt-2"
+                        style={
+                          Object {
+                            "width": "66%",
+                          }
+                        }
+                      >
+                        1234567
+                      </td>
+                    </tr>
+                    <tr
+                      className="align-top"
+                    >
+                      <td
+                        className="fw-normal pe-3 text-break pt-2"
+                        style={
+                          Object {
+                            "width": "33%",
+                          }
+                        }
+                      >
+                        Badge-ID
+                      </td>
+                      <td
+                        className="fw-bold text-break pt-2"
+                        style={
+                          Object {
+                            "width": "66%",
+                          }
+                        }
+                      >
+                        E012XAMPLE
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </section>
+          </div>
+          <div
+            className="mb-5"
+          >
+            <section
+              className=""
+            >
+              <h2
+                className="section-title fw-normal"
               >
-                <hr
-                  className="page-inset-x-inverse my-0"
-                />
-                <div
-                  className="list-card ui-list-card"
+                <span
+                  className="section-title__collapser ui-section-collapser"
+                  onClick={[Function]}
+                  role="button"
                 >
+                  Delegationen
+                  <svg
+                    className="section-title__arrow-icon"
+                    style={
+                      Object {
+                        "display": "inline",
+                      }
+                    }
+                  >
+                    Section Arrow.svg
+                  </svg>
+                </span>
+              </h2>
+              <div>
+                <div
+                  className=""
+                >
+                  <hr
+                    className="page-inset-x-inverse my-0"
+                  />
                   <div
-                    className="list-card__content"
+                    className="list-card ui-list-card"
                   >
                     <div
-                      className="list-card__title"
-                      data-test-id="title"
+                      className="list-card__content"
                     >
-                      Master Design
-                    </div>
-                    <div
-                      className="list-card__body"
-                      data-test-id="body"
-                    >
-                      <div>
-                        Maria Bernasconi
+                      <div
+                        className="list-card__title"
+                        data-test-id="title"
+                      >
+                        Master Design
                       </div>
                       <div
-                        className="pt-1"
+                        className="list-card__body"
+                        data-test-id="body"
                       >
-                        <a
-                          href="mailto:maria@example3.com"
+                        <div>
+                          Maria Bernasconi
+                        </div>
+                        <div
+                          className="pt-1"
                         >
-                          maria@example3.com
-                        </a>
+                          <a
+                            href="mailto:maria@example3.com"
+                          >
+                            maria@example3.com
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
+                  <hr
+                    className="page-inset-x-inverse my-0"
+                  />
                 </div>
-                <hr
-                  className="page-inset-x-inverse my-0"
-                />
               </div>
-            </div>
-          </section>
-        </div>
-        <div
-          className=""
-        >
-          <section
+            </section>
+          </div>
+          <div
             className=""
           >
-            <h2
-              className="section-title fw-normal"
+            <section
+              className=""
             >
-              <span
-                className="section-title__collapser ui-section-collapser"
-                onClick={[Function]}
-                role="button"
+              <h2
+                className="section-title fw-normal"
               >
-                Verträge
-                <svg
-                  className="section-title__arrow-icon"
-                  style={
-                    Object {
-                      "display": "inline",
-                    }
-                  }
+                <span
+                  className="section-title__collapser ui-section-collapser"
+                  onClick={[Function]}
+                  role="button"
                 >
-                  Section Arrow.svg
-                </svg>
-              </span>
-            </h2>
-            <div>
-              <p>
-                Keine Verträge vorhanden
-              </p>
-            </div>
-          </section>
+                  Verträge
+                  <svg
+                    className="section-title__arrow-icon"
+                    style={
+                      Object {
+                        "display": "inline",
+                      }
+                    }
+                  >
+                    Section Arrow.svg
+                  </svg>
+                </span>
+              </h2>
+              <div>
+                <p>
+                  Keine Verträge vorhanden
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
       </div>
     </div>

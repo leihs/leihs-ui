@@ -2,7 +2,7 @@ import React from 'react'
 import PageLayout from '../DesignComponents/PageLayout'
 import Topnav from '../DesignComponents/Topnav'
 
-export default function PageLayoutMock({ children, ...overrides }) {
+export default function PageLayoutMock({ children, contained = true, ...overrides }) {
   const pageLayoutProps = {
     topBar: (
       <Topnav
@@ -14,5 +14,9 @@ export default function PageLayoutMock({ children, ...overrides }) {
     ),
     ...overrides
   }
-  return <PageLayout {...pageLayoutProps}>{children}</PageLayout>
+  return (
+    <PageLayout {...pageLayoutProps}>
+      {contained ? <PageLayout.ContentContainer>{children}</PageLayout.ContentContainer> : children}
+    </PageLayout>
+  )
 }

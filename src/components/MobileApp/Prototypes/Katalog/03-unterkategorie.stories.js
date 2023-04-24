@@ -18,9 +18,7 @@ export const unterkategorie = () => {
     <PageLayoutMock>
       <PageLayout.Header
         title="Mischpulte & CD Player"
-        preTitle={
-          <CategoryBreadcrumbs ancestorCats={[{ id: '1', name: 'Audio' }]} getPathForCategory={x => `cat/${x}`} />
-        }
+        preTitle={<CategoryBreadcrumbs ancestorCats={[{ id: '1', name: 'Audio', url: 'cat/1' }]} />}
       >
         <ModelSearchFilter {...modelSearchFilterProps} />
       </PageLayout.Header>
