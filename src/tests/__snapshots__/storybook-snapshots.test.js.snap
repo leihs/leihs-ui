@@ -45051,7 +45051,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         className="rounded border square-container position-relative overflow-hidden"
       >
         <a
-          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
+          href="#borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
         >
           <div
             className="ui-img-placeholder d-block position-absolute h-100 w-100 bg-light-shade"
@@ -45063,7 +45063,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
       >
         <a
           className="stretched-link"
-          href="#app/borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
+          href="#borrow/models/8a57ac64-ebc1-50c2-ba3c-9ddb7df40ac6"
         >
           <div
             className="ui-caption small fw-bold"
@@ -45099,7 +45099,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         className="rounded border square-container position-relative overflow-hidden"
       >
         <a
-          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
+          href="#borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
         >
           <img
             alt=""
@@ -45113,7 +45113,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
       >
         <a
           className="stretched-link"
-          href="#app/borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
+          href="#borrow/models/1c18b3d3-88e8-57ac-8c28-24d3f8f77604"
         >
           <div
             className="ui-caption small fw-bold"
@@ -45149,7 +45149,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         className="rounded border square-container position-relative overflow-hidden"
       >
         <a
-          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
+          href="#borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
         >
           <img
             alt=""
@@ -45163,7 +45163,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
       >
         <a
           className="stretched-link"
-          href="#app/borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
+          href="#borrow/models/a004d2f1-81ff-59b6-b3de-668f471fbd07"
         >
           <div
             className="ui-caption small fw-bold"
@@ -45199,7 +45199,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         className="rounded border square-container position-relative overflow-hidden"
       >
         <a
-          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
+          href="#borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
         >
           <img
             alt=""
@@ -45213,7 +45213,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
       >
         <a
           className="stretched-link"
-          href="#app/borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
+          href="#borrow/models/720ecc22-ae14-576b-aa23-c09ee71103ad"
         >
           <div
             className="ui-caption small fw-bold"
@@ -45249,7 +45249,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         className="rounded border square-container position-relative overflow-hidden"
       >
         <a
-          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
+          href="#borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
         >
           <img
             alt=""
@@ -45263,7 +45263,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
       >
         <a
           className="stretched-link"
-          href="#app/borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
+          href="#borrow/models/93afb13c-ef87-528d-a3cd-f53e502c229e"
         >
           <div
             className="ui-caption small fw-bold"
@@ -45299,7 +45299,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
         className="rounded border square-container position-relative overflow-hidden"
       >
         <a
-          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
+          href="#borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
         >
           <img
             alt=""
@@ -45313,7 +45313,7 @@ exports[`Storybook HTML Snapshots MobileApp/Feature Components/ModelList ModelLi
       >
         <a
           className="stretched-link"
-          href="#app/borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
+          href="#borrow/models/393ddae9-6df5-5f87-ba8c-5a797f3048ad"
         >
           <div
             className="ui-caption small fw-bold"

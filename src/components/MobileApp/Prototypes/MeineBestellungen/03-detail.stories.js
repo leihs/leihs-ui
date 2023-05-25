@@ -184,7 +184,7 @@ const sampleOrder = {
     {
       id: '1111c573-d8da-4999-81fa-63226a8b00b7',
       name: 'Werteverzeichnis',
-      url: '/app/borrow/path-to-document'
+      url: '/borrow/path-to-document'
     }
   ]
 }

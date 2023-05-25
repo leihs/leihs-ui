@@ -15,7 +15,7 @@ export const keineGegenstaende = () => {
       <PageLayout.Header title="Warenkorb"></PageLayout.Header>
       <Stack space="4" className="text-center decorate-links">
         Noch keine Gegenstände hinzugefügt
-        <a href="/app/borrow/">Hier geht&apos;s zum Katalog</a>
+        <a href="/borrow/">Hier geht&apos;s zum Katalog</a>
       </Stack>
     </PageLayoutMock>
   )
