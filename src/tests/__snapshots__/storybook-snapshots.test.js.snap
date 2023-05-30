@@ -7031,7 +7031,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -7040,7 +7040,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -7601,7 +7601,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -7610,7 +7610,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -8171,7 +8171,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -8180,7 +8180,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -8741,7 +8741,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -8750,7 +8750,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -9311,7 +9311,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -9320,7 +9320,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -9881,7 +9881,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -9890,7 +9890,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -10451,7 +10451,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -10460,7 +10460,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -11021,7 +11021,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -11030,7 +11030,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -11591,7 +11591,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -11600,7 +11600,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -12161,7 +12161,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -12170,7 +12170,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -12731,7 +12731,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -12740,7 +12740,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -13301,7 +13301,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -13310,7 +13310,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -13871,7 +13871,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -13880,7 +13880,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -14441,7 +14441,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -14450,7 +14450,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -15011,7 +15011,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -15020,7 +15020,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -15581,7 +15581,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -15590,7 +15590,7 @@ exports[`Storybook HTML Snapshots Components/Navbar [broken] Colors 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -16130,7 +16130,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -16139,7 +16139,7 @@ exports[`Storybook HTML Snapshots Components/Navbar All Config Options 1`] = `
             <a
               className="dropdown-item"
               data-trigger={true}
-              href="/borrow/user/documents"
+              href="/borrow/current-user"
               onClick={[Function]}
               tabIndex="0"
             >
@@ -16811,7 +16811,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                 <a
                   className="dropdown-item"
                   data-trigger={true}
-                  href="/borrow/user"
+                  href="/borrow/current-user"
                   onClick={[Function]}
                   tabIndex="0"
                 >
@@ -16820,7 +16820,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                 <a
                   className="dropdown-item"
                   data-trigger={true}
-                  href="/borrow/user/documents"
+                  href="/borrow/current-user"
                   onClick={[Function]}
                   tabIndex="0"
                 >
@@ -17241,7 +17241,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                 <a
                   className="dropdown-item"
                   data-trigger={true}
-                  href="/borrow/user"
+                  href="/borrow/current-user"
                   onClick={[Function]}
                   tabIndex="0"
                 >
@@ -17250,7 +17250,7 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                 <a
                   className="dropdown-item"
                   data-trigger={true}
-                  href="/borrow/user/documents"
+                  href="/borrow/current-user"
                   onClick={[Function]}
                   tabIndex="0"
                 >

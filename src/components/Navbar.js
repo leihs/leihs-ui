@@ -130,10 +130,10 @@ const UserMenu = ({ t, user, csrfToken }) => (
         <b>{decorateUser(user)}</b>
       </DropdownItem>
       <DropdownItem divider />
-      <DropdownItem tag="a" href="/borrow/user">
+      <DropdownItem tag="a" href="/borrow/current-user">
         {t('navbar_user_mydata')}
       </DropdownItem>
-      <DropdownItem tag="a" href="/borrow/user/documents">
+      <DropdownItem tag="a" href="/borrow/current-user">
         {t('navbar_user_mydocs')}
       </DropdownItem>
       <DropdownItem divider />

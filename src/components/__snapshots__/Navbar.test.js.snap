@@ -846,7 +846,7 @@ exports[`usage in shared app: renders correctly 1`] = `
           <a
             className="dropdown-item"
             data-trigger={true}
-            href="/borrow/user"
+            href="/borrow/current-user"
             onClick={[Function]}
             tabIndex="0"
           >
@@ -855,7 +855,7 @@ exports[`usage in shared app: renders correctly 1`] = `
           <a
             className="dropdown-item"
             data-trigger={true}
-            href="/borrow/user/documents"
+            href="/borrow/current-user"
             onClick={[Function]}
             tabIndex="0"
           >
@@ -980,7 +980,7 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
           <a
             className="dropdown-item"
             data-trigger={true}
-            href="/borrow/user"
+            href="/borrow/current-user"
             onClick={[Function]}
             tabIndex="0"
           >
@@ -989,7 +989,7 @@ exports[`user with lang setting, marks selected lang: renders correctly 1`] = `
           <a
             className="dropdown-item"
             data-trigger={true}
-            href="/borrow/user/documents"
+            href="/borrow/current-user"
             onClick={[Function]}
             tabIndex="0"
           >
@@ -1188,7 +1188,7 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
           <a
             className="dropdown-item"
             data-trigger={true}
-            href="/borrow/user"
+            href="/borrow/current-user"
             onClick={[Function]}
             tabIndex="0"
           >
@@ -1197,7 +1197,7 @@ exports[`user without lang setting, marks default lang: renders correctly 1`] = 
           <a
             className="dropdown-item"
             data-trigger={true}
-            href="/borrow/user/documents"
+            href="/borrow/current-user"
             onClick={[Function]}
             tabIndex="0"
           >
