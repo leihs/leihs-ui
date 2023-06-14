@@ -39,7 +39,8 @@ const model = {
   id: '2a893525-9883-4193-9fec-09f070673a2d',
   name: 'Audio-Mischpult Behringer XENYX Q1204USB',
   manufacturer: 'Behringer',
-  description: 'Das XENYX Q1204USB von Behringer ist ein vielseitig einsetzbares Audio Mischpult',
+  description:
+    'Das XENYX Q1204USB von Behringer ist ein vielseitig einsetzbares Audio Mischpult\n\nLine breaks are preserved. HTML is interpreted, e.g. links: <a href="https://zhdk.ch">zhdk.ch</a>',
   isFavorited: false,
   images: [
     {

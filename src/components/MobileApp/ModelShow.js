@@ -136,7 +136,10 @@ export default function ModelShow({
 
         {model.description && (
           <Section title={t.description} collapsible>
-            <div className="fw-bold decorate-links">{model.description}</div>
+            <div
+              className="fw-bold decorate-links preserve-linebreaks"
+              dangerouslySetInnerHTML={{ __html: model.description }}
+            ></div>
           </Section>
         )}
 
