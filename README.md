@@ -1,23 +1,12 @@
 # leihs-ui
 
-shared UI components, theme (bootstrap-based) and storybook/styleguide.
-
-web views of storybook:
-
-- <https://next.ui.leihs.app> - latest dev version (from `next`) branch
-- <https://ui.leihs.app> - latest version used in leihs (from `master`) branch
-
-## docs
-
-- 🟪 [Bootstrap (CSS Framework](https://getbootstrap.com/docs/4.6/components/)
-- ⚛ [React (UI Framework)](https://reactjs.org/docs/react-component.html)
-- 📗 [Storybook (Styleguide)](https://storybook.js.org/docs/react/get-started/introduction)
+shared UI components (React), theme (based on Bootstrap) and styleguide (Storybook).
 
 ## development
 
 setup
 
-- use [Node.js](https://nodejs.org/) 14 LTS
+- use [Node.js](https://nodejs.org/); version see `.tool-versions` (recommended: install with `asdf` version manager) 
 - clone and run
 
   ```sh
@@ -52,18 +41,16 @@ bin/update-snapshots
   - `bootstrap-leihs.css`
     - regular theme (used in `admin`, `my`, and `procure`)
     - based on Bootstrap v4 with slight customisations
-    - _**frozen** until mobile version is stable_
-- `bootstrap-theme-leihs-mobile`
-  - `bootstrap-leihs-mobile.css`
-    - theme variant for new `borrow`
-    - based on Bootstrap v5, heavily customized/skinned
-    - _will be consilidated once mobile version is stable_
+- `borrow-theme`
+  - `borrow-theme.css`
+    - theme variant for `borrow`
+    - based on Bootstrap v5, heavily customized
 
 ---
 
 - `./src` - shared code sources
   - `./components` react components
-    - `./components/Mobile` react components for new [`borrow`](https://github.com/leihs/leihs-borrow)
+    - `./components/Borrow` react components for [`Borrow`](https://github.com/leihs/leihs-borrow)
   - `./stories` UI stories for specific features
   - `./src/**/*.stories.js` UI stories per component (e.g. `MyComp.js` alongside `MyComp.stories.js`)
   - `./lib/server-side.js` standalone bundle for server-side react rendering
@@ -72,13 +59,16 @@ bin/update-snapshots
 
 ### `leihs-calendar`
 
-The `Calendar` component is forked and customized from an existing project. It is developed in a separate repo, releases are published to the `npm` registry and used in `leihs-ui` via `package.json` as `@leihs/calendar`.
+The `Calendar` component is forked and customized from an existing project. It is developed in a separate repo, `leihs-ui` references it via `package.json` as a github dependency `"@leihs/calendar": "github:leihs/leihs-calendar#3.1.0"`.
 
 - repo: <https://github.com/leihs/leihs-calendar>
 - forked from: <https://github.com/hypeserver/react-date-range>
-- npm package: <https://www.npmjs.com/package/@leihs/calendar>
+
+Note that the npm package: <https://www.npmjs.com/package/@leihs/calendar> is not maintained anymore.
 
 ### merging / delivery
+
+(Outdated! The `next` branch is not used anymore and will be removed)
 
 This repository is shared between several leihs repositories that always include the latest `master` branch.
 Therefore, pushing to the `next` branch instead of `master` should be done for small chores like build config or dependency upgrades that dont need to be immediately used everywhere else in leihs (which would create a lot of noise in those repositories).
@@ -98,17 +88,8 @@ Therefore, pushing to the `next` branch instead of `master` should be done for s
 
 This repository also includes custom icons contained in `./static/borrow-app-icons`.
 
-| Icon Name       | designed by                               | based on                                        |
-| --------------- | ----------------------------------------- | ----------------------------------------------- |
-| Arrow Icon      | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Bag Icon        | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Calendar Cross  | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Calendar Icon   | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Cross Icon      | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Download Icon   | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Item Arrow      | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Menu Close Icon | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Menu Icon       | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Section Arrow   | Joël Gähwiler <https://github.com/256dpi> |                                                 |
-| Slider Icon     | Max Albrecht <https://github.com/eins78>  | <https://icons.getbootstrap.com/icons/sliders/> |
-| Star Icon       | Joël Gähwiler <https://github.com/256dpi> |                                                 |
+Icons designed by Joël Gähwiler <https://github.com/256dpi>
+
+"Sliders Icon.svg" designed by Max Albrecht <https://github.com/eins78> based on <https://icons.getbootstrap.com/icons/sliders/>
+
+"Template.svg" designed by Urs van Binsbergen <https://github.com/urs-van-binsbergen/>.

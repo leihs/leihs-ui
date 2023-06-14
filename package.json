@@ -2,28 +2,24 @@
   "name": "@leihs/ui",
   "version": "1.0.0",
   "scripts": {
-    "dev": "npm run -s build:theme && node server.js",
-    "start": "NODE_ENV=production node server.js",
     "build": "npm run -s build:theme && npm run -s build:ssr",
     "build:ssr": "npm run -s build:lib && npm run -s build:ssr-cli",
     "build:ssr-cli": "ncc build ./ssr-cli.js --no-cache --out tmp/ssr && cat tmp/ssr/index.js >> dist/leihs-ssr.js && rm tmp/ssr/index.js && echo '#!/usr/bin/env node' > dist/leihs-ssr && cat dist/leihs-ssr.js >> dist/leihs-ssr && chmod +x dist/leihs-ssr",
-    "build:theme": "npm run -s build:theme-regular && npm run -s build:theme-mobile",
+    "build:theme": "npm run -s build:theme-regular && npm run -s build:theme-borrow",
     "build:theme-regular": "rm -rf bootstrap-theme-leihs/build && cd bootstrap-theme-leihs && npm run build",
-    "build:theme-mobile": "rm -rf bootstrap-theme-leihs-mobile/build && cd bootstrap-theme-leihs-mobile && npm run build",
+    "build:theme-borrow": "rm -rf borrow-theme/build && cd borrow-theme && npm run build",
     "build:storybook": "build-storybook --quiet -c .storybook -o build",
     "build:lib": "rm -rf dist && npm run -s build:symlinks && NODE_ENV=production npx webpack --bail --cache --config ./webpack.config.js && npm run build:uipackage && rm -f dist/*.html dist/*.json dist/main.* dist/precache-manifest.* dist/service-worker.js",
     "build:uipackage": "echo '{\"name\":\"@leihs/ui-components\"}' > dist/ui-components/package.json",
     "watch:lib": "NODE_ENV=development npx webpack --watch --progress --config ./webpack.config.js",
-    "watch:theme": "{ cd bootstrap-theme-leihs && npm run watch ;} & { cd bootstrap-theme-leihs-mobile && npm run watch ;}",
+    "watch:theme": "{ cd bootstrap-theme-leihs && npm run watch ;} & { cd borrow-theme && npm run watch ;}",
     "build:symlinks": "bin/build-symlinks",
-    "now-build": "npm i -g npm@7 && bin/build-core && npm run -s build:storybook",
     "build-lib": "npm run -s build:lib",
     "lint": "npx eslint --fix 'src/{,**/}*.js{,x}' && npm run -s lint:json",
     "ci:lint": "eslint 'src/{,**/}*.js{,x}' && npm run -s ci:lint:json",
     "lint:json": "prettier --write 'src/{,**/}*.json'",
     "ci:lint:json": "prettier --list-different 'src/{,**/}*.json'",
     "test-lib": "node -p 'window=this; l = require(\"./dist/leihs-ui-server-side.js\"); l.renderComponentToStaticMarkup(\"Navbar\", {})'",
-    "deploy": "npm i && npx now",
     "test": "react-scripts test --env=jsdom",
     "storybook": "start-storybook -p 9009 --no-open"
   },
@@ -103,7 +99,7 @@
     "ignorePatterns": [
       "src/static/**",
       "src/theme/**",
-      "src/theme-mobile/**"
+      "src/theme-borrow/**"
     ],
     "rules": {
       "prettier/prettier": [

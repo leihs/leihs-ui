@@ -2,7 +2,7 @@ import React from 'react'
 import { translate } from '../lib/translate'
 
 export default {
-  title: 'MobileApp/Overview/Translations',
+  title: 'Borrow/Overview/Translations',
   parameters: { viewport: { defaultViewport: 'reset' } }
 }
 

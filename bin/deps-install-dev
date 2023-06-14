@@ -10,7 +10,7 @@ cd bootstrap-theme-leihs
 # NOTE: optimize network access, first try with local cache only
 npm install --no-audit --offline || npm install --no-audit
 
-cd ../bootstrap-theme-leihs-mobile
+cd ../borrow-theme
 npm install --no-audit --offline || npm install --no-audit
 
 cd ..

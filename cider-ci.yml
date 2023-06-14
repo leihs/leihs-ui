@@ -52,7 +52,7 @@ jobs:
     tasks:
       # NOTE: "linear history" is already enforced via GitHub branch protection
       git-branch-current:
-        name: 'git: tree contains latest commit from origin/master AND origin/next'
+        name: 'git: tree contains latest commit from origin/master'
         aggregate_state: satisfy-last # relies on external state!
         scripts:
           test:
@@ -64,7 +64,5 @@ jobs:
               git fetch --all -q 1>&2
 
               git rev-list --children HEAD | grep -q "$(git rev-parse origin/master)"
-
-              git rev-list --children HEAD | grep -q "$(git rev-parse origin/next)"
 
               echo "OK"

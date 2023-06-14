@@ -6,7 +6,7 @@ dist/
 build/
 npm-debug.log
 tmp
-# symlinks that are not checked in (to not break vercel)
+# symlinks that are not checked in (to not break vercel). To be created by bin/build-symlinks
 /src/static
 /src/theme
 /src/legacy
