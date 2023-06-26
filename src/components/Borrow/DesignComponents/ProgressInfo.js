@@ -33,7 +33,7 @@ function Progressbar({ totalCount, doneCount }) {
   done = Number.isFinite(done) ? done : 0
 
   // Percentage with 2 fraction digits e.g. "33.33%"
-  var donePercents = done.toLocaleString(undefined, {
+  var donePercents = done.toLocaleString('en-US', {
     style: 'percent',
     minimumFractionDigits: 2
   })
