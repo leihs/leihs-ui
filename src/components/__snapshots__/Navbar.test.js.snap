@@ -63,26 +63,6 @@ exports[`base: renders correctly 1`] = `
             </button>
           </div>
         </div>
-        <div
-          aria-hidden={true}
-          className="sr-only"
-          tabIndex={-1}
-        >
-          <input
-            name="invisible-password"
-            type="hidden"
-            value="true"
-          />
-          <label>
-            Passwort
-            <input
-              autoComplete="current-password"
-              className="form-control"
-              name="password"
-              type="password"
-            />
-          </label>
-        </div>
         <input
           name="csrf-token"
           type="hidden"
@@ -156,26 +136,6 @@ exports[`no user, marks default lang: renders correctly 1`] = `
               Login
             </button>
           </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="sr-only"
-          tabIndex={-1}
-        >
-          <input
-            name="invisible-password"
-            type="hidden"
-            value="true"
-          />
-          <label>
-            Passwort
-            <input
-              autoComplete="current-password"
-              className="form-control"
-              name="password"
-              type="password"
-            />
-          </label>
         </div>
         <input
           name="csrf-token"
@@ -325,26 +285,6 @@ exports[`no user, with selected lang same as default lang: renders correctly 1`]
             </button>
           </div>
         </div>
-        <div
-          aria-hidden={true}
-          className="sr-only"
-          tabIndex={-1}
-        >
-          <input
-            name="invisible-password"
-            type="hidden"
-            value="true"
-          />
-          <label>
-            Passwort
-            <input
-              autoComplete="current-password"
-              className="form-control"
-              name="password"
-              type="password"
-            />
-          </label>
-        </div>
         <input
           name="csrf-token"
           type="hidden"
@@ -492,26 +432,6 @@ exports[`no user, with selected lang: renders correctly 1`] = `
               Login
             </button>
           </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="sr-only"
-          tabIndex={-1}
-        >
-          <input
-            name="invisible-password"
-            type="hidden"
-            value="true"
-          />
-          <label>
-            password
-            <input
-              autoComplete="current-password"
-              className="form-control"
-              name="password"
-              type="password"
-            />
-          </label>
         </div>
         <input
           name="csrf-token"
@@ -662,26 +582,6 @@ exports[`on root page, logged out: renders correctly 1`] = `
               Login
             </button>
           </div>
-        </div>
-        <div
-          aria-hidden={true}
-          className="sr-only"
-          tabIndex={-1}
-        >
-          <input
-            name="invisible-password"
-            type="hidden"
-            value="true"
-          />
-          <label>
-            Passwort
-            <input
-              autoComplete="current-password"
-              className="form-control"
-              name="password"
-              type="password"
-            />
-          </label>
         </div>
         <input
           name="csrf-token"

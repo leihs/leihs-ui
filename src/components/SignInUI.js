@@ -2,7 +2,6 @@ import React, { Fragment as F } from 'react'
 import f from 'lodash'
 import { Let } from './Util'
 import { Hr } from './Bootstrap'
-import { VisuallyHidden } from './Bootstrap'
 import { Card } from '../components/CardPage'
 import FlashMessages from './FlashMessages'
 import { CsrfTokenField } from '../components/Forms'
@@ -31,7 +30,6 @@ export const NavbarLogin = ({ returnTo, formAction, requireUserInput = false, lo
           </button>
         </div>
       </div>
-      <HiddenPasswordField label={t('sign_in_password')} />
       <CsrfTokenField {...csrfToken} />
       {returnTo && <input type="hidden" name="return-to" value={returnTo} />}
     </form>
@@ -69,7 +67,6 @@ export const SignInCard = ({ authFlow, authSystems, messages, locales, csrfToken
           autoCorrect="off"
         />
 
-        <HiddenPasswordField label={t('sign_in_password')} />
         <CsrfTokenField {...csrfToken} />
         {returnTo && <input type="hidden" name="return-to" value={returnTo} />}
 
@@ -194,23 +191,3 @@ export const SignInCard = ({ authFlow, authSystems, messages, locales, csrfToken
     </Card>
   )
 }
-
-// partials
-
-// const ResetUser = ({ userName, resetLink }) => (
-//   <p className="mt-3">
-//     Not <code>{userName}</code>? <br />
-//     <a href={resetLink}>Log in as different user</a>
-//   </p>
-// )
-
-const HiddenPasswordField = ({ label = 'Password' }) => (
-  <VisuallyHidden>
-    {/* NOTE: hidden field signals backend it was invisibly autofilled */}
-    <input type="hidden" name="invisible-password" value="true" />
-    <label>
-      {label}
-      <input type="password" name="password" autoComplete="current-password" className="form-control" />
-    </label>
-  </VisuallyHidden>
-)

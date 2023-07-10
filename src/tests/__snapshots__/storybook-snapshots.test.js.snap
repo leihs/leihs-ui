@@ -42260,26 +42260,6 @@ exports[`Storybook HTML Snapshots Components/Navbar Config Variants 1`] = `
                   </button>
                 </div>
               </div>
-              <div
-                aria-hidden={true}
-                className="sr-only"
-                tabIndex={-1}
-              >
-                <input
-                  name="invisible-password"
-                  type="hidden"
-                  value="true"
-                />
-                <label>
-                  Passwort
-                  <input
-                    autoComplete="current-password"
-                    className="form-control"
-                    name="password"
-                    type="password"
-                  />
-                </label>
-              </div>
               <input
                 name="csrf-token"
                 type="hidden"
@@ -42471,26 +42451,6 @@ exports[`Storybook HTML Snapshots Features/HomePage Logged Out 1`] = `
                 Login
               </button>
             </div>
-          </div>
-          <div
-            aria-hidden={true}
-            className="sr-only"
-            tabIndex={-1}
-          >
-            <input
-              name="invisible-password"
-              type="hidden"
-              value="true"
-            />
-            <label>
-              Passwort
-              <input
-                autoComplete="current-password"
-                className="form-control"
-                name="password"
-                type="password"
-              />
-            </label>
           </div>
           <input
             name="csrf-token"
@@ -42913,26 +42873,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Invalid User 1`] = `
             placeholder="Benutzername oder E-Mail"
             required={true}
           />
-          <div
-            aria-hidden={true}
-            className="sr-only"
-            tabIndex={-1}
-          >
-            <input
-              name="invisible-password"
-              type="hidden"
-              value="true"
-            />
-            <label>
-              Passwort
-              <input
-                autoComplete="current-password"
-                className="form-control"
-                name="password"
-                type="password"
-              />
-            </label>
-          </div>
           <input
             name="csrf-token"
             type="hidden"
@@ -43155,26 +43095,6 @@ exports[`Storybook HTML Snapshots Features/Login Page No User 1`] = `
             placeholder="Benutzername oder E-Mail"
             required={true}
           />
-          <div
-            aria-hidden={true}
-            className="sr-only"
-            tabIndex={-1}
-          >
-            <input
-              name="invisible-password"
-              type="hidden"
-              value="true"
-            />
-            <label>
-              Passwort
-              <input
-                autoComplete="current-password"
-                className="form-control"
-                name="password"
-                type="password"
-              />
-            </label>
-          </div>
           <input
             name="csrf-token"
             type="hidden"
@@ -44239,26 +44159,6 @@ exports[`Storybook HTML Snapshots Features/Login Page Wrong Password 1`] = `
             placeholder="Benutzername oder E-Mail"
             required={true}
           />
-          <div
-            aria-hidden={true}
-            className="sr-only"
-            tabIndex={-1}
-          >
-            <input
-              name="invisible-password"
-              type="hidden"
-              value="true"
-            />
-            <label>
-              Passwort
-              <input
-                autoComplete="current-password"
-                className="form-control"
-                name="password"
-                type="password"
-              />
-            </label>
-          </div>
           <input
             name="csrf-token"
             type="hidden"
