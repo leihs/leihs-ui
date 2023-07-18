@@ -15,7 +15,6 @@ const DEFAULT_VIEWPORT = 'iphonex'
 // (because the snapshots dont depend on styles we can disable the whole feature).
 if (process.env.NODE_ENV !== 'test') {
   const styleLeihs = require('!!style-loader?{"injectType":"lazySingletonStyleTag"}!css-loader!../src/theme/bootstrap-leihs.css')
-  const styleBorrow = require('!!style-loader?{"injectType":"lazySingletonStyleTag"}!css-loader!../borrow-theme/build/borrow-theme.css')
 
   // Glue between React and Webpack lazy styles <https://github.com/webpack-contrib/style-loader/tree/1556c0b16a7e16b255d85f7a25ed95bb16a01471#lazystyletag>
   const ThemeSelector = ({ children, style }) => {
@@ -28,7 +27,7 @@ if (process.env.NODE_ENV !== 'test') {
   // decorator to to select the appropriate style per story
   // NOTE: could be extended to use parameters if needed, for now we only distinguish by "subfolder".
   const dynamicStylesheetDecorator = (Story, ctx) => {
-    const [name, style] = ctx.kind.startsWith('Borrow/') ? ['borrow', styleBorrow] : ['leihs regular', styleLeihs]
+    const [name, style] = ['leihs regular', styleLeihs]
     console.debug(`ThemeSelector: using "${name}" theme`)
     return (
       <ThemeSelector style={style}>
@@ -48,22 +47,6 @@ export const parameters = {
   viewport: {
     viewports: Object.fromEntries(VIEWPORTS.map(key => [key, INITIAL_VIEWPORTS[key]])),
     defaultViewport: DEFAULT_VIEWPORT
-  },
-  options: {
-    storySort: {
-      order: [
-        '*',
-        'Borrow',
-        [
-          'Overview',
-          'Bootstrap Theme',
-          'Design Components',
-          'Feature Components',
-          'Prototypes',
-          ['Page Typology', 'Katalog', 'Warenkorb']
-        ]
-      ]
-    }
   },
   controls: { expanded: true }
 }

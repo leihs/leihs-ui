@@ -5,14 +5,13 @@
     "build": "npm run -s build:theme && npm run -s build:ssr",
     "build:ssr": "npm run -s build:lib && npm run -s build:ssr-cli",
     "build:ssr-cli": "ncc build ./ssr-cli.js --no-cache --out tmp/ssr && cat tmp/ssr/index.js >> dist/leihs-ssr.js && rm tmp/ssr/index.js && echo '#!/usr/bin/env node' > dist/leihs-ssr && cat dist/leihs-ssr.js >> dist/leihs-ssr && chmod +x dist/leihs-ssr",
-    "build:theme": "npm run -s build:theme-regular && npm run -s build:theme-borrow",
+    "build:theme": "npm run -s build:theme-regular",
     "build:theme-regular": "rm -rf bootstrap-theme-leihs/build && cd bootstrap-theme-leihs && npm run build",
-    "build:theme-borrow": "rm -rf borrow-theme/build && cd borrow-theme && npm run build",
     "build:storybook": "build-storybook --quiet -c .storybook -o build",
     "build:lib": "rm -rf dist && npm run -s build:symlinks && NODE_ENV=production npx webpack --bail --cache --config ./webpack.config.js && npm run build:uipackage && rm -f dist/*.html dist/*.json dist/main.* dist/precache-manifest.* dist/service-worker.js",
     "build:uipackage": "echo '{\"name\":\"@leihs/ui-components\"}' > dist/ui-components/package.json",
     "watch:lib": "NODE_ENV=development npx webpack --watch --progress --config ./webpack.config.js",
-    "watch:theme": "{ cd bootstrap-theme-leihs && npm run watch ;} & { cd borrow-theme && npm run watch ;}",
+    "watch:theme": "cd bootstrap-theme-leihs && npm run watch",
     "build:symlinks": "bin/build-symlinks",
     "build-lib": "npm run -s build:lib",
     "lint": "npx eslint --fix 'src/{,**/}*.js{,x}' && npm run -s lint:json",
@@ -98,8 +97,7 @@
     ],
     "ignorePatterns": [
       "src/static/**",
-      "src/theme/**",
-      "src/theme-borrow/**"
+      "src/theme/**"
     ],
     "rules": {
       "prettier/prettier": [

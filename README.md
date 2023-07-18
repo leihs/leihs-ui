@@ -41,16 +41,11 @@ bin/update-snapshots
   - `bootstrap-leihs.css`
     - regular theme (used in `admin`, `my`, and `procure`)
     - based on Bootstrap v4 with slight customisations
-- `borrow-theme`
-  - `borrow-theme.css`
-    - theme variant for `borrow`
-    - based on Bootstrap v5, heavily customized
 
 ---
 
 - `./src` - shared code sources
   - `./components` react components
-    - `./components/Borrow` react components for [`Borrow`](https://github.com/leihs/leihs-borrow)
   - `./stories` UI stories for specific features
   - `./src/**/*.stories.js` UI stories per component (e.g. `MyComp.js` alongside `MyComp.stories.js`)
   - `./lib/server-side.js` standalone bundle for server-side react rendering
@@ -84,12 +79,3 @@ Therefore, pushing to the `next` branch instead of `master` should be done for s
 
 `npm run test`: render snapshots of all stories (using `@storybook/addon-storyshots`). "Prototypes" stories are excluded from snapshots.
 
-## Icons
-
-This repository also includes custom icons contained in `./static/borrow-app-icons`.
-
-Icons designed by Joël Gähwiler <https://github.com/256dpi>
-
-"Sliders Icon.svg" designed by Max Albrecht <https://github.com/eins78> based on <https://icons.getbootstrap.com/icons/sliders/>
-
-"Template.svg" designed by Urs van Binsbergen <https://github.com/urs-van-binsbergen/>.

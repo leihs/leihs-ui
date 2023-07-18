@@ -1,5 +1,4 @@
 const path = require('path')
-const exec = require('child_process').exec
 const createReactAppConfigFactory = require('react-scripts/config/webpack.config.js')
 const createReactAppConfig = createReactAppConfigFactory(
   process.env['NODE_ENV'] === 'production' ? 'production' : 'development'
@@ -16,22 +15,6 @@ const baseConfig = Object.assign({}, createReactAppConfig, {
     // library: 'LeihsUI',
     libraryTarget: 'umd'
   }),
-
-  plugins: (createReactAppConfig.plugins || []).concat([
-    {
-      apply: compiler => {
-        compiler.hooks.afterEmit.tap('AfterEmitPlugin', compilation => {
-          exec(
-            'test -f ../src/client/leihs/borrow/app.cljs && touch ../src/client/leihs/borrow/app.cljs',
-            (err, stdout, stderr) => {
-              if (stdout) process.stdout.write(stdout)
-              if (stderr) process.stderr.write(stderr)
-            }
-          )
-        })
-      }
-    }
-  ]),
 
   // DISABLE CHUNKS…
   optimization: {}
